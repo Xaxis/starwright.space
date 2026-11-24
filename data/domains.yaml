@@ -1,0 +1,66 @@
+# The areas the climb needs. Each capability and invention belongs to one. The colour marks the area
+# in the 3D tower and on every page; it carries no other meaning.
+- id: energy
+  title: Energy
+  role: Collect, store and move the power every other area runs on, from today's grids to the swarm.
+  colour: "#f5b13d"
+- id: materials
+  title: Materials
+  role: Win and refine the mass the climb is built from, on Earth and then from the Moon, the asteroids and Mercury.
+  colour: "#a3afc0"
+- id: manufacturing
+  title: Manufacturing
+  role: Turn materials into machines, and machines into more machines, until factories copy themselves.
+  colour: "#e9824a"
+- id: space
+  title: Space
+  role: Get people and mass off Earth cheaply, and work wherever the mass and the sunlight are.
+  colour: "#7690ff"
+- id: computation
+  title: Computation
+  role: Think, design and control at the scale of a civilization, at the lowest energy per operation physics allows.
+  colour: "#3fc9da"
+- id: biology
+  title: Biology
+  role: Read, write and grow living systems, so life and its chemistry work for the climb and travel with it.
+  colour: "#62cc7d"
+- id: food
+  title: Food
+  role: Feed everyone well on less land, and feed people wherever they live, on Earth and off it.
+  colour: "#b9d64f"
+- id: water
+  title: Water
+  role: Clean, move and recycle water for every person and every process, on Earth and in closed habitats.
+  colour: "#4aa9e6"
+- id: transport
+  title: Transport
+  role: Move people and goods across a planet and between worlds quickly, cleanly and cheaply.
+  colour: "#c792f3"
+- id: information
+  title: Information
+  role: Connect everyone and everything, from a global network to light-minutes across the inner system.
+  colour: "#86d3f2"
+- id: health
+  title: Health
+  role: Keep people healthy and long-lived, on Earth and in space, so the people doing the climbing can finish it.
+  colour: "#f2819f"
+- id: environment
+  title: Environment
+  role: Keep Earth's climate and living systems whole while its energy use grows a hundredfold and more.
+  colour: "#42c2a2"
+- id: resilience
+  title: Resilience
+  role: Keep the climb safe from catastrophe, natural or made, so no single failure ends it.
+  colour: "#ea5d5d"
+- id: governance
+  title: Governance
+  role: Decide together, settle disputes and share what space holds, at the scale of a planet and a solar system.
+  colour: "#e9e1c6"
+- id: economics
+  title: Economics
+  role: Pay for the climb, price what it uses and share what it makes, across generations.
+  colour: "#e6c64e"
+- id: people
+  title: People
+  role: Educate, include and inspire the billions of people whose work and ideas the climb needs.
+  colour: "#dca77e"

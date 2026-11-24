@@ -1,0 +1,74 @@
+id: seed-foundry
+title: The Seed Foundry
+domain: manufacturing
+for: [self-replicating-factory]
+pitch: >-
+  A factory built from a short list of simple, repeated machines, so that copying the whole factory
+  means making only a few kinds of part, every one of them from molten regolith and sunlight.
+principle: >-
+  Closure is hard because factories have thousands of different parts. The Seed Foundry inverts the
+  design: it is made of only a dozen part families (cast basalt frames, iron and aluminium castings,
+  wound iron-core motors, solar-melted glass fibre, and printed aluminium traces on glass for
+  circuits), all of which can come from one regolith melt split by electrolysis into oxygen, iron,
+  silicon, aluminium and glass. Every machine is a combination of those parts. Electronics are the
+  exception: the seed brings a stock of chips, and each copy imports a small, falling share of them
+  by mass, while its own fab learns to make coarse transistors from silicon on glass. The doubling
+  time is then the time to process its own mass through the melt, about a year per hundred tonnes at
+  the megawatt a seed collects.
+buildsOn:
+  - text: NASA's 1980 lunar factory study, its 100-tonne seed and its closure analysis.
+    url: https://ntrs.nasa.gov/citations/19830007077
+  - text: Molten regolith electrolysis, demonstrated to make oxygen and molten iron and silicon from lunar simulant (Sadoway, MIT; Boston Metal).
+    url: https://news.mit.edu/2013/steel-without-greenhouse-gas-emissions-0508
+  - text: RepRap's self-copy of its printed parts, the first open measure of closure.
+    url: https://reprap.org/wiki/RepRap
+  - text: Cast basalt, already made industrially for pipes and wear tiles from melted volcanic rock.
+    url: https://en.wikipedia.org/wiki/Cast_basalt
+  - text: Ellery's 3D-printed motors and the universal constructor programme at Carleton University.
+    url: https://carleton.ca/ceser/wp-content/uploads/Self-Replicating-Machines-on-the-Moon.pdf
+experiment:
+  goal: Measure closure and doubling time for a whole, if small, self-copying loop on Earth, fed only lunar simulant and electricity.
+  setup: >-
+    A one-tonne bench loop in a vacuum-capable hall: a solar-simulator furnace and a molten oxide
+    electrolysis cell feeding a caster, a glass-fibre puller and a wire printer, plus two robot arms.
+    It is given simulant, power and a fixed stock of chips, and asked to build a second copy of
+    itself, logging the mass and the hours of every part it makes and every part it must be handed.
+  measure: Closure by mass and by part count; tonnes of finished parts per megawatt-hour; hours per tonne of copy; which parts block.
+  succeedsIf: The loop makes at least 80 percent of a copy of itself by mass from simulant, and its measured rate puts a full copy within five years at its own power.
+  costUsd: 25000000
+  months: 36
+path:
+  - phase: bench
+    what: The one-tonne loop on Earth, on lunar simulant.
+    scale: One copy, about a tonne.
+    proves: Closure above 80 percent by mass, and a measured doubling time.
+  - phase: prototype
+    what: A ten-tonne loop that builds its own chip fab, still on Earth.
+    scale: Ten tonnes, two generations.
+    proves: Coarse electronics made in the loop; closure above 95 percent.
+  - phase: pilot
+    what: The first seed landed on the Moon, at about {seed-mass}.
+    scale: "{seed-mass}, in {seed-year}"
+    proves: The loop runs in lunar vacuum, dust and night, and doubles on schedule.
+  - phase: first-plant
+    what: A thousand seeds' worth of industry, ten doublings on, making collectors and mass drivers as well as copies.
+    scale: About a thousand times the seed.
+    proves: The industry can split its output between growth and useful product.
+  - phase: fleet
+    what: Seeds sent to the asteroids and to Mercury, each starting its own lineage.
+    scale: Industry across the inner solar system.
+    proves: Lineages adapt to new rock and new light without help from Earth.
+  - phase: civilization
+    what: The industry that builds the swarm, {swarm-full-mined} of processed mass.
+    scale: "{doublings-to-sun} doublings from the seed, about {years-seed-to-sun}"
+    proves: The climb to Type II.
+risks: >-
+  Electronics may never close in a crude fab; the fallback is to keep importing chips, which are a
+  tiny share of the mass, from Earth for longer. Lunar dust may wear moving parts faster than they
+  can be replaced; the design leans on few, slow, large moving parts for that reason. Doubling may
+  run slower than planned, which the Builder shows: every extra year of doubling time adds dozens of
+  years to the climb.
+scene:
+  kind: replicator
+  focus: The bench loop casting its own frames, then seeds spreading across the Moon.
+  params: { unit: fab, generations: 10, closure: 0.8 }

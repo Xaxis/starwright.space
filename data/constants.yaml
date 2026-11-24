@@ -1,0 +1,311 @@
+# Measured numbers: what the world is today and what physics says. Each has its source and the
+# words or table cell there that show the value. The model reads these; it never changes them.
+# Gathered 2026-11-24; where a primary source refused automated reading, the row says whose
+# wording is quoted.
+
+# --- The scale ------------------------------------------------------------------------------------
+type-1-power:
+  label: Type I on Sagan's scale
+  value: 1.0e16
+  unit: W
+  year: 1973
+  source: https://arxiv.org/abs/1601.05112
+  quote: "I would suggest Type 1.0 as a civilization using 10^16 watts for insterstellar (sic) communication; Type 1.1, 10^17 watts; Type 1.2, 10^18 watts, and so on."
+  note: Sagan, The Cosmic Connection (1973), p. 234, as quoted by Cirkovic 2015. Sagan's rule is K = (log10 P - 6) / 10, with P in watts.
+type-2-power:
+  label: Type II on Sagan's scale
+  value: 1.0e26
+  unit: W
+  year: 2020
+  source: https://doi.org/10.3847/1538-3881/ab792b
+  quote: "using the whole numbers 0 through 4 to denote 10^6, 10^16, 10^26, 10^36, and 10^46 W"
+  note: Gray 2020, "The Extended Kardashev Scale", The Astronomical Journal 159, 228.
+kardashev-1964-type-1:
+  label: Type I as Kardashev defined it in 1964
+  value: 4.0e12
+  unit: W
+  year: 1964
+  source: https://arxiv.org/abs/1601.05112
+  quote: "technological level close to the level presently attained on the earth, with energy consumption at ≈ 4 × 10^19 erg/sec"
+  note: Kardashev 1964, Soviet Astronomy 8, 217, as quoted by Cirkovic 2015. Humanity passed it around 1955 to 1962; the ladder uses Sagan's scale.
+kardashev-1964-type-2:
+  label: Type II as Kardashev defined it in 1964
+  value: 4.0e26
+  unit: W
+  year: 1964
+  source: https://arxiv.org/abs/1601.05112
+  quote: "a civilization capable of harnessing the energy radiated by its own star (for example, the stage of successful construction of a \"Dyson sphere\"...); energy consumption at ≈ 4 × 10^33 erg/sec."
+jiang-2022-type-1-year:
+  label: The year Jiang et al. expect humanity to reach Type I
+  value: 2371
+  unit: year
+  year: 2022
+  source: https://arxiv.org/abs/2204.07070
+  quote: "the best estimate for this day will not come until year 2371"
+  note: A projection of fossil, nuclear and renewable supply under environmental limits, all used on Earth.
+
+# --- Humanity today -------------------------------------------------------------------------------
+energy-supply:
+  label: The world's total energy supply in 2025
+  value: 600.3
+  unit: EJ
+  year: 2025
+  source: https://ourworldindata.org/grapher/primary-energy-cons
+  quote: "World,OWID_WRL,2025,166753.6"
+  note: Energy Institute, Statistical Review of World Energy 2026, as published by Our World in Data; 166,753.6 TWh is 600.3 EJ. Traditional biomass would add about 40 EJ.
+energy-growth-10yr:
+  label: Growth of world energy use, 2015 to 2025
+  value: 0.0137
+  unit: 1/yr
+  year: 2025
+  source: https://ourworldindata.org/grapher/primary-energy-cons
+  quote: 'World,OWID_WRL,2015,145499.6 and World,OWID_WRL,2025,166753.6' 
+  note: Compound annual growth between the two rows.
+energy-growth-100yr:
+  label: Growth of world energy use over the last century
+  value: 0.0221
+  unit: 1/yr
+  year: 2025
+  source: https://ourworldindata.org/grapher/global-primary-energy
+  quote: 1920 row 17,963 TWh and 2025 row 177,865 TWh (all sources, with Smil's traditional biomass)
+  note: Compound annual growth, 1920 to 2025.
+electricity-2025:
+  label: World electricity generated in 2025
+  value: 31772
+  unit: TWh
+  year: 2025
+  source: https://ourworldindata.org/grapher/electricity-generation
+  quote: "World,OWID_WRL,2025,31772.35"
+pv-capacity-installed:
+  label: Solar panels installed worldwide, end of 2025
+  value: 3.0e12
+  unit: W
+  year: 2025
+  source: https://iea-pvps.org/wp-content/uploads/2026/05/Snapshot-2026-FS.pdf
+  quote: "In 2025, global photovoltaic capacity approached 3 TW, up from 2 276 GW in 2024, with 698 GW of new PV systems installed."
+pv-factory-capacity:
+  label: The world's solar module factories, a year's output at full capacity
+  value: 1.46e12
+  unit: W
+  year: 2025
+  source: https://www.qualenergia.it/wp-content/uploads/2026/06/ITRPV-17-Edition.pdf
+  quote: "Module production capacity at the end of 2025 is assumed to be about 1460 GWp"
+pv-module-price:
+  label: Average solar module spot price, end of 2025
+  value: 0.09
+  unit: USD/W
+  year: 2025
+  source: https://www.qualenergia.it/wp-content/uploads/2026/06/ITRPV-17-Edition.pdf
+  quote: "The calculated average module spot market price at the end of 2025 is 0.09 US$/Wp"
+pv-learning-rate:
+  label: Solar modules' fall in price for each doubling of all ever made
+  value: 0.26
+  unit: share
+  year: 2025
+  source: https://www.qualenergia.it/wp-content/uploads/2026/06/ITRPV-17-Edition.pdf
+  quote: "the price experience curve from 1976 to 2025 continued with its historic learning; the new calculated learning rate (LR) is 26%."
+pv-record-silicon:
+  label: Best silicon solar cell
+  value: 0.281
+  unit: share
+  year: 2026
+  source: https://www.nlr.gov/docs/libraries/pv/cell-efficiency-data-table.xlsx
+  quote: "Crystalline Si / heterostructure, LONGi HIBC, 2026-03, 28.1 %"
+pv-record-multijunction:
+  label: Best solar cell of any kind, under concentrated light
+  value: 0.476
+  unit: share
+  year: 2022
+  source: https://www.nlr.gov/docs/libraries/pv/cell-efficiency-data-table.xlsx
+  quote: "III-V multijunction, concentrator, FhG-ISE, GaInP/GaInAs; GaInAsP/GaInAs bonded, 665 suns, 47.6 %"
+nif-target-gain:
+  label: Best fusion target gain, NIF, April 2025
+  value: 4.13
+  unit: ""
+  year: 2025
+  source: https://annual.llnl.gov/sites/annual/files/2026-02/llnlannual25-3-national-ignition-facility.pdf
+  quote: "the test achieved a record-setting target gain of 4.13"
+upmass-2025:
+  label: Mass of spacecraft launched worldwide in 2025
+  value: 2.712e6
+  unit: kg
+  year: 2025
+  source: https://brycetech.com/reports/report-documents/global-orbital-activity-2025/BryceTech_Orbital_Launches_2025.pdf
+  quote: "Service providers worldwide launched an estimated 2.7 million kg of spacecraft mass during 2025"
+  note: BryceTech, Orbital Launches of 2025; total 2,712,023 kg, 82% of it on SpaceX vehicles.
+launch-cost-falcon-9:
+  label: Falcon 9's advertised cost to low Earth orbit
+  value: 2720
+  unit: USD/kg
+  year: 2018
+  source: https://ntrs.nasa.gov/citations/20200001093
+  quote: "SpaceX's Falcon 9 now advertises a cost of $62 million to launch 22,800 kg to LEO, $2,720/kg."
+launch-cost-shuttle:
+  label: The Space Shuttle's cost to low Earth orbit
+  value: 54500
+  unit: USD/kg
+  year: 2018
+  source: https://ntrs.nasa.gov/citations/20200001093
+  quote: "NASA's space shuttle had a cost of about $1.5 billion to launch 27,500 kg to Low Earth Orbit"
+
+# --- Earth ----------------------------------------------------------------------------------------
+earth-radius:
+  label: Earth's mean radius
+  value: 6.371e6
+  unit: m
+  year: 2024
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
+  quote: "Volumetric mean radius (km) 6371.000"
+earth-albedo:
+  label: The share of sunlight Earth reflects
+  value: 0.294
+  unit: share
+  year: 2024
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
+  quote: "Bond albedo 0.294"
+earth-land-area:
+  label: Earth's land area
+  value: 1.4894e14
+  unit: m2
+  year: 2025
+  source: https://en.wikipedia.org/wiki/Earth
+  quote: "148,940,000 km2"
+co2-doubling-forcing:
+  label: The warming push of doubling the air's CO2
+  value: 3.93
+  unit: W/m2
+  year: 2021
+  source: https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-7/
+  quote: "The assessed ERF for a doubling of carbon dioxide compared to 1750 levels (3.93 ± 0.47 W m-2) is larger than in AR5."
+human-forcing-2024:
+  label: All human-made warming push, 2024
+  value: 2.97
+  unit: W/m2
+  year: 2024
+  source: https://doi.org/10.5194/essd-17-2641-2025
+  quote: "Total anthropogenic ERF has increased to 2.97 [2.05 to 3.77] W m −2 in 2024 relative to 1750"
+geothermal-flow:
+  label: Heat flowing out of Earth's interior
+  value: 4.7e13
+  unit: W
+  year: 2010
+  source: https://orca.cardiff.ac.uk/9397/
+  quote: "Our estimate is 47 ± 2 TW"
+photosynthesis-power:
+  label: Power captured by all of Earth's photosynthesis
+  value: 1.3e14
+  unit: W
+  year: 2005
+  source: https://en.wikipedia.org/wiki/Photosynthesis
+  quote: "The average rate of energy captured by global photosynthesis is approximately 130 terawatts"
+
+# --- The Sun and the inner solar system -----------------------------------------------------------
+solar-luminosity:
+  label: The Sun's power
+  value: 3.828e26
+  unit: W
+  year: 2015
+  source: https://arxiv.org/abs/1510.07674
+  quote: "3.828×10^26 W"
+  note: IAU 2015 Resolution B3, the nominal solar luminosity.
+solar-constant:
+  label: Sunlight on each square metre at Earth's distance
+  value: 1361
+  unit: W/m2
+  year: 2015
+  source: https://arxiv.org/abs/1510.07674
+  quote: "S⊙ = 1361 (± 1) W m−2"
+au:
+  label: The astronomical unit, Earth's mean distance from the Sun
+  value: 1.495978707e11
+  unit: m
+  year: 2012
+  source: https://www.iau.org/static/resolutions/IAU2012_English.pdf
+  quote: "149 597 870 700 metres"
+  note: IAU 2012 Resolution B2 fixes it exactly.
+mercury-mass:
+  label: Mercury's mass
+  value: 3.301e23
+  unit: kg
+  year: 2024
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html
+  quote: "Mass (10^24 kg) 0.33010"
+moon-mass:
+  label: The Moon's mass
+  value: 7.346e22
+  unit: kg
+  year: 2024
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html
+  quote: "Mass (10^24 kg) 0.07346"
+asteroid-belt-mass:
+  label: Mass of the whole asteroid belt
+  value: 2.39e21
+  unit: kg
+  year: 2018
+  source: https://en.wikipedia.org/wiki/Asteroid_belt
+  quote: "The total mass of the asteroid belt is estimated to be 2.39×10^21 kg, which is 3% of the mass of the Moon."
+  note: Pitjeva and Pitjev 2018, Astronomy Letters 44, 554.
+
+# --- Precedents for space industry ----------------------------------------------------------------
+nasa-1980-seed-mass:
+  label: The seed factory in NASA's 1980 self-replicating lunar factory study
+  value: 1.0e5
+  unit: kg
+  year: 1980
+  source: https://ntrs.nasa.gov/citations/19830007077
+  quote: "a 100-ton initial \"seed\" factory is planted on the Moon with access only to local resources"
+nasa-1980-replication:
+  label: The same study's time for the seed to copy itself
+  value: 1
+  unit: yr
+  year: 1980
+  source: https://ntrs.nasa.gov/citations/19830007077
+  quote: "an SRS strawman replication time of 1 year was taken as appropriate"
+nasa-1980-closure:
+  label: The share of its own parts the study judged a seed could make
+  value: 0.93
+  unit: share
+  year: 1980
+  source: https://ntrs.nasa.gov/citations/19830007077
+  quote: "have concluded that 90-96% closure is attainable"
+  note: The midpoint of the study's 90 to 96 percent.
+armstrong-sandberg-density:
+  label: Collector mass per square metre in Armstrong and Sandberg's Mercury swarm
+  value: 3.92
+  unit: kg/m2
+  year: 2013
+  source: https://doi.org/10.1016/j.actaastro.2013.04.002
+  quote: "assuming 50% of this mass could be transformed into reflective surfaces ... = 3.92 kg/m2"
+  note: '"Eternity in six hours", Acta Astronautica 89, 1. They took a third of the light to be usable, a five-year processing cycle, and found Mercury gone in 31 years.'
+armstrong-sandberg-years:
+  label: Their time to turn Mercury into a swarm
+  value: 31.2
+  unit: yr
+  year: 2013
+  source: https://doi.org/10.1016/j.actaastro.2013.04.002
+  quote: "31 years and 85 days"
+ikaros-density:
+  label: Mass per square metre of IKAROS's solar sail film
+  value: 0.010
+  unit: kg/m2
+  year: 2010
+  source: https://en.wikipedia.org/wiki/IKAROS
+  quote: "The polyimide sheet had a mass of about 10 grams per square metre"
+  note: JAXA's 2010 sail, 7.5 µm polyimide with thin-film solar cells, the first to fly between planets.
+
+# --- Physics --------------------------------------------------------------------------------------
+stefan-boltzmann:
+  label: The Stefan-Boltzmann constant
+  value: 5.670374419e-8
+  unit: W/m2/K4
+  year: 2022
+  source: https://physics.nist.gov/cgi-bin/cuu/Value?sigma
+  quote: "5.670 374 419... x 10 -8 W m -2 K -4"
+landauer-300k:
+  label: Least energy to erase one bit at room temperature
+  value: 2.871e-21
+  unit: J
+  year: 1961
+  source: https://physics.nist.gov/cgi-bin/cuu/Value?k
+  quote: "1.380 649 x 10 -23 J K -1"
+  note: Landauer's limit, k T ln 2, at 300 K, from the Boltzmann constant.

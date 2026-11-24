@@ -1,0 +1,29 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+.next/
+out/
+next-env.d.ts
+# written by `next dev` on every start; Next's text, not ours
+web/AGENTS.md
+*.tsbuildinfo
+*.log
+
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
+
+# agent worktrees and local settings
+.claude/worktrees/
+.claude/settings.local.json
+
+# Vercel links (tools/deploy.sh writes its own per deploy)
+.vercel/

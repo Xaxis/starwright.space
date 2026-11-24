@@ -1,0 +1,43 @@
+id: self-replicating-factory
+title: A factory that builds copies of itself
+domain: manufacturing
+stage: k09
+needs: [automated-factories, in-space-resources, cheap-launch]
+summary: >-
+  Every rung past the heat ceiling is built from more mass than rockets can ever lift, so it must be
+  made where it is: by factories that mine local rock and build more factories from it. The climb's
+  pace is then set by one number, how long the industry takes to double, which the model holds at
+  {doubling-time}. From a {seed-mass} seed in {seed-year}, the model reaches Type I in {year-type-1}.
+target: >-
+  A seed factory of about {seed-mass}, landed on the Moon, that makes nearly all of its own parts
+  from regolith and sunlight and doubles its mass every {doubling-time}, so that a few dozen
+  doublings take the industry from one seed to the swarm.
+exists:
+  - text: NASA's 1980 study of a self-replicating lunar factory sized a 100-tonne seed and judged 90 to 96 percent closure, the share of its own parts it makes, attainable.
+    url: https://ntrs.nasa.gov/citations/19830007077
+    year: 1980
+  - text: RepRap, the open self-copying 3D printer, printed a complete set of its own printed parts in 2008, 48 percent of all its parts excluding fasteners.
+    url: https://researchportal.bath.ac.uk/en/studentTheses/towards-a-self-manufacturing-rapid-prototyping-machine/
+    year: 2009
+  - text: FANUC's robot factory in Japan has robots building robots at up to 6,000 a month, and has run unsupervised for weeks.
+    url: https://www.fanuc.eu/at-en/node/1472
+    year: 2026
+  - text: Metzger and colleagues showed lunar industry could bootstrap from about 12 tonnes landed, growing over about twenty years as it learns to make more of itself.
+    url: https://arxiv.org/abs/1612.03238
+    year: 2013
+  - text: Freitas and Merkle's Kinematic Self-Replicating Machines reviews every replicator design since von Neumann, with a theory of closure.
+    url: https://www.molecularassembler.com/KSRM.htm
+    year: 2004
+  - text: Alex Ellery's lab at Carleton University 3D-prints electric motors and electronics as steps toward a lunar universal constructor.
+    url: https://carleton.ca/ceser/wp-content/uploads/Self-Replicating-Machines-on-the-Moon.pdf
+    year: 2022
+gap: >-
+  No machine has yet copied itself from raw rock. The hardest parts are the ones only specialist
+  plants make today: chips, bearings, magnets and precise optics. Closure stalls at about half for
+  printers and near nothing for electronics, and nobody has measured a doubling time for a whole
+  industrial loop.
+inventions: [seed-foundry]
+scene:
+  kind: replicator
+  focus: One seed factory on the Moon, then two, then four, spreading across the regolith.
+  params: { unit: fab, generations: 8, closure: 0.93 }

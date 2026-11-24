@@ -1,0 +1,32 @@
+{
+  "name": "@starwright/web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "starwright.space: the site, every page and 3D scene rendered from data/ through the model in core/. Deployed as the Vercel project starwright.",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev --port 4527",
+    "build": "next build",
+    "start": "next start --port 4527",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "node --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@starwright/core": "workspace:*",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "0.0.1",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "0.187.0",
+    "typescript": "7.0.2"
+  }
+}

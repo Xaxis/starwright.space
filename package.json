@@ -1,0 +1,26 @@
+{
+  "name": "starwright",
+  "private": true,
+  "type": "module",
+  "description": "Starwright: every technology and plan for humanity's climb to Kardashev Type I and Type II, each one explorable in 3D, with every number computed from data/ by the model in core/.",
+  "packageManager": "pnpm@10.30.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "model": "node core/cli.ts",
+    "check:data": "node core/cli.ts --check",
+    "dev": "pnpm --filter @starwright/web dev",
+    "build": "pnpm --filter @starwright/web build",
+    "lint": "biome check . && pnpm -r run typecheck && node core/cli.ts --check && node tools/style.ts",
+    "format": "biome check --write .",
+    "test": "pnpm -r run test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.8",
+    "@starwright/core": "workspace:*",
+    "@types/node": "24.19.0",
+    "playwright-core": "1.63.0",
+    "typescript": "7.0.2"
+  }
+}

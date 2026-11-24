@@ -1,0 +1,118 @@
+# Numbers the plan chooses. Each says why, what kind of choice it is (physics, precedent,
+# invented or choice), and the range the Builder lets a reader move it through.
+
+earth-growth:
+  label: How fast Earth's energy use grows
+  value: 0.03
+  unit: 1/yr
+  basis: choice
+  why: Faster than the last century's {energy-growth-100yr} and the last decade's {energy-growth-10yr}. The climb is a plan, not a trend; three percent a year is what an electrifying world, building for abundance everywhere, would need.
+  min: 0.005
+  max: 0.08
+land-share:
+  label: Share of Earth's land given to solar panels
+  value: 0.05
+  unit: share
+  basis: choice
+  why: One twentieth of the land, most of it desert. Farms already take far more; panels raised over pasture and crops can share land with them.
+  min: 0.005
+  max: 0.2
+surface-insolation:
+  label: Sunlight on a flat panel in a sunny desert, day and night averaged
+  value: 250
+  unit: W/m2
+  basis: precedent
+  why: The sunniest deserts receive about 2,000 to 2,500 kWh on each square metre a year (Global Solar Atlas); this is the yearly average in watts.
+  min: 150
+  max: 300
+pv-efficiency:
+  label: Efficiency of panels on the ground
+  value: 0.25
+  unit: share
+  basis: precedent
+  why: Modules close to the best silicon cells today ({pv-record-silicon}), short of tandems.
+  min: 0.1
+  max: 0.47
+heat-limit:
+  label: Most new heat Earth's surface may add, per square metre
+  value: 0.5
+  unit: W/m2
+  basis: choice
+  why: About an eighth of the warming push of doubling CO2 ({co2-doubling-forcing}). Every watt not from sunlight that would have warmed the ground anyway adds heat; this caps it at a level the climate can bear.
+  min: 0.05
+  max: 5
+seed-year:
+  label: Year the first self-copying factory starts work in space
+  value: 2045
+  unit: year
+  basis: choice
+  why: About twenty years from now, once launch is cheap and the factory's parts are proven on the Moon and in orbit.
+  min: 2030
+  max: 2150
+seed-mass:
+  label: Mass of that first factory
+  value: 1.0e5
+  unit: kg
+  basis: precedent
+  why: The 100-tonne seed of NASA's 1980 lunar factory study ({nasa-1980-seed-mass}), a few Starship loads.
+  min: 1.0e3
+  max: 1.0e8
+  log: true
+doubling-time:
+  label: Time for space industry to double its mass
+  value: 2
+  unit: yr
+  basis: invented
+  why: Twice the 1980 study's one-year strawman ({nasa-1980-replication}). No machine has yet copied itself from raw rock; this is the number the whole climb past Type I turns on.
+  min: 0.5
+  max: 20
+  log: true
+collector-density:
+  label: Mass of each square metre of collector
+  value: 0.02
+  unit: kg/m2
+  basis: invented
+  why: Twice IKAROS's thin film ({ikaros-density}), for cells, wiring and a radiator. Armstrong and Sandberg allowed {armstrong-sandberg-density}, which the Builder can show.
+  min: 0.002
+  max: 5
+  log: true
+collector-efficiency:
+  label: Share of sunlight the collectors turn into power
+  value: 0.33
+  unit: share
+  basis: precedent
+  why: A third, as Armstrong and Sandberg took; good multijunction cells already reach more ({pv-record-multijunction}).
+  min: 0.1
+  max: 0.6
+collector-share:
+  label: Share of what space industry makes that becomes collectors
+  value: 0.5
+  unit: share
+  basis: choice
+  why: Half; the rest is the factories themselves, radiators, computers and habitats.
+  min: 0.05
+  max: 0.95
+swarm-radius:
+  label: Distance of the swarm from the Sun
+  value: 0.6
+  unit: AU
+  basis: choice
+  why: Inside Venus's orbit, close enough to Mercury's mass and bright enough to need less film, far enough to keep the film cool.
+  min: 0.2
+  max: 1.5
+mercury-usable:
+  label: Share of Mercury the industry can use
+  value: 0.5
+  unit: share
+  basis: precedent
+  why: Half, as Armstrong and Sandberg assumed.
+  min: 0.1
+  max: 0.9
+asteroid-usable:
+  label: Share of the asteroid belt the industry can use
+  value: 0.5
+  unit: share
+  basis: choice
+  why: Half of the belt, starting with the carbon- and metal-rich bodies.
+  min: 0.1
+  max: 0.9

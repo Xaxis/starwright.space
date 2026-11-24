@@ -1,0 +1,195 @@
+# The ladder's rungs, in order. Each is a power level on Sagan's scale (its model id), a picture of
+# the civilization there, the limit that holds the climb back, the 3D scene and the plan: the
+# capabilities to build at this rung, in order. Years come from the model ({year-...}).
+
+- id: now
+  title: Today
+  power: power-now
+  picture: Humanity uses {power-now}, a Kardashev rating of {k-now}. Most of it still comes from burning fossil fuels, and most people use far less energy than a comfortable life needs. Solar panels already make up {pv-capacity-installed} of capacity, and the world's factories can make {pv-factory-capacity} more each year.
+  limit: Fossil fuels cannot grow a hundredfold, and the air cannot take their carbon. Growth has to move to sources that can.
+  scene:
+    kind: globe
+    focus: Earth at night, its cities lit, as it is today.
+    params: { solar: 0, grid: 0, lights: 1 }
+  plan:
+    - ref: terawatt-solar-factories
+      does: Grow solar factories from {pv-factory-capacity} a year toward tens of terawatts.
+    - ref: grid-storage
+      does: Make storage cheap enough that sunlight serves the night.
+    - ref: global-grid
+      does: Start the lines that carry noon to evening across time zones.
+
+- id: k08
+  title: Abundance on Earth
+  power: power-k08
+  picture: At {power-k08} (K 0.8), reached in {year-k08}, every person can use as much energy as the richest countries do today, from sunlight, wind, fission and the heat under the ground. Deserts carry fields of panels; a grid ties the continents together.
+  limit: Earth's surface. Panels on {land-share} of the land give at most {surface-solar-cap}, and every other source adds heat the planet must shed. Earth's whole ceiling is {earth-cap}.
+  scene:
+    kind: globe
+    focus: The deserts in panels and the grid lit between the continents.
+    params: { solar: 1, grid: 1, lights: 1 }
+  plan:
+    - ref: terawatt-solar-factories
+      does: Run solar factories at tens of terawatts a year.
+    - ref: global-grid
+      does: Finish the lines between continents, so the sun never sets on the grid.
+    - ref: grid-storage
+      does: Store days of demand, not hours.
+    - ref: clean-firm-power
+      does: Add fission and deep geothermal heat for steady power.
+    - ref: clean-metals
+      does: Make the metals the buildout needs with clean power.
+    - ref: abundant-minerals
+      does: Find, mine and recycle enough lithium, copper and rare earths.
+    - ref: automated-factories
+      does: Let factories run themselves, so building grows faster than the workforce.
+    - ref: carbon-drawdown
+      does: Draw down the carbon already in the air.
+    - ref: abundant-food
+      does: Grow more food on less land.
+    - ref: abundant-water
+      does: Desalinate and recycle water wherever it is short.
+    - ref: electric-transport
+      does: Move people and goods on electricity.
+    - ref: universal-connectivity
+      does: Bring everyone online.
+    - ref: abundant-compute
+      does: Build the computing that designs and runs everything else.
+    - ref: programmable-biology
+      does: Make biology a branch of engineering.
+    - ref: universal-health
+      does: Give everyone health care.
+    - ref: universal-education
+      does: Give everyone an education worth having.
+    - ref: planetary-defense
+      does: Find and be able to deflect every dangerous asteroid.
+    - ref: fast-permitting
+      does: Decide what gets built quickly and fairly.
+    - ref: buildout-finance
+      does: Finance a buildout a hundred times today's.
+
+- id: k09
+  title: The heat ceiling
+  power: power-k09
+  picture: At {power-k09} (K 0.9), reached in {year-k09}, Earth's surface is close to its ceiling of {earth-cap}. Industry and computing begin to leave the planet. Launch costs fall to freight prices, factories run in orbit and on the Moon, and the first factory that can copy itself starts work in {seed-year}.
+  limit: Heat. Using Type I power on Earth would add {type-1-earth-heat}, {type-1-heat-vs-co2} the push of doubling CO2. The next rungs are climbed in space.
+  scene:
+    kind: orbit
+    focus: Earth's orbits fill with stations, factories and collectors.
+    params: { stations: 0.6, collectors: 0.4, radiators: 0.5, beams: true }
+  plan:
+    - ref: cheap-launch
+      does: Bring the cost to orbit down to the price of freight.
+    - ref: orbital-industry
+      does: Make things in orbit that cannot be made on Earth.
+    - ref: lunar-industry
+      does: Mine and refine the Moon, and launch from it.
+    - ref: in-space-resources
+      does: Make propellant, metal and glass from what is already up there.
+    - ref: self-replicating-factory
+      does: Build the seed factory that makes copies of itself from rock.
+    - ref: space-solar-power
+      does: Collect sunlight in orbit for the industry there.
+    - ref: orbital-compute
+      does: Move the heaviest computing to orbit, where the Sun powers it and space takes its heat.
+    - ref: heat-budget
+      does: Watch and manage Earth's heat as its energy use nears the ceiling.
+    - ref: closed-life-support
+      does: Keep people alive in space on recycled air, water and food.
+    - ref: space-health
+      does: Keep them healthy there.
+    - ref: space-commons
+      does: Agree the rules for orbits, spectrum and lunar resources.
+    - ref: space-economy
+      does: Let space industry pay its own way.
+
+- id: type-1
+  title: Type I
+  power: type-1-power
+  picture: At {type-1-power}, Sagan's Type I, reached in {year-type-1}, humanity uses more power than ever falls on its own cities, almost all of it in space. Factories copying themselves every {doubling-time} have spread across the Earth and Moon system; mass drivers throw lunar rock to the factories at L5.
+  limit: Mass near Earth. The Moon and nearby asteroids feed the first factories, but the swarm will need more than they hold.
+  scene:
+    kind: ladder
+    focus: The Earth and Moon system, its orbits full of industry.
+    params: { at: 3 }
+  plan:
+    - ref: thin-film-collectors
+      does: Make collectors of film a few microns thick, at {collector-density}.
+    - ref: mass-drivers
+      does: Launch lunar rock with electricity, not rockets.
+    - ref: space-habitats
+      does: Build homes in space for the people who run it.
+    - ref: space-farming
+      does: Grow their food there.
+    - ref: interplanetary-transport
+      does: Run regular ships between Earth, the Moon, Mars and the asteroids.
+    - ref: interplanetary-network
+      does: Connect the inner solar system.
+    - ref: power-beaming
+      does: Send power where it is needed, by laser or microwave.
+    - ref: multi-world-backup
+      does: Make sure no single disaster can end civilization.
+
+- id: planet
+  title: A planet's worth of sunlight
+  power: earth-intercepted
+  picture: In {year-planet}, humanity harnesses {earth-intercepted}, as much as all the sunlight that falls on Earth. Industry has reached the asteroid belt.
+  limit: Distance and coordination. The industry now spans the inner solar system and must run itself.
+  scene:
+    kind: orbit
+    focus: Collectors fill the space between Earth and the Sun.
+    params: { stations: 1, collectors: 1, radiators: 1, beams: true }
+  plan:
+    - ref: asteroid-mining
+      does: Mine the asteroid belt's {asteroid-belt-mass}.
+    - ref: autonomous-industry
+      does: Let industry grow without people on site.
+    - ref: solar-system-governance
+      does: Govern a civilization spread across worlds.
+
+- id: k15
+  title: The inner system at work
+  power: power-k15
+  picture: At {power-k15} (K 1.5), reached in {year-k15}, Mercury is being taken apart for the swarm. Mass drivers fling its metal and rock to orbits {swarm-radius} from the Sun, where factories turn it into collectors.
+  limit: Building fast enough. The swarm needs {swarm-full-mined} of processed mass, {swarm-mass-share} of all the industry can reach.
+  scene:
+    kind: mercury
+    focus: Mercury mined, its mass streaming out to the swarm.
+    params: { mined: 0.3 }
+  plan:
+    - ref: mercury-mining
+      does: Take Mercury apart, crust first.
+    - ref: swarm-construction
+      does: Build and fly the swarm's collectors by the trillion.
+    - ref: solar-scale-compute
+      does: Put the swarm's power to work in computing.
+    - ref: off-world-society
+      does: Grow the societies that live and work off Earth.
+
+- id: type-2
+  title: Type II
+  power: type-2-power
+  picture: In {year-type-2}, the swarm harnesses {type-2-power}, Sagan's Type II. Its collectors catch most of the Sun's light; from outside, the Sun has dimmed and glows in the infrared.
+  limit: The Sun itself. There is no more light to catch.
+  scene:
+    kind: swarm
+    focus: The swarm, nearly closed around the Sun.
+    params: { built: 0.9 }
+  plan:
+    - ref: dyson-swarm
+      does: Close the swarm around the Sun.
+    - ref: swarm-construction
+      does: Keep a trillion collectors flying without collisions.
+
+- id: sun
+  title: The whole Sun
+  power: sun-harnessed
+  picture: With every photon caught, the swarm turns {sun-harnessed} into work. This is as far as one star goes.
+  limit: One star. Beyond here the climb reaches for others.
+  scene:
+    kind: swarm
+    focus: The swarm closed; the Sun seen only in the infrared.
+    params: { built: 1 }
+  plan:
+    - ref: dyson-swarm
+      does: Run the swarm for as long as the Sun shines.

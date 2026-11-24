@@ -1,0 +1,24 @@
+{
+  "name": "@starwright/core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The Starwright model and graph: the ladder's numbers, the capabilities each rung needs and the inventions that close the gaps, computed and validated from data/. Pure TypeScript; only src/load.ts reads files.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./load": "./src/load.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.ts"
+  },
+  "dependencies": {
+    "yaml": "2.9.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.0",
+    "typescript": "7.0.2"
+  }
+}
