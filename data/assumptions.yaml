@@ -116,3 +116,11 @@ asteroid-usable:
   why: Half of the belt, starting with the carbon- and metal-rich bodies.
   min: 0.1
   max: 0.9
+sink-temperature:
+  label: Temperature at which a converter sheds its waste heat
+  value: 300
+  unit: kelvin
+  basis: physics
+  why: Room temperature, the sink the Landsberg limit for sunlight is usually quoted at, and the one at which erasing a bit costs {landauer-300k}. A colder radiator raises the limit; a hotter one, lighter in space, lowers it.
+  min: 50
+  max: 1000

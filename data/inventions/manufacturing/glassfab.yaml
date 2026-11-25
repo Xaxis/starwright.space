@@ -1,0 +1,81 @@
+id: glassfab
+title: The Glassfab
+domain: manufacturing
+for: [simple-chip-fabs, self-replicating-factory]
+pitch: >-
+  A chip fab with no wafers, no photoresist and no toxic gases: it evaporates silicon and aluminium
+  onto sheets of glass in vacuum, melts the silicon into crystals with a laser, and draws every
+  circuit by laser, making microcontrollers from five elements and light.
+principle: >-
+  A transistor needs a semiconductor, an insulator, a conductor and two kinds of dopant, nothing
+  more. Silicon is the semiconductor, silica the insulator, aluminium the conductor, and phosphorus
+  and boron the dopants. All but the dopants come from rock, and the dopants are needed by the gram.
+  The Glassfab builds thin-film transistors the way displays are made, on glass rather than on a
+  silicon wafer, but strips out everything a seed cannot make. Silicon, silica and aluminium are
+  evaporated from heated sources in vacuum, so no silane or other process gas is needed. Amorphous
+  silicon is turned into polycrystalline silicon by melting it with laser pulses, as display makers
+  do with excimer lasers, which gives electrons enough mobility for logic. Instead of photoresist
+  and masks, a focused ultraviolet laser ablates each film where it is not wanted, as solar module
+  lines already scribe thin films, and drives dopants in from thin dopant-bearing glass layers.
+  Features of a few micrometres are enough for chips like those of the early 1980s: tens of
+  thousands of transistors, enough for a 32-bit controller running at megahertz. Every step is dry,
+  done in one vacuum, and steered by software, so the fab is a small set of evaporators, lasers and
+  stages that a factory can build.
+buildsOn:
+  - text: Low-temperature polycrystalline silicon, made by excimer laser annealing of amorphous silicon on glass, the backplane of high-end displays.
+    url: https://en.wikipedia.org/wiki/Low-temperature_polycrystalline_silicon
+  - text: PlasticARM, a 32-bit microprocessor built entirely from thin-film transistors on a flexible substrate (Nature, 2021).
+    url: https://www.nature.com/articles/s41586-021-03625-w
+  - text: Solution-processed polysilicon transistors reaching 108 cm2/Vs (Nature, 2006), evidence that crude deposition can still give good silicon.
+    url: https://www.nature.com/articles/nature04613
+  - text: Sam Zeloof's home-built 10 micrometre polysilicon gate chips, the scale of process a small fab can master.
+    url: https://sam.zeloof.xyz/second-ic/
+  - text: Blue Origin's silicon above 99.999 percent purity from regolith simulant, a candidate feed.
+    url: https://www.blueorigin.com/news/blue-alchemist-powers-our-lunar-future/
+experiment:
+  goal: Make a working microprocessor using only evaporated silicon, silica and aluminium, laser crystallisation, laser patterning and laser doping, on glass, with no photoresist and no process gases.
+  setup: >-
+    One high-vacuum chamber with electron-beam sources for silicon, silica and aluminium, a pulsed
+    green or ultraviolet laser for crystallisation, a 355 nm laser direct-write head on a precision
+    stage for ablation and doping, and 10 cm glass substrates. A design library of transistors, ring
+    oscillators and an 8-bit CPU of about 5,000 transistors.
+  measure: Electron mobility and threshold voltage spread; transistor yield; smallest reliable feature; ring oscillator speed; whether the CPU runs its test program; hours and kilowatt-hours per substrate.
+  succeedsIf: The 8-bit CPU runs its test program at 1 MHz or faster on at least one die in ten, with mobility above 50 cm2/Vs and transistor yield above 99.99 percent.
+  costUsd: 3500000
+  months: 24
+path:
+  - phase: bench
+    what: The single-chamber process on laboratory glass and silicon.
+    scale: An 8-bit CPU of about 5,000 transistors.
+    proves: Logic without wafers, resist or gases.
+  - phase: prototype
+    what: A 32-bit controller and memory, made on glass and silicon from lunar simulant.
+    scale: Tens of thousands of transistors per chip, hundreds of chips a month.
+    proves: Feedstock from rock is good enough.
+  - phase: pilot
+    what: A Glassfab built into the Seed Foundry's bench loop, making its motor controllers.
+    scale: The controllers for a one-tonne loop.
+    proves: Electronics close in a self-copying loop.
+  - phase: first-plant
+    what: The fab of the first seed landed on the Moon.
+    scale: Every controller a {seed-mass} seed needs, as it doubles every {doubling-time}.
+    proves: Seeds import only dopants and their best chips.
+  - phase: fleet
+    what: Glassfabs made by seeds for seeds, with finer lasers each generation.
+    scale: Billions of controllers a year across the industry.
+    proves: The electronics share of imports falls toward zero.
+  - phase: civilization
+    what: The control electronics of the swarm's collectors and factories, made where they are used.
+    scale: A controller for every collector the swarm flies.
+    proves: The climb no longer depends on Earth's chip supply chain.
+risks: >-
+  Laser ablation may leave ragged edges and debris that short neighbouring lines; the fallback is a
+  simple inorganic resist, such as a thin metal or oxide film patterned by the laser and then used
+  as an etch mask. Evaporated gate oxide may hold too much charge for stable thresholds; plasma
+  oxidation of the silicon itself would be tried next. Glass made from regolith may carry sodium
+  that drifts into transistors; a barrier layer of evaporated silica or a purer glass melt is the
+  answer to test.
+scene:
+  kind: machine
+  focus: A laser drawing circuits on a sheet of glass inside a vacuum chamber.
+  params: { shape: chip, spin: 0.1 }

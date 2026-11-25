@@ -1,0 +1,85 @@
+id: replication-ledger
+title: The Replication Ledger
+domain: information
+for: [open-knowledge-base]
+pitch: >-
+  A public record of how to make things in which every recipe is trusted only as far as strangers
+  have made it work from the page.
+principle: >-
+  A recipe is a message from one builder to another, and its quality is the chance that a stranger
+  who follows it gets the stated result. That chance can be measured, like the reliability of a
+  part. Each recipe in the Ledger is an Open Know-How record: inputs, tools, steps and the measured
+  properties of what it makes (the strength of a mortar, the efficiency of a cell, the torque of a
+  motor). Builders who try it log what they used, what they got and where they got stuck, with
+  photos and measurements. The Ledger publishes each recipe's replication rate with its
+  uncertainty, ties every failure to the step that caused it, and asks the author to revise.
+  Failures point to exactly where tacit knowledge was missing from the text, so each round of
+  attempts writes more of it down. It is science's replication step made routine for engineering.
+buildsOn:
+  - text: The Open Know-How specification, an open data model for describing how hardware is made.
+    url: https://www.internetofproduction.org/openknowhow
+    year: 2026
+  - text: protocols.io, which since 2014 has published citable, versioned methods with comments from those who used them.
+    url: https://www.protocols.io/about
+    year: 2014
+  - text: The Reproducibility Project, which in 2015 measured how many of 100 published studies replicated, the model for measuring recipes the same way.
+    url: https://en.wikipedia.org/wiki/Reproducibility_Project
+    year: 2015
+  - text: Open Source Ecology's open designs for 50 industrial machines, a first library of recipes to test.
+    url: https://www.opensourceecology.org/gvcs/
+    year: 2026
+  - text: Wikidata's "uses" property, which already links things to what they are made with in a free structured database.
+    url: https://www.wikidata.org/wiki/Property:P2283
+    year: 2026
+experiment:
+  goal: Measure how often a stranger can make a thing from an open recipe alone, and whether a round of logged failures and revisions raises that rate.
+  setup: >-
+    Pick 20 open recipes from the lower rungs of the climb: a lime mortar, a sand-cast aluminium
+    bracket, a small wind turbine blade, a biochar kiln, a hand-wound motor, a ceramic water filter,
+    a dye-sensitised solar cell and others. Write each as an Open Know-How record with a measurable
+    specification. Five makerspaces on three continents, with no contact with the authors, each try
+    every recipe from the record alone and log every deviation and result. Authors revise from the
+    logs, and five different makerspaces try the revised recipes.
+  measure: >-
+    Share of attempts that meet the specification in each round; hours and cost per attempt; the
+    steps where failures cluster; how much each revision added to the text.
+  succeedsIf: >-
+    The second round's replication rate is at least 70 percent and at least 20 percentage points
+    above the first round's.
+  costUsd: 250000
+  months: 10
+path:
+  - phase: bench
+    what: 20 recipes, 10 makerspaces, two rounds of attempts.
+    scale: "200 logged attempts"
+    proves: Replication rate can be measured, and revising from logged failures raises it.
+  - phase: prototype
+    what: An open online ledger with tools for logging attempts and comparing results.
+    scale: "500 recipes, 100 sites"
+    proves: Builders log attempts unpaid and trust the published rates.
+  - phase: pilot
+    what: Trade schools and engineering courses set replication as coursework.
+    scale: "5,000 recipes, 1,000 sites"
+    proves: The ledger can cover a whole chain, from ore to a working motor.
+  - phase: first-plant
+    what: Funders and factories ask for a measured replication rate before they adopt or pay for a process.
+    scale: "Tens of thousands of recipes, industrial processes included"
+    proves: Measured recipes change what gets built.
+  - phase: fleet
+    what: Every rung of this project's ladder linked to recipes with measured rates, in many languages, with robots logging their own attempts.
+    scale: "Every process the climb uses"
+    proves: The know-how of industry is public and tested.
+  - phase: civilization
+    what: The ledger travels with the seed factories, and every new world's industry logs its attempts in it.
+    scale: "Every world and every process"
+    proves: Industry can be rebuilt anywhere from the record.
+risks: >-
+  Companies may keep their processes secret; the ledger starts with open and expired-patent
+  processes and lets firms publish rates without full recipes. Builders may log only successes; the
+  project would pay for logged failures and audit a sample from photos and measurements. Some skill
+  resists being written down; video and sensor logs of each attempt capture what text misses.
+  Scores can be gamed; the sites that test a recipe are drawn at random.
+scene:
+  kind: network
+  focus: Recipes as nodes that brighten each time a stranger makes one work.
+  params: { shape: flat, nodes: 600, clusters: 20, links: 0.4, pulses: 0.6 }

@@ -1,0 +1,88 @@
+id: lighthouse-chain
+title: The Lighthouse Chain
+domain: energy
+for: [power-beaming]
+pitch: >-
+  A few very large, very thin lenses spaced tens of millions of kilometres apart that keep
+  refocusing a laser beam, so power can cross the inner solar system without spreading out into
+  uselessness.
+principle: >-
+  A beam spreads by diffraction: the spot grows with distance times wavelength divided by the size of
+  the optic. From a 100 m mirror, a 1 micron laser makes a spot kilometres wide at the distance from
+  Earth to the Sun, too big to catch. A chain of lenses fixes that. A lens of radius a refocuses the
+  beam, and if the next lens lies within about a squared over the wavelength, a Fresnel number near
+  one, the beam stays confined however long the chain runs: the beam waveguide principle that radio
+  engineers worked out in the 1960s. For lenses 500 m across and a 1 micron beam that spacing is about
+  60 million km, so two or three relay lenses span the distance from the Sun to the Earth, and a pair
+  of 40 m optics needs no relay at all to reach the Moon. Each lens is a diffractive membrane, a film a
+  few microns thick patterned with rings that bend light as a lens does, like DARPA's MOIRE optics; a
+  500 m lens of such film weighs a few tonnes. Each lens station holds its place with light pressure on
+  small vanes. At the far end, cells tuned to the laser's wavelength turn up to about 69 percent of
+  the light back into electricity.
+buildsOn:
+  - text: Ball Aerospace and DARPA's MOIRE program demonstrated an 80 cm transmissive diffractive membrane optic, after a 5 m folding demonstration, aiming at 10 m apertures for space telescopes.
+    url: https://doi.org/10.1117/12.925413
+    year: 2012
+  - text: The US Air Force Academy's FalconSAT-7 launched in 2019 to demonstrate a membrane photon sieve, a diffractive lens made of film, as a solar telescope.
+    url: https://en.wikipedia.org/wiki/FalconSAT
+    year: 2019
+  - text: Landis and colleagues at NASA set out the spot size for laser power beaming, 0.61 times distance times wavelength over the optic's radius, and the efficiency of gallium arsenide cells under laser light.
+    url: https://ntrs.nasa.gov/api/citations/19930011426/downloads/19930011426.pdf
+    year: 1992
+  - text: Lubin's roadmap for directed energy propulsion proposes phased laser arrays that drive gram-scale probes to more than a quarter of the speed of light.
+    url: https://arxiv.org/abs/1604.01356
+    year: 2016
+  - text: DARPA's POWER program beamed more than 800 W by laser over 8.6 km in 2025.
+    url: https://www.darpa.mil/news/2025/darpa-program-distance-record-power-beaming
+    year: 2025
+  - text: Fraunhofer ISE's photonic power converter turned 68.9 percent of 858 nm laser light into electricity.
+    url: https://doi.org/10.1002/pssr.202100113
+    year: 2021
+experiment:
+  goal: Show that thin diffractive membrane lenses can refocus a high-power laser beam with very little loss each, and that a chain of them keeps a beam confined.
+  setup: >-
+    Two parts. First, a 1 m diffractive membrane lens in a vacuum chamber under a 1 kW, 1,064 nm laser,
+    to measure focusing efficiency and heating. Second, a chain of ten membrane lenses 2 cm across,
+    spaced 75 m apart along a 750 m disused rail tunnel so that each pair has a Fresnel number near
+    one, ending on a photonic power converter array.
+  measure: Share of the beam each lens passes into the next lens's aperture; power delivered after ten lenses; membrane temperature, warping and damage under 1 kW; electricity out of the converter.
+  succeedsIf: Each membrane passes more than 97 percent of the beam into the next aperture, at least 70 percent of the launched power reaches the converter after ten lenses, and the 1 m lens survives 100 hours at 1 kW without losing focus.
+  costUsd: 3000000
+  months: 18
+path:
+  - phase: bench
+    what: The vacuum-chamber lens and the ten-lens tunnel chain.
+    scale: Ten lenses over 750 m, 1 kW.
+    proves: Low loss per lens and a confined beam down a chain.
+  - phase: prototype
+    what: Two small satellites in low orbit 1,000 km apart, with a membrane lens 1.5 m across on a third between them.
+    scale: 1 kW over 1,000 km.
+    proves: Pointing, station keeping and refocusing in orbit.
+  - phase: pilot
+    what: A 100 m relay lens at the Earth and Moon L1 point, linking collectors in Earth orbit with lunar bases.
+    scale: Megawatts over 400,000 km.
+    proves: A relay that serves several users and runs for years.
+  - phase: first-plant
+    what: Power from the swarm's first collectors near the Sun to industry around Earth, through two or three lenses 500 m across.
+    scale: Gigawatts over 1 au.
+    proves: Interplanetary power with more than half delivered.
+  - phase: fleet
+    what: Chains linking Mercury, the swarm, the Earth and Moon system and the asteroid belt.
+    scale: Terawatts on dozens of chains.
+    proves: Power goes where it is needed, not only where the light is.
+  - phase: civilization
+    what: The power network of the inner solar system as the climb passes {type-1-power} on its way to {type-2-power}.
+    scale: A share of the swarm's output, wherever it is needed.
+    proves: Power is a utility across worlds.
+risks: >-
+  Lenses that heat under megawatts may warp and lose focus; the design spreads the beam across the
+  whole lens to keep the power per square metre low, and the fallback is pairs of reflective film
+  mirrors with coatings tuned to the laser. Diffractive lenses may not reach 97 percent efficiency;
+  then chains use fewer, larger lenses. Planets and lenses move, so every chain must be re-aimed all
+  the time; some links may run only part of each orbit, and much of the swarm's power may simply be
+  used where it is made. A beam of gigawatts is dangerous if it strays, so beams must shut off the
+  moment they lose their lock, and their use must be governed openly.
+scene:
+  kind: machine
+  focus: A relay lens of shimmering film, hundreds of metres across, catching a beam and passing it on.
+  params: { shape: telescope, spin: 0.1 }

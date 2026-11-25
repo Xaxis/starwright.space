@@ -1,0 +1,40 @@
+id: simple-chip-fabs
+title: Chip fabs small and simple enough to copy
+domain: manufacturing
+stage: k09
+needs: [automated-factories]
+summary: >-
+  Every machine the climb builds needs a controller, and a factory that copies itself must make its
+  own. Leading-edge chips come from a few fabs that cost tens of billions of dollars each and depend
+  on a supply chain spanning the planet. But a motor controller or a robot's brain does not need the
+  leading edge: chips like those of the 1970s and 1980s would do, if they could be made from
+  silicon, aluminium and glass in a fab that fits in a seed.
+target: >-
+  A chip fab of a few tonnes, built from parts a factory can make, that turns silicon, aluminium and
+  glass from rock into working microcontrollers, with imports limited to a few kilograms of dopants
+  and optics, ready for the seed factories from {seed-year}.
+exists:
+  - text: A leading-edge 2 nm fab making 50,000 wafers a month was estimated to cost about 28 billion dollars to build.
+    url: https://www.tomshardware.com/tech-industry/firm-predicts-it-will-cost-dollar28-billion-to-build-a-2nm-fab-and-dollar30000-per-wafer-a-50-percent-increase-in-chipmaking-costs-as-complexity-rises
+    year: 2023
+  - text: Arm and PragmatIC's PlasticARM, a 32-bit Arm microprocessor made from metal-oxide thin-film transistors on a flexible substrate, showed that a working CPU can be built without a silicon wafer.
+    url: https://www.nature.com/articles/s41586-021-03625-w
+    year: 2021
+  - text: Sam Zeloof made a 100-transistor chip on a 10 micrometre polysilicon gate process, the technology of Intel's first microprocessor, in a home lab.
+    url: https://sam.zeloof.xyz/second-ic/
+    year: 2021
+  - text: Silicon thin-film transistors made from a liquid silane precursor reached mobilities of 108 cm2/Vs spin-coated and 6.5 cm2/Vs ink-jet printed, better than amorphous silicon.
+    url: https://www.nature.com/articles/nature04613
+    year: 2006
+  - text: Pragmatic Semiconductor runs a FlexIC foundry that makes flexible integrated circuits for other companies' designs.
+    url: https://www.pragmaticsemi.com/
+    year: 2026
+gap: >-
+  Small and flexible fabs exist, but all of them depend on bought wafers, gases, resists and tools
+  made in the global chain. None has been designed to be built by a factory, or to run on materials
+  won from rock. Electronics are the part of self-copying that has closed least.
+inventions: [glassfab]
+scene:
+  kind: compute
+  focus: A small fab drawing transistors onto a sheet of glass, layer by layer.
+  params: { kind: wafer, racks: 40 }

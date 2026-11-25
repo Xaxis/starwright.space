@@ -1,0 +1,49 @@
+id: abundant-compute
+title: Computing for everyone, near the limits of physics
+domain: computation
+stage: k08
+needs: [terawatt-solar-factories, photonic-computing, grid-storage]
+summary: >-
+  Computing is how the climb designs its machines, runs its factories and learns what to build
+  next. It is growing faster than anything else that uses power, and it is still wasteful: a
+  chip today spends {gpu-vs-landauer} more energy on each operation than the least physics
+  allows, {landauer-300k} per bit erased at room temperature. Closing even part of that gap
+  gives everyone a share of the thinking the climb needs, without spending the power it needs for
+  everything else.
+target: >-
+  Enough computing that every person and every factory can use what they need, grown on sunlight
+  as the climb passes {power-k08} in {year-k08}, at an energy per operation within a thousand
+  times of {landauer-300k}, so that computing stays a small share of the power while it multiplies
+  many times over.
+exists:
+  - text: Data centres used about 415 TWh in 2024, 1.5 percent of the world's electricity, after growing about 12 percent a year since 2017. The IEA expects about 945 TWh by 2030.
+    url: https://www.iea.org/reports/energy-and-ai/executive-summary
+    year: 2024
+  - text: Epoch AI finds the world's new AI computing capacity doubling every 9.1 months, with 6.3 million H100-equivalents added in the second quarter of 2026 alone.
+    url: https://epoch.ai/data-insights/ai-computing-capacity-additions-doubling
+    year: 2026
+  - text: Epoch AI's trends put GPU energy efficiency rising 34 percent a year since 2008, and AI chip performance per dollar rising 49 percent a year since 2023.
+    url: https://epoch.ai/trends
+    year: 2026
+  - text: The most efficient supercomputer on the November 2026 Green500, KAIROS in Toulouse, does 73.28 billion double-precision operations per joule.
+    url: https://top500.org/lists/green500/2026/11/
+    year: 2026
+  - text: An NVIDIA H100 does 1,979 trillion dense 8-bit operations a second at up to 700 W, about 0.35 picojoules each, some hundred million times Landauer's limit.
+    url: https://www.nvidia.com/en-us/data-center/h100/
+    year: 2022
+  - text: Naffziger and Koomey found computing's peak energy efficiency doubled about every 1.6 years until 2000, and only about every 2.6 years after.
+    url: https://www.electronicdesign.com/technologies/microprocessors/article/21802037/energy-efficiency-of-computing-whats-next
+    year: 2016
+  - text: Bérut and colleagues measured the heat of erasing one bit and found it settles at Landauer's bound, kT ln 2.
+    url: https://www.nature.com/articles/nature10872
+    year: 2012
+gap: >-
+  Efficiency gains have slowed while demand speeds up, so computing's share of electricity is
+  rising. Chips still spend {gpu-vs-landauer} the Landauer bound on each operation, most of it lost
+  charging and discharging wires. Data centres also want power around the clock, which on a
+  sun-powered grid means storage they mostly do not have.
+inventions: [noon-chain]
+scene:
+  kind: compute
+  focus: Halls of racks growing across a desert grid, each rack drawing less power per operation as the scene runs.
+  params: { kind: datacentre, racks: 2000, radiators: 0.2 }

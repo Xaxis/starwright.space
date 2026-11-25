@@ -1,0 +1,38 @@
+id: interplanetary-markets
+title: Markets across light-minutes
+domain: economics
+stage: planet
+needs: [space-economy, interplanetary-network, interworld-disputes, post-quantum-security]
+summary: >-
+  When industry spans the inner solar system, a trade between Mercury and the Moon cannot be
+  confirmed in real time: light takes minutes each way, and the market may move before an order
+  arrives. Markets on Earth assume prices and settlement that are close to instant. The climb needs
+  ways to price, pay and settle across delays, so trade between worlds is as safe as trade within
+  one.
+target: >-
+  Payments and trade between any two worlds settled with no risk that one side pays and the other
+  does not, priced fairly despite the delay, with each world free to keep its own currency and its
+  own local markets.
+exists:
+  - text: Krugman's Theory of Interstellar Trade, published in 2010, works out how interest should be charged on goods in transit when the traveller's clock and the trader's differ.
+    url: https://doi.org/10.1111/j.1465-7295.2009.00225.x
+    year: 2010
+  - text: CLS, set up in 2002, settles both sides of foreign exchange trades at the same moment in 18 currencies, more than 8 trillion US dollars on an average day, so neither side can pay without being paid.
+    url: https://www.cls-group.com/about/
+    year: 2002
+  - text: NASA gives the one-way signal time between Earth and Mars as 4 to 20 minutes.
+    url: https://www.nasa.gov/missions/tech-demonstration/deep-space-atomic-clock/how-an-atomic-clock-will-get-humans-to-mars-on-time/
+    year: 2019
+  - text: The Bundle Protocol, version 7, standardised in 2022 as RFC 9171, carries data across links with long delays and outages, the basis of a network between worlds.
+    url: https://www.rfc-editor.org/rfc/rfc9171.html
+    year: 2022
+gap: >-
+  Every payment system today assumes its parties can reach each other in under a second. Delay
+  tolerant networks can carry messages across the solar system, but no payment or settlement system
+  has been built to run over them, and the risk that prices move while a trade is in flight has no
+  remedy.
+inventions: [light-cone-clearing]
+scene:
+  kind: network
+  focus: Worlds as clusters, trades crossing between them as slow pulses that settle on arrival.
+  params: { shape: system, nodes: 1000, clusters: 16, links: 0.35, pulses: 0.7 }

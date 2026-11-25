@@ -1,0 +1,81 @@
+id: pellet-line
+title: The Pellet Line
+domain: transport
+for: [beamed-propulsion]
+pitch: >-
+  A highway made of pellets: a mass driver fires a stream of small aluminium pellets after a
+  departing ship, and the ship catches each one in a coil that brakes it, taking its momentum and
+  storing its energy as electricity.
+principle: >-
+  A beam of light spreads as it travels, so it can push a ship only near its source. A stream of
+  pellets does not spread if each is aimed well, so its push can reach a ship millions of kilometres
+  away. Each pellet carries momentum, and a ship that brings a pellet to rest relative to itself
+  gains all of it. The Pellet Line does that without contact. The ship carries a short receiving
+  coilgun, a mass driver run backwards: as each conducting pellet enters, the coils' rising fields
+  induce currents in it that brake it, which pushes the ship forward and turns the pellet's energy of
+  motion into current that charges the ship's banks. Stopped pellets are kept as cargo or as
+  reaction mass for later. The station end is the same machine the climb builds to launch lunar and
+  Mercury mass, firing small loads very often. Trim coils just past the muzzle, or along the first
+  part of the line, correct each pellet's path.
+buildsOn:
+  - text: Jordin Kare's SailBeam study for NIAC (2002) proposed pushing a ship with a stream of laser-driven microsails caught by a magnetic sail, and cites Singer's 1980 pellet-stream propulsion and Nordley's 1999 self-steering beamriders.
+    url: http://www.niac.usra.edu/files/studies/final_report/597Kare.pdf
+    year: 2002
+  - text: Landis analysed pushing a spacecraft with a beam of particles instead of light (AIP Conference Proceedings, 2001).
+    url: https://doi.org/10.1063/1.1357952
+    year: 2001
+  - text: Zubrin and Andrews designed the magnetic sail, a superconducting loop whose field deflects charged particles to make thrust (Journal of Spacecraft and Rockets, 1991).
+    url: https://doi.org/10.2514/3.26230
+    year: 1991
+  - text: NASA's NIAC funded Davoyan's pellet-beam propulsion study at UCLA in 2023, using microscopic particles at more than 120 km/s to push tonne-class payloads to 500 AU in under 20 years.
+    url: https://www.nasa.gov/general/pellet-beam-propulsion-for-breakthrough-space-exploration/
+    year: 2023
+  - text: NASA's 1977 Ames summer study (SP-428) designed electromagnetic mass drivers for the Moon, the station end of a pellet line.
+    url: https://ntrs.nasa.gov/citations/19790024054
+    year: 1979
+experiment:
+  goal: Measure how much momentum a receiving coil takes from conducting pellets fired into it, and how much of their energy it stores.
+  setup: >-
+    A small gas gun or coilgun fires 1 gram aluminium pellets at 500 m/s into a 1 m train of
+    receiving coils mounted on an air-bearing sled in a vacuum chamber. The coils switch to brake each
+    pellet and feed a capacitor bank.
+  measure: Momentum given to the sled per pellet, energy captured in the bank, the share of pellets stopped, pellet heating and deformation, and tolerance to pellets arriving off-axis.
+  succeedsIf: At least 90 percent of each pellet's momentum passes to the sled for pellets arriving up to 5 mm off-axis, and at least 30 percent of their energy of motion is stored as electricity.
+  costUsd: 900000
+  months: 12
+path:
+  - phase: bench
+    what: The sled rig in vacuum.
+    scale: 1 gram pellets at 500 m/s.
+    proves: Momentum taken without contact, with energy recovered.
+  - phase: prototype
+    what: A small driver on one satellite firing pellets across tens of kilometres to a receiving satellite.
+    scale: Kilograms of pellets.
+    proves: Aim and capture over distance in orbit.
+  - phase: pilot
+    what: A lunar mass driver pushing a cargo tug out of lunar orbit toward Mars along a pellet line.
+    scale: Tonnes of pellets, a tug of tens of tonnes.
+    proves: A useful push far beyond the reach of a laser of similar size.
+  - phase: first-plant
+    what: Pellet stations at the Moon and at Mars pushing and catching cargo both ways, so ships carry no main engine.
+    scale: Thousands of tonnes a year.
+    proves: A highway with stations at both ends.
+  - phase: fleet
+    what: Pellet lines between the Moon, Mars, the main belt and Mercury, sharing drivers that also launch freight.
+    scale: Tens of stations.
+    proves: Transits of weeks for crews and cargo.
+  - phase: civilization
+    what: The fast routes of the inner solar system, with ships pushed out and caught by stations at each end.
+    scale: The inner solar system.
+    proves: Speed between worlds limited by stations, not by ships.
+risks: >-
+  Pellets drift off aim over long distances from tiny errors at launch; trim coils along the first
+  part of the line, or pellets nudged by laser as they fly, are the fallbacks to test. A pellet that
+  misses is a fast projectile, so lines are aimed so that misses leave the inner system or fall
+  toward the Sun, never across busy orbits. At high relative speeds pellets may heat and vaporise in
+  the coil before they stop; then the receiver becomes a magnetic nozzle that reflects pellet plasma,
+  as Landis and Nordley proposed for particle beams.
+scene:
+  kind: machine
+  focus: A ship's receiving coil catching a line of glinting pellets from a distant station.
+  params: { shape: motor, spin: 0.8 }

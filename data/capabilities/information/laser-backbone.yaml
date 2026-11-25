@@ -1,0 +1,46 @@
+id: laser-backbone
+title: Laser links that carry the network through space
+domain: information
+stage: k09
+needs: [universal-connectivity, cheap-launch]
+summary: >-
+  Radio between spacecraft is running short of spectrum and of rate. A laser beam spreads
+  thousands of times less than a radio beam from an antenna of the same size, so the same power
+  delivers far more bits over the same distance, and a beam a few hundred metres wide needs no
+  spectrum licence. Laser links already tie constellations together and have carried hundreds of
+  gigabits a second to the ground. The space industry of {year-k09} needs them as its backbone,
+  from low orbit to the Moon.
+target: >-
+  A laser backbone joining the ground, low orbit, geostationary relays and the Moon at terabits per
+  second per link, with enough ground stations or relays that clouds never cut it, and terminals
+  cheap and light enough to fly on every satellite and factory.
+exists:
+  - text: NASA's TBIRD, a laser terminal in a 3U CubeSat, downlinked at 200 gigabits per second from low orbit on 28 April 2023.
+    url: https://en.wikipedia.org/wiki/TeraByte_InfraRed_Delivery
+    year: 2023
+  - text: NASA's Laser Communications Relay Demonstration launched on 7 December 2021 to relay laser traffic through geostationary orbit.
+    url: https://en.wikipedia.org/wiki/Laser_Communications_Relay_Demonstration
+    year: 2021
+  - text: Europe's EDRS relays carry 1.8 gigabits per second by laser across 45,000 km between low-orbit satellites and geostationary relays; EDRS-C launched in 2019.
+    url: https://en.wikipedia.org/wiki/European_Data_Relay_System
+    year: 2019
+  - text: Starlink satellites are joined by optical inter-satellite links, which carried traffic to Antarctica's McMurdo Station, far from any ground station, from 2022.
+    url: https://en.wikipedia.org/wiki/Starlink
+    year: 2022
+  - text: About 11,200 Starlink satellites were in orbit in November 2026, out of more than 13,000 launched.
+    url: https://planet4589.org/space/con/star/stats.html
+    year: 2026
+  - text: Taara carries broadband on beams of light between towers on the ground, the same physics in air.
+    url: https://x.company/projects/taara/
+    year: 2025
+gap: >-
+  Today's laser links are demonstrations or one company's private mesh. Clouds block lasers to the
+  ground, so a backbone needs many stations or relays above the weather. Terminals are costly, and
+  pointing beams a few microradians wide between craft moving at kilometres a second is hard.
+  Terminals from different makers rarely talk to each other, and deep-space links still collect
+  too few photons for the rates an industry needs.
+inventions: [photon-bucket-relay]
+scene:
+  kind: orbit
+  focus: Beams of light stitched between satellites and down to the ground.
+  params: { stations: 0.7, beams: true }

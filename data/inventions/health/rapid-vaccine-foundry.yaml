@@ -1,0 +1,81 @@
+id: rapid-vaccine-foundry
+title: The Standing Vaccine Foundry
+domain: health
+for: [pandemic-resilient-medicine]
+pitch: >-
+  A standing pipeline that turns a new pathogen's genetic sequence into a tested vaccine candidate in
+  days, by designing the immunogen on a computer and making it in a cell-free reactor, so defence
+  keeps pace with an outbreak instead of trailing it by a year.
+principle: >-
+  When a new pathogen appears, its genome can be sequenced within hours, almost anywhere. The bottleneck
+  is everything after: choosing what part of it to target, designing a stable immunogen, making it,
+  and testing it. The Standing Vaccine Foundry keeps that whole chain built and idle, ready to run.
+  Structure-prediction and protein-design tools take the sequenced antigen, pick conserved targets and
+  design a stable, well-folded immunogen, or a messenger-RNA that encodes one, in a day. A cell-free
+  reactor makes the immunogen without a living culture, so production starts the same week and can run
+  anywhere, including at the site of an outbreak. Standardised animal and organ-on-chip assays test
+  safety and the immune response on a fixed protocol, so the foundry produces not a guess but a tested
+  candidate ready for trials. Because the pipeline is standing and standardised, each new threat runs
+  the same proven path, and the slow part becomes the clinical trial, not the science.
+buildsOn:
+  - text: AlphaFold 3 predicts antigen structure and molecular interactions with about 50 percent better accuracy than docking, the design engine for choosing and stabilising an immunogen.
+    url: https://doi.org/10.1038/s41586-024-07487-w
+    year: 2024
+  - text: RFdiffusion designs binding proteins and antibodies from scratch at a 19 percent experimental success rate, enabling designed immunogens and countermeasures to a new target.
+    url: https://doi.org/10.1038/s41586-023-06415-8
+    year: 2023
+  - text: Cell-free transcription-translation systems make protein without living cells at useful yields, the route to starting production the same week a sequence arrives.
+    url: https://doi.org/10.1016/j.biochi.2013.11.025
+    year: 2014
+  - text: Wellcome Leap funds DARPA-style health resilience programs, the institutional model a standing foundry would run within.
+    url: https://wellcomeleap.org/
+    year: 2024
+experiment:
+  goal: Take a pathogen sequence to a tested vaccine candidate on a standing pipeline, and measure the time.
+  setup: >-
+    Using a recently characterised pathogen as a blind test, run the full pipeline: design an immunogen
+    from the sequence with structure and protein-design tools, make it in a cell-free reactor, and run
+    a fixed set of immunogenicity and safety assays in animals and organ-on-chip systems. Time every step.
+  measure: >-
+    Days from sequence to a candidate that passes the assay panel; the candidate's immune response and
+    safety signal against a known benchmark vaccine; cost per candidate.
+  succeedsIf: >-
+    The pipeline yields a candidate that meets the immunogenicity and safety benchmark within 30 days
+    of receiving the sequence, repeatably across several test pathogens.
+  costUsd: 35000000
+  months: 48
+path:
+  - phase: bench
+    what: The design-make-test chain run end to end on known pathogens.
+    scale: One candidate at a time.
+    proves: Sequence to tested candidate is possible in days.
+  - phase: prototype
+    what: A standing foundry that runs the pipeline on demand against blind test pathogens.
+    scale: Several candidates a month.
+    proves: The timeline and quality hold repeatably.
+  - phase: pilot
+    what: The foundry feeding candidates into real clinical trials during a live outbreak.
+    scale: Trial-ready doses.
+    proves: It shortens the real race against a spreading pathogen.
+  - phase: first-plant
+    what: Regional foundries with surge manufacturing linked to the biosurveillance network.
+    scale: Millions of doses in weeks.
+    proves: Detection to deployed countermeasure in weeks, at scale.
+  - phase: fleet
+    what: Foundries worldwide and compact units for remote regions and off-world settlements.
+    scale: Global and off-world.
+    proves: No population is far from a rapid countermeasure.
+  - phase: civilization
+    what: Pandemic defence as a standing utility that outpaces any single pathogen.
+    scale: Planet and inner solar system.
+    proves: Outbreaks are contained before they become pandemics.
+risks: >-
+  A designed immunogen may not protect as well as a traditionally developed vaccine; the foundry keeps
+  several design strategies and validates against benchmarks. Clinical trials remain the real
+  time limit, so the project also works on faster, safer trial designs. The same tools could be
+  misused, so the foundry operates under strict biosafety governance, screens every design, and is
+  built and documented purely for defence and rapid response.
+scene:
+  kind: machine
+  focus: A pipeline taking a genetic sequence in and handing a tested vaccine candidate out.
+  params: { shape: printer, spin: 0.3 }

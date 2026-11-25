@@ -1,0 +1,87 @@
+id: acoustic-clock-logic
+title: Acoustic Clock Logic
+domain: computation
+for: [reversible-computing]
+pitch: >-
+  Reversible logic powered by a sound wave in a sliver of crystal: the same aluminium nitride
+  resonators that filter radio in every phone, used to swing charge into the gates and back out
+  again, so almost nothing is lost.
+principle: >-
+  An ordinary gate dumps the energy of each switch, half of C V squared, as heat. Adiabatic logic
+  ramps its supply slowly instead, so charge flows with little voltage across the transistors, and
+  then ramps it back down to recover the charge. The loss falls as the ramp slows, but only if the
+  power clock that ramps the supply hands the energy back each cycle. A resonator of quality factor
+  Q loses about 2 pi over Q of its stored energy per cycle. On-chip coils reach Q of ten or twenty
+  and lose a third or more each cycle, which is why reversible chips have struggled. Acoustic
+  resonators in aluminium nitride, the film bulk and contour-mode resonators made by the billion
+  for phone filters, reach Q of one to several thousand at hundreds of megahertz to gigahertz, and
+  would lose under one percent per cycle. Acoustic Clock Logic bonds an array of them beside the
+  logic as a multi-phase power clock, one resonator per clock phase, tuned to match the load of the
+  gates it drives, and designs the logic to be reversible where it can, in Bennett's sense, so only
+  the bits that must be erased pay the Landauer cost of {landauer-300k} each.
+buildsOn:
+  - text: Landauer's 1961 bound on the energy of erasing a bit.
+    url: https://doi.org/10.1147/rd.53.0183
+    year: 1961
+  - text: Bennett's 1973 proof that computation can be logically reversible.
+    url: https://doi.org/10.1147/rd.176.0525
+    year: 1973
+  - text: Vaire Computing's first reversible chip, taped out in 2025, which recovers 50 percent of the energy in its resonator circuit.
+    url: https://spectrum.ieee.org/reversible-computing
+    year: 2025
+  - text: Thin-film bulk acoustic resonators, made in aluminium nitride, the material most used in industry for high-frequency filters.
+    url: https://en.wikipedia.org/wiki/Thin-film_bulk_acoustic_resonator
+    year: 2026
+  - text: Frank's case for adiabatic, reversible circuits as the future of efficient computing.
+    url: https://spectrum.ieee.org/the-future-of-computing-depends-on-making-it-reversible
+    year: 2017
+  - text: The open SkyWater 130 nm process kit, on which a first adiabatic test chip can be made cheaply.
+    url: https://github.com/google/skywater-pdk
+    year: 2020
+experiment:
+  goal: Measure how much of the clock energy an acoustic resonator returns when it drives real adiabatic logic, and what that does to energy per operation.
+  setup: >-
+    A test chip on an open 130 nm shuttle run carrying a 16-bit adiabatic adder and an identical
+    conventional CMOS adder, packaged with four commercial aluminium nitride resonator dies as a
+    four-phase power clock, plus an on-board coil clock for comparison. A probe station, a vector
+    network analyser to measure each resonator's loaded Q, and a calorimetric power meter.
+  measure: Energy per addition for each logic style and clock across clock frequencies; loaded Q of the resonators when driving the logic; share of clock energy recovered per cycle.
+  succeedsIf: The acoustic clock returns at least 90 percent of its energy each cycle while driving the adder, and the adiabatic adder uses at most a tenth of the conventional adder's energy per addition at the same throughput.
+  costUsd: 400000
+  months: 12
+path:
+  - phase: bench
+    what: The 130 nm test chip with its resonator clock.
+    scale: One adder, a few thousand transistors.
+    proves: Acoustic resonators can power adiabatic logic with high recovery.
+  - phase: prototype
+    what: A small reversible processor with resonators built on the same die.
+    scale: About a million transistors.
+    proves: A whole processor gains tenfold or more in energy per operation.
+  - phase: pilot
+    what: A reversible accelerator for matrix work in a modern process, sold for data centres and satellites.
+    scale: Billions of transistors, thousands of chips.
+    proves: Reversible logic wins on cost per operation, not only on energy.
+  - phase: first-plant
+    what: Design tools and cell libraries for reversible logic offered by foundries as a standard option.
+    scale: Millions of chips a year.
+    proves: Any designer can build reversible chips.
+  - phase: fleet
+    what: Most new computing built reversible, a hundred to a thousand times nearer the Landauer bound.
+    scale: The bulk of the world's chips.
+    proves: Computing can grow many times over while Earth stays under {earth-cap}.
+  - phase: civilization
+    what: Reversible logic as the base of computing in space, where every watt must be radiated away.
+    scale: "The swarm's computers from {year-k15}"
+    proves: Each joule of sunlight buys as many operations as physics allows.
+risks: >-
+  Logic loads may pull the resonators' Q far below its unloaded value; the next step is to match
+  impedance with on-chip transformers or to split the logic into many small blocks, each with its
+  own resonator. Acoustic resonators have fixed frequencies set by film thickness, which constrains
+  clock speed; contour-mode resonators, tuned by their drawn width, give more freedom. Leakage
+  current in modern transistors wastes energy at slow clocks; transistors with higher thresholds,
+  or superconducting adiabatic logic for the coldest machines, are the alternatives.
+scene:
+  kind: machine
+  focus: A chip with a row of tiny resonators at its edge, the charge sloshing into the gates and back like a pendulum.
+  params: { shape: chip, spin: 0.6 }

@@ -1,0 +1,86 @@
+id: thermal-cascade-swarm
+title: The Thermal Cascade
+domain: computation
+for: [solar-scale-compute]
+pitch: >-
+  A second, colder shell of computers outside the swarm, running on the swarm's own waste heat,
+  so that the Sun's light is used twice and the last heat leaves as cold as the industry can make it.
+principle: >-
+  Erasing a bit costs at least kT ln 2, {landauer-300k} at room temperature, paid in heat at the
+  temperature where that heat finally leaves. So the power the swarm draws from sunlight, {sun-harnessed},
+  can erase at most that power divided by kT ln 2 at the temperature of the last radiator, and halving that
+  temperature doubles the computing the star can run. A swarm at {swarm-radius} runs near 430 K and,
+  once closed, catches all the light; nothing more can be gained from sunlight. Its waste heat,
+  though, still holds free energy: by Carnot, 1 minus T2 over T1 of it can do work if a colder shell
+  catches it. The Thermal Cascade surrounds the swarm with a shell of computers whose inner faces
+  are low-bandgap thermophotovoltaic or thermoradiative cells, turning the swarm's 430 K glow into
+  electricity, and whose outer faces radiate at 100 to 170 K. All of the Sun's {solar-luminosity}
+  finally leaves from that outer face, so the shell needs an area of that power over sigma T to
+  the fourth, and its temperature falls only as the fourth root of the mass spent on it. With all
+  the mass the industry can reach, {mass-available}, at film densities near
+  {collector-density}, the last radiator can sit near 170 K, more than twice the computing per
+  joule of the swarm alone.
+buildsOn:
+  - text: Robert Bradbury's Matrioshka brain, nested shells of computers around a star, each living on the heat of the one inside.
+    url: https://en.wikipedia.org/wiki/Matrioshka_brain
+    year: 1997
+  - text: Landauer's bound, which ties each erased bit to kT ln 2 of heat.
+    url: https://doi.org/10.1147/rd.53.0183
+    year: 1961
+  - text: Lloyd's ultimate physical limits to computation.
+    url: https://doi.org/10.1038/35023282
+    year: 2000
+  - text: LaPotin and colleagues' thermophotovoltaic cells, above 40 percent efficient from emitters at 1,900 to 2,400 °C.
+    url: https://www.nature.com/articles/s41586-022-04473-y
+    year: 2022
+  - text: Thermophotovoltaics already serve as spacecraft power and as collectors of waste heat.
+    url: https://en.wikipedia.org/wiki/Thermophotovoltaic_energy_conversion
+    year: 2026
+experiment:
+  goal: Measure how well cold low-bandgap cells turn the infrared of a 400 K surface into electricity, the step the cascade depends on.
+  setup: >-
+    A vacuum cryostat holding a blackened copper plate heated to 400 K, facing a few square
+    centimetres of low-bandgap infrared diodes (mercury cadmium telluride and indium arsenide
+    antimonide, bought as detector-grade parts) cooled to 77 to 200 K, with a thin vacuum gap and a
+    spectral filter between. A source meter sweeps each diode's current and voltage; a heat flux
+    sensor measures the light arriving.
+  measure: Electrical power per square metre and the share of the incident infrared turned into electricity, at each cell temperature, against the Carnot limit for that pair of temperatures.
+  succeedsIf: Some cell converts at least 3 percent of the 400 K plate's radiant power into electricity at a cell temperature of 150 K or above.
+  costUsd: 350000
+  months: 9
+path:
+  - phase: bench
+    what: Cold low-bandgap cells facing a 400 K plate in a cryostat.
+    scale: Square centimetres, milliwatts.
+    proves: Low-grade infrared can be turned into electricity at a useful share of Carnot.
+  - phase: prototype
+    what: A metre-scale panel on a satellite, warm sunlit face toward a cold infrared-harvesting face, running a small computer on the harvested power.
+    scale: One square metre.
+    proves: Two-stage conversion works in space, with its own radiator.
+  - phase: pilot
+    what: A ring of harvesters outside an orbital compute cluster, living on the cluster's waste heat.
+    scale: Kilowatts harvested.
+    proves: A colder layer adds computing without new sunlight.
+  - phase: first-plant
+    what: The first arc of cold shell outside the swarm, made from asteroid metal.
+    scale: Gigawatts harvested.
+    proves: The cascade pays for its mass in extra computing.
+  - phase: fleet
+    what: The cold shell grows as the swarm closes, wherever there is mass to build it.
+    scale: A large share of the swarm's waste heat.
+    proves: Computing per joule keeps rising after the light is all caught.
+  - phase: civilization
+    what: The whole Sun's light used twice, its last heat radiated near 170 K.
+    scale: "{sun-harnessed}, from {year-type-2}"
+    proves: The star computes as much as the mass around it allows.
+risks: >-
+  Low-bandgap cells may convert only a small share of 400 K infrared, since thermal noise in the
+  cells grows as they warm; then the cascade would use heat engines such as Stirling or
+  thermoacoustic engines, or simply run the swarm's own computers colder. The shell needs more
+  mass than the swarm; asteroid and Mercury mass are both finite, so the cascade's temperature is a
+  trade the Builder should show. The cold shell sits light-hours across, so it suits slow,
+  parallel work, while fast work stays in the swarm.
+scene:
+  kind: swarm
+  focus: The bright swarm around the Sun, wrapped by a fainter, wider shell glowing only in the infrared.
+  params: { built: 1, radiusAu: 0.9 }

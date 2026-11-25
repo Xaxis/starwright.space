@@ -1,0 +1,39 @@
+id: programmable-biology
+title: Biology we can design
+domain: biology
+stage: k08
+needs: [abundant-compute]
+summary: >-
+  Every living thing is run by code written in DNA, and for the first time we can read that code
+  cheaply, write it to order and predict what it will do before we build it. A civilization that
+  climbs the ladder needs biology as a dependable branch of engineering: strains that make fuels,
+  materials, food and medicine on demand, designed on a screen and booted up in a cell. The model
+  reaches abundance on Earth in {year-k08}, and designed biology is one of the tools that gets it
+  there.
+target: >-
+  Design a gene, a pathway or a whole small genome on a computer, predict its behaviour, synthesise
+  it and have it work in a living cell on the first or second try, at a cost and speed that let any
+  lab or company treat organisms the way software treats programs.
+exists:
+  - text: Sequencing a human genome fell to about 525 USD in 2022, and vendors now advertise whole genomes from 80 to 200 USD, so reading DNA is no longer the bottleneck.
+    url: https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data
+    year: 2022
+  - text: AlphaFold 3 predicts the shapes and interactions of proteins, nucleic acids and small molecules with roughly 50 percent better protein-ligand accuracy than the best docking tools, turning structure prediction into a design tool.
+    url: https://doi.org/10.1038/s41586-024-07487-w
+    year: 2024
+  - text: Evo 2, a 40-billion-parameter DNA model trained on 9.3 trillion base pairs with a million-token context, learns the grammar of genomes across all domains of life and is fully open.
+    url: https://arcinstitute.org/news/evo-2-one-year-later
+    year: 2025
+  - text: ESM3, a 98-billion-parameter protein language model, generated a working fluorescent protein only 58 percent identical to any known one, a jump its authors likened to 500 million years of evolution.
+    url: https://www.evolutionaryscale.ai/blog/esm3-release
+    year: 2025
+gap: >-
+  Reading is cheap and prediction is improving fast, but writing lags: synthesising and assembling
+  long, error-free DNA is slow and costly, and getting a designed construct to work in a cell still
+  takes many rounds of trial and error. The loop from idea to working organism is measured in months
+  and thousands of dollars, not minutes and cents.
+inventions: [genome-write-foundry]
+scene:
+  kind: cell
+  focus: A microbe lit from within as designed genes switch on, one pathway at a time.
+  params: { type: microbe, organelles: 0.7, divide: true, glow: 0.5 }

@@ -1,0 +1,34 @@
+id: space-ice-mining
+title: Mining water in space
+domain: water
+stage: k09
+needs: [in-space-resources, cheap-launch]
+summary: >-
+  Water is the most valuable resource in space. It is drink, air and radiation shielding, and split
+  into hydrogen and oxygen it is rocket propellant. Lifting it from Earth is ruinously expensive, but
+  it is already up there: as ice in the permanently shadowed craters of the Moon, in asteroids and in
+  comets. Mining that ice is what lets industry and settlement in space stop depending on Earth for
+  the one thing they need most.
+target: >-
+  Find, extract and purify water ice from the Moon, asteroids and comets at the scale industry and
+  settlement need, and split part of it into propellant, so that water in space comes from space.
+exists:
+  - text: NASA's in-situ resource utilization programme develops and tests hardware for extracting water and other volatiles from regolith, with analog missions validating the equipment.
+    url: https://www.nasa.gov/mission/in-situ-resource-utilization-isru/
+    year: 2024
+  - text: Karman+ is developing asteroid mining to sell water as propellant in space, an early commercial bet on off-world water.
+    url: https://www.karmanplus.com/
+    year: 2024
+  - text: ESA's Space Resources Strategy sets out Europe's plan to use off-world materials, water foremost, as the basis for a space economy.
+    url: https://sci.esa.int/documents/34161/35992/1567260390250-ESA_Space_Resources_Strategy.pdf
+    year: 2019
+gap: >-
+  No one has yet mined water in space. The ice in lunar craters sits in darkness near 40 kelvin, mixed
+  through regolith in amounts still being mapped; asteroid water is locked in minerals. Extracting it
+  with machines that run cold, dusty and unattended, purifying it, and doing so at industrial rates
+  are all unproven. Every step from prospecting to the first litre of propellant is ahead.
+inventions: [ice-harvester]
+scene:
+  kind: moon
+  focus: Rovers working a shadowed polar crater, drawing water ice from the regolith.
+  params: { mines: 0.4, bases: 0.3 }

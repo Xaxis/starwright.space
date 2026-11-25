@@ -1,0 +1,45 @@
+id: abundant-minerals
+title: Enough of every critical mineral
+domain: materials
+stage: k08
+needs: [fast-permitting]
+summary: >-
+  Panels, batteries, motors and lines need lithium, copper, nickel, cobalt, graphite and the rare
+  earths in amounts the world has never mined. The rock holds enough; what is short is mines opened
+  in time, ways to win metal from poorer ores, and refining outside a handful of countries.
+target: >-
+  Supply of every critical mineral growing as fast as the buildout to {power-k08} needs it, from
+  many countries, with separation and refining no longer a choke point, and with recycled metal
+  meeting a rising share of demand.
+exists:
+  - text: World mines produced 290,000 tonnes of lithium in 2025, up from 222,000 in 2024, against reserves of 37 million tonnes.
+    url: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf
+    year: 2025
+  - text: The IEA expects announced projects to leave a 30 percent shortfall in the copper and a 40 percent shortfall in the lithium needed from mines in 2035.
+    url: https://www.iea.org/reports/global-critical-minerals-outlook-2025/overview-of-outlook-for-key-minerals
+    year: 2025
+  - text: The top three refining countries held 86 percent of refining for the key energy minerals on average in 2024; China refined 91 percent of magnet rare earths.
+    url: https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary
+    year: 2024
+  - text: Lynas, with its Mt Weld mine and a plant in Malaysia, is the only significant producer of separated rare earths outside China.
+    url: https://lynasrareearths.com/
+    year: 2026
+  - text: Jetti Resources' catalytic leaching recovers copper from low-grade chalcopyrite that heaps cannot otherwise touch, proven over six years on commercial stockpiles.
+    url: https://www.jettiresources.com/
+    year: 2026
+  - text: Lilac Solutions extracts lithium from brine by ion exchange, without evaporation ponds.
+    url: https://lilacsolutions.com/
+    year: 2026
+  - text: A lanmodulin protein from the bacterium Hansschlegelia quercus separated neodymium from dysprosium to more than 98 percent purity in a single column stage.
+    url: https://www.nature.com/articles/s41586-023-05945-5
+    year: 2023
+gap: >-
+  New mines take a decade or more to open. Rare earths are separated by solvent extraction cascades
+  of hundreds of mixer-settler stages, which few countries run, and the plants are costly and
+  polluting. Low-grade ores, tailings and coal ash hold large amounts of metal that no cheap process
+  yet recovers.
+inventions: [protein-ladder, potential-staircase]
+scene:
+  kind: field
+  focus: Brine wells and leach tanks across a desert basin, each feeding a refinery beside it.
+  params: { unit: well, count: 600, terrain: desert }

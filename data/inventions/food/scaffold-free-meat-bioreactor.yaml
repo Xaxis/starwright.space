@@ -1,0 +1,77 @@
+id: scaffold-free-meat-bioreactor
+title: The Self-Structuring Meat Reactor
+domain: food
+for: [cellular-agriculture]
+pitch: >-
+  A bioreactor that grows muscle and fat cells to high density and lets them knit themselves into a
+  textured cut, with no animal serum and no plastic scaffold, so cultured meat can be made as a
+  steak and at a price that competes with the farm.
+principle: >-
+  Two things make cultured meat costly: the growth medium, long dependent on animal serum, and the
+  structure, since loose cells make only mince. The Self-Structuring Meat Reactor attacks both. It
+  feeds cells a serum-free medium whose growth factors are supplied by precision fermentation rather
+  than extracted from animals, cutting the dominant cost. And instead of seeding cells onto a plastic
+  scaffold, it grows muscle and fat cells together at high density on temperature- and
+  texture-patterned surfaces that cue the cells to align and fuse into fibres, then release the
+  tissue, so the structure is grown, not built. Perfusion keeps the dense culture fed and clean, and
+  the same reactor makes fat and muscle in tunable proportion. The output is a structured cut, grown
+  from a cell line on fermented feedstock, at a cost set by the medium and the energy, both of which
+  the climb drives down.
+buildsOn:
+  - text: Precision fermentation already makes animal proteins and growth factors without animals, the route to a serum-free medium that is cultured meat's largest cost.
+    url: https://perfectday.com/
+    year: 2024
+  - text: Pasture is the largest single human land use at 3,200 million hectares, the prize cultured meat targets by replacing raised animals.
+    url: https://ourworldindata.org/environmental-impacts-of-food
+    year: 2024
+  - text: The fermentation sector's 4.1 billion USD of investment supplies the reactors and ingredient supply chains a meat reactor shares.
+    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
+    year: 2024
+experiment:
+  goal: Grow a textured meat cut in a serum-free, scaffold-free reactor and measure cost and quality.
+  setup: >-
+    Culture a muscle and fat cell line in a perfusion reactor on a fully serum-free medium with
+    fermentation-made growth factors, on surfaces patterned to cue alignment and fusion. Harvest the
+    tissue and assess it against farmed meat.
+  measure: >-
+    Cell density reached; whether fibres align into a textured cut; medium and energy cost per
+    kilogram; taste and texture panel against farmed meat.
+  succeedsIf: >-
+    The reactor yields a structured cut graded close to farmed meat on a taste panel, serum-free, at
+    a medium-and-energy cost per kilogram within a factor of three of farmed meat and falling.
+  costUsd: 25000000
+  months: 42
+path:
+  - phase: bench
+    what: Serum-free, scaffold-free structured tissue at lab scale.
+    scale: Grams per run.
+    proves: A textured cut can be grown without serum or a scaffold.
+  - phase: prototype
+    what: A perfusion reactor making consistent cuts at higher density.
+    scale: Kilograms per run.
+    proves: Density, texture and cost improve together.
+  - phase: pilot
+    what: A pilot line selling cultured cuts in one market.
+    scale: Tonnes a year.
+    proves: Consumers buy a grown steak, not just mince.
+  - phase: first-plant
+    what: A commercial plant approaching price parity with farmed meat.
+    scale: Tens of thousands of tonnes a year.
+    proves: Grown meat competes on price and form.
+  - phase: fleet
+    what: Plants worldwide and compact units in habitats, freeing pasture back to nature.
+    scale: Global and off-world.
+    proves: Much of meat demand met without livestock.
+  - phase: civilization
+    what: Most meat grown, not raised, with pasture returned to wild and off-world crews eating fresh cuts.
+    scale: Planet and space.
+    proves: Meat decoupled from animals and land.
+risks: >-
+  Serum-free media may not support dense growth of every cell type; the project would build a library
+  of media and cell lines and start with the easiest meats. Self-structuring may give texture short
+  of a real cut, so the reactor iterates surface patterning and muscle-fat ratio. Scale-up of
+  perfusion without contamination is unproven at food scale and is the focus of the pilot.
+scene:
+  kind: cell
+  focus: Muscle and fat cells aligning and fusing into textured fibres in a perfusion reactor.
+  params: { type: animal, organelles: 0.6, divide: true, glow: 0.2 }

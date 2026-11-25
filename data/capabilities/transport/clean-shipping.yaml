@@ -1,0 +1,40 @@
+id: clean-shipping
+title: Ships without fossil fuel
+domain: transport
+stage: k08
+needs: [terawatt-solar-factories]
+summary: >-
+  Ships carry most of the world's trade, burning the heaviest and dirtiest oil. Oceans are too wide
+  for batteries, so long voyages need fuels made from clean power, such as ammonia, methanol and
+  hydrogen, and the wind, which rigid sails and rotors are learning to use again. A slower, steadier
+  ship also burns far less: drag rises steeply with speed.
+target: >-
+  International shipping at net zero long before {year-k08}, running on ammonia,
+  methanol and hydrogen made from clean power, with sails, rotors and slower steaming cutting the
+  fuel each voyage needs, and every port supplying clean fuel and shore power.
+exists:
+  - text: The IMO's 2023 strategy sets net-zero greenhouse gas emissions from international shipping by or around 2050, with zero or near-zero fuels at least 5 percent of its energy by 2030.
+    url: https://www.imo.org/en/MediaCentre/HotTopics/Pages/Cutting-GHG-emissions.aspx
+    year: 2023
+  - text: The IMO's draft Net-Zero Framework, with a global fuel standard and price on emissions, was agreed in April 2025, but in October 2025 its adoption was postponed by a year.
+    url: https://en.wikipedia.org/wiki/IMO_Net-Zero_Framework
+    year: 2025
+  - text: The Fourth IMO Greenhouse Gas Study found shipping emitted 1,076 million tonnes of CO2 equivalent in 2018, 2.89 percent of human emissions.
+    url: https://www.imo.org/en/OurWork/Environment/Pages/Fourth-IMO-Greenhouse-Gas-Study-2020.aspx
+    year: 2020
+  - text: Laura Maersk became the first container ship to run on methanol in 2023.
+    url: https://en.wikipedia.org/wiki/Methanol_fuel
+    year: 2023
+  - text: The Oceanbird wind-powered car carrier, for up to 7,000 cars on 40 m wing sails and aiming to cut emissions by up to 90 percent, is planned to enter service in 2026.
+    url: https://en.wikipedia.org/wiki/Oceanbird
+    year: 2026
+gap: >-
+  Almost every ship still burns fossil fuel. Ships that can run on methanol or ammonia are few, the
+  green fuel for them barely exists and costs several times as much as oil, and the global price on
+  emissions that would close the gap is not yet in force. The engines and sails exist; the gap is
+  cheap clean fuel at every port.
+inventions: []
+scene:
+  kind: globe
+  focus: The sea lanes between continents, crossed by ships on clean fuel and sail.
+  params: { look: oceans, lights: 0.6 }

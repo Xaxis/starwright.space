@@ -1,0 +1,44 @@
+id: industrial-ai
+title: AI that designs and runs industry
+domain: computation
+stage: k08
+needs: [abundant-compute, ai-safety]
+summary: >-
+  A hundredfold buildout cannot wait for a hundredfold more engineers. AI already plans chemistry
+  experiments, proposes new crystals, lays out chips and tunes cooling plants. The climb needs it to
+  go further: to design whole factories from a specification, write their control code, run them,
+  and learn from every one it builds, while people set the goals and the limits.
+target: >-
+  An AI that takes a product and a site and returns a plant design, its control code and its bill
+  of materials, verified in simulation, that works the first time it is built; and AI operators
+  that run plants within limits people set, so that industry can double every {doubling-time} by
+  the time the first seed factory flies in {seed-year}.
+exists:
+  - text: Coscientist, driven by GPT-4, planned and ran chemistry experiments on its own, including optimising palladium-catalysed cross-coupling reactions.
+    url: https://www.nature.com/articles/s41586-023-06792-0
+    year: 2023
+  - text: Berkeley Lab's A-Lab ran for 17 days without people and made 36 of 57 target inorganic compounds, planning and interpreting its own syntheses.
+    url: https://www.nature.com/articles/s41586-023-06734-w
+    year: 2023
+  - text: Google DeepMind's GNoME found 2.2 million crystal structures below the known stability hull, an order of magnitude more efficient discovery.
+    url: https://www.nature.com/articles/s41586-023-06735-9
+    year: 2023
+  - text: A deep reinforcement learning method laid out chip floorplans in hours that matched or beat human experts, and was used on Google's TPUs.
+    url: https://www.nature.com/articles/s41586-021-03544-w
+    year: 2021
+  - text: DeepMind's control system cut the energy used to cool Google's data centres by up to 40 percent.
+    url: https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/
+    year: 2016
+  - text: DWSIM is a free, open-source chemical process simulator, the kind of physics model a plant designer must check against.
+    url: https://dwsim.org/
+    year: 2026
+gap: >-
+  AI works on pieces: one experiment, one material, one layout, one control loop. Nothing yet goes
+  from a specification to a whole plant that is built and works, and nothing proves an AI operator
+  will stay inside the limits it is given when it is pushed. Plant data is scattered and private,
+  so the systems have little to learn from.
+inventions: [plant-compiler, the-governor]
+scene:
+  kind: network
+  focus: Designs flowing out from a central model to plants across the map, and measurements flowing back.
+  params: { shape: flat, nodes: 900, clusters: 14, links: 0.5, pulses: 0.8 }

@@ -1,0 +1,76 @@
+id: shadow-vault
+title: The Shadow Vault
+domain: resilience
+for: [multi-world-backup, knowledge-archives]
+pitch: >-
+  A vault of seeds, cells and glass archives buried in the floor of a lunar crater that never sees
+  the Sun, cold enough without power to keep Earth's life on ice for geological time.
+principle: >-
+  The Moon's axis is tilted only about a degree and a half to its path around the Sun, so the floors
+  of some polar craters never see sunlight. LRO's Diviner measured temperatures there as low as
+  25 K. At that cold, chemistry all but stops: for a reaction with a typical activation energy, the
+  Arrhenius law makes it run more than fifty orders of magnitude slower than in a freezer at minus
+  18 degrees C, where Svalbard keeps its seeds. Water in cells is a glass well above that
+  temperature, so molecules cannot move. Cells frozen in liquid nitrogen at 77 K already keep for
+  decades; at 25 to 40 K, with no power, no pumps and no people, the cold is permanent. What
+  remains is radiation, cosmic rays that break DNA even in the cold. Burial under a few metres of
+  regolith cuts the dose to a small fraction of the surface's, and the vault also keeps the
+  genomes as data in glass, so lost lines can be made again from sequence. Robots bury and retrieve
+  the sample racks.
+buildsOn:
+  - text: LRO's Diviner radiometer, which found permanently shadowed lunar craters as cold as 25 K.
+    url: https://www.diviner.ucla.edu/science
+  - text: The Svalbard Global Seed Vault, the model for a duplicate collection held for the world.
+    url: https://www.seedvault.no/
+  - text: The Frozen Ark, saving the DNA and viable cells of endangered species.
+    url: https://www.frozenark.org/
+  - text: The NASA Space Radiation Laboratory at Brookhaven, which reproduces cosmic-ray ions with accelerators.
+    url: https://www.bnl.gov/nsrl/
+  - text: Chang'e 4's lunar biosphere, in which seeds sprouted on the Moon in 2019.
+    url: https://en.wikipedia.org/wiki/Chang%27e_4
+experiment:
+  goal: Measure how many centuries of lunar cosmic-ray dose frozen seeds and cells can take and still grow.
+  setup: >-
+    A beamline cryostat at the NASA Space Radiation Laboratory holding seeds of ten crops, frozen
+    yeast and cryopreserved mammalian cell lines at 77 K in vacuum. Mixed ion beams give doses
+    computed, with a radiation transport code, to equal 100, 1,000 and 10,000 years under 3 m of
+    regolith. Matched samples are held cold without beam as controls.
+  measure: Germination and seedling growth for the seeds; survival and growth after thaw for yeast and cells; DNA damage by sequencing, at each dose.
+  succeedsIf: Germination and viability stay within 10 percent of the controls at the 1,000-year dose.
+  costUsd: 700000
+  months: 12
+path:
+  - phase: bench
+    what: Seeds and cells irradiated at 77 K to centuries of lunar dose.
+    scale: Ten crops and a few cell lines.
+    proves: Frozen life survives centuries of cosmic rays under regolith.
+  - phase: prototype
+    what: An instrumented package placed in a shadowed area by a polar lander or rover, reporting temperature and dose for five years, with test seeds inside.
+    scale: About 20 kg.
+    proves: The cold and the dose are what the models say.
+  - phase: pilot
+    what: The first vault, emplaced by robots, holding seeds of the world's main crops, key cell lines and a glass archive.
+    scale: About a tonne of samples.
+    proves: Samples can be stored and retrieved by robots in the dark at 40 K.
+  - phase: first-plant
+    what: A full duplicate of the world's seed banks, alongside the cells and genomes of as many species as can be collected.
+    scale: Millions of samples.
+    proves: Earth's life has a copy off Earth.
+  - phase: fleet
+    what: Vaults at both lunar poles and in shadowed craters elsewhere, kept by the settlements of {year-type-1}.
+    scale: Several vaults on more than one world.
+    proves: No single impact or failure reaches every copy.
+  - phase: civilization
+    what: Every species' cells and every record of the climb held where no catastrophe on Earth can reach them, open to any world that needs to regrow.
+    scale: The biosphere and the archive, backed up.
+    proves: Life and knowledge outlast any one world.
+risks: >-
+  Machines may not work for long in the dark at 40 K; the fallback is a vault at a crater's edge in
+  a deep artificial shade, a little warmer but easier to reach. Cosmic rays may damage seeds faster
+  than hoped; then the vault goes deeper and leans more on cells and stored genomes. Impacts are
+  rare but certain over long times, which is why there are several vaults. Who may open the vault,
+  and when, is a question for shared rules agreed before it is filled.
+scene:
+  kind: moon
+  focus: A dark crater near the lunar pole, with a small robotic vault in its floor.
+  params: { bases: 0.15, mines: 0.05, telescopes: false }

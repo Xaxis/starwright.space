@@ -1,0 +1,77 @@
+id: accuracy-seed
+title: The Accuracy Seed
+domain: manufacturing
+for: [space-precision-parts, self-replicating-factory]
+pitch: >-
+  A crate of a few hundred kilograms (a stabilised laser, its optics, abrasives and a computer) from
+  which a factory grows micrometre precision out of rough castings, the way the machine shops of the
+  nineteenth century did, but in months instead of a century.
+principle: >-
+  Precision does not have to be copied from a more precise original; it can be generated. Three
+  rough plates lapped against each other in rotating pairs must all become flat, because a concave
+  surface can only fit a convex one, and the only shape that fits both of the others is a plane;
+  Maudslay and Whitworth made the world's first true flats this way. A kinematic coupling, three
+  balls in three grooves, locates a part with exactly six contacts, so it returns to the same place
+  to within a fraction of a micrometre however roughly it was made. And light is a ruler: a
+  stabilised laser's wavelength gives length to parts per million with no reference artefact at all.
+  The Accuracy Seed combines the three. A crude machine tool, cast and roughly machined on site, is
+  measured along every axis by the laser and its errors mapped; the controller then cuts against the
+  map, so the machine makes parts more accurate than its own slides. Those parts (lapped flats,
+  ground ways, better spindles) are built into a second machine, which is mapped and corrected in
+  turn. Each round tightens the tolerance, until the factory holds micrometres, and the only
+  imported precision is a laser and a few optics.
+buildsOn:
+  - text: The three-plate method of Maudslay and Whitworth, which originates flatness without a more precise standard.
+    url: https://en.wikipedia.org/wiki/Surface_plate
+  - text: Kinematic couplings and the theory of exact constraint, from MIT's precision engineering research.
+    url: https://pergatory.mit.edu/kinematiccouplings/
+  - text: Renishaw's XL-80 laser interferometer, which calibrates and error-maps machine tools to within 0.5 parts per million.
+    url: https://www.renishaw.com/en/xl-80-laser-system--8268
+  - text: NASA's 1980 seed factory study, which named ball bearings and precision instruments among the vitamin parts a seed would still have to import.
+    url: https://ntrs.nasa.gov/api/citations/19830007081/downloads/19830007081.pdf
+experiment:
+  goal: Show that a shop with nothing precise but a laser kit can bootstrap from sand castings to micrometre parts in months.
+  setup: >-
+    A shop stocked only with grey iron sand castings, a furnace, abrasives, two robot arms, a
+    stabilised laser interferometer with its optics, and a computer, and no bought precision parts
+    or gauges. It must make three surface plates, a lathe and a bearing, each checked by an
+    independent coordinate measuring machine kept outside the shop.
+  measure: Flatness of the plates over time; the lathe's spindle runout and straightness of travel; roundness and diameter of turned shafts; the bearing's runout; hours and energy per round of bootstrapping.
+  succeedsIf: Within 12 months the plates are flat to 2 micrometres over 300 mm, the lathe's spindle runs true to 3 micrometres, and it turns a 50 mm shaft round to 3 micrometres and a working rolling-element bearing.
+  costUsd: 1200000
+  months: 12
+path:
+  - phase: bench
+    what: The shop of sand castings and one laser kit.
+    scale: A lathe, three plates and a bearing.
+    proves: Micrometres can be grown from castings and light.
+  - phase: prototype
+    what: A full machine shop bootstrapped the same way, with robots doing the lapping and fitting.
+    scale: A lathe, a mill, a grinder and gauges, about 20 tonnes.
+    proves: The whole chain of machine tools can be grown, and grown by robots.
+  - phase: pilot
+    what: The Accuracy Seed inside the Seed Foundry's Earth loop, making its spindles and bearings.
+    scale: The moving parts of a ten-tonne loop.
+    proves: Precision parts close in a self-copying loop.
+  - phase: first-plant
+    what: The precision shop of the first lunar seed, cast from regolith iron and basalt.
+    scale: The spares and copies a {seed-mass} seed needs.
+    proves: Precision holds in lunar dust, vacuum and thermal swings.
+  - phase: fleet
+    what: Each seed builds the next generation's shop from its own; only the laser kit is copied from a master.
+    scale: Every lineage of the industry.
+    proves: Precision spreads as fast as the industry doubles, every {doubling-time}.
+  - phase: civilization
+    what: Precision manufacturing across the inner solar system, with lasers themselves made by the industry.
+    scale: All of the swarm's moving parts.
+    proves: Nothing precise needs to come from Earth.
+risks: >-
+  Thermal drift on the Moon, where shade and sun differ by hundreds of degrees, may swamp micrometre
+  tolerances; shops would be buried or domed to hold their temperature. Lapping may take too many
+  robot-hours; the next try would be grinding against laser-measured references instead. Lunar dust
+  may embed in lapped surfaces; closed, clean bays are the fallback, at a cost in mass that the
+  bench measures.
+scene:
+  kind: machine
+  focus: A rough cast lathe, a laser beam tracing its errors, and the polished shaft it turns.
+  params: { shape: motor, spin: 0.8 }

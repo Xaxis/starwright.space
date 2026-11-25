@@ -1,0 +1,75 @@
+id: open-olympiad
+title: The Open Olympiad
+domain: people
+for: [global-research-talent]
+pitch: >-
+  A free, never-ending search for scientific talent that runs on any phone: adaptive puzzles find the
+  children with the rarest gifts in every country, and each one found is matched with a mentor, a
+  scholarship and a path to the frontier.
+principle: >-
+  Agarwal and Gaule showed that olympiad participants from poor countries are as talented as those
+  from rich ones yet go on to publish far less, and Bell and colleagues that exposure to inventors,
+  not talent alone, decides who becomes one. Talent is common; the bottleneck is finding and backing
+  it. The Open Olympiad lowers the cost of finding it to almost nothing. It is an adaptive set of
+  puzzles in mathematics, logic and design, free in every language, that a child can play on a phone
+  or a school's shared tablet. Item response theory, the method behind modern adaptive tests,
+  estimates each child's ability from a few dozen puzzles and flags the top fraction of a percent for
+  a second, supervised round. Each child confirmed is matched with a mentor through an online network,
+  offered funded summer schools and scholarships, and, when older, helped through partner programmes
+  such as Rise.
+buildsOn:
+  - text: Agarwal and Gaule's 2020 study of International Mathematical Olympiad participants, Invisible Geniuses.
+    url: https://doi.org/10.1257/aeri.20190457
+  - text: Bell, Chetty and colleagues' 2019 study of who becomes an inventor in America.
+    url: https://doi.org/10.1093/qje/qjy028
+  - text: Rise, the global talent programme of Schmidt Futures and the Rhodes Trust, choosing 100 winners a year.
+    url: https://www.risefortheworld.org/about-rise/
+  - text: The International Mathematical Olympiad, run since 1959, with 110 teams in 2025.
+    url: https://www.imo-official.org/results/team/year/2025/
+  - text: The UNESCO Science Report 2021's count of the world's researchers.
+    url: https://www.unesco.org/reports/science/2021/en/statistics
+experiment:
+  goal: Show that an open search on phones finds gifted children that existing channels miss, and that support changes what they go on to do.
+  setup: >-
+    Run the puzzles free for a year in two countries with little olympiad coverage, such as Nigeria
+    and Bangladesh, through schools and mobile networks. Confirm the top 0.05 percent in a supervised
+    round, then randomly assign half of them to mentoring and summer schools and follow both halves.
+  measure: Children who play; children confirmed; the share of those confirmed who were unknown to any existing olympiad or gifted programme; for the mentored half against the rest, olympiad results, school progress and admissions over two years.
+  succeedsIf: At least a million children play, at least 70 percent of those confirmed were unknown to existing programmes, and the mentored half are at least twice as likely to reach a national olympiad team or a selective school.
+  costUsd: 3500000
+  months: 30
+path:
+  - phase: bench
+    what: The adaptive puzzles tested against olympiad results.
+    scale: 10,000 students with known scores.
+    proves: The puzzles find the same talent olympiads find.
+  - phase: prototype
+    what: The two-country search and trial.
+    scale: A million players.
+    proves: It finds missed talent, and support changes outcomes.
+  - phase: pilot
+    what: A national partner runs it in every school of one large country.
+    scale: Tens of millions of children.
+    proves: It scales and is trusted by schools and families.
+  - phase: first-plant
+    what: The search runs worldwide, with a global network of mentors and a scholarship fund.
+    scale: Every school-age child within reach of a phone.
+    proves: No gifted child goes unnoticed for lack of a search.
+  - phase: fleet
+    what: Those found staff the climb's labs and programmes, and become its next mentors.
+    scale: Hundreds of thousands of researchers.
+    proves: The search raises the share of the world's people who invent.
+  - phase: civilization
+    what: Every child on every world found and backed, so the climb draws on all of its people.
+    scale: Every world the climb reaches.
+    proves: The number of minds at work on the climb grows with the population, not with privilege.
+risks: >-
+  Puzzles may favour children with more schooling or a culture of puzzles; items are checked for bias
+  and scores compared within each region, not only worldwide. Children who are found may leave their
+  countries; scholarships for study at home and labs in home countries balance that. Labelling some
+  children gifted may discourage the rest; the search is an open game that anyone can return to at
+  any time.
+scene:
+  kind: network
+  focus: Millions of points of play across the globe, a few lighting up and linking to mentors.
+  params: { shape: globe, nodes: 5000, clusters: 40, links: 0.15, pulses: 0.6 }

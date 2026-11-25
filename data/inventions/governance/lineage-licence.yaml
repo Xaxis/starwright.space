@@ -1,0 +1,80 @@
+id: lineage-licence
+title: The Lineage Licence
+domain: governance
+for: [replicator-oversight]
+pitch: >-
+  Every self-copying factory needs a signed, expiring key to finish each copy of itself, and the
+  keys come only from an open register that people govern, so a lineage that slips out of oversight
+  simply stops growing.
+principle: >-
+  The Foresight guidelines propose that a replicator should depend on something it cannot make for
+  itself, either instructions broadcast from outside or a scarce input. The Lineage Licence makes
+  that dependency a cryptographic key rather than a substance. A factory's control computer runs the
+  last step of building a copy, starting up the copy's own controller, only with a key signed by the
+  register, and each key is good for one copy in one generation and then expires. The copy inherits a
+  counter the next key must match, so a lineage cannot fork in secret. The controller is the one part
+  the factory imports rather than makes for many generations, sealed and tamper-evident in the way a
+  trusted platform module guards a computer's keys today. That is why the scheme can work: the chip
+  stock the Seed Foundry already imports is where the check lives. Daisy-chain gene drives show how
+  a chain can be built to run out; nuclear safeguards show how counting and inspection can be trusted
+  between rivals. The register issues keys by rules agreed in advance, so it is not a lever for
+  politics: a lineage that meets its reporting duties gets its keys automatically.
+buildsOn:
+  - text: The Foresight guidelines' broadcast architecture, in which a machine carries no instructions of its own.
+    url: https://www.imm.org/policy/guidelines/
+  - text: Phoenix and Drexler's 2004 case that factories need not be autonomous self-replicators.
+    url: https://doi.org/10.1088/0957-4484/15/8/001
+  - text: Daisy-chain gene drives, which limit their own spread by design.
+    url: https://doi.org/10.1073/pnas.1716358116
+  - text: IAEA safeguards, the accounting and inspection of nuclear material in 189 states.
+    url: https://www.iaea.org/sites/default/files/gc/gc68-2.pdf
+  - text: The Trusted Platform Module, standardised as ISO/IEC 11889, a hardware root of trust that generates and keeps cryptographic keys and attests what a computer is running.
+    url: https://www.trustedcomputinggroup.org/resources/documents/tpm-library-specification
+experiment:
+  goal: Show that a fleet of machines that build copies of themselves cannot finish an unlicensed copy, even when skilled people with full access try.
+  setup: >-
+    A fleet of ten open-source self-copying 3D printers and robot cells whose controller boards carry
+    a secure chip that runs the final assembly step and loads the copy's firmware only with a
+    register-signed key. A red team of five security engineers with full physical access gets three
+    months and a prize pool to produce a working unlicensed copy or to fork a lineage unseen.
+  measure: Licensed copies completed; unlicensed copies completed; the hours and cost of each red-team attempt; the extra cost and time the licence adds to a normal copy.
+  succeedsIf: No working unlicensed copy in three months of attack, or every successful attack costs more than building a new machine from scratch, and the licence adds less than 2 percent to the cost and time of a copy.
+  costUsd: 900000
+  months: 12
+path:
+  - phase: bench
+    what: The printer fleet and the red team.
+    scale: Ten machines, a few generations.
+    proves: A key can gate a copy and stand up to skilled attack.
+  - phase: prototype
+    what: The licence built into the Seed Foundry's one-tonne bench loop.
+    scale: One industrial loop, a tonne per copy.
+    proves: The licence works on a real self-copying factory without slowing it.
+  - phase: pilot
+    what: The first lunar seed runs under a register kept by an international body, with inspectors from both lunar coalitions.
+    scale: "{seed-mass}, in {seed-year}"
+    proves: Rivals accept one register and its keys in real operation.
+  - phase: first-plant
+    what: A treaty makes the licence mandatory for every self-copying machine, with inspections modelled on nuclear safeguards.
+    scale: Every lineage in the Earth and Moon system.
+    proves: Oversight holds as lineages multiply.
+  - phase: fleet
+    what: Lineages on the asteroids and Mercury, light-minutes from Earth, carry keys issued in batches by local registers under the same rules.
+    scale: Industry across the inner solar system.
+    proves: Oversight works without contact with Earth in real time.
+  - phase: civilization
+    what: The industry that builds the swarm, every copy licensed and counted.
+    scale: "{doublings-to-sun} doublings from the seed"
+    proves: The most powerful machines ever built stay answerable to people.
+risks: >-
+  A sealed controller may be reverse-engineered once the industry makes its own chips; the licence
+  then rests on inspection and on keys being needed for trade, docking and orbit permits, which a
+  rogue lineage would lose. A register could be captured by one state and used against rivals;
+  automatic issue under published rules, and keys that need signatures from several independent
+  bodies, guard against that. The check is a single point of failure: if the register fails, growth
+  stops. The design treats that as the safe way to fail, and keeps batches of keys in escrow for
+  emergencies.
+scene:
+  kind: replicator
+  focus: Factories copying themselves, each new copy waiting for its key before it lights up.
+  params: { unit: fab, generations: 8, closure: 0.85 }

@@ -1,0 +1,88 @@
+id: sky-library
+title: The Sky Library
+domain: information
+for: [universal-connectivity]
+pitch: >-
+  Broadcast the knowledge most people want from satellites to every cheap receiver at once, so the
+  cost of reaching one more person falls to the price of the receiver.
+principle: >-
+  A two-way link costs per user: every request is its own transmission. A broadcast costs per bit,
+  however many receive it. The Sky Library splits traffic by that rule. Much of what people need
+  (an encyclopedia, schoolbooks, health and farming guides, news, software updates) is the same for
+  millions, so it goes out once on a satellite broadcast beam. It is sent with a fountain code
+  (RaptorQ): each file becomes an endless stream of coded packets, and a receiver rebuilds the file
+  from any set of packets slightly larger than the file, whatever it missed. No return channel is
+  needed to resend lost packets, so a receiver is one-way and cheap: a small dish, a broadcast tuner
+  chip and flash memory, serving the phones nearby over Wi-Fi. Personal requests go up a slow,
+  cheap uplink (text message, low-power radio or satellite text), and the broadcaster schedules the
+  most requested items into the next day's stream. With DVB-S2 coding close to the Shannon limit, one
+  36 MHz transponder carries 60 to 90 megabits per second, nearly a terabyte a day, to every
+  receiver in its beam at once.
+buildsOn:
+  - text: Outernet, later Othernet, founded in 2014, sold receivers for data broadcast from satellites to anyone in the beam, and closed in November 2025.
+    url: https://en.wikipedia.org/wiki/Outernet
+    year: 2025
+  - text: Kiwix, begun in 2006, serves Wikipedia, Project Gutenberg and other libraries fully offline from compressed files.
+    url: https://kiwix.org/en/about/
+    year: 2026
+  - text: RFC 6330 (2011) specifies RaptorQ, the fountain code that rebuilds a file from any sufficient set of received packets.
+    url: https://www.rfc-editor.org/info/rfc6330/
+    year: 2011
+  - text: DVB-S2, the satellite broadcast standard, uses LDPC codes that work within 0.7 to 1.2 dB of the Shannon limit.
+    url: https://en.wikipedia.org/wiki/DVB-S2
+    year: 2026
+experiment:
+  goal: Measure how much of what offline communities ask for a one-way broadcast library can serve, and what it costs per person.
+  setup: >-
+    Lease a 10 megabit per second slice of a geostationary Ku-band transponder over East Africa for
+    six months. Build 200 receivers from off-the-shelf DVB-S2 tuners, 60 cm dishes and single-board
+    computers with 1 TB of storage and Wi-Fi, and place them in schools and clinics in 20 villages
+    in two countries, with a text-message line for requests. Broadcast a starting library (Wikipedia
+    in local languages, school courses, health guides) plus each day's most requested items, coded
+    with RaptorQ.
+  measure: >-
+    Share of requests answered from the local store within 24 hours; packet loss and whether every
+    file was rebuilt with no return channel; people served per receiver; all-in cost per receiver
+    and per user per month.
+  succeedsIf: >-
+    At least 70 percent of requests are answered from the broadcast within a day, every receiver
+    rebuilds every file with no return channel, and the all-in cost is under 1 US dollar per user
+    per month.
+  costUsd: 900000
+  months: 9
+path:
+  - phase: bench
+    what: A transponder slice and 200 home-built receivers in 20 villages.
+    scale: "200 receivers, a few thousand users"
+    proves: Broadcast answers most requests, and one-way fountain-coded delivery works in the field.
+  - phase: prototype
+    what: A full transponder and a purpose-built receiver for the price of a cheap phone.
+    scale: "10,000 receivers under one beam"
+    proves: The receiver can be cheap, and the request scheduler keeps the store relevant.
+  - phase: pilot
+    what: A national service with local-language content, run with schools and health ministries.
+    scale: "A million users in one country"
+    proves: Cost per user falls as users grow, and people keep using it.
+  - phase: first-plant
+    what: A dedicated broadcast payload covering a continent, with receiver chips built into low-cost phones.
+    scale: "100 million people"
+    proves: Broadcast plus a thin uplink costs less per person than two-way broadband for the same use.
+  - phase: fleet
+    what: Beams over every region in every major language, handing users to two-way networks as those get cheaper.
+    scale: "Everyone not yet on affordable two-way broadband"
+    proves: No one is cut off from shared knowledge for lack of money.
+  - phase: civilization
+    what: The same broadcast layer carries the climb's shared library and software to every world, where light-minute delays make one-way delivery the natural mode.
+    scale: "Every settled world, by {year-type-1}"
+    proves: The way Earth came online works across the solar system.
+risks: >-
+  Othernet broadcast data for a decade and closed in 2025, so the business model needs care; the
+  project would fund the service through governments, schools and health agencies that already pay
+  for content, not through receiver sales. Landing rights and spectrum differ by country; it would
+  start where regulators welcome it. People may want to talk more than to read; the slow uplink
+  carries messages, and the library is a floor, not a ceiling. Content in local languages may be
+  thin; paying local writers and translators is part of the budget from the first day.
+scene:
+  kind: network
+  focus: One beam from orbit lighting thousands of receivers across a continent at once.
+  params: { shape: globe, nodes: 5000, clusters: 40, links: 0.1, pulses: 1 }

@@ -1,0 +1,88 @@
+id: clockwork-beacons
+title: Clockwork Beacons
+domain: information
+for: [solar-system-navigation]
+pitch: >-
+  Give every relay in the solar system a precise clock and make it broadcast its time, so any ship
+  can find where and when it is without asking Earth.
+principle: >-
+  Satellite navigation works because each satellite says what time it is and where it is; a
+  receiver that hears four of them solves for its own three coordinates and its clock error. Nothing
+  in that method is tied to Earth. Clockwork Beacons put a clock and a timing broadcast on every
+  relay of the interplanetary network and keep the beacons in step by two-way laser time transfer
+  over the links they already carry. Laser ranging between beacons fixes each one's orbit, so the
+  network surveys its own shape without Earth. Light travels 30 cm in a nanosecond, so nanosecond
+  timing gives metre positions. A clock stable to a few parts in 10^15 drifts well under a
+  nanosecond a day, so a ship that hears one beacon and carries a good clock still gets a range
+  every pulse. Relativity is part of the design: each clock ticks at a rate set by its speed and the
+  gravity around it, and every broadcast carries its correction to one shared solar-system time.
+  When no beacon is in view, X-ray pulsars, nature's own clocks, give a slower fix to kilometres.
+buildsOn:
+  - text: NASA's Deep Space Atomic Clock, the first trapped-ion clock run in space, stable to 3 parts in 10^15 over 23 days.
+    url: https://www.nature.com/articles/s41586-021-03571-7
+    year: 2021
+  - text: NASA's SEXTANT, which in 2017 navigated the ISS from X-ray pulsar timing alone.
+    url: https://www.nasa.gov/centers-and-facilities/goddard/nasa-team-first-to-demonstrate-x-ray-navigation-in-space/
+    year: 2018
+  - text: NIST's optical time transfer over 300 km between mountaintops in Hawaii, which kept distant sites synchronised to 320 attoseconds with as little as 40 microwatts of laser power.
+    url: https://www.nature.com/articles/s41586-023-06032-5
+    year: 2023
+  - text: The chip-scale atomic clock, a microfabricated clock first built at NIST with DARPA funding in the early 2000s.
+    url: https://en.wikipedia.org/wiki/Chip-scale_atomic_clock
+    year: 2004
+  - text: The work toward a Coordinated Lunar Time, which must correct for clocks on the Moon running faster than on Earth.
+    url: https://en.wikipedia.org/wiki/Coordinated_Lunar_Time
+    year: 2024
+experiment:
+  goal: Show that a small network of beacons, synchronised and located only by laser links among themselves, can guide a moving receiver with no outside time or position.
+  setup: >-
+    Three beacons on hilltops 50 to 100 km apart and a fourth on a tethered aerostat for height,
+    each with a rubidium clock, a two-way optical time-transfer terminal and a ranging laser, and
+    each broadcasting its time and position on a radio carrier. A drone carries a receiver with its
+    own chip-scale atomic clock and flies set tracks for 72 hours. Satellite navigation and a
+    separate RTK reference are recorded as a referee but never fed to the network or the drone.
+  measure: >-
+    Synchronisation error between beacons; error of the network's survey of its own positions; the
+    drone's position and time error over 72 hours; how fast errors grow when one beacon is switched
+    off.
+  succeedsIf: >-
+    The drone's position stays within 1 m and its time within 3 ns of the referee for 72 hours, with
+    no outside time or position given to the network.
+  costUsd: 450000
+  months: 10
+path:
+  - phase: bench
+    what: Four beacons and a drone over 100 km.
+    scale: "100 km, 72 hours"
+    proves: Self-synchronised, self-surveyed beacons can navigate a receiver.
+  - phase: prototype
+    what: Two beacons at the Moon, one in lunar orbit and one on the surface, with space-rated ion clocks.
+    scale: "Two beacons at the Moon"
+    proves: The method works in space, with relativistic corrections and lunar time.
+  - phase: pilot
+    what: A ring of beacons around the Moon; landers and rovers navigate with no tracking from Earth.
+    scale: "Six to ten beacons at the Moon"
+    proves: Metre positions and nanosecond time across the whole Moon.
+  - phase: first-plant
+    what: Beacons on every relay at Mars and at the Sun-Earth L4 and L5 points, with optical clocks.
+    scale: "Tens of beacons from Earth to Mars"
+    proves: Ships between worlds navigate themselves.
+  - phase: fleet
+    what: Beacons through the inner system, the asteroid belt and the swarm's orbit included.
+    scale: "Hundreds of beacons, by {year-type-1}"
+    proves: Every machine in the inner system knows where and when it is.
+  - phase: civilization
+    what: One time and one map for the solar system, kept by the beacons and checked against the pulsars.
+    scale: "Every world, the swarm and the outer relays"
+    proves: An industry spread over billions of kilometres can work to one clock.
+risks: >-
+  Optical clocks are still laboratory instruments; the fallback is ion clocks like DSAC, proven in
+  space, which still give metre ranges over short spans. Laser links between beacons will drop out;
+  each beacon rides through on its own clock and on radio. In deep space the beacons lie nearly in
+  one plane, which weakens fixes out of it; beacons placed above and below the plane, and pulsars,
+  add depth. Agreeing time scales between nations and worlds is political as much as technical; the
+  beacons can broadcast every agreed scale at once.
+scene:
+  kind: network
+  focus: Beacons ticking in step across the solar system while a ship fixes its place from four of them.
+  params: { shape: system, nodes: 30, clusters: 6, links: 0.5, pulses: 1 }

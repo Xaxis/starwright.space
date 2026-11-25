@@ -1,0 +1,72 @@
+id: restart-container
+title: The Restart Container
+domain: resilience
+for: [restart-kits]
+pitch: >-
+  A shipping container of tools chosen so that each tier builds the next, from power and water to
+  machine tools that make the parts of more containers, with its own archive inside.
+principle: >-
+  A kit is only as good as what it lets people make next. The Restart Container is designed like
+  the Seed Foundry, by closure: the share of its own contents, by mass, that a team can make again
+  from scrap, rock and what the kit provides. Tier one restores life: solar panels, batteries and a
+  small turbine; water filters and disinfection; a radio; medicine. Tier two makes tools: a lathe,
+  a mill, welders, an induction furnace and a small foundry, the machines that can make the parts of
+  machines. Tier three makes more of tier one and two from scrap: turbines from motors run as
+  generators, pumps, frames, gears, the lathe's own beds and slides. Some parts cannot be made
+  early, such as chips, solar cells and bearings, so the container carries spares of those, a small
+  and falling share of its mass. A standard 40-foot container carries about 26 tonnes, goes by ship,
+  rail, truck or helicopter sling, and doubles as the workshop.
+buildsOn:
+  - text: Open Source Ecology's Global Village Construction Set, 50 open-source industrial machines for a small self-sufficient economy.
+    url: https://www.opensourceecology.org/gvcs/
+  - text: Lewis Dartnell's The Knowledge, on the order in which technologies must be rebuilt.
+    url: https://the-knowledge.org/en-gb/
+  - text: The Long Now Foundation's Manual for Civilization, a library chosen to sustain or rebuild civilization.
+    url: https://longnow.org/ideas/manual-for-civilization-begins/
+  - text: Appropedia, the open wiki of appropriate technology that the archive's how-to layer would draw on.
+    url: https://www.appropedia.org/
+experiment:
+  goal: Measure how fast a group of non-specialists can go from a container to power, water and a working machine shop, and how much of the kit they can make again.
+  setup: >-
+    One prototype container and its printed archive on a rural site with a stream and a scrapyard.
+    Ten volunteers with no trade training, paid for six months, with a safety officer who may stop
+    work but gives no technical help. Every hour, part and kilogram is logged.
+  measure: Days to electric light and refrigeration for a camp of a hundred; days to 2,000 litres a day of safe drinking water; days to the first part turned on the lathe to a set tolerance; the share by mass of the kit's own parts remade from scrap after six months.
+  succeedsIf: Power and safe water within 7 days, a lathe-turned part within 30 days, and at least 25 percent of the kit's own mass remade from scrap within six months.
+  costUsd: 2500000
+  months: 12
+path:
+  - phase: bench
+    what: One container, ten volunteers, six months on a rural site.
+    scale: One kit.
+    proves: Non-specialists reach power, water and machine tools from the kit and its archive.
+  - phase: prototype
+    what: Three containers in a hot, a cold and a wet climate, used by disaster-relief teams.
+    scale: Three kits, real field use.
+    proves: The kit works where it is needed, not only where it was designed.
+  - phase: pilot
+    what: A hundred containers with disaster agencies, sent to restore power and water after real disasters.
+    scale: A hundred kits.
+    proves: The kits pay for themselves in ordinary disasters, so they are maintained and ready.
+  - phase: first-plant
+    what: A line building containers in series, with stocks in every region.
+    scale: Ten thousand kits a year.
+    proves: Closure above half, with each kit able to supply parts for more.
+  - phase: fleet
+    what: A stock sized to restart industry anywhere a catastrophe strikes, and kits sent with every settlement on the Moon and beyond.
+    scale: Every region and every settled world.
+    proves: No region is more than one shipment from restarting.
+  - phase: civilization
+    what: Any community, on any world, can restart industry from one container and its archive.
+    scale: Civilization's floor, everywhere.
+    proves: A collapse becomes a setback, not an ending.
+risks: >-
+  Closure may stall well below half, as it does for electronics everywhere; then the kit carries
+  larger stocks of the parts it cannot make and the pilot learns which to add. People may not keep
+  using kits that sit in storage, so they live in disaster relief and training, used and refreshed.
+  The archive may be too hard for non-specialists, which the bench measures day by day. Batteries
+  and medicines age, so their stocks rotate through the relief work.
+scene:
+  kind: replicator
+  focus: One container opening into a workshop, then a second container's parts taking shape beside it.
+  params: { unit: cube, generations: 4, closure: 0.5 }

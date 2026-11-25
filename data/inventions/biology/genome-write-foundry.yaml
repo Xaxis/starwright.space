@@ -1,0 +1,81 @@
+id: genome-write-foundry
+title: The Genome Write Foundry
+domain: biology
+for: [programmable-biology, synthetic-genomics]
+pitch: >-
+  A standing, automated line that takes a genome designed on a screen and hands back a living cell
+  carrying it, in days instead of years, the way a chip foundry takes a design file and returns a
+  working chip.
+principle: >-
+  Writing a genome today is three slow crafts chained by hand: synthesising short DNA, stitching the
+  pieces into ever larger ones, and booting the assembled genome in a cell. The Write Foundry turns
+  each into a machine and joins them. Enzymatic synthesis, which grows DNA base by base in water
+  without harsh chemicals, makes long, accurate fragments; robotic assembly in yeast and in vitro
+  stitches them into chromosomes; and a recoded, stripped-down chassis cell receives the finished
+  genome and starts it. Design software checks every construct for errors and for biosafety before a
+  base is made, and a sequencing step verifies the product. Because the chassis is recoded, it can
+  run genetic codes nature never used and resist the viruses that plague fermentation. The whole line
+  is a loop: design, write, boot, read, correct, repeat, measured in days.
+buildsOn:
+  - text: Enzymatic DNA synthesis set a 1,005-base single-synthesis record and now delivers 50-kilobase sequence-perfect clonal DNA, the write step's core.
+    url: https://www.drugdiscoverynews.com/ansa-biotechnologies-redefines-what-s-possible-in-dna-synthesis-with-50-kb-sequence-perfect-clonal-product-16751
+    year: 2025
+  - text: Benchtop enzymatic DNA printers (DNA Script's SYNTAX) already make oligos up to about 500 nucleotides in a lab, the kind of hardware a foundry chains together.
+    url: https://www.dnascript.com/
+    year: 2025
+  - text: The Sc2.0 yeast project showed megabase chromosomes can be synthesised and assembled, and recoded E. coli (Syn61, Syn57) showed a chassis can be rewritten to resist viruses and use new amino acids.
+    url: https://www.eurekalert.org/news-releases/1071287
+    year: 2025
+  - text: Evo 2 and AlphaFold 3 let a foundry predict whether a designed genome will fold, function and assemble before it is written, closing the design half of the loop.
+    url: https://arcinstitute.org/news/evo-2-one-year-later
+    year: 2025
+experiment:
+  goal: Write and boot a designed bacterial genome end to end on an automated line, measuring cost and turnaround.
+  setup: >-
+    Chain a benchtop enzymatic synthesiser, a robotic assembly station and a recoded chassis cell
+    under one design-and-verification pipeline. Task it with writing a 1-megabase designed bacterial
+    genome, minimised and recoded, from the design file, logging every error, correction and hour.
+  measure: >-
+    Turnaround from design file to a verified living cell; error rate per kilobase before correction;
+    cost per base; share of runs that boot a viable cell on the first try.
+  succeedsIf: >-
+    The line boots a correct, viable 1-megabase designed genome in under 30 days at under one US cent
+    per base, with at least half of attempts viable without manual rescue.
+  costUsd: 40000000
+  months: 48
+path:
+  - phase: bench
+    what: The three steps automated separately and joined for a single small genome.
+    scale: One bacterial genome, about a megabase.
+    proves: End-to-end writing and booting works without hand craft.
+  - phase: prototype
+    what: A foundry that writes designed bacterial genomes on order for outside labs.
+    scale: Dozens of genomes a year.
+    proves: Turnaround and cost reach the targets repeatably.
+  - phase: pilot
+    what: Yeast and plant chromosomes written on the same line.
+    scale: Megabase eukaryotic chromosomes.
+    proves: The method scales past bacteria to the genomes crops and materials need.
+  - phase: first-plant
+    what: A commercial foundry service that takes a design and returns a verified strain.
+    scale: Thousands of genomes a year.
+    proves: Designed organisms can be ordered like genes, at a published price.
+  - phase: fleet
+    what: Foundries at every major bio hub, and compact units for field and off-world use.
+    scale: Global, plus the first units in space.
+    proves: Writing life is distributed, not held in a few consortia.
+  - phase: civilization
+    what: Any organism a job needs, written from a file wherever it is needed, including off Earth.
+    scale: Planet and inner solar system.
+    proves: Biology is as programmable as the climb assumes.
+risks: >-
+  Booting large synthetic genomes may keep failing for reasons no model predicts; the project would
+  grow a library of chassis and boot conditions and lean on partial, hybrid genomes meanwhile.
+  Cheap, fast genome writing is dual-use, so the foundry screens every design and every order against
+  hazard databases before synthesis, logs provenance, and treats biosecurity as a built-in gate, not
+  an afterthought. If enzymatic synthesis stalls on length or accuracy, the line falls back to
+  shorter fragments with more assembly.
+scene:
+  kind: machine
+  focus: An automated line writing DNA, assembling it and loading it into a waiting chassis cell.
+  params: { shape: printer, spin: 0.2 }

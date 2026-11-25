@@ -1,0 +1,78 @@
+id: partial-reprogramming-therapy
+title: Dialled-Back Cell Age
+domain: health
+for: [longevity-medicine]
+pitch: >-
+  A therapy that resets the age of a person's cells partway, switching on the factors that return a
+  cell toward youth just far enough to restore function, without erasing what the cell is, so tissues
+  grow younger while staying themselves.
+principle: >-
+  Every cell carries a kind of age written in chemical marks on its DNA, the epigenome, which drifts
+  as we grow old and governs which genes are on. A set of regulators, the reprogramming factors, can
+  reset those marks all the way back to an embryonic state, which is how a skin cell becomes a stem
+  cell in the lab. Pushed all the way, that is dangerous: cells lose their identity and can form
+  tumours. Dialled-Back Cell Age applies the same factors in brief, controlled pulses that move the
+  epigenome partway toward youth and then stop, restoring a cell's youthful pattern of gene activity
+  while keeping it a skin, muscle or nerve cell. Delivered by a tightly controlled genetic switch so
+  the dose and timing are exact, and guided by a clock that measures biological age, the therapy aims
+  to rejuvenate tissues a little at a time, lowering the age-related risk that drives most late-life
+  disease.
+buildsOn:
+  - text: The Rejuvenation Roadmap tracks therapies against the 12 hallmarks of ageing, including epigenetic reprogramming, documenting the field this therapy advances.
+    url: https://www.lifespan.io/road-maps/the-rejuvenation-roadmap/
+    year: 2024
+  - text: The XPRIZE Healthspan competition's 101-million-USD purse targets restoring function lost to ageing, the clinical endpoint partial reprogramming aims at.
+    url: https://www.xprize.org/
+    year: 2026
+  - text: Biology foundation models such as ESM3 help design the controlled genetic switches and read the regulatory networks a safe reprogramming therapy depends on.
+    url: https://www.evolutionaryscale.ai/blog/esm3-release
+    year: 2025
+experiment:
+  goal: Show brief reprogramming pulses lower a tissue's biological age and restore function without loss of cell identity or raised cancer risk.
+  setup: >-
+    In aged mice, deliver reprogramming factors through a tightly controlled switch in short pulses to
+    a target tissue, with biological-age clocks and functional tests measured over months, against
+    matched controls and against continuous (unsafe) reprogramming.
+  measure: >-
+    Change in biological age by epigenetic clock; restored tissue function; retention of cell
+    identity markers; tumour incidence against controls.
+  succeedsIf: >-
+    Pulsed reprogramming lowers the tissue's biological age by a clear margin and restores a functional
+    measure, with cell identity kept and no rise in tumours over the study.
+  costUsd: 40000000
+  months: 48
+path:
+  - phase: bench
+    what: Pulsed partial reprogramming in cells and in one tissue of aged mice.
+    scale: Cell and single-tissue studies.
+    proves: Age markers fall and function returns without loss of identity.
+  - phase: prototype
+    what: Whole-body or multi-tissue rejuvenation in aged animals with safety followed long term.
+    scale: Animal lifespan studies.
+    proves: The therapy is safe and effective across tissues over time.
+  - phase: pilot
+    what: First-in-human trials on a tissue where the benefit and safety are easiest to read.
+    scale: Small patient cohorts.
+    proves: The approach is safe and lowers biological age in people.
+  - phase: first-plant
+    what: Approved therapies for specific age-related conditions.
+    scale: Patients with a target condition.
+    proves: Reprogramming treats real disease of ageing.
+  - phase: fleet
+    what: Broader rejuvenation protocols as the safety record builds.
+    scale: Wide clinical use.
+    proves: Healthspan extended across many tissues and conditions.
+  - phase: civilization
+    what: Maintaining youthful function as routine care, compressing late-life illness.
+    scale: Planet, and crews who must stay well for decades off Earth.
+    proves: People stay healthy and capable for the length of a long climb.
+risks: >-
+  Reprogramming risks cancer and loss of cell identity if it goes too far; the therapy is built around
+  brief, controlled, reversible pulses and watched with age clocks and tumour monitoring, and would
+  stop at the first sign of trouble. Age clocks may not track true function, so the trials pair them
+  with hard functional endpoints. Delivery to the right cells at the right dose is unsolved and is a
+  focus of the early phases.
+scene:
+  kind: cell
+  focus: An aged cell stepping back toward a youthful state as brief reprogramming pulses act.
+  params: { type: animal, organelles: 0.8, divide: true, glow: 0.6 }

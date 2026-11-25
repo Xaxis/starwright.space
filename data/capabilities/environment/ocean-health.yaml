@@ -1,0 +1,42 @@
+id: ocean-health
+title: Healthy, living oceans
+domain: environment
+stage: k08
+needs: [earth-monitoring, carbon-drawdown]
+summary: >-
+  The ocean takes up about a third of the CO2 people emit and most of the extra heat, and it pays for
+  it. Surface water is about 30 percent more acidic than before industry, and most of the world's
+  coral reefs have been through bleaching heat since 2023. Fish stocks are strained across the world.
+  Treaties to protect the high seas and to end harmful fishing subsidies came into force in 2025 and
+  2026.
+target: >-
+  Protect at least 30 percent of the ocean well by 2030, end overfishing, keep reefs alive through the
+  decades of heat already on the way, and reverse acidification as CO2 in the air falls.
+exists:
+  - text: NOAA's Coral Reef Watch recorded the fourth global bleaching event from January 2023 to September 2025, with bleaching-level heat stress over about 84 percent of the world's reef area.
+    url: https://coralreefwatch.noaa.gov/satellite/research/coral_bleaching_report.php
+    year: 2026
+  - text: The High Seas Treaty (BBNJ Agreement) entered into force on 17 January 2026 and had 107 parties by November 2026.
+    url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXI-10&chapter=21&clang=_en
+    year: 2026
+  - text: The WTO's Agreement on Fisheries Subsidies, which bans the most harmful subsidies, entered into force on 15 September 2025.
+    url: https://www.wto.org/english/tratop_e/rulesneg_e/fish_e/fish_e.htm
+    year: 2025
+  - text: NOAA notes that surface ocean pH has fallen by about 0.1 since the industrial revolution, about a 30 percent rise in acidity.
+    url: https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-acidification
+  - text: Protected Planet counts 9.99 percent of the ocean inside protected or conserved areas in November 2026.
+    url: https://www.protectedplanet.net/en
+    year: 2026
+  - text: SECORE breeds corals from spawn and seeds them onto reefs; corals it bred stayed healthy while most wild corals around them bleached in the 2023 Caribbean heatwave.
+    url: https://www.secore.org/
+    year: 2026
+gap: >-
+  About a tenth of the ocean is protected, a third of the 2030 goal, and much of that only on paper.
+  Coral restoration works a few hectares at a time while bleaching strikes whole reef systems.
+  Nothing yet protects corals through a marine heatwave except shading and cooling trials a few metres
+  across, and acidification will not reverse until CO2 in the air falls.
+inventions: [reef-canopy]
+scene:
+  kind: globe
+  focus: Tropical coasts and their reefs, the bleached white turning back to colour.
+  params: { look: coasts, green: 0.5 }

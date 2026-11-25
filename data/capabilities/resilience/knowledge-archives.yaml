@@ -1,0 +1,42 @@
+id: knowledge-archives
+title: Archives that outlast any catastrophe
+domain: resilience
+stage: k08
+needs: [open-knowledge-base]
+summary: >-
+  If civilization falls, what the survivors can rebuild depends on what they can read. Disks fail
+  in decades and formats in years. The climb needs copies of the world's knowledge and its seeds
+  and cells kept in places and materials that last for millennia, and that a survivor with no
+  computer can still open.
+target: >-
+  Several complete copies of humanity's knowledge, including how to make every tool on the climb,
+  and of the seeds and cells of its crops and species, held in stable media at sites on Earth and
+  the Moon, each readable starting from the naked eye.
+exists:
+  - text: The Svalbard Global Seed Vault, opened in 2008, holds 1,417,799 seed samples from 135 depositors, duplicates of genebanks around the world.
+    url: https://www.seedvault.no/
+    year: 2026
+  - text: The Arctic World Archive stores data deep in a decommissioned Svalbard mine on piqlFilm, readable for centuries with no electricity or software.
+    url: https://www.arcticworldarchive.org/
+    year: 2026
+  - text: Microsoft's Project Silica writes data into quartz glass, a write-once medium immune to electromagnetic fields, with lifetimes of tens to hundreds of thousands of years.
+    url: https://www.microsoft.com/en-us/research/project/project-silica/
+    year: 2026
+  - text: The Arch Mission Foundation's Lunar Library, 30 million pages on 25 nickel discs each 40 microns thick, the first four layers analog images of pages, reached the Moon on the Beresheet lander in April 2019.
+    url: https://www.archmission.org/spaceil
+    year: 2019
+  - text: The Long Now Foundation's Rosetta Disk micro-etched hundreds of thousands of pages about the world's languages onto a 3-inch nickel disk meant to last thousands of years.
+    url: https://longnow.org/ideas/very-long-term-backup/
+    year: 2008
+  - text: The Voyager Golden Records, launched in 1977, carry sounds and images of Earth with instructions for playing them drawn on the cover.
+    url: https://science.nasa.gov/mission/voyager/voyager-golden-record-overview/
+    year: 1977
+gap: >-
+  Every long-lived archive today assumes the reader has a microscope, a film scanner or a computer.
+  None teaches a survivor how to build the tool that reads it. Seed and cell banks need power and
+  people to stay cold and to regrow their samples, and all of the large ones are on one planet.
+inventions: [bootstrap-glass, shadow-vault]
+scene:
+  kind: globe
+  focus: The Arctic vaults in the ice, then copies spreading to other sites and to the Moon.
+  params: { ice: 1, lights: 0.4, look: poles }

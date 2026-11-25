@@ -1,0 +1,46 @@
+id: cheap-launch
+title: Launch at the price of freight
+domain: space
+stage: k09
+needs: [clean-orbits, automated-factories]
+summary: >-
+  The first industry in space has to come from Earth: seed factories, robots, chips and people.
+  At {launch-cost-falcon-9} that is a luxury, and in 2025 the whole world launched only
+  {upmass-2025} of spacecraft. Launch has to become freight: vehicles flown again and again like
+  aircraft, at a cost per kilogram set mostly by their propellant.
+target: >-
+  A cost to low Earth orbit of tens of dollars a kilogram, and tens of thousands of tonnes lifted
+  each year, enough to land the first {seed-mass} seed factory on the Moon by {seed-year} and to
+  supply the people who run the industry it starts.
+exists:
+  - text: NASA's Jones found launch cost fell from about $54,500 per kilogram on the Space Shuttle to $2,720 advertised on Falcon 9, a twentyfold drop.
+    url: https://ntrs.nasa.gov/citations/20200001093
+    year: 2018
+  - text: BryceTech counted 325 orbital launches in 2025, carrying about 2.7 million kg of spacecraft, 82 percent of it on SpaceX rockets.
+    url: https://brycetech.com/reports/report-documents/global-orbital-activity-2025/BryceTech_Orbital_Launches_2025.pdf
+    year: 2025
+  - text: By November 2026 one Falcon 9 first stage, B1067, had flown and landed 37 times.
+    url: https://en.wikipedia.org/wiki/List_of_Falcon_9_first-stage_boosters
+    year: 2026
+  - text: Starship reached orbit for the first time on Flight 14, on 28 September 2026, deploying 26 Starlink V3 satellites.
+    url: https://en.wikipedia.org/wiki/SpaceX_Starship_flight_tests
+    year: 2026
+  - text: On Flight 15, on 13 November 2026, the launch tower caught a Starship upper stage for the first time, about 22 hours after liftoff.
+    url: https://en.wikipedia.org/wiki/SpaceX_Starship_flight_tests
+    year: 2026
+  - text: Blue Origin's New Glenn landed its first stage for the first time on 13 November 2025.
+    url: https://en.wikipedia.org/wiki/New_Glenn
+    year: 2025
+  - text: CSIS puts the cost to low orbit in 2021 dollars at $1,500 per kilogram on Falcon Heavy and $23,100 on Rocket Lab's small Electron.
+    url: https://aerospace.csis.org/data/space-launch-to-low-earth-orbit-how-much-does-it-cost/
+    year: 2021
+gap: >-
+  No vehicle is yet fully reusable in service: Falcon 9 still throws away its upper stage, and
+  Starship has only begun to bring its own back. Freight prices need hundreds of flights from each
+  vehicle, turnarounds of hours, and launch sites and airspace that handle thousands of flights a
+  year. Even then a chemical rocket spends most of its mass on propellant.
+inventions: [noon-beam-launcher, balanced-rotovator]
+scene:
+  kind: launch
+  focus: Reusable rockets leaving Earth one after another, as often as aircraft take off.
+  params: { method: rocket, cadence: 0.8, world: earth }

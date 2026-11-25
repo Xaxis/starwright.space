@@ -1,0 +1,82 @@
+id: radioprotection-repair-regimen
+title: The Radiation Shield Within
+domain: health
+for: [space-health]
+pitch: >-
+  A combined defence against space radiation that works inside the body: drugs that mop up the damage
+  as it happens, and cells engineered to repair their DNA faster, so a crew's own biology helps hold
+  the line that shielding mass alone cannot.
+principle: >-
+  Galactic cosmic rays are too energetic to stop with any shielding a spacecraft can carry, so some
+  dose always reaches the crew, breaking DNA and flooding cells with reactive molecules. Physical
+  shielding handles part of it; this regimen handles the rest from within. Radioprotective and
+  antioxidant drugs, taken on a schedule, soak up the reactive molecules radiation produces, lowering
+  the damage each particle does. In parallel, the crew's cells are helped to repair breaks faster:
+  by boosting the body's own DNA-repair pathways, and by borrowing repair and protection strategies
+  from organisms that shrug off radiation, whose protective proteins can be expressed in human cells.
+  Biological-age and DNA-damage markers are tracked so the regimen is tuned to each person and each
+  mission. The aim is not to stop every particle, which is impossible, but to cut the biological harm
+  per unit dose enough that a long mission stays within safe limits.
+buildsOn:
+  - text: A Mars round trip would give about 0.66 sievert with current shielding, against a 600-millisievert career limit, showing shielding alone cannot close the gap.
+    url: https://doi.org/10.1126/science.1235989
+    year: 2013
+  - text: The Moon's surface cosmic-ray dose-equivalent rate of about 57 microsievert per hour sets the exposure a base crew's biology must tolerate.
+    url: https://doi.org/10.1126/sciadv.aaz1334
+    year: 2020
+  - text: The NASA Space Radiation Laboratory simulates galactic cosmic rays on the ground to test shielding and biological countermeasures, the facility this regimen would be developed in.
+    url: https://www.bnl.gov/nsrl/
+    year: 2024
+  - text: A 2026 review documents the 600-millisievert universal career dose limit the regimen is meant to keep crews within.
+    url: https://doi.org/10.3390/tomography12070106
+    year: 2026
+experiment:
+  goal: Show a combined drug-and-repair regimen lowers the biological damage per unit radiation dose in human cells and animals under simulated cosmic rays.
+  setup: >-
+    At a ground cosmic-ray facility, expose human cell lines and animals to mission-relevant doses,
+    with and without the regimen: scheduled radioprotective and antioxidant drugs plus cells boosted
+    for DNA repair or expressing protective proteins from radiation-tolerant organisms. Track damage
+    markers over time.
+  measure: >-
+    DNA-break and reactive-molecule markers per unit dose; cell survival and function; in animals,
+    tissue damage and biological-age markers, all against unprotected controls.
+  succeedsIf: >-
+    The regimen cuts the biological damage per unit dose by a clear, reproducible margin in both cells
+    and animals, with no serious side effects, enough to bring a long-mission dose within limits.
+  costUsd: 30000000
+  months: 48
+path:
+  - phase: bench
+    what: The regimen tested in human cells and animals under simulated cosmic rays.
+    scale: Cell and animal studies.
+    proves: Biological damage per unit dose can be lowered from within.
+  - phase: prototype
+    what: Refined drug schedules and repair enhancements with long-term safety followed.
+    scale: Extended animal studies.
+    proves: The regimen is safe and effective over mission-length exposure.
+  - phase: pilot
+    what: The drug part trialled in people in high-radiation settings, with repair enhancements studied carefully.
+    scale: Small human cohorts.
+    proves: It protects people and is safe.
+  - phase: first-plant
+    what: Standard radioprotection for crews on long missions and lunar bases.
+    scale: Mission crews.
+    proves: Crews stay within dose limits on journeys shielding alone could not permit.
+  - phase: fleet
+    what: Tuned regimens for every off-world worker, combined with habitat shielding.
+    scale: Inner solar system crews.
+    proves: Living and working off Earth is radiologically safe.
+  - phase: civilization
+    what: Space radiation a managed risk, not a barrier, for a civilization that lives off Earth.
+    scale: Planet and space.
+    proves: Human bodies can safely spend years beyond Earth's shield.
+risks: >-
+  Boosting DNA repair or expressing foreign protective proteins could itself raise cancer or other
+  risks; the project advances the drug part first and studies genetic enhancements slowly with long
+  follow-up. Ground facilities only approximate true cosmic rays, so results are confirmed as flight
+  data accrue. No regimen removes all risk, so it is paired with shielding and dose limits, not
+  offered as a substitute for them.
+scene:
+  kind: cell
+  focus: A cell under particle strikes, its DNA repaired faster and damage mopped up as the regimen acts.
+  params: { type: animal, organelles: 0.6, glow: 0.7 }

@@ -1,0 +1,39 @@
+id: in-space-resources
+title: Living off the land in space
+domain: materials
+stage: k09
+needs: []
+summary: >-
+  Everything launched from Earth pays to climb out of its gravity well. Oxygen, which is most of the
+  mass of rocket propellant and of breathing air, is bound into nearly half of every lunar rock, and
+  water ice lies in the Moon's permanently dark craters. Making propellant, air and water from what
+  is already up there is the first step of every industry off Earth.
+target: >-
+  Oxygen, water and propellant made on the Moon and from asteroids by the thousand tonnes a year,
+  enough to supply the first self-copying factory of {seed-mass} from {seed-year} and the ships and
+  habitats around it, so that space industry stops importing its consumables from Earth.
+exists:
+  - text: LCROSS and its Centaur stage struck a permanently shadowed crater near the Moon's south pole on 9 October 2009, and the plume confirmed water ice there.
+    url: https://science.nasa.gov/mission/lcross/
+    year: 2009
+  - text: MOXIE made 122 grams of oxygen from the Martian air over 16 runs on Perseverance, at up to 12 grams an hour and at least 98 percent purity.
+    url: https://www.jpl.nasa.gov/news/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/
+    year: 2023
+  - text: Lunar regolith is about 45 percent oxygen by weight, bound to metals; ESA is funding Metalysis to adapt its molten-salt electrolysis to extract it.
+    url: https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Turning_Moon_dust_into_oxygen
+    year: 2020
+  - text: NASA's in-situ resource utilization programme runs analogue missions in Hawaii, validating hardware that extracts water and carbon dioxide from volcanic deposits.
+    url: https://www.nasa.gov/mission/in-situ-resource-utilization-isru/
+    year: 2026
+  - text: Interlune is developing lunar helium-3 harvesting and reports over 500 million dollars in binding purchase orders.
+    url: https://www.interlune.space/
+    year: 2026
+gap: >-
+  Everything made off Earth so far is measured in grams. No plant has run on the Moon, and none has
+  been tested on real regolith in vacuum, dust and a lunar night of {lunar-night}. Ice in the dark craters
+  sits at a few tens of kelvin, where most machines stop working.
+inventions: [sun-still]
+scene:
+  kind: moon
+  focus: The first oxygen plants at the lunar south pole, beside the dark craters that hold ice.
+  params: { bases: 0.3, mines: 0.4, domes: 0.1 }

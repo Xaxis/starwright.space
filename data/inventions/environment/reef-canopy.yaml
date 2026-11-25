@@ -1,0 +1,86 @@
+id: reef-canopy
+title: The Reef Canopy
+domain: environment
+for: [ocean-health]
+pitch: >-
+  Floating solar canopies towed over coral reefs during marine heatwaves, cutting the light that
+  bleaches corals by about a third, and using their own power to pump cooler water from depth across
+  the reef.
+principle: >-
+  Corals bleach when heat and bright light together overwhelm the algae living in their tissue; less
+  light means less damage at the same temperature. Shading experiments show it: 30 percent shade
+  delayed bleaching by up to three degree heating weeks, and sea-water fog that shaded corals by a
+  third for six hours a day cut their risk of dying in a heatwave by more than half. Floating solar
+  arrays already cover hundreds of hectares of lakes and reservoirs. The Canopy is a floating array
+  built for a reef: open-lattice floats carrying panels in rows with gaps between them, so that half or
+  more of the light still reaches the reef. It is towed into place when satellites forecast heat
+  stress and towed away when the heat passes, so the reef has its full light the rest of the year. The
+  panels make about half a megawatt per hectare of canopy, which runs pumps that bring water from 30 to
+  50 m down, a degree or two cooler, onto the reef; modelling at Lizard Island found that about
+  5 cubic metres a second, for about 466 kW of pumping, would cool almost 100 hectares of reef flat.
+buildsOn:
+  - text: Butcherine and colleagues found 30 percent shade cloth delayed coral bleaching by up to 3 degree heating weeks, with all-day shading protecting better than four hours a day.
+    url: https://www.frontiersin.org/articles/10.3389/fmars.2023.1162896/full
+    year: 2023
+  - text: Hendrickson and colleagues found that sea-water fog shading corals by about a third for six hours a day cut one species' risk of dying in a simulated heatwave by 55 percent.
+    url: https://www.frontiersin.org/articles/10.3389/fmars.2026.1793318/full
+    year: 2026
+  - text: The Reef Restoration and Adaptation Program's cooling and shading research on the Great Barrier Reef has pilot deployments funded to 2029.
+    url: https://gbrrestoration.org/program/cooling-and-shading/
+    year: 2026
+  - text: Tagliafico and colleagues reviewed 143 coral shading experiments, most using more than half shade, lasting from under a day to 960 days.
+    url: https://www.frontiersin.org/articles/10.3389/fmars.2022.919382/full
+    year: 2022
+  - text: Baird and colleagues modelled pumping 5 cubic metres a second of cooler water at Lizard Island and found it would cool 97 hectares of reef flat by at least 0.15 °C, removing about 2 degree heating weeks of stress for about 466 kW of pumping.
+    url: https://journals.plos.org/plosone/doi?id=10.1371/journal.pone.0239978
+    year: 2020
+  - text: Floating solar plants have reached hundreds of megawatts, such as Cirata in Indonesia at 192 MWp in 2023, and world floating capacity grew from 3 GW in 2020 to 13 GW in 2022.
+    url: https://en.wikipedia.org/wiki/Floating_solar
+    year: 2023
+experiment:
+  goal: Measure whether a floating canopy over a patch of reef cuts bleaching and death in a real marine heatwave, against unshaded patches.
+  setup: >-
+    Three canopies, each 20 m by 20 m, of open-frame floats with 40 percent panel cover, moored on sand
+    over coral patches in a reef lagoon with a history of bleaching, beside three marked control
+    patches. Light and temperature loggers sit on the reef, colonies are tagged, and one canopy runs a
+    10 kW pump drawing water from 30 m. The canopies stay ready for two summers if the first brings no
+    heatwave.
+  measure: Light and temperature at the corals; bleaching and survival of tagged colonies; fish and other life under and around the canopies; damage from moorings; panel output.
+  succeedsIf: In a heatwave of 4 or more degree heating weeks, bleaching deaths under the canopies are at most half those in the control patches, with no harm from moorings or shade visible a year later.
+  costUsd: 900000
+  months: 24
+path:
+  - phase: bench
+    what: Three canopies over three reef patches, against three controls.
+    scale: Three canopies, 20 m by 20 m.
+    proves: Shade from a floating array protects corals in a real heatwave.
+  - phase: prototype
+    what: A one-hectare canopy with pumps over a high-value reef, for a full heat season.
+    scale: One hectare, about half a megawatt.
+    proves: Shade and pumped cooling together, at a cost per hectare.
+  - phase: pilot
+    what: Canopies covering a whole reef used for tourism or as a coral nursery.
+    scale: Tens of hectares.
+    proves: Deployment by forecast, towing, storage and storms.
+  - phase: first-plant
+    what: A fleet of canopies stored ashore and sent out by forecast across one reef region.
+    scale: Hundreds of hectares.
+    proves: A regional service that saves breeding reefs each summer.
+  - phase: fleet
+    what: Canopies over the reefs most valued for fisheries, coastal protection and breeding stock across the tropics.
+    scale: Thousands of hectares.
+    proves: Breeding reefs carried through heat that would otherwise kill them.
+  - phase: civilization
+    what: Enough reefs in every region kept alive to reseed the rest once the ocean cools.
+    scale: The breeding reefs of every reef region.
+    proves: Coral reefs survive the century of heat already on the way.
+risks: >-
+  Reefs are vast, and canopies can cover only chosen patches, so the aim is to save breeding stock, not
+  whole reef systems. Moorings and floats can damage corals and storms can wreck canopies; anchors go
+  in sand, and canopies are towed to shelter before cyclones. Shade may change which species thrive;
+  the lattice keeps it partial and short. Water pumped from depth may carry nutrients that feed algae,
+  so intakes are placed where deep water is clean.
+scene:
+  kind: field
+  focus: Floating rows of panels on a turquoise lagoon, coral patches showing through the gaps below.
+  params: { unit: panel, count: 1200, terrain: sea }

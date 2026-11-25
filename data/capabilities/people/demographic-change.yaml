@@ -1,0 +1,40 @@
+id: demographic-change
+title: A population that can carry the climb
+domain: people
+stage: k09
+needs: [longevity-medicine]
+summary: >-
+  The world's population is expected to peak this century and then shrink, and it is getting older
+  fast. Economic growth has come from more people having more ideas, so a shrinking population
+  could slow the climb just when it needs the most minds, and more of the people alive will be old
+  and need care. The climb needs to make the most of every person at every age, and to make it easy
+  for people who want children to have them.
+target: >-
+  Societies where people can do valued work for as long as they wish, older people stay healthy and
+  active, families can have the children they want, and the number of people working on the climb
+  keeps growing while the population levels off.
+exists:
+  - text: The UN's World Population Prospects 2024 projects the world's population will peak at around 10.3 billion in the mid-2080s, up from 8.2 billion in 2024.
+    url: https://desapublications.un.org/file/20847/download
+    year: 2024
+  - text: The same projections expect the number of people aged 65 and over to reach 2.2 billion by the late 2070s.
+    url: https://desapublications.un.org/file/20622/download
+    year: 2024
+  - text: A 2020 forecast in The Lancet put the peak earlier and lower, at 9.73 billion in 2064, falling to 8.79 billion by 2100.
+    url: https://doi.org/10.1016/S0140-6736(20)30677-2
+    year: 2020
+  - text: Jones showed in 2022 that if population declines, living standards can stagnate instead of growing, because fewer people means fewer new ideas.
+    url: https://doi.org/10.1257/aer.20201605
+    year: 2022
+  - text: In a 2004 trial of Experience Corps, older adults who tutored children in schools became more physically active and stronger and had more people they could turn to, compared with controls.
+    url: https://doi.org/10.1093/jurban/jth094
+    year: 2004
+gap: >-
+  No policy has reliably brought birth rates in ageing countries back up to the family sizes people
+  say they want, and few societies make use of the skills of people past retirement age. Nobody yet
+  plans for an economy where ideas must keep growing as the number of people levels off.
+inventions: [climb-corps]
+scene:
+  kind: network
+  focus: The world's people by age, older people linked to the young they teach and to the work they still do.
+  params: { shape: globe, nodes: 3500, clusters: 30, links: 0.3, pulses: 0.4 }

@@ -1,0 +1,37 @@
+id: synthetic-genomics
+title: Writing whole genomes
+domain: biology
+stage: k08
+needs: [programmable-biology, biosecurity]
+summary: >-
+  To design life we must be able to write it, not just edit a letter here and there but lay down
+  whole chromosomes and whole genomes to a plan. A written genome lets us build a clean chassis with
+  nothing in it but what a job needs, recode it so that viruses cannot infect it and it can use amino
+  acids nature never invented, and start new life from a file rather than from an ancestor.
+target: >-
+  Write and boot a genome of any size, from a stripped-down bacterium to a yeast or a plant
+  chromosome, with no errors, cheaply enough and fast enough that a designed organism can be ordered
+  the way a gene is ordered today.
+exists:
+  - text: The J. Craig Venter Institute built JCVI-syn3.0, a working cell with only 473 genes and a 531-kilobase genome, smaller than any self-replicating cell found in nature.
+    url: https://doi.org/10.1126/science.aad6253
+    year: 2016
+  - text: The Sc2.0 consortium has now synthesised all 16 yeast chromosomes plus a tRNA neochromosome, the largest synthetic-genome effort in a eukaryote, with consolidation into one strain the remaining step.
+    url: https://www.eurekalert.org/news-releases/1071287
+    year: 2025
+  - text: The MRC Laboratory of Molecular Biology recoded E. coli to use 61 and then 57 codons (Syn61 and Syn57), rewriting a 4-megabase genome so the cell is virus-resistant and can encode new amino acids.
+    url: https://doi.org/10.1038/s41586-019-1192-5
+    year: 2019
+  - text: Ansa Biotechnologies launched a 50-kilobase sequence-perfect clonal DNA product by enzymatic synthesis, the longest commercially available, after setting a 1,005-base single-synthesis record in 2023.
+    url: https://www.drugdiscoverynews.com/ansa-biotechnologies-redefines-what-s-possible-in-dna-synthesis-with-50-kb-sequence-perfect-clonal-product-16751
+    year: 2025
+gap: >-
+  Writing a bacterial genome still takes years and a consortium; a yeast genome took more than a
+  decade. Synthesis is error-prone past a few hundred bases, assembly of megabase pieces is a craft,
+  and booting a synthetic genome in a cell often fails for reasons no model yet predicts. We can write
+  life, but slowly, expensively and by hand.
+inventions: [genome-write-foundry]
+scene:
+  kind: cell
+  focus: A ring of synthetic chromosome assembling piece by piece inside an empty chassis cell.
+  params: { type: microbe, organelles: 0.4, divide: true, glow: 0.3 }

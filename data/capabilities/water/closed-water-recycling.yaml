@@ -1,0 +1,37 @@
+id: closed-water-recycling
+title: Water that never leaves the loop
+domain: water
+stage: k09
+needs: [abundant-water, closed-life-support]
+summary: >-
+  In a habitat off Earth, or a dry city on it, every litre of water must be used again. Closed water
+  recycling turns every drop of waste water, sweat, urine, wash water, humidity, back into drinking
+  water, over and over, losing almost nothing. The International Space Station already recovers most
+  of its water; the climb needs loops that approach total closure and run for years without
+  breakdown, so that a settlement's water supply is fixed, not fed.
+target: >-
+  Recover essentially all of the water a crew or a community uses, drinking quality and stable for
+  years, so that a closed habitat needs only to make up tiny losses rather than import water.
+exists:
+  - text: The International Space Station reached 98 percent water recovery in 2023 after adding a brine processor, the best any flown system has achieved.
+    url: https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/
+    year: 2023
+  - text: Beihang University's Lunar Palace 1 ran a 370-day crewed closure with total recycling of oxygen and water at 98.2 percent overall material closure.
+    url: https://doi.org/10.1101/2021.01.12.426282
+    year: 2018
+  - text: BIOS-3 achieved near-complete air and water regeneration for a three-person crew over 180 days as early as 1972 to 1973.
+    url: https://en.wikipedia.org/wiki/BIOS-3
+    year: 1973
+  - text: ESA's MELiSSA has built a five-compartment regenerative loop over three decades, with water recovery across linked biological and physical stages.
+    url: https://en.wikipedia.org/wiki/MELiSSA
+    year: 2023
+gap: >-
+  Even the best flown loop still loses a few percent and leans on consumable filters and careful
+  tending. Closing the last few percent, processing the brine left behind without waste, and running
+  for years at drinking quality with little maintenance are all unsolved. No loop has yet been a
+  reliable utility rather than a tended experiment.
+inventions: [full-closure-water-loop]
+scene:
+  kind: habitat
+  focus: A habitat's water cycling endlessly from waste to pure and back, almost nothing lost.
+  params: { type: dome, spin: 0.3, green: 0.5 }

@@ -1,0 +1,81 @@
+id: relay-hydrogen-airline
+title: The Relay Hydrogen Airline
+domain: transport
+for: [clean-aviation]
+pitch: >-
+  Long-haul flights on liquid hydrogen, with airliners refuelled in flight by hydrogen tankers on
+  station along the route, so each carries only a few hours of its bulky fuel.
+principle: >-
+  Liquid hydrogen holds nearly three times the energy of kerosene per kilogram but only a quarter
+  per litre, so a long-haul hydrogen airliner would need tanks the size of its cabin. The Breguet
+  range equation says the fuel needed rises steeply with distance, because an aircraft must lift
+  the fuel it will burn later; a plane fuelled for fourteen hours spends much of its fuel carrying
+  fuel. If it takes on hydrogen in flight every three to four hours instead, its tanks shrink to a
+  third, its takeoff weight falls, and the whole route burns less. Studies of air-to-air refuelling
+  for kerosene airliners found savings of about a third on long flights. For hydrogen the gain is
+  larger, because it removes the tank-volume problem that keeps hydrogen off long routes. Tankers
+  based along the route climb to meet the airliners and connect automatically, the way Airbus's A3R
+  boom refuels military aircraft today, and pass liquid hydrogen through a vacuum-insulated boom.
+buildsOn:
+  - text: Nangia showed that air-to-air refuelling of airliners designed for about 3,000 nautical miles could save of the order of 30 to 40 percent of fuel on long routes (Aeronautical Journal, 2006).
+    url: https://doi.org/10.1017/S0001924000001585
+    year: 2006
+  - text: The EU's RECREATE project (2011 to 2015) studied cruiser airliners refuelled in flight by feeder tankers and estimated a 31 percent cut in fuel burn and CO2 on a 6,000 nautical mile flight.
+    url: https://cordis.europa.eu/project/id/284741
+    year: 2015
+  - text: Airbus's A330 MRTT became the first tanker with automatic boom refuelling, A3R, certified and in service since 2022.
+    url: https://www.airbus.com/en/products-services/defence/military-aircraft/a330-mrtt
+    year: 2022
+  - text: Airbus unveiled three liquid-hydrogen airliner concepts, ZEROe, in September 2020, including a turbofan for 120 to 200 passengers over 2,000 nautical miles.
+    url: https://www.airbus.com/en/newsroom/press-releases/2020-09-airbus-reveals-new-zero-emission-concept-aircraft
+    year: 2020
+  - text: The Tupolev Tu-155 first flew on 15 April 1988 with one engine running on liquid hydrogen.
+    url: https://en.wikipedia.org/wiki/Tupolev_Tu-155
+    year: 1988
+experiment:
+  goal: Show that liquid hydrogen can pass through a flexible, moving boom coupling at airliner refuelling rates without unsafe leaks or heavy boil-off.
+  setup: >-
+    A ground rig: a vacuum-jacketed boom with a dry-break coupling, mounted on a motion platform that
+    reproduces the relative motion of tanker and receiver in turbulence, moving liquid hydrogen
+    between two instrumented tanks through repeated connect and disconnect cycles.
+  measure: Flow rate, boil-off and venting during transfer; hydrogen at the coupling during connection and release under motion; time to connect, chill down and release.
+  succeedsIf: At least 500 kg of liquid hydrogen a minute with boil-off under 2 percent, and no hydrogen above a quarter of its flammable limit at the coupling over 100 connections under motion.
+  costUsd: 5000000
+  months: 18
+path:
+  - phase: bench
+    what: The motion rig.
+    scale: 500 kg a minute.
+    proves: A boom can move liquid hydrogen safely.
+  - phase: prototype
+    what: Two regional-size hydrogen test aircraft making in-flight transfers at altitude.
+    scale: Two aircraft.
+    proves: The transfer in real air, with automatic contact.
+  - phase: pilot
+    what: One tanker base supporting a long-haul route flown by hydrogen airliners, with one refuelling each way.
+    scale: One route, daily flights.
+    proves: Schedules, safety and the fuel saving in service.
+  - phase: first-plant
+    what: Tanker bases along the main ocean routes, each fed by a hydrogen plant on clean power.
+    scale: Tens of routes.
+    proves: Long-haul flight without fossil carbon at fares near today's.
+  - phase: fleet
+    what: A worldwide relay network that lets hydrogen airliners fly any distance.
+    scale: Most long-haul flights.
+    proves: Aviation free to grow on clean fuel.
+  - phase: civilization
+    what: Flight runs on hydrogen made from sunlight and water, with contrails avoided by routing.
+    scale: All of aviation.
+    proves: Even the most energy-hungry travel on Earth can be clean.
+risks: >-
+  Every transfer in flight is a chance of mishap with a flammable fuel. Military refuelling has a
+  long safety record with kerosene, and hydrogen rises and disperses quickly, but certification will
+  be long, and the case will be built first with cargo flights. Tankers add flights and burn fuel of
+  their own, so the saving holds only where bases sit close to busy routes, which is where the pilot
+  goes. Hydrogen engines make more water vapour, which can mean more contrails; routing around
+  ice-supersaturated air is part of the plan, and if that is not enough, the legs that would form
+  them can fly on synthetic kerosene instead.
+scene:
+  kind: network
+  focus: Ocean routes with tanker bases along them, airliners meeting tankers in flight.
+  params: { shape: globe, nodes: 300, clusters: 20, links: 0.5, pulses: 0.8 }

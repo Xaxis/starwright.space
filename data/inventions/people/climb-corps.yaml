@@ -1,0 +1,74 @@
+id: climb-corps
+title: The Climb Corps
+domain: people
+for: [meaningful-work, demographic-change]
+pitch: >-
+  An open corps anyone can join, at any age, that pays a modest participation income for verified
+  work in science, care, teaching and the climb itself, organised in small teams so it gives company
+  and purpose as well as income.
+principle: >-
+  Jahoda's studies of unemployment found that a job's hidden benefits, time structure, social
+  contact, shared goals, status and regular activity, matter for wellbeing as much as its pay.
+  Atkinson proposed a participation income, paid for contributing in a broad sense rather than for
+  holding a job. Citizen science shows ordinary people make real discoveries, as Foldit's players
+  did, and Experience Corps showed older people who tutor children grow stronger and more active. The
+  Climb Corps combines them. Members join teams of 6 to 12 that meet weekly in person and take tasks
+  from a public board: tutoring in the Climb Curriculum, caring for elders, checking data for the
+  climb's research, testing open designs, building local projects. They earn a modest income for
+  tasks that peers and the tasks' owners verify as done well. It sits on top of a dividend; it never
+  replaces one, and never becomes a condition for one.
+buildsOn:
+  - text: Jahoda's 1981 account of what employment gives people beyond income.
+    url: https://doi.org/10.1037/0003-066X.36.2.184
+  - text: Atkinson's 1996 case for a participation income.
+    url: https://doi.org/10.1111/j.1467-923X.1996.tb01568.x
+  - text: Foldit, whose players produced the model behind a protease structure in 2011.
+    url: https://doi.org/10.1038/nsmb.2119
+  - text: Zooniverse, with 3 million volunteers working on research projects by 2026.
+    url: https://blog.zooniverse.org/2026/04/21/3-million-volunteers/
+  - text: The 2004 trial of Experience Corps, older volunteers tutoring in schools.
+    url: https://doi.org/10.1093/jurban/jth094
+experiment:
+  goal: Measure whether paid, team-based contribution raises wellbeing and produces useful work among people who are out of work or retired, beyond what the same money alone does.
+  setup: >-
+    A randomized trial in two cities with 2,000 volunteers who are unemployed, underemployed or
+    retired. Half join Climb Corps teams for a year, with a participation income for each verified
+    hour; half receive the same money as an unconditional transfer.
+  measure: Wellbeing on standard scales, life satisfaction and loneliness; time structure and social contact; the amount and quality of work done, rated by the tasks' owners; later employment; dropout.
+  succeedsIf: The corps arm reports wellbeing and loneliness at least 0.2 standard deviations better than the cash-only arm, and the tasks' owners rate at least 80 percent of the verified work useful.
+  costUsd: 12000000
+  months: 24
+path:
+  - phase: bench
+    what: A three-month pilot in one city, testing the task board and the team format.
+    scale: 200 members.
+    proves: People join, stay and do useful work.
+  - phase: prototype
+    what: The two-city randomized trial.
+    scale: 2,000 members.
+    proves: Contribution in teams gives more than the same money alone.
+  - phase: pilot
+    what: A national government runs the corps in several regions, open to everyone, alongside unemployment and pension systems.
+    scale: Hundreds of thousands of members.
+    proves: It works as public policy at a cost that can be kept up.
+  - phase: first-plant
+    what: The corps open in many countries, its income funded partly by the Common Heritage Dividend.
+    scale: Tens of millions of members.
+    proves: Contribution outside jobs can become a normal part of life.
+  - phase: fleet
+    what: Corps teams in habitats off Earth, where shared work holds small communities together.
+    scale: Habitats and settlements across the inner system.
+    proves: It carries over to new societies.
+  - phase: civilization
+    what: Everyone who wants to take part in the climb can, at any age, while machines do most of the work.
+    scale: Billions of members across worlds.
+    proves: A civilization of machines can still be a civilization of people with purpose.
+risks: >-
+  Paying for tasks may crowd out volunteering people did for its own sake; members choose their
+  tasks and the income stays modest. Verification may be gamed; review by peers and by the tasks'
+  owners, as in citizen science, catches most of it. Governments may treat it as a cheap substitute
+  for jobs or welfare; it stays voluntary and on top of the dividend, never a condition for it.
+scene:
+  kind: network
+  focus: Small teams as clusters, each pulsing as its members finish tasks for the climb.
+  params: { shape: flat, nodes: 1500, clusters: 25, links: 0.5, pulses: 0.7 }

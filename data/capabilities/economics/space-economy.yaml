@@ -1,0 +1,42 @@
+id: space-economy
+title: An economy that runs in space
+domain: economics
+stage: k09
+needs: [cheap-launch]
+summary: >-
+  Space industry today mostly sells to Earth: launches, satellite links, pictures. The climb needs
+  an economy in space that buys and sells there, propellant at depots, oxygen and metal from the
+  Moon, power from collectors, so that factories in orbit pay their own way and grow without waiting
+  for budgets on Earth.
+target: >-
+  By the time the seed factory starts work in {seed-year}, markets in Earth orbit and on the Moon
+  where propellant, water, oxygen, metal and power are bought and sold at published prices, with
+  enough private demand that space industry can double every {doubling-time}.
+exists:
+  - text: The Space Foundation put the global space economy at 613 billion US dollars in 2024, up 7.8 percent on the year before.
+    url: https://satellitemarkets.com/market-trends/space-report-2025-q2-highlights-record-us-613-bil-global-space-economy-2024
+    year: 2025
+  - text: The World Economic Forum and McKinsey projected in 2024 that the space economy would triple to 1.8 trillion dollars by 2035.
+    url: https://weforum.org/press/2024/04/space-economy-set-to-triple-to-1-8-trillion-by-2035-new-research-reveals
+    year: 2024
+  - text: In 2018 NASA started Commercial Lunar Payload Services, buying deliveries to the Moon from private landers under contracts worth up to 2.6 billion dollars over ten years.
+    url: https://www.nasa.gov/news-release/nasa-announces-new-partnerships-for-commercial-lunar-payload-delivery-services/
+    year: 2018
+  - text: In 2020 NASA agreed to buy lunar regolith collected by four companies, for between 1 and 15,000 dollars each, to set a precedent for trading resources gathered in space.
+    url: https://www.nasa.gov/news-release/nasa-selects-companies-to-collect-lunar-resources-for-artemis-demonstrations/
+    year: 2020
+  - text: In 2016 United Launch Alliance said it would pay about 3,000 dollars a kilogram for propellant delivered to low Earth orbit and about 500 dollars a kilogram on the lunar surface.
+    url: https://www.space.com/33297-satellite-refueling-business-proposal-ula.html
+    year: 2016
+  - text: A 2011 NASA cost model estimated Falcon 9 at about 4 billion dollars to develop by traditional NASA methods, and 1.7 billion with a commercial approach.
+    url: https://www.nasa.gov/pdf/586023main_8-3-11_NAFCOM.pdf
+    year: 2011
+gap: >-
+  Almost every buyer of space goods today is a government or a company on Earth. No one has yet sold
+  a tonne of anything made in space to someone else in space, and the first resource plants cannot
+  borrow against promises that are not binding contracts.
+inventions: [depot-futures]
+scene:
+  kind: orbit
+  focus: Depots in orbit and on the Moon, ships trading propellant between them.
+  params: { stations: 0.5, depots: 0.7, collectors: 0.2 }

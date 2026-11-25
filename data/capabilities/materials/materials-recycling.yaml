@@ -1,0 +1,44 @@
+id: materials-recycling
+title: Recycling nearly everything
+domain: materials
+stage: k08
+needs: [automated-factories, clean-metals]
+summary: >-
+  Every tonne recycled is a tonne not mined, usually for a fraction of the energy. Steel and
+  aluminium are already recycled well. Electronics, magnets, batteries and plastics are not: they
+  are mixtures of dozens of materials, and taking them apart costs more than the metal is worth.
+target: >-
+  Recycling closes the loop for every material the buildout uses, so that by {year-k08} most metal
+  demand is met from scrap and the critical minerals in old electronics, magnets and batteries come
+  back as pure elements rather than going to landfill.
+exists:
+  - text: The world generated 62 million tonnes of e-waste in 2022 and documented the recycling of 22.3 percent of it; rare earth recycling met about 1 percent of demand.
+    url: https://ewastemonitor.info/wp-content/uploads/2024/03/GEM_2024_18-03_web_executive-Summery.pdf
+    year: 2022
+  - text: Only 18 of 60 metals had end-of-life recycling rates above 50 percent; the rare earths and lithium were below 1 percent.
+    url: https://resourcepanel.org/reports/recycling-rates-metals
+    year: 2011
+  - text: Recycled aluminium takes 95 percent less energy than primary, and about 75 percent of all the aluminium ever made is still in use.
+    url: https://international-aluminium.org/wp-content/uploads/2024/03/wa_factsheet_final.pdf
+    year: 2024
+  - text: Post-consumer mechanically recycled plastic made up 9.5 percent of the 430.9 million tonnes of plastics produced in 2024.
+    url: https://plasticseurope.org/de/wp-content/uploads/sites/3/2025/10/PE_TheFacts_25_digital-A4.pdf
+    year: 2024
+  - text: Redwood Materials recovers lithium, nickel, cobalt and copper from used batteries for new cells.
+    url: https://www.redwoodmaterials.com/
+    year: 2026
+  - text: Cyclic Materials recovers rare earths from end-of-life products and claims over 90 percent recovery.
+    url: https://cyclicmaterials.earth/
+    year: 2026
+  - text: Flash Joule heating at Rice University heated e-waste to about 3,400 K in milliseconds, evaporating off rhodium, palladium and silver with yields above 80 percent.
+    url: https://www.nature.com/articles/s41467-021-26038-9
+    year: 2021
+gap: >-
+  Shredding mixes everything, and smelting recovers copper and the precious metals while losing the
+  rest to slag. There is no single process that takes mixed e-waste in and gives each element out
+  pure, and the rare earths in magnets are rarely even collected.
+inventions: [potential-staircase, protein-ladder]
+scene:
+  kind: network
+  focus: Metal flowing back from the world's cities to refineries and out again as new goods.
+  params: { nodes: 1400, clusters: 24, links: 0.7, pulses: 0.8, shape: globe }

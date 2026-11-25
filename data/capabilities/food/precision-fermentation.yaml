@@ -1,0 +1,35 @@
+id: precision-fermentation
+title: Protein brewed, not farmed
+domain: food
+stage: k08
+needs: [programmable-biology]
+summary: >-
+  Precision fermentation uses engineered microbes to brew specific food molecules, the proteins in
+  milk, egg and meat, fats, vitamins and flavours, in tanks, the way insulin and rennet are already
+  made. It makes the exact ingredient without the animal, on a tiny footprint of land and water, and
+  it is the bridge between today's agriculture and a world that grows most of its protein in
+  bioreactors.
+target: >-
+  Brew the key proteins and fats of animal foods, and many ingredients besides, by fermentation at a
+  cost at or below the farmed original, so that dairy, egg and meat proteins are made without animals
+  wherever they are wanted.
+exists:
+  - text: Perfect Day brews real dairy whey protein in microbes and sells it in commercial products, proving an identical animal protein can be made without the animal.
+    url: https://perfectday.com/
+    year: 2024
+  - text: The alternative-protein fermentation sector drew 4.1 billion USD of all-time investment across 158 companies by the end of 2023, building strains, bioreactors and supply chains.
+    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
+    year: 2024
+  - text: Solar Foods makes single-cell protein from carbon dioxide, hydrogen and air at about 160 tonnes a year, showing fermentation can feed on gases, not just sugar.
+    url: https://solarfoods.com/factory/
+    year: 2024
+gap: >-
+  Brewed proteins still cost more than farmed ones, bioreactor capacity is small against the scale of
+  global protein, and a sourced production cost per kilogram is hard to pin down. Matching the price
+  of commodity milk, egg and meat protein, and building reactors by the millions of tonnes, are both
+  unsolved.
+inventions: [complete-protein-brewery]
+scene:
+  kind: field
+  focus: Rows of fermentation tanks, protein brewing inside, where pasture used to be.
+  params: { unit: tank, count: 400, terrain: plain }

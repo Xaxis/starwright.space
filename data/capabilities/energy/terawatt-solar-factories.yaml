@@ -1,0 +1,49 @@
+id: terawatt-solar-factories
+title: Terawatt solar factories
+domain: energy
+stage: k08
+needs: [abundant-minerals, buildout-finance]
+summary: >-
+  Sunlight is the only source on Earth big enough for the next rungs. Panels on {land-share} of the
+  land could give {surface-solar-cap}; today {pv-capacity-installed} is installed, and the world's
+  factories can make {pv-factory-capacity} of panels a year. To reach {power-k08} by {year-k08} they
+  must grow many times over, and keep getting cheaper by the {pv-learning-rate} for each doubling that
+  they have held for fifty years.
+target: >-
+  Factories that make tens of terawatts of panels a year, enough to cover {land-share} of the land
+  and give {surface-solar-cap}, at a module price well below today's {pv-module-price}, built from
+  materials that do not run out on the way.
+exists:
+  - text: ITRPV's 2026 roadmap puts module production capacity at about 1,460 GWp at the end of 2025, against 706 GWp shipped that year, at an average spot price of 0.09 US dollars per watt.
+    url: https://www.qualenergia.it/wp-content/uploads/2026/06/ITRPV-17-Edition.pdf
+    year: 2026
+  - text: IEA PVPS reports that installed PV approached 3 TW at the end of 2025, after about 698 GW was added that year, around 60 percent of it in China.
+    url: https://iea-pvps.org/snapshot-reports/snapshot-2026/
+    year: 2026
+  - text: Fraunhofer ISE's Photovoltaics Report finds silicon use fell from 16 g per watt in 2004 to about 2 g per watt in 2024, and lists record cells of 35.2 percent (perovskite on silicon) and 28.1 percent (silicon).
+    url: https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Photovoltaics-Report.pdf
+    year: 2026
+  - text: The largest polysilicon makers each run hundreds of thousands of tonnes a year of capacity, led by Tongwei at about 910,000 t and GCL at 480,000 t.
+    url: https://www.bernreuter.com/polysilicon/manufacturers/
+    year: 2025
+  - text: The IEA found electricity is over 40 percent of the cost of making polysilicon, China's share of polysilicon, ingot and wafer output is heading to almost 95 percent, and PV already uses about 10 percent of the world's silver.
+    url: https://www.iea.org/reports/solar-pv-global-supply-chains/executive-summary
+    year: 2022
+  - text: Hallam and colleagues project that PV could take over 20 percent of annual silver supply by 2027, and point to copper plating as the way out.
+    url: https://doi.org/10.1002/pip.3661
+    year: 2022
+  - text: Oxford PV sells perovskite-on-silicon tandem modules at 25 percent efficiency from its line in Brandenburg an der Havel, Germany.
+    url: https://www.oxfordpv.com/
+    year: 2026
+gap: >-
+  The factories run at about half their capacity because prices have fallen below cost, yet the climb
+  needs ten times their capacity and more. Every panel still starts as quartz reduced with carbon in
+  arc furnaces and then purified as a gas, the most energy-hungry step in the chain, and most cells
+  still use silver, of which PV already takes a large share of mine supply. A new line takes years and
+  billions of dollars, so growth is held back by capital and by the energy each factory needs before
+  it pays back.
+inventions: [sand-breeder]
+scene:
+  kind: field
+  focus: A desert factory town making panels, its roofs and the land around it covered in the panels it makes.
+  params: { unit: fab, count: 300, terrain: desert }

@@ -5,7 +5,7 @@ import { format, sci, sig } from "../src/format.ts";
 test("numbers print to three significant figures with separators", () => {
   assert.equal(sig(19024.4), "19,000");
   assert.equal(sig(0.012345), "0.0123");
-  assert.equal(sig(3.14159, 2), "3.1");
+  assert.equal(sig(3.1428, 2), "3.1");
 });
 
 test("powers of ten print with superscripts", () => {
@@ -26,4 +26,15 @@ test("each unit prints in words a reader knows until they run out", () => {
   assert.equal(format(0.7281, "K"), "0.73");
   assert.equal(format(1, "yr"), "1 year");
   assert.equal(format(12.34, "yr"), "12.3 years");
+  assert.equal(format(5772, "kelvin"), "5,772 K");
+  assert.equal(format(6.664e8, "people"), "666 million people");
+  assert.equal(format(14.765, "days"), "14.8 days");
+  assert.equal(format(6.674, "x"), "6.7×");
+  assert.equal(format(9.75e7, "x"), "98 million times");
+});
+
+test("quantities far below a thousandth print as powers of ten, not zero", () => {
+  assert.equal(format(2.871e-21, "J"), "2.9 × 10⁻²¹ J");
+  assert.equal(format(1.496e11, "m"), "150 million km");
+  assert.equal(format(0, "J"), "0 J");
 });

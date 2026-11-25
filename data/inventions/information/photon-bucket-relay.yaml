@@ -1,0 +1,90 @@
+id: photon-bucket-relay
+title: The Photon Bucket Relay
+domain: information
+for: [laser-backbone, interplanetary-network]
+pitch: >-
+  Catch deep-space laser signals with huge, cheap membrane mirrors that only have to collect
+  photons, not form images, and park them where the Sun never blocks the view.
+principle: >-
+  A deep-space optical link counts photons. With pulse-position modulation and a superconducting
+  nanowire detector, each detected photon can carry more than one bit, so the data rate is set by
+  how many photons arrive. By the link equation, received power goes as transmit power times the
+  square of each aperture's diameter, divided by the square of the wavelength and of the distance:
+  doubling the receiver's diameter quadruples the rate. An imaging telescope must hold its surface
+  to a small fraction of a wavelength, tens of nanometres, which makes large ones cost hundreds of
+  millions of dollars. A photon bucket only has to land the light on a detector array a millimetre
+  or so across, so its surface may be wrong by many wavelengths. It can be a thin aluminised
+  membrane, tensioned or inflated, tens to a hundred metres wide, at a small fraction of the mass
+  and cost per square metre. Buckets above the clouds in Earth orbit receive day and night; relays
+  at the Sun-Earth L4 and L5 points, 60 degrees ahead of and behind Earth, can see Earth and Mars
+  when the Sun stands between them, ending conjunction blackouts.
+buildsOn:
+  - text: NASA's DSOC received laser data from 494 million km in 2024 with a superconducting nanowire photon-counting receiver on Palomar's 5 m Hale telescope.
+    url: https://www.jpl.nasa.gov/missions/deep-space-optical-communications-dsoc/
+    year: 2024
+  - text: The Lunar Laser Communication Demonstration, the first high-rate laser link from lunar orbit, reported by Boroson and colleagues.
+    url: https://doi.org/10.1117/12.2045508
+    year: 2014
+  - text: Superconducting nanowire single-photon detectors with detection efficiencies above 98 percent at 1550 nm.
+    url: https://en.wikipedia.org/wiki/Superconducting_nanowire_single-photon_detector
+    year: 2026
+  - text: Pulse-position modulation, detected without phase tracking, the standard modulation for photon-counting optical links.
+    url: https://en.wikipedia.org/wiki/Pulse-position_modulation
+    year: 2026
+  - text: NASA's Inflatable Antenna Experiment, a mylar reflector inflated in orbit from Space Shuttle Endeavour in 1996.
+    url: https://en.wikipedia.org/wiki/Inflatable_Antenna_Experiment
+    year: 1996
+experiment:
+  goal: Show that a cheap membrane reflector many wavelengths out of true can feed a photon-counting receiver as well, per square metre, as a glass telescope.
+  setup: >-
+    A 3 m aluminised polyimide membrane on a tensioned ring with a pressure-shaped backing, focusing
+    onto a 64-pixel superconducting nanowire detector in a cryocooler. Beside it, a 1 m glass
+    telescope with the same detector type. A 1550 nm laser transmitter with pulse-position
+    modulation and calibrated attenuators on a hill 10 to 20 km away, set to deliver a few photons
+    per pulse as a deep-space link would. Runs by night and by day.
+  measure: >-
+    Share of incident photons that land on the detector; bits per detected photon; bit error rate;
+    daytime background counts; mass and cost per square metre of each aperture.
+  succeedsIf: >-
+    The membrane puts at least 50 percent of incident photons on the detector and delivers at least
+    half the glass telescope's data rate per square metre, at under a tenth of its cost per square
+    metre.
+  costUsd: 1800000
+  months: 12
+path:
+  - phase: bench
+    what: The 3 m membrane bucket on a 10 to 20 km range.
+    scale: "One 3 m bucket, one detector"
+    proves: Coupling and bits per photon for a non-imaging membrane.
+  - phase: prototype
+    what: A 15 m bucket on the ground, receiving from a lunar or deep-space laser terminal.
+    scale: "15 m, on the ground"
+    proves: Real deep-space links at several times the rate a 5 m telescope gets.
+  - phase: pilot
+    what: A 30 m bucket in high Earth orbit, above the clouds, relaying to the ground by laser.
+    scale: "30 m, in orbit"
+    proves: Deployment, shape and pointing in space; reception at any hour in any weather.
+  - phase: first-plant
+    what: Relays with 100 m buckets at the Sun-Earth L4 and L5 points.
+    scale: "Two relays, 100 m each"
+    proves: No more conjunction blackouts, and links to Mars at gigabits per second.
+  - phase: fleet
+    what: Relays at Mars, in the belt and along the swarm's orbit, with membranes made in space.
+    scale: "Dozens of relays across the inner system, by {year-type-1}"
+    proves: A network sized for an industry, not a single mission.
+  - phase: civilization
+    what: The backbone of the interplanetary network and of the swarm's control links, with buckets kilometres across made from the swarm's own film.
+    scale: "Every world and every factory in the inner system"
+    proves: Bandwidth stops limiting the solar system's industry.
+risks: >-
+  A bucket that blurs light onto a larger spot also sees more sky glare, worst near the Sun; the
+  next tries are narrow spectral filters, larger detector arrays that switch off pixels with no
+  signal, and membranes shaped actively to tighten the spot. Membranes may wrinkle, creep or be torn
+  by micrometeoroids; designs would be tested with tear stops and re-tensioning. Pointing a 100 m
+  membrane at a target a few microradians wide is hard; a small fast steering mirror at the focus
+  could do the fine work. Cryocoolers for the detectors add mass and power in space;
+  higher-temperature detectors are the fallback.
+scene:
+  kind: machine
+  focus: A vast silver membrane in deep space gathering a faint laser signal onto one cold detector.
+  params: { shape: telescope, spin: 0.15 }

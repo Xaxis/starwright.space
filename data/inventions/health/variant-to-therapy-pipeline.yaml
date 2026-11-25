@@ -1,0 +1,81 @@
+id: variant-to-therapy-pipeline
+title: The Variant-to-Therapy Pipeline
+domain: health
+for: [genomic-medicine]
+pitch: >-
+  A pipeline that takes a patient's genome, works out which variants are driving their disease, and
+  designs a therapy aimed at the exact fault, turning a sequenced genome from a list of unknowns into
+  a treatment plan.
+principle: >-
+  Reading a genome is cheap, but most of its variants are of unknown effect, and even a known driver
+  rarely has a matched therapy on the shelf. The Variant-to-Therapy Pipeline joins three advances into
+  one flow. A genome model predicts, for each variant, whether and how it changes a gene or protein,
+  ranking the ones likely to drive the patient's disease. A structure model then shows the molecular
+  consequence of the top variants, how the faulty protein folds, binds or fails. A protein-design
+  stage uses that to propose a therapy: a designed binder or antibody against the faulty protein, a
+  corrected gene, or a drug the structure suggests. Each proposal is checked in the patient's own
+  cells where possible before anything reaches them. The pipeline is the missing middle of genomic
+  medicine: it connects a sequenced genome to a specific, designed treatment instead of leaving the
+  genome as data no one can act on.
+buildsOn:
+  - text: Evo 2, trained on 9.3 trillion base pairs, predicts the functional effect of genetic variants across life, the first stage that ranks a patient's drivers.
+    url: https://arcinstitute.org/news/evo-2-one-year-later
+    year: 2025
+  - text: AlphaFold 3 predicts how a variant protein folds and binds with about 50 percent better accuracy than docking, revealing the molecular consequence of a driver variant.
+    url: https://doi.org/10.1038/s41586-024-07487-w
+    year: 2024
+  - text: RFdiffusion designs binding proteins and antibodies from scratch at a 19 percent experimental success rate, the stage that proposes a therapy against the faulty protein.
+    url: https://doi.org/10.1038/s41586-023-06415-8
+    year: 2023
+  - text: Portable, affordable sequencing from Oxford Nanopore makes a patient's genome routinely available to feed the pipeline.
+    url: https://nanoporetech.com/
+    year: 2024
+experiment:
+  goal: Take patient genomes to ranked driver variants and candidate designed therapies, validated in the patients' own cells.
+  setup: >-
+    On a cohort with a genetic disease of known but varied cause, run the pipeline: predict and rank
+    variants, model the top ones, design candidate binders or corrections, and test the candidates in
+    patient-derived cells. Compare the pipeline's calls and candidates against the known biology.
+  measure: >-
+    Accuracy of driver-variant ranking against known causes; fraction of cases with a candidate that
+    acts on the target in patient cells; time and cost per case.
+  succeedsIf: >-
+    The pipeline correctly identifies the driver in most cases and yields a candidate that hits the
+    target in patient-derived cells for a meaningful fraction, within a set time and cost per case.
+  costUsd: 30000000
+  months: 42
+path:
+  - phase: bench
+    what: The three-stage pipeline validated on a disease cohort against known biology.
+    scale: Dozens of cases.
+    proves: Genome to driver to candidate therapy works and is accurate.
+  - phase: prototype
+    what: The pipeline run prospectively on new patients with candidates tested in their cells.
+    scale: Hundreds of cases.
+    proves: It produces actionable, patient-specific candidates in time to matter.
+  - phase: pilot
+    what: Candidates from the pipeline entering early trials for rare and cancer cases.
+    scale: Trial cohorts.
+    proves: Designed therapies from the pipeline are safe and help patients.
+  - phase: first-plant
+    what: A clinical service that takes a genome and returns a treatment plan.
+    scale: A health system.
+    proves: Tailored therapy from the genome becomes routine care.
+  - phase: fleet
+    what: The service widely available, including compact versions for remote and off-world care.
+    scale: Global and off-world.
+    proves: Genomic medicine reaches everyone, not just major centres.
+  - phase: civilization
+    what: Disease treated at the level of each person's exact molecular fault, everywhere people live.
+    scale: Planet and space.
+    proves: Medicine matched to the individual as standard.
+risks: >-
+  Variant-effect prediction is weakest outside well-studied populations, so the pipeline reports
+  uncertainty and is validated across diverse groups. Designing a working therapy for every driver is
+  not yet possible; the pipeline starts where design is strongest and grows. Testing in patient cells
+  does not guarantee safety in people, which trials must establish. Genomic data demand strict privacy
+  protection, built in from the start.
+scene:
+  kind: network
+  focus: A flow from a genome to ranked variants to a designed therapy, each stage lighting the next.
+  params: { nodes: 1000, clusters: 12, links: 0.8, pulses: 0.8, shape: flat }

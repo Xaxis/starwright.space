@@ -1,0 +1,39 @@
+id: mercury-operations
+title: Working on Mercury's surface
+domain: space
+stage: k15
+needs: [autonomous-industry, mass-drivers, self-replicating-factory]
+summary: >-
+  Mercury is the swarm's quarry. It holds {mercury-mass}, sits where sunlight is
+  {mercury-sunlight-multiple} as strong as at Earth, and its low gravity and lack of air suit mass drivers. Its surface is hard on
+  machines: a day there lasts half a year, noon is hot enough to melt lead, and the nights are as
+  cold as the Moon's.
+target: >-
+  Mines, factories and mass drivers that run on Mercury for decades without people, live through
+  the heat of noon and the cold of night, and copy themselves until they can process the crust at
+  the rate the swarm needs.
+exists:
+  - text: NASA's MESSENGER orbited Mercury from March 2011 to April 2015 and found evidence of water ice in craters at its poles in 2012.
+    url: https://science.nasa.gov/mission/messenger/
+    year: 2012
+  - text: NASA's fact sheet gives Mercury a solar day of 4,222.6 hours and sunward surface temperatures of 590 to 725 K.
+    url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html
+    year: 2024
+  - text: ESA and JAXA's BepiColombo began entering Mercury orbit on 21 November 2026, the second mission ever to orbit the planet.
+    url: https://www.esa.int/articles/about-us/directorates/operations/bepicolombo-safely-in-mercury-orbit-despite-unexpected-challenge
+    year: 2026
+  - text: NASA Glenn's silicon carbide circuits survived Venus surface conditions, nearly 860 F and crushing pressure, for 521 hours in a test chamber in 2017.
+    url: https://www.nasa.gov/press-release/nasa-glenn-demonstrates-electronics-for-longer-venus-surface-missions
+    year: 2017
+  - text: Chen, Neudeck and colleagues reported silicon carbide integrated circuits running in 500 C air for over ten thousand hours.
+    url: https://ntrs.nasa.gov/api/citations/20180006758/downloads/20180006758.pdf
+    year: 2018
+gap: >-
+  Only two missions have ever orbited Mercury, and nothing has landed there. Electronics that survive
+  Mercury's noon have run for a year on Earth, but only as small chips; no motor, bearing or
+  mechanism has run on its surface, and no machine has been designed to work there for decades.
+inventions: [dawnline-crawler]
+scene:
+  kind: mercury
+  focus: The first mines and drivers on Mercury, working the line between night and day.
+  params: { mined: 0.1, drivers: 2 }

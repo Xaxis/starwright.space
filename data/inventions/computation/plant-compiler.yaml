@@ -1,0 +1,86 @@
+id: plant-compiler
+title: The Plant Compiler
+domain: computation
+for: [industrial-ai]
+pitch: >-
+  A compiler for factories. Give it what to make, how much, from what and where; it returns a
+  plant design, the code that runs it and the bill to build it, all checked against physics
+  before anything is bought.
+principle: >-
+  A software compiler turns a specification into a program and refuses anything that breaks the
+  language's rules. The Plant Compiler does the same with matter and energy. Its library holds unit
+  operations (reactors, pumps, heat exchangers, electrolysers, filters, dryers), each as an
+  executable physics model: mass and energy balances, reaction kinetics, phase equilibria, pressure
+  and temperature ratings. A language model proposes flowsheets; a search tunes their sizes; and
+  every candidate is type-checked by physics: mass must balance to the gram, energy to the watt,
+  every vessel must stay inside its rating. The compiler then writes the control program, in the
+  languages industrial controllers already run, and tests design and code together in a dynamic
+  simulation with faults injected: a pump fails, a feed runs impure, power drops. Only a design that
+  meets its specification through all of it is emitted, with a bill of materials and assembly steps.
+  Every plant built feeds its measured performance back into the library, so the models sharpen
+  with each one.
+buildsOn:
+  - text: Coscientist, an AI that designed, planned and ran chemistry experiments on its own.
+    url: https://www.nature.com/articles/s41586-023-06792-0
+    year: 2023
+  - text: The A-Lab, which planned, ran and interpreted 17 days of inorganic syntheses without people.
+    url: https://www.nature.com/articles/s41586-023-06734-w
+    year: 2023
+  - text: Reinforcement learning that lays out chip floorplans as well as human experts in under six hours, a precedent for searching a design space under hard physical rules.
+    url: https://www.nature.com/articles/s41586-021-03544-w
+    year: 2021
+  - text: DWSIM, an open-source chemical process simulator with steady-state and dynamic models of unit operations.
+    url: https://dwsim.org/
+    year: 2026
+  - text: DeepMind's data centre cooling controller, an AI running a real plant within limits set by its operators.
+    url: https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/
+    year: 2016
+experiment:
+  goal: Find out whether a compiled plant design works the first time it is built, with no human design changes.
+  setup: >-
+    A first compiler built on an open process simulator and a library of about 40 benchtop unit
+    operations, each calibrated on the bench. Five specifications for small plants: a brine
+    electrolyser making sodium hypochlorite, a solar water still, a packed column absorbing carbon
+    dioxide into a hydroxide solution, a continuous yeast fermenter, and a vacuum dryer for food.
+    A technician who has not seen the designs builds each plant from the compiler's bill and steps
+    alone, in a pilot hall with standard lab parts and a programmable logic controller.
+  measure: For each plant, output rate, purity and energy use on its first run against its specification; hours to build; every point where the technician had to ask or improvise.
+  succeedsIf: At least four of the five plants meet their specified rate and purity within 10 percent on their first run, with no change to the compiled design.
+  costUsd: 600000
+  months: 10
+path:
+  - phase: bench
+    what: Five compiled benchtop plants, each built by a technician from the compiler's output.
+    scale: Five plants, litres per hour.
+    proves: Physics-checked designs work first time at bench scale.
+  - phase: prototype
+    what: A compiled skid-mounted plant for a real product, such as water treatment or fertiliser for one village.
+    scale: Tonnes a day.
+    proves: The compiler handles scale-up, real feedstocks and real faults.
+  - phase: pilot
+    what: Compiled plants for a dozen products, built by contractors in several countries and run under AI operators within human-set limits.
+    scale: A dozen plants.
+    proves: Designs and their measured results feed back into a library that gets better with each plant.
+  - phase: first-plant
+    what: A full-scale chemical or metals plant designed by the compiler and certified by regulators.
+    scale: Hundreds of tonnes a day.
+    proves: Compiled designs can be trusted at the scale industry builds.
+  - phase: fleet
+    what: The compiler as the normal way to design plants, with the open unit-operation library shared like a standard.
+    scale: Thousands of plants a year.
+    proves: Design stops being the bottleneck on the buildout.
+  - phase: civilization
+    what: The compiler designs factories for regolith and sunlight, the parts of the seed factories that fly from {seed-year}.
+    scale: "Every plant the industry adds as it doubles every {doubling-time}"
+    proves: Industry can grow as fast as it can build, not as fast as it can design.
+risks: >-
+  The physics models may be good enough on paper and wrong in a real plant, through fouling,
+  corrosion or a reaction nobody modelled; the fallback is to compile only from unit operations
+  measured on the bench, and to grow the library slowly. Designs may meet the specification and
+  still be unsafe in a way the checks miss; every compiled plant runs behind a verified safety
+  controller (the Governor) and through a normal hazard review. Plant data is private; the project
+  would publish the library openly and invite firms to add to it.
+scene:
+  kind: network
+  focus: A specification entering at the centre, candidate designs branching out and failing, and one passing through to a built plant.
+  params: { shape: flat, nodes: 600, clusters: 10, links: 0.4, pulses: 0.9 }

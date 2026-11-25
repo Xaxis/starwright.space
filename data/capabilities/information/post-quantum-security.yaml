@@ -1,0 +1,46 @@
+id: post-quantum-security
+title: Encryption that survives quantum computers
+domain: information
+stage: k08
+needs: []
+summary: >-
+  Everything the climb runs on, from grids and factories to payments and spacecraft commands,
+  trusts public-key cryptography, and a large enough quantum computer breaks the kinds in use
+  today. Traffic recorded now can be decrypted later, so the change has to be made before the
+  machine exists. New standards are written. The work left is to replace the old algorithms
+  everywhere, including in hardware built to last decades.
+target: >-
+  Every link, device and archive the climb depends on protected by quantum-resistant algorithms
+  before any quantum computer can break today's, with spare algorithms built on different
+  mathematics ready in case one falls, and long-lived machines on the grid and in space able to
+  change their algorithms in the field.
+exists:
+  - text: Peter Shor's algorithm showed that a quantum computer could factor integers and take discrete logarithms in polynomial time, which breaks RSA and elliptic-curve cryptography.
+    url: https://arxiv.org/abs/quant-ph/9508027
+    year: 1995
+  - text: Craig Gidney estimated in 2025 that a 2048-bit RSA key could be factored in under a week by a quantum computer with fewer than a million noisy qubits, down from 20 million in his 2019 estimate.
+    url: https://arxiv.org/abs/2505.15917
+    year: 2025
+  - text: NIST released its first three finished post-quantum standards, FIPS 203, 204 and 205, on 13 August 2024.
+    url: https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards
+    year: 2024
+  - text: In March 2025 NIST chose HQC as a backup to ML-KEM for encryption, because it rests on different mathematics in case a weakness is found in ML-KEM.
+    url: https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption
+    year: 2025
+  - text: NIST's draft transition plan, IR 8547, follows National Security Memorandum 10 in setting 2035 as the goal for widespread adoption of post-quantum cryptography.
+    url: https://csrc.nist.gov/pubs/ir/8547/ipd
+    year: 2024
+  - text: By the end of October 2025 most human-initiated traffic through Cloudflare used post-quantum key agreement; post-quantum signatures and certificates had barely begun.
+    url: https://blog.cloudflare.com/pq-2025/
+    year: 2025
+gap: >-
+  Key agreement on the web is moving fast; signatures, certificates, embedded controllers,
+  satellites and industrial machines lag, and many of them cannot be updated at all. The new keys
+  and signatures are larger, which costs bandwidth on slow links. And no one can prove the new
+  mathematics has no classical weakness, so systems must be able to swap algorithms without being
+  replaced.
+inventions: []
+scene:
+  kind: network
+  focus: The links of a network changing colour one by one as each moves to quantum-safe keys.
+  params: { shape: flat, nodes: 800, clusters: 16, links: 0.6, pulses: 0.4 }

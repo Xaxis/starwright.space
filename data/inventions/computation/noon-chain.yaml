@@ -1,0 +1,83 @@
+id: noon-chain
+title: The Noon Chain
+domain: computation
+for: [abundant-compute]
+pitch: >-
+  Solar-only data centres spaced around the world, a third of the way round from each other,
+  sharing one training job. Each site works while its sun is up; the job never stops, and nobody
+  pays for a battery.
+principle: >-
+  Half of Earth is always in daylight. A data centre on solar power alone works only by day, but
+  three or more desert sites spread about 120 degrees apart in longitude always have one under a
+  high sun. Large training jobs no longer need every chip in lockstep: methods like DiLoCo let
+  groups of chips train on their own for hundreds of steps and then exchange a compact update,
+  communicating hundreds of times less than synchronous training. So the job is not moved; its
+  workers simply join at sunrise and leave at sunset, and the model's state flows round the planet
+  with the light. Within a day, each chip also follows the sun: it runs at the voltage and clock the
+  panel can feed, since power falls with the square of voltage. The chain trades chips that idle at
+  night for storage nobody has to build. It wins wherever a kilowatt-hour stored costs more than a
+  chip-hour idled, which becomes more true each year as chips get cheaper per operation.
+buildsOn:
+  - text: Google's carbon-intelligent computing platform has shifted flexible data centre work in time to match clean power since 2020, and its authors describe shifting it in space too.
+    url: https://blog.google/inside-google/infrastructure/data-centers-work-harder-sun-shines-wind-blows/
+    year: 2020
+  - text: Radovanović and colleagues' paper on carbon-aware computing for data centres, the system behind Google's load shifting.
+    url: https://arxiv.org/abs/2106.11750
+    year: 2021
+  - text: DiLoCo trains language models on islands of poorly connected chips; on 8 workers it matched synchronous training while communicating 500 times less.
+    url: https://arxiv.org/abs/2311.08105
+    year: 2023
+  - text: INTELLECT-1, a 10-billion-parameter model, was trained on up to 14 nodes across 3 continents, with providers joining and leaving during training, at 83 to 96 percent compute utilisation.
+    url: https://arxiv.org/abs/2412.01152
+    year: 2024
+  - text: Data centres used about 415 TWh in 2024 and are set to more than double by 2030, most of it wanting power around the clock.
+    url: https://www.iea.org/reports/energy-and-ai/executive-summary
+    year: 2025
+experiment:
+  goal: Show that one training job can run on chips that are only powered while the sun is up at their site, losing little against a single site running all day.
+  setup: >-
+    Rented GPU clusters of 64 chips in each of three cloud regions in sunny places about a third of
+    the world apart: the American Southwest, the Middle East and Australia. Each cluster may run only
+    when a solar trace for its site, from measured irradiance, says a matching panel array would
+    power it, and at the clock that power allows. The three train one 1-billion-parameter language
+    model with DiLoCo-style infrequent updates. A control run trains the same model on one cluster
+    all day.
+  measure: Loss against operations spent, hours of useful work per chip per day, bytes moved between sites, and how training recovers when a site goes dark mid-step.
+  succeedsIf: The chained model reaches within 3 percent of the control's loss for the same operations, while moving less than 1 percent of the data synchronous training would.
+  costUsd: 250000
+  months: 6
+path:
+  - phase: bench
+    what: The three-region cloud run on solar traces.
+    scale: About 200 GPUs, one billion-parameter model.
+    proves: Training survives workers that come and go with the sun, at little loss.
+  - phase: prototype
+    what: Three real solar-only container data centres of about 1 MW each, with no batteries.
+    scale: About 3 MW across three continents.
+    proves: Chips run straight off panels through dawn, dusk and clouds without damage or lost work.
+  - phase: pilot
+    what: Three 100 MW desert sites on one chain, training one frontier model.
+    scale: About 300 MW.
+    proves: The cost per operation beats a grid-and-battery site of the same size.
+  - phase: first-plant
+    what: A gigawatt chain with sites on every sunny continent.
+    scale: Gigawatts, six or more sites.
+    proves: Solar-only computing can carry a large share of the world's training.
+  - phase: fleet
+    what: Rings of desert compute at every longitude, sharing work by the hour.
+    scale: Tens of gigawatts.
+    proves: Most heavy computing on Earth runs on sunlight with almost no storage.
+  - phase: civilization
+    what: The pattern carried to orbit, where a cluster's sun never sets, and Earth's chain kept for work that must stay on the ground.
+    scale: "Earth's share of computing as the climb passes {power-k08} in {year-k08}"
+    proves: Computing can grow with sunlight and never wait for storage.
+risks: >-
+  Chips lose value by going out of date, not by running, so a chip idle at night costs more than
+  its hours suggest; the chain would then run inference in its shoulder hours, or add a few hours of
+  storage only. Long links between continents may limit the largest jobs; the next try is larger
+  islands per site and rarer updates. Some workloads cannot wait for the sun; they stay on firm
+  power while batch work moves.
+scene:
+  kind: globe
+  focus: Three desert data centres around the world, each lighting up as dawn reaches it.
+  params: { solar: 0.6, grid: 0.5, lights: 0.4, look: deserts }

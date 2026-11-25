@@ -1,0 +1,86 @@
+id: glint-link
+title: The Glint Link
+domain: information
+for: [machine-swarm-network]
+pitch: >-
+  Let each of a trillion collectors hear commands through its own solar film and answer by
+  flickering its own reflection, so the swarm needs no radios at all.
+principle: >-
+  A solar cell is a photodiode: light makes a current, and a change in light makes a change in
+  current. A modulated laser beam from a control station, laid over steady sunlight, adds a small
+  signal that the collector's own film picks up while it keeps making power; a filter on the power
+  line separates the two. The film's capacitance limits how fast it can follow, to kilobits per
+  second for a large panel, which is plenty for pointing commands. To answer, the collector sends
+  nothing of its own. It switches a small patch of its surface between reflecting and absorbing, as
+  the liquid crystal panels on the IKAROS sail did, or opens and shuts a liquid crystal shutter over
+  a small corner-cube retroreflector that returns the station's own beam. The station reads each
+  collector's glint. Addressing is by geometry and time: a station's beam lights one patch of the
+  swarm, and collectors answer in time slots set by their position. The added hardware is a filter,
+  a few thousand transistors and a patch of switchable film, a few grams; the power to send comes
+  from the station's light.
+buildsOn:
+  - text: Wang, Tsonev, Videv and Haas's solar-panel receiver, which decoded optical data while harvesting energy.
+    url: https://doi.org/10.1109/JSAC.2015.2391811
+    year: 2015
+  - text: IKAROS, the first solar sail, steered in 2010 by switching the reflectance of 80 liquid crystal panels in its film, which also carried thin-film solar cells.
+    url: https://en.wikipedia.org/wiki/IKAROS
+    year: 2010
+  - text: JAXA's description of IKAROS as a solar power sail, a membrane that both sails and makes electricity.
+    url: https://global.jaxa.jp/projects/sas/ikaros/
+    year: 2010
+  - text: Modulating retro-reflectors, which send data by modulating a distant laser's beam back to it.
+    url: https://en.wikipedia.org/wiki/Modulating_retro-reflector
+    year: 2026
+experiment:
+  goal: Show that a thin-film solar panel can take commands by laser while it makes power, and answer by switching its reflectance, at a range and rate that scale to a swarm.
+  setup: >-
+    A 1 m2 flexible thin-film solar panel (CIGS or amorphous silicon) in full sunlight on an outdoor
+    range, with a filter on its output to pick off the signal and a small microcontroller. A 1550 nm
+    laser transmitter 1 km away sends on-off keyed commands. A 10 cm corner-cube retroreflector
+    behind a liquid crystal shutter sits on the panel. A small telescope and photodiode beside the
+    transmitter read the reply.
+  measure: >-
+    Command bit error rate against data rate and sunlight; power the panel loses to the receiver;
+    reply bit error rate; mass of the added parts.
+  succeedsIf: >-
+    Commands arrive at 1 kilobit per second or more with fewer than one error in a million bits in
+    full sunlight, the panel loses less than 1 percent of its power, and replies arrive at 100 bits
+    per second or more.
+  costUsd: 150000
+  months: 6
+path:
+  - phase: bench
+    what: One 1 m2 panel commanded and answering at 1 km.
+    scale: "One panel"
+    proves: A power film can hear and answer.
+  - phase: prototype
+    what: A field of 1,000 panels addressed by one scanning beam.
+    scale: "1,000 nodes"
+    proves: Addressing and time slots work at scale, and replies do not collide.
+  - phase: pilot
+    what: A small satellite with a thin-film array, commanded from the ground by laser.
+    scale: "One satellite in low orbit"
+    proves: The link works in space, against the Sun's glare and orbital motion.
+  - phase: first-plant
+    what: A fleet of collectors in orbit run only by glint links.
+    scale: "A million collectors"
+    proves: A swarm can be run without radios.
+  - phase: fleet
+    what: Control stations along the swarm's orbit, each running billions of collectors.
+    scale: "Billions of collectors per station, by {year-k15}"
+    proves: The method holds as the swarm fills in.
+  - phase: civilization
+    what: The swarm's whole nervous system, every collector reporting and turning on command.
+    scale: "Every collector across {swarm-full-area}"
+    proves: A swarm of trillions can be steered at all.
+risks: >-
+  Sunlight is a huge background, so the command must stand clear of its noise; the laser could be
+  coded at frequencies where sunlight barely flickers, or made brighter in narrow pulses. A large
+  film's capacitance limits the rate; a collector could use a small separate photodiode patch
+  instead. Liquid crystals age under radiation and heat; electrochromic films or MEMS shutters are
+  the alternatives. Station beams must never heat the films; their power is kept far below
+  sunlight's.
+scene:
+  kind: machine
+  focus: A collector's film catching a flicker of laser light and glinting back its answer.
+  params: { shape: sail, spin: 0.2 }

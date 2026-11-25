@@ -1,0 +1,40 @@
+id: mercury-freight
+title: Freight from Mercury to the swarm
+domain: transport
+stage: k15
+needs: [mercury-operations, mass-drivers, asteroid-logistics]
+summary: >-
+  Mercury's mass drivers can throw rock off the planet, but the swarm's factories orbit
+  {swarm-radius} from the Sun, farther out than Mercury. Each tonne must climb out of Mercury's
+  orbit, cross to the swarm and then match its speed, a change of several kilometres a second at
+  each end, and that has to happen for {swarm-full-mined}.
+target: >-
+  A freight system that moves Mercury's processed mass to the swarm's orbits as fast as the swarm
+  grows, powered by sunlight and the launch speed of the drivers rather than by propellant, with
+  almost nothing lost on the way.
+exists:
+  - text: ESA and JAXA's BepiColombo, launched in October 2018, needed nine planetary flybys and solar electric propulsion to reach Mercury orbit on 21 November 2026.
+    url: https://www.esa.int/Science_Exploration/Space_Science/BepiColombo/BepiColombo_factsheet
+    year: 2026
+  - text: BepiColombo's four T6 ion thrusters give up to 290 mN of combined thrust.
+    url: https://en.wikipedia.org/wiki/BepiColombo
+    year: 2026
+  - text: NASA's MESSENGER took 6 years and 7 months and six planetary flybys to enter Mercury orbit in March 2011.
+    url: https://en.wikipedia.org/wiki/MESSENGER
+    year: 2011
+  - text: Parker Solar Probe passed 6.16 million km from the Sun's surface on 24 December 2024 at 191 km/s, the fastest any spacecraft has flown.
+    url: https://en.wikipedia.org/wiki/Parker_Solar_Probe
+    year: 2024
+  - text: Armstrong and Sandberg's 2013 plan for taking Mercury apart spends a tenth of the energy it collects on launching material into space.
+    url: https://doi.org/10.1016/j.actaastro.2013.04.002
+    year: 2013
+gap: >-
+  Reaching Mercury orbit took MESSENGER more than six years and six flybys, and the swarm needs
+  {swarm-full-mined} to make a journey of the same kind. No method yet moves bulk mass between solar
+  orbits without spending much of it as propellant, and nothing catches or delivers mass in solar
+  orbit at all.
+inventions: [foil-freight]
+scene:
+  kind: mercury
+  focus: Mercury's drivers flinging mass outward to the swarm's orbits.
+  params: { mined: 0.4, drivers: 8 }

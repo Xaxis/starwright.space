@@ -1,0 +1,36 @@
+id: clean-cement
+title: Cement and concrete without the carbon
+domain: materials
+stage: k08
+needs: [terawatt-solar-factories, carbon-drawdown]
+summary: >-
+  Concrete is the most used material after water, and its cement is made by roasting limestone. The
+  roasting needs a fuel-fired kiln near 1,450 C, and the limestone itself gives off carbon dioxide
+  as it turns to lime, so even a kiln run on clean power still emits. A world building homes, dams
+  and lines for everyone on Earth needs cement that does neither.
+target: >-
+  All new cement and concrete for the buildout to {power-k08} made without fossil heat and without
+  releasing the carbon in limestone, at today's price and strength, by {year-k08}.
+exists:
+  - text: The world made about 3,800 million tonnes of cement in 2025, down from 3,900 million in 2024.
+    url: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-cement.pdf
+    year: 2025
+  - text: US clinker kilns used about 3.61 GJ of mostly fossil fuel per tonne of clinker on site.
+    url: https://www.energy.gov/sites/prod/files/2017/12/f46/Cement_bandwidth_study_2017.pdf
+    year: 2017
+  - text: Sublime Systems makes cement electrochemically, without a kiln, and claims 30 to 40 percent lower energy intensity than ordinary Portland cement.
+    url: https://sublime-systems.com/
+    year: 2026
+  - text: Brimstone's Rock Refinery co-produces cement alongside aluminium, magnesium, titanium and other minerals from a single, globally abundant rock; Amazon is to buy low-carbon cement from its first plant.
+    url: https://www.brimstone.com/
+    year: 2026
+gap: >-
+  Kiln-free and limestone-free cements exist at pilot scale against nearly four billion tonnes a
+  year, and builders and codes trust only what has stood for decades. The chemistry is no longer the
+  missing piece; the gaps are scale, qualification in building codes, and clean power cheap enough
+  to replace a kiln's fuel.
+inventions: []
+scene:
+  kind: lattice
+  focus: The crystal of calcium silicate that gives concrete its strength, grown without a flame.
+  params: { structure: silicate, defects: 0.1 }

@@ -1,0 +1,44 @@
+id: heat-budget
+title: Keeping Earth's heat in balance
+domain: environment
+stage: k09
+needs: [earth-monitoring, sunlight-reflection, lunar-industry]
+summary: >-
+  Every watt humanity uses on Earth ends as heat. Today that is tiny beside the sunlight Earth
+  absorbs, {earth-absorbed}, but near the ceiling of {earth-cap} it becomes a real push on the
+  climate. The plan caps the added heat at {heat-limit}, {heat-vs-co2} of the push of doubling CO2,
+  which allows {heat-cap-power}. Type I used on Earth would add {type-1-earth-heat},
+  {type-1-heat-vs-co2} a CO2 doubling, which is why the climb moves its industry into space.
+target: >-
+  Keep the heat of human energy use under {heat-limit} on average and within safe limits in each
+  region, measured and counted alongside greenhouse gases, while Earth's own energy use approaches
+  {earth-cap} and the rest moves to space.
+exists:
+  - text: Forster and colleagues found Earth's energy imbalance more than doubled to 0.89 W per square metre over 2005 to 2024, with human-made warming of 1.36 °C in 2024.
+    url: https://essd.copernicus.org/articles/17/2641/2025/
+    year: 2025
+  - text: Loeb and colleagues showed satellite and ocean measurements agree that Earth's energy imbalance rose by about 0.5 W per square metre per decade from 2005 to 2019.
+    url: https://doi.org/10.1029/2021GL093047
+    year: 2021
+  - text: Flanner estimated human waste heat at 0.028 W per square metre averaged over the globe but 0.39 over the continental United States and 0.68 over western Europe.
+    url: https://doi.org/10.1029/2008GL036465
+    year: 2009
+  - text: Roger Angel proposed a sunshade at the Sun-Earth L1 point that blocks 1.8 percent of sunlight with trillions of light flyers, about 20 million tonnes in all.
+    url: https://doi.org/10.1073/pnas.0608163103
+    year: 2006
+  - text: Bromley, Khan and Kenyon found that dust launched from the Moon toward L1 could shade Earth efficiently, since lunar grains are near the ideal size for scattering sunlight.
+    url: https://journals.plos.org/climate/article?id=10.1371/journal.pclm.0000133
+    year: 2023
+  - text: Szapudi proposed a sunshade tethered to a counterweight near L1, needing orders of magnitude less mass, almost all of it lunar dust or asteroid rock.
+    url: https://doi.org/10.1073/pnas.2307434120
+    year: 2023
+gap: >-
+  No one counts waste heat as a climate forcing; inventories track carbon, not heat. Heat is already
+  concentrated where energy is used, over cities and industrial regions, and it will grow most there.
+  Every sunshade idea is on paper, and none has flown even a test flake. A world near its ceiling
+  needs both an account of its heat and a way to make room for it.
+inventions: [glass-parasol]
+scene:
+  kind: globe
+  focus: Earth near its ceiling, its cities and deserts glowing with use, a ring of industry overhead.
+  params: { lights: 1, solar: 1, grid: 1, rings: 0.5, look: cities }

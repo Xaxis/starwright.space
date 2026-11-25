@@ -1,0 +1,43 @@
+id: carbon-drawdown
+title: Taking carbon back out of the air
+domain: environment
+stage: k08
+needs: [earth-monitoring, terawatt-solar-factories]
+summary: >-
+  Stopping emissions stops the rise; it does not bring the carbon back down. The air holds {co2-now}
+  of CO2 and the excess will warm the planet for centuries unless it is removed. Removal takes
+  energy, rock and land. On the way to {power-k08} energy stops being the limit, so the questions
+  become how cheaply machines, rocks and plants can pull carbon out, and where it can be stored for
+  good.
+target: >-
+  Remove billions of tonnes of CO2 a year by the 2050s, and keep growing until the air returns toward
+  350 ppm, with every tonne measured and stored for thousands of years.
+exists:
+  - text: The State of Carbon Dioxide Removal report counts 2.2 billion tonnes of CO2 removed a year, 99.9 percent of it by forests and soils; novel methods remove about 2 million tonnes a year, against 5.2 billion tonnes a year needed by 2050 in Paris-consistent scenarios.
+    url: https://www.stateofcdr.org/asset/The-State-of-CDR-Executive-summary_Engish-June-2026.pdf
+    year: 2026
+  - text: Climeworks' Mammoth plant in Iceland, built for up to 36,000 t a year, captured 105 t of CO2 in its first ten months of operation.
+    url: https://heimildin.is/grein/24581/
+    year: 2025
+  - text: 1PointFive's Stratos plant in Texas is designed to capture up to 500,000 t of CO2 a year from the air and was still under construction in 2026.
+    url: https://www.1pointfive.com/projects/stratos
+    year: 2026
+  - text: Frontier's buyers had contracted 1.8 million t of permanent removal and received 91,837 t by October 2026.
+    url: https://frontierclimate.com/progress
+    year: 2026
+  - text: Beerling and colleagues estimated that spreading crushed rock on croplands could remove 0.5 to 2 billion t of CO2 a year at about 80 to 180 US dollars a tonne.
+    url: https://doi.org/10.1038/s41586-020-2448-9
+    year: 2020
+  - text: The US Department of Energy offered 3.5 billion US dollars in 2022 for regional direct air capture hubs.
+    url: https://www.energy.gov/oced/regional-direct-air-capture-hubs
+    year: 2022
+gap: >-
+  Novel removal is a thousandth of what is needed. Direct air capture plants have captured far less
+  than their design rates, at hundreds of dollars a tonne. Rock weathering is cheaper but slow to
+  verify: field trials struggle to separate the signal from natural variation. Storage sites,
+  measurement standards and buyers all exist only at pilot scale.
+inventions: [shaded-sink]
+scene:
+  kind: field
+  focus: Rows of air-capture towers and rock-spread fields drawing carbon from the sky.
+  params: { unit: tower, count: 800, terrain: plain }

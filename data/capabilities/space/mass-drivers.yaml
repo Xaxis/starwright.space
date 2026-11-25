@@ -1,0 +1,41 @@
+id: mass-drivers
+title: Mass drivers that throw cargo off a world
+domain: space
+stage: type-1
+needs: [lunar-industry, self-replicating-factory, breakthrough-funding]
+summary: >-
+  Rockets spend most of their mass on propellant. A mass driver is an electric launcher instead: a
+  track of coils that speeds a payload up to escape speed using only electricity. On the Moon, with
+  no air and a sixth of Earth's gravity, it can throw rock to the factories at L5 or L2 for the cost
+  of the sunlight that powers it, and nothing is used up.
+target: >-
+  Mass drivers on the Moon, and later on Mercury and the asteroids, each launching millions of
+  tonnes a year with aim precise enough to be caught, so that an industry doubling every
+  {doubling-time} is never short of raw mass.
+exists:
+  - text: Gerard O'Neill built the first mass driver model in 1976 and 1977 with Henry Kolm and student volunteers at MIT, on a $2000 budget; it fired at 40 m/s and 33 g.
+    url: https://en.wikipedia.org/wiki/Mass_driver
+    year: 1977
+  - text: NASA's 1977 Ames summer study, published as SP-428 in 1979, designed a lunar mass driver launching material at up to 600,000 metric tons a year, with payloads carried in buckets that are slowed and returned.
+    url: https://ntrs.nasa.gov/citations/19790024054
+    year: 1979
+  - text: SpinLaunch's suborbital accelerator, a vacuum chamber 33 m across that spins a projectile and releases it, first flew in October 2021 and its first ten flights threw payloads up to 30,000 feet.
+    url: https://en.wikipedia.org/wiki/SpinLaunch
+    year: 2021
+  - text: The US Navy's electromagnetic catapult, EMALS, made its first launch from USS Gerald R. Ford in July 2017, using a 91 m linear motor and up to 484 MJ per launch.
+    url: https://en.wikipedia.org/wiki/Electromagnetic_Aircraft_Launch_System
+    year: 2017
+  - text: The US Navy ended funding for its electromagnetic railgun in its 2022 budget request, after about $500 million over 17 years.
+    url: https://en.wikipedia.org/wiki/Railgun
+    year: 2021
+gap: >-
+  Electric launchers in service reach aircraft speeds; lunar escape needs more than thirty times
+  more. Nobody has built a driver hundreds of metres long, held its aim to within metres over tens of
+  thousands of kilometres, or caught its payloads at the far end. O'Neill's buckets must be braked
+  and sent back after every shot, which halves a track's use and puts the most complex part where
+  the forces are greatest.
+inventions: [iron-jacket-driver]
+scene:
+  kind: launch
+  focus: A track of coils across the lunar plain, throwing slugs of rock into the black.
+  params: { method: mass-driver, cadence: 0.9, world: moon }

@@ -1,0 +1,76 @@
+id: tubeloom
+title: The Tubeloom
+domain: materials
+for: [carbon-nanomaterials]
+pitch: >-
+  A wide furnace where thousands of nanotubes grow side by side for tens of centimetres, flying like
+  kites on a smooth gas stream and settling in parallel on a slowly moving tape, which is then
+  tightened, relaxed and packed into a ribbon whose every tube runs the length of many others.
+principle: >-
+  A fibre made of millimetre tubes fails when tubes slide past each other, because only weak van der
+  Waals forces hold them together; strength then grows with how far each tube overlaps its
+  neighbours, the shear-lag effect that sets the strength of paper and of every short-fibre
+  composite. Make each tube ten centimetres long and the overlap is so large that sliding is no
+  longer the weak link, and the tubes themselves carry the load. Ultralong tubes grow by the kite
+  mechanism: a catalyst particle lifts off the substrate and the tube grows behind it, floating in a
+  laminar gas flow, for as long as the catalyst stays active and the flow stays smooth. The Tubeloom
+  makes that happen across a wide front: a line of catalyst stripes across a broad, flat quartz
+  channel, a carefully laminar flow of hydrogen and carbon feed, and a collection tape that advances
+  as the tubes land, so they lie down straight and overlapping. Two finishing steps follow from the
+  recent records: tightening and relaxing the ribbon in step, which evens out the tubes' initial
+  strains (the Daniels effect that limits bundles), and high-velocity solvent jets that pack the
+  tubes tight.
+buildsOn:
+  - text: Tsinghua University's centimetre-long bundles of ultralong, defect-free tubes, over 80 GPa after synchronous tightening and relaxing (Nature Nanotechnology, 2018).
+    url: https://www.nature.com/articles/s41565-018-0141-z
+  - text: Fluidic scouring with ethanol jets, which packed short-tube fibres to 12.5 GPa (Nature Communications, 2026).
+    url: https://www.nature.com/articles/s41467-026-75150-1
+  - text: Zhang and colleagues' growth of half-metre-long nanotubes, 550 mm (ACS Nano, 2013).
+    url: https://doi.org/10.1021/nn401995z
+  - text: The measured strength of single tubes of known structure, 25 to 66 GPa, which sets the ceiling.
+    url: https://www.nature.com/articles/s41467-019-10959-7
+experiment:
+  goal: Make the first ribbon of overlapping tubes each at least ten centimetres long, and measure whether its strength approaches that of the tubes.
+  setup: >-
+    A chemical vapour deposition furnace with a flat quartz channel 30 cm wide and 1.5 m long, a row
+    of iron-molybdenum catalyst stripes at the inlet, a laminar ethylene and hydrogen feed, and a
+    motorised collection tape at the outlet. Ribbons are then tension-cycled and jet-densified.
+  measure: Tube length distribution and areal density on the tape; defect density by Raman spectroscopy; ribbon tensile strength and modulus at 1 cm and 10 cm gauge lengths; grams of ribbon per hour.
+  succeedsIf: The ribbon's median tube is at least 10 cm long and its tensile strength at a 10 cm gauge length is at least 20 GPa, more than half again the best fibre on record.
+  costUsd: 2500000
+  months: 24
+path:
+  - phase: bench
+    what: The 30 cm furnace and its first ribbons.
+    scale: Grams of ribbon.
+    proves: Long-tube ribbons are far stronger than short-tube fibre.
+  - phase: prototype
+    what: A metre-wide furnace running for days, with continuous densification.
+    scale: Kilograms a week.
+    proves: Growth stays stable for days; strength holds over metre lengths.
+  - phase: pilot
+    what: A line of furnaces fed by methane pyrolysis, selling hydrogen as the co-product.
+    scale: About 100 tonnes a year.
+    proves: Cost per kilogram that pays for flywheels, cables and pressure vessels.
+  - phase: first-plant
+    what: A plant making tape for tethers and rotating structures.
+    scale: About 10,000 tonnes a year.
+    proves: Kilometre-long tape of uniform strength.
+  - phase: fleet
+    what: Tubelooms in orbit and on the Moon, fed by carbon from asteroids.
+    scale: Millions of tonnes a year.
+    proves: Light structures can be made where they are used.
+  - phase: civilization
+    what: The fibre for skyhooks, habitats and the swarm's structural members.
+    scale: From the first seeds in {seed-year} to the swarm.
+    proves: Structures no metal could hold.
+risks: >-
+  Catalysts may die before tubes grow long, or turbulence may knock tubes down; the bench measures
+  both, and the next step would be catalyst refreshing by a second aerosol feed. Tubes may land too
+  sparsely to pack into a strong ribbon; stacking many ribbons, cross-laid, is the fallback.
+  Strength may fall with gauge length as the longest flaw sets it; if so, the path aims first at
+  short-span uses such as flywheels while growth improves.
+scene:
+  kind: lattice
+  focus: Tubes growing like kites on the gas stream and settling straight onto the moving tape.
+  params: { structure: nanotube, defects: 0.02 }

@@ -1,0 +1,43 @@
+id: cislunar-transport
+title: Regular transport between Earth and the Moon
+domain: transport
+stage: k09
+needs: [cheap-launch, propellant-depots]
+summary: >-
+  Lunar industry needs a shuttle service, not missions: tugs between low orbit and lunar orbit,
+  landers that refuel and fly again, and returns that bring people and products home. Most of each
+  trip's cost is propellant, so the cheapest routes fill up with lunar oxygen and let Earth's upper
+  atmosphere do the braking on the way back.
+target: >-
+  Weekly and then daily flights carrying people and thousands of tonnes a year between low Earth
+  orbit, lunar orbit and the surface, on reusable tugs and landers fuelled mostly from the Moon, at
+  a cost per kilogram close to that of launch itself.
+exists:
+  - text: Artemis II launched on 1 April 2026 and flew four astronauts around the Moon, reaching 406,771 km from Earth, farther than any crew before.
+    url: https://en.wikipedia.org/wiki/Artemis_II
+    year: 2026
+  - text: NASA's 25 kg CAPSTONE entered a near-rectilinear halo orbit around the Moon on 14 November 2022, the first spacecraft to fly the orbit planned for NASA's Gateway station.
+    url: https://en.wikipedia.org/wiki/CAPSTONE
+    year: 2022
+  - text: NASA picked SpaceX's Starship as its lunar lander in April 2021, an award worth $2.89 billion.
+    url: https://www.nasa.gov/news-release/as-artemis-moves-forward-nasa-picks-spacex-to-land-next-americans-on-moon/
+    year: 2021
+  - text: NASA chose Blue Origin as a second lunar lander provider in May 2023, under a $3.4 billion contract.
+    url: https://www.nasa.gov/news-release/nasa-selects-blue-origin-as-second-artemis-lunar-lander-provider/
+    year: 2023
+  - text: Intuitive Machines' IM-1 landed near the lunar south pole on 22 February 2024, the first commercial lander on the Moon, but came to rest tilted 30 degrees.
+    url: https://en.wikipedia.org/wiki/IM-1
+    year: 2024
+  - text: Its IM-2 landed at Mons Mouton on 6 March 2025, tipped over, and stopped working less than 13 hours later.
+    url: https://en.wikipedia.org/wiki/IM-2
+    year: 2025
+gap: >-
+  Every trip to the Moon is still a one-off mission with a vehicle that is thrown away or left on
+  the surface. No lander has refuelled or flown twice, nothing returns to Earth orbit to be used
+  again, and no propellant is yet made on the Moon. Braking from lunar speed back into low orbit by
+  rocket costs nearly as much propellant as the trip out.
+inventions: [ballute-ferry]
+scene:
+  kind: orbit
+  focus: Tugs shuttling between depots in low orbit and the Moon's distance.
+  params: { depots: 0.6, stations: 0.4 }

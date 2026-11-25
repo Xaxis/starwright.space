@@ -1,0 +1,35 @@
+id: cell-free-biomanufacturing
+title: Biology without the cell
+domain: biology
+stage: k09
+needs: [programmable-biology, synthetic-genomics]
+summary: >-
+  A living cell spends most of its energy staying alive and dividing, not making the product we want.
+  Cell-free systems keep the useful machinery, the ribosomes, enzymes and pathways, and throw away
+  the rest, running biology in an open vat we can feed, tune and watch directly. They make proteins
+  and chemicals on demand, start and stop in minutes, and can run where a living culture would die:
+  on a spacecraft, in a field clinic, at a point of use.
+target: >-
+  Run biological synthesis outside any living cell, continuously and at scale, regenerating its own
+  machinery as it works, so that proteins, vaccines, fine chemicals and materials can be made
+  on demand anywhere, including off Earth.
+exists:
+  - text: An all-E.-coli cell-free system was optimised to make up to 2.3 milligrams of protein per millilitre in a simple batch, enough for practical production.
+    url: https://doi.org/10.1016/j.biochi.2013.11.025
+    year: 2014
+  - text: A reconstituted (PURE) system regenerated 36 of its own non-ribosomal proteins in microfluidic reactors, a step toward machinery that rebuilds itself as it runs.
+    url: https://doi.org/10.1038/s41467-020-20180-6
+    year: 2020
+  - text: A cell-free chemoenzymatic route fixed carbon dioxide into starch at about 8.5 times the rate of maize, showing cell-free systems can outrun living ones at a chosen task.
+    url: https://doi.org/10.1126/science.abh4049
+    year: 2021
+gap: >-
+  Cell-free systems still rely on machinery harvested from living cells, above all the ribosome, which
+  no cell-free system has yet made for itself. They run in batches, lose activity over hours, and cost
+  far more per gram than fermentation. A system that regenerates its own ribosomes and runs for days
+  would change that, and does not yet exist.
+inventions: [self-regenerating-cell-free-reactor]
+scene:
+  kind: machine
+  focus: A clear flow reactor where feedstock enters and finished protein streams out, no cells inside.
+  params: { shape: membrane, spin: 0.3 }

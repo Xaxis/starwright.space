@@ -1,0 +1,85 @@
+id: mesosphere-flake
+title: The Mesosphere Flake
+domain: environment
+for: [sunlight-reflection]
+pitch: >-
+  Reflective flakes a centimetre or two across that float 60 to 80 km up, held aloft by sunlight
+  itself through photophoresis, cooling the planet without putting sulphur in the stratosphere, where
+  it eats ozone.
+principle: >-
+  In very thin air, a thin structure warmed on one side feels a push: gas molecules leave the warm
+  side faster than the cold one, and in a porous sandwich the warmth pumps gas through the pores into
+  a jet. The force is tiny, but so is the flake. In 2021 a University of Pennsylvania team levitated
+  6 mm discs of mylar half a micron thick under sunlight-strength light at pressures found about
+  60 km up, and in 2025 a Harvard team flew a 1 cm perforated two-layer structure at a similar
+  pressure under just over half of sunlight. The Flake builds that structure to cool the planet: its top
+  reflects most of the sunlight that falls on it back to space, and it absorbs only the share it needs
+  to keep its pores pumping. Flying above the stratosphere, it avoids the ozone chemistry that sulphate
+  aerosols disturb, and unlike a fine aerosol it can be designed, tracked and given a fixed lifetime.
+  Offsetting a watt per square metre means reflecting about a three hundredth of the sunlight that
+  reaches Earth, a cover of under half a percent of the sky; at a gram per square metre of flake that
+  is about two million tonnes aloft.
+buildsOn:
+  - text: Azadi and colleagues at the University of Pennsylvania levitated 6 mm discs of 0.5 micron mylar coated with carbon nanotubes at 10 to 30 Pa under light as strong as sunlight, and predicted payloads up to 10 mg at 50 to 100 km.
+    url: https://doi.org/10.1126/sciadv.abe1127
+    year: 2021
+  - text: Schafer, Keith, Vlassak and colleagues at Harvard levitated a 1 cm perforated two-membrane structure at 26.7 Pa under 750 W per square metre of light, and designed a 3 cm device to carry 10 mg at 75 km.
+    url: https://doi.org/10.1038/s41586-025-09281-8
+    year: 2025
+  - text: Keith proposed engineered particles lofted above the stratosphere by photophoretic forces, away from ozone chemistry, with longer lifetimes than aerosols.
+    url: https://doi.org/10.1073/pnas.1009519107
+    year: 2010
+  - text: Keith and colleagues found calcite particles in the stratosphere could cool without the ozone loss sulphate causes, about 2.1 million tonnes a year for 1 W per square metre.
+    url: https://doi.org/10.1073/pnas.1615572113
+    year: 2016
+  - text: Mount Pinatubo's 1991 eruption put about 15 million tonnes of sulphur dioxide into the stratosphere and cooled the globe by about 0.6 °C for almost two years.
+    url: https://science.nasa.gov/earth/earth-observatory/global-effects-of-mount-pinatubo-1510
+    year: 1991
+experiment:
+  goal: Build a flake that reflects most sunlight and still lifts itself in mesosphere conditions, and measure how long it lasts.
+  setup: >-
+    A vacuum chamber held at 2 to 30 Pa and at mesospheric temperatures, with a solar simulator above
+    and an infrared panel below standing in for Earth's glow. Flakes 1 to 3 cm across are made by
+    atomic layer deposition of alumina or silica on etched templates, with reflective tops. High-speed
+    cameras and a microbalance measure lift; a reflectometer measures reflected light; a UV and atomic
+    oxygen source ages them.
+  measure: Lift per unit area against pressure and light; share of light reflected; flight through simulated day and night; fragmentation and loss of reflectivity over a month of exposure.
+  succeedsIf: A flake that reflects more than 60 percent of the light falling on it while lifting more than twice its own weight at 5 Pa, and still does both after 30 days of UV and atomic oxygen.
+  costUsd: 1200000
+  months: 18
+path:
+  - phase: bench
+    what: Flakes made and flown in the chamber.
+    scale: Flakes a centimetre across, grams of them.
+    proves: Reflection and lift together in one design.
+  - phase: prototype
+    what: A sounding rocket releases a few thousand tagged flakes at 60 to 80 km over a test range, tracked by radar and lidar.
+    scale: Thousands of flakes, under a kilogram.
+    proves: Flight, drift and lifetime in the real mesosphere.
+  - phase: pilot
+    what: A release large enough for satellites to measure the change in reflected sunlight over one region, under an international research agreement.
+    scale: About a tonne of flakes.
+    proves: Cooling per tonne, and side effects measured, not modelled.
+  - phase: first-plant
+    what: Factories able to make thousands of tonnes a year, held ready but used only by a global decision.
+    scale: Thousands of tonnes a year of capacity.
+    proves: The option exists if the world chooses it.
+  - phase: fleet
+    what: If chosen, a layer that offsets part of the warming while carbon is drawn down.
+    scale: Up to about two million tonnes aloft.
+    proves: A reversible brake on warming, with a known lifetime.
+  - phase: civilization
+    what: A layer thinned year by year as carbon drawdown takes over, and gone when it is no longer needed.
+    scale: Falling to zero.
+    proves: Time bought for the climate without a lasting change to the sky.
+risks: >-
+  Flakes lifted only by sunlight may sink at night; designs that also lift on Earth's infrared from
+  below, or that fly high enough to sink slowly overnight, are the next tries. Alumina surfaces can
+  activate the chlorine that destroys ozone, so surface chemistry is screened early and silica or
+  carbonate surfaces tried. A layer in the mesosphere may seed noctilucent clouds or change the upper
+  atmosphere in ways no model predicts, which is why the first releases are small. Whether to use it at
+  all is the world's decision; this project's part is to make that decision well informed.
+scene:
+  kind: machine
+  focus: One bright flake hovering in the dark-blue sky at the edge of space, the curve of the Earth below.
+  params: { shape: sail, spin: 0.3 }

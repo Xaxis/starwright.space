@@ -1,0 +1,84 @@
+id: lunar-claims-registry
+title: The Use-It-or-Lose-It Lunar Registry
+domain: governance
+for: [space-commons]
+pitch: >-
+  An open registry where anyone can claim a lunar site for a stated use, keeps it only while meeting
+  published work milestones, and pays a small royalty on what is extracted into a fund shared by
+  everyone.
+principle: >-
+  Ostrom's studies of commons that lasted for centuries, fisheries, irrigation systems and forests,
+  found they survive when boundaries are clear, users watch each other, sanctions are graduated and
+  disputes have a cheap forum. The registry applies her design principles to the Moon. A claim names
+  an area, a use (an ice mine, a solar array, a landing pad) and a term. It becomes a safety zone in
+  the sense of the Artemis Accords, so others must coordinate inside it, but it is not ownership of
+  the ground, which keeps it within the Outer Space Treaty. To stop speculative hoarding a claim must
+  meet milestones, hardware landed within a set time and then a set mass extracted, the way the ITU
+  makes a satellite network deploy 10, 50 and then 100 percent of its satellites on schedule or lose
+  its filing. A missed milestone frees the site for the next claimant. A royalty on extracted mass
+  starts at zero and rises with years in production, as the law of the sea does for the outer
+  continental shelf, and pays into the Common Heritage Dividend. Overlapping claims go first to
+  priority by filing time, then to arbitration under the Permanent Court of Arbitration's outer
+  space rules.
+buildsOn:
+  - text: Section 11 of the Artemis Accords, under which signatories notify and coordinate with each other inside a safety zone around their activities.
+    url: https://www.nasa.gov/wp-content/uploads/2022/11/Artemis-Accords-signed-13Oct2020.pdf
+  - text: The ITU's 2019 milestones for satellite constellations, 10 percent deployed within two years, 50 percent within five and all within seven.
+    url: https://www.itu.int/en/mediacentre/Pages/2019-PR23.aspx
+  - text: Article 82 of the UN Convention on the Law of the Sea, whose payments on production beyond 200 nautical miles start at 1 percent in the sixth year and rise to 7 percent.
+    url: https://www.un.org/depts/los/convention_agreements/texts/unclos/part6.htm
+  - text: Ostrom's Governing the Commons (1990), on the rules that let common-pool resources last.
+    url: https://www.cambridge.org/core/product/identifier/9780511807763/type/book
+  - text: The International Seabed Authority's time-limited exploration contracts for the deep seabed, held by 22 contractors.
+    url: https://isa.org.jm/exploration-contracts/
+  - text: The Permanent Court of Arbitration's 2011 rules for disputes about activities in outer space.
+    url: https://docs.pca-cpa.org/2016/01/Permanent-Court-of-Arbitration-Optional-Rules-for-Arbitration-of-Disputes-Relating-to-Outer-Space-Activities.pdf
+experiment:
+  goal: Test whether milestone-bound claims and a rising royalty prevent hoarding and settle overlaps, before any real lunar claim exists.
+  setup: >-
+    A negotiation game over twelve months, played on real maps of the lunar south pole. Twelve teams
+    of players from space agencies, companies and law schools, each with a budget and a mission plan
+    drawn from published lunar programmes, file claims in a working prototype registry over 20
+    simulated years. The game runs three times, under first-come rules with no milestones, under
+    milestones alone, and under milestones with the royalty.
+  measure: The share of the best sites (permanently shadowed ice, near-constant sunlight) held with no activity; the number of overlapping claims and how long each takes to settle; how the sites are spread across teams; royalties raised.
+  succeedsIf: Under milestones with royalty, less than 10 percent of the best sites sit idle after five simulated years, against at least 40 percent under first-come rules, and every overlap settles within the game without a team walking out.
+  costUsd: 400000
+  months: 12
+path:
+  - phase: bench
+    what: The negotiation game, run three times with different players.
+    scale: 12 teams, 20 simulated years.
+    proves: Which rules stop hoarding and settle overlaps.
+  - phase: prototype
+    what: The registry run as a voluntary public register for real planned missions, filed by the agencies and companies with lunar landers on their manifests.
+    scale: Every lunar mission planned for the next decade.
+    proves: Operators will file, coordinate and respect each other's zones when it costs them little.
+  - phase: pilot
+    what: Two or more states with space resource laws, such as the US, Luxembourg and Japan, make filing in the registry a condition of their licences.
+    scale: The first ice-mining and solar power sites.
+    proves: Milestones and royalties work on real missions with real money.
+  - phase: first-plant
+    what: The registry becomes the working mechanism of the UN's space resource principles, joined by both lunar coalitions.
+    scale: The whole Moon.
+    proves: Rival programmes can share one register.
+  - phase: fleet
+    what: The same registry extends to the asteroids and the moons of Mars, with claims sized to each body.
+    scale: The inner solar system.
+    proves: The rules hold where no one on Earth can watch the site.
+  - phase: civilization
+    what: Every resource the climb uses is drawn under registered, time-limited claims whose royalties pay every person a share.
+    scale: "{swarm-full-mined} of processed mass, from Mercury to the asteroid belt"
+    proves: The climb's mass is taken without a war over it.
+risks: >-
+  Major powers may refuse a registry they do not control; the fallback is to begin as a technical
+  service for avoiding interference that both coalitions use for safety, and to add milestones and
+  royalties once it is trusted. Milestones can be gamed with token activity such as landing a cheap
+  box; milestones counted in extracted mass rather than landed hardware make that costly. A royalty
+  may push operators to register in states that ignore it, as ships fly flags of convenience; making
+  the registry's safety zone, which others respect, available only to those who file and pay is the
+  counterweight.
+scene:
+  kind: moon
+  focus: Claims at the lunar south pole lighting up as they are filed, and fading when their milestones pass unmet.
+  params: { bases: 0.4, mines: 0.5 }

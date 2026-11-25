@@ -1,0 +1,47 @@
+id: open-knowledge-base
+title: An open, living record of how to build everything
+domain: information
+stage: k08
+needs: [universal-connectivity]
+summary: >-
+  Every rung of the climb is built from know-how: how to make cement, a solar cell, a motor, a chip.
+  Most of it lives in company files, paywalled papers and people's heads, and much of what is
+  published cannot be repeated from the page. An open record of how to build everything, written so
+  a stranger can follow it and checked by the people who tried, lets the climb learn once and build
+  everywhere. This project is one small part of that record.
+target: >-
+  Every process the climb depends on, from smelting to chip making, recorded openly in a
+  machine-readable form with its inputs, tools, steps and measured outputs, and each record shown
+  with how often independent builders have made it work from the record alone.
+exists:
+  - text: English Wikipedia held 7,268,700 articles on 24 November 2026, about 5.3 billion words, all free to read and reuse.
+    url: https://en.wikipedia.org/wiki/Wikipedia:Size_of_Wikipedia
+    year: 2026
+  - text: Wikidata, the structured database behind Wikipedia, held 124,120,293 items in 2026, with properties such as "uses" that link a thing to what it is made with.
+    url: https://www.wikidata.org/wiki/Wikidata:Statistics
+    year: 2026
+  - text: Appropedia, a wiki of appropriate and open technology, held 25,066 articles in 2026.
+    url: https://www.appropedia.org/w/api.php?action=query&meta=siteinfo&siprop=statistics&format=json
+    year: 2026
+  - text: Open Source Ecology's Global Village Construction Set publishes open designs for the 50 industrial machines it reckons a small modern civilization needs.
+    url: https://www.opensourceecology.org/gvcs/
+    year: 2026
+  - text: The Internet of Production Alliance's Open Know-How specification is an open data model for describing how a piece of hardware is made, so designs can be found and built anywhere.
+    url: https://www.internetofproduction.org/openknowhow
+    year: 2026
+  - text: protocols.io, founded in 2014, publishes citable, versioned laboratory methods so others can repeat them.
+    url: https://www.protocols.io/about
+    year: 2014
+  - text: When 100 published psychology studies were repeated in 2015, only 36 percent of the 97 with significant results replicated, a measure of how often a method on the page fails in other hands.
+    url: https://en.wikipedia.org/wiki/Reproducibility_Project
+    year: 2015
+gap: >-
+  The open knowledge that exists is mostly encyclopedic: it says what things are, not how to make
+  them so that they work. Recipes for industrial processes are scattered, unstructured and tested
+  by nobody but their authors. No one measures whether a stranger can make a thing from its
+  published description, so no one knows which records to trust.
+inventions: [replication-ledger]
+scene:
+  kind: network
+  focus: Recipes as nodes, each linked to the recipes it needs, brightening as builders confirm them.
+  params: { shape: flat, nodes: 1500, clusters: 30, links: 0.45, pulses: 0.5 }

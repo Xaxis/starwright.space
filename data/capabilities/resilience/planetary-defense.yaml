@@ -1,0 +1,43 @@
+id: planetary-defense
+title: Defending Earth from asteroids
+domain: resilience
+stage: k08
+needs: []
+summary: >-
+  An asteroid a few hundred metres across would wipe out a region; one a few kilometres across
+  would end the climb. The danger is the only natural catastrophe people can already prevent
+  outright: find every object that could hit, years ahead, and nudge it. The climb runs to
+  {year-type-2}, long enough that betting on luck is not a plan.
+target: >-
+  Every near-Earth object large enough to destroy a city found and tracked, decades of warning on
+  each, and a deflection that can be launched within months and whose result is measured, not
+  hoped for, before the object is safe.
+exists:
+  - text: NASA's DART spacecraft hit the moonlet Dimorphos on 26 September 2022 and shortened its 11 hour 55 minute orbit around Didymos by 32 minutes, the first time people moved a celestial body on purpose.
+    url: https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/
+    year: 2022
+  - text: The impact pushed Dimorphos 2.70 mm/s along its orbit, and recoil from the ejecta gave a momentum enhancement factor of about 3.6, so the rock thrown off did more than the spacecraft itself.
+    url: https://www.nature.com/articles/s41586-023-05878-z
+    year: 2023
+  - text: The same impact changed the pair's 770-day orbit around the Sun by 0.15 seconds, about 11.7 microns per second, the first measured change to a body's path around the Sun made by people.
+    url: https://www.nasa.gov/missions/dart/nasas-dart-mission-changed-orbit-of-asteroid-didymos-around-sun/
+    year: 2026
+  - text: ESA's Hera reached Didymos and returned its first close-up images from 60 km in November 2026, to measure what DART did to the 151 m moonlet.
+    url: https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-s-first-close-up-view-of-didymos-asteroids
+    year: 2026
+  - text: NASA's NEO Surveyor, an infrared telescope built specifically to find dark, potentially hazardous asteroids and comets, launches no earlier than September 2027.
+    url: https://science.nasa.gov/mission/neo-surveyor/
+    year: 2026
+  - text: NASA set up its Planetary Defense Coordination Office in 2016 to find and track hazardous objects and lead the US response to a threat.
+    url: https://www.nasa.gov/planetarydefense/
+    year: 2016
+gap: >-
+  Most of the asteroids big enough to destroy a city have not been found yet, and the dark ones are
+  hardest to see from the ground. DART worked once, on one target, and its momentum boost was
+  known only to within a factor of two before Hera arrived. No interceptor sits ready, and nobody
+  can yet say how a loose rubble pile will respond before hitting it.
+inventions: [impactor-train]
+scene:
+  kind: network
+  focus: The catalogue of near-Earth asteroids filling in around the Sun, each dot one tracked object, until no large one is unknown.
+  params: { shape: system, nodes: 4000, clusters: 6, links: 0.1, pulses: 0.4 }

@@ -1,0 +1,40 @@
+id: long-term-stewardship
+title: Institutions that keep promises for a century
+domain: governance
+stage: k08
+needs: []
+summary: >-
+  From the first solar factories to the swarm, the climb takes well over a century: the model
+  reaches Type II in {year-type-2}. Governments plan in years, companies in quarters, and nobody can
+  vote for people not yet born. A plan this long needs institutions that speak for the future, hold
+  commitments through changes of government, and can still change course when the evidence does.
+target: >-
+  In every country that takes part, and in every body that runs the climb, a standing voice for
+  future generations with real power over long-lived decisions, and commitments to century-long
+  projects that survive elections while staying open to revision through a slower, deliberate path.
+exists:
+  - text: The Well-being of Future Generations (Wales) Act 2015 created a Future Generations Commissioner for Wales, who advises public bodies on the long-term effects of their decisions.
+    url: https://www.legislation.gov.uk/anaw/2015/2/section/17
+    year: 2015
+  - text: On 22 September 2024 the UN Summit of the Future adopted the Pact for the Future with a Declaration on Future Generations as one of its annexes.
+    url: https://www.un.org/en/summit-of-the-future/pact-for-the-future
+    year: 2024
+  - text: In Yahaba, a town in Japan, groups asked to act as imaginary future generations negotiated with present-day groups over the town's plan, and more than half of the future groups' proposals were adopted (Hara and colleagues, 2019).
+    url: https://doi.org/10.1007/s11625-019-00684-x
+    year: 2019
+  - text: Norway's sovereign fund, worth 22,014 billion kroner in September 2026, runs under a fiscal rule that spends only its expected real return, about 3 percent a year, so oil wealth is kept for later generations.
+    url: https://www.nbim.no/en/investments/the-funds-value/
+    year: 2026
+  - text: Deliberative Polling, which James Fishkin began in 1988, has asked randomly selected citizens to deliberate on policy over 150 times in over 50 countries and jurisdictions.
+    url: https://deliberation.stanford.edu/what-deliberative-pollingr
+    year: 2026
+gap: >-
+  Commissioners for future generations advise but rarely decide, and the Future Design experiments
+  are small and local. No body anywhere has the standing to delay a decision that harms people a
+  century away, and no plan has yet been held on course across four or five generations of
+  politicians.
+inventions: [future-seat]
+scene:
+  kind: network
+  focus: Today's decision-makers in one circle, linked to a second circle of seats that speak for people not yet born.
+  params: { shape: flat, nodes: 400, clusters: 8, links: 0.4, pulses: 0.3 }

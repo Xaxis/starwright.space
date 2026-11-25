@@ -85,7 +85,8 @@ export function run(
   }
   const v = (id: string): number => {
     const x = q.get(id);
-    if (!x) throw new Error(`the model reads "${id}", which no constant, assumption or step defines`);
+    if (!x)
+      throw new Error(`the model reads "${id}", which no constant, assumption or step defines`);
     return x.value;
   };
   const d = (
@@ -130,8 +131,14 @@ export function run(
   d("power-k15", "Power at K 1.5", "W", "10^(6 + 10 K)", [], () => 1e21);
 
   // --- Earth -----------------------------------------------------------------------------------
-  const R = v("earth-radius");
-  d("earth-area", "Earth's surface area", "m2", "4 pi R^2", ["earth-radius"], (r) => 4 * Math.PI * r * r);
+  d(
+    "earth-area",
+    "Earth's surface area",
+    "m2",
+    "4 pi R^2",
+    ["earth-radius"],
+    (r) => 4 * Math.PI * r * r,
+  );
   d(
     "earth-intercepted",
     "Sunlight Earth intercepts",
@@ -180,7 +187,14 @@ export function run(
     ["surface-solar-cap", "heat-cap-power"],
     (a, b) => a + b,
   );
-  d("k-earth-cap", "Kardashev rating at Earth's ceiling", "K", "(log10 P - 6) / 10", ["earth-cap"], SAGAN);
+  d(
+    "k-earth-cap",
+    "Kardashev rating at Earth's ceiling",
+    "K",
+    "(log10 P - 6) / 10",
+    ["earth-cap"],
+    SAGAN,
+  );
   d(
     "earth-cap-multiple",
     "Earth's ceiling as a multiple of today's use",
@@ -294,6 +308,58 @@ export function run(
     "doublings x doubling time",
     ["doublings-to-sun", "doubling-time"],
     (n, t) => n * t,
+  );
+
+  // --- the limits of physics ---------------------------------------------------------------------
+  d(
+    "landsberg-limit",
+    "Most of the Sun's light that can become work, with waste heat shed at the sink temperature",
+    "share",
+    "1 - 4/3 (T / Ts) + 1/3 (T / Ts)^4 (Landsberg)",
+    ["sink-temperature", "sun-temperature"],
+    (t, ts) => 1 - (4 / 3) * (t / ts) + (1 / 3) * (t / ts) ** 4,
+  );
+  d(
+    "sun-at-landsberg",
+    "All the Sun's light, turned to work at the Landsberg limit",
+    "W",
+    "luminosity x Landsberg limit",
+    ["solar-luminosity", "landsberg-limit"],
+    (l, e) => l * e,
+  );
+  d(
+    "gpu-vs-landauer",
+    "Energy a flagship accelerator spends per operation, against Landauer's limit",
+    "x",
+    "energy per operation / k T ln 2 at 300 K",
+    ["gpu-energy-per-op", "landauer-300k"],
+    (e, l) => e / l,
+  );
+
+  // --- Mercury and the Moon --------------------------------------------------------------------
+  d(
+    "mercury-irradiance",
+    "Sunlight on each square metre at Mercury's mean distance",
+    "W/m2",
+    "L / (4 pi d^2)",
+    ["solar-luminosity", "mercury-distance"],
+    (l, r) => l / (4 * Math.PI * r * r),
+  );
+  d(
+    "mercury-sunlight-multiple",
+    "Sunlight at Mercury, against sunlight at Earth",
+    "x",
+    "Mercury's irradiance / solar constant",
+    ["mercury-irradiance", "solar-constant"],
+    (m, s) => m / s,
+  );
+  d(
+    "lunar-night",
+    "Length of a lunar night, half the Moon's synodic period",
+    "days",
+    "synodic period / 2",
+    ["lunar-synodic-day"],
+    (p) => p / 2,
   );
 
   // --- the climb, year by year -----------------------------------------------------------------

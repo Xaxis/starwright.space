@@ -1,0 +1,77 @@
+id: tidecell
+title: The Tidecell
+domain: materials
+for: [clean-metals]
+pitch: >-
+  An aluminium smelting cell built to breathe with the sun: it runs at full current by day and at
+  four tenths overnight, holding its own heat by changing how fast it loses it, so a smelter can
+  live on solar power and a little storage instead of firm power around the clock.
+principle: >-
+  A smelting cell is a bath of molten cryolite near 960 C, kept hot by the electrical resistance of
+  the bath itself (Joule heating) and walled by a frozen ledge of its own salt. Cut the current and
+  the Joule heat falls with its square, the ledge grows inward, and within hours the cell freezes.
+  The Tidecell keeps the heat balance at any current by matching loss to input instead. Its side
+  walls are double, with a narrow gap that is filled with helium by day, which conducts heat well,
+  and pumped down to vacuum at night, which hardly conducts at all: a gas-gap heat switch, as
+  cryogenic engineers use, that changes wall loss several times over. At the same time the anodes
+  are raised as the current falls, widening the gap they work across so the bath's resistance, and
+  its heat per amp, goes up. Inert anodes, which give off oxygen and are not consumed, make both
+  moves safe, because nothing burns away while the cell idles. Ultrasonic gauges watch the ledge;
+  the controller holds its thickness constant. Current efficiency drops at low current, but the cell
+  keeps making metal through the night at a lower rate, and by day it soaks up the cheapest power on
+  the grid.
+buildsOn:
+  - text: EnPot's shell heat exchangers, which let a commercial smelter swing its power by 30 percent either way (TRIMET Essen, since 2019).
+    url: https://www.enpot.com/
+  - text: ELYSIS inert anodes, run in a commercial-size cell, which release oxygen and are not consumed.
+    url: https://elysis.com/en
+  - text: The Hall-Heroult process and the heat balance of its cells, a bath of alumina dissolved in molten cryolite.
+    url: https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process
+  - text: The US Department of Energy's measured 15.1 MWh per tonne in practice against a 6.0 MWh minimum, which locates where the heat goes.
+    url: https://www.energy.gov/sites/prod/files/2017/12/f46/Aluminum_bandwidth_study_2017.pdf
+experiment:
+  goal: Show that a smelting cell can follow a solar day, 40 to 110 percent of its rated current every 24 hours, without freezing, melting through its ledge or losing much efficiency.
+  setup: >-
+    A 20 kA research cell at a smelter's technology centre, fitted with gas-gap side panels on two
+    walls, a motorised anode beam and ultrasonic ledge gauges, first with carbon anodes and then
+    with inert ones. Its power supply follows a recorded solar profile from a desert farm, day after
+    day.
+  measure: Bath temperature and superheat; ledge thickness on every wall; current efficiency by metal tapped against charge passed; energy per tonne at each current; anode wear.
+  succeedsIf: Over 90 consecutive solar days the bath stays within 8 C of its set point, the ledge never melts through or closes the cavity, and current efficiency averaged over the day is at least 88 percent.
+  costUsd: 6000000
+  months: 18
+path:
+  - phase: bench
+    what: The 20 kA cell on a recorded solar profile.
+    scale: One cell, about a tonne of aluminium a week.
+    proves: The heat balance holds across a daily swing of nearly three to one.
+  - phase: prototype
+    what: Ten full-size cells retrofitted in a working pot line, on a solar contract with a battery for the evening.
+    scale: Ten cells, about 300 kA each.
+    proves: Gas-gap walls and anode control last for years at industrial current.
+  - phase: pilot
+    what: A pot line of 100 Tidecells beside a solar farm, with no firm power contract.
+    scale: About 100,000 tonnes a year.
+    proves: A smelter can be paid for by the cheapest power on the grid.
+  - phase: first-plant
+    what: A new smelter designed from the start around sunlight, inert anodes and the switchable wall.
+    scale: About 500,000 tonnes a year.
+    proves: Cost per tonne at or below a coal-powered smelter's.
+  - phase: fleet
+    what: Every new smelter, and the retrofits of the old, built as Tidecells in sunny places.
+    scale: Most of the world's primary aluminium.
+    proves: Aluminium no longer needs firm power.
+  - phase: civilization
+    what: The same cell, adapted to regolith melts, smelting aluminium on the Moon through its two-week day.
+    scale: From the Earth buildout of {year-k08} to industry off-world.
+    proves: Metal can follow the light wherever the light is.
+risks: >-
+  Current efficiency may fall too far at low current, because the metal pad dissolves back into the
+  bath when the anodes are far from it; the next design would keep the gap fixed and lean on the
+  walls alone, accepting a smaller swing. Helium may leak from hot panels faster than planned; a
+  sealed argon-to-vacuum switch conducts less but holds better. Inert anodes may not survive daily
+  thermal cycling; until they do, the Tidecell runs carbon anodes and a narrower swing.
+scene:
+  kind: machine
+  focus: One smelting cell, its walls glowing by day and dimming at night as its gas gaps open and close.
+  params: { shape: electrolyser, spin: 0.2 }

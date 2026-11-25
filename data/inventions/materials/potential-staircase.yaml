@@ -1,0 +1,74 @@
+id: potential-staircase
+title: The Potential Staircase
+domain: materials
+for: [materials-recycling, abundant-minerals]
+pitch: >-
+  A molten-salt cell that takes mixed electronic scrap in at one end and gives each metal out pure,
+  one step of voltage at a time, the way nuclear engineers already separate the elements of spent
+  fuel.
+principle: >-
+  In a bath of molten lithium and potassium chloride at about 500 C, every metal dissolves and
+  deposits at its own electrode potential, set by the free energy of its chloride. Hold the anode a
+  little above a metal's potential and that metal, and every less noble one, goes into the salt;
+  everything nobler stays behind. Hold a cathode a little below a metal's potential and only that
+  metal, and nobler ones still in solution, plate out. By the Nernst equation, a step of 0.2 V at
+  this temperature shifts the balance between two metals carrying two charges by a factor of several
+  hundred. The Staircase is a row of compartments sharing one salt bath, each with a cathode held at
+  its own potential, from the noblest metal down, with copper among the first and zinc, aluminium
+  and the rare earths the last. Shredded, depolymerised boards are fed in baskets as the anode;
+  gold, silver and palladium are left in the basket as a rich residue for a short final refine. The
+  salt is never consumed, only cleaned, and the cell runs on electricity alone.
+buildsOn:
+  - text: Pyroprocessing, the molten-salt electrorefining in lithium and potassium chloride pioneered at Argonne National Laboratory to separate the elements of spent nuclear fuel.
+    url: https://en.wikipedia.org/wiki/Pyroprocessing
+  - text: Rice University's flash Joule heating, which pulls precious metals from e-waste by evaporation, a candidate first step for the residue.
+    url: https://www.nature.com/articles/s41467-021-26038-9
+  - text: The FFC Cambridge process, electrolysis in molten calcium chloride, now run commercially by Metalysis to make metal powders.
+    url: https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Turning_Moon_dust_into_oxygen
+  - text: The Global E-waste Monitor's measure of what is lost today, the baseline the Staircase must beat.
+    url: https://ewastemonitor.info/wp-content/uploads/2024/03/GEM_2024_18-03_web_executive-Summery.pdf
+experiment:
+  goal: Show that one molten-salt cell can split mixed circuit board scrap into its main metals at saleable purity.
+  setup: >-
+    A five-compartment electrorefiner in an argon glovebox, holding 50 kg of lithium-potassium
+    chloride eutectic at 500 C, fed 5 kg a day of shredded printed circuit boards whose plastics
+    were first pyrolysed off. Each cathode has its own potentiostat; the salt is sampled daily.
+  measure: Recovery and purity of copper, nickel, cobalt, tin and any rare earths at each cathode; residue composition; salt loss and contamination per kilogram fed; electricity per kilogram of metal.
+  succeedsIf: Over 60 days, at least 95 percent of the copper comes out above 99.9 percent pure, tin and nickel above 99 percent, more than 90 percent of the gold, silver and palladium stays in the residue, and salt loss stays under 2 percent of the mass fed.
+  costUsd: 2000000
+  months: 18
+path:
+  - phase: bench
+    what: The five-compartment cell on circuit boards.
+    scale: 5 kg of scrap a day.
+    proves: Clean splits between neighbouring metals and a salt that survives real scrap.
+  - phase: prototype
+    what: A continuous cell with automatic basket feed and cathode harvesting, adding a magnet-scrap line for the rare earths.
+    scale: About a tonne a day.
+    proves: Weeks of unattended running, and rare earths recovered as metal.
+  - phase: pilot
+    what: A recycling plant taking a city's e-waste.
+    scale: About 10,000 tonnes a year.
+    proves: The economics against smelting, element by element.
+  - phase: first-plant
+    what: A regional plant that also takes battery black mass and motor scrap.
+    scale: About 100,000 tonnes a year.
+    proves: One process can serve most mixed scrap.
+  - phase: fleet
+    what: Staircases beside every large city, fed by automated disassembly lines.
+    scale: Most of the world's e-waste.
+    proves: Electronics become an ore body that renews itself.
+  - phase: civilization
+    what: The same cells refining scrap and worn-out machines in space factories, where nothing can be thrown away.
+    scale: Every closed industry off Earth.
+    proves: Industry beyond Earth can recycle what it cannot resupply.
+risks: >-
+  Plastic and halogen residues may poison the salt faster than it can be cleaned; better
+  pre-treatment, or a sacrificial clean-up cell, would follow. Some metal pairs, iron and cobalt
+  among them, sit close together and may co-deposit; those would leave as an alloy for a second
+  pass. Moisture makes chloride salts corrosive, so the plant must stay dry, which costs more than
+  an open smelter; the bench measures how much.
+scene:
+  kind: reactor
+  focus: A row of cathodes in one glowing salt bath, each growing a different metal.
+  params: { type: thermal, glow: 0.6 }

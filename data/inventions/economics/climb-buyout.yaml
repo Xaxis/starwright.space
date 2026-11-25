@@ -1,0 +1,73 @@
+id: climb-buyout
+title: The Open Climb Buyout
+domain: economics
+for: [open-invention-finance]
+pitch: >-
+  A standing fund that buys the patents the climb most needs, at prices set by sealed auction, and
+  frees them for everyone; one patent in ten goes to the highest bidder instead, which keeps the
+  bids honest.
+principle: >-
+  Kremer's patent buyout: a patent is auctioned, the bidders reveal what it is worth to them, and the
+  public then buys it at the winning bid times a markup that covers the value a monopoly leaves
+  unused, and puts it in the public domain. A small random share of patents really is sold to the
+  top bidder, so every bidder must bid what the patent is worth. The inventor earns more than a
+  monopoly would pay, and the world is spared the deadweight cost of monopoly prices, the buyers who
+  are priced out. The Open Climb Buyout runs this as a standing fund for a published list of
+  technologies on the climb: cell and module processes, battery chemistries, grid hardware, and later
+  space processing. It is funded by governments and philanthropies as a public good, and each
+  purchase includes the know-how, drawings and process recipes, published to the open record of how
+  to build things.
+buildsOn:
+  - text: Kremer's 1998 mechanism for patent buyouts by auction.
+    url: https://doi.org/10.1162/003355398555865
+  - text: Gavi's pneumococcal advance market commitment, a precedent for paying firms for public value instead of monopoly profit.
+    url: https://www.gavi.org/news/media-room/vaccines-vs-pneumonia-how-pioneering-funding-model-changed-game-changing-market
+  - text: The 2022 US policy that federally funded research be free to read on publication.
+    url: https://bidenwhitehouse.archives.gov/ostp/news-updates/2022/08/25/ostp-issues-guidance-to-make-federally-funded-research-freely-available-without-delay/
+  - text: The UNESCO Recommendation on Open Science, adopted by 194 countries in 2021.
+    url: https://www.unesco.org/en/open-science
+experiment:
+  goal: Show that sealed auctions value patents well enough for a buyout, and that buying patents into the open increases the building that follows.
+  setup: >-
+    A 20 million dollar fund buys 20 to 40 granted patents in one technology family, such as the
+    processing of perovskite solar cells, from universities and small firms that agree to take part.
+    Each patent is auctioned to industry bidders; the fund buys most at the winning bid times 1.5 and
+    sells a random tenth to the top bidder.
+  measure: Bids against independent valuations; prices paid; follow-on patents, papers and products that cite the freed patents, against matched patents that were not bought, over three years; the number of firms building on them.
+  succeedsIf: Winning bids fall within 30 percent of independent valuations, and freed patents draw at least twice the follow-on use of matched patents.
+  costUsd: 20000000
+  months: 48
+path:
+  - phase: bench
+    what: Laboratory auctions in which industry participants value real patents.
+    scale: Hundreds of bids.
+    proves: Bids track value and are hard to manipulate.
+  - phase: prototype
+    what: The 20 million dollar fund.
+    scale: 20 to 40 patents.
+    proves: Freed patents are used more, and inventors take part.
+  - phase: pilot
+    what: A fund of a billion dollars for one sector, such as grid storage.
+    scale: Hundreds of patents.
+    proves: A buyout can cover a whole sector at a fair price.
+  - phase: first-plant
+    what: A standing international buyout covering every sector on the climb's list.
+    scale: Thousands of patents a year.
+    proves: Openness can be bought at scale for less than it is worth.
+  - phase: fleet
+    what: The buyout extended to space industry, from processing in orbit to seed factory designs and collectors.
+    scale: The industries of the next rungs.
+    proves: The know-how that builds the swarm is free to every world.
+  - phase: civilization
+    what: Every technology on the climb free to build anywhere, its inventors paid.
+    scale: "The climb from today to {year-type-2}"
+    proves: Open invention can outpace closed invention.
+risks: >-
+  Firms may keep their best know-how secret rather than patent it, out of reach of a buyout; the fund
+  can also buy documented know-how, priced the same way. Bidders could collude to hold prices down;
+  the random sale to the top bidder and a reserve price make that costly. Governments may not want
+  to pay a markup; philanthropy can carry the first funds until the results show the return.
+scene:
+  kind: network
+  focus: Locked patents opening one by one, their links spreading as new builders use them.
+  params: { shape: flat, nodes: 900, clusters: 18, links: 0.45, pulses: 0.5 }

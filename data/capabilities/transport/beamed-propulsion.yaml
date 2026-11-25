@@ -1,0 +1,36 @@
+id: beamed-propulsion
+title: Ships pushed by beams from fixed stations
+domain: transport
+stage: planet
+needs: [power-beaming, mass-drivers, interplanetary-transport]
+summary: >-
+  A ship that carries its own power and propellant has to push their mass as well as its cargo. If a
+  fixed station supplies the push instead, as light, microwaves or a stream of pellets, the ship
+  stays light and fast. The stations the climb already builds at the Moon and Mercury, to launch
+  mass and beam power, can become the solar system's highways.
+target: >-
+  Beam stations that push cargo and crews between the inner planets in weeks rather than months,
+  sharing the power and launch plant the industry already runs, with ships that carry no engine
+  bigger than the catcher that takes the push.
+exists:
+  - text: Breakthrough Starshot was announced in April 2016 with $100 million to study laser-driven gram-scale probes to nearby stars; it was reported on hold in 2025.
+    url: https://en.wikipedia.org/wiki/Breakthrough_Starshot
+    year: 2016
+  - text: Duplay and colleagues at McGill designed a 45-day transit to Mars in which a 10 m, 100 MW laser array on Earth heats a ship's hydrogen (Acta Astronautica, 2022).
+    url: https://arxiv.org/abs/2201.00244
+    year: 2022
+  - text: The Planetary Society's LightSail 2 deployed a 32 square metre sail in July 2019 and at times gained enough thrust from sunlight to raise its orbit.
+    url: https://www.planetary.org/sci-tech/lightsail
+    year: 2019
+  - text: Lubin's "A Roadmap to Interstellar Flight" set out laser arrays that could push wafer-thin probes to more than a quarter of light speed (JBIS, 2016).
+    url: https://arxiv.org/abs/1604.01356
+    year: 2016
+gap: >-
+  Beamed propulsion has moved nothing larger than a test sail, and that one by sunlight. A beam of
+  light spreads with distance, so a station of practical size can push a ship only within a short
+  reach of it, and no one has built a beam station or the optics to aim one.
+inventions: [pellet-line]
+scene:
+  kind: launch
+  focus: A ship riding a beam out from its station toward another world.
+  params: { method: sail, cadence: 0.4 }

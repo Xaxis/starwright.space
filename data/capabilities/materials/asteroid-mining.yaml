@@ -1,0 +1,39 @@
+id: asteroid-mining
+title: Mining the asteroids
+domain: materials
+stage: planet
+needs: [in-space-resources, self-replicating-factory, interplanetary-transport, space-commons]
+summary: >-
+  By the time industry harnesses a planet's worth of sunlight, the Moon alone cannot feed it. The
+  asteroid belt holds {asteroid-belt-mass}, and its bodies are already broken into pieces small
+  enough to work, with almost no gravity to climb out of. Some are nearly pure iron and nickel;
+  others are rich in water and carbon, the elements the Moon lacks.
+target: >-
+  Industry working the belt and the near-Earth asteroids, able to use {asteroid-usable} of the
+  belt's mass, with metal-rich bodies refined in place into iron, nickel and cobalt, carbon-rich
+  bodies giving water, carbon and nitrogen, and the products moving to where the swarm is built.
+exists:
+  - text: OSIRIS-REx returned 121.6 grams of rock and dust from asteroid Bennu in September 2023, more than double its 60-gram requirement.
+    url: https://science.nasa.gov/blogs/osiris-rex/2024/02/15/nasa-announces-osiris-rex-bulk-sample-mass/
+    year: 2024
+  - text: NASA's Psyche spacecraft launched on 13 October 2023 to explore a metal-rich asteroid, thought to be part of the core of a planetesimal, by August 2029.
+    url: https://science.nasa.gov/mission/psyche/
+    year: 2023
+  - text: AstroForge is a commercial company flying missions toward mining metal from asteroids.
+    url: https://www.astroforge.com/
+    year: 2026
+  - text: Karman+ plans to mine water from asteroids and sell it in space as propellant.
+    url: https://www.karmanplus.com/
+    year: 2026
+  - text: The Mond process has refined nickel since the 1890s by turning it into a gas with carbon monoxide and back into pure metal, a chemistry suited to metal asteroids.
+    url: https://en.wikipedia.org/wiki/Mond_process
+    year: 1890
+gap: >-
+  Humanity has brought back less than a kilogram from asteroids in total. Nobody has anchored to
+  one, cut it or refined it. Metal asteroids are tough alloys that drills and saws wear against, and
+  in weightlessness every chip and fragment flies away unless it is caught.
+inventions: [carbonyl-burrow]
+scene:
+  kind: launch
+  focus: A metal asteroid with refineries on its surface, sending ingots toward the inner system.
+  params: { method: mass-driver, world: asteroid, cadence: 0.4 }

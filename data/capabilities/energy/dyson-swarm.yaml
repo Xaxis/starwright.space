@@ -1,0 +1,44 @@
+id: dyson-swarm
+title: A swarm around the Sun
+domain: energy
+stage: type-2
+needs: [swarm-construction, swarm-station-keeping, mercury-mining, mercury-power, thin-film-collectors, self-replicating-factory, machine-swarm-network, power-beaming, sunlight-rights]
+summary: >-
+  Type II, {type-2-power}, means catching most of the Sun's light. A solid shell around the Sun would
+  be unstable and would buckle, so the plan builds a swarm: collectors in their own orbits at
+  {swarm-radius}, with no structure joining them. Closed, it has {swarm-full-area} of collector
+  weighing {swarm-full-mass}, built from {swarm-full-mined} of processed rock, {swarm-mass-share} of
+  the mass the industry can reach. The model reaches Type II in {year-type-2}.
+target: >-
+  Collectors around the Sun at {swarm-radius} that catch most of its light, harnessing {type-2-power}
+  by {year-type-2} and {sun-harnessed} when closed, each using its power where it is made or sending
+  it on, and all of them kept flying for as long as the Sun shines.
+exists:
+  - text: Freeman Dyson proposed in 1960 that an advanced civilization would surround its star with a loose swarm of collectors, not a shell, and that its waste heat would shine at about 10 microns.
+    url: https://doi.org/10.1126/science.131.3414.1667
+    year: 1960
+  - text: Armstrong and Sandberg worked out a Dyson swarm built from Mercury, with collectors concentrating light and beaming power, built in a few decades by industry that grows exponentially.
+    url: https://doi.org/10.1016/j.actaastro.2013.04.002
+    year: 2013
+  - text: Wright's review of Dyson spheres shows that solid shells are unstable under gravity and radiation pressure and liable to buckle, which leaves swarms.
+    url: https://arxiv.org/abs/2006.16734
+    year: 2020
+  - text: Peters found that a partial photovoltaic sphere at 2.13 au would need 1.3 x 10^23 kg of silicon to catch 4 percent of the Sun's power.
+    url: https://doi.org/10.1016/j.solmat.2025.113589
+    year: 2025
+  - text: Smith estimated that a swarm of more than 5.5 billion satellites built from Mars could supply Earth's 2019 power use within 50 years of starting.
+    url: https://arxiv.org/abs/2109.11443
+    year: 2022
+  - text: Project Hephaistos searched about 5 million stars in Gaia, 2MASS and WISE data for the infrared glow of partial Dyson spheres and kept seven candidates.
+    url: https://arxiv.org/abs/2405.02927
+    year: 2024
+gap: >-
+  A swarm exists only on paper. No collector has been designed in detail for the sunlight and heat at
+  {swarm-radius}, nor for decades of solar wind. There is no plan for using {type-2-power}: it cannot
+  all be wired anywhere, so it must be used in place or beamed. A trillion collectors must fly without
+  colliding, and the swarm must not darken or heat the Earth.
+inventions: [cascade-collector]
+scene:
+  kind: swarm
+  focus: The swarm nearly closed around the Sun, Mercury's last mass streaming out to it.
+  params: { built: 0.9, radiusAu: 0.6, mercury: true }

@@ -1,0 +1,35 @@
+id: genomic-medicine
+title: Medicine read from the genome
+domain: health
+stage: k08
+needs: [programmable-biology, universal-health]
+summary: >-
+  Each person's genome holds much of what medicine needs to know: which diseases they are prone to,
+  which drugs will help or harm them, and which mutations drive a cancer or a rare disease. Reading a
+  genome now costs little, and models can increasingly say what its variants mean. Genomic medicine
+  turns that into routine care: the right drug at the right dose, early warning of risk, and designed
+  therapies aimed at the exact fault in a patient's cells.
+target: >-
+  Make a person's genome a routine, affordable part of their care, with the effect of its variants
+  predicted reliably, so that diagnosis, drug choice and designed therapies are matched to each
+  individual's biology.
+exists:
+  - text: Sequencing a whole human genome fell to about 525 USD in 2022, with vendors now advertising 80 to 200 USD genomes, so reading the genome is no longer the cost barrier.
+    url: https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data
+    year: 2022
+  - text: Evo 2, trained on 9.3 trillion base pairs, predicts the effects of genetic variants across life, a step toward reading what a patient's mutations mean.
+    url: https://arcinstitute.org/news/evo-2-one-year-later
+    year: 2025
+  - text: AlphaFold 3 predicts how a variant protein folds and binds, linking a mutation to its molecular consequence and to candidate drugs.
+    url: https://doi.org/10.1038/s41586-024-07487-w
+    year: 2024
+gap: >-
+  Reading a genome is cheap, but saying what most variants do is not yet reliable, especially outside
+  well-studied populations; acting on the result needs designed therapies that are still slow and
+  costly to make; and the data raise privacy and equity questions that are unresolved. The chain from genome
+  to tailored treatment is still broken in the middle.
+inventions: [variant-to-therapy-pipeline]
+scene:
+  kind: machine
+  focus: A sequencer reading a genome and flagging the variants that matter for care.
+  params: { shape: chip, spin: 0.2 }

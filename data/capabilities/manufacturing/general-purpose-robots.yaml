@@ -1,0 +1,42 @@
+id: general-purpose-robots
+title: Robots that can do any factory job
+domain: manufacturing
+stage: k08
+needs: [abundant-compute]
+summary: >-
+  Industrial robots are fast and precise, but each is programmed for one task in one cell. Most work
+  in a factory, and all of the work of building one, is too varied for that. Robots with hands and
+  the judgement to use them, made as cheaply as cars, would let automation reach every job,
+  including the job of building more robots.
+target: >-
+  General-purpose robots that learn a new physical task from a few demonstrations, work for years
+  without a technician, and are made by the million a year for less than a year of a worker's wage,
+  so that by {year-k08} labour no longer limits how fast the world builds.
+exists:
+  - text: About 18,000 humanoid robots were shipped worldwide in 2025, by IDC's count.
+    url: https://news.cgtn.com/news/2026-01-24/IDC-report-China-leads-the-global-humanoid-robot-rise-in-2025-1KccOGZyVGM/p.html
+    year: 2025
+  - text: AgiBot shipped 5,168 humanoids in 2025, the most of any maker, according to Omdia.
+    url: https://technode.com/2026/01/09/chinas-agibot-leads-global-humanoid-robot-shipments-in-2025-omdia-says/
+    year: 2025
+  - text: Unitree's G1 humanoid is sold from 13,500 US dollars.
+    url: https://www.unitree.com/g1/
+    year: 2026
+  - text: Figure AI raised more than 1 billion dollars at a 39 billion dollar valuation to build humanoid robots.
+    url: https://figure.ai/news/series-c
+    year: 2025
+  - text: Agility Robotics' Digit has logged 65,000 hours of production work.
+    url: https://www.agilityrobotics.com/
+    year: 2026
+  - text: Boston Dynamics' electric Atlas has 56 degrees of freedom and began a first customer pilot at Hyundai.
+    url: https://www.bostondynamics.com/atlas
+    year: 2026
+gap: >-
+  Today's humanoids ship by the thousand, not the million, and mostly do simple carrying and
+  sorting. Hands still lack the touch and toughness of human hands, robots still need people nearby
+  when they fail, and learning a new task still takes much more than a few demonstrations.
+inventions: []
+scene:
+  kind: machine
+  focus: A robot arm and hand learning a new assembly task, then teaching it to the next robot.
+  params: { shape: arm, spin: 0.3 }

@@ -2,12 +2,13 @@ id: self-replicating-factory
 title: A factory that builds copies of itself
 domain: manufacturing
 stage: k09
-needs: [automated-factories, in-space-resources, cheap-launch]
+needs: [automated-factories, in-space-resources, regolith-refining, simple-chip-fabs, space-precision-parts, open-blueprints, cheap-launch, industrial-printing, lunar-power, replicator-oversight, long-horizon-finance, breakthrough-funding]
 summary: >-
   Every rung past the heat ceiling is built from more mass than rockets can ever lift, so it must be
   made where it is: by factories that mine local rock and build more factories from it. The climb's
   pace is then set by one number, how long the industry takes to double, which the model holds at
-  {doubling-time}. From a {seed-mass} seed in {seed-year}, the model reaches Type I in {year-type-1}.
+  {doubling-time}. From a {seed-mass} seed in {seed-year}, the model reaches Type I in
+  {year-type-1}.
 target: >-
   A seed factory of about {seed-mass}, landed on the Moon, that makes nearly all of its own parts
   from regolith and sunlight and doubles its mass every {doubling-time}, so that a few dozen
@@ -36,7 +37,7 @@ gap: >-
   plants make today: chips, bearings, magnets and precise optics. Closure stalls at about half for
   printers and near nothing for electronics, and nobody has measured a doubling time for a whole
   industrial loop.
-inventions: [seed-foundry]
+inventions: [seed-foundry, glassfab, accuracy-seed, process-genome]
 scene:
   kind: replicator
   focus: One seed factory on the Moon, then two, then four, spreading across the regolith.

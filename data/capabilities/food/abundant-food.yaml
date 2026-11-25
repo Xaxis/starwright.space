@@ -1,0 +1,37 @@
+id: abundant-food
+title: Plenty of food on less land
+domain: food
+stage: k08
+needs: [programmable-biology, engineered-photosynthesis, precision-fermentation, cellular-agriculture, vertical-farming]
+summary: >-
+  Feeding everyone well is the oldest problem, and today it eats half the world's habitable land and
+  a quarter of its greenhouse-gas emissions. A civilization that uses a hundred times more energy can
+  make food a solved problem: grow more on less land with better crops and controlled environments,
+  make protein in tanks instead of on pasture, and give the land back to forest and wild. Abundance
+  on Earth, which the model reaches in {year-k08}, means no one is short of good food.
+target: >-
+  Produce a rich, varied diet for everyone on a steadily shrinking footprint of land and water, so
+  that calories and protein are abundant and cheap while cropland and pasture are returned to nature.
+exists:
+  - text: World cereal yield reached 4.23 tonnes per hectare in 2023, part of a long rise that has fed a growing population without matching growth in cropland.
+    url: https://ourworldindata.org/grapher/cereal-yield
+    year: 2023
+  - text: Agriculture already uses about half the world's habitable land, with pasture alone covering 3,200 million hectares, so most gains now must come from yield and new methods, not more land.
+    url: https://ourworldindata.org/environmental-impacts-of-food
+    year: 2024
+  - text: Engineered photosynthesis has raised crop yields 15 to 40 percent in field trials, a lever to grow more on the same ground.
+    url: https://doi.org/10.1126/science.aat9077
+    year: 2019
+  - text: Solar Foods' Factory 01 makes single-cell protein from carbon dioxide, hydrogen and air at about 160 tonnes a year, showing food can be made with almost no land at all.
+    url: https://solarfoods.com/factory/
+    year: 2024
+gap: >-
+  Yield growth is slowing for major crops, pasture for meat is the largest single use of land, and
+  the new routes, better photosynthesis, fermentation, controlled-environment and cultured food, are
+  each either early, costly or small. No region yet feeds itself well while shrinking its farmland;
+  doing so needs all these routes at once and at low cost.
+inventions: []
+scene:
+  kind: globe
+  focus: Farmland shrinking as yields rise, with forest and grassland returning around the fields.
+  params: { green: 0.7, look: farms }

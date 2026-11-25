@@ -1,0 +1,41 @@
+id: interworld-disputes
+title: Settling disputes between worlds
+domain: governance
+stage: type-1
+needs: [space-commons]
+summary: >-
+  Once people live and work in habitats and on the Moon and Mars, there will be disputes between
+  them: over a collision, a contract, a crime, a claim. A message between Earth and Mars takes many
+  minutes each way, so no court can hold a live hearing across that gap, and people far from Earth
+  may not trust Earth's courts to judge them. The climb needs ways to settle disputes that work
+  across light-minutes and that every world accepts.
+target: >-
+  Courts and arbitration that resolve a dispute between parties on different worlds within months,
+  without live hearings, under rules all sides agreed in advance, with awards enforced on every
+  world.
+exists:
+  - text: The Permanent Court of Arbitration adopted Optional Rules for Arbitration of Disputes Relating to Outer Space Activities, effective 6 December 2011.
+    url: https://docs.pca-cpa.org/2016/01/Permanent-Court-of-Arbitration-Optional-Rules-for-Arbitration-of-Disputes-Relating-to-Outer-Space-Activities.pdf
+    year: 2011
+  - text: The 1958 New York Convention, under which arbitral awards made in one country are enforced in another, had 172 parties in 2026.
+    url: https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards/status2
+    year: 2026
+  - text: The 1998 International Space Station agreement lets each partner exercise criminal jurisdiction over its own nationals aboard the station.
+    url: https://laws-lois.justice.gc.ca/eng/acts/C-31.3/FullText.html
+    year: 1998
+  - text: In 1981 the USSR paid Canada 3 million Canadian dollars to settle Canada's claim under the 1972 Liability Convention for the Cosmos 954 satellite, which scattered radioactive debris over northern Canada.
+    url: https://www.jaxa.jp/library/space_law/chapter_3/3-2-2-1_e.html
+    year: 1981
+  - text: NASA gives the one-way travel time of a signal between Earth and Mars as 4 to 20 minutes, depending on where the planets are.
+    url: https://www.nasa.gov/missions/tech-demonstration/deep-space-atomic-clock/how-an-atomic-clock-will-get-humans-to-mars-on-time/
+    year: 2019
+gap: >-
+  The space arbitration rules that exist assume parties who can meet and reply quickly, and the
+  station agreement assigns jurisdiction by nationality, which fails once people are born off Earth.
+  No forum has been designed for parties who can never talk in real time, and nothing enforces an
+  award beyond the reach of Earth's states.
+inventions: [light-time-constitution]
+scene:
+  kind: network
+  focus: Worlds as clusters, each dispute a pulse that takes minutes to cross between them.
+  params: { shape: system, nodes: 600, clusters: 10, links: 0.3, pulses: 0.5 }

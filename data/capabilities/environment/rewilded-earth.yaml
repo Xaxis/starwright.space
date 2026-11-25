@@ -1,0 +1,39 @@
+id: rewilded-earth
+title: Giving Earth's land back to the wild
+domain: environment
+stage: type-1
+needs: [biodiversity, abundant-food, orbital-industry]
+summary: >-
+  By Type I, reached in {year-type-1}, most heavy industry, computing and power collection run in
+  space, and food is grown on far less land. Earth no longer has to carry them. Farming uses 44 percent
+  of habitable land today, most of it for livestock that supply less than a fifth of humanity's
+  calories. As that land is freed, Earth can become wilder than it has been for thousands of years.
+target: >-
+  Half of Earth's land returned to nature and linked by corridors, with lost large animals brought
+  back and the land's carbon restored, while people live well on the rest.
+exists:
+  - text: Our World in Data finds agriculture uses 44 percent of the world's habitable land, 80 percent of it for livestock, which supply 17 percent of the world's calories.
+    url: https://ourworldindata.org/global-land-for-agriculture
+    year: 2019
+  - text: Rewilding Europe works across 11 large landscapes and reports that European bison numbers grew from 2,500 to 7,000 over ten years.
+    url: https://rewildingeurope.com/
+    year: 2026
+  - text: The Knepp estate in England sold its dairy herds and machinery in 2000 and let 3,500 acres of farmland go wild, with free-roaming herbivores.
+    url: https://knepp.co.uk/rewilding/background/
+    year: 2002
+  - text: Yellowstone released 41 wolves between 1995 and 1997, and the park's wolves have numbered 83 to 123 since 2009.
+    url: https://www.nps.gov/yell/learn/nature/wolf.htm
+    year: 2026
+  - text: Pleistocene Park in Yakutia has run large-herbivore experiments since 1988 to restore grassland on permafrost, and holds nine herbivore species.
+    url: https://pleistocenepark.ru/
+    year: 2026
+gap: >-
+  Rewilding today works on estates and parks of up to thousands of square kilometres. No one has
+  returned a region's farmland to nature at continental scale, and the food, livelihoods and rights of
+  the people who live on that land must come first. Animals moved into new ranges can fail, or harm
+  the places they are brought to.
+inventions: []
+scene:
+  kind: globe
+  focus: Continents turning green as farmland returns to forest and grassland, city lights gathered close.
+  params: { green: 1, ice: 0.8, lights: 0.5, look: forests }

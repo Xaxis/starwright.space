@@ -1,0 +1,78 @@
+id: clean-air-ceiling
+title: The Clean Air Ceiling
+domain: resilience
+for: [pandemic-defense]
+pitch: >-
+  Ceiling tiles of far-UVC LEDs that clean the air of every room where people meet, on the
+  building's own low-voltage wiring, so airborne disease stops spreading indoors without anyone
+  changing what they do.
+principle: >-
+  Light at 222 to 235 nm is absorbed by proteins within a few microns. In people it stops in the
+  outer layer of dead skin cells and in the tear film over the eye, before it reaches living cells.
+  Airborne viruses and bacteria are smaller than a micron, so the same light reaches their nucleic
+  acids and breaks them. The cleaning rate is the susceptibility of the microbe times the average
+  light in the room, and Eadie and colleagues measured 184 equivalent air changes an hour at doses
+  inside today's exposure limits, against a few for good ventilation. The tile uses aluminium
+  gallium nitride LEDs at about 230 to 235 nm instead of krypton chloride lamps at 222 nm: the
+  oxygen in air absorbs far less above 230 nm, so the tile makes much less ozone, and LEDs can be
+  dimmed, cheap and long-lived. A 60 cm tile holds an LED array behind a diffuser, runs on 48 V DC
+  from the building's lighting circuit, and shines across the upper room while a sensor keeps the
+  dose at eye height under the limit.
+buildsOn:
+  - text: Eadie and colleagues' room-sized chamber test of 222 nm far-UVC, 98.4 percent fewer airborne pathogens and 184 equivalent air changes an hour.
+    url: https://www.nature.com/articles/s41598-022-08462-z
+  - text: Buonanno and colleagues' measurement that low doses of 222 nm light inactivate airborne human coronaviruses.
+    url: https://www.nature.com/articles/s41598-020-67211-2
+  - text: Welch and colleagues' 2018 paper proposing far-UVC as a new tool against airborne disease.
+    url: https://www.nature.com/articles/s41598-018-21058-w
+  - text: Kneissl and colleagues' review of aluminium gallium nitride deep-ultraviolet LEDs, their efficiency and their path to shorter wavelengths.
+    url: https://www.nature.com/articles/s41566-019-0359-9
+  - text: What is known of far-UVC's safety and side effects, chiefly the ozone it can make.
+    url: https://en.wikipedia.org/wiki/Far-UVC
+experiment:
+  goal: Show that LED ceiling tiles alone give a room tens of air changes an hour against an airborne microbe, with little ozone and safe exposure at eye height.
+  setup: >-
+    A sealed 30 cubic metre test room with a nebuliser releasing an aerosol of a harmless test
+    microbe (bacteriophage MS2 and Staphylococcus epidermidis), air samplers at three heights, an
+    ozone monitor reading parts per billion, calibrated UV radiometers at eye height, and four
+    prototype tiles of 233 nm AlGaN LEDs in the ceiling.
+  measure: The decay rate of the airborne microbe with tiles on and off, as equivalent air changes an hour; the ozone rise over eight hours; the eight-hour dose at eye height; the tiles' electrical power.
+  succeedsIf: The tiles add at least 20 equivalent air changes an hour against both microbes, raise ozone by less than 2 parts per billion, and keep the eye-height dose inside the 8-hour exposure limit.
+  costUsd: 350000
+  months: 9
+path:
+  - phase: bench
+    what: Four prototype tiles in a sealed test room.
+    scale: One room, 30 cubic metres.
+    proves: LED tiles clean the air fast enough, with little ozone and a safe dose.
+  - phase: prototype
+    what: Tiles in ten rooms of a working school or office through one winter, with air sampling for real respiratory viruses.
+    scale: About a hundred tiles.
+    proves: The cleaning holds up with people moving, doors opening and dust.
+  - phase: pilot
+    what: A school district or hospital fitted throughout, compared with matched buildings for respiratory infections over two winters.
+    scale: Thousands of tiles.
+    proves: Fewer people fall ill, by a measured amount.
+  - phase: first-plant
+    what: A tile factory making them at the price of a good light fitting.
+    scale: A million tiles a year.
+    proves: Clean air costs about as much as lighting.
+  - phase: fleet
+    what: Building codes that ask for clean-air tiles in every new school, hospital, office and transit hall.
+    scale: Hundreds of millions of rooms.
+    proves: A new airborne pathogen spreads indoors far more slowly everywhere at once.
+  - phase: civilization
+    what: Every shared indoor space on Earth, and every habitat in space, cleaned by light.
+    scale: All the air people share.
+    proves: Airborne disease no longer rides the indoor air of a civilization.
+risks: >-
+  Years of daily exposure have not been studied, and if any harm to skin or eyes appears the tiles
+  shift to upper-room only, with occupancy sensors. LEDs below 240 nm still turn only a small share
+  of their power into light; if that does not improve, the first tiles use filtered krypton chloride
+  lamps and accept more ozone, paired with ventilation. Ozone and the fine aerosol it seeds may
+  matter in poorly ventilated rooms, which the pilot measures. Real infections may fall less than
+  chamber numbers suggest, because people also catch disease at close range.
+scene:
+  kind: machine
+  focus: A ceiling tile glowing faintly violet as the air below it clears.
+  params: { shape: panel, spin: 0 }

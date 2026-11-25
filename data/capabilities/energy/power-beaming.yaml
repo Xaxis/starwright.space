@@ -1,0 +1,39 @@
+id: power-beaming
+title: Power beamed between worlds
+domain: energy
+stage: type-1
+needs: [space-solar-power]
+summary: >-
+  By Type I, reached in {year-type-1}, power is made in one place and used in another: collectors in
+  orbit, factories on the Moon and at L5, mass drivers on Mercury. Wires cannot join them. A beam of
+  laser light or microwaves can, if it stays narrow over hundreds of thousands to hundreds of millions
+  of kilometres and the receiver turns it back into electricity efficiently.
+target: >-
+  Beams that carry megawatts to gigawatts across the Earth and Moon system, and later from the swarm
+  near the Sun to wherever power is needed, delivering more than half of what the collector made.
+exists:
+  - text: In May 2025 DARPA's POWER program beamed more than 800 W by laser over 8.6 km for 30 seconds, beating the previous record of 230 W over 1.7 km.
+    url: https://www.darpa.mil/news/2025/darpa-program-distance-record-power-beaming
+    year: 2025
+  - text: Star Catcher delivered more than 1.1 kW of beamed light to ordinary solar panels at Kennedy Space Center in 2025, ahead of a planned demonstration between two spacecraft.
+    url: https://www.militaryaerospace.com/power/news/55327979/star-catcher-claims-new-record-for-wireless-optical-power-transmission-at-kennedy-space-center
+    year: 2025
+  - text: Fraunhofer ISE's gallium arsenide photonic power converter turned 68.9 percent of 858 nm laser light into electricity.
+    url: https://doi.org/10.1002/pssr.202100113
+    year: 2021
+  - text: Japan Space Systems beamed 5.8 GHz microwave power from a fast-moving aircraft to the ground over more than 5 km with a steered phased array in December 2024.
+    url: https://www.jspacesystems.or.jp/en/news/4968.html/
+    year: 2024
+  - text: A NASA study gives the diffraction-limited spot of a laser beam as 0.61 times distance times wavelength over the optic's radius; a 10 m mirror makes a spot about 80 m wide at the Moon.
+    url: https://ntrs.nasa.gov/api/citations/19930011426/downloads/19930011426.pdf
+    year: 1992
+gap: >-
+  The records are around a kilowatt over a few kilometres; the climb needs gigawatts over distances
+  up to a hundred million times longer. A beam spreads by diffraction: even a 100 m optic makes a spot
+  kilometres wide at the distance from Earth to the Sun. Each end loses power, about half in the
+  laser and a third in the best converter, and nobody has yet beamed power between two spacecraft.
+inventions: [lighthouse-chain]
+scene:
+  kind: orbit
+  focus: Beams of light linking collectors, stations and depots across the Earth and Moon system.
+  params: { beams: true, collectors: 0.6, stations: 0.6, depots: 0.3 }

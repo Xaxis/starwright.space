@@ -1,0 +1,43 @@
+id: in-space-propulsion
+title: Electric engines and sails for moving cargo
+domain: transport
+stage: k09
+needs: [space-solar-power]
+summary: >-
+  A chemical rocket's exhaust leaves at a few kilometres a second. An electric thruster's leaves
+  five to ten times faster, so for the same trip it burns a small fraction of the propellant, and a
+  sail burns none at all. Moving bulk cargo between orbits and worlds is work for electric engines
+  at megawatts per ship, and for sails where time does not matter.
+target: >-
+  Electric thrusters at megawatts per ship, running for years on propellant made in space, and sails
+  for cargo in no hurry, so that moving a tonne between Earth orbit, the Moon, Mars and the asteroids
+  costs mostly electricity.
+exists:
+  - text: NASA's Dawn changed its own speed by 11.5 km/s with ion engines of 3,100 s specific impulse and 90 mN thrust, a record for solar-electric propulsion, before its mission ended in 2018.
+    url: https://en.wikipedia.org/wiki/Dawn_(spacecraft)
+    year: 2018
+  - text: SpaceX's second-generation Starlinks, from 2023, use Hall thrusters running on argon, cheaper and more plentiful than krypton or xenon, with 2.4 times the thrust of the earlier krypton thruster.
+    url: https://en.wikipedia.org/wiki/Hall-effect_thruster
+    year: 2023
+  - text: NASA and Aerojet Rocketdyne began qualifying the AEPS, a 12.5 kW Hall thruster with up to 2,900 s specific impulse, in July 2023.
+    url: https://en.wikipedia.org/wiki/Advanced_Electric_Propulsion_System
+    year: 2023
+  - text: The Gateway's power and propulsion element was to fly three 12 kW thrusters, just under 50 kW in all, but NASA paused Gateway as designed in March 2026.
+    url: https://en.wikipedia.org/wiki/Gateway_(space_station)
+    year: 2026
+  - text: Ad Astra ran its VASIMR VX-200SS plasma engine for 88 hours at 80 kW in July 2021.
+    url: https://en.wikipedia.org/wiki/Variable_Specific_Impulse_Magnetoplasma_Rocket
+    year: 2021
+  - text: ThrustMe flew the first iodine electric thruster in space, launched in November 2020; iodine is stored as a solid (Nature, 2021).
+    url: https://en.wikipedia.org/wiki/ThrustMe
+    year: 2021
+gap: >-
+  Electric thrusters in flight run at kilowatts, and the largest ones tested on the ground at about
+  a hundred; cargo ships between worlds need megawatts each. Every thruster's propellant, whether
+  xenon, krypton, argon or iodine, is still brought up from Earth. Sails have flown only as small
+  tests.
+inventions: [moon-metal-hall-drive]
+scene:
+  kind: machine
+  focus: An electric thruster glowing as it pushes a cargo ship between worlds.
+  params: { shape: engine, spin: 0.4 }

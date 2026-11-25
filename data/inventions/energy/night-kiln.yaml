@@ -1,0 +1,84 @@
+id: night-kiln
+title: The Night Kiln
+domain: energy
+for: [lunar-power]
+pitch: >-
+  Store the lunar day's sunlight as heat in a buried core of fused regolith, insulated by the Moon's
+  own loose soil, and run engines from it through nights of {lunar-night}, so lunar industry never stops
+  and almost none of its power plant comes from Earth.
+principle: >-
+  A lunar night lasts {lunar-night}. Batteries to carry a kilowatt through it
+  weigh tonnes, all shipped from Earth; the rock is already there. Fused regolith, a basalt-like
+  glass, holds about 1 kJ per kilogram per kelvin at high temperature. Heated by mirrors to about
+  1,100 K through the lunar day and drawn down to 500 K by night, each kilogram stores about 0.6 MJ. A
+  Stirling or Brayton engine turns about a quarter of that into electricity, so about 9 t of fused rock
+  carries 1 kW through the night. Keeping the heat in is the easy part: loose lunar soil in vacuum is
+  one of the best insulators known, conducting under a thousandth of a watt per metre-kelvin at the
+  surface, so a core buried under a few metres of it loses only a small share of its heat in a night.
+  The kiln is built by the mirrors that charge it. They sinter a column of regolith in place into a
+  solid core around the engine's heat pipes, and a rover heaps loose soil over it, leaving only the
+  mirror window, which a regolith plug closes at dusk.
+buildsOn:
+  - text: Balasubramaniam and colleagues modelled solar-heated thermal wadis, beds of modified regolith that store heat to keep rovers alive through the lunar night.
+    url: https://doi.org/10.2514/6.2009-1339
+    year: 2009
+  - text: Hayne and colleagues used Diviner data to show lunar regolith conducts only 7.4 x 10^-4 W per metre-kelvin at the surface, rising to 3.4 x 10^-3 at about a metre down.
+    url: https://doi.org/10.1002/2017JE005387
+    year: 2017
+  - text: Meurisse and colleagues at ESA and DLR sintered lunar regolith simulant layer by layer with concentrated sunlight and with xenon light.
+    url: https://doi.org/10.1016/j.actaastro.2018.06.063
+    year: 2018
+  - text: NASA's Fission Surface Power design converts reactor heat with four 12 kWe Stirling converters and rejects it from radiators above 400 K.
+    url: https://ntrs.nasa.gov/api/citations/20230006731/downloads/NETS%202023%20FSP%20Presentation%20FINAL.pdf
+    year: 2023
+  - text: NASA Glenn's Advanced Stirling Radioisotope Generator made about 130 W of electricity at about 26 percent efficiency.
+    url: https://en.wikipedia.org/wiki/Advanced_Stirling_radioisotope_generator
+    year: 2014
+experiment:
+  goal: Charge a fused-regolith core with concentrated light in vacuum, hold it under loose simulant, and run an engine from it through a full simulated lunar night.
+  setup: >-
+    A 5 m thermal vacuum chamber holding 15 t of lunar mare and highland simulant, with a 20 kW xenon
+    solar simulator that sinters a core of about 2 t in place around a heat-pipe manifold. A 250 W
+    Stirling converter takes heat from the core and rejects it to a radiator facing a cold shroud at
+    100 K. Thermocouples run through the core and its cover; the light is switched on for 354 hours
+    and off for 354, ten times.
+  measure: Heat stored per kilogram of core; heat lost through the cover over each night; electric energy delivered each night; cracking of the core and its contact with the heat pipes after each cycle.
+  succeedsIf: The core stores more than 0.4 MJ per kilogram, keeps more than 85 percent of its heat for 354 hours under 1 m of simulant, and the engine delivers at least 20 percent of the stored heat as electricity, for ten cycles.
+  costUsd: 6000000
+  months: 24
+path:
+  - phase: bench
+    what: The chamber kiln, through ten simulated days and nights.
+    scale: A 2 t core, about 250 W through one night.
+    proves: Storage per kilogram, heat loss under regolith, and engine output.
+  - phase: prototype
+    what: A kiln built on the Moon by a lander's mirror and a small digger, powering a rover base.
+    scale: 10 kW through the night, about 90 t of fused regolith.
+    proves: Building in place on the Moon, in real dust, vacuum and thermal cycling.
+  - phase: pilot
+    what: Night power for the first lunar mine or the first seed factory, from {seed-year}.
+    scale: About 100 kW.
+    proves: A base runs through the night with no reactor and no imported batteries.
+  - phase: first-plant
+    what: A field of kilns built by the lunar industry itself with its own mirrors and diggers.
+    scale: About a megawatt of night power.
+    proves: Kilns are cheap to make with the seed's own tools.
+  - phase: fleet
+    what: Kilns at every base away from the sunlit polar peaks.
+    scale: Tens of megawatts.
+    proves: Industry anywhere on the Moon, not only at the poles.
+  - phase: civilization
+    what: The Moon's industry running day and night on sunlight alone.
+    scale: Gigawatts of night power across the Moon.
+    proves: Lunar industry needs nothing from Earth to keep working.
+risks: >-
+  Sintered regolith may crack under repeated heating and lose contact with its heat pipes; a bed of
+  loose glass beads with gas circulating through it is the fallback. Heat moves by radiation through
+  hot porous soil, rising steeply with temperature, so the cover may leak more than at room
+  temperature; the experiment measures it, and layers of fine powder or reflective foil can be added.
+  A kiln is heavier than a reactor of the same power; its advantage is that its mass is local rock,
+  and the case for it rests on that.
+scene:
+  kind: reactor
+  focus: A buried core of fused rock glowing orange under its blanket of grey soil as the night begins.
+  params: { type: thermal, glow: 0.7 }

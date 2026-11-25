@@ -1,0 +1,41 @@
+id: stellar-lens-link
+title: Links to other stars through the Sun's lens
+domain: information
+stage: sun
+needs: [interplanetary-network, solar-system-navigation, beamed-propulsion]
+summary: >-
+  The Sun's gravity bends light like a lens and brings it to a focus from about 550 AU outward,
+  billions of times brighter than a telescope sees it directly. A craft on that focal line could
+  image the planets of another star, and could talk to a probe there with a tiny transmitter. Once
+  the swarm has caught the Sun's light, after {year-type-2}, the climb reaches for other stars, and
+  this lens is its first instrument.
+target: >-
+  A relay on the Sun's focal line toward a nearby star, beyond 550 AU, that can image that star's
+  planets, receive a probe's signal from there and pass it home through the interplanetary network.
+exists:
+  - text: Von Eshleman proposed in 1979 that the Sun's gravitational lens could be used for observations and communications over interstellar distances.
+    url: https://doi.org/10.1126/science.205.4411.1133
+    year: 1979
+  - text: Claudio Maccone's FOCAL mission, proposed to ESA in 1993, would send a telescope to at least 550 AU to use the Sun as a lens.
+    url: https://en.wikipedia.org/wiki/FOCAL_(spacecraft)
+    year: 1993
+  - text: A NASA NIAC study led by Slava Turyshev reported in 2020 that the lens gives a light amplification of about 10^11, so a 1 m telescope there could map an exoplanet 30 parsecs away at 10 km resolution, reached by small solar-sail craft.
+    url: https://arxiv.org/abs/2002.11871
+    year: 2020
+  - text: Voyager 1, the farthest spacecraft, reached one light-day from Earth, about 173 AU, on 18 November 2026.
+    url: https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/
+    year: 2026
+  - text: Breakthrough Starshot studies gram-scale probes on light sails pushed by a laser beamer on the ground toward Alpha Centauri.
+    url: https://breakthroughinitiatives.org/initiative/3
+    year: 2016
+gap: >-
+  Nothing has flown a third of the way to the focal line, so a relay needs several times Voyager's
+  speed to get there within a working life. The Einstein ring lies on top of the solar corona, which
+  is far brighter, so a faint signal must be pulled out of glare. The relay must find and hold the
+  narrow line toward one star while it drifts outward. And a link needs a transmitter at the other
+  end.
+inventions: [focal-line-relay]
+scene:
+  kind: machine
+  focus: A small telescope far beyond the planets, looking back at the Sun ringed by another star's light.
+  params: { shape: telescope, spin: 0.1 }

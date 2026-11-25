@@ -1,0 +1,78 @@
+id: wright-commitment
+title: The Wright Commitment
+domain: economics
+for: [buildout-finance, breakthrough-funding]
+pitch: >-
+  A fund that promises to buy the next doubling of a young clean technology at a price that falls
+  along its learning curve, so factories can be built before the market exists, and the promise pays
+  for itself as costs fall.
+principle: >-
+  Wright's law: each doubling of all the units ever made cuts the cost of the next by a steady share,
+  which for solar modules the model holds at {pv-learning-rate}. Early buyers therefore create value
+  they cannot keep, since every unit they buy lowers the price for everyone after them, a learning
+  spillover that markets underpay. Advance market commitments already use a binding promise to buy
+  to pull in investment, as the pneumococcal vaccine commitment did. The Wright Commitment ties the
+  promise to the learning curve. For a chosen technology, such as long-duration storage, clean steel,
+  high-voltage cable and later lunar oxygen, the fund publishes a schedule: it will buy up to one
+  doubling of cumulative output at a ceiling price that falls by the technology's measured learning
+  rate per doubling, awarded by reverse auction to any supplier. Producers who beat the curve
+  profit, and the falling ceiling keeps the fund from overpaying. The fund's cost is the gap between
+  the ceiling and the market price over that doubling, which shrinks as the doubling proceeds. It is
+  paid by a group of governments and large buyers and repaid by their lower costs on every later
+  unit.
+buildsOn:
+  - text: Wright's 1936 paper on airplane costs, the first statement of the learning curve.
+    url: https://doi.org/10.2514/8.155
+  - text: Gavi's 1.5 billion dollar advance market commitment for pneumococcal vaccines, which protected 109 million children.
+    url: https://www.gavi.org/news/media-room/vaccines-vs-pneumonia-how-pioneering-funding-model-changed-game-changing-market
+  - text: Frontier, the buyers' club launched in 2022 by Stripe, Alphabet, Shopify, Meta and McKinsey to commit 1 billion dollars to buying permanent carbon removal before it is cheap.
+    url: https://frontierclimate.com/writing/launch
+  - text: Way and colleagues' 2022 forecasts of clean technology costs from learning curves, which find a fast transition saves trillions.
+    url: https://doi.org/10.1016/j.joule.2022.08.009
+  - text: Nemet's How Solar Energy Became Cheap (2019), a history of how markets, policy and learning drove the cost of solar down.
+    url: https://www.taylorfrancis.com/books/oa-mono/10.4324/9780367136604/solar-energy-became-cheap-gregory-nemet
+experiment:
+  goal: Show that a purchase schedule that falls along a learning curve brings in new factory capacity faster and more cheaply than the same money given as grants.
+  setup: >-
+    A 50 million dollar commitment for one technology with a measured learning rate and an early
+    market, such as sodium-ion grid batteries or high-voltage direct current cable, offered to
+    suppliers by reverse auction under a published falling ceiling. A comparison arm gives the same
+    money as capital grants to matched factories in another region.
+  measure: New factory capacity announced and built; delivered unit prices against the ceiling; the fund's cost per unit of new capacity; the learning rate seen during the commitment.
+  succeedsIf: The commitment brings at least twice as much new capacity per dollar as the grant arm within three years, and delivered prices track the falling ceiling.
+  costUsd: 50000000
+  months: 36
+path:
+  - phase: bench
+    what: A simulation of purchase schedules run against the historical learning curves of solar, wind and batteries.
+    scale: Decades of real price data.
+    proves: Which schedules would have sped those curves at least cost.
+  - phase: prototype
+    what: The 50 million dollar commitment for one technology.
+    scale: One product, one region.
+    proves: Suppliers respond to a falling ceiling.
+  - phase: pilot
+    what: A multilateral fund runs commitments for three to five technologies, buying for projects in low- and middle-income countries.
+    scale: Billions of dollars, several technologies.
+    proves: Commitments lower costs where capital is dear.
+  - phase: first-plant
+    what: A standing global facility, funded by governments and large buyers, covers every technology the buildout needs that is still on the steep part of its curve.
+    scale: Tens of billions of dollars a year.
+    proves: Learning becomes something the world buys on purpose.
+  - phase: fleet
+    what: Commitments for space technologies before the seed factory, such as lunar oxygen, space solar cells and mass-driver coils.
+    scale: The industries of the next rung.
+    proves: The same tool pulls space industry down its curves.
+  - phase: civilization
+    what: Every technology the climb uses brought down its learning curve on a published schedule, from today's solar factories to the swarm's collectors.
+    scale: "The buildout to {type-1-power} and beyond"
+    proves: The cost of the climb falls as fast as building allows.
+risks: >-
+  A learning rate measured in the past may not continue; the ceiling resets to the rate actually
+  measured at each half-doubling. Incumbent producers may win every auction and slow new entrants; a
+  share of each doubling can be reserved for them. Governments may balk at a promise that runs for
+  years; a buyers' club of large firms, as with carbon removal, can carry the first commitments.
+scene:
+  kind: field
+  focus: A field of panels doubling, and doubling again, as the price ceiling steps down the curve.
+  params: { unit: panel, count: 4000, terrain: desert }

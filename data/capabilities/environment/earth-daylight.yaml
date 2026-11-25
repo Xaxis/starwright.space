@@ -1,0 +1,41 @@
+id: earth-daylight
+title: Earth keeps its sunlight as the swarm grows
+domain: environment
+stage: type-2
+needs: [dyson-swarm, swarm-station-keeping, sunlight-rights, heat-budget]
+summary: >-
+  The swarm orbits at {swarm-radius}, inside Earth's orbit. Close to complete, it stands between Earth
+  and the Sun, catching the light that warms the planet and grows its food. Worse, all the light it
+  catches leaves it again as heat, and from Earth's distance that heat arrives as a flood of infrared
+  about as strong as the sunlight itself. Without care, Type II would darken Earth's sky and heat its
+  climate more than anything humanity has yet done.
+target: >-
+  Earth receives the same sunlight, in the same spectrum, as before the swarm, to within a tenth of a
+  percent, and almost none of the swarm's waste heat, from the first collectors in {year-k15} until
+  the swarm closes in {year-type-2} and after.
+exists:
+  - text: Peters found that only a photovoltaic sphere lying beyond Earth's orbit would let life persist on Earth, and that even then Earth would need its temperature controlled; a partial sphere at 2.13 au would warm Earth by less than 3 K.
+    url: https://doi.org/10.1016/j.solmat.2025.113589
+    year: 2025
+  - text: Wright's review models how a star and the material around it exchange radiation, and shows solid shells are unstable, leaving swarms of separate orbiting collectors.
+    url: https://arxiv.org/abs/2006.16734
+    year: 2020
+  - text: McInnes showed that a ring or a shell can be stable in the restricted three-body problem when it encloses the smaller of two bodies.
+    url: https://arxiv.org/abs/2502.12806
+    year: 2025
+  - text: Robert Forward's statites hover by balancing sunlight's pressure against gravity instead of orbiting, which lets a sail hold a chosen position near a planet.
+    url: https://patents.google.com/patent/US5183225A/en
+    year: 1993
+  - text: JAXA's IKAROS steered itself by sunlight alone in 2010, switching liquid-crystal panels on its sail between reflecting and absorbing in step with its spin.
+    url: https://global.jaxa.jp/press/2010/07/20100723_ikaros_e.html
+    year: 2010
+gap: >-
+  No published swarm design accounts for Earth's sunlight or for the infrared the swarm sends back.
+  A swarm inside Earth's orbit must keep a clear, moving path for Earth's light, and send its own heat
+  in other directions, and no one has designed either. The rules that would require it are only being
+  drafted.
+inventions: [daylight-lane]
+scene:
+  kind: swarm
+  focus: The swarm around the Sun with one clear lane through it, keeping pace with the Earth.
+  params: { built: 0.9, radiusAu: 0.6 }

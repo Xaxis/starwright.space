@@ -1,0 +1,81 @@
+id: light-time-constitution
+title: The Light-Time Constitution
+domain: governance
+for: [interworld-disputes, solar-system-governance]
+pitch: >-
+  A constitution for worlds minutes or hours apart, which gives each decision to the smallest group
+  whose members can talk faster than the decision must be made, and settles disputes in written,
+  asynchronous courts whose first rulings take effect at once, on the spot.
+principle: >-
+  Control theory says a controller whose feedback arrives later than the time its system takes to
+  change will make things worse, not better, and organisations obey the same rule. The EU's
+  principle of subsidiarity says a decision belongs to the lowest level that can achieve its aim.
+  The Light-Time Constitution turns subsidiarity into a measured rule. Each class of decision has a
+  response time: seconds to avoid a collision, hours to fix a habitat's air, months for a trade
+  rule, years for an orbit allocation. Authority goes to the smallest level whose members' round-trip
+  light time is well under that response time. Shared things that change slowly, such as orbit risk
+  budgets and sunlight, go to the federation; fast things stay local. Disputes run on the same
+  logic. A local first-instance panel rules at once and its ruling stands; appeals go to a federation
+  court that works only in writing, in asynchronous rounds, with time limits counted as light time
+  plus a fixed window to reply. Laws carry logical timestamps, as in Lamport's ordering of events in
+  a distributed system, so every world agrees which version of a rule applied when.
+buildsOn:
+  - text: The principle of subsidiarity in Article 5 of the Treaty on European Union.
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M005
+  - text: The Permanent Court of Arbitration's 2011 optional rules for disputes about outer space activities.
+    url: https://docs.pca-cpa.org/2016/01/Permanent-Court-of-Arbitration-Optional-Rules-for-Arbitration-of-Disputes-Relating-to-Outer-Space-Activities.pdf
+  - text: The New York Convention, which makes an arbitral award made in one of its 172 member states enforceable in the others.
+    url: https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards/status2
+  - text: The Bundle Protocol, version 7 (RFC 9171, 2022), the standard for delay-tolerant networking across space.
+    url: https://www.rfc-editor.org/rfc/rfc9171.html
+  - text: Lamport's 1978 logical clocks, which let a distributed system agree on the order of events without a shared clock.
+    url: https://doi.org/10.1145/359545.359563
+  - text: Ostrom's work on polycentric governance, recognised by the 2009 Nobel prize in economics.
+    url: https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/
+experiment:
+  goal: Test whether light-time subsidiarity and asynchronous courts let separated communities manage shared resources and settle disputes better than a central authority working under the same delays.
+  setup: >-
+    A six-month exercise linking four analogue habitats or polar stations to a mock federation
+    office, with communication delays imposed in software at the values between Earth and Mars. The
+    crews and remote teams run a shared economy of water, power and orbit-like slots, through
+    scripted crises and disputes. Half of the runs use a central authority on Earth; half use the
+    Light-Time Constitution.
+  measure: Time to resolve each crisis; resources lost to late or wrong decisions; disputes settled and the time each took; crews' sense of fairness and of control over their own lives, surveyed weekly.
+  succeedsIf: Under the constitution, crises resolve at least twice as fast and resource losses fall by at least a third against the central authority, with fairness ratings no lower.
+  costUsd: 2500000
+  months: 18
+path:
+  - phase: bench
+    what: An agent-based model of communities at solar-system distances, testing which allocations of authority stay stable.
+    scale: Thousands of simulated runs.
+    proves: Which rules avoid both paralysis and secession.
+  - phase: prototype
+    what: The analogue exercise.
+    scale: Four sites, six months.
+    proves: Real people can work under the rules, and prefer them.
+  - phase: pilot
+    what: The first lunar settlements and the successors to the space station adopt the dispute procedure and a light-time charter with Earth's agencies.
+    scale: Hundreds of people around the Moon, seconds of delay.
+    proves: It works with real stakes.
+  - phase: first-plant
+    what: A treaty creates the federation court and the first shared councils for the Earth and Moon system and Mars.
+    scale: Thousands of people, minutes of delay.
+    proves: It works across interplanetary distances.
+  - phase: fleet
+    what: Habitats and settlements across the inner system join under the charter, each with its own government.
+    scale: Millions of people.
+    proves: The federation holds as members multiply and grow apart.
+  - phase: civilization
+    what: A civilization across the inner solar system governed by one charter and many local governments.
+    scale: "Every world and habitat the climb builds, from {year-planet}"
+    proves: Distance need not break a civilization into rivals.
+risks: >-
+  Members may reject a federation court whose rulings arrive late and feel foreign; local panels
+  that decide most disputes, with appeals rare, keep the federation light. A fast shared crisis,
+  such as a debris cascade, may need a central decision faster than light allows; rules agreed in
+  advance and carried out locally stand in for a ruling. Analogue exercises are far smaller than
+  real worlds, so the plan treats them only as a first test and keeps the charter easy to amend.
+scene:
+  kind: network
+  focus: Worlds as clusters around the Sun, fast decisions flashing inside each, slow shared ones crossing between them.
+  params: { shape: system, nodes: 1200, clusters: 20, links: 0.3, pulses: 0.6 }

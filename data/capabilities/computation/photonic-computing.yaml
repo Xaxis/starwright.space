@@ -1,0 +1,40 @@
+id: photonic-computing
+title: Computing with light
+domain: computation
+stage: k08
+needs: []
+summary: >-
+  Most of the energy in a modern AI chip goes into moving numbers, not into arithmetic. Light can
+  carry data across a chip or a building with little loss, and an interferometer multiplies a whole
+  matrix in one pass of the light at almost no energy. Photonics is how computing escapes the cost
+  of copper wires.
+target: >-
+  Photonic links and photonic matrix engines that cut the energy of each multiply and each bit
+  moved tenfold or more against the best electronic chips of the same year, made in ordinary
+  silicon photonics fabs and used across the data centres of {year-k08}.
+exists:
+  - text: Shen and colleagues ran a neural network on a programmable mesh of 56 silicon interferometers, the first coherent nanophotonic deep-learning chip.
+    url: https://doi.org/10.1038/nphoton.2017.93
+    year: 2017
+  - text: Lightmatter's photonic processor ran ResNet, BERT and reinforcement learning workloads at near-electronic precision.
+    url: https://www.nature.com/articles/s41586-025-08854-x
+    year: 2025
+  - text: Lightelligence's PACE accelerator put more than 16,000 photonic components on one chip, reaching about 4.21 trillion operations per joule without its lasers and 2.38 with them.
+    url: https://www.nature.com/articles/s41586-025-08786-6
+    year: 2025
+  - text: Tsinghua's Taichi photonic chiplet reported 160 trillion operations per joule for inference.
+    url: https://doi.org/10.1126/science.adl1203
+    year: 2024
+  - text: Lightmatter's Passage platform sells co-packaged optics that link chips with light instead of copper.
+    url: https://lightmatter.co/products/passage/
+    year: 2025
+gap: >-
+  Optical arithmetic is analog and holds only a few bits of precision. The lasers, modulators and
+  the converters between light and electronics eat most of the savings, and optical memory and
+  nonlinear steps still need electronics. Links are ready to scale; optical compute engines are not
+  yet better than the best GPUs on whole workloads.
+inventions: []
+scene:
+  kind: compute
+  focus: Light threading a mesh of interferometers on a chip, each crossing a multiply.
+  params: { kind: optical, racks: 40 }

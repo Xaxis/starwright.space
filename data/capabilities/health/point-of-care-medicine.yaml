@@ -1,0 +1,35 @@
+id: point-of-care-medicine
+title: A clinic in every hand
+domain: health
+stage: k08
+needs: [universal-connectivity, abundant-compute, programmable-biology]
+summary: >-
+  Most of the world's people live far from a well-equipped hospital. Point-of-care medicine brings
+  the diagnosis to them: cheap devices that read blood, breath or a swab on the spot, an artificial
+  intelligence that interprets the result, and a connection to a human specialist when needed. The
+  same tools that serve a remote village serve a base on the Moon or a ship between worlds, where the
+  nearest hospital is months away.
+target: >-
+  Put reliable diagnosis and much of treatment within reach of everyone, through cheap handheld
+  devices, on-device interpretation and a link to remote specialists, working on Earth and across the
+  worlds people settle.
+exists:
+  - text: Oxford Nanopore's portable, real-time sequencers brought DNA and RNA readout out of the central lab and into the field, a core piece of point-of-care diagnosis.
+    url: https://nanoporetech.com/
+    year: 2024
+  - text: AlphaFold 3's accurate prediction of molecular interactions lets software interpret a test result and suggest a treatment, the intelligence behind a handheld clinic.
+    url: https://doi.org/10.1038/s41586-024-07487-w
+    year: 2024
+  - text: Wellcome Leap's UZIMA program, funded at 100 million USD, develops health tools for underserved populations, the delivery path point-of-care devices need.
+    url: https://wellcomeleap.org/
+    year: 2024
+gap: >-
+  Portable diagnostics still cover only a few tests, cost more than the poorest can bear, and need
+  cold chains, reagents or connectivity that remote places lack. A single cheap device that runs many
+  tests, interprets them on board and works offline or across light-minutes of delay does not yet
+  exist.
+inventions: [pocket-diagnostic-lab]
+scene:
+  kind: network
+  focus: Handheld clinics in remote places linked to specialists, diagnoses flowing both ways.
+  params: { nodes: 3000, clusters: 30, links: 0.9, pulses: 0.7, shape: globe }

@@ -1,0 +1,88 @@
+id: sand-breeder
+title: The Sand Breeder
+domain: energy
+for: [terawatt-solar-factories]
+pitch: >-
+  A solar factory town in the desert that runs only on the panels it makes, turns local sand into
+  silicon in molten salt instead of carbon furnaces, and spends part of its output building the next
+  factory, so the industry grows on its own energy.
+principle: >-
+  A solar factory powered by its own panels grows like a population: if each factory can build its
+  replacement from local sand with the energy it collects in a year or two, the industry doubles on
+  that timescale, held back by energy payback rather than by capital. Most of that energy goes into
+  silicon. Today quartz is reduced with carbon in arc furnaces and then purified as a chlorosilane
+  gas, a chain that costs tens of kilowatt-hours per kilogram. In molten calcium chloride at about
+  850 °C, solid silica is instead reduced straight to silicon at the cathode (SiO2 plus four electrons
+  gives Si and two oxide ions), and the oxygen leaves at an inert anode, so no carbon is involved and
+  fewer impurities get in. Laboratory cells have done this for under 13 kWh per kilogram of silicon
+  and have grown silicon films purer than 99.9998 percent. The Sand Breeder pairs that cell with cast
+  wafers, copper-plated contacts in place of silver and glass melted from the same sand, so a factory
+  needs only sand, salt, aluminium, copper and sunlight. At about 2 g of silicon per watt, 13 kWh per
+  kilogram is under 0.03 kWh per watt of panels, about a week of each panel's own output.
+buildsOn:
+  - text: The Sahara Solar Breeder Project, proposed in 2009 by Hideomi Koinuma with Algerian universities, would make silicon from desert sand in factories powered by their own output that breed more factories.
+    url: https://en.wikipedia.org/wiki/Sahara_Solar_Breeder_Project
+    year: 2009
+  - text: Nohira, Yasuda and Ito reduced solid, insulating silicon dioxide to silicon electrochemically in molten calcium chloride.
+    url: https://doi.org/10.1038/nmat900
+    year: 2003
+  - text: Jin, Chen and colleagues reduced pellets of silica to silicon in molten calcium chloride for less than 13 kWh per kilogram of silicon.
+    url: https://doi.org/10.1002/anie.200352786
+    year: 2004
+  - text: Zou, Bard, Sadoway and colleagues electrodeposited silicon films 5 to more than 60 microns thick and 99.99989 percent pure from silica in molten calcium chloride at 850 °C, and made a first solar cell from them.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6920409/
+    year: 2019
+  - text: Fraunhofer ISE puts the energy payback time of PV made and installed in Europe at about one year, falling 15.7 percent for each doubling of cumulative production.
+    url: https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Photovoltaics-Report.pdf
+    year: 2026
+  - text: SunDrive opened a pilot line in New South Wales in 2023 that replaces the silver in solar cell contacts with plated copper.
+    url: https://www.sundrivesolar.com/
+    year: 2023
+experiment:
+  goal: Make solar-grade silicon from desert sand in molten salt, powered only by solar panels, and measure the energy per kilogram and the efficiency of cells made from it.
+  setup: >-
+    A molten calcium chloride cell making 10 kg of silicon a day, heated and driven by a 100 kW solar
+    array with batteries and fed washed dune sand from one desert site. The silicon is cast into
+    ingots, sawn into wafers and made into heterojunction cells with copper-plated contacts on a
+    university pilot line, beside cells made from commercial polysilicon as controls.
+  measure: Kilowatt-hours per kilogram from sand to ingot; boron, phosphorus and metal impurities by mass spectrometry; cell efficiency against the controls; days of the array's own output needed to make the silicon for one watt of panels.
+  succeedsIf: Silicon made for under 20 kWh per kilogram from sand, and cells from it within 2 percentage points of the control cells, above 20 percent efficiency.
+  costUsd: 4000000
+  months: 24
+path:
+  - phase: bench
+    what: The molten-salt cell and test cells, on one desert's sand.
+    scale: About 10 kg of silicon a day, enough for 5 kW of panels.
+    proves: The energy per kilogram and a purity good enough for cells.
+  - phase: prototype
+    what: A complete line from sand to modules, off the grid, powered by its own output.
+    scale: 1 MW of panels a year.
+    proves: The whole loop runs on its own power; energy payback measured end to end.
+  - phase: pilot
+    what: A desert factory that builds its own expansion lines with part of its output.
+    scale: 100 MW of panels a year.
+    proves: The doubling time of factory capacity when its own power is the limit.
+  - phase: first-plant
+    what: A breeder town that spends a fifth of its output on new lines and sells the rest.
+    scale: 10 GW of panels a year.
+    proves: A module cost well below today's {pv-module-price}, with no silver and no carbon furnaces.
+  - phase: fleet
+    what: Breeder towns across the deserts of the sunbelt, each seeding the next.
+    scale: A terawatt of panels a year.
+    proves: Solar industry can grow by its own energy, faster than capital alone allows.
+  - phase: civilization
+    what: The factories that cover {land-share} of Earth's land in panels.
+    scale: Tens of terawatts a year, toward {surface-solar-cap} installed.
+    proves: Earth's surface solar ceiling reached on time for {year-k08}.
+risks: >-
+  Silicon from molten salt may carry calcium, boron or metals that ruin cells; the fallback is to use
+  it as cheap feedstock for one final purification step, or for layers that tolerate impurities, such
+  as the bottom cell of a tandem. Inert anodes that release oxygen may corrode in the salt; the iron
+  and chromium alloy anodes developed for molten oxide electrolysis are the next try. A factory on its
+  own power runs only by day, and hot salt must stay molten at night, so it needs thermal storage and
+  some batteries. Dune sand varies and carries iron and clay; washing and an acid leach are added
+  where needed.
+scene:
+  kind: replicator
+  focus: One factory in the dunes, roofed in its own panels, then two, then four, spreading across the desert.
+  params: { unit: fab, generations: 8, closure: 0.9 }

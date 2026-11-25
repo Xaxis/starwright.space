@@ -1,0 +1,42 @@
+id: mercury-power
+title: Power to take Mercury apart
+domain: energy
+stage: k15
+needs: [thin-film-collectors, power-beaming, self-replicating-factory, mercury-operations]
+summary: >-
+  Mercury supplies most of the swarm's mass, and from {year-k15} its mines, smelters and mass drivers
+  run on {mercury-irradiance} of sunlight, {mercury-sunlight-multiple} what Earth gets. That light is a gift and a problem: the
+  dayside reaches over 700 K, solar panels lose power as they heat, and a solar day lasts 176 Earth
+  days, so any spot on the surface spends about three months in darkness.
+target: >-
+  Power for the industry that takes Mercury apart, rising from megawatts at the first seeds to a large
+  share of the power of {power-k15}, from collectors and converters that thrive in Mercury's heat,
+  carry its long nights and feed mass drivers launching its rock toward {swarm-radius}.
+exists:
+  - text: NASA's Mercury fact sheet gives a mean solar irradiance of 9,082.7 W per square metre, a solar day of 175.9 Earth days, and a subsolar surface of 590 to 725 K.
+    url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html
+  - text: ESA and JAXA's BepiColombo entered orbit around Mercury on 21 November 2026, after a seven-year cruise powered by solar arrays.
+    url: https://www.esa.int/articles/about-us/directorates/operations/bepicolombo-safely-in-mercury-orbit-despite-unexpected-challenge
+    year: 2026
+  - text: BepiColombo's solar arrays are tilted away from the Sun because they degrade if they face it for long, so they need more area for the same power.
+    url: https://www.esa.int/Science_Exploration/Space_Science/BepiColombo/BepiColombo_factsheet
+    year: 2018
+  - text: Landis and Haag at NASA Glenn found commercial triple-junction solar cells keep working at 400 °C without catastrophic degradation, in tests for the surface of Venus.
+    url: https://ntrs.nasa.gov/api/citations/20150016298/downloads/20150016298.pdf
+    year: 2013
+  - text: Armstrong and Sandberg's plan for a swarm built from Mercury starts from a square kilometre of solar panels on Mercury, powering mining and launches that grow exponentially.
+    url: https://doi.org/10.1016/j.actaastro.2013.04.002
+    year: 2013
+  - text: MESSENGER's neutron data showed the radar-bright deposits in Mercury's permanently shadowed polar craters are mostly water ice.
+    url: https://doi.org/10.1126/science.1229953
+    year: 2013
+gap: >-
+  No power system has worked on Mercury's surface. Ordinary cells lose much of their output at the
+  temperatures there, and spacecraft survive only by turning their panels away from the Sun. Night on
+  any patch of ground lasts about 88 Earth days, so a plant must store power for months, follow the
+  dawn, or be fed by beams from orbit, and none of these has been designed for industrial loads.
+inventions: [cascade-collector]
+scene:
+  kind: mercury
+  focus: Mercury's dayside, its first mines and mass drivers powered by fields of mirrors in the glare.
+  params: { mined: 0.15, drivers: 6 }

@@ -1,0 +1,39 @@
+id: space-tethers
+title: Tethers that lift without propellant
+domain: space
+stage: type-1
+needs: [cheap-launch, in-orbit-assembly, carbon-nanomaterials]
+summary: >-
+  A long cable spinning in orbit can catch a payload from a slow rocket at the bottom of its swing
+  and throw it into a higher orbit at the top, trading momentum instead of burning propellant. It
+  gets the momentum back when it catches mass going the other way. A tether can cut the speed a
+  rocket must reach by about half, and the space elevator is the limit of the idea.
+target: >-
+  Spinning tethers in Earth and lunar orbit that hand payloads every day between suborbital
+  vehicles, low orbit and the path to the Moon, their momentum kept up by balancing upward and
+  downward traffic and by electric current through the tether itself.
+exists:
+  - text: ESA's student YES2 experiment deployed a tether to its full length of 31.7 km from a Foton capsule in September 2007.
+    url: https://en.wikipedia.org/wiki/Young_Engineers%27_Satellite_2
+    year: 2007
+  - text: NASA and Italy's TSS-1R deployed a conducting tether to 19.7 km from the Space Shuttle in 1996 before it broke; it drove a current of 1.1 A at 3,400 V, about 3.5 kW.
+    url: https://ntrs.nasa.gov/api/citations/20160007056/downloads/20160007056.pdf
+    year: 1996
+  - text: JAXA's KITE electrodynamic tether experiment on the HTV-6 freighter in 2017 was to deploy a 700 m tether, but deployment failed.
+    url: https://en.wikipedia.org/wiki/Kounotori_6
+    year: 2017
+  - text: Shizuoka University's STARS-Me2, two small satellites joined by a 10 m tape with a climber, flew from the ISS from September 2025 to March 2026 as a test of space elevator climbing.
+    url: https://wwp.shizuoka.ac.jp/suarc/?p=166
+    year: 2026
+  - text: Takakura and colleagues measured single carbon nanotubes at 25 to 66 GPa tensile strength, near the 63 GPa an Earth space elevator is said to need (Nature Communications, 2019).
+    url: https://www.nature.com/articles/s41467-019-10959-7
+    year: 2019
+gap: >-
+  The longest tether yet deployed in orbit is about 32 km, and two of the best-known tether
+  experiments snapped or failed to deploy. No tether has ever caught or thrown a payload. Material
+  strong enough for an Earth elevator exists only as single nanotubes, not as cable.
+inventions: [balanced-rotovator]
+scene:
+  kind: launch
+  focus: A spinning tether above Earth, its tip swinging down to catch a payload and fling it upward.
+  params: { method: tether, cadence: 0.5, world: earth }

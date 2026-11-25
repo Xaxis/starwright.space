@@ -1,0 +1,39 @@
+id: closed-life-support
+title: Life support that recycles everything
+domain: biology
+stage: k09
+needs: [programmable-biology, abundant-water, abundant-food]
+summary: >-
+  Beyond the heat ceiling, industry and the people who run it move into orbit, onto the Moon and
+  beyond, and they cannot be resupplied with air, water and food on every breath. A closed life
+  support system turns breath, sweat and waste back into oxygen, clean water and food in a loop driven
+  by sunlight and biology, so a crew or a town lives for years on what it recycles. The model has the
+  first self-copying factory starting work in {seed-year}; the people running the move off Earth need
+  loops this tight.
+target: >-
+  Keep people alive and well in space on a loop that recovers nearly all of their air, water and a
+  large share of their food, stable for years without resupply, and able to grow with the settlement
+  it supports.
+exists:
+  - text: BIOS-3 in Krasnoyarsk ran a three-person crew in near-complete air and water closure for 180 days in 1972 to 1973, growing about half the crew's food with algae and higher plants.
+    url: https://en.wikipedia.org/wiki/BIOS-3
+    year: 1973
+  - text: Beihang University's Lunar Palace 1 ran a crewed closure for 370 days at 98.2 percent material closure, with total recycling of oxygen and water.
+    url: https://doi.org/10.1101/2021.01.12.426282
+    year: 2018
+  - text: ESA's MELiSSA has spent over three decades building a five-compartment regenerative loop with a working pilot plant in Barcelona.
+    url: https://en.wikipedia.org/wiki/MELiSSA
+    year: 2023
+  - text: The International Space Station's life-support system reached 98 percent water recovery in 2023 after adding a brine processor, the best any flown system has done.
+    url: https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/
+    year: 2023
+gap: >-
+  The best closed systems still leak: Biosphere 2's oxygen fell from 20.9 to 14.5 percent in 16 months
+  and needed injection, and every long run has been a delicate, hand-tended experiment, not a product.
+  Food closure in particular is far from complete, and no loop has run for years at the reliability a
+  town off Earth would demand.
+inventions: [regolith-microbe-loop]
+scene:
+  kind: habitat
+  focus: A green-filled rotating habitat where air, water and food cycle in a closed loop.
+  params: { type: cylinder, spin: 0.6, green: 0.8 }

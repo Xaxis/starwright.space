@@ -1,0 +1,78 @@
+id: light-cone-clearing
+title: The Light-Cone Clearing House
+domain: economics
+for: [interplanetary-markets]
+pitch: >-
+  A clearing house on each world that nets its trades with every other world in fixed windows,
+  timed to the light delay between them, and settles each window payment against delivery, so
+  nobody pays without being paid.
+principle: >-
+  Foreign exchange long carried settlement risk, the chance that one side pays and the other fails
+  before paying back, known as Herstatt risk after a German bank that failed in the middle of
+  settlement. CLS removed it by settling both legs of each trade at the same moment. Krugman's
+  Theory of Interstellar Trade showed that interest on goods in transit has to be counted in the
+  right clock. The Light-Cone Clearing House combines the two for delays of minutes to hours. Each
+  world runs a clearing house. Between any two, trades are gathered in windows a little longer than
+  the light delay between them. At the end of a window, each side sends its net obligation over
+  delay-tolerant links, and both apply the settlement only when both messages have arrived, against
+  collateral posted in advance on each side to cover the window's largest possible exposure. Trades
+  still in flight are quoted with a delay premium the market sets. Messages carry logical
+  timestamps, so both sides agree on the order of events. Within a world, trade runs at local speed;
+  only the net crosses space.
+buildsOn:
+  - text: CLS, which since 2002 has settled both sides of foreign exchange trades at once, over 8 trillion dollars a day.
+    url: https://www.cls-group.com/about/
+  - text: Krugman's Theory of Interstellar Trade, on interest charges for goods in transit.
+    url: https://doi.org/10.1111/j.1465-7295.2009.00225.x
+  - text: The Bundle Protocol, version 7 (RFC 9171), for networking across long delays.
+    url: https://www.rfc-editor.org/rfc/rfc9171.html
+  - text: Lamport's 1978 logical clocks for ordering events across a distributed system.
+    url: https://doi.org/10.1145/359545.359563
+  - text: NASA's figure of 4 to 20 minutes for a one-way signal between Earth and Mars.
+    url: https://www.nasa.gov/missions/tech-demonstration/deep-space-atomic-clock/how-an-atomic-clock-will-get-humans-to-mars-on-time/
+experiment:
+  goal: Show that windowed clearing tuned to light delay settles trades between delayed markets with no settlement failures, at an acceptable cost in collateral.
+  setup: >-
+    A testbed of four simulated markets linked by delay-tolerant networking software, with delays
+    set to the values for the Moon, Mars and Mercury, running the clearing protocol with collateral
+    over 10 million simulated trades drawn from real order data, with link outages and the failure
+    of a participant injected along the way.
+  measure: Settlement failures; collateral needed as a share of value traded; the time from trade to final settlement against the light delay; behaviour when a link drops or a participant fails mid-window.
+  succeedsIf: No trade in which one side pays and the other does not, collateral under 5 percent of value traded, and settlement within twice the round-trip light time in normal running.
+  costUsd: 700000
+  months: 12
+path:
+  - phase: bench
+    what: The four-market testbed.
+    scale: 10 million simulated trades.
+    proves: The protocol is safe and its collateral affordable.
+  - phase: prototype
+    what: A live link between a clearing house on Earth and one at a lunar base or an orbital depot, settling real propellant contracts.
+    scale: Earth and Moon, seconds of delay.
+    proves: It works with real payments.
+  - phase: pilot
+    what: A link to Mars, settling trade with the first settlement there.
+    scale: Minutes of delay.
+    proves: It works at interplanetary distance.
+  - phase: first-plant
+    what: Clearing houses on every inhabited world and at every major depot, linked into one network.
+    scale: The inner solar system.
+    proves: Trade between worlds can be as safe as trade on Earth.
+  - phase: fleet
+    what: Automated factories trade materials and power between worlds through the network with no people in the loop.
+    scale: "Autonomous industry, from {year-planet}"
+    proves: Trade between machines can run on it at scale.
+  - phase: civilization
+    what: The economy that builds the swarm trades across light-minutes as one market.
+    scale: "The swarm at {swarm-radius} from the Sun"
+    proves: Distance does not split the economy.
+risks: >-
+  Collateral locked up in every window may be costly when delays are long; netting across many trades
+  and allowing collateral in claims on local goods reduce it. Each clearing house is a single point
+  of failure for its world; backup houses and a federation fund guard against that. Prices will drift
+  apart between worlds faster than trade can close the gap; that is a fact of distance the design
+  does not remove, it only prices it fairly.
+scene:
+  kind: network
+  focus: Each world's clearing house as a bright node, net payments crossing between them once per window.
+  params: { shape: system, nodes: 800, clusters: 12, links: 0.4, pulses: 0.8 }

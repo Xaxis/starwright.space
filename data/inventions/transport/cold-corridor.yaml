@@ -1,0 +1,83 @@
+id: cold-corridor
+title: The Cold Corridor
+domain: transport
+for: [high-speed-ground]
+pitch: >-
+  A maglev line and a superconducting power cable laid in one trench and cooled by one liquid
+  nitrogen loop, so the grid pays for the cold and the train rides on it.
+principle: >-
+  Some ceramic superconductors, such as YBCO, work at the temperature of liquid nitrogen, 77 K.
+  Cooled blocks of YBCO above a track of permanent magnets lock onto the field lines passing through
+  their defects, which is called flux pinning, so a car floats and stays centred with no power and
+  no control system; Southwest Jiaotong University's test vehicles have carried people this way. The
+  costly parts of such a line are the magnet track, the land, and keeping every car cold.
+  Superconducting power cables, which a planet-wide grid needs to carry gigawatts with little loss,
+  need the same cold: liquid nitrogen running through an insulated pipe. The Corridor lays the cable
+  beside the guideway and runs one nitrogen loop and one chain of refrigeration plants for both.
+  Trackside couplings at stations top up the cars' cryostats. The grid's cable pays for the trench,
+  the right of way and the refrigeration, and the train shares them.
+buildsOn:
+  - text: Wang and colleagues at Southwest Jiaotong University built the first high-temperature superconducting maglev vehicle to carry people (Physica C, 2002).
+    url: https://doi.org/10.1016/S0921-4534(02)01548-4
+    year: 2002
+  - text: Southwest Jiaotong unveiled a high-temperature superconducting maglev prototype designed for 620 km/h in Chengdu in January 2021, cooled by liquid nitrogen and tested at low speed on a 165 m track.
+    url: https://en.wikipedia.org/wiki/Super_Bullet_Maglev
+    year: 2021
+  - text: The AmpaCity cable in Essen, about 1 km of 10,000 volt superconducting cable designed for 40 MW and cooled to minus 200 C, joined two city substations in 2014.
+    url: https://phys.org/news/2014-05-longest-superconducting-cable-worldwide.html
+    year: 2014
+  - text: A 0.6 km superconducting cable at 138 kV went into service at Holbrook, Long Island, in 2008.
+    url: https://en.wikipedia.org/wiki/Electric_power_transmission
+    year: 2008
+  - text: Brandt explained how flux pinning lets a superconductor hang stably above or below a magnet, with uses in high-speed ground transport (Science, 1989).
+    url: https://doi.org/10.1126/science.243.4889.349
+    year: 1989
+  - text: Munich's SuperLink project, featured by the superconductor maker THEVA, plans a superconducting power cable through the city.
+    url: https://www.theva.com/superlink/
+    year: 2019
+experiment:
+  goal: Run a superconducting maglev car and a superconducting cable from one nitrogen loop, and measure whether either disturbs the other.
+  setup: >-
+    A 200 m guideway of permanent magnets with 100 m of superconducting cable laid alongside in a
+    shared cryostat trench, one liquid nitrogen refrigerator, and a 2 t test car whose YBCO cryostats
+    are refilled from a trackside coupling. The cable carries 2 kA while the car runs at up to 60 km/h.
+  measure: Heat load per metre of the shared line, the cable's temperature while cars pass, levitation gap and stiffness, interference between the cable's field and the car, and refill time for the car.
+  succeedsIf: The shared loop keeps the cable below 80 K with cars running, the car levitates stably with a gap of at least 10 mm, and the measured heat loads put a shared line's refrigeration cost at least 30 percent below two separate systems.
+  costUsd: 7000000
+  months: 18
+path:
+  - phase: bench
+    what: The 200 m test line.
+    scale: One car, 100 m of cable.
+    proves: One cold loop can serve both.
+  - phase: prototype
+    what: A 5 km test line run at 300 km/h, with a 10 kV cable carrying real substation power.
+    scale: 5 km.
+    proves: Speed and grid service together.
+  - phase: pilot
+    what: A 50 km commercial line between a city and its airport, with a cable that relieves the city's grid.
+    scale: Thousands of passengers a day.
+    proves: Shared costs in service.
+  - phase: first-plant
+    what: An intercity line a few hundred kilometres long that is also a high-capacity grid link.
+    scale: Gigawatts and tens of thousands of passengers a day.
+    proves: A line cheaper per kilometre than a railway and a cable built separately.
+  - phase: fleet
+    what: Cold corridors along the main routes of the global grid on several continents.
+    scale: Thousands of kilometres.
+    proves: Fast travel and power sharing one right of way.
+  - phase: civilization
+    what: Continents joined by corridors that carry people at aircraft speeds and the power of a grid at {power-k08}.
+    scale: Every continent.
+    proves: Short flights replaced by trains that ride the grid's own cold.
+risks: >-
+  A fault in the shared loop stops both the train and the cable, so loops are split into sections
+  with spare refrigerators. Permanent-magnet track needs large amounts of rare earths; ferrite or
+  iron tracks paired with stronger superconductors are the alternative to test. Grids and railways
+  want different routes, so corridors fit only where both run between the same cities, which is
+  where the pilot will go. Superconducting maglev has run only at low speed on short tracks, and its
+  stability, drag and cryostats at high speed are still to be proved.
+scene:
+  kind: lattice
+  focus: The superconductor's crystal, its defects pinning the magnetic field lines that hold the train up.
+  params: { structure: perovskite, defects: 0.3 }

@@ -1,0 +1,34 @@
+id: cellular-agriculture
+title: Meat grown from cells
+domain: food
+stage: k08
+needs: [programmable-biology, precision-fermentation]
+summary: >-
+  Meat is muscle and fat, and both can be grown from animal cells in a bioreactor without raising or
+  killing an animal. Cultured meat promises the taste and nutrition of meat on a fraction of the
+  land, water and emissions of livestock, and frees the largest single use of land, pasture, to
+  return to nature. It is the hardest of the new food routes to scale, and the most transformative if
+  it works.
+target: >-
+  Grow structured meat and fat from cultured cells at the price and volume of farmed meat, with the
+  texture of cuts and not just mince, so that most meat can be grown rather than raised.
+exists:
+  - text: Pasture covers 3,200 million hectares, the largest single human use of land, which cultured meat could largely return to nature.
+    url: https://ourworldindata.org/environmental-impacts-of-food
+    year: 2024
+  - text: Food is responsible for about a quarter of global greenhouse-gas emissions, much of it from livestock, the burden cultured meat aims to cut.
+    url: https://ourworldindata.org/environmental-impacts-of-food
+    year: 2024
+  - text: Precision fermentation already makes animal proteins at commercial scale, supplying growth factors and media ingredients that cultured meat depends on.
+    url: https://perfectday.com/
+    year: 2024
+gap: >-
+  Cultured meat is made only in small, costly batches. Cheap growth media, bioreactors that grow cells
+  to high density without contamination, and scaffolds that turn a cell mass into a textured cut are
+  all unsolved at scale, and no product yet matches farmed meat on price. Growing a steak, not just a
+  nugget, by the megatonne is the challenge.
+inventions: [scaffold-free-meat-bioreactor]
+scene:
+  kind: cell
+  focus: Animal muscle and fat cells multiplying and fusing into fibres in a bioreactor.
+  params: { type: animal, organelles: 0.6, divide: true }

@@ -1,0 +1,46 @@
+id: ai-safety
+title: AI that stays safe as it grows more capable
+domain: resilience
+stage: k08
+needs: []
+summary: >-
+  The climb leans on AI to design and run industry far faster than people could, and in the end
+  to run factories that copy themselves every {doubling-time}. That only helps if the systems do
+  what people intend, can be checked, and cannot be turned to catastrophic misuse. Safety has to
+  grow as fast as capability.
+target: >-
+  AI systems whose goals and reasoning can be inspected, whose dangerous capabilities are measured
+  before release, and whose every physical action passes limits that people set, so that AI can run
+  industry at the scale of the solar system without anyone losing control of it.
+exists:
+  - text: The International AI Safety Report, written by over 100 experts led by Yoshua Bengio and backed by more than 30 countries, published its second edition in February 2026.
+    url: https://internationalaisafetyreport.org/
+    year: 2026
+  - text: Researchers set out a framework for guaranteed safe AI in 2024, in which a world model, a mathematical safety specification and a verifier give an auditable proof that a system's effects stay acceptable.
+    url: https://arxiv.org/abs/2405.06624
+    year: 2024
+  - text: The UK AI Security Institute evaluates frontier models; in 2026 it found leading open-weight models matched closed models released 4 to 7 months earlier on cyber skills.
+    url: https://www.aisi.gov.uk/
+    year: 2026
+  - text: Anthropic's Responsible Scaling Policy defines AI Safety Levels, modelled on biosafety levels, that tie stricter safeguards to more dangerous capabilities.
+    url: https://www.anthropic.com/news/anthropics-responsible-scaling-policy
+    year: 2023
+  - text: Google DeepMind published its Frontier Safety Framework in May 2024, defining Critical Capability Levels at which a model could help cause severe harm, and early-warning evaluations to detect them.
+    url: https://deepmind.google/discover/blog/introducing-the-frontier-safety-framework/
+    year: 2024
+  - text: Interpretability researchers extracted millions of human-readable features from inside a production language model, Claude 3 Sonnet.
+    url: https://transformer-circuits.pub/2024/scaling-monosemanticity/
+    year: 2024
+  - text: The EU's Artificial Intelligence Act entered into force on 1 August 2024, with its rules phasing in over the following three years.
+    url: https://en.wikipedia.org/wiki/Artificial_Intelligence_Act
+    year: 2024
+gap: >-
+  Nobody can yet read a large model's goals from its weights, and evaluations find dangerous skills
+  only if someone thought to test for them. Safety frameworks are mostly voluntary. Almost nothing
+  stands between an AI agent and the machines it commands except the agent's own training, which
+  is not good enough for factories that run themselves.
+inventions: [the-governor]
+scene:
+  kind: compute
+  focus: A data centre where every rack's output passes a checkpoint before it reaches the world.
+  params: { kind: datacentre, racks: 600, radiators: 0.2 }

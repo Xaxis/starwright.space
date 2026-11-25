@@ -1,0 +1,43 @@
+id: workforce-transition
+title: Skilled hands for the buildout
+domain: people
+stage: k08
+needs: [universal-education]
+summary: >-
+  The climb is built by people before it is built by machines: electricians, welders, line workers,
+  technicians and engineers by the tens of millions. Energy firms already struggle to hire them, and
+  workers in coal, oil and gas need new work as those industries shrink. The climb needs to train
+  people as fast as it builds, and to let anyone move into its work at any age.
+target: >-
+  A workforce that grows in step with the buildout, trained mostly on the job and paid while they
+  train, with every worker leaving a shrinking industry offered a funded path into the new ones, and
+  skills recognised across borders so workers can go where the building is.
+exists:
+  - text: Renewable energy jobs worldwide rose from 13.7 million in 2022 to 16.2 million in 2023, the largest yearly increase recorded, according to IRENA and the ILO.
+    url: https://www.ilo.org/resource/news/jobs-renewable-energy-record-highest-annual-growth-rate-reaching-162
+    year: 2023
+  - text: The IEA counted 76 million jobs in the energy sector in 2024 and found shortages of skilled workers had become a top concern for energy firms.
+    url: https://www.iea.org/reports/world-energy-employment-2025/executive-summary
+    year: 2025
+  - text: Since April 2017, UK employers with a pay bill over 3 million pounds have paid an apprenticeship levy of 0.5 percent of it, pooled to fund training.
+    url: https://www.gov.uk/guidance/pay-apprenticeship-levy
+    year: 2017
+  - text: In Germany's dual system, where apprentices split their time between a firm and a vocational school, 468,900 people signed new apprenticeship contracts in 2022.
+    url: https://www.destatis.de/EN/Press/2023/04/PE23_144_212.html
+    year: 2022
+  - text: Under the US Inflation Reduction Act of 2022, clean energy projects earn credits five times larger if they pay prevailing wages and have apprentices do a set share of the work, 15 percent of labour hours for construction begun from 2024.
+    url: https://www.irs.gov/credits-deductions/frequently-asked-questions-about-the-prevailing-wage-and-apprenticeship-under-the-inflation-reduction-act
+    year: 2022
+  - text: Acemoglu and Pischke explained in 1998 why firms invest in general training even though trained workers can leave, and why they still invest too little.
+    url: https://doi.org/10.1162/003355398555531
+    year: 1998
+gap: >-
+  Training is funded country by country and lags projects by years, and firms underinvest in general
+  skills because a trained worker can be hired away. The buildout's fastest growth comes in countries
+  with the weakest training systems, and nothing ties training to each project the way finance and
+  permits are tied to it.
+inventions: [gigawatt-guild]
+scene:
+  kind: field
+  focus: A solar field being built row by row by crews that include trainees from the town nearby.
+  params: { unit: panel, count: 3000, terrain: plain }

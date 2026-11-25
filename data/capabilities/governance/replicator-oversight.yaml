@@ -1,0 +1,40 @@
+id: replicator-oversight
+title: Oversight of machines that copy themselves
+domain: governance
+stage: k09
+needs: [post-quantum-security]
+summary: >-
+  A factory that copies itself every {doubling-time} is the engine of the climb, and it is also the
+  most powerful machine anyone will have built. A lineage that copies itself without limit, or one
+  taken over and turned to other ends, could consume resources it was never meant to touch. The
+  first seed in {seed-year} needs rules and technical checks, agreed before it is built, that keep
+  every copy answerable to people.
+target: >-
+  Every self-copying machine, from the first seed onward, built so that it cannot finish a working
+  copy of itself without a permission that people can grant, track and withdraw, with an open
+  register of every lineage and an inspection regime that rival blocs both trust.
+exists:
+  - text: The Foresight Institute's guidelines for molecular manufacturing (version 6, 2006) say manufacturing needs no autonomous replicators, and that any replicator can be made safe by a broadcast architecture with no instructions on board, or by dependence on a substance not found in nature.
+    url: https://www.imm.org/policy/guidelines/
+    year: 2006
+  - text: Phoenix and Drexler argued in 2004 that productive factories do not need machines that copy themselves autonomously.
+    url: https://doi.org/10.1088/0957-4484/15/8/001
+    year: 2004
+  - text: At Asilomar in 1975, the scientists who invented recombinant DNA agreed safety rules for their own field before the risks were known.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC432675/
+    year: 1975
+  - text: Daisy-chain gene drives, published in 2019, spread through a population only for a limited number of generations, because each link of the chain is lost in turn and the drive runs out.
+    url: https://doi.org/10.1073/pnas.1716358116
+    year: 2019
+  - text: The International Atomic Energy Agency applied nuclear safeguards, its accounting and inspection of nuclear material, in 189 states in 2023.
+    url: https://www.iaea.org/sites/default/files/gc/gc68-2.pdf
+    year: 2023
+gap: >-
+  No law anywhere covers machines that copy themselves, because none yet do. The ideas that exist,
+  broadcast instructions and dependence on an outside input, are design principles, not tested
+  systems. There is no register, licence or inspection body for replicating lineages.
+inventions: [lineage-licence]
+scene:
+  kind: replicator
+  focus: A tree of factories copying themselves, each branch lit only while its licence is valid.
+  params: { unit: fab, generations: 6, closure: 0.9 }

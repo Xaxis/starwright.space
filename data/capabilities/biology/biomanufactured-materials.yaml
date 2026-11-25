@@ -1,0 +1,38 @@
+id: biomanufactured-materials
+title: Materials grown, not mined
+domain: biology
+stage: k08
+needs: [programmable-biology, abundant-compute]
+summary: >-
+  Living cells already build some of the toughest materials known, from spider silk to nacre to
+  wood, at room temperature out of air, water and sunlight. If we can design and scale that, a large
+  share of the fibres, plastics, adhesives and structural polymers a growing civilization needs can
+  be brewed in tanks from renewable feedstock instead of pumped from oil or baked in furnaces, with
+  far less heat and carbon.
+target: >-
+  Produce high-performance structural proteins and polymers, silk-strong fibres, tough bioplastics
+  and self-assembling composites, by fermentation at commodity scale and price, so that grown
+  materials replace a large fraction of petrochemical and energy-intensive ones.
+exists:
+  - text: Precision fermentation already makes animal proteins without animals; Perfect Day brews dairy whey protein in microbes as a commercial product.
+    url: https://perfectday.com/
+    year: 2024
+  - text: The alternative-protein fermentation sector drew 4.1 billion USD of all-time investment across 158 companies by the end of 2023, building the bioreactors and strains grown materials will share.
+    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
+    year: 2024
+  - text: ESM3 designed a novel functional protein far from any natural sequence, showing that the proteins behind new materials can now be designed, not just copied from nature.
+    url: https://www.evolutionaryscale.ai/blog/esm3-release
+    year: 2025
+  - text: RFdiffusion designs new proteins from scratch with a 19 percent experimental binding success rate, two orders of magnitude better than the previous method, a tool for engineering structural and adhesive proteins.
+    url: https://doi.org/10.1038/s41586-023-06415-8
+    year: 2023
+gap: >-
+  Grown materials work at small scale and premium prices. Getting a microbe to secrete long, repetitive
+  structural proteins at high yield, spinning them into fibres as strong as the natural ones, and
+  doing it at the cost of bulk plastic are all unsolved. Nobody has shown a grown structural material
+  competing on price with the petrochemical it would replace.
+inventions: [fermented-structural-fiber]
+scene:
+  kind: lattice
+  focus: Repeating protein chains folding and lining up into an ordered, load-bearing fibre.
+  params: { structure: protein, defects: 0.2 }

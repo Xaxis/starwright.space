@@ -1,0 +1,41 @@
+id: space-chip-fabs
+title: Chips made in space from space materials
+domain: computation
+stage: type-1
+needs: [orbital-industry, in-space-resources, small-fabs]
+summary: >-
+  The swarm's collectors, the factories that copy themselves and the computers that run them all
+  need chips, by the trillion. Lifting them from Earth would cap the climb at what Earth's fabs
+  make. Space offers what a fab spends most of its money imitating: a vacuum cleaner than any
+  cleanroom, unlimited and free. Silicon, aluminium and oxygen are in every lunar and asteroid rock.
+  Chips made in space, from space rock, close the last gap in the self-copying loop.
+target: >-
+  Fabs in orbit and on the Moon that make the chips the space industry needs from local silicon and
+  metals, importing only a small and falling share of their mass from Earth, so that chips stop
+  limiting an industry that doubles every {doubling-time}, by the time the climb reaches Type I in
+  {year-type-1}.
+exists:
+  - text: NASA's Wake Shield Facility flew on three Shuttle missions from 1994 to 1996; moving faster than the gas around it, it left an ultra-high vacuum in its wake, where it grew thin semiconductor films by epitaxy.
+    url: https://en.wikipedia.org/wiki/Wake_Shield_Facility
+    year: 1996
+  - text: Space Forge's ForgeStar-1, launched in June 2025, lit its furnace at 1,000 °C and made plasma in orbit, a step toward growing semiconductor crystals in microgravity.
+    url: https://en.wikipedia.org/wiki/Space_Forge
+    year: 2025
+  - text: Flawless Photonics pulled more than 11 km of ZBLAN optical fibre on the International Space Station and returned it to Earth.
+    url: https://www.flawlessphotonics.com/
+    year: 2024
+  - text: Molten oxide electrolysis, first developed under a NASA grant to make oxygen from lunar soil, splits metal oxides into oxygen and molten metal with electricity alone.
+    url: https://news.mit.edu/2013/steel-without-greenhouse-gas-emissions-0508
+    year: 2013
+  - text: Japan's Minimal Fab shows a chip line can be built from desk-sized tools working on half-inch wafers.
+    url: https://www.minimalfab.com/en/about/greeting.php
+    year: 2026
+gap: >-
+  No transistor has been made in space. A fab needs ultra-pure silicon, dopants, dozens of process
+  steps and gases, all of which would have to come from rock. Even on Earth, no fab makes chips
+  without masks, liquids and cleanrooms, the parts that are hardest to carry or copy.
+inventions: [vacuum-fab]
+scene:
+  kind: compute
+  focus: A wafer turning in the shadow of a shield in orbit, patterned by beams with no cleanroom around it.
+  params: { kind: wafer, racks: 1, radiators: 0.3, orbit: true }

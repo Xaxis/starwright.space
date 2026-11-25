@@ -1,0 +1,43 @@
+id: biodiversity
+title: Protecting the living world
+domain: environment
+stage: k08
+needs: [earth-monitoring]
+summary: >-
+  Monitored wildlife populations have fallen by an average of 73 percent since 1970, and around a
+  million species are threatened with extinction. A civilization that multiplies its energy use must
+  not take the rest of life down with it. The plan itself puts panels on {land-share} of the land, so
+  panels, mines and lines must go where they do least harm, and other land must go back to nature.
+target: >-
+  Conserve at least 30 percent of land and sea well by 2030, halt human-driven extinctions, and track
+  life well enough to know whether it is working, while solar fields spread across {land-share} of
+  the land.
+exists:
+  - text: Target 3 of the Kunming-Montreal Global Biodiversity Framework, agreed in December 2022, asks that at least 30 percent of land, inland waters and seas be effectively conserved by 2030.
+    url: https://www.cbd.int/gbf/targets/3
+    year: 2022
+  - text: The Living Planet Report 2026 finds monitored vertebrate populations fell by an average of 73 percent between 1970 and 2022.
+    url: https://wwflpr.awsassets.panda.org/downloads/living-planet-report-2026-english.pdf
+    year: 2026
+  - text: The IPBES Global Assessment found in 2019 that around 1 million animal and plant species are threatened with extinction, and that 75 percent of the land has been significantly altered by people.
+    url: https://www.ipbes.net/news/Media-Release-Global-Assessment
+    year: 2019
+  - text: The Protected Planet Report 2024 put protected and conserved areas at 17.6 percent of land and 8.4 percent of the ocean.
+    url: https://digitalreport.protectedplanet.net/
+    year: 2024
+  - text: Littlefair and colleagues recovered DNA from more than 180 kinds of animals, plants and fungi on the filters of UK air-quality stations, showing existing networks could monitor life across a continent.
+    url: https://doi.org/10.1016/j.cub.2023.04.036
+    year: 2023
+  - text: Colossal Biosciences announced gene-edited wolves bred to resemble the extinct dire wolf, born in 2024 and 2025 and healthy at two years old.
+    url: https://colossal.com/direwolf/
+    year: 2026
+gap: >-
+  Protected areas cover under a fifth of the land and a tenth of the sea, and protection on paper
+  does not stop decline. Most species have never been counted, so most losses go unseen. Farming is
+  still the largest cause of habitat loss, and the buildout of panels, mines and lines adds pressure
+  of its own.
+inventions: []
+scene:
+  kind: globe
+  focus: Forests, wetlands and grasslands linked into corridors across the continents.
+  params: { green: 0.9, look: forests }

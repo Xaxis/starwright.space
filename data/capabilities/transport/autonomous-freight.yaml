@@ -1,0 +1,36 @@
+id: autonomous-freight
+title: Freight that moves itself
+domain: transport
+stage: k08
+needs: [electric-transport, abundant-compute]
+summary: >-
+  Freight is held back by drivers as much as by vehicles: they are a large share of the cost and
+  must rest. Freight that drives itself can run day and night, in smaller and steadier loads, at the
+  lower speeds that save energy. It is also practice for the much larger task ahead, where industry
+  in space moves mass with no one on site at all.
+target: >-
+  Driverless electric trucks, trains, ships and delivery robots carrying most of the world's freight,
+  routed as one network by cost, energy and time, with a safety record better than human drivers.
+exists:
+  - text: Aurora began driverless commercial trucking between Dallas and Houston in April 2025, and by October 2025 had passed 100,000 driverless miles with five trucks regularly hauling customer freight.
+    url: https://ir.aurora.tech/news-events/press-releases/detail/128/aurora-expands-driverless-trucking-service-from-fort-worth-to-el-paso
+    year: 2025
+  - text: Rio Tinto's AutoHaul in Western Australia, completed in 2020, is the world's first heavy-haul long-distance autonomous railway, with about 200 locomotives on more than 1,700 km of track.
+    url: https://www.riotinto.com/en/mn/about/innovation/automation
+    year: 2020
+  - text: Komatsu had commissioned more than 900 autonomous haul trucks by October 2025, which have moved more than 10 billion tons.
+    url: https://www.komatsu.com/en-us/technology/smart-mining/loading-and-haulage/autonomous-haulage-system
+    year: 2025
+  - text: Waymo gave 500,000 paid driverless rides a week as of June 2026.
+    url: https://en.wikipedia.org/wiki/Waymo
+    year: 2026
+gap: >-
+  Driverless freight runs on a few highway corridors, mine sites and one private railway. It is not
+  yet allowed or proven in snow, dense cities, ports and border crossings, and the systems of
+  different makers and modes do not talk to each other. The technology is arriving; the gap is
+  rules, coverage and a shared network.
+inventions: []
+scene:
+  kind: network
+  focus: Depots and corridors across a continent, with loads flowing between them day and night.
+  params: { shape: flat, nodes: 1200, clusters: 30, links: 0.6, pulses: 0.9 }

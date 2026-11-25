@@ -1,0 +1,88 @@
+id: vapour-loom
+title: The Vapour Loom
+domain: energy
+for: [thin-film-collectors, space-solar-power]
+pitch: >-
+  A roll-to-roll coater that works in the open vacuum of space, growing a whole collector, mirror,
+  cell and wiring, from evaporated lunar silicon, aluminium and glass onto a turning drum, and peeling
+  it off as a free-standing film a few microns thick with no polymer in it.
+principle: >-
+  On Earth, thin films are grown inside vacuum chambers that cost more than the films. In space the
+  vacuum is free and has no walls. Molten regolith electrolysis turns lunar soil into oxygen, iron,
+  silicon and aluminium; heated in crucibles by concentrated sunlight, these evaporate and condense on
+  whatever faces them. The Loom is a drum a few metres wide turning past a row of evaporation sources.
+  On each pass it lays down, in order, a salt release layer, an aluminium back contact and mirror, a
+  silicon absorber a few microns thick that a line of focused light crystallises as it passes, a doped
+  top layer, aluminium grid lines and a cover of silica glass. The film is peeled off at the far side
+  of the drum, and the salt left on the drum is evaporated and reused. The result is glass, silicon and
+  aluminium, about 14 g per square metre, lighter than the plan's {collector-density} and free of the
+  polymers that ultraviolet light destroys. Energy is cheap here: evaporating 7 g of silicon takes about
+  0.1 MJ, so a loom run by a megawatt of sunlight can make about two square metres a second, sixty
+  square kilometres a year, and each square metre of film pays back the energy it took within hours.
+buildsOn:
+  - text: Freundlich, Ignatiev and colleagues designed a rover that evaporates thin-film silicon solar cells onto melted regolith in lunar vacuum, using about 200 W and about 100 g of evaporants per array element.
+    url: https://ntrs.nasa.gov/api/citations/20050110155/downloads/20050110155.pdf
+    year: 2005
+  - text: Blue Origin has made solar cells and transmission wire from lunar regolith simulant since 2021, by molten regolith electrolysis that extracts iron, silicon and aluminium.
+    url: https://www.space.com/blue-origin-solar-cells-moon-dirt-simulant
+    year: 2023
+  - text: Allanore, Yin and Sadoway at MIT found a chromium-iron anode for molten oxide electrolysis at about 1,600 °C that releases only oxygen, work that began as NASA research into making oxygen on the Moon.
+    url: https://news.mit.edu/2013/steel-without-greenhouse-gas-emissions-0508
+    year: 2013
+  - text: Lu and colleagues made free-standing single-crystal oxide films only nanometres thick by growing them on a water-soluble sacrificial layer and dissolving it.
+    url: https://doi.org/10.1038/nmat4749
+    year: 2016
+  - text: Kaltenbrunner and colleagues showed solar cells 3 microns thick can give up to 23 W per gram.
+    url: https://doi.org/10.1038/nmat4388
+    year: 2015
+  - text: Lunar Resources Inc. is developing extraction of oxygen, aluminium, iron, silicon and magnesium from regolith and the deposition of thin-film devices from them.
+    url: https://www.lunarresources.space/
+    year: 2026
+experiment:
+  goal: Grow a free-standing, polymer-free solar film on a turning drum in vacuum from silicon, aluminium and silica refined from lunar simulant, and measure its weight, efficiency and endurance.
+  setup: >-
+    A roll coater 1 m wide in a vacuum chamber, with electron-beam sources for silicon, silica and
+    aluminium refined by molten oxide electrolysis of lunar simulant, a salt release-layer source, a
+    line laser that crystallises the silicon, and a take-up roll for the peeled film. Samples go to a
+    proton and ultraviolet test facility.
+  measure: Mass per square metre; cell efficiency under space sunlight (AM0); metres of good film per hour; the share that peels intact; power lost after a radiation dose equal to five years at {swarm-radius} from the Sun.
+  succeedsIf: Film lighter than {collector-density} that converts more than 12 percent of AM0 sunlight, peels intact in 10 m lengths, and loses less than 10 percent of its power after the radiation dose.
+  costUsd: 7000000
+  months: 30
+path:
+  - phase: bench
+    what: The chamber coater on Earth, fed with simulant-derived materials.
+    scale: Square metres a day.
+    proves: Polymer-free, free-standing film cells of the right weight.
+  - phase: prototype
+    what: A small loom flown on a free-flyer, open to space and heated by sunlight, fed with silicon and aluminium from Earth.
+    scale: About 100 square metres a day.
+    proves: Coating in open vacuum and microgravity, with sunlight as the heat source.
+  - phase: pilot
+    what: A loom on the Moon fed by a regolith electrolysis plant, making collectors for lunar bases and for solar power in orbit.
+    scale: A hectare a week.
+    proves: Collectors made from lunar material alone.
+  - phase: first-plant
+    what: Looms in lunar orbit or at L5, fed by rock from the mass drivers, weaving collectors for space solar power.
+    scale: About 60 square kilometres a year per loom.
+    proves: Collectors made in space for less than the cost of launching them.
+  - phase: fleet
+    what: Looms built by the seed factories near the Moon, at the asteroids and at Mercury.
+    scale: Thousands of looms.
+    proves: Collector output that grows with the self-copying industry.
+  - phase: civilization
+    what: The swarm's {swarm-full-area} of collector, woven at {collector-density}.
+    scale: "{swarm-full-area}"
+    proves: Area enough to catch the Sun.
+risks: >-
+  Silicon a few microns thick absorbs sunlight poorly and may convert only half of the plan's
+  {collector-efficiency}; light-trapping textures, a second absorber layer, or pairing the film with
+  the mirrors of the Cascade Collector are the next tries. Films with no polymer are brittle, and a
+  crack from a micrometeoroid may run; the film is cut into small panels joined by aluminium hinges.
+  Crystallising silicon on a moving film without melting through it is hard; micro-crystalline
+  silicon is the fallback, at lower efficiency. Silicon from regolith electrolysis may be too impure
+  for cells; then the loom adds a zone-refining step, or uses its film only for mirrors.
+scene:
+  kind: machine
+  focus: A turning drum in open space, glowing evaporation sources beneath it and a sheet of film peeling away into the sunlight.
+  params: { shape: printer, spin: 0.5 }

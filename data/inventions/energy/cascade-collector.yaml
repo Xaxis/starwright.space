@@ -1,0 +1,88 @@
+id: cascade-collector
+title: The Cascade Collector
+domain: energy
+for: [dyson-swarm, starlight-at-the-limit, mercury-power]
+pitch: >-
+  A swarm element that splits catching light from converting it: a huge, cheap mirror of aluminium
+  film folds sunlight onto a small hot core, where a chain of converters takes work from the heat at
+  falling temperatures before the last stage radiates what is left to space.
+principle: >-
+  Covering a swarm in solar cells makes every square metre of it a semiconductor that runs hot and
+  wears out in the sunlight. A mirror is far simpler: aluminium a tenth of a micron thick reflects
+  about 90 percent of sunlight and weighs under a gram per square metre. The Cascade Collector is
+  mostly mirror. A dish of film hundreds of metres across concentrates sunlight about a thousand times
+  onto a core that glows at about 2,000 K. Around the core, thermophotovoltaic cells tuned to that glow
+  turn about 40 percent of it into electricity, as MIT and NREL showed in 2022, and reflect the light
+  they cannot use back into the core. The cells shed their heat at about 600 K, and a second stage,
+  thermoradiative diodes or a small heat engine, takes more work from that heat before radiators shed
+  the rest. Each stage runs hot, so radiators stay small: radiated power rises with the fourth power of
+  temperature, and at 600 K a square metre sheds sixteen times as much as at 300 K. The ceiling is the
+  Landsberg limit, {landsberg-limit} for sunlight; the cascade aims to pass the plan's
+  {collector-efficiency}, and to put its mass where mass is cheapest, in mirror.
+buildsOn:
+  - text: Armstrong and Sandberg's Mercury swarm uses collectors that concentrate sunlight, convert it and beam the power on, at an overall efficiency of one third.
+    url: https://doi.org/10.1016/j.actaastro.2013.04.002
+    year: 2013
+  - text: LaPotin and colleagues at MIT and NREL turned more than 40 percent of the light from an emitter at 1,900 to 2,400 °C into electricity with two-junction thermophotovoltaic cells that reflect unusable light back to the emitter.
+    url: https://doi.org/10.1038/s41586-022-04473-y
+    year: 2022
+  - text: Nielsen and colleagues at UNSW measured power from a thermoradiative diode, which makes electricity by emitting infrared light.
+    url: https://doi.org/10.1021/acsphotonics.2c00223
+    year: 2022
+  - text: L'Garde's Inflatable Antenna Experiment, flown from the Space Shuttle in 1996, inflated a 14 m film reflector in orbit on three 28 m struts.
+    url: https://www.lgarde.com/wp-content/uploads/2019/11/Preliminary-Mission-Report.pdf
+    year: 1997
+  - text: A NASA study found heat-pipe space radiators weigh about 5 kg per square metre, and perhaps 2 kg with advanced composites.
+    url: https://ntrs.nasa.gov/api/citations/19870010920/downloads/19870010920.pdf
+    year: 1987
+  - text: Wright found that for a fixed mass, small hot Dyson spheres do better than large cold ones, and that nesting shells gives little gain in work.
+    url: https://arxiv.org/abs/2309.06564
+    year: 2023
+experiment:
+  goal: Measure the end-to-end efficiency and the mass per kilowatt of a hot core with two converter stages under concentrated sunlight in vacuum.
+  setup: >-
+    A high-flux solar simulator focused into a vacuum chamber onto a 10 cm tungsten core, ringed by
+    two-junction thermophotovoltaic cells on a cooling plate held at 600 K, with thermoradiative or
+    thermoelectric devices on the back of that plate and a radiator facing a cold shroud. Every flow of
+    light, heat and electricity is metered.
+  measure: Electricity out over light in, for each stage and in total; core, cell and radiator temperatures; mass of core, converters and radiator per kilowatt; degradation over 1,000 hours.
+  succeedsIf: More than 35 percent of the concentrated light entering the core leaves as electricity, with converters and radiator under 1 kg per kilowatt, sustained for 1,000 hours.
+  costUsd: 2500000
+  months: 18
+path:
+  - phase: bench
+    what: The hot core and its converter stages in the vacuum chamber.
+    scale: A few kilowatts of light.
+    proves: Efficiency and mass per kilowatt that a swarm could build on.
+  - phase: prototype
+    what: A 10 m film mirror and core flown in Earth orbit.
+    scale: About 100 kW of sunlight.
+    proves: Concentration, pointing and hot radiators working in space.
+  - phase: pilot
+    what: Mirror units 200 m across powering industry in Earth orbit and on the Moon.
+    scale: About 40 MW of sunlight per unit.
+    proves: The unit can be made by space industry and runs for years.
+  - phase: first-plant
+    what: Units on Mercury's surface and in orbit around it, powering the mines and mass drivers from {year-k15}.
+    scale: Gigawatts at Mercury.
+    proves: Converters that thrive on strong sunlight and high heat.
+  - phase: fleet
+    what: Units built by the billion from Mercury's metal, flown at {swarm-radius}.
+    scale: Billions of units.
+    proves: A swarm element that can be mass-produced from rock.
+  - phase: civilization
+    what: The swarm, harnessing {type-2-power} and then more of the Sun's light than flat cells could.
+    scale: Toward nearly three times {sun-harnessed}.
+    proves: One star's light turned into work near the thermodynamic limit.
+risks: >-
+  Pointing a film dish accurately enough for thousandfold concentration is hard; lower concentration
+  and a cooler core are the fallback, at some cost in efficiency. Thermophotovoltaic cells degrade at
+  high temperature and use gallium, indium and arsenic, which are scarce in Mercury's rock; silicon or
+  germanium cells, or a small Brayton engine, can stand in. Wright's analysis finds nested shells give
+  little gain over one hot, well-designed shell, so the cascade runs inside each collector rather than
+  across shells. A swarm of mirrors could scatter light and heat toward Earth, which the Daylight Lane
+  is designed to prevent.
+scene:
+  kind: swarm
+  focus: One mirror leaf folding sunlight onto its white-hot core, then millions like it around the Sun.
+  params: { built: 0.7, radiusAu: 0.6, mercury: true }

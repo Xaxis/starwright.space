@@ -1,0 +1,78 @@
+id: lattice-pen-array
+title: The Lattice Pen Array
+domain: manufacturing
+for: [molecular-manufacturing]
+pitch: >-
+  Thousands, then millions, of atom-sharp tips working side by side on a silicon crystal, each
+  steering itself by watching the crystal's own rows of atoms, so atomically exact patterns are
+  written in parallel with no outside ruler finer than the lattice.
+principle: >-
+  On a silicon surface capped with hydrogen, a scanning tunnelling microscope tip can knock off
+  single hydrogen atoms with a pulse of electrons, leaving dangling bonds exactly where it chose. A
+  gas then reacts only at those bare sites: phosphine leaves a phosphorus atom, disilane a new layer
+  of silicon. That is how single-atom transistors were made. It works, but one tip writes slowly,
+  and a fleet of tips would seem to need positioning far finer than any stage. The Lattice Pen Array
+  removes that need. Each tip images the surface as it moves and locks onto the hydrogen rows
+  beneath it, counting atom sites as an encoder counts lines, so the crystal itself is the ruler and
+  every tip knows where it is to one lattice site. The tips sit on a micromachined array, as IBM's
+  Millipede put 1,024 probes on one chip, each with its own height actuator and current amplifier;
+  the array shares one coarse scan, and each tip makes its own atom-scale corrections. Errors are
+  read back by the same tips before the gas is let in, and fixed.
+buildsOn:
+  - text: Single-atom placement in silicon by hydrogen-resist lithography with a scanning tunnelling microscope (Fuechsle and colleagues, Nature Nanotechnology, 2012).
+    url: https://www.nature.com/articles/nnano.2012.21
+  - text: Zyvex Labs' work on atomically precise manufacturing for quantum devices.
+    url: https://www.zyvexlabs.com/apm/
+  - text: IBM's Millipede, with 1,024 scanning probes on one chip in a 32 by 32 grid.
+    url: https://en.wikipedia.org/wiki/Millipede_memory
+  - text: Eigler and Schweizer's positioning of single xenon atoms with a scanning tunnelling microscope (Nature, 1990).
+    url: https://www.nature.com/articles/344524a0
+  - text: Feynman's 1959 lecture There's Plenty of Room at the Bottom, which first proposed building with atoms.
+    url: https://web.pa.msu.edu/people/yang/RFeynman_plentySpace.pdf
+experiment:
+  goal: Show that many tips on one chip can each write atomically exact patterns at once, guided only by the lattice.
+  setup: >-
+    A micromachined array of 100 tips, each with an electrostatic height actuator and its own
+    current amplifier, on an ultra-high-vacuum scanning tunnelling microscope, writing on
+    hydrogen-terminated silicon (100). Each tip writes the same 100-site test pattern, which is then
+    read back by imaging before and after phosphine dosing.
+  measure: Fraction of tips that write their pattern with zero atomic errors; errors per thousand sites; sites written per second per tip and for the whole array; how many tips need replacing per hour.
+  succeedsIf: At least 50 of the 100 tips write the 100-site pattern with zero errors in one session, and the array as a whole writes at least 20 times faster than one tip.
+  costUsd: 5000000
+  months: 30
+path:
+  - phase: bench
+    what: The 100-tip array on hydrogen-capped silicon.
+    scale: 100 tips, patterns of hundreds of atoms.
+    proves: Parallel atom-exact writing, with the lattice as the only ruler.
+  - phase: prototype
+    what: A 10,000-tip array writing quantum devices and atomically exact masters for nanoimprint.
+    scale: Millions of atom sites an hour.
+    proves: A product that pays for the next array.
+  - phase: pilot
+    what: Arrays writing atom-exact templates that self-assembly (DNA frames, molecular machines) fills out in three dimensions.
+    scale: Square millimetres of patterned surface a day.
+    proves: Tips and chemistry together can build in three dimensions.
+  - phase: first-plant
+    what: Arrays that write the tips and actuators of the next array, fabricated with atomic precision.
+    scale: A million tips per array.
+    proves: The tool builds its own kind, so its cost falls as it grows.
+  - phase: fleet
+    what: Atomically precise lines making computing elements and catalysts for the industry in space.
+    scale: Grams a day across many lines.
+    proves: Atom-exact products at industrial rates.
+  - phase: civilization
+    what: The swarm's computing and finest machines built atom by atom, from {year-k15}.
+    scale: Wherever precision is worth its energy.
+    proves: Matter can be built as precisely as it can be described.
+risks: >-
+  Tips blunt or pick up atoms and change their image, and with a hundred tips that happens often;
+  each tip would then be reconditioned in place by field pulses, as single tips are now, and the
+  bench counts how often. Micromachined tips may not hold the sub-nanometre gap stability a single
+  rigid microscope does; cooling the array or stiffening each cantilever is the next try. Silicon
+  surface chemistry may limit what can be built to dopants and silicon; other surfaces, such as
+  germanium or diamond, would be explored for richer chemistry.
+scene:
+  kind: lattice
+  focus: A row of tips over a silicon crystal, each lifting hydrogen atoms off in the same exact pattern.
+  params: { structure: diamond, defects: 0.01 }

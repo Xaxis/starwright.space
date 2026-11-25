@@ -1,0 +1,45 @@
+id: fast-permitting
+title: Deciding fast and fairly what gets built
+domain: governance
+stage: k08
+needs: []
+summary: >-
+  The climb to {power-k08} means building solar fields, power lines and factories at a pace no
+  permitting system was designed for. Today the slow step is often not the factory or the money but
+  the decision: reviews that take years, queues to connect to the grid that take longer, and late
+  lawsuits that restart both. Fast is not enough on its own. A decision people see as unfair gets
+  fought, so the process must also give neighbours a real say early and a share of the gains.
+target: >-
+  Every clean energy, grid and industrial project gets a yes or a no, with reasons, within a fixed
+  and published time (a year for most, two for the largest), with the people affected heard before
+  the design is fixed and a share of the benefits written into the permit.
+exists:
+  - text: The US Council on Environmental Quality found in 2020 that a federal environmental impact statement took 4.5 years on average from notice of intent to decision, with a median of 3.5 years.
+    url: https://nepa.gov/sites/default/files/documents/CEQ_EIS_Timeline_Report_2020-6-12.pdf
+    year: 2020
+  - text: Berkeley Lab's Queued Up 2025 counted about 10,300 projects waiting to connect to the US grid, holding 1,400 GW of generation and about 890 GW of storage, and found the median wait from request to operation had doubled to over four years.
+    url: https://eta-publications.lbl.gov/publications/queued-2025-edition-characteristics
+    year: 2025
+  - text: The US Federal Permitting Improvement Steering Council, set up under FAST-41 in 2015, coordinates federal reviews of large projects on fixed timetables; in 2025 its portfolio grew to 76 active projects and 13 completed permitting.
+    url: https://www.permitting.gov/newsroom/press-releases/year-one-trump-administration-fast-41-accomplishments
+    year: 2026
+  - text: The EU's 2023 renewable energy directive caps permitting at 12 months inside designated renewables acceleration areas and two years outside them.
+    url: https://eur-lex.europa.eu/eli/dir/2023/2413/oj
+    year: 2023
+  - text: SolarAPP+, an automated online plan review for home solar and storage, served more than 350 jurisdictions and issued more than 150,000 permits by 2026.
+    url: https://www.gosolarapp.org/
+    year: 2026
+  - text: The EU Services Directive of 2006 provides that when an authority does not answer a licence application in time, the authorisation is deemed granted unless overriding public interest requires otherwise.
+    url: https://eur-lex.europa.eu/eli/dir/2006/123/oj
+    year: 2006
+gap: >-
+  The fast paths that exist cover small or standard things: rooftop solar, telecom masts, some
+  renewables in Europe. Large, new or cross-border projects such as long transmission lines still
+  wait years, because many agencies review one after another, deadlines are unclear and challenges
+  can come late. Nobody has shown a process that is both fast and trusted for large projects that
+  cross many jurisdictions.
+inventions: [permit-clock]
+scene:
+  kind: network
+  focus: Agencies as nodes around one project, their reviews running at the same time instead of one after another.
+  params: { shape: flat, nodes: 300, clusters: 12, links: 0.5, pulses: 0.8 }

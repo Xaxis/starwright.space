@@ -70,6 +70,8 @@ function words(x: number): string {
 export function format(value: number, unit: string): string {
   if (unit === "year") return Number.isFinite(value) ? String(Math.round(value)) : "never";
   if (!Number.isFinite(value)) return "never";
+  // Physics constants run far below a thousandth: Landauer's limit is a few zeptojoules.
+  const tiny = value !== 0 && Math.abs(value) < 1e-3;
   switch (unit) {
     case "W":
       return Math.abs(value) >= 1e18 ? `${sci(value)} W` : si(value, "W");
@@ -86,7 +88,12 @@ export function format(value: number, unit: string): string {
       return `${sig(value)} m²`;
     }
     case "W/m2":
-      return `${sig(value)} W/m²`;
+      return `${tiny ? sci(value) : sig(value)} W/m²`;
+    case "m": {
+      if (Math.abs(value) >= 1e12) return `${sci(value)} m`;
+      if (Math.abs(value) >= 1e4) return `${words(value / 1000)} km`;
+      return `${tiny ? sci(value) : sig(value)} m`;
+    }
     case "yr": {
       const s = sig(value, value < 10 ? 2 : 3);
       return `${s} ${s === "1" ? "year" : "years"}`;
@@ -96,12 +103,20 @@ export function format(value: number, unit: string): string {
     case "share":
       return value < 0.001 ? `${sci(value * 100, 2)}%` : `${sig(value * 100, 2)}%`;
     case "x":
+      // Past a million a multiple reads better in words: "98 million times".
+      for (const [f, w] of WORDS)
+        if (Math.abs(value) >= f) return `${sig(value / f, 2)} ${w} times`;
       return `${sig(value, 2)}×`;
     case "K":
+      // "K" is a Kardashev rating; temperatures use "kelvin".
       return value.toFixed(2);
+    case "kelvin":
+      return `${sig(value, 4)} K`;
+    case "people":
+      return `${words(value)} people`;
     case "":
-      return sig(value);
+      return tiny ? sci(value) : sig(value);
     default:
-      return Math.abs(value) >= 1e15 ? `${sci(value)} ${unit}` : `${sig(value)} ${unit}`;
+      return Math.abs(value) >= 1e15 || tiny ? `${sci(value)} ${unit}` : `${sig(value)} ${unit}`;
   }
 }

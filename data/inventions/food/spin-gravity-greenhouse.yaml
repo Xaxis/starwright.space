@@ -1,0 +1,76 @@
+id: spin-gravity-greenhouse
+title: The Spun Greenhouse
+domain: food
+for: [space-farming]
+pitch: >-
+  A rotating greenhouse ring that gives crops the gravity they evolved under while they grow in
+  space, on recycled water and sunlight, so a habitat or base can grow staples and not just salad.
+principle: >-
+  Plants use gravity to know up from down, to set roots, move water and fill grain. In free fall or
+  weak lunar gravity they grow oddly and yield poorly, a problem no closed-loop food result on Earth
+  has had to face. The Spun Greenhouse supplies gravity by spinning: a ring of growing modules
+  rotates so that centrifugal force presses outward like weight, tunable from lunar to full Earth
+  gravity by the rate of spin. Inside, crops grow hydroponically on water and nutrients recovered by
+  the habitat's closed loop, lit by piped sunlight or clean power, with carbon dioxide from the crew
+  and oxygen returned to them. Because the spin is set by the operator, the greenhouse can find the
+  least gravity at which each crop still yields well, saving structure and energy. It makes space
+  farming a matter of engineering a known plant, not gambling on how crops behave in gravity they
+  have never known.
+buildsOn:
+  - text: Lunar Palace 1's 370-day crewed closure at 98.2 percent material closure shows crops can feed a closed crew, the loop a spun greenhouse plugs into.
+    url: https://doi.org/10.1101/2021.01.12.426282
+    year: 2018
+  - text: BIOS-3 grew about half a crew's food with plants and algae in closure, the baseline for a space farm's yield.
+    url: https://en.wikipedia.org/wiki/BIOS-3
+    year: 1973
+  - text: ESA's MELiSSA has developed the plant and algae compartments and water recovery a spun greenhouse would use.
+    url: https://en.wikipedia.org/wiki/MELiSSA
+    year: 2023
+experiment:
+  goal: Find the least gravity at which staple crops yield well, using a spinning greenhouse module.
+  setup: >-
+    A centrifuge greenhouse, first on Earth and then in orbit, growing staple crops (wheat, potato,
+    soy) at several spin rates giving gravity from lunar to full Earth, on a closed water and nutrient
+    loop, against a stationary control.
+  measure: >-
+    Grain and tuber yield per plant at each gravity level; water and energy per kilogram of food;
+    whether crops set seed normally; loop closure while farming.
+  succeedsIf: >-
+    Staple crops reach at least 80 percent of their full-gravity yield at a reduced spin gravity, on
+    a closed loop, marking a gravity setting a habitat can build to.
+  costUsd: 30000000
+  months: 48
+path:
+  - phase: bench
+    what: A centrifuge greenhouse on Earth mapping yield against gravity for staple crops.
+    scale: A few modules.
+    proves: The gravity each crop needs is measured, not guessed.
+  - phase: prototype
+    what: A spun greenhouse module flown and run in orbit on a closed loop.
+    scale: One crew's salad and some staples.
+    proves: Crops yield under real spun gravity in space.
+  - phase: pilot
+    what: A greenhouse ring feeding a small crewed base much of its food.
+    scale: A small base.
+    proves: A space farm is a dependable part of a closed loop.
+  - phase: first-plant
+    what: A habitat that grows a full, varied diet for its people.
+    scale: A town-sized settlement.
+    proves: A settlement feeds itself without food from Earth.
+  - phase: fleet
+    what: Spun greenhouses standard on habitats and ships across the inner system.
+    scale: Inner solar system.
+    proves: Food travels with people as a built system, not a supply line.
+  - phase: civilization
+    what: Every off-world settlement growing its own staples under chosen gravity.
+    scale: Planet and space.
+    proves: Human settlement off Earth is self-feeding.
+risks: >-
+  Spin may cause crop or equipment problems (uneven watering, motion effects) that Earth tests miss;
+  the orbital phase checks before a base depends on it. Some crops may need near-full gravity,
+  raising structure and energy cost, which the yield-versus-gravity map quantifies. Coupling the
+  greenhouse tightly to life support risks shared failures, mitigated by buffering and isolation.
+scene:
+  kind: habitat
+  focus: A spinning ring of greenhouse modules, crops pressed outward by the spin as stars turn past.
+  params: { type: torus, spin: 0.8, green: 0.9 }

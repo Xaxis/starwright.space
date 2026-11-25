@@ -1,0 +1,40 @@
+id: orbital-industry
+title: Industry in Earth orbit
+domain: space
+stage: k09
+needs: [cheap-launch, in-orbit-assembly, space-solar-power, clean-orbits, space-economy]
+summary: >-
+  Orbit offers what no factory on Earth has: weightlessness, vacuum without limit and sunlight that
+  never sets. The first products are small and valuable, such as drug crystals, optical fibre and
+  semiconductor films. They pay for the factories, return capsules and skills that later make
+  collectors, radiators and computers in orbit from material sent up from the Moon.
+target: >-
+  Factories in orbit making products worth billions of dollars a year that cannot be made as well
+  on Earth, returning them on routine capsules, and growing into plants that build collectors and
+  computers in place from lunar material.
+exists:
+  - text: Varda's W-1 capsule grew crystals of the HIV drug ritonavir in orbit and landed in Utah on 21 February 2024, the first commercial in-space drug processing returned to Earth.
+    url: https://en.wikipedia.org/wiki/Varda_Space_Industries
+    year: 2024
+  - text: Varda's W-5 landed at Koonibba, South Australia, on 29 January 2026, the company's fourth capsule returned from orbit.
+    url: https://www.varda.com/mission/w-5
+    year: 2026
+  - text: Space Forge's ForgeStar-1, launched in June 2025, ran its furnace at 1000 C in orbit and made plasma, the conditions for growing semiconductor crystals from gas.
+    url: https://en.wikipedia.org/wiki/Space_Forge
+    year: 2025
+  - text: Flawless Photonics drew 11.8 km of ZBLAN optical fibre on the ISS in 2024, including one strand 1.1 km long.
+    url: https://spectrum.ieee.org/zblan-fiber-optic-cables-iss
+    year: 2024
+  - text: ESA's Metal 3D Printer, built by Airbus, printed the first metal part on the ISS in August 2024.
+    url: https://www.esa.int/Newsroom/Press_Releases/ESA_3D_prints_first_metal_part_on_the_International_Space_Station
+    year: 2024
+gap: >-
+  Every product so far is a demonstration measured in grams or kilometres of fibre. No orbital
+  factory has yet run for years, made anything large, or sold its output at a steady profit.
+  Return is costly and rare, and the vacuum around a spacecraft is spoiled by gas from its own
+  materials.
+inventions: [wake-shield-fab]
+scene:
+  kind: orbit
+  focus: Free-flying factories in low orbit, and the capsules that carry their products home.
+  params: { stations: 0.7, radiators: 0.4, collectors: 0.2 }

@@ -1,0 +1,42 @@
+id: multi-world-backup
+title: Civilization on more than one world
+domain: resilience
+stage: type-1
+needs: [space-habitats, closed-life-support, self-replicating-factory, restart-kits, knowledge-archives, space-farming]
+summary: >-
+  As long as all of civilization lives on one planet, one catastrophe large enough can end it. By
+  Type I, reached in {year-type-1}, most of the industry is already off Earth. The step that
+  makes the climb safe is that settlements beyond Earth can carry on, and rebuild Earth, without it:
+  their own people, food, factories, records and the seeds and cells of Earth's life.
+target: >-
+  Self-sufficient settlements on the Moon and in free space, each large enough in people and
+  industry to survive and grow if contact with Earth stopped for good, each holding a full copy of
+  humanity's knowledge and a frozen record of Earth's species.
+exists:
+  - text: The International Space Station marked 25 years of continuous human presence on 2 November 2025.
+    url: https://www.nasa.gov/international-space-station/
+    year: 2025
+  - text: Biosphere 2 in Arizona sealed eight people inside a closed ecosystem for two years from 1991; the run struggled with low food and oxygen.
+    url: https://en.wikipedia.org/wiki/Biosphere_2
+    year: 1993
+  - text: BIOS-3 in Krasnoyarsk kept a crew of three in a closed system for 180 days in 1972 and 1973, with wheat and vegetables grown in its phytotrons.
+    url: https://en.wikipedia.org/wiki/BIOS-3
+    year: 1973
+  - text: Marin and Beluffi computed that a crew of at least 98 people avoids inbreeding and survives a 6,300-year voyage with full success under their assumptions.
+    url: https://arxiv.org/abs/1806.03856
+    year: 2018
+  - text: Seeds carried in a sealed biosphere on China's Chang'e 4, among them cotton, sprouted on the Moon's far side in January 2019, the first plants to sprout on the Moon.
+    url: https://en.wikipedia.org/wiki/Chang%27e_4
+    year: 2019
+  - text: The Frozen Ark saves the DNA and viable cells of the world's endangered species.
+    url: https://www.frozenark.org/
+    year: 2026
+gap: >-
+  No settlement off Earth makes its own food, air or parts; every one depends on resupply. The
+  longest closed-ecosystem runs lasted months to two years and needed outside help. The biological
+  record of Earth's life is kept only on Earth, in freezers that need power.
+inventions: [shadow-vault]
+scene:
+  kind: moon
+  focus: Domes and bases on the Moon growing into a settlement that could carry on alone.
+  params: { bases: 0.7, domes: 0.8, mines: 0.4 }

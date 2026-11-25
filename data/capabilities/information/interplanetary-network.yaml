@@ -1,0 +1,40 @@
+id: interplanetary-network
+title: A network across the inner solar system
+domain: information
+stage: type-1
+needs: [laser-backbone, solar-system-navigation]
+summary: >-
+  At Type I, in {year-type-1}, people and factories work on the Moon, Mars and the asteroids,
+  light-minutes from Earth and from each other. A conversation across that gap is impossible, but a
+  network is not: data can be stored and forwarded hop by hop, and laser links carry far more than
+  radio. The network must keep working when the Sun stands between two worlds, which cuts Earth off
+  from Mars for weeks at a time every two years or so.
+target: >-
+  Gigabits per second between any two inner worlds at any time, through relays that route around
+  the Sun, with store-and-forward networking so that every message arrives however long the path.
+exists:
+  - text: NASA's Deep Space Optical Communications on the Psyche probe streamed video by laser at 267 megabits per second from 31 million km on 11 December 2023, received by a photon-counting detector at Palomar Observatory.
+    url: https://www.jpl.nasa.gov/news/nasas-tech-demo-streams-first-video-from-deep-space-via-laser/
+    year: 2023
+  - text: On 3 December 2024 the same experiment downlinked data from 494 million km, farther than Mars ever is from Earth; its ground stations received 13.6 terabits in all.
+    url: https://www.jpl.nasa.gov/missions/deep-space-optical-communications-dsoc/
+    year: 2024
+  - text: NASA's Mars Reconnaissance Orbiter relays data from landers to Earth at up to 6 megabits per second, averaging 0.5 to 4, and has served as the main relay at Mars since 2006.
+    url: https://en.wikipedia.org/wiki/Mars_Reconnaissance_Orbiter
+    year: 2026
+  - text: The Bundle Protocol, version 7, standardised in RFC 9171 in January 2022, is the store-and-forward protocol of delay-tolerant networking.
+    url: https://www.rfc-editor.org/info/rfc9171/
+    year: 2022
+  - text: During solar conjunction the Sun blocks radio between Earth and Mars; in 2013 the Curiosity rover was left in autonomous mode for 25 days.
+    url: https://en.wikipedia.org/wiki/Solar_conjunction
+    year: 2013
+gap: >-
+  Deep-space links today are point to point: one craft, one dish, one schedule. The rate falls with
+  the square of the distance, and the best optical link so far was a single demonstration. Nothing
+  relays around the Sun, so every conjunction is a blackout. Store-and-forward protocols are
+  standard but barely flown.
+inventions: [photon-bucket-relay]
+scene:
+  kind: network
+  focus: Light-minute links between Earth, the Moon, Mars and the belt, routed around the Sun.
+  params: { shape: system, nodes: 60, clusters: 6, links: 0.7, pulses: 0.6 }

@@ -1,0 +1,75 @@
+id: complete-protein-brewery
+title: The Whole-Food Brewery
+domain: food
+for: [precision-fermentation]
+pitch: >-
+  A single microbial strain engineered to brew not one protein but a balanced set of the proteins,
+  fats and micronutrients a food needs, so a fermenter pours out a near-complete ingredient instead
+  of one molecule at a time.
+principle: >-
+  Precision fermentation today makes one target molecule per strain, then blends them downstream,
+  which multiplies the number of fermentations and the cost. The Whole-Food Brewery engineers a
+  single chassis to express a designed panel of food molecules together: the major milk or egg
+  proteins, a healthy fat, and key vitamins, balanced so the harvested broth is close to a finished
+  ingredient. Protein-design tools pick variants that fold, secrete and taste right while staying
+  easy for the microbe to make; metabolic engineering balances the pathways so no one product starves
+  the others. Running on sugar now and on the Air Protein Plant's feedstock later, one brewery line
+  then makes a whole food base, cutting the steps, the capital and the cost between a tank and a meal.
+buildsOn:
+  - text: Perfect Day brews individual dairy proteins commercially, the single-molecule precision fermentation this design generalises to a panel.
+    url: https://perfectday.com/
+    year: 2024
+  - text: The fermentation sector's 4.1 billion USD of investment and 158 companies supply the strains and reactors a multi-product brewery builds on.
+    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
+    year: 2024
+  - text: ESM3 designs functional proteins far from natural ones, letting the brewery choose food-protein variants tuned for yield, flavour and nutrition.
+    url: https://www.evolutionaryscale.ai/blog/esm3-release
+    year: 2025
+experiment:
+  goal: Engineer one strain to co-produce a balanced panel of food molecules and harvest a near-complete ingredient.
+  setup: >-
+    Engineer a chassis to express several major food proteins plus a target fat and vitamin together,
+    balance the pathways, and ferment at bench scale. Compare the harvested broth's composition and
+    cost against making the same molecules in separate fermentations and blending.
+  measure: >-
+    Grams per litre of each product; how close the harvested profile comes to the target food's
+    composition; fermentation and downstream cost per kilogram versus the blend-of-singles route.
+  succeedsIf: >-
+    One strain co-produces the panel within a set tolerance of the target food profile, at a total
+    cost per kilogram at least a third below making and blending the molecules separately.
+  costUsd: 14000000
+  months: 36
+path:
+  - phase: bench
+    what: A strain co-producing a balanced panel at bench scale.
+    scale: Litres.
+    proves: Multiple food molecules can be brewed together in balance.
+  - phase: prototype
+    what: Pilot fermentation delivering a consistent near-complete ingredient.
+    scale: Cubic-metre reactors.
+    proves: Composition and cost advantage hold as tanks scale.
+  - phase: pilot
+    what: The ingredient formulated into real dairy- or egg-type products and sold.
+    scale: Tonnes a year.
+    proves: Consumers accept food built from the brewed base.
+  - phase: first-plant
+    what: A commercial brewery at price parity with the farmed originals.
+    scale: Tens of thousands of tonnes a year.
+    proves: Brewed whole-food ingredients compete head on.
+  - phase: fleet
+    what: Breweries worldwide, and compact lines off Earth fed by local feedstock.
+    scale: Global and off-world.
+    proves: A large share of animal-food ingredients are brewed.
+  - phase: civilization
+    what: Whole-food breweries as standard infrastructure, dairy and egg proteins made without animals everywhere.
+    scale: Planet and space.
+    proves: Animal foods decoupled from animals and land.
+risks: >-
+  Co-expressing many products may lower the yield of each below the single-product route; the project
+  would tune the panel and fall back to fewer products per strain where needed. Flavour and texture
+  of a built food may disappoint, a food-science risk addressed by iterating the protein and fat
+  design. Regulatory approval of multi-product strains is untested and pursued early.
+scene:
+  kind: field
+  focus: A row of fermenters each pouring out a balanced, near-complete food base.
+  params: { unit: tank, count: 120, terrain: plain }

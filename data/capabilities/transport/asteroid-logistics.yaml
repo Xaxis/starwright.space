@@ -1,0 +1,43 @@
+id: asteroid-logistics
+title: Moving the asteroid belt's mass
+domain: transport
+stage: planet
+needs: [interplanetary-transport, asteroid-mining, in-space-propulsion]
+summary: >-
+  The main belt holds {asteroid-belt-mass}, much of it metal and carbon-rich rock. It lies two to
+  three times as far from the Sun as Earth, so every tonne must travel for years and change speed
+  by several kilometres a second. Moving it by the billion tonnes, without burning much of it as
+  propellant, is a freight problem larger than all of Earth's shipping.
+target: >-
+  Mass from the belt delivered to factories in the inner system at billions of tonnes a year, moved
+  mostly by sunlight and electricity, in a few years per trip and with a few percent lost on the
+  way.
+exists:
+  - text: NASA's OSIRIS-REx returned 121.6 g of the asteroid Bennu to Earth on 24 September 2023.
+    url: https://en.wikipedia.org/wiki/OSIRIS-REx
+    year: 2023
+  - text: JAXA's Hayabusa2 returned 5.4 g of the asteroid Ryugu on 5 December 2020.
+    url: https://en.wikipedia.org/wiki/Hayabusa2
+    year: 2020
+  - text: NASA's Asteroid Redirect Mission, which grew from a 2012 Keck Institute study of bagging a small asteroid, was cancelled in 2017.
+    url: https://en.wikipedia.org/wiki/Asteroid_Redirect_Mission
+    year: 2017
+  - text: NASA's DART struck Dimorphos on 26 September 2022 and shortened its orbit around Didymos by about 33 minutes, the first time people moved a celestial body.
+    url: https://en.wikipedia.org/wiki/Double_Asteroid_Redirection_Test
+    year: 2022
+  - text: AstroForge's Odin, the first private asteroid prospecting craft, launched in February 2025 and was declared lost in March.
+    url: https://en.wikipedia.org/wiki/AstroForge
+    year: 2025
+  - text: UNCTAD counted 12.3 billion tons of seaborne trade in 2023, over 80 percent of world trade by volume, the scale a belt economy must match and then pass.
+    url: https://unctad.org/publication/review-maritime-transport-2024
+    year: 2023
+gap: >-
+  All the asteroid material ever returned weighs less than a kilogram. The one mission planned to
+  move a boulder was cancelled, and the first private prospector was lost. Nothing yet moves bulk
+  mass between solar orbits, and any rocket that tried would burn much of its cargo's worth in
+  propellant.
+inventions: [foil-freight]
+scene:
+  kind: network
+  focus: Streams of cargo spiralling in from the asteroid belt toward the inner planets.
+  params: { shape: system, nodes: 2000, clusters: 8, links: 0.3, pulses: 0.9 }

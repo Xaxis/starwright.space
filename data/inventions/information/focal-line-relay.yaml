@@ -1,0 +1,90 @@
+id: focal-line-relay
+title: The Focal Line Relay
+domain: information
+for: [stellar-lens-link]
+pitch: >-
+  Fly a receiver to the Sun's gravitational focus toward one nearby star, and use the Sun as a lens
+  1.4 million kilometres wide to see and talk across light-years.
+principle: >-
+  General relativity bends light passing the Sun by an angle that shrinks with the ray's distance
+  from the Sun's centre. Rays that graze the Sun meet on a line that begins about 550 AU away on the
+  far side and runs outward; each point along it is the focus for rays that passed a little farther
+  out. A receiver on the line toward a star sees that star, or a transmitter beside it, as a thin
+  ring of light around the Sun, the Einstein ring, amplified about 10^11 times at optical
+  wavelengths. The gain works both ways, so a signal sent from the line toward the star arrives
+  concentrated too. The difficulty is glare: the ring lies on top of the solar corona. The relay
+  carries a coronagraph that blocks the Sun's disc and a ring-shaped mask that admits only the
+  Einstein ring's radius, and picks out the signal by its narrow laser line and its timing. It must
+  also stay on the focal line while it drifts outward, using a solar sail and laser ranging home.
+buildsOn:
+  - text: Eshleman's 1979 paper on the Sun's gravitational lens for observations and interstellar communications.
+    url: https://doi.org/10.1126/science.205.4411.1133
+    year: 1979
+  - text: Maccone's FOCAL mission concept for a telescope at 550 AU or beyond.
+    url: https://en.wikipedia.org/wiki/FOCAL_(spacecraft)
+    year: 1993
+  - text: Turyshev and colleagues' NIAC study of imaging exoplanets from the focal region, with a wave-optical treatment of the corona's brightness and smallsat solar sails to get there.
+    url: https://arxiv.org/abs/2002.11871
+    year: 2020
+  - text: NASA's page for the study's second phase, which built on its first.
+    url: https://www.nasa.gov/general/direct-multipixel-imaging-and-spectroscopy-of-an-exoplanet-with-a-solar-gravity-lens-mission/
+    year: 2018
+  - text: The coronagraph, introduced by Bernard Lyot in 1931 to block the Sun's disc and see its corona.
+    url: https://en.wikipedia.org/wiki/Coronagraph
+    year: 1931
+  - text: The axicon, a conical lens that focuses light into a line and a ring, the same geometry as a gravitational lens.
+    url: https://en.wikipedia.org/wiki/Axicon
+    year: 1954
+experiment:
+  goal: Measure how faint a laser signal in an Einstein ring can be read against bright glare, on an optical model of the Sun's lens.
+  setup: >-
+    An optical bench in a dark laboratory: an axicon-like lens that reproduces the Sun's lens,
+    focusing a distant point source into a line with a ring around the lens; a bright extended
+    source behind an occulter standing in for the corona; a weak pulsed laser as the distant
+    transmitter; and a coronagraph with a ring mask and a narrow line filter feeding a
+    photon-counting detector that moves along and across the focal line.
+  measure: >-
+    Glare suppressed against ring signal kept; photons per bit at a set error rate; how fast the
+    signal falls as the detector moves off the line.
+  succeedsIf: >-
+    The coronagraph and filter suppress the glare at least a million times while passing at least
+    30 percent of the ring signal, and the measured error rate matches the link model within a
+    factor of 2.
+  costUsd: 300000
+  months: 9
+path:
+  - phase: bench
+    what: The optical model of the lens with its coronagraph and detector.
+    scale: "A laboratory bench"
+    proves: The contrast and photon budget a relay needs.
+  - phase: prototype
+    what: The coronagraph on a space telescope, reading a deep-space probe's laser as the probe passes behind the Sun.
+    scale: "One instrument and an existing probe"
+    proves: The glare rejection works against the real corona.
+  - phase: pilot
+    what: A fast solar-sail craft flown close past the Sun and out beyond 100 AU, testing navigation and laser links at that range.
+    scale: "One small craft past 100 AU"
+    proves: Craft can reach the focal region in decades and stay in touch.
+  - phase: first-plant
+    what: The first relay on the focal line toward Alpha Centauri, imaging its planets.
+    scale: "One relay at 550 to 650 AU"
+    proves: The lens's gain is real and usable.
+  - phase: fleet
+    what: Relays on the focal lines toward the nearest stars, linked home through the interplanetary network.
+    scale: "A dozen of the nearest stars"
+    proves: The solar system can see and listen across light-years.
+  - phase: civilization
+    what: Links to probes and settlements at other stars, the first threads of a network between suns.
+    scale: "The nearest stars, after {year-type-2}"
+    proves: The climb can go on beyond one star.
+risks: >-
+  The corona may be brighter and more variable than the models; the next step is longer wavelengths
+  or greater distances, where the ring lies farther from the Sun's edge. Holding to the focal line
+  550 AU out is hard; a small swarm of craft spread across the line could share the job. The trip
+  takes decades even by solar sail; the relay could ride as a long-lived passenger on outbound
+  probes. A link needs a transmitter at the other star; until one is there, the relay images
+  planets and listens.
+scene:
+  kind: machine
+  focus: A small telescope at the Sun's focus, the Sun masked and another star's light ringed around it.
+  params: { shape: telescope, spin: 0.05 }

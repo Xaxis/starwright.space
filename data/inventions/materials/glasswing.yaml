@@ -1,0 +1,76 @@
+id: glasswing
+title: Glasswing film
+domain: materials
+for: [durable-thin-films]
+pitch: >-
+  A collector film with no polymer in it at all: a membrane of glass a few micrometres thick, coated
+  with aluminium and a thin-film absorber, which heals its own radiation damage by running warm and
+  is made entirely from silicon, oxygen and aluminium won from rock.
+principle: >-
+  Sunlight's ultraviolet and the solar wind's protons break the long chains that hold a polymer
+  together, and the broken chains never rejoin, so polymer films yellow and embrittle. Glass has no
+  chains: it is a network of silicon and oxygen bonded in every direction. Radiation still knocks
+  atoms out of place and makes colour centres that absorb light, but in silica most of them anneal
+  away when the glass is held at a few hundred degrees, where the displaced atoms can move back. A
+  collector near the Sun runs hot anyway, so Glasswing is designed to sit in that annealing window,
+  repairing itself as fast as it is damaged. Glass is brittle in bulk because cracks grow from
+  flaws, but a sheet a few micrometres thick bends to a radius of millimetres, because bending
+  strain falls with thickness, so it can be rolled and folded. The membrane is made by vapour
+  deposition onto a release layer, or drawn from a melt, then coated: aluminium as a mirror or back
+  contact, an absorber, and a few hundred nanometres of glass on top as its own cover.
+buildsOn:
+  - text: Nippon Electric Glass's G-Leaf, glass thin enough to roll below 100 micrometres, the thickness this film must go well under.
+    url: https://www.neg.co.jp/en/products/g-leaf/index.html
+  - text: IKAROS's 7.5 micrometre polyimide sail and its integrated thin-film cells, the polymer baseline.
+    url: https://en.wikipedia.org/wiki/IKAROS
+  - text: Freestanding single-crystal oxide films made by dissolving a sacrificial layer beneath them (Lu and colleagues, Nature Materials, 2016), a route to releasing micrometre membranes.
+    url: https://www.nature.com/articles/nmat4749
+  - text: Blue Origin's cover glass made from the by-products of regolith electrolysis.
+    url: https://www.blueorigin.com/news/blue-alchemist-powers-our-lunar-future/
+experiment:
+  goal: Show that a glass membrane a few micrometres thick survives the equivalent of a decade of sunlight near the Sun, and that running it warm undoes the damage.
+  setup: >-
+    Free-standing silica membranes 3 to 10 micrometres thick, 5 cm across, made by depositing glass
+    on a soluble release layer and dissolving it, then coated with 100 nm of aluminium. Half are
+    held at 250 C, half at 50 C, in a chamber combining an ultraviolet source, a 1 to 10 keV proton
+    beam and an electron gun, run to a fluence equal to ten years at the swarm's distance.
+  measure: Reflectance and transmittance spectra before, during and after exposure; fold and roll tests at set radii; tensile strength; mass loss.
+  succeedsIf: The warm samples lose less than 3 percent of their reflectance over the full fluence, at least twice as little as polyimide controls in the same beam, and every membrane survives 1,000 rolls at a 5 mm radius.
+  costUsd: 1200000
+  months: 18
+path:
+  - phase: bench
+    what: Membranes in the combined radiation chamber.
+    scale: Coupons a few centimetres across.
+    proves: Glass outlasts polymer, and warmth heals it.
+  - phase: prototype
+    what: Square-metre Glasswing panels with a thin-film absorber, flown on a satellite to a closer orbit around the Sun.
+    scale: A few square metres in space.
+    proves: Real sunlight, real solar wind, measured for years.
+  - phase: pilot
+    what: A film line on the Moon using glass and aluminium from the regolith refinery.
+    scale: Square kilometres a year.
+    proves: The film can be made from rock, not just from lab silica.
+  - phase: first-plant
+    what: Film plants beside the first factories in space, feeding the first collectors.
+    scale: The share of output that becomes collectors, {collector-share}.
+    proves: The collector's material is closed, with nothing in it from Earth.
+  - phase: fleet
+    what: Film plants across the inner solar system.
+    scale: Thousands of square kilometres a year, rising with the industry.
+    proves: The swarm can be made of a film that lasts.
+  - phase: civilization
+    what: The swarm's film, at {collector-density} over {swarm-full-area}.
+    scale: "{swarm-full-mass} of film"
+    proves: The swarm does not wear out faster than it is built.
+risks: >-
+  Some colour centres may not anneal at temperatures the absorber can stand; doping the glass, as
+  radiation-hard optical glasses are doped with cerium, would be tried next. Micrometre glass may
+  crack from micrometeoroid hits and spread the crack; the design would then add a coarse grid of
+  thicker glass ribs to stop cracks, at a small cost in mass. Thin-film absorbers made only from
+  common elements may not reach the target conversion; then the first Glasswing collectors are
+  mirrors that concentrate light onto fewer, better cells.
+scene:
+  kind: lattice
+  focus: The glass network healing as displaced atoms settle back into place.
+  params: { structure: silicate, defects: 0.1 }

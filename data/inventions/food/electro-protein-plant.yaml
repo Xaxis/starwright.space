@@ -1,0 +1,80 @@
+id: electro-protein-plant
+title: The Air Protein Plant
+domain: food
+for: [food-from-air]
+pitch: >-
+  A factory that makes complete food protein from nothing but air, water and clean electricity,
+  sized and standardised so one unit feeds a town and a line of them feeds a region, on no farmland
+  at all.
+principle: >-
+  Certain microbes grow on hydrogen as their energy source and carbon dioxide as their carbon,
+  building themselves into a protein-rich biomass with a complete amino-acid profile. The Air Protein
+  Plant supplies both from the environment: an electrolyser splits water into hydrogen and oxygen
+  using clean power, carbon dioxide is drawn from the air or a flue, and the two are fed to the
+  microbes in a gas-fermentation reactor designed to transfer gas efficiently without going boom. The
+  biomass is harvested, dried and processed into a neutral protein flour. Because it runs on
+  electricity and gases, not sunlight and soil, the plant needs no arable land, uses a fraction of
+  agriculture's water, and runs day and night anywhere power reaches, including off Earth. The design
+  is modular: identical reactor and electrolyser skids that scale by adding units.
+buildsOn:
+  - text: Solar Foods' Factory 01 already makes single-cell protein from carbon dioxide, hydrogen and air at about 160 tonnes a year, the direct precedent this plant scales and standardises.
+    url: https://solarfoods.com/factory/
+    year: 2024
+  - text: A bionic-leaf system coupled electrolysis to hydrogen-eating microbes, scrubbing 180 grams of carbon dioxide per kilowatt-hour into biomass, demonstrating the electricity-to-protein chain.
+    url: https://doi.org/10.1126/science.aaf5039
+    year: 2016
+  - text: Outdoor water-splitting now reaches 31.3 percent sunlight-to-hydrogen, cutting the cost of the hydrogen feedstock the plant depends on.
+    url: https://doi.org/10.1038/s44172-026-00610-x
+    year: 2026
+  - text: The fermentation sector's 4.1 billion USD of investment has built the bioreactor and strain base a standardised plant would draw on.
+    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
+    year: 2024
+experiment:
+  goal: Run a standardised gas-fermentation skid making food-grade protein from air, water and electricity, and measure its cost.
+  setup: >-
+    Build a containerised plant pairing a water electrolyser, air-capture carbon dioxide feed and a
+    gas-fermentation reactor with a hydrogen-oxidising strain, plus harvest and drying. Run it
+    continuously on clean power and measure the full chain.
+  measure: >-
+    Kilograms of food-grade protein per day; kilowatt-hours of electricity per kilogram of protein;
+    water per kilogram; amino-acid completeness and food-safety screens; cost per kilogram at the
+    unit's scale.
+  succeedsIf: >-
+    The skid makes food-grade complete protein continuously for 90 days at an energy and cost per
+    kilogram within a factor of two of commodity soy protein, with a clear path to parity at scale.
+  costUsd: 20000000
+  months: 36
+path:
+  - phase: bench
+    what: A single containerised skid making food-grade protein from air and power.
+    scale: Kilograms a day.
+    proves: The full chain runs continuously and safely at unit scale.
+  - phase: prototype
+    what: A multi-skid plant feeding a pilot population real formulated food.
+    scale: Tonnes a day.
+    proves: Output scales by adding units and the food is acceptable.
+  - phase: pilot
+    what: A regional plant selling protein into the food supply at a published price.
+    scale: Tens of thousands of tonnes a year.
+    proves: Cost competitive with farmed protein in one market.
+  - phase: first-plant
+    what: Plants sited at cheap-power hubs worldwide, including deserts and coasts.
+    scale: Millions of tonnes a year.
+    proves: Air protein is a staple ingredient, not a novelty.
+  - phase: fleet
+    what: Compact units in habitats, ships and off-world bases making protein from local carbon dioxide and power.
+    scale: Inner solar system.
+    proves: Food made wherever people and power are, with no farmland.
+  - phase: civilization
+    what: A large share of the world's protein made from air and electricity, farmland returned to nature.
+    scale: Planet and space.
+    proves: Protein decoupled from land and climate.
+risks: >-
+  Hydrogen and carbon-dioxide capture may stay too costly for price parity without very cheap power;
+  the plant is sited where power is cheapest and improves as clean power scales. Gas fermentation with
+  hydrogen carries explosion risk, handled by reactor design and standardised skids. The plain
+  biomass needs formulation to be appetising, a food-science task run alongside the engineering.
+scene:
+  kind: machine
+  focus: An electrolyser and a gas-fermentation reactor paired in one skid, air and power in, protein out.
+  params: { shape: electrolyser, spin: 0.3 }

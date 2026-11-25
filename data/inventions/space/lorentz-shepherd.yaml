@@ -1,0 +1,83 @@
+id: lorentz-shepherd
+title: The Lorentz Shepherd
+domain: space
+for: [clean-orbits]
+pitch: >-
+  A reusable debris tug that needs no propellant: a long conducting tape that drags dead
+  satellites down against Earth's magnetic field, then reverses its current on solar power to climb
+  back up for the next one.
+principle: >-
+  A conductor moving across Earth's magnetic field at orbital speed has a voltage induced along it,
+  a couple of hundred volts for every kilometre in low orbit. If the circuit is closed through the
+  surrounding plasma, the current that flows feels a Lorentz force against the motion, which lowers
+  the orbit without propellant. Driving the current the other way with solar power reverses the
+  force and raises the orbit. The Shepherd is a small tug with a bare aluminium tape a few
+  kilometres long, a capture arm, solar arrays and a field-emission cathode. It docks with a dead
+  object, drags the pair down to about 350 km, where air drag finishes the job within months,
+  lets go, and climbs back to its parking orbit on electricity alone. The same tug then removes
+  dozens of objects over its life, so the cost of each removal falls to time and wear instead of a
+  whole mission.
+buildsOn:
+  - text: NASA and Italy's TSS-1R tether, deployed to 19.7 km from the Space Shuttle in 1996, produced up to 1.1 A at 3,400 V, showing the induced voltage and current collection at scale.
+    url: https://ntrs.nasa.gov/citations/20160007056
+    year: 1996
+  - text: NASA's ProSEDS was designed to use a 5 km bare tether to give about 0.4 N of drag thrust to a Delta II upper stage; it was cancelled before flight.
+    url: https://ntrs.nasa.gov/citations/19990046740
+    year: 1999
+  - text: The US Naval Research Laboratory's TEPCE flew a 1 km braided-tape conducting tether in 2019.
+    url: https://space.skyrocket.de/doc_sdat/tepce.htm
+    year: 2019
+  - text: JAXA's KITE on HTV-6 in 2017 failed to deploy its 700 m tether but demonstrated a carbon-nanotube field-emission cathode in orbit.
+    url: https://en.wikipedia.org/wiki/Kounotori_6
+    year: 2017
+  - text: Astroscale's ELSA-d made repeated magnetic captures of a client satellite fitted with a docking plate in 2021, the capture method the Shepherd starts with.
+    url: https://astroscale.com/missions/elsa-d/
+    year: 2021
+experiment:
+  goal: Measure drag thrust and reverse-current boost thrust from one bare tape tether in orbit, and show that the same hardware does both.
+  setup: >-
+    A 12U CubeSat with a 1 km aluminium tape tether, a 20 kg end mass, a field-emission cathode, a
+    power system that can drive current either way at up to 100 watts, and GPS. Flown as a rideshare
+    to about 500 km, it alternates days in drag mode and days in boost mode, logging current, voltage
+    and orbit throughout.
+  measure: Thrust in each mode from the GPS orbit, current collected per metre of tape, power spent per unit of thrust in boost mode, and how the tape survives micrometeoroids.
+  succeedsIf: The tether deploys fully, drag mode lowers the orbit at least three times faster than air drag alone, and boost mode raises it by at least 1 km over 30 days.
+  costUsd: 6000000
+  months: 18
+path:
+  - phase: bench
+    what: Plasma-chamber tests of tape current collection and cathode emission, and deployment tests of a full-length tape along a ground track.
+    scale: A 1 km tape, a plasma chamber.
+    proves: The tape collects the current the design needs and deploys without snagging.
+  - phase: prototype
+    what: The CubeSat in orbit, running both modes.
+    scale: One 12U CubeSat.
+    proves: Thrust in both directions from one tether.
+  - phase: pilot
+    what: A 300 kg Shepherd captures a dead satellite fitted with a docking plate, drags it from 800 km to re-entry range, and climbs back.
+    scale: One tug, one to three objects.
+    proves: Capture, drag, release and return, end to end.
+  - phase: first-plant
+    what: Twenty Shepherds working one band of inclinations, each removing an object every few months.
+    scale: About a hundred objects a year.
+    proves: A cost per object low enough for operators and agencies to buy removal as a service.
+  - phase: fleet
+    what: Hundreds of Shepherds keeping every busy shell clear, paid per object removed.
+    scale: Thousands of objects a year.
+    proves: Debris can fall year on year while launches grow.
+  - phase: civilization
+    what: Shepherds as the tow trucks of near-Earth space, also moving working satellites and parts between orbits for orbital industry.
+    scale: Every shell below 2,000 km.
+    proves: Low orbit stays open for the whole climb.
+risks: >-
+  Long tethers have a poor record: TSS-1R snapped and KITE never deployed, so deployment and
+  survival come first, and the design uses a wide tape with redundant strands that tolerates
+  micrometeoroid hits better than a wire. Thrust falls in near-polar orbits, where the magnetic field
+  lines up with the motion and much debris lies; there the Shepherd would add a drag sail or a small
+  ion thruster. Capturing tumbling objects without docking plates is unproven, so the pilot starts
+  with prepared targets while the capture arm is tested on tumbling mock-ups. A long tether is itself
+  a collision hazard, so it must be short in crowded shells and always tracked.
+scene:
+  kind: machine
+  focus: A small tug and its kilometres of tape, towing a dead satellite down.
+  params: { shape: tether, spin: 0.2 }

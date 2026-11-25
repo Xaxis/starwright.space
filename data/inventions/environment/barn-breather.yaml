@@ -1,0 +1,81 @@
+id: barn-breather
+title: The Barn Breather
+domain: environment
+for: [methane-abatement]
+pitch: >-
+  A roof vent for cattle barns that oxidises the dilute methane in their exhaust air on a copper
+  zeolite catalyst, heated by the sun and by its own recovered heat, turning each methane molecule into
+  one of CO2, which warms the climate about thirty times less over twenty years.
+principle: >-
+  Methane in barn air is dilute, a few to a hundred parts per million, far too thin to burn. Copper
+  ions held in the cages of a zeolite, an aluminosilicate mineral, oxidise methane at those
+  concentrations at 200 to 310 °C, as Brenneis and colleagues showed in 2021. The trouble is energy:
+  heating air to 300 °C to destroy a few ppm of methane can emit more CO2 than it saves, and Abernethy
+  and colleagues found a reactor must run within a few degrees of ambient on net to pay off. The
+  Breather gets there with two moves. A regenerative heat exchanger, a ceramic block that the hot
+  outgoing air heats and the cold incoming air takes heat back from, switching direction every
+  minute as in the thermal oxidisers that clean coal-mine ventilation air, recovers over 95 percent of
+  the heat, so the bed needs only a little net heating. And the Breather draws air only where methane
+  collects, at the ridge of the barn above the cattle, and takes its net heat from solar collectors on
+  the roof.
+buildsOn:
+  - text: Brenneis and colleagues at MIT oxidised methane in simulated air from 2 ppm to 2 percent on a copper zeolite at 200 to 310 °C, with 40 percent to complete conversion over 300 hours.
+    url: https://doi.org/10.1021/acsenvironau.1c00034
+    year: 2021
+  - text: Abernethy, Kessler and Jackson found that oxidising methane above 1,000 ppm could avoid 0.2 °C of warming and above 10 ppm 0.4 °C, if thermal reactors run within about 3 °C of ambient on net.
+    url: https://doi.org/10.1088/1748-9326/acf603
+    year: 2023
+  - text: Parker and colleagues measured 2 to 102 ppm of methane in New England dairy barns, and found a catalytic oxidiser with 90 percent heat recovery is climate-positive above about 10 ppm on wind power.
+    url: https://doi.org/10.1021/acs.est.5c06595
+    year: 2025
+  - text: A regenerative thermal oxidiser at a West Virginia coal mine destroyed 95 percent or more of the methane in 30,000 cubic feet a minute of ventilation air.
+    url: https://doi.org/10.2172/969298
+    year: 2008
+  - text: Melse and van der Werf's compost biofilter removed up to 85 percent of methane from manure-storage air at a few hundred to a few thousand milligrams per cubic metre.
+    url: https://doi.org/10.1021/es048048q
+    year: 2005
+experiment:
+  goal: Show that a copper zeolite bed with regenerative heat recovery destroys most of the methane in real dairy barn air, with a net climate gain.
+  setup: >-
+    A unit treating 2,000 cubic metres of air an hour on the ridge vent of a working dairy barn, with a
+    regenerative ceramic heat exchanger, a 50 kg copper-mordenite bed, a solar thermal panel and an
+    electric trim heater, and methane analysers at inlet and outlet.
+  measure: Methane in and out; air flow; net energy drawn per tonne of methane destroyed; catalyst activity over months of barn dust, ammonia and humidity.
+  succeedsIf: More than 70 percent of the methane destroyed at inlet concentrations of 20 to 100 ppm, with net energy use whose own emissions are under a tenth of the CO2-equivalent removed, sustained for six months.
+  costUsd: 900000
+  months: 15
+path:
+  - phase: bench
+    what: One unit on one barn vent.
+    scale: About 2,000 cubic metres of air an hour.
+    proves: Methane destroyed per unit of energy in real barn air.
+  - phase: prototype
+    what: Ten units across a large dairy barn, and one each on a manure store and a coal mine vent.
+    scale: A barn of 500 cows.
+    proves: The share of a whole barn's methane caught.
+  - phase: pilot
+    what: Units on 100 barns in three climates.
+    scale: About 50,000 cattle.
+    proves: Cost per tonne of CO2-equivalent, and maintenance in farm hands' hands.
+  - phase: first-plant
+    what: A factory making units for every enclosed barn and feedlot shed in one country.
+    scale: Thousands of barns.
+    proves: The Breather can be built and sold at scale.
+  - phase: fleet
+    what: Units on barns, mine vents, landfills and sewage works worldwide.
+    scale: Millions of tonnes of methane a year.
+    proves: Concentrated methane sources can be cleaned, not only reduced.
+  - phase: civilization
+    what: Every concentrated source of methane cleaned, alongside fixed leaks and new feeds.
+    scale: All housed livestock and every mine and landfill.
+    proves: The amount of methane in the air falls back.
+risks: >-
+  Barn air carries dust, ammonia and moisture that may poison the catalyst; filters and regular
+  regeneration come first, and other metal zeolites next. Most cattle graze outdoors, beyond the reach
+  of any vent; the Breather covers only housed animals, and feed additives and breeding must cover the
+  rest. If heat recovery falls short, net emissions could eat into the gain; then units run only on the
+  richest air or only on surplus solar power.
+scene:
+  kind: machine
+  focus: A ridge vent on a barn roof, its ceramic bed glowing faintly as clean air flows out.
+  params: { shape: membrane, spin: 0.2 }

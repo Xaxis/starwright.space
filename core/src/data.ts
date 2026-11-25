@@ -47,11 +47,8 @@ function zodProblems(path: string, e: z.ZodError): string[] {
 }
 
 export interface ParseOptions {
-  /**
-   * A content lane's view: report only problems in these domains' files, and accept references to
-   * ids the spine has planned but no file defines yet. The full check passes no lane.
-   */
-  lane?: { domains: string[]; planned: string[] };
+  /** Return whatever parses and report nothing: for development and the model CLI, never a build. */
+  lenient?: boolean;
 }
 
 /** Parses every file and checks every reference. Throws DataError listing every problem found. */
@@ -93,8 +90,10 @@ export function parseData(files: Files, opts: ParseOptions = {}): Data {
     if (k in data.assumptions) problems.push(`${k}: both a constant and an assumption`);
   }
   for (const [k, a] of Object.entries(data.assumptions)) {
-    if (!(a.min <= a.value && a.value <= a.max)) problems.push(`assumptions.yaml ${k}: value outside its range`);
-    if (a.log && a.min <= 0) problems.push(`assumptions.yaml ${k}: a log range must start above zero`);
+    if (!(a.min <= a.value && a.value <= a.max))
+      problems.push(`assumptions.yaml ${k}: value outside its range`);
+    if (a.log && a.min <= 0)
+      problems.push(`assumptions.yaml ${k}: a log range must start above zero`);
   }
   const list = <T>(path: string, schema: z.ZodType<T>, into: T[]) => {
     const raw = read(path);
@@ -124,23 +123,20 @@ export function parseData(files: Files, opts: ParseOptions = {}): Data {
         problems.push(...zodProblems(f.path, r.error));
         return;
       }
-      const name = f.path.split("/").at(-1)?.replace(/\.yaml$/, "");
-      if (name !== r.data.id) problems.push(`${f.path}: the file name must be its id (${r.data.id})`);
+      const name = f.path
+        .split("/")
+        .at(-1)
+        ?.replace(/\.yaml$/, "");
+      if (name !== r.data.id)
+        problems.push(`${f.path}: the file name must be its id (${r.data.id})`);
       into.push(r.data);
     };
     if (f.path.startsWith("capabilities/")) one(Capability, data.capabilities);
     else if (f.path.startsWith("inventions/")) one(Invention, data.inventions);
   }
-  if (problems.length === 0 || opts.lane) problems.push(...crossCheck(data));
-  const lane = opts.lane;
-  const shown = lane
-    ? problems.filter((p) => {
-        const mine = lane.domains.some((d) => p.includes(`capabilities/${d}/`) || p.includes(`inventions/${d}/`));
-        const planned = /unknown (capability|invention) ([a-z0-9-]+)/.exec(p);
-        return mine && !(planned && lane.planned.includes(planned[2] as string));
-      })
-    : problems;
-  if (shown.length > 0) throw new DataError(shown);
+  if (opts.lenient) return data;
+  if (problems.length === 0) problems.push(...crossCheck(data));
+  if (problems.length > 0) throw new DataError(problems);
   return data;
 }
 
@@ -149,7 +145,7 @@ const TEMPLATE = /\{([a-z0-9-]+)\}/g;
 /** Every string anywhere inside x, with the dotted path to it. */
 function strings(x: unknown, at: string, out: [string, string][]): [string, string][] {
   if (typeof x === "string") out.push([at, x]);
-  else if (Array.isArray(x)) x.forEach((y, i) => strings(y, `${at}[${i}]`, out));
+  else if (Array.isArray(x)) for (const [i, y] of x.entries()) strings(y, `${at}[${i}]`, out);
   else if (x && typeof x === "object")
     for (const [k, y] of Object.entries(x)) strings(y, at ? `${at}.${k}` : k, out);
   return out;
@@ -165,9 +161,18 @@ export function crossCheck(data: Data): string[] {
       seen.add(i);
     }
   };
-  dup("domain", data.domains.map((x) => x.id));
-  dup("stage", data.stages.map((x) => x.id));
-  dup("capability/invention", [...data.capabilities, ...data.inventions].map((x) => x.id));
+  dup(
+    "domain",
+    data.domains.map((x) => x.id),
+  );
+  dup(
+    "stage",
+    data.stages.map((x) => x.id),
+  );
+  dup(
+    "capability/invention",
+    [...data.capabilities, ...data.inventions].map((x) => x.id),
+  );
 
   const domains = new Set(data.domains.map((x) => x.id));
   const stages = new Set(data.stages.map((x) => x.id));
@@ -188,7 +193,8 @@ export function crossCheck(data: Data): string[] {
     for (const i of c.inventions) {
       const inv = invs.get(i);
       if (!inv) problems.push(`${at}: lists unknown invention ${i}`);
-      else if (!inv.for.includes(c.id)) problems.push(`${at}: lists ${i}, whose "for" does not name it`);
+      else if (!inv.for.includes(c.id))
+        problems.push(`${at}: lists ${i}, whose "for" does not name it`);
     }
   }
   for (const inv of data.inventions) {
@@ -210,7 +216,9 @@ export function crossCheck(data: Data): string[] {
   // Every scene's knobs must be ones its kind draws.
   const scened: [string, { scene: { kind: TStage["scene"]["kind"]; params: unknown } }][] = [
     ...data.stages.map((s) => [`stage ${s.id}`, s] as [string, TStage]),
-    ...data.capabilities.map((c) => [`capabilities/${c.domain}/${c.id}`, c] as [string, TCapability]),
+    ...data.capabilities.map(
+      (c) => [`capabilities/${c.domain}/${c.id}`, c] as [string, TCapability],
+    ),
     ...data.inventions.map((i) => [`inventions/${i.domain}/${i.id}`, i] as [string, TInvention]),
   ];
   for (const [name, rec] of scened)
@@ -239,18 +247,22 @@ export function crossCheck(data: Data): string[] {
     return problems;
   }
   for (const s of data.stages)
-    if (!model.q.has(s.power)) problems.push(`stage ${s.id}: power ${s.power} is not a model quantity`);
+    if (!model.q.has(s.power))
+      problems.push(`stage ${s.id}: power ${s.power} is not a model quantity`);
   const records: [string, unknown][] = [
     ...data.stages.map((s) => [`stage ${s.id}`, s] as [string, unknown]),
     ...data.capabilities.map((c) => [`capabilities/${c.domain}/${c.id}`, c] as [string, unknown]),
     ...data.inventions.map((i) => [`inventions/${i.domain}/${i.id}`, i] as [string, unknown]),
     ...data.domains.map((d) => [`domain ${d.id}`, d] as [string, unknown]),
-    ...Object.entries(data.assumptions).map(([k, a]) => [`assumption ${k}`, a] as [string, unknown]),
+    ...Object.entries(data.assumptions).map(
+      ([k, a]) => [`assumption ${k}`, a] as [string, unknown],
+    ),
   ];
   for (const [name, rec] of records) {
     for (const [path, text] of strings(rec, "", [])) {
       for (const m of text.matchAll(TEMPLATE)) {
-        if (!model.q.has(m[1] as string)) problems.push(`${name} ${path}: {${m[1]}} is not a model quantity`);
+        if (!model.q.has(m[1] as string))
+          problems.push(`${name} ${path}: {${m[1]}} is not a model quantity`);
       }
     }
   }

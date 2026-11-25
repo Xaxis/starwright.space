@@ -1,0 +1,46 @@
+id: universal-education
+title: An education for everyone
+domain: people
+stage: k08
+needs: [universal-connectivity, open-knowledge-base]
+summary: >-
+  The climb needs billions of people who can read, reason, build and invent, and today most of the
+  world's children leave school without basic skills, while many are not in school at all. Schools
+  are short of teachers. Cheap phones, offline libraries and AI tutors now make it possible to give
+  every child something close to a personal tutor, which decades of research say is the most
+  effective teaching there is.
+target: >-
+  Every child able to read with understanding and use practical mathematics by age ten, and every
+  person able to learn, free and in their own language, anything from first letters to the
+  engineering of the climb, with what they learn recognised everywhere.
+exists:
+  - text: UNESCO estimated that 273 million children and young people were out of school in 2024.
+    url: https://world-education-blog.org/2026/09/01/back-to-school-how-many-children-are-in-school/
+    year: 2024
+  - text: The World Bank estimated in 2022 that 70 percent of 10-year-olds in low- and middle-income countries could not understand a simple written text.
+    url: https://www.worldbank.org/en/news/press-release/2022/06/23/70-of-10-year-olds-now-in-learning-poverty-unable-to-read-and-understand-a-simple-text
+    year: 2022
+  - text: Teaching at the Right Level, developed by the Indian charity Pratham, groups children by what they can do rather than by grade; in Uttar Pradesh its learning camps doubled the number of children who could read a paragraph or story.
+    url: https://www.povertyactionlab.org/case-study/teaching-right-level-improve-learning
+  - text: A six-week pilot of a generative AI tutor at a boys' secondary school in Edo State, Nigeria, raised learning by about 0.3 standard deviations, close to two years of typical progress, the World Bank reported in 2025.
+    url: https://blogs.worldbank.org/en/education/From-chalkboards-to-chatbots-Transforming-learning-in-Nigeria
+    year: 2025
+  - text: A randomized trial in a Harvard physics course in 2025 found students learned more in less time from an AI tutor than in an active-learning class, an effect of 0.73 to 1.3 standard deviations.
+    url: https://doi.org/10.1038/s41598-025-97652-6
+    year: 2025
+  - text: Bloom reported in 1984 that students tutored one to one with mastery learning did about two standard deviations better than students taught in a conventional class, the 2 sigma problem.
+    url: https://doi.org/10.3102/0013189X013006004
+    year: 1984
+  - text: Kolibri, Learning Equality's free learning platform that works without an internet connection, was installed in more than 220 countries and territories by 2026.
+    url: https://learningequality.org/kolibri/
+    year: 2026
+gap: >-
+  The methods that work, teaching each child at their level and tutoring one to one, reach a small
+  share of the children who need them. AI tutors have shown large gains in short trials, but not yet
+  at scale, offline, in many languages or over years, and few skills learned outside school are
+  recognised by employers or universities.
+inventions: [climb-curriculum]
+scene:
+  kind: network
+  focus: Learners across the globe, each linked to a tutor and to each other, lights spreading as skills are mastered.
+  params: { shape: globe, nodes: 3000, clusters: 30, links: 0.35, pulses: 0.7 }

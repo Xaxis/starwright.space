@@ -1,0 +1,76 @@
+id: climb-curriculum
+title: The Climb Curriculum
+domain: people
+for: [universal-education]
+pitch: >-
+  One open curriculum running from first letters to the engineering of the climb, taught by an AI
+  tutor that works offline on a cheap phone in the learner's own language, with each step of mastery
+  proved by a short test and recognised as a credential anywhere.
+principle: >-
+  Bloom found that one-to-one tutoring with mastery learning lifts the average student far above a
+  classroom, and Pratham showed that teaching each child at the level they have reached, not the
+  level of their grade, works at scale even with volunteer teachers. AI tutors can now take on much of
+  a tutor's role. The Climb Curriculum joins the three. It is a map of several thousand small skills,
+  each linked to the skills it needs, the way this project maps capabilities. An AI tutor finds where
+  each learner is and teaches the next skill until it is mastered, and short supervised tests
+  certify each step. It runs offline on a phone or a shared tablet and syncs when a connection
+  appears, as Kolibri does, in local languages. Credentials are digitally signed and portable, so a
+  learner in a village can show an employer or a university anywhere what they can do. Teachers stay
+  at the centre: the tutor sorts and supports, the teacher leads.
+buildsOn:
+  - text: Bloom's 2 sigma finding on one-to-one tutoring with mastery learning (1984).
+    url: https://doi.org/10.3102/0013189X013006004
+  - text: Pratham's Teaching at the Right Level, evaluated with J-PAL.
+    url: https://www.povertyactionlab.org/case-study/teaching-right-level-improve-learning
+  - text: The World Bank's 2025 AI tutor pilot in Edo State, Nigeria, about 0.3 standard deviations in six weeks.
+    url: https://blogs.worldbank.org/en/education/From-chalkboards-to-chatbots-Transforming-learning-in-Nigeria
+  - text: The 2025 randomized trial of an AI tutor in a Harvard physics course.
+    url: https://doi.org/10.1038/s41598-025-97652-6
+  - text: Kolibri, Learning Equality's offline-first learning platform, used in more than 220 countries and territories.
+    url: https://learningequality.org/kolibri/
+experiment:
+  goal: Show that an offline AI tutor following a mastery map raises learning at scale over a full school year, not only in a short trial.
+  setup: >-
+    A randomized trial in 120 primary and lower-secondary schools in two low-income countries.
+    Treated schools get shared tablets with the offline tutor in the local language for 45 minutes a
+    day, led by their own teachers; control schools get the same tablets with plain digital
+    textbooks. One school year.
+  measure: Reading and mathematics on standard tests at the start and the end; the share of children reaching basic proficiency; attendance; cost per child; teachers' time and views.
+  succeedsIf: Learning gains at least 0.3 standard deviations above the control schools after one year, at a cost under 20 dollars per child per year.
+  costUsd: 4000000
+  months: 18
+path:
+  - phase: bench
+    what: The skill map and tutor tested with learners in after-school sessions.
+    scale: 500 learners, three languages.
+    proves: The tutor teaches and the tests certify.
+  - phase: prototype
+    what: The 120-school trial.
+    scale: About 30,000 children.
+    proves: Gains hold for a year, offline, at low cost.
+  - phase: pilot
+    what: A national rollout in one country's public schools, with credentials recognised by its employers and universities.
+    scale: Millions of learners.
+    proves: It works as public policy.
+  - phase: first-plant
+    what: The curriculum adopted in dozens of countries, in a hundred languages, with credentials recognised across borders.
+    scale: Hundreds of millions of learners.
+    proves: A shared, open standard for learning can span the world.
+  - phase: fleet
+    what: The curriculum extended to adults and to every skill the buildout needs, from wiring to orbital mechanics.
+    scale: Everyone who wants to learn.
+    proves: Anyone can learn the climb's work.
+  - phase: civilization
+    what: Every person on every world able to learn anything the climb knows, from one open curriculum its users keep current.
+    scale: Billions of learners across worlds.
+    proves: Talent anywhere can reach the work of the climb.
+risks: >-
+  AI tutors can be wrong, and confidently so; the map's tests check mastery independently of the
+  tutor, and the content is reviewed in the open. Devices break and power and connections fail;
+  shared tablets with solar chargers and an offline-first design are there for that. Governments may
+  see a shared curriculum as a threat to their own; the map is open, and every country can adapt it
+  and add its own content.
+scene:
+  kind: network
+  focus: A map of skills lighting up across many countries as learners master each one.
+  params: { shape: globe, nodes: 2500, clusters: 24, links: 0.4, pulses: 0.8 }

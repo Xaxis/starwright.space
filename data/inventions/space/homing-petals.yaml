@@ -1,0 +1,88 @@
+id: homing-petals
+title: Homing Petals
+domain: space
+for: [swarm-construction, swarm-station-keeping, swarm-logistics]
+pitch: >-
+  Collectors that are their own spacecraft: each film unfolds after launch, sails itself to its
+  slot by tilting against sunlight, and holds its place for life by switching strips along its edges
+  between mirror and clear.
+principle: >-
+  Light pushes on whatever it strikes; on a perfect mirror the pressure is twice the light's flux
+  divided by the speed of light. In the swarm's {swarm-flux}, a collector of {collector-density} is pushed at about half a
+  millimetre to a millimetre per second each second, depending on how much light it reflects, a few
+  percent of the Sun's pull there. Tilting the sheet turns that push along or against its orbit, so
+  it can spiral outward or inward like a sail. Each Petal is launched folded from Mercury, unfolds,
+  and spirals out to its slot {swarm-radius} from the Sun within about a year, with no tug and no
+  propellant. To hold its place it uses the trick IKAROS flew: strips along its edges switch between
+  reflective and clear, which moves the centre of push and turns the sheet; changing how much of the
+  sheet reflects changes the push itself and so trims the orbit. Each Petal knows its own slot and
+  its neighbours' from a shared table of orbits and corrects itself every day. The strips and a small
+  beacon run on cells of their own, so a Petal whose main cells fail can still sail itself to a
+  recycling forge.
+buildsOn:
+  - text: JAXA's IKAROS steered with 80 liquid crystal panels whose reflectivity could be switched, and confirmed in July 2010 that it reached more than 90 percent of the expected attitude change.
+    url: http://www.jaxa.jp/press/2010/07/20100723_ikaros_e.html
+    year: 2010
+  - text: NASA's Solar Cruiser design, a 1,653 square metre sail of 2.5 micron film, used reflectivity control devices that switch from reflective to transmissive with an applied voltage; a full quadrant was deployed on the ground in 2023.
+    url: https://hesto.smce.nasa.gov/2023/08/02/solar-cruiser-enabling-new-vistas-for-heliophysics-science/
+    year: 2023
+  - text: NASA's ACS3 deployed an 80 square metre sail on four 7 m carbon fibre booms in orbit in 2024.
+    url: https://en.wikipedia.org/wiki/Advanced_Composite_Solar_Sail_System
+    year: 2024
+  - text: McInnes and Simmons worked out orbits that sails can hold and free bodies cannot, displaced by the steady push of light (Journal of Spacecraft and Rockets, 1992).
+    url: https://doi.org/10.2514/3.25487
+    year: 1992
+  - text: Eric Drexler's MIT thesis designed high-performance solar sails of thin metal film.
+    url: https://dspace.mit.edu/handle/1721.1/16234
+    year: 1979
+  - text: Demiryont and Moorehead built an electrochromic film that switches a spacecraft surface's emissivity for thermal control (Solar Energy Materials and Solar Cells, 2009).
+    url: https://doi.org/10.1016/j.solmat.2009.02.025
+    year: 2009
+experiment:
+  goal: Show that switchable-reflectivity strips can steer a thin sheet, and survive the light, heat and switching they would see near Mercury for years.
+  setup: >-
+    Two rigs. In a thermal vacuum chamber with a solar simulator and ultraviolet lamps at up to ten
+    times the sunlight at Earth, liquid crystal and electrochromic strips on 7.5 micron polyimide are
+    switched a million times while their reflectivity is measured. Beside it, a sheet a metre square
+    hangs from a torsion pendulum in vacuum under the simulator, and the turning force is measured as
+    its strips switch.
+  measure: Reflectivity contrast against switching cycles and light dose, torque per switched strip, the power the strips draw, and the sheet's temperature.
+  succeedsIf: The strips keep a reflectivity contrast above 0.3 after a million cycles and the light of five years at the swarm's distance, and the measured torque matches the light-pressure model within 10 percent.
+  costUsd: 2500000
+  months: 18
+path:
+  - phase: bench
+    what: The ageing chamber and the torsion pendulum.
+    scale: Sheets a metre square.
+    proves: Steering strips that last.
+  - phase: prototype
+    what: A Petal of 100 square metres on a rideshare to high Earth orbit, turning and changing its orbit by strips alone.
+    scale: One sheet.
+    proves: Attitude and orbit control with no propellant.
+  - phase: pilot
+    what: Ten Petals released together into solar orbit near Earth's, each sailing to an assigned slot and holding formation for years.
+    scale: Ten sheets of a hectare each.
+    proves: Self-placement and formation keeping.
+  - phase: first-plant
+    what: Thousands of Petals made in space and flown as a collector field for orbital industry.
+    scale: Square kilometres.
+    proves: Collectors made, launched and placed at a steady rate.
+  - phase: fleet
+    what: Mercury's factories launching Petals into the swarm's shells by the billion.
+    scale: Billions of collectors a year.
+    proves: The swarm builds itself without tugs.
+  - phase: civilization
+    what: The whole swarm, about a trillion Petals each keeping its own place around the Sun and sailing home to be recycled when it fails.
+    scale: "{swarm-full-area} at {swarm-radius}"
+    proves: Type II, flown by light.
+risks: >-
+  Switchable films may darken or peel in the strong light near Mercury; the bench tests several kinds
+  side by side, and the fallback is small vanes tilted by tiny motors at the corners. A trillion craft
+  steering themselves could collide if their shared table goes wrong, so slots are spaced so that a
+  Petal left uncontrolled drifts slowly, and neighbours warn each other directly. The planets slowly
+  distort every orbit, and the model must check that the strips have enough control authority to
+  keep up.
+scene:
+  kind: swarm
+  focus: Petals unfolding as they leave Mercury and spiralling out to their places in the swarm.
+  params: { built: 0.8, radiusAu: 0.6, mercury: true }

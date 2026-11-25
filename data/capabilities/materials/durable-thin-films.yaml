@@ -1,0 +1,40 @@
+id: durable-thin-films
+title: Films that last decades in hard sunlight
+domain: materials
+stage: type-1
+needs: [regolith-refining, materials-discovery]
+summary: >-
+  The swarm is made of film, {collector-density} of it, a few micrometres of material, and at
+  {swarm-radius} from the Sun it takes {swarm-flux} of sunlight with its ultraviolet and the solar
+  wind's protons, for decades. Every film flown so far has been a polymer, and polymers darken and
+  crack under that light. The film must also be made from what asteroids and Mercury hold, not from
+  oil.
+target: >-
+  A collector film at {collector-density} that keeps its strength and its {collector-efficiency}
+  conversion for at least thirty years at {swarm-radius}, made only from elements common in rock:
+  silicon, oxygen, aluminium, iron and magnesium.
+exists:
+  - text: JAXA's IKAROS, the first interplanetary solar sail, flew a polyimide membrane 7.5 micrometres thick and 20 metres on the diagonal, carrying thin-film solar cells 25 micrometres thick.
+    url: https://en.wikipedia.org/wiki/IKAROS
+    year: 2010
+  - text: The Planetary Society's LightSail 2 sailed on sunlight alone in Earth orbit from June 2019 until it re-entered in November 2022.
+    url: https://www.planetary.org/sci-tech/lightsail
+    year: 2022
+  - text: NASA's Advanced Composite Solar Sail System tested a sail about 9 metres on a side on composite booms.
+    url: https://www.nasa.gov/mission/acs3/
+    year: 2024
+  - text: Nippon Electric Glass makes G-Leaf glass 200 micrometres thick or less; below 100 micrometres it can be rolled up for roll-to-roll processing.
+    url: https://www.neg.co.jp/en/products/g-leaf/index.html
+    year: 2026
+  - text: Blue Origin made solar cells from regolith simulant with cover glass from the process's by-products, which it says lets the cells last over a decade on the Moon instead of days.
+    url: https://www.blueorigin.com/news/blue-alchemist-powers-our-lunar-future/
+    year: 2023
+gap: >-
+  Polymer films have flown for a few years at most, not for decades this close to the Sun, and they
+  cannot be made from rock. Glass survives sunlight and can be made from rock, but the thinnest
+  glass in production is still many times thicker and heavier than a collector can be.
+inventions: [glasswing]
+scene:
+  kind: machine
+  focus: A square of collector film, a few micrometres thick, turning in sunlight close to the Sun.
+  params: { shape: panel, spin: 0.3 }

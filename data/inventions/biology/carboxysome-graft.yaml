@@ -1,0 +1,83 @@
+id: carboxysome-graft
+title: The Carboxysome Graft
+domain: biology
+for: [engineered-photosynthesis]
+pitch: >-
+  Give an ordinary crop the carbon-concentrating trick that lets pond scum and cyanobacteria
+  photosynthesise so fast: a protein shell that floods the fixing enzyme with carbon dioxide so it
+  stops wasting energy on oxygen.
+principle: >-
+  Rubisco, the enzyme that fixes carbon, often grabs oxygen by mistake, and the plant burns energy
+  undoing it. This is photorespiration, and it is the single largest loss in C3 crops like rice and
+  wheat. Cyanobacteria avoid it with a carboxysome: a protein shell that packs Rubisco together with
+  carbonic anhydrase, fed by pumps that concentrate bicarbonate, so the enzyme sits in a pocket of
+  nearly pure carbon dioxide and almost never sees oxygen. The Carboxysome Graft moves this whole
+  module, the shell proteins, the enzymes and the bicarbonate pumps, into a crop's chloroplast,
+  tuned by design tools so the parts express and assemble in a plant rather than a microbe. The crop
+  keeps its roots, leaves and grain, but fixes carbon closer to the microbial rate, so more sunlight
+  becomes food on the same land.
+buildsOn:
+  - text: The theoretical photosynthesis ceiling (4.6 percent C3, 6 percent C4) and the gap to the one percent crops reach, which the carbon-concentrating mechanism is meant to close.
+    url: https://doi.org/10.1016/j.copbio.2008.02.004
+    year: 2008
+  - text: RIPE's photorespiratory bypass raised tobacco biomass more than 40 percent in the field, proving that cutting photorespiration pays off in a real plant.
+    url: https://doi.org/10.1126/science.aat9077
+    year: 2019
+  - text: The same bypass lifted soybean seed yield up to 33 percent, showing the gain carries into a staple crop.
+    url: https://doi.org/10.1126/science.adc9831
+    year: 2022
+  - text: The C4 Rice Project's long effort to install a faster photosynthetic pathway into rice, the closest precedent for rebuilding a crop's carbon chemistry.
+    url: https://c4rice.com/
+    year: 2024
+experiment:
+  goal: Assemble a working, bicarbonate-fed carboxysome inside a crop chloroplast and show it raises the rate of carbon fixation.
+  setup: >-
+    In a model crop (first tobacco, then rice), express the cyanobacterial shell proteins, Rubisco
+    and carbonic anhydrase targeted to the chloroplast, plus bicarbonate transporters on the
+    chloroplast envelope, using design tools to balance expression. Grow matched transgenic and
+    wild-type plants in controlled chambers at several carbon dioxide levels.
+  measure: >-
+    Electron-microscope confirmation that intact carboxysomes assemble; gas-exchange measurement of
+    carbon fixation rate and the carbon dioxide level at which photorespiration stops; plant dry mass
+    at harvest.
+  succeedsIf: >-
+    Transgenic plants assemble intact carboxysomes and show at least a 20 percent higher carbon
+    fixation rate at today's atmospheric carbon dioxide than matched controls, with no loss of
+    viability.
+  costUsd: 6000000
+  months: 36
+path:
+  - phase: bench
+    what: Carboxysomes assembled and fed in a model crop chloroplast in growth chambers.
+    scale: Individual plants.
+    proves: The module assembles and lifts carbon fixation in a plant cell.
+  - phase: prototype
+    what: The full module in rice, with yield measured in greenhouses.
+    scale: Hundreds of plants.
+    proves: A staple crop carries the trait and sets more grain per unit light.
+  - phase: pilot
+    what: First confined field trials across seasons and climates.
+    scale: Field plots.
+    proves: The gain survives pests, weather and real soil.
+  - phase: first-plant
+    what: Regulatory approval and seed increase for one crop in one region.
+    scale: Farms in a single country.
+    proves: Farmers grow it and it yields as promised at scale.
+  - phase: fleet
+    what: The graft moved into the world's major staple crops and licensed widely.
+    scale: Millions of hectares.
+    proves: A large share of global grain uses less land and water per tonne.
+  - phase: civilization
+    what: Carbon-concentrating crops and algae as the default, feeding people and capturing carbon on a shrinking footprint.
+    scale: Global cropland and algae farms.
+    proves: Food and carbon capture decoupled from land as the climb needs.
+risks: >-
+  The shell may not assemble in a plant, or the pumps may cost more energy than the graft saves; the
+  project would try partial modules and alternative transporters, and lean on the photorespiratory
+  bypass as a fallback that already works. Field gains may fall short of chamber gains, so trials run
+  across many environments before any claim. A faster crop may demand more water or nitrogen, which
+  the trials measure directly.
+scene:
+  kind: cell
+  focus: Packed carboxysome shells forming inside a chloroplast, carbon fixation speeding up as they close.
+  params: { type: plant, organelles: 0.9, glow: 0.7 }

@@ -1,0 +1,43 @@
+id: electric-transport
+title: Electric transport on land, sea and air
+domain: transport
+stage: k08
+needs: [grid-storage, abundant-minerals]
+summary: >-
+  Almost all transport still runs on oil burned in engines that turn most of it into waste heat.
+  An electric motor turns most of its energy into motion, so the same trip needs a fraction of the
+  energy, and that energy can come from sunlight and wind. Cars, buses, two-wheelers, trucks,
+  trains, ferries and short flights can all move to batteries and wires.
+target: >-
+  Every new road vehicle electric, the world's fleet of cars, buses, trucks and two-wheelers turned
+  over, and short-sea ferries, river boats and commuter aircraft on batteries, all charged from
+  clean power, well before the climb reaches {power-k08} in {year-k08}.
+exists:
+  - text: The IEA counted more than 20 million electric cars sold in 2025, a quarter of all new cars, and nearly 55 percent of new cars in China.
+    url: https://www.iea.org/reports/global-ev-outlook-2026/executive-summary
+    year: 2025
+  - text: The IEA counted more than 17 million electric cars sold in 2024, over 20 percent of new cars worldwide.
+    url: https://www.iea.org/reports/global-ev-outlook-2025/executive-summary
+    year: 2024
+  - text: Battery-electric cars were 88.9 percent of new passenger cars registered in Norway in 2024.
+    url: https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_Norway
+    year: 2024
+  - text: BloombergNEF's survey found lithium-ion battery pack prices fell 20 percent in 2024 to a record low of $115 per kilowatt-hour.
+    url: https://about.bnef.com/blog/lithium-ion-battery-pack-prices-see-largest-drop-since-2017-falling-to-115-per-kilowatt-hour-bloombergnef/
+    year: 2024
+  - text: Incat's China Zorrilla, launched in May 2025, is a 130 m ferry for 2,100 passengers and 225 vehicles running on a 40 MWh battery, the largest fully electric ship.
+    url: https://en.wikipedia.org/wiki/China_Zorrilla_(ship)
+    year: 2025
+  - text: Denmark's E-ferry Ellen entered service in August 2019 with a 4.3 MWh battery, then the largest on any electric vessel.
+    url: https://en.wikipedia.org/wiki/E-ferry_Ellen
+    year: 2019
+gap: >-
+  Three quarters of new cars and most new trucks are still sold with engines, and a fleet takes well
+  over a decade to turn over. Heavy trucks need cheaper batteries and megawatt chargers along
+  freight routes; poorer countries need cheap vehicles and stronger grids; battery minerals must
+  grow several times over. The technology exists. The gap is cost, chargers and scale.
+inventions: []
+scene:
+  kind: globe
+  focus: Cities at night, their streets moving on power drawn from a clean grid.
+  params: { look: cities, grid: 0.7, lights: 1 }

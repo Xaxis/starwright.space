@@ -1,0 +1,39 @@
+id: safe-replication
+title: Self-copying machines that stay under control
+domain: manufacturing
+stage: type-1
+needs: [self-replicating-factory, space-commons, replicator-oversight, ai-safety]
+summary: >-
+  A machine that copies itself every {doubling-time} is the most powerful tool the climb has, and
+  for the same reason the one that most needs a leash. A fault in its design is copied as fast as
+  the design; a lineage that copies without limit, or that someone captures, could spread where no
+  one wants it. Biology faced this with engineered organisms and answered with containment by
+  design.
+target: >-
+  Every self-copying machine able to copy only with a licence that can be withheld, only from its
+  approved design, and only for a set number of generations, with these limits as hard to remove as
+  to forge a signature, so that the {doublings-to-sun} doublings from seed to swarm stay under human
+  decision.
+exists:
+  - text: Freitas and Merkle's Kinematic Self-Replicating Machines surveys the public safety concerns raised by artificial replicators and the guidelines proposed to address them.
+    url: http://www.molecularassembler.com/KSRM/5.11.htm
+    year: 2004
+  - text: Harvard researchers redesigned essential enzymes so bacteria depend on a non-standard amino acid the environment does not supply, and showed they resist escaping that dependence by mutation or by taking up genes.
+    url: https://www.nature.com/articles/nature14121
+    year: 2015
+  - text: The TPM 2.0 library specification defines the hardware root of trust that lets a computer prove which software it booted and refuse unsigned code.
+    url: https://trustedcomputinggroup.org/resource/tpm-library-specification/
+    year: 2026
+  - text: Robotic Budding showed modular robots assembling a structurally identical copy of themselves from spare modules, still under teleoperation.
+    url: https://arxiv.org/abs/2610.31929
+    year: 2026
+gap: >-
+  No replicator yet exists to control, so no controls have been tested against one. Software locks
+  can be patched out by anyone who can rebuild the controller, and a factory that makes its own
+  chips can rebuild its controller. A safeguard must survive the machine's own ability to make
+  parts.
+inventions: [telomere-lock]
+scene:
+  kind: network
+  focus: A family tree of factories, each new branch lighting only when its licence arrives.
+  params: { nodes: 2000, clusters: 16, links: 0.4, pulses: 0.6, shape: system }

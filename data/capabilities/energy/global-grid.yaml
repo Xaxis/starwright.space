@@ -1,0 +1,40 @@
+id: global-grid
+title: A grid that spans the planet
+domain: energy
+stage: k08
+needs: [terawatt-solar-factories, fast-permitting, buildout-finance, workforce-transition, solar-storm-resilience]
+summary: >-
+  The Sun never sets on the whole Earth. A grid that ties the continents together carries noon in
+  one place to evening in another, and summer in one hemisphere to winter in the other, so it needs
+  far less storage. High-voltage direct current already carries 12 gigawatts more than 3,000 km
+  across China. The climb needs lines like it under the oceans.
+target: >-
+  Lines between every continent that carry a large share of {power-k08} across time zones and
+  seasons, so that sunlight anywhere on the day side serves demand on the night side, losing only a
+  few percent per thousand kilometres.
+exists:
+  - text: The Changji to Guquan line in China, finished in 2018, carries 12,000 MW at 1,100 kV direct current over more than 3,000 km, a world record for voltage, power and distance.
+    url: https://www.hitachienergy.com/about-us/case-studies/changji-guquan-uhvdc-link
+    year: 2019
+  - text: Viking Link between Britain and Denmark, 765 km long and 1,400 MW, began commercial operation in December 2023 as the longest land and subsea interconnector.
+    url: https://en.wikipedia.org/wiki/Viking_Link
+    year: 2023
+  - text: Xlinks planned 3.6 GW from solar and wind in Morocco to Devon over about 4,000 km of subsea cable; in June 2025 the UK government declined to back it with a contract.
+    url: https://xlinks.co/morocco-uk-power-project/
+    year: 2025
+  - text: Sun Cable's Australia-Asia PowerLink plans up to 10 GW of solar and a 4,300 km cable to Singapore, which gave conditional approval to import 1.75 GW from 2035; in 2026 it was still seeking finance.
+    url: https://www.abc.net.au/news/2026-10-08/sun-cable-plans-to-send-australian-solar-energy-to-singapore/107229542
+    year: 2026
+  - text: State Grid of China proposed a Global Energy Interconnection in 2015, with transcontinental ultra-high-voltage lines linking Arctic wind and equatorial solar by 2050.
+    url: https://www.powermag.com/china-rolls-out-proposal-for-worldwide-grid/
+    year: 2016
+gap: >-
+  The longest lines run within one country. Cables between continents must cross oceans thousands of
+  metres deep and thousands of kilometres wide, where a repair ship takes weeks to arrive, and no
+  subsea power cable yet runs much beyond 700 km. Each line also needs several governments to agree,
+  and the first intercontinental projects have stalled on finance and politics, not on physics.
+inventions: [cold-spine]
+scene:
+  kind: globe
+  focus: Lines of light crossing the oceans, carrying daytime power from the deserts to cities in the dark.
+  params: { grid: 1, solar: 0.7, lights: 1, look: deserts }

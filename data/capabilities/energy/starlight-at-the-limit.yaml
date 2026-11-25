@@ -1,0 +1,44 @@
+id: starlight-at-the-limit
+title: Turning starlight into work near the thermodynamic limit
+domain: energy
+stage: sun
+needs: [dyson-swarm]
+summary: >-
+  The plan's collectors turn {collector-efficiency} of sunlight into power, so even a swarm that
+  catches every photon yields {sun-harnessed}. Thermodynamics allows far more. Sunlight comes from a
+  surface at {sun-temperature}, so a converter that sheds its heat at room temperature may, by the
+  Landsberg limit, turn {landsberg-limit} of it into work. Every gain in efficiency raises what one
+  star can give, in proportion.
+target: >-
+  Raise the share of the Sun's light turned into work from {collector-efficiency} toward the Landsberg
+  limit, with converters light enough for the swarm and radiators that shed what is left, so that the
+  whole Sun gives close to {sun-at-landsberg} instead of {sun-harnessed}.
+exists:
+  - text: Landsberg and Tonge derived the thermodynamic limits for turning radiation into work, now called the Landsberg limit.
+    url: https://doi.org/10.1063/1.328187
+    year: 1980
+  - text: Wright applied the Landsberg limit to Dyson spheres and found a shell at 1 au could reach about 95 percent, but that nested shells give little or no advantage for doing work.
+    url: https://arxiv.org/abs/2309.06564
+    year: 2023
+  - text: Bradbury's Matrioshka Brain nests shells around a star, each running on the heat the one inside it radiates.
+    url: https://www.gwern.net/docs/1999-bradbury-matrioshkabrains.pdf
+    year: 1999
+  - text: LaPotin and colleagues at MIT and NREL turned more than 40 percent of the light from an emitter at 1,900 to 2,400 °C into electricity with two-junction thermophotovoltaic cells.
+    url: https://doi.org/10.1038/s41586-022-04473-y
+    year: 2022
+  - text: Nielsen and colleagues at UNSW measured electricity from a thermoradiative diode, a device that makes power by glowing in the infrared, 2.26 mW per square metre at a 12.5 °C temperature difference.
+    url: https://doi.org/10.1021/acsphotonics.2c00223
+    year: 2022
+  - text: Detailed-balance theory sets the limit for a solar cell with infinitely many junctions at 68.7 percent in ordinary sunlight and 86.8 percent in fully concentrated sunlight.
+    url: https://en.wikipedia.org/wiki/Shockley%E2%80%93Queisser_limit
+    year: 1981
+gap: >-
+  The best solar cell yet made turns {pv-record-multijunction} of concentrated light into power, and
+  only on Earth, cooled. Thermophotovoltaics reach 40 percent in the laboratory; thermoradiative diodes make
+  milliwatts per square metre. No converter chain yet turns more than half of sunlight into work, let
+  alone one light enough to build by the trillion.
+inventions: [cascade-collector]
+scene:
+  kind: swarm
+  focus: The closed swarm, each collector glowing deep red as it wrings more work from the same light.
+  params: { built: 1, radiusAu: 0.6 }

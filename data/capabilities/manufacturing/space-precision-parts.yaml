@@ -1,0 +1,39 @@
+id: space-precision-parts
+title: Precision parts made in space
+domain: manufacturing
+stage: k09
+needs: [automated-factories]
+summary: >-
+  Bearings, gears, motor shafts, optics and seals are the parts that wear out and the parts a crude
+  factory cannot make. On Earth precision comes from a chain of better and better machine tools and
+  gauges, built up over two centuries. A factory in space must make that chain for itself, from cast
+  metal and rock, with almost nothing brought from Earth.
+target: >-
+  Factories on the Moon and in orbit that make micrometre-accurate bearings, spindles, gears, lenses
+  and mirrors from local metal and glass, starting from a kit of a few tonnes, so that the
+  {seed-mass} seeds from {seed-year} can maintain and copy their own moving parts.
+exists:
+  - text: Flawless Photonics pulled more than 11 kilometres of ZBLAN optical fibre in microgravity on the International Space Station and returned it to Earth.
+    url: https://www.flawlessphotonics.com/
+    year: 2026
+  - text: Varda Space Industries processes materials in orbit and brings them back in its own re-entry capsules; its W-9 capsule has returned from orbit.
+    url: https://www.varda.com/
+    year: 2026
+  - text: Space Forge calls its ForgeStar the first returnable and reusable in-space manufacturing platform, aimed at semiconductor substrates grown in microgravity.
+    url: https://www.spaceforge.com/
+    year: 2026
+  - text: Surface plates are not made from more precise standards; three rough plates rubbed against each other in turn become flat, a method Henry Maudslay used around 1800 and Joseph Whitworth described.
+    url: https://en.wikipedia.org/wiki/Surface_plate
+    year: 1840
+  - text: A laser interferometer measures length to within 0.5 parts per million, because the wavelength of light is itself the unit of length.
+    url: https://www.renishaw.com/en/xl-80-laser-system--8268
+    year: 2026
+gap: >-
+  What is made in space today is high-value material in tiny amounts, on machines built on Earth.
+  Nothing has yet made a machine tool, a bearing or a gauge from material won in space, and no one
+  has shown how far precision can be bootstrapped from crude castings with almost nothing imported.
+inventions: [accuracy-seed]
+scene:
+  kind: orbit
+  focus: A machine shop in orbit, turning out bearings and mirrors from lunar metal and glass.
+  params: { stations: 0.5, depots: 0.3 }

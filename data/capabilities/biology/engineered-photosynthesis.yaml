@@ -1,0 +1,38 @@
+id: engineered-photosynthesis
+title: Photosynthesis that works harder
+domain: biology
+stage: k08
+needs: [programmable-biology]
+summary: >-
+  Photosynthesis feeds almost everything alive and across the whole Earth it captures
+  {photosynthesis-power}, yet it is strikingly inefficient: most crops turn only about one percent of
+  the sunlight that falls on them into biomass over a season. The chemistry has known, fixable flaws.
+  Mending them means more food on less land, crops that make their own fertiliser or fix their own
+  carbon, and living systems that pull carbon from the air faster than any forest.
+target: >-
+  Lift the share of sunlight that staple crops and engineered algae turn into usable biomass several
+  fold above today's field average, toward the physical ceiling, so that food, fibre and carbon
+  capture all grow on far less land and water.
+exists:
+  - text: The theoretical ceiling for solar-to-biomass is about 4.6 percent for C3 and 6 percent for C4 photosynthesis, yet field crops average near 1 percent over a season, leaving large headroom.
+    url: https://doi.org/10.1016/j.copbio.2008.02.004
+    year: 2008
+  - text: The RIPE project raised tobacco dry matter about 15 percent by speeding recovery from photoprotection, and more than 40 percent with a photorespiratory bypass, both in replicated field trials.
+    url: https://doi.org/10.1126/science.aat9077
+    year: 2019
+  - text: A photorespiratory fix in soybean lifted seed yield up to 33 percent across five independent field events, showing the gains carry into a real crop.
+    url: https://doi.org/10.1126/science.adc9831
+    year: 2022
+  - text: A cell-free chemoenzymatic system fixed carbon dioxide into starch at about 8.5 times the rate of maize, a hint of how much faster designed carbon fixation can run.
+    url: https://doi.org/10.1126/science.abh4049
+    year: 2021
+gap: >-
+  The gains so far are single fixes in model plants or lab systems. No staple crop yet carries a full
+  stack of improvements at once, the carbon-concentrating machinery of fast algae and cyanobacteria
+  has not been transplanted into a working crop chloroplast, and field gains must survive pests,
+  drought and real farms before they feed anyone.
+inventions: [carboxysome-graft]
+scene:
+  kind: cell
+  focus: A plant chloroplast with a packed carbon-concentrating shell switching on and fixing carbon faster.
+  params: { type: plant, organelles: 0.9, glow: 0.6 }

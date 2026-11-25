@@ -1,0 +1,44 @@
+id: sunlight-reflection
+title: Cooling the planet quickly if warming runs ahead
+domain: environment
+stage: k08
+needs: [earth-monitoring, planetary-coordination]
+summary: >-
+  Even as emissions fall and carbon is drawn down, the Earth will keep warming for decades. Reflecting
+  a small share of sunlight back to space is the only known way to cool the planet within years:
+  Pinatubo's eruption did it for almost two years in 1991. Whether to do it is a choice for the
+  world's governments. Knowing whether it can be done safely is a job for research, and it has to
+  start long before anyone might need it.
+target: >-
+  Know, from outdoor experiments and observation, how to reflect enough sunlight to offset a watt per
+  square metre of warming, what that does to rain, ozone and each region, and how to stop safely, so
+  that any decision to use it, or not, is well informed.
+exists:
+  - text: The UK's Advanced Research and Invention Agency funds 22 teams in its 56.8 million pound Exploring Climate Cooling programme, including a few small, controlled outdoor experiments.
+    url: https://www.aria.org.uk/opportunity-spaces/resilient-climate-and-ecosystems/exploring-climate-cooling
+    year: 2025
+  - text: By April 2026 ARIA's teams were thickening sea ice in Nunavut and brightening clouds over the Great Barrier Reef, while other outdoor experiments were still choosing sites.
+    url: https://www.aria.org.uk/insights/2026/exploring-climate-cooling-a-year-of-progress
+    year: 2026
+  - text: NASA records that Mount Pinatubo put about 15 million tonnes of sulphur dioxide into the stratosphere in June 1991 and cooled the globe by about 0.6 °C for almost two years.
+    url: https://science.nasa.gov/earth/earth-observatory/global-effects-of-mount-pinatubo-1510
+    year: 1991
+  - text: Keith and colleagues calculated that about 2.1 million tonnes a year of calcite particles could offset 1 W per square metre while slightly increasing ozone, unlike sulphate.
+    url: https://doi.org/10.1073/pnas.1615572113
+    year: 2016
+  - text: Stardust Solutions raised 60 million US dollars in October 2025 to develop a reflective particle for the stratosphere, with tests planned for 2026.
+    url: https://en.wikipedia.org/wiki/Stardust_Solutions
+    year: 2025
+  - text: Southern Cross University's team has sprayed sea-water mist from boats over the Great Barrier Reef since 2020 to brighten clouds above it.
+    url: https://www.cam.ac.uk/stories/saving-great-barrier-reef
+    year: 2024
+gap: >-
+  Only a handful of small outdoor experiments have run. Sulphate aerosols, the best understood option,
+  thin the ozone layer and heat the stratosphere; alternatives such as calcite are untested outside
+  the laboratory. Nobody can yet predict how regional rain would change, and no international body
+  exists that could decide who may deploy it, or stop it.
+inventions: [mesosphere-flake]
+scene:
+  kind: globe
+  focus: Sunlight glancing off a faint bright veil high above the oceans.
+  params: { look: oceans, ice: 0.5 }

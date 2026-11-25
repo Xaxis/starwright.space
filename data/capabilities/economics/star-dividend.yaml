@@ -1,0 +1,36 @@
+id: star-dividend
+title: A share of the Sun for everyone
+domain: economics
+stage: type-2
+needs: [shared-abundance, solar-system-governance, interplanetary-markets]
+summary: >-
+  The swarm turns the Sun's light into {type-2-power} of power, far more than people could ever spend
+  on themselves, so the question becomes who decides what it is for. If it all belongs to whoever
+  built the collectors, a few owners would hold a star's worth of power over everyone else. The climb
+  needs a way to share the Sun's output that every person, on every world, can see is fair.
+target: >-
+  Every person holds an equal, permanent claim to a share of the swarm's output, paid as power or its
+  value, while markets allocate the rest to the uses that need it, under rules set by everyone who
+  holds a share.
+exists:
+  - text: The 1979 Moon Agreement declares the Moon and its natural resources the common heritage of mankind, though it has few parties.
+    url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/moon-agreement.html
+    year: 1979
+  - text: The International Seabed Authority governs the deep seabed and its resources as the common heritage of humankind on behalf of its 172 members.
+    url: https://isa.org.jm/about-isa/
+    year: 2026
+  - text: Alaska's Permanent Fund has paid an equal dividend to every resident from resource income each year since 1982.
+    url: https://pfd.alaska.gov/Division-Info/summary-of-dividend-applications-payments
+    year: 2025
+  - text: Posner and Weyl proposed in 2017 that owners of shared assets declare their own value, pay a tax on it and must sell to anyone who offers that price, which keeps assets in the hands that value them most and funds a dividend.
+    url: https://doi.org/10.1093/jla/lax001
+    year: 2017
+gap: >-
+  Common heritage is written into treaties but has never been paid out to people, and resource
+  dividends exist only within single countries. Nothing yet says how the output of one machine the
+  size of a solar system should be shared among the people of many worlds.
+inventions: [heritage-dividend]
+scene:
+  kind: swarm
+  focus: The swarm closed around the Sun, its output split into a share for every person and a share for everything else.
+  params: { built: 1 }

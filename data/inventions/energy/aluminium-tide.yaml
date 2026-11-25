@@ -1,0 +1,87 @@
+id: aluminium-tide
+title: The Aluminium Tide
+domain: energy
+for: [grid-storage]
+pitch: >-
+  Store summer's surplus sunlight as aluminium, made in smelters built to run only when power is
+  cheap, and turn it back into power and heat in winter by burning it with steam, which returns the
+  alumina to be smelted again next summer.
+principle: >-
+  Aluminium holds about 8.6 kWh of chemical energy per kilogram, more than coal, and keeps forever as a
+  stack of ingots in a shed. In winter the metal is burnt with steam in a closed reactor: aluminium
+  takes the oxygen from water, leaving hydrogen, and the reaction releases about as much heat again.
+  Hydrogen and heat together drive a combined-cycle plant and warm buildings, and the alumina is
+  caught as powder and shipped back to the smelter. In summer, smelters turn it back into metal. With
+  inert anodes, which release oxygen instead of CO2, the electrolysis needs close to the metal's own
+  8.6 kWh per kilogram plus losses, about 12 kWh in a good cell, and the winter plant returns about a
+  third of that as electricity, much like hydrogen in a salt cavern but with no cavern and no leaks.
+  Seasonal storage is paid for by capacity, not efficiency: a tonne of ingots costs almost nothing to
+  keep for six months. The new part is the smelter. Today's pots must run steadily or their molten
+  bath freezes. The Tide's pots have adjustable shell heat exchangers, so they can swing from full
+  current down to a hot idle and back, smelting through the summer and idling through the winter.
+buildsOn:
+  - text: EnPot's adjustable heat exchangers let aluminium smelting pots swing their power by about 30 percent up or down, in commercial use at TRIMET in Essen since 2019.
+    url: https://enpot.com/
+    year: 2025
+  - text: ELYSIS reported a commercial-size inert anode cell in November 2025, which releases oxygen and no direct greenhouse gases.
+    url: https://www.elysis.com/en
+    year: 2025
+  - text: The Hall-Heroult cells that make all primary aluminium run at 940 to 980 °C and commonly use about 15.4 kWh per kilogram.
+    url: https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process
+  - text: Bergthorson's review of metal fuels sets out how metals such as aluminium and iron can be burnt for power and their oxides recycled with clean electricity.
+    url: https://doi.org/10.1016/j.pecs.2018.05.001
+    year: 2018
+  - text: Haller and colleagues modelled a seasonal store for a Swiss apartment building that turns summer solar power into aluminium and back, needing 350 to 530 kg of aluminium per apartment.
+    url: https://doi.org/10.1016/j.ecmx.2019.100017
+    year: 2020
+  - text: Kombargi, Godart, Hart and colleagues at MIT reacted gallium-indium activated aluminium with seawater to give about 99 percent of the theoretical hydrogen in under ten minutes, recovering over 90 percent of the alloy.
+    url: https://doi.org/10.1016/j.xcrp.2024.102121
+    year: 2024
+experiment:
+  goal: Show that an aluminium reduction cell can follow a solar power profile, from full current to hot idle and back, without freezing or wearing out, and measure the round trip through aluminium.
+  setup: >-
+    A 5 kA laboratory reduction cell with inert anodes and an adjustable shell heat exchanger, driven
+    by a power supply that replays a year of solar surplus compressed into weeks. Its aluminium is
+    burnt with steam in a 50 kW reactor feeding a small turbine and a fuel cell, and the alumina
+    collected from the reactor is fed back to the cell.
+  measure: Kilowatt-hours per kilogram across the power swings; anode wear; bath temperature and frozen ledge thickness; how low the power can fall and for how long; electricity and heat returned per kilogram; share of alumina recovered.
+  succeedsIf: The cell swings between 100 and 20 percent power 50 times with no freeze at under 14 kWh per kilogram on average, and the loop returns more than 25 percent of its input as electricity with more than 95 percent of the alumina recovered.
+  costUsd: 6000000
+  months: 30
+path:
+  - phase: bench
+    what: The swing cell and the steam burner, closing the loop at laboratory scale.
+    scale: Tonnes of aluminium, megawatt-hours stored.
+    proves: A pot can follow the sun, and the alumina can be recovered and smelted again.
+  - phase: prototype
+    what: A row of full-size swing pots beside a solar farm, with a small winter plant.
+    scale: 10 MW of pots, a 2 MW winter plant.
+    proves: Season-long storage at commercial pot size, and its cost per kilowatt-hour of capacity.
+  - phase: pilot
+    what: A swing smelter whose metal heats and powers a town through the winter.
+    scale: 300 MW of pots, about 100,000 tonnes of aluminium a season.
+    proves: A seasonal store cheaper per kilowatt-hour of capacity than hydrogen in caverns.
+  - phase: first-plant
+    what: A national seasonal store, ingots in warehouses beside the winter plants.
+    scale: A million tonnes of aluminium, about 4 TWh of winter electricity.
+    proves: A northern grid can retire its fossil winter backup.
+  - phase: fleet
+    what: Tides in every high-latitude grid, sharing alumina by ship.
+    scale: Hundreds of millions of tonnes of metal cycling each year.
+    proves: Seasonal storage at the scale of continents.
+  - phase: civilization
+    what: One of the seasonal buffers for a grid at {power-k08}, alongside the global grid and other stores.
+    scale: Seasons of storage for {power-k08}.
+    proves: A sun-powered grid works through every winter at every latitude.
+risks: >-
+  Swing smelting may not get below half power without the bath freezing; then the Tide runs on a
+  smaller swing with batteries covering the rest, or with better-insulated pots. Inert anodes have
+  only just reached commercial size and may wear quickly when their temperature swings; the fallback
+  is carbon anodes with the CO2 captured. Burning aluminium makes fine alumina that must all be caught,
+  and the steam reactor must be safe against metal dust; a cooler wet reactor is the fallback. At the
+  scale of a whole grid the store would hold billions of tonnes of metal, many times what is smelted
+  today, so the Tide fits best as one seasonal store among several.
+scene:
+  kind: machine
+  focus: One swing pot glowing at full current in summer sunlight, then banked and quiet through the winter.
+  params: { shape: electrolyser, spin: 0.1 }

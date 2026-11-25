@@ -1,0 +1,37 @@
+id: comet-defense
+title: Deflecting a comet on months of warning
+domain: resilience
+stage: planet
+needs: [planetary-defense, interplanetary-transport]
+summary: >-
+  Asteroids give decades of warning once they are found. A comet falling in for the first time
+  from the Oort cloud may be seen only a year or two before it arrives, moving far faster than any
+  asteroid. By {year-planet} the industry spans the inner solar system and can hold interceptors
+  ready far from Earth, so even a comet found late can be met far out.
+target: >-
+  Interceptors parked in deep space that can reach a newly found long-period comet within weeks,
+  measure what each hit does, and change its path enough to miss Earth, the Moon or any settled
+  world, with as little as a year of warning.
+exists:
+  - text: ESA selected Comet Interceptor in June 2019, three spacecraft that will travel to a long-period comet or interstellar object not yet discovered, flying past it as it approaches Earth's orbit.
+    url: https://www.cosmos.esa.int/web/comet-interceptor
+    year: 2019
+  - text: Comet C/2013 A1 (Siding Spring) was discovered on 3 January 2013, 7.2 AU from the Sun, and passed Mars at about 140,000 km on 19 October 2014; for a time a collision with Mars could not be ruled out.
+    url: https://en.wikipedia.org/wiki/C/2013_A1_(Siding_Spring)
+    year: 2014
+  - text: Comet Shoemaker-Levy 9 was discovered in March 1993, already torn into more than 20 pieces; the fragments hit Jupiter in July 1994.
+    url: https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/
+    year: 1994
+  - text: NASA's NEO Surveyor, launching no earlier than September 2027, will look for comets as well as asteroids, in infrared light.
+    url: https://science.nasa.gov/mission/neo-surveyor/
+    year: 2026
+gap: >-
+  Nothing can launch toward a newly found comet in less than months, and the later a push comes,
+  the larger it must be to make the comet miss. Comets are fragile and active,
+  venting gas that changes their paths on its own, so a deflection is harder to plan and to
+  check. No interceptor is kept in reserve.
+inventions: [impactor-train]
+scene:
+  kind: launch
+  focus: A train of interceptors leaving a deep-space depot toward a comet still far out.
+  params: { method: rocket, cadence: 0.7, world: asteroid }

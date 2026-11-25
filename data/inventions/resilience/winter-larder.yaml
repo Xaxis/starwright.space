@@ -1,0 +1,77 @@
+id: winter-larder
+title: The Winter Larder
+domain: resilience
+for: [sunless-winter-food]
+pitch: >-
+  Protein plants that grow bacteria on hydrogen, air and electricity, built into every grid as
+  flexible load: in normal years they soak up surplus power and make feed, and when the sky darkens
+  they run flat out and feed people.
+principle: >-
+  Hydrogen-oxidising bacteria such as Cupriavidus necator live on the knallgas reaction: they burn
+  hydrogen with oxygen for energy and use it to fix carbon dioxide into cells that are more than
+  half protein, taking nitrogen from ammonia. Nothing in the loop needs sunlight. The hydrogen comes
+  from splitting water with electricity, which in a volcanic or nuclear winter still flows from
+  hydro, fission, geothermal and wind. By the reaction's balance a kilogram of dried cells takes
+  roughly half a kilogram of hydrogen, so about 25 to 30 kWh of electricity, most of it in the
+  electrolyser. A person's protein for a year is about 30 to 35 kg of cells, so the protein of eight
+  billion people needs under a terawatt of power, about 4 percent of {power-now}. The plants are
+  designed to stop and start: electrolysers ramp in seconds, hydrogen tanks buffer hours, and the
+  culture idles on a trickle of gas. In a normal year they run when power is cheap and the grid has
+  too much, which pays for them; in a catastrophe they run all the time, and their designs are ready
+  to copy.
+buildsOn:
+  - text: Solar Foods' Factory 01, opened in 2024, making up to 160 tons a year of Solein, a protein grown on hydrogen, carbon dioxide and air.
+    url: https://solarfoods.com/factory/
+  - text: Cupriavidus necator, the knallgas bacterium, studied for decades, including as a protein source for life support in space.
+    url: https://en.wikipedia.org/wiki/Cupriavidus_necator
+  - text: ALLFED's research on resilient foods, including single-cell protein, for an abrupt reduction of sunlight.
+    url: https://allfed.info/
+  - text: Xia and colleagues' estimate of how far crops would fall after a nuclear war, the scale of the gap to fill.
+    url: https://www.nature.com/articles/s43016-022-00573-0
+experiment:
+  goal: Show that a hydrogen-fed protein culture can follow a grid's surplus on and off for months without losing yield or dying.
+  setup: >-
+    A 300-litre gas fermenter of Cupriavidus necator fed by a 50 kW PEM electrolyser and bottled
+    carbon dioxide, with oxygen held below the explosive limit of the gas mix. A controller runs the
+    electrolyser only when a replayed year of real grid prices says power is in surplus, including
+    daily cycles and one seven-day stop.
+  measure: Dry protein made per megawatt-hour; productivity against a steadily fed twin fermenter; hours to recover full growth after the seven-day stop; contamination and culture health.
+  succeedsIf: Protein per megawatt-hour is within 15 percent of the steady twin, the culture returns to full growth within 24 hours of the seven-day stop, and no batch is lost to contamination over three months.
+  costUsd: 1200000
+  months: 9
+path:
+  - phase: bench
+    what: A 300-litre fermenter following a replayed grid surplus signal.
+    scale: Kilograms of protein a week.
+    proves: The culture survives stop and start with its yield intact.
+  - phase: prototype
+    what: A 20 cubic metre plant beside a wind farm, running on its real surplus.
+    scale: Tens of tonnes a year.
+    proves: Surplus power pays for the plant, and the product passes as animal feed.
+  - phase: pilot
+    what: A plant selling feed in normal years, with a drill in which it runs flat out for a month.
+    scale: About a thousand tonnes a year.
+    proves: Output can jump several times over in days when needed.
+  - phase: first-plant
+    what: Plants across one grid region sized to give its people their protein for a year if crops fail.
+    scale: About a hundred thousand tonnes a year.
+    proves: A region can survive a year without summer on its own power.
+  - phase: fleet
+    what: Larders in every grid region, with designs and parts stocked to triple their number in a year.
+    scale: Millions of tonnes a year.
+    proves: The world holds standby food that does not depend on the Sun.
+  - phase: civilization
+    what: Enough standby capacity to give everyone protein through years without summer, and the same plants feeding habitats in space.
+    scale: Under a terawatt of electricity when called on.
+    proves: No darkened sky can starve the climb.
+risks: >-
+  Novel foods need approval and acceptance, and bacterial protein carries nucleic acids that must be
+  reduced for people; the plants start by making animal feed, which also saves crops in a crisis.
+  Hydrogen dissolves poorly in water, which limits how big a fermenter can grow; loop and pressurised
+  reactors are the next things to try. Electricity in a dark year falls with solar output, so the
+  plan leans on firm power and on gas-fed microbes as a second route. Plants that rarely run flat
+  out may not when called on, which is why every one drills.
+scene:
+  kind: field
+  focus: Fermenter tanks beside wind turbines, filling with protein when the grid has power to spare.
+  params: { unit: tank, count: 120, terrain: plain }

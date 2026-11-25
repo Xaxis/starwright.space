@@ -1,0 +1,81 @@
+id: dawnline-crawler
+title: The Dawnline Crawler
+domain: space
+for: [mercury-operations]
+pitch: >-
+  A factory on tracks that keeps pace with dawn on Mercury, always working in low morning sunlight
+  between the killing heat of noon and the deep cold of night.
+principle: >-
+  Mercury turns so slowly that its day, sunrise to sunrise, lasts 176 Earth days. At the equator
+  the line between night and day moves at only about 3.6 km/h, walking pace. A machine that moves
+  west at that speed stays at sunrise for ever: the Sun stays low, the ground is far from noon's heat
+  and night's cold, and tilted panels still collect several times the power per square metre they
+  would at Earth. The Crawler is a seed factory on wide tracks, like the crawlers that carry rockets
+  to their pads, that mines and processes the regolith ahead of it and leaves stockpiles behind.
+  Mass drivers are laid along the equator as plain coil tracks that bake unpowered through noon;
+  whichever lie at dawn are powered up and fire, so Mercury always launches from its dawn line.
+  Its electronics are silicon carbide, which has run for over a year at 500 C, so a crawler stranded
+  in the heat can survive until help arrives.
+buildsOn:
+  - text: NASA's fact sheet gives Mercury a solar day of 4,222.6 hours and a sidereal rotation of 1,407.6 hours.
+    url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html
+    year: 2024
+  - text: Neudeck and colleagues at NASA Glenn ran silicon carbide integrated circuits of 175 or more transistors for more than a year at 500 C in air.
+    url: https://doi.org/10.4071/imaps.729648
+    year: 2018
+  - text: NASA's crawler-transporters, in use since 1965, each weigh 2,721 t and move at 1.6 km/h loaded; the upgraded CT-2 can carry 8,200 tonnes.
+    url: https://en.wikipedia.org/wiki/Crawler-transporter
+    year: 2016
+  - text: MESSENGER's neutron spectrometer found evidence of water ice near Mercury's north pole (Lawrence and colleagues, Science, 2013).
+    url: https://doi.org/10.1126/science.1229953
+    year: 2013
+  - text: Kim Stanley Robinson's novel 2312 imagined Terminator, a city on giant tracks that keeps to the habitable band near Mercury's terminator.
+    url: https://en.wikipedia.org/wiki/2312_(novel)
+    year: 2012
+experiment:
+  goal: Run a tracked drive train through a simulated dawnline duty cycle, measure its wear and power, and learn how far it can stray from dawn.
+  setup: >-
+    A one-tonne tracked rover in a thermal vacuum chamber, on a bed of regolith simulant lit by a
+    solar simulator at a low angle. The bed's temperature is ramped with the rover's position to mimic
+    straying ahead into night or behind into day. Motors, bearings and silicon carbide motor drives
+    run without stopping for three months.
+  measure: Track and bearing wear per equivalent kilometre, motor temperatures and power, the temperature band in which every part works, and the time to any failure.
+  succeedsIf: The drive train covers the equivalent of 5,000 km between 150 K and 450 K without a failure, with wear rates that predict at least ten circuits of Mercury between overhauls.
+  costUsd: 3000000
+  months: 12
+path:
+  - phase: bench
+    what: The thermal vacuum duty cycle.
+    scale: A one-tonne rover.
+    proves: A drive train and electronics that last on the dawn line.
+  - phase: prototype
+    what: A crawler on the Moon near 77 degrees latitude, where the lunar terminator moves at the same walking pace as Mercury's equatorial dawn.
+    scale: A ten-tonne crawler.
+    proves: Following a terminator for months on a real airless world.
+  - phase: pilot
+    what: The first crawler on Mercury, a seed factory on tracks.
+    scale: About the seed's mass, {seed-mass}.
+    proves: Living on the dawn line, and making its own spare parts from Mercury's rock.
+  - phase: first-plant
+    what: A train of crawlers along the dawn line, feeding equatorial drivers that fire as dawn reaches them.
+    scale: Tens of crawlers, millions of tonnes a year.
+    proves: Steady launch from Mercury.
+  - phase: fleet
+    what: Thousands of crawlers, built by crawlers, working every band of latitude.
+    scale: The crust processed as fast as the swarm needs.
+    proves: Industry that copies itself on Mercury.
+  - phase: civilization
+    what: The dawn line as the swarm's quarry face, sweeping round Mercury for decades.
+    scale: Up to {mercury-usable} of the planet.
+    proves: The swarm gets its mass.
+risks: >-
+  A crawler that stops falls behind dawn and the Sun climbs over it within weeks, so repair crews of
+  other crawlers must reach it in time, and its silicon carbide electronics and passive radiators
+  give it a chance to survive a full day. Tracks and bearings in vacuum dust may wear faster than the
+  bench predicts; the bench sets the overhaul schedule, and the crawlers make their own spares. Coil
+  tracks left baking at noon may not survive; burying them under regolith, or launching from polar
+  sites with sunlit rims, are the fallbacks to test.
+scene:
+  kind: mercury
+  focus: A line of crawlers on Mercury's dawn line, the Sun low behind them.
+  params: { mined: 0.2, drivers: 4 }

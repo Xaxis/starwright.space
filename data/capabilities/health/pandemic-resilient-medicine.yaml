@@ -1,0 +1,34 @@
+id: pandemic-resilient-medicine
+title: Medicine that outpaces pandemics
+domain: health
+stage: k08
+needs: [programmable-biology, universal-health]
+summary: >-
+  A pandemic is a race between a spreading pathogen and our ability to detect, understand and counter
+  it. For most of history the pathogen won the early rounds. Cheap sequencing, fast biosurveillance,
+  designed vaccines and antibodies, and on-demand manufacturing can flip that, so a new threat is
+  spotted, understood and countered in weeks rather than years. A civilization spread across worlds
+  cannot afford to lose that race.
+target: >-
+  Detect a new or changing pathogen early, design and test a vaccine or therapy against it, and make
+  and distribute doses fast enough to stop an outbreak becoming a pandemic, anywhere people live.
+exists:
+  - text: AlphaFold 3 predicts protein, antibody and small-molecule interactions with about 50 percent better accuracy than docking, speeding the design of vaccines and drugs against a new pathogen.
+    url: https://doi.org/10.1038/s41586-024-07487-w
+    year: 2024
+  - text: RFdiffusion designs binding proteins and antibodies from scratch with a 19 percent experimental success rate, a route to countermeasures designed to a target in days.
+    url: https://doi.org/10.1038/s41586-023-06415-8
+    year: 2023
+  - text: Wellcome Leap's health programs, built on the DARPA model, fund the resilience and rapid-response capabilities a pandemic defence needs.
+    url: https://wellcomeleap.org/
+    year: 2024
+gap: >-
+  Design tools are strong, but global early detection is patchy, testing a designed countermeasure
+  for safety still takes months, and making and shipping billions of doses fast is unsolved. The
+  pieces exist in isolation; a standing system that runs the whole race, detect to dose, in weeks
+  does not.
+inventions: [rapid-vaccine-foundry]
+scene:
+  kind: network
+  focus: A global watch network lighting up at a new threat, a countermeasure designed and sent out.
+  params: { nodes: 1500, clusters: 24, links: 0.7, pulses: 0.9, shape: globe }

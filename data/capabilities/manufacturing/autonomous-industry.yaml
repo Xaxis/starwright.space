@@ -1,0 +1,37 @@
+id: autonomous-industry
+title: Industry that grows without people on site
+domain: manufacturing
+stage: planet
+needs: [self-replicating-factory, safe-replication, interplanetary-network, industrial-ai]
+summary: >-
+  By {year-planet} industry spans the Moon, the asteroids and the space between, minutes of light
+  away from Earth. There will never be enough people on site to run it, and Earth is too far away to
+  steer each machine. Factories must repair themselves, adapt to each new rock and learn new
+  products, keeping their doubling every {doubling-time} with people setting goals rather than
+  running machines.
+target: >-
+  Industry that runs for years on worlds where no one lives, fixes its own faults, retunes its
+  processes when its ore changes, and shares what it learns across every lineage, so that from
+  {year-planet} it grows on its own while people, through its replication licences, decide how far.
+exists:
+  - text: Perseverance's AutoNav plans its own route while the wheels turn; JPL sped it up four to five times, enough for a top speed of about 120 metres an hour on Mars.
+    url: https://www.jpl.nasa.gov/news/nasas-self-driving-perseverance-mars-rover-takes-the-wheel/
+    year: 2021
+  - text: MOXIE ran 16 times on Mars, making oxygen from the Martian air with no one nearby.
+    url: https://www.jpl.nasa.gov/news/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/
+    year: 2023
+  - text: The A-Lab ran for 17 days without stopping, planning, running and interpreting its own syntheses.
+    url: https://www.nature.com/articles/s41586-023-06734-w
+    year: 2023
+  - text: FANUC's robot factories have long been cited for running unsupervised for up to about a month at a time.
+    url: https://newatlas.com/robotics/xiaomi-dark-robotic-factory/
+    year: 2024
+gap: >-
+  Machines in space today run one task each, watched from Earth by teams of people. Factories on
+  Earth run lights-out for weeks, but people still fix them, change them and decide what they make.
+  No industrial system has yet run, repaired and improved itself for years without people.
+inventions: [inner-lab]
+scene:
+  kind: network
+  focus: Factories across the inner solar system, linked by light, each learning from the others.
+  params: { nodes: 3000, clusters: 30, links: 0.5, pulses: 0.7, shape: system }

@@ -1,0 +1,86 @@
+id: glass-parasol
+title: The Glass Parasol
+domain: environment
+for: [heat-budget]
+pitch: >-
+  Flakes of glass made from lunar soil, thrown by mass driver toward the Sun-Earth L1 point, where each
+  steers itself with sunlight to shade the Earth by a chosen fraction of a percent, making room for
+  Earth's own energy use near its ceiling without warming.
+principle: >-
+  A shade between the Sun and the Earth cuts the sunlight Earth absorbs, {earth-absorbed}, in
+  proportion to the light it blocks. Turning away one percent of it offsets the heat of using a
+  hundredth of that power on the ground, more than Earth's whole ceiling of {earth-cap}. Sanchez and
+  McInnes found that a shade blocking 1.7 percent needs 10 to 100 million tonnes, too much to launch
+  from Earth but a modest share of what lunar industry can move: escaping the Moon takes about a
+  twentieth of the energy of escaping Earth, and Bromley and colleagues showed that lunar grains are
+  close to the best size for scattering sunlight. Dust released at L1 drifts away within a week, so the
+  Parasol uses flakes instead: discs of lunar glass a few microns thick, each with a patch that switches
+  between reflecting and absorbing, as IKAROS's liquid-crystal panels did, so that light pressure alone
+  holds the flake on its path near L1. A flake that fails drifts out of the shade and away into an
+  orbit around the Sun, so the Parasol fades unless it is maintained, and can be thinned at will.
+buildsOn:
+  - text: Sanchez and McInnes found that cutting sunlight by 1.7 percent from near L1 needs 10 to 100 million tonnes of shade, and that light pressure moves the best position sunward, to about 2.4 million km from Earth.
+    url: https://journals.plos.org/plosone/doi?id=10.1371/journal.pone.0136648
+    year: 2015
+  - text: Angel proposed a sunshade at L1 of trillions of light flyers, about 20 million tonnes in all, blocking 1.8 percent of sunlight for about 50 years.
+    url: https://doi.org/10.1073/pnas.0608163103
+    year: 2006
+  - text: Bromley, Khan and Kenyon found about 10 billion kg a year of dust could cut sunlight by 1.8 percent, that dust released at L1 drifts away within about a week, and that lunar grains are near the size that scatters most efficiently.
+    url: https://journals.plos.org/climate/article?id=10.1371/journal.pclm.0000133
+    year: 2023
+  - text: Szapudi proposed tethering a sunshade to a sunward counterweight, cutting the mass needed by orders of magnitude, with only 1 percent from Earth.
+    url: https://doi.org/10.1073/pnas.2307434120
+    year: 2023
+  - text: IKAROS steered itself by switching liquid-crystal panels on its sail between reflecting and absorbing, using sunlight alone, in July 2010.
+    url: https://global.jaxa.jp/press/2010/07/20100723_ikaros_e.html
+    year: 2010
+  - text: The 1975 NASA Ames and Stanford summer study designed a lunar mass driver with a 10 km track launching buckets at 2,400 m per second.
+    url: https://settlement.nss.org/75SummerStudy/5appendF.html
+    year: 1975
+experiment:
+  goal: Make free-standing glass flakes from lunar simulant and show they can be steered by light pressure alone, by switching their reflectance on command.
+  setup: >-
+    A small glass-drawing line that melts lunar simulant and draws film a few microns thick, cut into
+    flakes 10 cm across. A patch of each is coated with a liquid-crystal or electrochromic film powered
+    by a printed thin-film cell. Flakes hang on a torsion balance in a vacuum chamber under a solar
+    simulator, and switch on command.
+  measure: Flake thickness and mass per square metre; reflectance and transmission; the change in light-pressure force and torque between switched states; endurance under UV and thermal cycling.
+  succeedsIf: Flakes under 10 g per square metre whose switching changes the light-pressure torque by at least 30 percent, sustained over 10,000 switching cycles.
+  costUsd: 2000000
+  months: 18
+path:
+  - phase: bench
+    what: Flakes drawn from simulant and steered on a torsion balance.
+    scale: Flakes 10 cm across.
+    proves: Lunar glass flakes that steer by sunlight.
+  - phase: prototype
+    what: A small spacecraft near L1 releases a hundred flakes and tracks how well they hold their places.
+    scale: A hundred flakes, a few square metres.
+    proves: Station keeping by light pressure alone.
+  - phase: pilot
+    what: The first lunar glass flakes thrown from a small mass driver toward L1.
+    scale: A thousand tonnes a year, about a millionth of Earth's sunlight.
+    proves: The whole chain from regolith to shade, with its effect measured at L1 and on Earth.
+  - phase: first-plant
+    what: A parasol grown to a tenth of a percent of sunlight, made and launched by lunar industry.
+    scale: Millions of tonnes of flakes.
+    proves: Shade at a size that matters for the heat budget, maintained for years.
+  - phase: fleet
+    what: A parasol adjustable from nothing to a few percent of sunlight, maintained by lunar industry.
+    scale: Tens of millions of tonnes.
+    proves: Earth's heat budget can be managed as a dial.
+  - phase: civilization
+    what: Shade that offsets the heat of Earth's own energy use near {earth-cap}, and any warming left from carbon.
+    scale: As much shade as the world decides it needs.
+    proves: Earth can run near its ceiling and keep its climate.
+risks: >-
+  A shade cools the whole planet evenly, while waste heat lands where people live; it lowers the
+  global average but cannot cool a hot city, so the regional limits still hold. Less sunlight also
+  shifts rain, as every reflection method does, and the shade must be paired with carbon drawdown, not
+  used instead of it. Flakes that leave L1 must drift into orbits around the Sun, not toward Earth;
+  designs are tested so that failed flakes fall sunward. How much shade to fly is a choice for the
+  whole world, which needs an institution able to make it.
+scene:
+  kind: launch
+  focus: A mass driver on the Moon throwing a stream of glinting glass flakes toward the point between Earth and Sun.
+  params: { method: mass-driver, world: moon, cadence: 0.6 }

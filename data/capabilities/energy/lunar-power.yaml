@@ -1,0 +1,41 @@
+id: lunar-power
+title: Power through the lunar night
+domain: energy
+stage: k09
+needs: [cheap-launch, regolith-refining]
+summary: >-
+  The Moon feeds the first space industry with rock, oxygen and metal, and its days are bright. But
+  each lunar night lasts {lunar-night}, cold enough to kill most landers. A mine, a smelter or a
+  seed factory, the first of which starts in {seed-year}, must keep working through it, on power that
+  is made or stored on the Moon rather than shipped from Earth.
+target: >-
+  Power for lunar industry through every night, at any latitude, from megawatts at the first bases to
+  gigawatts as the industry grows, with nearly all of the hardware's mass made from lunar material.
+exists:
+  - text: NASA's Moon fact sheet gives a synodic month of 29.53 days, so a lunar night lasts about 14.8 Earth days, with equatorial temperatures from about 95 K to 390 K.
+    url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html
+  - text: NASA's Fission Surface Power design is a 40 kWe reactor within 6,000 kg, using four Stirling converters and radiators above 400 K, built to last ten years.
+    url: https://ntrs.nasa.gov/api/citations/20230006731/downloads/NETS%202023%20FSP%20Presentation%20FINAL.pdf
+    year: 2023
+  - text: NASA's KRUSTY test of the Kilopower reactor ran at full power for 28 hours in 2018, for a design rated up to 10 kWe for at least ten years.
+    url: https://www.nasa.gov/press-release/demonstration-proves-nuclear-fission-system-can-provide-space-exploration-power
+    year: 2018
+  - text: NASA plans to land a lunar reactor, LR-1, in 2030, after a more than 20 kWe space reactor demonstration launching in December 2028.
+    url: https://www.nasa.gov/wp-content/uploads/2026/03/america-underway-in-space-on-nuclear-power.pdf
+    year: 2026
+  - text: JAXA's SLIM lander survived three lunar nights in 2024 without being designed to, while Firefly's Blue Ghost lasted only several hours into its first night in March 2025.
+    url: https://global.jaxa.jp/press/2024/08/20240826-1_e.html
+    year: 2024
+  - text: Astrobotic is developing LunaGrid and NASA's VSAT tall solar towers for the lunar south pole, where some peaks see sunlight almost all the time, rated for nights down to -220 °C.
+    url: https://www.astrobotic.com/lunar-delivery/lunar-surface-power/
+    year: 2025
+gap: >-
+  Batteries for a night of {lunar-night} weigh tonnes per kilowatt, all shipped from Earth. Fission reactors
+  give tens of kilowatts, not the megawatts industry needs, and none has yet flown. Tall solar towers
+  work only on a few polar peaks. No lander has run industry through a lunar night, and no power
+  system has been built from lunar material.
+inventions: [night-kiln]
+scene:
+  kind: moon
+  focus: A lunar base at dusk, its mirrors folding as the long night falls and its buried heat stores begin to glow.
+  params: { bases: 0.5, mines: 0.3, domes: 0.2 }

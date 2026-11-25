@@ -1,0 +1,48 @@
+id: universal-connectivity
+title: Everyone online
+domain: information
+stage: k08
+needs: [energy-access]
+summary: >-
+  The climb is designed, financed and argued over online, and every person left offline is a mind
+  it cannot use and a voice it cannot hear. Mobile networks already reach almost everyone. What keeps
+  the rest offline is the price of a phone and of data against a low income, and little worth
+  reading in their own language. By {year-k08}, when every person can use as much energy as the
+  richest countries do today, every person should be online too.
+target: >-
+  Every person online at broadband speed, every day, for less than 2 percent of what they earn,
+  with the shared knowledge of the climb in their own
+  language whether or not they can pay for two-way data.
+exists:
+  - text: About 6 billion people, three quarters of the world, used the internet in 2025. 2.2 billion remained offline, 96 percent of them in low- and middle-income countries.
+    url: https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx
+    year: 2025
+  - text: Mobile networks of 3G or better reached 96 percent of the world's people in 2025 and 4G reached 93 percent, but 4G covered only 56 percent of people in low-income countries.
+    url: https://www.itu.int/itu-d/reports/statistics/2025/10/15/ff25-mobile-network-coverage/
+    year: 2025
+  - text: A basic mobile broadband plan cost a median 1.4 percent of income per head in 2025, but people in low-income economies spent about 22 times as large a share of their income on it as people in high-income ones. The Broadband Commission's target is no more than 2 percent of income per head.
+    url: https://www.itu.int/itu-d/reports/statistics/2025/10/15/ff25-affordability-of-ict-services/
+    year: 2025
+  - text: 82 percent of people aged 10 and over owned a mobile phone in 2025, against 53 percent in low-income economies.
+    url: https://www.itu.int/itu-d/reports/statistics/2025/10/15/ff25-mobile-phone-ownership/
+    year: 2025
+  - text: TeleGeography tracked more than 600 active and planned submarine cables in 2026, the fibre that carries traffic between continents.
+    url: https://www2.telegeography.com/submarine-cable-faqs-frequently-asked-questions
+    year: 2026
+  - text: T-Mobile's T-Satellite service connects ordinary phones directly to satellites for texts and some apps, with no change of handset or settings.
+    url: https://www.t-mobile.com/coverage/satellite-phone-service
+    year: 2026
+  - text: Taara, spun out of Alphabet's X in 2025, carries broadband between towers on beams of light instead of cables.
+    url: https://x.company/projects/taara/
+    year: 2025
+gap: >-
+  The last people offline are the hardest to reach: rural, poor, and more often women than men.
+  Coverage is mostly there; the price per bit is not. Two-way networks charge every user for every
+  request, even when millions want the same encyclopedia, schoolbook or health guide. A link has to
+  cost what a few minutes of a day's wage buys, and much of what people need could reach them
+  without a two-way link at all.
+inventions: [sky-library]
+scene:
+  kind: network
+  focus: The world's people as points of light, the dark gaps between them closing as the last billions come online.
+  params: { shape: globe, nodes: 5000, clusters: 40, links: 0.75, pulses: 0.8 }

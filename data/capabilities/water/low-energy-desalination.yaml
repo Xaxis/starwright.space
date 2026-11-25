@@ -1,0 +1,38 @@
+id: low-energy-desalination
+title: Desalination near the energy floor
+domain: water
+stage: k08
+needs: [terawatt-solar-factories]
+summary: >-
+  The sea holds all the water the world could want; the cost is the energy to take the salt out.
+  Reverse osmosis has already fallen tenfold in energy since 1970, but it still runs well above the
+  physical minimum set by thermodynamics. Closing that gap, and powering what remains with cheap
+  clean electricity, turns the ocean into a limitless, affordable source of fresh water for coasts
+  and, with pipelines, for inland regions too.
+target: >-
+  Desalinate seawater at an energy close to the thermodynamic minimum, powered by clean electricity,
+  so that fresh water from the sea is cheap enough to end coastal water scarcity and supply farms and
+  industry.
+exists:
+  - text: State-of-the-art seawater reverse osmosis runs at about 2.3 kWh per cubic metre, with typical systems at 2.9 to 5.5 kWh per cubic metre, close to but still above the thermodynamic floor.
+    url: https://en.wikipedia.org/wiki/Reverse_osmosis
+    year: 2024
+  - text: Global desalination energy intensity fell to about 3 kWh per cubic metre by 2018, a tenfold improvement from 20 to 30 kWh per cubic metre in 1970, driven by better membranes and energy recovery.
+    url: https://en.wikipedia.org/wiki/Desalination
+    year: 2018
+  - text: Elimelech and Phillip's 2011 Science review of seawater desalination noted it remains more energy-intensive than conventional treatment of fresh water, and mapped where energy could still be cut.
+    url: https://doi.org/10.1126/science.1200488
+    year: 2011
+  - text: The US Department of Energy's Water Security Grand Challenge set a 2030 goal to launch desalination technologies that deliver cost-competitive clean water, funding the NAWI research hub.
+    url: https://www.energy.gov/eere/water-security-grand-challenge
+    year: 2020
+gap: >-
+  Real plants cannot reach the thermodynamic minimum because pretreatment, finite membrane flux and
+  pumping all add energy, and recovery is capped near half before scaling fouls the membranes. Global
+  energy demand for desalination is set to double by 2030, so without cheaper, lower-energy methods,
+  scaling the ocean's water to the world means scaling its energy bill too.
+inventions: [zero-brine-desalinator]
+scene:
+  kind: machine
+  focus: A reverse-osmosis stack with an energy-recovery device, pressure and flow traded to save power.
+  params: { shape: membrane, spin: 0.4 }

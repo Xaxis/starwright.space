@@ -1,0 +1,76 @@
+id: gigawatt-guild
+title: The Gigawatt Guild
+domain: people
+for: [workforce-transition]
+pitch: >-
+  Every gigawatt of clean energy built carries a quota of paid apprentices from the communities
+  around it, funded from the project's own finance, so each project trains the people who build the
+  next.
+principle: >-
+  Firms train too little in general skills because a trained worker can leave for a rival, so each
+  firm pays for training the next one enjoys, the problem Becker's human capital theory set out and
+  Acemoglu and Pischke refined. Pooling the cost removes it: Germany's dual system shares training
+  across firms and schools, the UK levies a share of payroll, and the US now ties a larger energy tax
+  credit to the share of labour hours done by apprentices. The Gigawatt Guild makes that link
+  standard in project finance. Any project financed by participating lenders and funds, the Wright
+  Commitment among them, commits a fixed number of apprentice places per megawatt, with about one
+  percent of the capital set aside in the financing for their wages and training. Apprentices are
+  recruited first from the host community and from workers leaving fossil-fuel industries. Their
+  skills are recorded in a portable certificate recognised by every participating country, so a
+  welder trained in one place can work on a project in another.
+buildsOn:
+  - text: Acemoglu and Pischke's 1998 theory and evidence on why firms train, and why they train too little.
+    url: https://doi.org/10.1162/003355398555531
+  - text: The prevailing wage and apprenticeship requirements of the US Inflation Reduction Act of 2022.
+    url: https://www.irs.gov/credits-deductions/frequently-asked-questions-about-the-prevailing-wage-and-apprenticeship-under-the-inflation-reduction-act
+  - text: The UK apprenticeship levy, 0.5 percent of large employers' pay bills since 2017.
+    url: https://www.gov.uk/guidance/pay-apprenticeship-levy
+  - text: Germany's dual vocational system, with 468,900 new apprenticeship contracts in 2022.
+    url: https://www.destatis.de/EN/Press/2023/04/PE23_144_212.html
+  - text: IRENA and the ILO's count of 16.2 million renewable energy jobs in 2023.
+    url: https://www.ilo.org/resource/news/jobs-renewable-energy-record-highest-annual-growth-rate-reaching-162
+experiment:
+  goal: Show that an apprenticeship quota tied to project finance trains workers who stay in the trade, without slowing projects or raising their cost by more than the set-aside.
+  setup: >-
+    With a development bank and two or three developers, attach the quota to 10 utility-scale solar
+    and grid projects in two countries, recruiting 600 apprentices locally and from former fossil
+    fuel workers, and compare with 10 similar projects financed without it.
+  measure: Apprentices completing training; the share working in the trade a year later; their wage gains; project cost and schedule against the comparison projects; local support for the projects.
+  succeedsIf: At least 70 percent of apprentices complete, at least 60 percent are working in the trade a year later, and project cost rises by no more than 1.5 percent with no delay to the schedule.
+  costUsd: 6000000
+  months: 30
+path:
+  - phase: bench
+    what: A model of the workers needed per gigawatt, by trade and by country, built from project records.
+    scale: "The buildout to {power-k08}"
+    proves: How many apprentices each gigawatt should carry.
+  - phase: prototype
+    what: The 20-project trial.
+    scale: 600 apprentices.
+    proves: The quota trains people and the projects stay on budget.
+  - phase: pilot
+    what: A development bank makes the quota standard on all its clean energy lending.
+    scale: Tens of gigawatts, tens of thousands of apprentices.
+    proves: It works as ordinary practice.
+  - phase: first-plant
+    what: Major lenders and funds adopt it, with a shared, portable record of skills.
+    scale: Hundreds of gigawatts a year, millions of apprentices.
+    proves: Training keeps pace with the buildout.
+  - phase: fleet
+    what: The same quota attached to orbital and lunar industry, training the technicians space work needs.
+    scale: "Space industry from {seed-year}"
+    proves: The model carries to new industries.
+  - phase: civilization
+    what: A workforce that grows with the climb at every rung until machines do most of the building.
+    scale: "The buildout from today through {year-k09}"
+    proves: People are never the bottleneck of the climb.
+risks: >-
+  Quotas can turn into box-ticking with poor training; assessment by independent examiners and the
+  wage records of graduates keep it honest. Automation may cut the labour each gigawatt needs; the
+  quota is set per megawatt and revised as labour per megawatt falls. Some developers may move to
+  lenders outside the scheme; the set-aside is small enough that the cheaper finance inside it
+  outweighs the cost.
+scene:
+  kind: field
+  focus: Rows of panels going up, each crew with its apprentices, the field and the workforce growing together.
+  params: { unit: panel, count: 2500, terrain: desert }

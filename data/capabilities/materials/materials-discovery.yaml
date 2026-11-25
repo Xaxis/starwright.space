@@ -1,0 +1,36 @@
+id: materials-discovery
+title: Materials found by computers and robot labs
+domain: materials
+stage: k08
+needs: [abundant-compute, automated-factories, quantum-computing, industrial-ai]
+summary: >-
+  Every rung asks for materials that do not yet exist: catalysts that use no platinum, magnets with
+  no rare earths, films that last decades in hard sunlight, alloys that cast from rock. Finding a
+  new material once took a career; machine learning now predicts stable crystals by the million, and
+  robot labs have started to make them without people.
+target: >-
+  A loop of prediction, robotic synthesis and testing that takes a new material from idea to
+  qualified, manufacturable recipe in months instead of decades, open to every lab, and fast enough
+  to keep up with the buildout to {power-k08}.
+exists:
+  - text: Google DeepMind's GNoME predicted 2.2 million new crystals, 380,000 of them stable enough to be promising candidates for synthesis.
+    url: https://deepmind.google/blog/millions-of-new-materials-discovered-with-deep-learning/
+    year: 2023
+  - text: The GNoME paper in Nature, Scaling deep learning for materials discovery, describes the graph networks and active learning behind the predictions.
+    url: https://www.nature.com/articles/s41586-023-06735-9
+    year: 2023
+  - text: Berkeley Lab's A-Lab synthesised 36 of 57 target inorganic compounds over 17 days of continuous robotic operation, planning its own recipes and learning from failures.
+    url: https://www.nature.com/articles/s41586-023-06734-w
+    year: 2023
+  - text: The Materials Project gives open computed properties for inorganic materials, the database most discovery work starts from.
+    url: https://docs.materialsproject.org/frequently-asked-questions
+    year: 2026
+gap: >-
+  Predicted stability is not a working material. Robot labs make powders, while the climb needs
+  films, fibres, castings and devices, tested for decades of service. The slow steps are now
+  synthesis at scale, qualification and the move from a gram to a production line.
+inventions: [inner-lab]
+scene:
+  kind: lattice
+  focus: A new crystal appearing atom by atom, as a model proposes it and a robot makes it.
+  params: { structure: perovskite, defects: 0.15 }

@@ -1,0 +1,40 @@
+id: carbon-nanomaterials
+title: Carbon nanotubes and graphene by the million tonnes
+domain: materials
+stage: k09
+needs: [materials-discovery, terawatt-solar-factories]
+summary: >-
+  A single carbon nanotube is many times stronger for its weight than any steel. Fibres that kept
+  that strength would make tethers, rotating habitats, flywheels and light structures that steel and
+  even Kevlar cannot. Today the strongest fibres keep only a fraction of it, and the strongest
+  bundles are centimetres long and made by the milligram.
+target: >-
+  Continuous carbon nanotube fibre and tape with a tensile strength of tens of gigapascals, made by
+  the million tonnes a year from methane or captured carbon, with the hydrogen sold alongside, so
+  that the space industry starting in {seed-year} can build tethers and structures far lighter than
+  metal ones.
+exists:
+  - text: Single-walled carbon nanotubes of 16 defined structures broke at 25 to 66 GPa, near the 63 GPa a space elevator would need.
+    url: https://www.nature.com/articles/s41467-019-10959-7
+    year: 2019
+  - text: Centimetre-long bundles of ultralong, defect-free nanotubes reached a tensile strength over 80 GPa once their uneven initial strains were relaxed.
+    url: https://www.nature.com/articles/s41565-018-0141-z
+    year: 2018
+  - text: Scouring with high-velocity ethanol jets aligned and packed nanotube fibres to a record 12.5 GPa and 7.5 N/tex.
+    url: https://www.nature.com/articles/s41467-026-75150-1
+    year: 2026
+  - text: OCSiAl calls itself the world's largest single-walled nanotube producer, with EU authorisation for up to 100 tonnes a year.
+    url: https://ocsial.com/
+    year: 2026
+  - text: Huntsman's MIRALON makes carbon nanotube materials by methane pyrolysis, producing hydrogen as a co-product.
+    url: https://www.huntsman.com/products/miralon
+    year: 2026
+gap: >-
+  Fibres made of short tubes slip between them, so their strength is set by the weak grip between
+  tubes rather than by the tubes. Ultralong tubes avoid that, but they grow sparsely, slowly and in
+  tiny amounts. No process yet makes long, aligned, defect-free tubes continuously and densely.
+inventions: [tubeloom]
+scene:
+  kind: lattice
+  focus: A single nanotube's hexagons, then millions of them aligned into one ribbon.
+  params: { structure: nanotube, defects: 0.05 }

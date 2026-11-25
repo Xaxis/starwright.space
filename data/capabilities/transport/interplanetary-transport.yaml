@@ -1,0 +1,39 @@
+id: interplanetary-transport
+title: Regular transport between worlds
+domain: transport
+stage: type-1
+needs: [cislunar-transport, in-space-propulsion, closed-life-support, space-health]
+summary: >-
+  Once industry spans the Earth and the Moon, it reaches for Mars and the asteroids. Ships between
+  worlds must carry people safely for months and cargo cheaply for years, on schedules set by the
+  planets' alignments. Cyclers that loop for ever between worlds, met by taxis and tugs at each end,
+  turn expeditions into a timetable.
+target: >-
+  Ships leaving for Mars and the main belt at every launch window, crews arriving within a few
+  months with radiation doses well inside career limits, and cargo moved for a few times the cost of
+  moving it to the Moon.
+exists:
+  - text: Buzz Aldrin presented the Earth-Mars cycler in 1985, a ship on an orbit that meets both planets for ever; one version travels from Earth to Mars in 146 days.
+    url: https://en.wikipedia.org/wiki/Mars_cycler
+    year: 1985
+  - text: Curiosity's radiation detector measured the dose on its cruise to Mars in 2012; scaled to a round trip, it is 0.66 sievert (Zeitlin and colleagues, Science, 2013).
+    url: https://en.wikipedia.org/wiki/Radiation_assessment_detector
+    year: 2013
+  - text: NASA's Psyche, launched in October 2023, is the first interplanetary mission driven by Hall thrusters, and is due at its metal asteroid in 2029.
+    url: https://en.wikipedia.org/wiki/Psyche_(spacecraft)
+    year: 2023
+  - text: DARPA cancelled DRACO, its nuclear thermal rocket demonstration, in 2025, citing a declining return on investment.
+    url: https://en.wikipedia.org/wiki/Demonstration_Rocket_for_Agile_Cislunar_Operations
+    year: 2025
+  - text: NASA's Mars Design Reference Architecture 5.0 (2009) planned crews of six on conjunction-class trips with about 500 days on Mars, using nuclear thermal rockets.
+    url: https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf
+    year: 2009
+gap: >-
+  No human has travelled beyond the Moon, and no ship has been built to carry people for months in
+  deep space. A Mars round trip on today's rockets gives a dose near career limits, nuclear rockets
+  have been cancelled again, and nothing yet makes propellant on Mars or in the asteroid belt.
+inventions: [moon-metal-hall-drive, spun-shell]
+scene:
+  kind: habitat
+  focus: A spinning cycler ship on its endless loop between Earth and Mars.
+  params: { type: ship, spin: 0.4, green: 0.3 }

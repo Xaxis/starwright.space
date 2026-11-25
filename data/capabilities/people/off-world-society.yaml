@@ -1,0 +1,37 @@
+id: off-world-society
+title: Societies that live off Earth
+domain: people
+stage: k15
+needs: [habitat-communities, solar-system-governance, space-health, space-farming]
+summary: >-
+  By {year-k15} millions of people may live in habitats and on other worlds, many of them born there.
+  They will need what any society needs, families, schools, work, art, law and a sense of who they
+  are, in places where the air, water and food are all made. They must stay part of one civilization
+  with Earth while becoming societies of their own.
+target: >-
+  Self-sustaining societies off Earth, large enough to be genetically and culturally healthy,
+  raising children who thrive, running their own affairs under the federation's charter, and linked
+  to Earth by trade, travel and a shared culture.
+exists:
+  - text: Marin and Beluffi computed in 2018 that a crew of at least 98 people would be needed for a multi-generation voyage of thousands of years to stay genetically healthy.
+    url: https://arxiv.org/abs/1806.03856
+    year: 2018
+  - text: Smith estimated in 2014, for Project Hyperion, how many people a multi-generation interstellar voyage would need to stay genetically viable.
+    url: https://doi.org/10.1016/j.actaastro.2013.12.013
+    year: 2014
+  - text: The International Space Station has had people aboard without a break since November 2000, the longest continuous human presence off Earth.
+    url: https://www.nasa.gov/international-space-station/space-station-facts-and-figures/
+    year: 2026
+  - text: The Arch Mission Foundation's Lunar Library, a 30-million-page archive of human knowledge, flew to the Moon on the Beresheet lander in 2019.
+    url: https://www.archmission.org/
+    year: 2019
+gap: >-
+  No one has been born, raised or lived a whole life off Earth, and nobody knows how low gravity,
+  radiation and isolation will shape children, families and culture over generations. Estimates of
+  the smallest healthy population range widely, and there is no experience of a society that must
+  make its own air.
+inventions: [return-ticket-charter]
+scene:
+  kind: habitat
+  focus: A large habitat with farms, towns and schools inside, a society rather than a crew.
+  params: { type: cylinder, spin: 0.4, green: 0.8 }

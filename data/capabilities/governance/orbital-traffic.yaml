@@ -1,0 +1,43 @@
+id: orbital-traffic
+title: Orbits kept safe and clean
+domain: governance
+stage: k08
+needs: []
+summary: >-
+  Low Earth orbit is a shared resource that can be ruined. Every satellite adds a little collision
+  risk, and every collision makes fragments that raise the risk for everyone, so with enough traffic
+  a band of orbits can become unusable for decades. The climb needs far more in orbit than today:
+  stations, factories, collectors and the ships between them. Orbits must be run as a managed
+  commons, not left to luck.
+target: >-
+  Orbital traffic coordinated the way air traffic is, with every object tracked, every operator
+  sharing its plans, and the total collision risk in each band of altitude held below what that band
+  can sustain indefinitely, so orbits stay usable as traffic grows a hundredfold.
+exists:
+  - text: ESA's Space Environment Report 2025 counts about 40,000 tracked objects in orbit, about 11,000 of them working payloads, and estimates over 1.2 million debris fragments larger than 1 cm.
+    url: https://www.esa.int/articles/esa-space-environment-report-2025
+    year: 2025
+  - text: Kessler and Cour-Palais showed in 1978 that fragments from satellite collisions raise the odds of further collisions, so a self-sustaining belt of debris can form around Earth.
+    url: https://doi.org/10.1029/JA083iA06p02637
+    year: 1978
+  - text: In 2022 the US FCC cut the time a low-Earth-orbit satellite may stay in orbit after its mission ends from 25 years to five.
+    url: https://docs.fcc.gov/public/attachments/FCC-22-74A1.pdf
+    year: 2022
+  - text: ESA's Zero Debris Charter, announced in 2023, sets shared targets to stop creating debris by 2030; over 200 organisations and more than 20 countries have committed to it.
+    url: https://www.esa.int/articles/the-zero-debris-charter
+    year: 2023
+  - text: The US Traffic Coordination System for Space began registering satellite operators in early 2026 and by November had 90 pilot organisations covering over 15,580 satellites.
+    url: https://space.commerce.gov/traffic-coordination-system-for-space-tracss/
+    year: 2026
+  - text: Rao, Burgess and Kaffine found in 2020 that a fee rising to about 235,000 US dollars per satellite-year by 2040 would raise the long-run value of the satellite industry from about 600 billion to about 3 trillion dollars.
+    url: https://doi.org/10.1073/pnas.1921260117
+    year: 2020
+gap: >-
+  The rules that exist are national, voluntary or both, and they govern each satellite rather than
+  the total risk in a band of orbits. No price makes an operator pay for the risk it adds for others,
+  nobody caps the total, and the debris already up there has no owner obliged to remove it.
+inventions: [orbital-risk-permits]
+scene:
+  kind: orbit
+  focus: Low Earth orbit's crowded bands of altitude, every object's track lit, the riskiest glowing brightest.
+  params: { stations: 0.5, depots: 0.2 }

@@ -1,0 +1,35 @@
+id: longevity-medicine
+title: Longer, healthier lives
+domain: health
+stage: k08
+needs: [programmable-biology, universal-health]
+summary: >-
+  Ageing is the largest risk factor for most of the diseases that kill people, and it is increasingly
+  understood as a set of specific, measurable processes rather than an unchangeable fate. Slowing or
+  reversing those processes would compress illness into a short span at the very end of a longer
+  life, keeping people healthy and productive for the decades a long climb demands. Healthspan, the
+  years lived in good health, is the target, not mere lifespan.
+target: >-
+  Slow, halt or reverse the biological processes of ageing enough to extend healthy years
+  substantially, so that people stay well and capable far longer and the diseases of old age arrive
+  later and compressed.
+exists:
+  - text: The Rejuvenation Roadmap tracks regulated therapies grouped by the 12 hallmarks of ageing and by trial stage, showing ageing is being attacked as specific, druggable processes.
+    url: https://www.lifespan.io/road-maps/the-rejuvenation-roadmap/
+    year: 2024
+  - text: The XPRIZE Healthspan competition, a 101-million-USD purse with ten finalists each funded a million dollars, marks both the seriousness and the unsolved state of restoring function in ageing.
+    url: https://www.xprize.org/
+    year: 2026
+  - text: Biology foundation models such as ESM3 and Evo 2 let researchers design proteins and read genomes at a scale that makes ageing's molecular machinery far more tractable to study and to target.
+    url: https://www.evolutionaryscale.ai/blog/esm3-release
+    year: 2025
+gap: >-
+  No therapy has yet been shown to reverse human ageing, measures of biological age are still being
+  validated, and interventions that work in mice often fail in people. Turning the hallmarks of
+  ageing from a descriptive list into safe, proven treatments, and doing it without raising cancer or
+  other risks, is the unsolved core.
+inventions: [partial-reprogramming-therapy]
+scene:
+  kind: cell
+  focus: An aged cell visibly restored toward a younger state as a therapy acts on it.
+  params: { type: animal, organelles: 0.7, divide: true, glow: 0.5 }

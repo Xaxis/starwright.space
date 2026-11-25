@@ -1,0 +1,84 @@
+id: zero-brine-desalinator
+title: The Zero-Brine Desalinator
+domain: water
+for: [low-energy-desalination, minerals-from-brine]
+pitch: >-
+  A desalination plant that squeezes fresh water from the sea near the thermodynamic energy floor and
+  then mines the leftover brine dry for salt and minerals, so it dumps almost no brine and sells what
+  it would have dumped.
+principle: >-
+  Two problems of desalination share one answer. Standard reverse osmosis holds a fixed high pressure
+  while it pushes water through a membrane, wasting energy early when the feed is still weak and
+  fouling fast as it concentrates. The Zero-Brine Desalinator instead works in closed-circuit batches:
+  it raises pressure gradually as the brine strengthens, tracking just above the rising osmotic
+  pressure, so the energy per cubic metre falls toward the thermodynamic minimum and recovery can go
+  far past the usual half. The strong brine that results is not dumped but fed to staged recovery,
+  precipitating its minerals in order, magnesium and calcium salts, then potassium and bromine
+  compounds, then common salt, down to near-dryness as in zero-liquid-discharge treatment. The
+  minerals are sold, which pays for the crystalliser's energy, and almost no brine reaches the sea.
+  Powered by cheap clean electricity, one plant makes water near the energy floor, turns waste brine
+  into a mine, and spares the coast the pollution.
+buildsOn:
+  - text: State-of-the-art reverse osmosis already reaches about 2.3 kWh per cubic metre using energy-recovery devices, the baseline the batch design pushes toward the thermodynamic floor.
+    url: https://en.wikipedia.org/wiki/Reverse_osmosis
+    year: 2024
+  - text: Zero-liquid-discharge treatment pushes brine to dryness, recovering 60 to 80 percent of its water by membrane pre-concentration before a crystalliser, the brine-closing chain this plant integrates.
+    url: https://en.wikipedia.org/wiki/Zero_liquid_discharge
+    year: 2024
+  - text: Brine is already mined commercially for bromine and, historically, for more than half the world's magnesium, showing the recovery chemistry the desalinator extends to many elements.
+    url: https://en.wikipedia.org/wiki/Brine_mining
+    year: 2024
+  - text: Jones and colleagues found global brine production at about 142 million cubic metres a day, more than the water produced, the waste stream this design turns into product.
+    url: https://doi.org/10.1016/j.scitotenv.2018.12.076
+    year: 2019
+experiment:
+  goal: Run a closed-circuit batch desalinator that approaches the energy floor and recovers minerals from its brine to near-zero discharge, and measure energy, recovery and mineral value.
+  setup: >-
+    Build a pilot that pairs closed-circuit batch reverse osmosis, raising pressure as the brine
+    concentrates, with staged crystallisation of the concentrate. Run it on real seawater against a
+    conventional reverse-osmosis unit, measuring the full chain.
+  measure: >-
+    Energy in kWh per cubic metre of fresh water; fraction of feed recovered as water; volume of brine
+    discharged; mass and purity of each mineral recovered; the value of the minerals against the
+    crystalliser's energy cost.
+  succeedsIf: >-
+    The plant makes fresh water below 2 kWh per cubic metre while recovering over 90 percent of the
+    feed as water and crystallising the rest, discharging almost no brine, with recovered minerals
+    worth more than the extra energy to crystallise them.
+  costUsd: 24000000
+  months: 42
+path:
+  - phase: bench
+    what: A batch desalinator and staged crystalliser on real seawater, beating conventional reverse osmosis.
+    scale: Cubic metres a day.
+    proves: Water near the energy floor and near-zero brine, with minerals recovered.
+  - phase: prototype
+    what: A pilot plant running continuously with automated mineral recovery.
+    scale: Hundreds of cubic metres a day.
+    proves: Energy, recovery and mineral value hold in steady operation.
+  - phase: pilot
+    what: A commercial-scale plant on a coast, selling water and minerals.
+    scale: Tens of thousands of cubic metres a day.
+    proves: The plant pays its way and discharges almost no brine.
+  - phase: first-plant
+    what: Zero-brine plants replacing brine-dumping ones where coasts are stressed.
+    scale: A region's desalination.
+    proves: Desalination scales without polluting coasts, at lower energy.
+  - phase: fleet
+    what: Plants worldwide tuned to local brines, and compact units paired with habitat water loops.
+    scale: Global and off-world.
+    proves: Desalination is a water-and-minerals industry, not a waste source.
+  - phase: civilization
+    what: The sea as a limitless source of water and critical minerals, with no brine returned.
+    scale: Planet and space.
+    proves: Water abundance decoupled from energy waste and coastal harm.
+risks: >-
+  Crystallising the full brine may cost more energy than the minerals are worth where mineral prices
+  are low; the plant recovers only the elements that pay and discharges less, rather than all or
+  nothing. Batch operation adds complexity and downtime versus steady-flow reverse osmosis, which the
+  pilot measures. Scaling and fouling still cap recovery, so membranes are cleaned and swapped on a
+  schedule the design plans for.
+scene:
+  kind: machine
+  focus: A batch reverse-osmosis unit feeding a crystalliser, fresh water and stacked minerals coming out, no brine.
+  params: { shape: membrane, spin: 0.5 }

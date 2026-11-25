@@ -1,0 +1,78 @@
+id: bootstrap-glass
+title: Bootstrap Glass
+domain: resilience
+for: [knowledge-archives]
+pitch: >-
+  An archive in fused silica made of three layers, each teaching how to read the next, so a
+  survivor with nothing but their eyes can climb from pictures to a magnifier to terabytes.
+principle: >-
+  Every long-lived archive is limited by the tool needed to read it. The eye resolves about a tenth
+  of a millimetre at reading distance; a glass bead a millimetre across, the lens of Leeuwenhoek's
+  microscopes, resolves about a micron; a polarising microscope and a camera read data written as
+  tiny laser-made structures inside glass. Density rises with the square of how fine the marks are,
+  so each layer holds thousands of times more per square centimetre than the one before.
+  Layer one is engraved at half a millimetre: pictures first, then counting, an alphabet, and step
+  by step how to melt a bead of glass into a lens. Layer two is microtext with letters about 10 microns
+  tall, tens of thousands of pages per plate, readable through that lens: the sciences, how to make tools,
+  power and medicine, and how to build the polarising microscope and decoder for layer three. Layer
+  three is laser-written data inside the glass, at terabytes per plate: everything else, for a
+  civilization that has climbed back to optics and electronics. Fused silica does not rust, rot or
+  demagnetise, and survives heat, water and time.
+buildsOn:
+  - text: Microsoft's Project Silica, data laser-written in quartz glass with lifetimes of tens to hundreds of thousands of years.
+    url: https://www.microsoft.com/en-us/research/project/project-silica/
+  - text: The Long Now Foundation's Rosetta Disk, hundreds of thousands of micro-etched pages on nickel, with built-in magnifiers.
+    url: https://longnow.org/ideas/very-long-term-backup/
+  - text: The Arch Mission Foundation's Lunar Library, whose first nickel layers hold analog page images readable by microscope.
+    url: https://www.archmission.org/spaceil
+  - text: The Voyager Golden Record, whose cover carries pictorial instructions for playing it.
+    url: https://science.nasa.gov/mission/voyager/voyager-golden-record-overview/
+  - text: Piql's optical film, rated for more than a thousand years, used in the Arctic World Archive.
+    url: https://www.piql.com/
+experiment:
+  goal: Test whether people with no instructions can climb an archive's layers using only what it teaches them.
+  setup: >-
+    Three test plates of fused silica, 10 cm square: layer one laser-engraved, layer two written as
+    microtext by femtosecond laser, layer three a small block of laser-written voxels holding a
+    1 kB image. Twenty teams of four students or makerspace members, each given one plate, a gas
+    torch, glass rods, a phone camera and common hand tools, and no other help, for four weeks.
+  measure: The share of teams that make a working bead lens; the share that read a set passage in layer two; the share that decode the layer-three image; the days each step took and where teams got stuck.
+  succeedsIf: At least 60 percent of teams read the set passage in layer two and at least 25 percent decode the layer-three image within four weeks.
+  costUsd: 400000
+  months: 10
+path:
+  - phase: bench
+    what: Three test plates and twenty teams.
+    scale: A few pages in layer one, a few thousand in layer two, a kilobyte in layer three.
+    proves: People can climb the layers with only what the glass teaches.
+  - phase: prototype
+    what: A thousand-plate archive holding an encyclopedia and the records of the climb, tested with teams who share no language with its authors.
+    scale: About a thousand plates.
+    proves: Pictures alone can carry a reader into the text.
+  - phase: pilot
+    what: Copies placed in Arctic, desert and mountain vaults, and one carried to the Moon.
+    scale: Five sites.
+    proves: The plates survive storage and the reading ladder holds in different places.
+  - phase: first-plant
+    what: A plant writing a full archive copy every week, for libraries, schools and vaults.
+    scale: Fifty copies a year.
+    proves: Durable copies are cheap enough to be everywhere.
+  - phase: fleet
+    what: Copies in every region, on every settled world and in lunar shadow vaults.
+    scale: Thousands of copies.
+    proves: No single catastrophe can destroy every copy.
+  - phase: civilization
+    what: Any survivor, anywhere, can climb from the naked eye back to the full record.
+    scale: Humanity's knowledge, readable for a million years.
+    proves: What the climb has learned cannot be lost.
+risks: >-
+  Pictures may not be enough to teach a first alphabet to people with no shared language; the next
+  thing to try is anchoring meaning in things every reader can check, such as counting, the human
+  body, the sky and the properties of materials. Layer three may need too much industry to read; if
+  so, more of what matters moves into layer two. Writing microtext into silica at volume may be slow
+  or costly, in which case layer two is etched by photolithography. Plates can break, so the archive
+  relies on many copies, as every durable archive does.
+scene:
+  kind: lattice
+  focus: The glass's atoms, then the marks written in it, from those you can see to those only light can read.
+  params: { structure: silicate, defects: 0.15 }

@@ -1,0 +1,40 @@
+id: swarm-construction
+title: Building and flying a swarm of a trillion collectors
+domain: space
+stage: k15
+needs: [mercury-operations, mass-drivers, thin-film-collectors, autonomous-industry, mercury-mining, machine-swarm-network]
+summary: >-
+  The swarm is {swarm-full-area} of collector, {swarm-radius} from the Sun, weighing
+  {swarm-full-mass}. Even if each collector is a few hundred kilometres across, that is about a
+  trillion of them. Each has to be made, launched, unfolded and placed in its own orbit, faster than
+  old ones fail, by factories with no one on site.
+target: >-
+  Factories near Mercury turning {swarm-full-mined} of processed mass into collectors at
+  {collector-density}, launching and placing them by the tens of billions each year, each in its own
+  slot {swarm-radius} from the Sun, until the swarm delivers {type-2-power} by {year-type-2}.
+exists:
+  - text: Armstrong and Sandberg worked through how Mercury could be taken apart and turned into a swarm of thin collectors in a few decades ("Eternity in six hours", Acta Astronautica, 2013).
+    url: https://doi.org/10.1016/j.actaastro.2013.04.002
+    year: 2013
+  - text: JAXA's IKAROS, launched in May 2010, unfolded a square sail 14 m on a side of polyimide 0.0075 mm thick; JAXA calls it the first sail craft driven by both the push of light and thin-film solar power.
+    url: https://global.jaxa.jp/projects/sas/ikaros/
+    year: 2010
+  - text: NASA's ACS3 deployed an 80 square metre sail on four 7 m composite booms in 2024, before a bent boom left it tumbling.
+    url: https://en.wikipedia.org/wiki/Advanced_Composite_Solar_Sail_System
+    year: 2024
+  - text: By November 2026 SpaceX had launched 13,122 Starlink satellites, with 11,203 still in orbit, the largest constellation ever flown.
+    url: https://planet4589.org/space/con/star/stats.html
+    year: 2026
+  - text: Freeman Dyson proposed in 1960 that an advanced civilization would surround its star with collectors and glow in the infrared ("Search for artificial stellar sources of infrared radiation", Science).
+    url: https://doi.org/10.1126/science.131.3414.1667
+    year: 1960
+gap: >-
+  The largest sail yet unfolded in space is 14 m on a side; the swarm needs sheets hundreds of
+  millions of times larger, by the trillion. The largest constellation is about ten thousand
+  satellites, all built on Earth. Nobody has made a thin film in space, unfolded one without
+  people watching, or placed spacecraft at a rate of more than a few thousand a year.
+inventions: [homing-petals]
+scene:
+  kind: swarm
+  focus: Mercury feeding a growing ring of collectors as they sail out to their orbits.
+  params: { built: 0.3, radiusAu: 0.6, mercury: true }

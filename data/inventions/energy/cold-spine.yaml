@@ -1,0 +1,86 @@
+id: cold-spine
+title: The Cold Spine
+domain: energy
+for: [global-grid]
+pitch: >-
+  An ocean-crossing power line that is also a hydrogen pipeline: a superconducting magnesium diboride
+  cable cooled by the liquid hydrogen flowing around it, moving gigawatts of electricity and fuel
+  between continents with almost no electrical loss.
+principle: >-
+  Magnesium diboride becomes a superconductor below about 39 K. It is made of cheap elements and drawn
+  into wire by the kilometre. Liquid hydrogen boils at 20 K, so a pipe of it keeps the cable
+  superconducting, and the hydrogen is a second cargo: fuel, and seasonal storage. A direct-current
+  superconducting cable has no resistive loss at all; what costs energy is heat leaking in through the
+  insulation and the work of re-cooling it. Cooling at 20 K takes about fifty times the heat in
+  electric work, so a heat leak of 1 W per metre costs about 50 MW per 1,000 km, half a percent of a
+  10 GW line, against a few percent for today's best overhead lines. The Spine is a vacuum-jacketed
+  pipe about a metre across laid on the seabed like a gas pipeline: liquid hydrogen flows along a
+  coaxial cable, and stations every 50 to 100 km re-liquefy what boils off. Because the current does
+  the work, not the voltage, the line runs at tens of kilovolts, with small converter stations.
+buildsOn:
+  - text: CERN's cold powering system for the High-Luminosity LHC uses magnesium diboride links rated up to 117 kA, the first system of its kind in the 100 kA class.
+    url: https://doi.org/10.1038/s41598-025-08543-9
+    year: 2025
+  - text: Vysotsky and colleagues tested a 30 m line carrying liquid hydrogen and a magnesium diboride cable together at 20 to 26 K, with about 3,500 A of critical current at 21 K and up to 135 MW of combined chemical and electric power.
+    url: https://doi.org/10.1016/j.phpro.2015.06.033
+    year: 2015
+  - text: Grant, Starr and Overbye proposed SuperCables carrying superconducting current and liquid hydrogen in the same conduit, as the backbone of a continental energy grid.
+    url: https://www.scientificamerican.com/article/a-power-grid-for-the-hydr/
+    year: 2006
+  - text: The EU's BEST PATHS project, led by Red Electrica, tested a magnesium diboride direct-current superconducting link at prototype scale between 2014 and 2018.
+    url: https://cordis.europa.eu/project/id/612748
+    year: 2018
+  - text: The EU's SCARLET project is taking gigawatt-scale superconducting cable systems to the last qualification step before commercial use.
+    url: https://scarlet-project.eu/
+    year: 2026
+  - text: Suiso Frontier, the first liquid hydrogen carrier, sailed from Japan to Australia in 2021 with a 1,250 cubic metre tank at -253 °C.
+    url: https://en.wikipedia.org/wiki/Suiso_Frontier
+    year: 2022
+experiment:
+  goal: Measure the heat leak, cooling power and current of a seabed-style superconducting line carrying liquid hydrogen, over a length long enough that per-metre numbers can be trusted.
+  setup: >-
+    A 1 km vacuum-jacketed pipe holding a coaxial magnesium diboride cable in flowing liquid hydrogen,
+    laid in a flooded quarry or a harbour at 50 m depth, with a hydrogen liquefier at one end and a
+    20 kV, 20 kA direct-current supply. Faults are staged on purpose: a quench, a lost vacuum and a
+    coolant pump trip.
+  measure: Heat leak per metre; electric power drawn by the coolers per metre; critical current at 20 to 25 K; hydrogen boil-off; behaviour in each staged fault; cost per metre to lay.
+  succeedsIf: The line carries 20 kA without a quench for 1,000 hours with a heat leak under 1.5 W per metre at 20 K, and its cooling power, scaled to a 10 GW line, is under 1 percent of that line's power per 1,000 km.
+  costUsd: 30000000
+  months: 36
+path:
+  - phase: bench
+    what: The 1 km test line under water.
+    scale: 1 km, 400 MW.
+    proves: Heat leak, cooling power and fault behaviour that scale per metre.
+  - phase: prototype
+    what: A line across a strait between two islands or two countries, selling both power and hydrogen.
+    scale: 50 km, 1 GW.
+    proves: Cooling station spacing, laying method and repairs at sea.
+  - phase: pilot
+    what: An interconnector across a sea between two grids.
+    scale: 500 km, 5 GW, with hydrogen alongside.
+    proves: A lower cost per gigawatt-kilometre than conventional subsea cables.
+  - phase: first-plant
+    what: A line from a desert solar zone to a distant market, the length of the Xlinks route.
+    scale: 4,000 km, 10 GW.
+    proves: An intercontinental link that loses less than direct current on copper.
+  - phase: fleet
+    what: Spines linking every continent, through the deep ocean where needed.
+    scale: Tens of lines, hundreds of gigawatts.
+    proves: The grid on which the Sun never sets.
+  - phase: civilization
+    what: A planetary ring of Spines carrying a large share of {power-k08} and the hydrogen that stores it.
+    scale: Most of the world's long-distance power and fuel.
+    proves: A planet-wide grid at nearly no electrical loss.
+risks: >-
+  A long superconducting line stores a lot of magnetic energy and must survive a quench or a lost
+  vacuum without damage; the design splits it into sections that can each warm up safely. Hydrogen
+  beside high voltage adds a fire risk at landfalls, so converter stations and hydrogen terminals are
+  kept apart, and helium gas cooling is the fallback if hydrogen proves too hard. Laying a metre-wide
+  rigid pipe across ocean trenches may be impractical; then routes hop along shelves and islands, or
+  use flexible corrugated cryostats like today's superconducting cables. If deep-sea repairs take
+  months, lines must be laid in pairs.
+scene:
+  kind: globe
+  focus: One cold line crossing a sea floor, then a ring of them linking the continents.
+  params: { grid: 1, solar: 0.5, lights: 1, look: oceans }

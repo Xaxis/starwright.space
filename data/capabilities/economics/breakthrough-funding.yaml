@@ -1,0 +1,43 @@
+id: breakthrough-funding
+title: Funding the breakthroughs the climb needs
+domain: economics
+stage: k08
+needs: []
+summary: >-
+  Most of the climb's inventions, a seed factory, film collectors, mass drivers, are too big for a
+  university lab, too early for venture capital and too risky for a company. Agencies such as DARPA,
+  newer ones such as ARIA, and focused nonprofits have shown how to fund goal-driven programmes a
+  market would not. The climb needs many more of them, aimed at its own gaps, with milestones tied to
+  the experiments this project lays out.
+target: >-
+  A pipeline in which every invention on the climb can get its first experiment funded within a year
+  of being proposed, and its prototype and pilot within the time its path needs, from programme
+  funders, prizes and purchase commitments that judge it on measured milestones.
+exists:
+  - text: DARPA asks every programme to answer the Heilmeier Catechism, eight questions written in the 1970s that include what the mid-term and final exams for success are.
+    url: https://www.darpa.mil/about/heilmeier-catechism
+  - text: The National Academies' 2017 assessment of ARPA-E found programme directors set milestones with each performer and review them quarterly; 25 of 440 completed projects were ended early, most often for missing milestones.
+    url: https://www.nationalacademies.org/read/24778/chapter/5
+    year: 2017
+  - text: The UK committed 800 million pounds to create ARIA, its Advanced Research and Invention Agency, set up in law in 2022.
+    url: https://www.gov.uk/government/publications/advanced-research-and-invention-agency-aria-statement-of-policy-intent/advanced-research-and-invention-agency-aria-policy-statement
+    year: 2021
+  - text: Focused Research Organizations, incubated by Convergent Research, are nonprofits given 20 to 50 million dollars for 3 to 7 years to hit set technical milestones and produce public tools and data.
+    url: https://www.convergentresearch.org/about-fros
+    year: 2026
+  - text: In 2017 Gavi reported that its 1.5 billion dollar advance market commitment for pneumococcal vaccines had brought the vaccine to 58 of the poorest countries and protected 109 million children.
+    url: https://www.gavi.org/news/media-room/vaccines-vs-pneumonia-how-pioneering-funding-model-changed-game-changing-market
+    year: 2017
+  - text: XPRIZE ran prize competitions in 2026 with purses including 119 million dollars for water scarcity.
+    url: https://www.xprize.org/
+    year: 2026
+gap: >-
+  Programme funders are few, national and small next to the climb: their budgets are counted in
+  hundreds of millions, the climb's gaps in tens of billions. Few fund work past the prototype, so
+  pilots fall between research grants and project finance, and almost none treat space industry or
+  new institutions as inventions to fund.
+inventions: [wright-commitment]
+scene:
+  kind: network
+  focus: Funders and labs as nodes, money pulsing to each invention as it passes a milestone.
+  params: { shape: flat, nodes: 800, clusters: 16, links: 0.4, pulses: 0.6 }

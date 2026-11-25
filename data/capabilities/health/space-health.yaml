@@ -1,0 +1,37 @@
+id: space-health
+title: Staying healthy in space
+domain: health
+stage: k09
+needs: [closed-life-support, universal-health, point-of-care-medicine]
+summary: >-
+  Space is hostile to the human body. Beyond Earth's magnetic shield, galactic cosmic rays and solar
+  storms damage cells over months and years; without weight, bone and muscle waste and fluids shift;
+  and help is far away. As the climb moves industry and people off Earth past the heat ceiling, from
+  {year-k09}, keeping them healthy becomes a condition of the whole project, not a footnote.
+target: >-
+  Keep people healthy through long stays and journeys in space, protecting them from radiation and
+  the loss of weight, and giving them the diagnosis and treatment they need far from Earth, so that
+  living and working off world is as safe as a demanding job on it.
+exists:
+  - text: A round trip to Mars with current shielding would give about 0.66 sievert of radiation, against a NASA career limit of 600 millisievert, so radiation is a hard constraint on long missions.
+    url: https://doi.org/10.1126/science.1235989
+    year: 2013
+  - text: On the Moon's surface the galactic-cosmic-ray dose-equivalent rate is about 57 microsievert per hour, measured by Chang'e-4, setting how much shielding a lunar base needs.
+    url: https://doi.org/10.1126/sciadv.aaz1334
+    year: 2020
+  - text: Crews in low Earth orbit accumulate roughly 0.2 to 0.5 millisievert of effective dose per day, and the NASA standard caps a career at 600 millisievert.
+    url: https://doi.org/10.1016/j.zemedi.2023.06.005
+    year: 2024
+  - text: The NASA Space Radiation Laboratory simulates galactic cosmic rays on the ground to study shielding and biological countermeasures for deep-space crews.
+    url: https://www.bnl.gov/nsrl/
+    year: 2024
+gap: >-
+  Shielding enough mass against cosmic rays is heavy and costly, no drug yet reliably protects people
+  from long-term radiation damage, and the loss of bone and muscle without weight still limits long
+  stays. Artificial gravity, radioprotective medicine and on-site care all need to be built and
+  proven before crews spend years off Earth safely.
+inventions: [radioprotection-repair-regimen]
+scene:
+  kind: habitat
+  focus: A shielded, spun habitat protecting its crew from radiation and the loss of weight.
+  params: { type: cylinder, spin: 0.6, green: 0.4 }

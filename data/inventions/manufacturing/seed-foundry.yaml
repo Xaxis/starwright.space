@@ -22,17 +22,20 @@ buildsOn:
     url: https://news.mit.edu/2013/steel-without-greenhouse-gas-emissions-0508
   - text: RepRap's self-copy of its printed parts, the first open measure of closure.
     url: https://reprap.org/wiki/RepRap
-  - text: Cast basalt, already made industrially for pipes and wear tiles from melted volcanic rock.
-    url: https://en.wikipedia.org/wiki/Cast_basalt
+  - text: Cast basalt (Schmelzbasalt), already made industrially from melted volcanic rock for wear-resistant chutes, pipes and liners.
+    url: https://de.wikipedia.org/wiki/Schmelzbasalt
+  - text: Basalt fibre, spun industrially from molten basalt, the model for the foundry's glass fibre.
+    url: https://en.wikipedia.org/wiki/Basalt_fiber
   - text: Ellery's 3D-printed motors and the universal constructor programme at Carleton University.
     url: https://carleton.ca/ceser/wp-content/uploads/Self-Replicating-Machines-on-the-Moon.pdf
 experiment:
   goal: Measure closure and doubling time for a whole, if small, self-copying loop on Earth, fed only lunar simulant and electricity.
   setup: >-
     A one-tonne bench loop in a vacuum-capable hall: a solar-simulator furnace and a molten oxide
-    electrolysis cell feeding a caster, a glass-fibre puller and a wire printer, plus two robot arms.
-    It is given simulant, power and a fixed stock of chips, and asked to build a second copy of
-    itself, logging the mass and the hours of every part it makes and every part it must be handed.
+    electrolysis cell feeding a caster, a glass-fibre puller and a wire printer, plus two robot
+    arms. It is given simulant, power and a fixed stock of chips, and asked to build a second copy
+    of itself, logging the mass and the hours of every part it makes and every part it must be
+    handed.
   measure: Closure by mass and by part count; tonnes of finished parts per megawatt-hour; hours per tonne of copy; which parts block.
   succeedsIf: The loop makes at least 80 percent of a copy of itself by mass from simulant, and its measured rate puts a full copy within five years at its own power.
   costUsd: 25000000

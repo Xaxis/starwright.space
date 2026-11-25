@@ -1,0 +1,91 @@
+id: vacuum-fab
+title: The Vacuum Fab
+domain: computation
+for: [small-fabs, space-chip-fabs]
+pitch: >-
+  A chip fab that never lets its wafers out of vacuum and never uses a mask. On Earth it is a
+  sealed box in an ordinary room; in orbit it opens to the cleanest vacuum there is, the wake
+  behind a shield.
+principle: >-
+  A cleanroom exists to keep dust and molecules off the wafer, and it is most of the cost of a
+  fab. Vacuum does the job better. At a pressure of 10 to the minus 8 pascals, a clean surface
+  takes hours to gather a single layer of stray molecules, and no dust floats, because nothing
+  holds it up. The Vacuum Fab keeps each wafer in ultra-high vacuum from bare silicon to finished
+  chip, moving it between chambers on a sealed track: deposition by sputtering and molecular beams,
+  dry plasma etching, ion implantation, laser annealing. No step uses liquids. Patterns are written
+  directly by many parallel electron beams, so there are no masks to buy for each design, and the
+  same beams image the wafer to check each layer. A fab is then a string of chambers the size of a
+  shipping container, cheap enough for a small run. In orbit, a shield moving at 7.8 km/s through
+  thin gas leaves a wake almost empty of molecules, an ultra-high vacuum with no pumps, as NASA's
+  Wake Shield Facility showed; the fab's chambers there are open to it. The silicon, aluminium and
+  oxygen come from rock, refined by electrolysis and zone melting.
+buildsOn:
+  - text: NASA's Wake Shield Facility, flown on STS-60, STS-69 and STS-80, which made an ultra-high vacuum in its wake and grew epitaxial films there.
+    url: https://en.wikipedia.org/wiki/Wake_Shield_Facility
+    year: 1996
+  - text: Minimal Fab, AIST's line of desk-sized tools for half-inch wafers.
+    url: https://www.minimalfab.com/en/about/greeting.php
+    year: 2026
+  - text: Multibeam's miniature electron-beam columns for parallel, maskless direct writing.
+    url: https://www.multibeamcorp.com/
+    year: 2026
+  - text: Electron-beam lithography writes custom patterns without a mask at sub-10 nm resolution, so far limited by slow throughput to masks and low-volume chips.
+    url: https://en.wikipedia.org/wiki/Electron-beam_lithography
+    year: 2026
+  - text: Molecular-beam epitaxy, which grows crystal films one layer at a time in ultra-high vacuum.
+    url: https://en.wikipedia.org/wiki/Molecular-beam_epitaxy
+    year: 2026
+  - text: The Hacker Fab's open-source chip fab and Sam Zeloof's garage-made integrated circuits, proof that a working process can be small and cheap.
+    url: https://hackerfab.org
+    year: 2023
+  - text: Space Forge's ForgeStar-1, which ran a 1,000 °C furnace in orbit in 2025 toward making semiconductor crystals in space.
+    url: https://en.wikipedia.org/wiki/Space_Forge
+    year: 2025
+experiment:
+  goal: Make working integrated circuits in a sealed vacuum line standing in an ordinary room, with no cleanroom and no masks.
+  setup: >-
+    A linked string of ultra-high vacuum chambers bought used or built from standard parts: a load
+    lock, a sputter and evaporation chamber, a plasma etcher, a small ion implanter, a rapid
+    thermal annealer and a single-column electron-beam writer with a dry resist, joined by a sealed
+    wafer transfer track, in a normal laboratory. The test design is an NMOS process at a 2 micron
+    gate length: ring oscillators, a 1,000-transistor array and a small logic block. The same design
+    is made by a commercial cleanroom service for comparison.
+  measure: Transistor yield across the array; ring oscillator speed; defect density per square centimetre against the cleanroom wafers; hours and energy per wafer.
+  succeedsIf: At least 95 percent of the transistors in the 1,000-transistor array work, the ring oscillators run, and defect density is within three times the cleanroom wafers'.
+  costUsd: 3000000
+  months: 12
+path:
+  - phase: bench
+    what: The sealed vacuum line making 2 micron NMOS chips in an ordinary room.
+    scale: A few wafers a week.
+    proves: Vacuum replaces the cleanroom for a whole process.
+  - phase: prototype
+    what: A container fab with parallel electron-beam writing, making CMOS logic at a few hundred nanometres.
+    scale: Hundreds of wafers a month.
+    proves: Maskless writing is fast enough for small runs of useful chips.
+  - phase: pilot
+    what: Container fabs in a dozen cities and universities, making controllers, sensors and power chips for local industry.
+    scale: A dozen fabs.
+    proves: A small fab pays its way, and its design can be copied.
+  - phase: first-plant
+    what: The first Vacuum Fab in orbit, behind a wake shield, on silicon wafers brought from Earth.
+    scale: One orbital fab.
+    proves: Chips can be made in space, with the wake as the vacuum.
+  - phase: fleet
+    what: Fabs on the Moon and in orbit refining their own silicon and metals from regolith.
+    scale: Dozens of fabs off Earth.
+    proves: The space industry makes its own chips, closing the self-copying loop.
+  - phase: civilization
+    what: Fabs that ride with the factories building the swarm, making the chips for its collectors and computers.
+    scale: "Every chip the industry needs as it doubles every {doubling-time}"
+    proves: Chips no longer limit how fast industry can grow.
+risks: >-
+  Some steps may need liquids after all, such as cleaning and chemical-mechanical polishing; the
+  fallback is to design processes around dry substitutes, or to keep one small wet chamber. Direct
+  writing may stay too slow for large chips; then the fab writes its own masks for repeated designs
+  and keeps direct writing for small runs. Tools may shed particles inside the vacuum; the design
+  keeps moving parts below the wafer and away from it.
+scene:
+  kind: compute
+  focus: A wafer moving through a chain of sealed chambers, the electron beams drawing on it as it passes.
+  params: { kind: wafer, racks: 6, radiators: 0.1 }

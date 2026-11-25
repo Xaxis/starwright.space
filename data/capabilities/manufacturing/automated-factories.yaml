@@ -1,0 +1,37 @@
+id: automated-factories
+title: Factories that run themselves
+domain: manufacturing
+stage: k08
+needs: [general-purpose-robots, industrial-ai]
+summary: >-
+  Growing the world's energy use toward {power-k08} means building factories, panels, lines and
+  machines far faster than the workforce grows. The only way is factories that run with few people:
+  robots that make most of the parts, lines that change products in software, and plants that keep
+  going through the night with the lights off.
+target: >-
+  Factories for most of what the buildout needs, from panels and batteries to motors and robots,
+  running lights-out for weeks, changing product without retooling by hand, so that output can grow
+  every year until {year-k08} without being limited by how many people can be trained.
+exists:
+  - text: Five million industrial robots were at work in factories worldwide in 2025, after more than 600,000 were installed that year.
+    url: https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally
+    year: 2025
+  - text: South Korea led robot density with 1,066 robots per 10,000 manufacturing employees in 2025; the world average was 152.
+    url: https://ifr.org/news/robot-density-highest-in-south-korea-singapore-and-germany/
+    year: 2025
+  - text: FANUC's factories in Japan use robots to build robots, up to 6,000 a month.
+    url: https://www.fanuc.eu/at-en/node/1472
+    year: 2026
+  - text: Xiaomi's Changping factory automates 100 percent of its key processes on 11 lines, making a phone about every three seconds, more than ten million a year.
+    url: https://newatlas.com/robotics/xiaomi-dark-robotic-factory/
+    year: 2024
+gap: >-
+  Lights-out works for a few products made by the million on lines that cost billions. Most
+  manufacturing is varied and made in smaller runs, where setting up, fixturing, inspection and
+  fixing faults still need skilled people at every shift. A factory that learns a new part on its
+  own does not yet exist.
+inventions: [inner-lab]
+scene:
+  kind: field
+  focus: Factory halls in the dark, their robots working through the night.
+  params: { unit: fab, count: 300, terrain: plain }

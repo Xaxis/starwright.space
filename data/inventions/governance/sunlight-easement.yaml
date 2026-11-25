@@ -1,0 +1,78 @@
+id: sunlight-easement
+title: The Sunlight Easement
+domain: governance
+for: [sunlight-rights]
+pitch: >-
+  A permanent legal easement over the space between the Sun and every living world: no collector may
+  sit in that cone, an independent watch at each world's L1 point measures the light arriving, and
+  any builder whose shadow falls on a world pays and moves.
+principle: >-
+  English law has protected a window's light since 1832: twenty years of light make it a right that
+  a neighbour cannot build over. The public trust doctrine says some shared goods, such as navigable
+  waters, are held by the state for its people and cannot be given away. The Sunlight Easement
+  extends both. The light reaching each inhabited or living world is held in trust for its people
+  and its life, and cannot be sold or traded. Physically, the easement is a cone from the Sun to the
+  world, wide enough that nothing inside it could shade the world as both move. Every collector's
+  orbit is checked against every world's cone before it is licensed, in the same orbit register that
+  runs the risk permits, so a breach is prevented at the source, by the factories that place the
+  collectors. An independent network of light meters at each world's Sun-side L1 point, like the
+  instruments DSCOVR already flies, measures the light arriving and flags any dip. Seen from the
+  Sun, the cones are a tiny share of the sky, so the cost to the swarm should be small; the first
+  study measures how small.
+buildsOn:
+  - text: The Prescription Act 1832, which makes twenty years of uninterrupted light an absolute right.
+    url: https://www.legislation.gov.uk/ukpga/Will4/2-3/71/section/3
+  - text: Illinois Central Railroad v. Illinois (1892), the root of the public trust doctrine.
+    url: https://tile.loc.gov/storage-services/service/ll/usrep/usrep146/usrep146387/usrep146387.pdf
+  - text: The ENMOD Convention, which since 1978 has banned hostile modification of the environment.
+    url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-1&chapter=26&clang=_en
+  - text: DSCOVR, watching the Sun and Earth's sunlit side from the Sun-Earth L1 point since 2015.
+    url: https://science.nasa.gov/mission/dscovr/
+  - text: The Montreal Protocol, the precedent for a treaty every country joined to protect a shared part of the sky.
+    url: https://ozone.unep.org/all-ratifications
+experiment:
+  goal: Measure what share of a full swarm's power sunlight easements for Earth, the Moon, Mars and Venus would cost, and whether a licensing check can enforce them.
+  setup: >-
+    An open orbital model of a swarm of collectors at the plan's distance from the Sun, with a
+    keep-out cone for each world sized for orbital uncertainty plus a margin. A licensing check screens
+    every collector orbit against the cones, and a second team tries to design orbits that pass the
+    check but still shade a world.
+  measure: The share of the swarm's power lost to the cones; the worst shading of each world over a century of simulated orbits; how many shading orbits the red team gets past the check.
+  succeedsIf: The cones cost less than 1 percent of the swarm's power, no simulated world loses more than 0.1 percent of its light in any year, and the check catches every red-team orbit.
+  costUsd: 250000
+  months: 9
+path:
+  - phase: bench
+    what: The orbital study and red team.
+    scale: A simulated swarm and four worlds.
+    proves: The easement is cheap and can be checked.
+  - phase: prototype
+    what: The cone check built into the orbit register for the first solar power collectors in Earth orbit, with one light meter at the Sun-Earth L1 point.
+    scale: Earth's first space solar plants.
+    proves: The register can screen real orbits and the meter can see a shadow.
+  - phase: pilot
+    what: A treaty adopts the easement for Earth and the Moon as space solar power begins, with fines and loss of licence for a breach.
+    scale: The Earth and Moon system.
+    proves: The law can be agreed before any shadow is cast.
+  - phase: first-plant
+    what: The federation extends the easement to Mars, Venus and every habitat that relies on sunlight.
+    scale: Every inhabited world.
+    proves: The easement covers all worlds, not only Earth.
+  - phase: fleet
+    what: Every collector the swarm builds is licensed through the cone check.
+    scale: "Swarm construction through {year-k15}"
+    proves: Enforcement keeps pace with building by the trillion.
+  - phase: civilization
+    what: The swarm harnesses a star while every living world keeps its daylight.
+    scale: "{type-2-power}"
+    proves: The Sun's power can be taken without taking anyone's sunlight.
+risks: >-
+  Orbits drift, and a cone drawn too tight will be breached; cones carry a margin set by measured
+  drift, and the register can order collectors moved. Some will argue a world's light should be
+  tradable at a price; the trust forbids that, a choice the federation could revisit openly. Light
+  meters could be disabled or spoofed; several independent networks, run by different members,
+  check each other.
+scene:
+  kind: swarm
+  focus: Collectors filling the sky around the Sun, parting to leave an open cone of light to each world.
+  params: { built: 0.8 }

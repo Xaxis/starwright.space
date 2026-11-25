@@ -1,0 +1,42 @@
+id: global-research-talent
+title: Finding every inventor
+domain: people
+stage: k08
+needs: [universal-education]
+summary: >-
+  Who becomes an inventor depends more on where a child grows up than on how able they are. Children
+  with the same gifts are far less likely to become scientists or inventors if they are born poor,
+  or in a country with few labs. The climb needs every mind it can find, so finding and backing
+  talent everywhere is one of its cheapest ways to go faster.
+target: >-
+  Every child with a gift for science or engineering, anywhere, found by their early teens and given
+  the mentors, schooling, money and visas to reach the frontier, so the share of people who become
+  researchers no longer depends on the country or family they are born into.
+exists:
+  - text: Bell, Chetty and colleagues found in 2019 that US children from the richest 1 percent of families are ten times as likely to become inventors as children from below-median families, leaving many lost Einsteins.
+    url: https://doi.org/10.1093/qje/qjy028
+    year: 2019
+  - text: Agarwal and Gaule found in 2020 that International Mathematical Olympiad participants from low-income countries produce 34 percent fewer publications and 56 percent fewer citations than equally talented peers from rich countries.
+    url: https://doi.org/10.1257/aeri.20190457
+    year: 2020
+  - text: The world had 8.854 million full-time-equivalent researchers in 2018, according to the UNESCO Science Report 2021.
+    url: https://www.unesco.org/reports/science/2021/en/statistics
+    year: 2018
+  - text: In 2018 Sub-Saharan Africa had 123.8 full-time-equivalent researchers per million people, against 1,368 for the world as a whole.
+    url: https://www.unccd.int/sites/default/files/library/1744_unesco_science_report_2021_summary_eng.pdf
+    year: 2018
+  - text: Rise, launched in 2019 by Schmidt Futures and the Rhodes Trust, picks 100 young people aged 15 to 17 from around the world each year for lifelong support.
+    url: https://www.risefortheworld.org/about-rise/
+    year: 2019
+  - text: The International Mathematical Olympiad, first held in Romania in 1959 with 7 countries, had 110 teams in 2025.
+    url: https://www.imo-official.org/results/team/year/2025/
+    year: 2025
+gap: >-
+  Talent searches such as olympiads and scholarships reach thousands of children, but the gifted
+  children they miss number in the millions, and most live where there is no search at all. Those
+  who are found often lack the money, mentors and visas to go further.
+inventions: [open-olympiad]
+scene:
+  kind: network
+  focus: Points of talent lighting up on every continent, each linked to a mentor as it is found.
+  params: { shape: globe, nodes: 4000, clusters: 40, links: 0.2, pulses: 0.5 }

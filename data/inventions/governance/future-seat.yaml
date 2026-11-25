@@ -1,0 +1,78 @@
+id: future-seat
+title: The Future Seat
+domain: governance
+for: [long-term-stewardship]
+pitch: >-
+  Every body deciding a project that will outlast its members seats a panel of citizens drawn by lot
+  and charged to argue for the people of a century from now, with the power to delay a decision by a
+  year and to require that it be taken again with reasons.
+principle: >-
+  Behavioural economics finds that people discount the future steeply and inconsistently, the
+  pattern called hyperbolic discounting, and political economy adds that the future has no vote.
+  Japan's Future Design experiments found a simple remedy that works in practice: when some
+  participants are asked to imagine themselves living in a future year and argue as those people,
+  the group's choices shift toward the long term. In Yahaba, more than half of what the future groups
+  proposed was adopted. Deliberative polls and citizens' assemblies show that randomly chosen
+  ordinary people reason well about hard questions when they are briefed and given time. The Future
+  Seat combines the two. A panel of 24 to 50 people, drawn by lot, paid and briefed by independent
+  experts, is assigned to speak for a named future year. It cannot decide, but it can impose a
+  suspensive delay, as some upper houses can, and force a decision to be taken again with a
+  published answer to its objections. That gives the future a voice that is costly to ignore without
+  handing an unelected body a veto.
+buildsOn:
+  - text: Future Design in Yahaba, Japan, where groups acting as imaginary future generations shaped the town's long-term plan (Hara and colleagues, 2019).
+    url: https://doi.org/10.1007/s11625-019-00684-x
+  - text: Deliberative Polling, run over 150 times in over 50 countries and jurisdictions since 1988.
+    url: https://deliberation.stanford.edu/what-deliberative-pollingr
+  - text: France's Citizens' Convention for Climate of 2019 and 2020, in which 150 members drawn by lot produced 149 proposals.
+    url: https://www.conventioncitoyennepourleclimat.fr/
+  - text: Ireland's Citizens' Assembly of 2016 to 2018, 99 members of the public selected at random.
+    url: https://citizensassembly.ie/previous-assemblies/2016-2018-citizens-assembly/
+  - text: The Future Generations Commissioner for Wales, created by statute in 2015.
+    url: https://www.legislation.gov.uk/anaw/2015/2/section/17
+experiment:
+  goal: Measure whether a Future Seat with a suspensive delay moves long-lived decisions toward long-term value, and whether residents accept it as legitimate.
+  setup: >-
+    A randomized trial across 30 municipalities in two countries that already run participatory
+    budgeting. In 15, a Future Seat of 30 residents, assigned to speak for the residents of 2100,
+    reviews every capital decision with a life of more than 30 years for two budget cycles, with the
+    power to delay one decision a year. The other 15 run as usual.
+  measure: The share of capital spending on long-lived assets and maintenance; the long-run value of approved projects at a low discount rate; time to decision; residents' trust in the process, surveyed before and after.
+  succeedsIf: Treated municipalities shift at least 10 percent more of their capital budgets toward long-lived value, decisions take no more than 20 percent longer, and residents' trust does not fall.
+  costUsd: 1500000
+  months: 30
+path:
+  - phase: bench
+    what: Lab experiments with paid participants, varying the panel's powers and briefings.
+    scale: 1,000 participants.
+    proves: Which powers shift choices without causing deadlock.
+  - phase: prototype
+    what: The municipal trial.
+    scale: 30 municipalities, two budget cycles.
+    proves: It changes real budgets and is trusted.
+  - phase: pilot
+    what: A national government gives its infrastructure commission or energy regulator a Future Seat.
+    scale: One country's long-lived infrastructure.
+    proves: It works at national stakes.
+  - phase: first-plant
+    what: The bodies that run the climb's century-long work, such as the lunar registry and the heat budget, each seat one by charter.
+    scale: The climb's international institutions.
+    proves: Commitments hold through changes of government.
+  - phase: fleet
+    what: Future Seats in most national legislatures and in the councils of habitats off Earth.
+    scale: Most of humanity.
+    proves: The future has a voice wherever long decisions are made.
+  - phase: civilization
+    what: Every decision on the climb heard by people speaking for those who will live with it.
+    scale: "Through {year-type-2}, across the inner solar system"
+    proves: A plan longer than a lifetime can be both kept and corrected.
+risks: >-
+  Organised interests may try to capture the panel by claiming to speak for the future; drawing by
+  lot, short terms and published briefings make that harder. A delay could be used to block every
+  project; one delay a year per body, with reasons required, keeps it a check rather than a veto.
+  Panel members may simply project today's views onto 2100; the Future Design method's role play and
+  scenarios exist to stretch them, and the trial measures whether they do.
+scene:
+  kind: network
+  focus: A council deciding, with a second ring of seats beside it, each seat speaking for someone in 2100.
+  params: { shape: flat, nodes: 500, clusters: 6, links: 0.35, pulses: 0.4 }

@@ -1,0 +1,40 @@
+id: swarm-station-keeping
+title: Keeping a trillion collectors in their places
+domain: space
+stage: type-2
+needs: [swarm-construction, machine-swarm-network, solar-system-navigation]
+summary: >-
+  A finished swarm is the largest traffic problem ever posed: about a trillion sheets sharing a
+  shell around the Sun, each pushed by sunlight, tugged by the planets and turned to face its
+  receiver. Every one must hold its lane for centuries without propellant, and the ones that fail
+  must be moved out of the way before they hit anything.
+target: >-
+  Every collector holding its orbit and its attitude by sunlight alone, closest approaches kept
+  above a safe margin, no chain of collisions ever starting, and failures few enough that the swarm
+  keeps delivering {type-2-power} for as long as the Sun shines.
+exists:
+  - text: IKAROS steered itself in 2010 with 80 liquid crystal panels in its sail whose reflectance could be switched, changing the push of sunlight on each part; JAXA confirmed the control worked in July 2010.
+    url: https://en.wikipedia.org/wiki/IKAROS
+    year: 2010
+  - text: McInnes and Simmons showed in 1992 that the steady push of light lets a sail hold orbits displaced above or below the Sun that no free body could hold ("Solar sail halo orbits", Journal of Spacecraft and Rockets).
+    url: https://doi.org/10.2514/3.25487
+    year: 1992
+  - text: SpaceX reported to the FCC that from December 2025 to May 2026 its first-generation Starlinks made 65,137 manoeuvres and its second-generation ones 142,015.
+    url: https://api-prod.fcc.gov/icfs-attachment/exp/api/v1/bff0244acfb947505791bf252f851ce6
+    year: 2026
+  - text: Starlink made nearly 50,000 collision-avoidance manoeuvres in the six months to May 2024, twice as many as a year earlier.
+    url: https://www.space.com/spacex-starlink-50000-collision-avoidance-maneuvers-space-safety
+    year: 2024
+  - text: The Planetary Society's LightSail 2 raised its orbit by sunlight alone at times and flew for nearly three and a half years, reentering in November 2022.
+    url: https://www.planetary.org/articles/lightsail-2-completes-mission
+    year: 2022
+gap: >-
+  Steering by switching reflectivity has flown on one sail. Today's largest constellation already
+  makes hundreds of thousands of manoeuvres a year with thrusters and help from the ground; the swarm
+  has a hundred million times as many members, no propellant, and minutes of light delay to any
+  controller.
+inventions: [homing-petals]
+scene:
+  kind: swarm
+  focus: The near-closed swarm in ordered shells, each collector trimming its own orbit with light.
+  params: { built: 0.9, radiusAu: 0.6 }

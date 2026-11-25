@@ -1,0 +1,40 @@
+id: compute-radiators
+title: Radiators that let space computers run hot and light
+domain: computation
+stage: k09
+needs: [cheap-launch]
+summary: >-
+  In space there is no air or water to carry heat away. Every watt a computer uses must leave as
+  infrared light from a radiator, and a radiator sheds heat as the fourth power of its temperature
+  (the Stefan-Boltzmann law, {stefan-boltzmann}). Radiators are the heaviest part of a computer in
+  orbit, so the mass of orbital computing, and its cost to launch, is set by how hot its chips can
+  run and how light its radiators can be.
+target: >-
+  Radiators of under a kilogram per kilowatt rejected, paired with chips that run hot enough to
+  shrink them, so that a gigawatt of orbital computing weighs no more than its solar arrays, in
+  service as industry moves to orbit around {year-k09}.
+exists:
+  - text: Each of the International Space Station's photovoltaic radiators rejects up to 14 kW to deep space through ammonia loops, and weighs 741 kg, about 53 kg per kilowatt.
+    url: https://www.nasa.gov/wp-content/uploads/2021/02/473486main_iss_atcs_overview.pdf
+    year: 2006
+  - text: Starcloud's white paper notes that a 1 m by 1 m black plate at 20 °C radiates about 838 W to deep space from both faces, and sizes a 5 GW orbital data centre with a solar array about 4 km on a side.
+    url: https://www.starcloud.com/wp
+    year: 2024
+  - text: Studies of liquid droplet radiators, which spray a sheet of hot droplets through space and catch them again, found them up to seven times lighter than heat-pipe radiators below about 700 K.
+    url: https://en.wikipedia.org/wiki/Liquid_droplet_radiator
+    year: 2026
+  - text: NASA Glenn ran silicon carbide integrated circuits for weeks, uncooled and unpackaged, in a reproduction of the 460 °C surface of Venus, a hundredfold longer than any electronics before.
+    url: https://doi.org/10.1063/1.4973429
+    year: 2016
+  - text: Spacecraft shed heat through radiators, heat pipes, louvres and coatings chosen to emit infrared well while reflecting sunlight.
+    url: https://en.wikipedia.org/wiki/Spacecraft_thermal_control
+    year: 2026
+gap: >-
+  Today's space radiators weigh tens of kilograms per kilowatt and run near room temperature,
+  because the electronics they cool must stay below about 85 °C. Light radiators that stay
+  leak-free for years, and chips that work well far hotter, are both missing.
+inventions: [hot-core-logic]
+scene:
+  kind: compute
+  focus: A small compute module in orbit behind broad radiator wings, glowing dull red in the infrared.
+  params: { kind: datacentre, racks: 20, radiators: 1, orbit: true }

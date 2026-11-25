@@ -1,0 +1,43 @@
+id: ice-sheets
+title: Holding the ice sheets in place
+domain: environment
+stage: k08
+needs: [earth-monitoring]
+summary: >-
+  Greenland and Antarctica hold enough ice to raise the sea by tens of metres, and they are losing it
+  more than three times as fast as in the 1990s. Some glaciers, such as Thwaites, may be past a point
+  where warm ocean water melts them from below faster than snow can replace them. Cutting emissions
+  slows this over centuries. Slowing the ice itself could buy time for the coasts where hundreds of
+  millions of people live.
+target: >-
+  Slow the loss of the fastest-retreating glaciers so that the ice sheets add far less to sea level
+  this century than on today's path, with every method proven on small glaciers before large ones.
+exists:
+  - text: The International Thwaites Glacier Collaboration found that Thwaites' full collapse would raise the sea by 65 cm, and that ice loss in its region more than doubled from the 1990s to the 2010s.
+    url: https://thwaitesglacier.org/findings
+    year: 2025
+  - text: The IMBIE team found the ice sheets' losses rose from 105 billion tonnes a year in 1992 to 1996 to 372 billion tonnes a year in 2016 to 2020, adding 21 mm to sea level over that time.
+    url: https://essd.copernicus.org/articles/15/1597/2023/
+    year: 2023
+  - text: Wolovick and Moore modelled walls and mounds on the sea floor in front of Thwaites and found a continuous sill blocking warm water succeeded in every run, against 30 percent for isolated mounds.
+    url: https://tc.copernicus.org/articles/12/2955/2018/
+    year: 2018
+  - text: A University of Chicago research vision for glacial climate intervention proposes a decade of study, including drilling fields that draw water or heat from glacier beds, possibly with passive thermosyphons.
+    url: https://knowledge.uchicago.edu/records/t21ey-t9b30
+    year: 2024
+  - text: Real Ice and partners pumped sea water onto Arctic sea ice at Cambridge Bay in 2024 and 2025 and grew plots up to 32 cm thicker than untreated ice.
+    url: https://doi.org/10.1029/2025EF007894
+    year: 2026
+  - text: The Arctic Ice Project, which tested reflective glass beads spread on sea ice, concluded its research in 2024.
+    url: https://www.arcticiceproject.org/
+    year: 2024
+gap: >-
+  Every way of slowing a glacier is still at the stage of models and white papers. Building on the
+  sea floor under hundreds of metres of water and sea ice is beyond anything attempted, and the beds of
+  ice streams have been drilled only for science. No one has yet measured how much any intervention
+  slows a real glacier, or what it does to the ocean around it.
+inventions: [ice-pins]
+scene:
+  kind: globe
+  focus: The ice of West Antarctica and Greenland, its fastest glaciers slowing as the decades pass.
+  params: { ice: 1, look: poles }

@@ -1,0 +1,81 @@
+id: impactor-train
+title: The Impactor Train
+domain: resilience
+for: [planetary-defense, comet-defense]
+pitch: >-
+  Deflect an asteroid with many small hits instead of one large one, measuring what each hit did
+  before sending the next, so the push is steered to the right size rather than guessed.
+principle: >-
+  A kinetic impactor of mass m at speed v gives its target a momentum beta times m v, where beta is
+  1 plus the momentum carried off by the ejecta. Beta depends on the target's strength, porosity and
+  gravity, and is not known until something hits it: for DART it could have been anywhere from
+  about 2 to 5. A single large hit therefore lands with an uncertain push, and on a loose rubble
+  pile risks breaking the body into pieces that still arrive. The Impactor Train splits the
+  momentum into ten to fifty small impactors, each well below the energy that would disrupt the
+  body, launched in sequence. A small lander first puts a radio transponder on the target, so
+  two-way Doppler and ranging measure the velocity change from each hit to a fraction of a
+  millimetre per second within days. After every hit the controller updates its estimate of beta and
+  sizes and aims the next, closing the loop the way a gunner walks fire onto a target. Because a
+  push applied years ahead shifts the arrival point by about three times the velocity change times
+  the time remaining, a centimetre per second a decade out moves the impact point by more than an
+  Earth radius.
+buildsOn:
+  - text: DART's impact on Dimorphos in 2022 and the measured momentum enhancement factor of about 3.6, the first full-scale kinetic deflection.
+    url: https://www.nature.com/articles/s41586-023-05878-z
+  - text: ESA's Hera, at Didymos since 2026 to measure what DART did, so beta can be pinned down after the fact.
+    url: https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-s-first-close-up-view-of-didymos-asteroids
+  - text: Housen and Holsapple's scaling laws for crater ejecta, which predict how beta changes with target strength, porosity and gravity.
+    url: https://doi.org/10.1016/j.icarus.2010.09.017
+  - text: NASA's Ames Vertical Gun Range, which fires small projectiles at kilometres per second into targets to study impacts.
+    url: https://www.nasa.gov/ames-vertical-gun-range/
+  - text: Lu and Love's gravity tractor, a slow, measured way to trim an asteroid's path after the train has done the bulk of the work.
+    url: https://www.nature.com/articles/438177a
+experiment:
+  goal: Show that the push from many small hits on a rubble-pile target adds up predictably, and that each hit can be predicted from the ones before it.
+  setup: >-
+    Rubble-pile analog targets, about 30 cm across, made of gravel and fine regolith simulant bound
+    weakly, hung as ballistic pendulums in the vacuum chamber of a light-gas gun range. Each target
+    takes either one projectile or ten projectiles of a tenth the mass, fired in turn at about
+    5 km/s, with high-speed cameras on the ejecta and laser tracking of the pendulum swing after
+    every shot.
+  measure: Beta for every shot; the total momentum of ten small hits against one large hit of the same total momentum; how well the beta of each shot is predicted from the shots before it; any breakup of the target.
+  succeedsIf: The summed push of ten small hits is within 15 percent of one large hit on matched targets, no small hit breaks a target that the large hit leaves whole, and each later shot's beta is predicted to within 20 percent.
+  costUsd: 600000
+  months: 10
+path:
+  - phase: bench
+    what: Dozens of shots into rubble-pile analog pendulums at a gas-gun range.
+    scale: Millimetre projectiles at about 5 km/s.
+    proves: Small hits sum like one large one, and beta can be learned hit by hit.
+  - phase: prototype
+    what: A transponder lander and two small impactors sent to a small near-Earth asteroid that threatens nothing.
+    scale: One target, two hits, a few hundred kilograms in all.
+    proves: The beacon measures each hit's velocity change within days, in space and in real gravity.
+  - phase: pilot
+    what: A full train of ten impactors that changes a harmless asteroid's orbit around the Sun by a planned amount.
+    scale: Ten hits, a deflection set in advance.
+    proves: The closed loop lands the planned change to within 10 percent, with no breakup.
+  - phase: first-plant
+    what: Impactors and carriers built in series and kept in stock, so a train can launch within months of a threat being found.
+    scale: Enough impactors for several trains at once.
+    proves: Deflection becomes a standing service, not a one-off mission.
+  - phase: fleet
+    what: Trains parked in deep space, at Sun-Earth Lagrange points and in orbits around the Sun, for asteroids and for comets found late.
+    scale: Interceptors that reach any threat in weeks.
+    proves: Even a long-period comet found a year out can be met far from Earth.
+  - phase: civilization
+    what: Every dangerous object found and, when needed, steered, guarding Earth, the Moon and the worlds settled by {year-planet}.
+    scale: The inner solar system.
+    proves: No impact ends the climb.
+risks: >-
+  Lab targets behave by their strength, but real rubble piles behave by their gravity, so beta in
+  the lab may not carry over; the prototype in space is there to measure that. Each small hit may be
+  too small to measure if the target spins or sheds dust; then the train uses fewer, larger hits
+  and leaves the trim to a gravity tractor. Comets vent gas that pushes them on their own, which the
+  controller must model as noise; if that swamps the signal, the train adds longer tracking between
+  hits. A body too large for kinetic impact on the warning available needs other tools, and the
+  train then buys time and measurements for them.
+scene:
+  kind: launch
+  focus: Interceptors leaving Earth one after another, each aimed by what the last one did.
+  params: { method: rocket, cadence: 0.8, world: earth }

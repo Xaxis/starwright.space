@@ -1,0 +1,32 @@
+id: space-farming
+title: Farms in space
+domain: food
+stage: type-1
+needs: [closed-life-support, vertical-farming, closed-water-recycling]
+summary: >-
+  As people move off Earth in numbers, their food must grow with them, in orbit, on the Moon and on
+  the ships between worlds. Space farming grows crops under low or artificial gravity, on recycled
+  water and waste, lit by sunlight or clean power, inside the closed loops that keep a settlement
+  alive. It is the difference between a base supplied from Earth and a settlement that feeds itself.
+target: >-
+  Grow a full, varied diet in space, under partial or spun gravity, inside a closed loop, at yields
+  and reliability that let a habitat or base feed its own people without food shipped from Earth.
+exists:
+  - text: BIOS-3 grew about half its crew's food with algae and higher plants during a 180-day closure, the earliest proof crops can feed a closed crew.
+    url: https://en.wikipedia.org/wiki/BIOS-3
+    year: 1973
+  - text: Lunar Palace 1 ran a 370-day crewed closure at 98.2 percent material closure, growing food within a bioregenerative loop.
+    url: https://doi.org/10.1101/2021.01.12.426282
+    year: 2018
+  - text: ESA's MELiSSA has spent three decades developing the plant and algae compartments of a regenerative loop for space crews.
+    url: https://en.wikipedia.org/wiki/MELiSSA
+    year: 2023
+gap: >-
+  Every space-food result so far is on Earth, in full gravity, at experiment scale. How crops set
+  seed and yield under lunar or spun gravity, how to grow staples and not just salad, and how to make
+  a farm a dependable part of a closed loop for years are all untested in the places that matter.
+inventions: [spin-gravity-greenhouse]
+scene:
+  kind: habitat
+  focus: A rotating ring of greenhouses, crops growing under spun gravity with the stars turning past.
+  params: { type: torus, spin: 0.7, green: 0.9 }

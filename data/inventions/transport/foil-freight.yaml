@@ -1,0 +1,82 @@
+id: foil-freight
+title: Foil Freight
+domain: transport
+for: [asteroid-logistics, mercury-freight]
+pitch: >-
+  Ship metal as the sail that moves it: refine asteroid or Mercury metal into aluminium film a
+  micron thick, and let each sheet of cargo sail itself to the factory that will melt it down.
+principle: >-
+  A sail's acceleration is the push of light divided by its mass per square metre, so the thinnest
+  sails are the fastest. Aluminium film a micron thick weighs under 3 grams a square metre; at
+  Earth's distance from the Sun it is pushed at about half the strength of the Sun's pull, enough
+  to cross from the asteroid belt to the inner system in a year or two. Making such film is ordinary
+  industry: metal is evaporated in vacuum onto a moving release layer, as packaging film is
+  metallised. In space the vacuum is free. Foil Freight refines aluminium from asteroid or Mercury
+  rock, deposits it into free-standing sheets with thin wire edges and tip vanes, and launches them
+  folded from a mass driver. Each sheet is both spacecraft and cargo: it unfolds, steers by tilting,
+  and spirals to its destination, where it is caught, folded and melted. No ship is built, nothing
+  returns, and the only fuel is sunlight. Denser metals such as iron travel as thicker, slower
+  sheets, or as small cores carried by aluminium sails.
+buildsOn:
+  - text: Eric Drexler's MIT thesis designed high-performance solar sails of thin metal film, and he made metal thin films to show they were possible.
+    url: https://dspace.mit.edu/handle/1721.1/16234
+    year: 1979
+  - text: JAXA's IKAROS sailed between Earth and Venus in 2010 on a polyimide sail 14 m on a side and 0.0075 mm thick.
+    url: https://global.jaxa.jp/projects/sas/ikaros/
+    year: 2010
+  - text: Metallised film is made by evaporating aluminium in vacuum onto a moving cooled film, giving layers of about half a micrometre.
+    url: https://en.wikipedia.org/wiki/Metallized_film
+    year: 2026
+  - text: NASA's Psyche, launched in October 2023, is flying to a metal-rich asteroid whose bulk is estimated at about 30 to 60 percent metal by volume (Elkins-Tanton and colleagues, 2020).
+    url: https://science.nasa.gov/mission/psyche/
+    year: 2023
+  - text: Shepard and colleagues found M-type asteroids have radar albedos at least twice those of other types, consistent with iron and nickel (Icarus, 2015).
+    url: https://doi.org/10.1016/j.icarus.2014.09.016
+    year: 2015
+experiment:
+  goal: Make free-standing aluminium film about a micron thick by vacuum evaporation with no plastic backing, and show it can be handled, folded, unfolded and steered.
+  setup: >-
+    A vacuum coater evaporates aluminium onto a dissolvable release film, and sheets 1 m and 3 m on a
+    side are lifted off with wire edge frames, folded into packages and deployed in a vacuum chamber.
+    A small sheet hangs from a torsion balance under a solar simulator to measure the push and turn
+    of light as its tip vanes tilt.
+  measure: Mass per square metre, pinholes, tensile strength, reflectivity, survival through folding and unfolding, and the light-pressure torque.
+  succeedsIf: Free-standing 3 m sheets under 4 grams per square metre with reflectivity above 85 percent, that survive packing and deployment in at least nine of ten trials.
+  costUsd: 800000
+  months: 12
+path:
+  - phase: bench
+    what: Free-standing film made, folded and deployed in a chamber.
+    scale: Sheets 3 m on a side.
+    proves: Bare metal sails can be made and handled.
+  - phase: prototype
+    what: A foil sheet 10 m on a side released from a rideshare in high Earth orbit, steering with tip vanes and raising its orbit.
+    scale: One sheet, under a kilogram.
+    proves: A bare metal sail flies and steers.
+  - phase: pilot
+    what: A refinery at a near-Earth asteroid making film from local metal and sending sheets to a factory near the Moon.
+    scale: Tonnes a year.
+    proves: Mass delivered as its own sail.
+  - phase: first-plant
+    what: Refineries in the main belt sending metal to the inner system.
+    scale: Thousands to millions of tonnes a year.
+    proves: Freight priced by refining, not by ships.
+  - phase: fleet
+    what: Mercury's industry sending its metal as foil out to the swarm's orbits {swarm-radius} from the Sun.
+    scale: Billions of tonnes a year.
+    proves: The swarm's factories fed by sunlight alone.
+  - phase: civilization
+    what: Most mass moving between orbits in the inner system travels as foil.
+    scale: A large share of {swarm-full-mined}.
+    proves: Freight at the scale of a star system.
+risks: >-
+  Free-standing film may tear or curl; the fallback is a fine metal mesh frame or film a few microns
+  thick, which sails slower but still sails. Billions of sheets in transit are a traffic problem of
+  their own; their paths can be planned like the swarm's orbits, and sheets that fail are aimed to
+  fall toward the Sun, never into planets. Catching and folding sheets at the far end must be
+  automatic; factories may instead let sheets wind flat onto a receiving drum, which the pilot will
+  test.
+scene:
+  kind: machine
+  focus: A bright sheet of metal sailing in from the asteroid belt, its own cargo.
+  params: { shape: sail, spin: 0.2 }

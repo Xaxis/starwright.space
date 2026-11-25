@@ -1,0 +1,83 @@
+id: balanced-rotovator
+title: The Balanced Rotovator
+domain: space
+for: [space-tethers, cheap-launch]
+pitch: >-
+  A spinning tether in low orbit that lifts cargo from Earth and pays for it by catching cargo
+  coming down from the Moon, so the momentum it gives away on the way up comes back on the way down.
+principle: >-
+  A rotovator is a cable hundreds of kilometres long that spins as it orbits, so its tip dips toward
+  the atmosphere moving slower than orbital speed, then swings up moving faster. A suborbital
+  vehicle that meets the tip at its low point is carried round and released at the top, on a path to
+  a higher orbit or the Moon. With a tip speed of about 3.5 km/s, the figure Boeing's HASTOL study
+  chose, the rocket has to reach only about half of orbital speed, which by the rocket equation cuts
+  its propellant by about two thirds. Each lift takes momentum and orbital energy from the tether,
+  which sinks; a tether that only lifts must be pushed back up. But lunar industry sends mass the
+  other way: oxygen, metals, shielding and products bound for Earth orbit. A tether that catches that
+  inbound cargo at the top of its swing and drops it at the bottom gains back what it lost. The
+  Balanced Rotovator is sized and scheduled so that the Earth and Moon economy's up and down traffic
+  balance through it, and an electrodynamic section, pushing current against Earth's magnetic
+  field, makes up the difference.
+buildsOn:
+  - text: Hans Moravec analysed the rotating skyhook in 1977, and in 1986 described one weighing only 50 times what it lifts, carrying traffic "at no net energy cost" when up and down flows balance.
+    url: https://frc.ri.cmu.edu/~hpm/project.archive/general.articles/1987/skyhook.ltx
+    year: 1986
+  - text: Boeing's HASTOL study for NIAC designed a rotovator with a 3.5 km/s tip speed for 14 tonne payloads, and noted that incoming payloads can supply the energy and momentum given to outgoing ones.
+    url: http://www.niac.usra.edu/files/studies/final_report/355Bogar.pdf
+    year: 2000
+  - text: Hoyt and Uphoff designed a cislunar tether transport system of rotating tethers in Earth and lunar orbit (AIAA, 1999).
+    url: https://doi.org/10.2514/6.1999-2690
+    year: 1999
+  - text: Forward analysed tether transport from low Earth orbit to the lunar surface (AIAA, 1991).
+    url: https://doi.org/10.2514/6.1991-2322
+    year: 1991
+  - text: ESA's YES2 deployed a 31.7 km tether in orbit in 2007, the longest yet.
+    url: https://en.wikipedia.org/wiki/Young_Engineers%27_Satellite_2
+    year: 2007
+experiment:
+  goal: Prove the catch, the riskiest step, with a spinning tip meeting a moving payload at relative speeds and position errors scaled from orbit.
+  setup: >-
+    A 30 m arm spinning in a horizontal plane on a test range, with a grapple at its tip, and a
+    payload carried across the tip's path on a rocket sled or a drone. Motion capture and GPS track
+    both. The catch window and grapple are scaled to the timing and errors expected in orbit, and the
+    catch is repeated hundreds of times.
+  measure: Catch success against timing and position error, peak loads on the grapple and arm, and the size of the grapple's capture envelope.
+  succeedsIf: At least 99 percent of catches succeed with position errors up to 1 m and timing errors up to 10 ms, with peak loads inside design limits.
+  costUsd: 3000000
+  months: 12
+path:
+  - phase: bench
+    what: The spinning-arm catch rig.
+    scale: A 30 m arm, hundreds of catches.
+    proves: A grapple that catches reliably.
+  - phase: prototype
+    what: Two small satellites on a spinning 2 km tether that release and recatch a 1 kg payload in orbit.
+    scale: Kilograms.
+    proves: Spin control and catching in orbit.
+  - phase: pilot
+    what: A 100 km rotovator that throws small payloads to high orbit and catches satellites coming down, with an electrodynamic section.
+    scale: Tens of tonnes of tether, payloads of a tonne.
+    proves: Momentum kept by balancing up and down traffic.
+  - phase: first-plant
+    what: A full rotovator meeting suborbital rockets from Earth, its momentum restored by lunar cargo bound for Earth orbit.
+    scale: Hundreds of payloads a year.
+    proves: Launch costs fall as the tether does most of the rocket's work.
+  - phase: fleet
+    what: A chain of tethers in low orbit, high orbit and lunar orbit, handing cargo from suborbital launchers on Earth to the lunar surface.
+    scale: Thousands of payloads a year.
+    proves: Earth and Moon traffic with little propellant.
+  - phase: civilization
+    what: Tether chains between every pair of worlds with steady traffic, balanced by the flows the industry already makes.
+    scale: The inner solar system.
+    proves: Momentum, not propellant, as the currency of transport.
+risks: >-
+  A tether hundreds of kilometres long is a large target for debris, and a cut sends both halves into
+  new orbits; the design uses a lattice of many strands that survives many cuts, and keeps clear of
+  the most crowded shells. A missed catch leaves a suborbital vehicle falling back, so rockets keep a
+  margin to return safely. Up and down traffic may not balance for years; until it does, the
+  electrodynamic section and solar power do the work, as TSS-1R's current showed is possible. Wear
+  and creep at the tip may limit its life, so tips are replaceable modules.
+scene:
+  kind: launch
+  focus: A tether turning above Earth, its tip dipping to catch a rocket's payload and fling it upward.
+  params: { method: tether, cadence: 0.7, world: earth }

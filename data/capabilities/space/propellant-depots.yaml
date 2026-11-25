@@ -1,0 +1,43 @@
+id: propellant-depots
+title: Refuelling in orbit
+domain: space
+stage: k09
+needs: [cheap-launch]
+summary: >-
+  A rocket that reaches orbit full of payload arrives nearly empty of propellant. Everything that
+  goes further, from landers for the Moon to ships for Mars, must fill up in orbit first. Depots
+  store cryogenic propellant for months without losing it to the Sun's heat, and later they take
+  their oxygen from the Moon instead of from Earth.
+target: >-
+  Depots in low Earth orbit and lunar orbit holding thousands of tonnes of liquid oxygen and methane
+  or hydrogen, losing almost none to boil-off, transferring it between vehicles as routinely as an
+  airport fuels aircraft, and filled mostly with oxygen made on the Moon.
+exists:
+  - text: In October 2020 NASA's Tipping Point awards gave $53.2 million to SpaceX, $86.2 million to ULA, $27 million to Eta Space and $89.7 million to Lockheed Martin for cryogenic fluid management in space.
+    url: https://www.nasa.gov/news-release/nasa-announces-partners-to-advance-tipping-point-technologies-for-the-moon-mars
+    year: 2020
+  - text: SpaceX's 2020 award was to show the transfer of 10 tonnes of liquid oxygen between tanks on a Starship.
+    url: https://spaceflightnow.com/2020/10/16/nasa-selects-companies-to-demonstrate-in-space-refueling-and-propellant-depot-tech/
+    year: 2020
+  - text: Starship's third flight, on 14 March 2024, moved cryogenic propellant between tanks inside the ship in flight.
+    url: https://en.wikipedia.org/wiki/Starship_flight_test_3
+    year: 2024
+  - text: Orbit Fab flew the first commercial propellant depot, Tanker-001 Tenzing, carrying hydrogen peroxide, in June 2021.
+    url: https://en.wikipedia.org/wiki/Propellant_depot
+    year: 2021
+  - text: China's Tianzhou 1 freighter made three propellant transfers to the Tiangong 2 laboratory in 2017, and Tianzhou freighters now refuel the Tiangong station.
+    url: https://spaceflightnow.com/2017/09/17/chinese-space-station-freighter-concludes-refueling-demo-mission/
+    year: 2017
+  - text: NASA's Robotic Refueling Mission on the ISS completed its first phase in January 2013, practising robotic refuelling of satellites never designed for it.
+    url: https://en.wikipedia.org/wiki/Robotic_Refueling_Mission
+    year: 2013
+gap: >-
+  Cryogenic propellant has not yet passed between two spacecraft; Starship's ship-to-ship
+  demonstration is still ahead. Nobody has stored liquid oxygen or hydrogen in orbit for months with
+  near-zero loss, and no depot holds propellant made off Earth. The work under way is on the right
+  path; what is missing is scale, duration and lunar supply.
+inventions: []
+scene:
+  kind: orbit
+  focus: Depots in low orbit, with tankers docking to fill landers bound for the Moon.
+  params: { depots: 0.9, stations: 0.2 }

@@ -1,0 +1,40 @@
+id: restart-kits
+title: Kits that restart industry after a collapse
+domain: resilience
+stage: k09
+needs: [knowledge-archives, automated-factories]
+summary: >-
+  Knowledge alone does not restart a civilization: survivors also need the first tools, and the
+  tools to make more tools, before the stocks left behind run out. A restart kit is a seed factory
+  for people on the ground, the same idea as the factory that copies itself in space, packed so
+  that a small group can climb from bare survival back to machine tools in months.
+target: >-
+  Standard kits, stocked in every region and on every settled world, each letting a few dozen
+  people restore power, clean water, radio and a working machine shop within weeks, then make
+  most of the parts for further kits from local scrap and rock.
+exists:
+  - text: Open Source Ecology's Global Village Construction Set designs 50 open-source industrial machines for building a small civilization with modern comforts; about a third were complete by 2018, the first built in 2007.
+    url: https://www.opensourceecology.org/gvcs/
+    year: 2018
+  - text: Lewis Dartnell's The Knowledge sets out how to rebuild a technological civilization from scratch, in the order things must be made.
+    url: https://the-knowledge.org/en-gb/
+    year: 2014
+  - text: The Long Now Foundation's Manual for Civilization collects about 3,500 books most essential to sustain or rebuild civilization.
+    url: https://longnow.org/ideas/manual-for-civilization-begins/
+    year: 2014
+  - text: Appropedia, started in 2006, is an open wiki of more than 25,000 articles on appropriate and open technology, from solar cookers up.
+    url: https://www.appropedia.org/
+    year: 2026
+  - text: ALLFED plans how food systems keep running when infrastructure fails, with country risk profiles and tabletop exercises.
+    url: https://allfed.info/
+    year: 2026
+gap: >-
+  There are lists of books and drawings of machines, but no kit that has been packed, shipped and
+  tested by people who had to use it with nothing else. Nobody has measured how quickly a small
+  group can get from a kit to working machine tools, or what share of a kit's own parts it can
+  make again.
+inventions: [restart-container]
+scene:
+  kind: field
+  focus: A ring of houses on an empty plain lighting up one by one around the kit that powers them.
+  params: { unit: house, count: 60, terrain: plain }

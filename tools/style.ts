@@ -12,8 +12,8 @@
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { run } from "../core/src/model.ts";
 import { loadData } from "../core/src/load.ts";
+import { run } from "../core/src/model.ts";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const TEXT = /\.(md|ts|tsx|mts|js|mjs|css|yaml|yml|json|html|txt|sh|svg)$/;
@@ -62,8 +62,8 @@ const NUM = new RegExp(
   "g",
 );
 const WORD: Record<string, number> = { thousand: 1e3, million: 1e6, billion: 1e9, trillion: 1e12 };
-// References are the data check's job; this reads whatever parses, so it runs while lanes work.
-const data = loadData(undefined, { lane: { domains: [], planned: [] } });
+// References are the data check's job; this reads whatever parses.
+const data = loadData(undefined, { lenient: true });
 const m = run(data.constants, data.assumptions);
 const model = [...m.q.values()].filter((q) => Number.isFinite(q.value) && q.value !== 0);
 const QUOTED = new Set(["exists", "buildsOn", "url", "quote", "source"]);
@@ -76,7 +76,7 @@ const scan = (where: string, x: unknown, key = "") => {
       const same = model.find((q) => q.unit === unit && Math.abs(q.value - v) / q.value < 0.01);
       if (same) problems.push(`${where} ${key}: "${hit[0]}" copies ${same.id}; write {${same.id}}`);
     }
-  } else if (Array.isArray(x)) x.forEach((y) => scan(where, y, key));
+  } else if (Array.isArray(x)) for (const y of x) scan(where, y, key);
   else if (x && typeof x === "object") for (const [k, y] of Object.entries(x)) scan(where, y, k);
 };
 for (const s of data.stages) scan(`stage ${s.id}`, s);

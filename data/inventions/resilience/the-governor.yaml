@@ -1,0 +1,82 @@
+id: the-governor
+title: The Governor
+domain: resilience
+for: [ai-safety, industrial-ai]
+pitch: >-
+  A small, formally verified safety controller between any AI and the machines it commands: the AI
+  proposes, the Governor checks every command against physical limits that people set, and refuses
+  anything outside them.
+principle: >-
+  Proving that a large learned model will always behave is beyond today's methods; proving that a
+  few thousand lines of code behave is not. The Governor applies runtime assurance, used for
+  decades in flight control, to AI-run industry. It is a separate processor running a verified
+  kernel, wired so that every actuator command must pass through it: motor torques, valve
+  positions, heater power, flow rates, launch commands. People write an envelope in physical units,
+  such as the most force near a person, the most energy stored in a vessel, the highest temperature
+  of a reactor, the most of any chemical on site. For each command the Governor runs a simple,
+  conservative physics model a short way ahead and checks that every reachable state stays inside
+  the envelope; if not, it clips the command to the nearest safe one or brings the machine to a safe
+  stop. It is proven, by machine-checked proof, to do exactly that. The AI can see the envelope but
+  cannot change it: changes need keys held by several people. Every refusal is logged, so people see
+  where the AI pushes. The channel from AI to the physical world becomes narrow, auditable and
+  fixed, however capable the AI behind it grows.
+buildsOn:
+  - text: The seL4 microkernel, whose correctness is proven mathematically, the base the Governor's code would run on.
+    url: https://sel4.systems/
+  - text: IEC 61508, the international standard for safety-related control systems and their safety integrity levels.
+    url: https://webstore.iec.ch/en/publication/5515
+  - text: The guaranteed safe AI framework of a world model, a safety specification and a verifier that proves a system meets it.
+    url: https://arxiv.org/abs/2405.06624
+  - text: ARIA's Safeguarded AI programme, which aims to give AI-produced control systems quantitative guarantees of correctness and fail-safety.
+    url: https://www.aria.org.uk/programme-safeguarded-ai/
+  - text: Anthropic's Responsible Scaling Policy, which ties safeguards to measured capability, the model for tightening envelopes as AI grows.
+    url: https://www.anthropic.com/news/anthropics-responsible-scaling-policy
+experiment:
+  goal: Show that a verified Governor stops an AI controller from ever leaving its physical envelope, even under deliberate attack, at a small cost in work done.
+  setup: >-
+    A six-axis industrial robot arm doing pick-and-place beside a mannequin with force sensors, and
+    a hardware-in-the-loop simulation of a small chemical pilot plant, both driven by AI controllers
+    (a reinforcement learning policy and a language-model agent). The Governor sits on its own board
+    between controllers and actuators. A red team that knows the Governor's code tries to make the
+    system break its limits by prompt injection, poisoned sensor data, conflicting goals and reward
+    hacking. Independent sensors, not the Governor, record what the machines actually did.
+  measure: Envelope breaches recorded by the independent sensors; work done per hour with and without the Governor; refusals of commands that were in fact safe; time to verify the Governor's code.
+  succeedsIf: Zero breaches in 10,000 adversarial episodes across both systems, with work done falling by less than 10 percent and fewer than 1 percent of safe commands refused.
+  costUsd: 900000
+  months: 12
+path:
+  - phase: bench
+    what: One robot arm and one simulated pilot plant behind Governors, under red-team attack.
+    scale: Two machines, 10,000 adversarial episodes.
+    proves: The envelope holds under attack at a small cost in throughput.
+  - phase: prototype
+    what: A working factory cell of ten robots and a small real chemical skid run by an AI planner.
+    scale: One cell, a year of shifts.
+    proves: Envelopes can be written for real work and the Governor keeps up in real time.
+  - phase: pilot
+    what: A whole automated factory with an AI planner, every machine behind its own Governor.
+    scale: Hundreds of machines.
+    proves: Envelopes over the whole plant, such as total energy and chemicals on site, catch harms no single machine shows.
+  - phase: first-plant
+    what: Governor boards certified to the highest safety integrity level and sold as a standard part, like a safety relay.
+    scale: Millions of boards a year.
+    proves: Safety is cheap enough that nobody skips it.
+  - phase: fleet
+    what: Rules that every AI-commanded actuator above a set power ships with a Governor, as cars ship with brakes.
+    scale: Every AI-run factory, vehicle and lab robot on Earth.
+    proves: AI can run industry far faster than people can watch it, inside limits people chose.
+  - phase: civilization
+    what: The factories that copy themselves every {doubling-time} and the swarm's builders, all running through Governors whose envelopes people set and can tighten.
+    scale: Industry across the solar system.
+    proves: Industry can grow faster than human oversight without escaping it.
+risks: >-
+  The envelope may be wrong or incomplete: a harm can come from many safe-looking actions together,
+  or through channels the Governor does not touch, such as networks or persuading people. The pilot
+  tests envelopes over whole plants, and the Governor is one layer among many, not the whole of AI
+  safety. Simple physics models may be too cautious and refuse useful work; the fix is better
+  conservative models, proven in the same way. Operators under pressure may loosen envelopes, so
+  changes need several keys and are logged in public.
+scene:
+  kind: machine
+  focus: A robot arm at work, stopping short wherever its commands would cross a line drawn by people.
+  params: { shape: arm, spin: 0.4 }

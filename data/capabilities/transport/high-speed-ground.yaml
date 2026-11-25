@@ -1,0 +1,39 @@
+id: high-speed-ground
+title: Fast trains between cities
+domain: transport
+stage: k08
+needs: [fast-permitting]
+summary: >-
+  For trips of a few hundred kilometres to about a thousand, a fast electric train is as quick door
+  to door as a plane and uses a fraction of the energy per seat. High-speed rail and maglev can take
+  most short flights out of the sky. The limit is cost and land: lines must be nearly straight and
+  level, and they are expensive and slow to build.
+target: >-
+  High-speed lines joining every pair of large cities within about a thousand kilometres on every
+  continent, at 350 km/h on rail and 600 km/h on maglev, built for a fraction of today's cost per
+  kilometre.
+exists:
+  - text: China's high-speed rail network passed 50,000 km of line, about two thirds of the world's total.
+    url: https://en.wikipedia.org/wiki/High-speed_rail_in_China
+    year: 2025
+  - text: JR Central's L0 maglev set the world speed record for trains, 603 km/h, on 21 April 2015; its Chuo Shinkansen line is now due to open in 2034.
+    url: https://en.wikipedia.org/wiki/SCMaglev
+    year: 2015
+  - text: The Shanghai maglev has run commercially since January 2004 on a 29.86 km line, at up to 431 km/h until its speed was cut to 300 km/h in 2021.
+    url: https://en.wikipedia.org/wiki/Shanghai_maglev_train
+    year: 2004
+  - text: China completed a 2 km low-vacuum maglev test tube in Datong in 2023, and trials of its propulsion, levitation and braking succeeded in 2024.
+    url: https://en.wikipedia.org/wiki/Vactrain
+    year: 2024
+  - text: Hyperloop One shut down at the end of 2023, having raised over $485 million and carried passengers only on a test track at 172 km/h.
+    url: https://en.wikipedia.org/wiki/Hyperloop_One
+    year: 2023
+gap: >-
+  Outside China, high-speed networks are short and take a decade or more to approve and build, and
+  every line pays separately for its land, its trench and its power. High-speed maglev runs
+  commercially on one short line, in Shanghai, and tube transport has not left its test tracks.
+inventions: [cold-corridor]
+scene:
+  kind: network
+  focus: Cities joined by fast lines, with trains pulsing between them.
+  params: { shape: globe, nodes: 400, clusters: 25, links: 0.5, pulses: 0.6 }

@@ -1,0 +1,78 @@
+id: atmospheric-harvester
+title: The Sorbent Water Panel
+domain: water
+for: [water-from-air]
+pitch: >-
+  A flat panel of water-grabbing framework that breathes in cool night air, then releases its catch
+  as clean water when the Sun warms it, scaled from a laboratory gram to a household's daily supply
+  with no power but sunlight.
+principle: >-
+  Certain metal-organic frameworks have a vast internal surface pocked with pores tuned to the size
+  of a water molecule, so they pull water vapour out of even dry air at night and hold it. When the
+  Sun warms the panel by a few tens of degrees in the day, the frameworks let the water go as vapour,
+  which condenses on a cool plate and runs off as liquid. The Sorbent Water Panel turns that cycle
+  into a device built for scale: thin sheets of low-cost framework with air flowing through them, a
+  passive condenser, and a daily adsorb-by-night, desorb-by-day rhythm needing only sunlight. The
+  frameworks are chosen and designed to grab water at the lowest humidity, to give it up at the
+  lowest heat, and to survive many thousands of cycles. Stacking panels raises the daily yield from
+  grams toward the tens of litres a household needs, anywhere with air and sun.
+buildsOn:
+  - text: The original sunlight-driven MOF-801 harvester captured about 2.8 litres per kilogram a day at 20 percent humidity, regenerating near 65 degrees Celsius, the proof of the adsorb-desorb cycle.
+    url: https://yaghi.cchem.berkeley.edu/pdfPublications/WaterHarvesting.pdf
+    year: 2017
+  - text: The MOF-303 desert device more than doubled the water yield of MOF-801 in Arizona field tests, showing framework design can multiply output.
+    url: https://yaghi.cchem.berkeley.edu/pdfPublications/NComm2018.pdf
+    year: 2018
+  - text: Independent reporting confirmed the frameworks extract water from thin air and withstand many cycles without structural damage.
+    url: https://physicstoday.aip.org/news/metal-organic-framework-extracts-water-from-thin-air
+    year: 2017
+experiment:
+  goal: Build a scaled sorbent panel delivering household-relevant daily water from dry air on sunlight alone, and measure yield and cost.
+  setup: >-
+    Fabricate panels from a low-cost water-selective framework with passive airflow and condenser,
+    and run a multi-panel array through day-night cycles in a dry climate. Measure output, the energy
+    used, and the frameworks' durability over months.
+  measure: >-
+    Litres of water per day per kilogram of framework and per panel; minimum humidity at which it
+    works; sunlight-only operation confirmed; water purity; yield retained after thousands of cycles;
+    cost per litre at the array's scale.
+  succeedsIf: >-
+    A sunlight-only array delivers at least 10 litres of clean water a day at desert humidity from a
+    household-sized panel, holding its yield over thousands of cycles, at a cost per litre affordable
+    for off-grid use.
+  costUsd: 9000000
+  months: 30
+path:
+  - phase: bench
+    what: Low-cost framework panels delivering litres a day in dry-air tests.
+    scale: A single household panel.
+    proves: The cycle scales from grams to litres on sunlight alone.
+  - phase: prototype
+    what: A multi-panel array meeting a household's daily water need in the field.
+    scale: One household.
+    proves: Real desert output and durability over months.
+  - phase: pilot
+    what: Village-scale deployments with local maintenance.
+    scale: A village's drinking water.
+    proves: It supplies a community without a grid or water source.
+  - phase: first-plant
+    what: Mass-produced frameworks and panels driving cost per litre down.
+    scale: Many thousands of households.
+    proves: Air-drawn water is affordable at scale.
+  - phase: fleet
+    what: Panels for arid regions worldwide, and sealed versions for bases drawing water from habitat air.
+    scale: Global and off-world.
+    proves: Water from air wherever there is air and sun.
+  - phase: civilization
+    what: Atmospheric water as a routine off-grid supply, no one short of drinking water for lack of infrastructure.
+    scale: Planet and space.
+    proves: Drinking water decoupled from pipes, wells and rivers.
+risks: >-
+  The frameworks are still costly to make in bulk; the project targets low-cost, water-stable
+  frameworks and simple manufacture. Yield may stay too low in the driest air, so the design widens
+  airflow and panel count and picks frameworks tuned for low humidity. Durability over many cycles
+  must be proven, which the months-long field test addresses.
+scene:
+  kind: machine
+  focus: A stack of sorbent panels cycling between drinking night air and giving up water by day.
+  params: { shape: panel, spin: 0.3 }

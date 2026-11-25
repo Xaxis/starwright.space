@@ -1,0 +1,39 @@
+id: clean-aviation
+title: Flight without fossil carbon
+domain: transport
+stage: k08
+needs: [terawatt-solar-factories, carbon-drawdown]
+summary: >-
+  Aircraft are the hardest vehicles to electrify: a kilogram of battery holds a few percent of the
+  energy of a kilogram of jet fuel. Long flights need fuel made from clean power instead, either
+  hydrogen or kerosene built from hydrogen and carbon taken from the air. Contrails warm the climate
+  more than aviation's carbon does, so routes and fuels must cut both.
+target: >-
+  Every flight on fuel made from clean power, or on hydrogen and batteries, with contrails avoided
+  by routing, so air travel can grow as the world grows richer, at fares close to today's.
+exists:
+  - text: IATA reported that sustainable aviation fuel output roughly doubled from 1 million tonnes in 2024, 0.3 percent of jet fuel, to 1.9 million tonnes in 2025.
+    url: https://www.iata.org/en/programs/sustainability/sustainable-aviation-fuels/
+    year: 2025
+  - text: The EU's ReFuelEU Aviation law requires sustainable fuel to be 2 percent of fuel at EU airports from 2025 and 70 percent from 2050, with fuel made from electricity at 1.2 percent from 2030 and 35 percent from 2050.
+    url: https://transport.ec.europa.eu/transport-modes/air/environment/refueleu-aviation_en
+    year: 2025
+  - text: Lee and colleagues estimated that in 2018 contrail cirrus warmed the climate by 57.4 mW per square metre against 34.3 for aviation's carbon dioxide (Atmospheric Environment, 2021).
+    url: https://en.wikipedia.org/wiki/Environmental_impact_of_aviation
+    year: 2021
+  - text: ZeroAvia flew a Dornier 228 with one engine replaced by a hydrogen fuel cell powertrain on 19 January 2023.
+    url: https://en.wikipedia.org/wiki/ZeroAvia
+    year: 2023
+  - text: In 2025 Airbus pushed back its hydrogen airliner plans by five to ten years from the original 2035 target.
+    url: https://en.wikipedia.org/wiki/Hydrogen-powered_aircraft
+    year: 2025
+gap: >-
+  Sustainable fuel is under one percent of jet fuel, fuel made from electricity is a sliver of that,
+  and it costs several times as much as kerosene. Hydrogen airliners are more than a decade away,
+  and liquid hydrogen needs about four times the tank volume of kerosene for the same energy, which
+  crowds passengers out of long-haul aircraft.
+inventions: [relay-hydrogen-airline]
+scene:
+  kind: machine
+  focus: A turbofan running on fuel made from sunlight and air.
+  params: { shape: engine, spin: 0.7 }

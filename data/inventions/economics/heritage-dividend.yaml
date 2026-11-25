@@ -1,0 +1,78 @@
+id: heritage-dividend
+title: The Common Heritage Dividend
+domain: economics
+for: [shared-abundance, star-dividend]
+pitch: >-
+  A small royalty on every tonne the climb takes from the Moon, the asteroids and Mercury, and later
+  on the swarm's output, paid into one fund whose income goes in equal shares to every person alive.
+principle: >-
+  The Moon Agreement and the law of the sea call the Moon's resources and the deep seabed the common
+  heritage of mankind, and the law of the sea already sets a royalty on the outer continental shelf
+  for the benefit of all. Hotelling showed that a resource that runs out earns a rent above the cost
+  of extracting it; Alaska's fund shows such a rent can be saved and paid to every resident for
+  decades. The Common Heritage Dividend joins them. The royalty set by the lunar registry, and later
+  a small share of the swarm's output, flows into one fund that invests, spends only its real return
+  as Norway's fiscal rule does, and pays that out as an equal dividend to every person, by mobile
+  money where needed, as GiveDirectly already does. Because the industry doubles every
+  {doubling-time}, a small royalty grows into a large dividend: the first payments are cents, and
+  later ones cover the basics of a good life.
+buildsOn:
+  - text: Article 11 of the 1979 Moon Agreement, which names the Moon and its resources the common heritage of mankind.
+    url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/moon-agreement.html
+  - text: Article 82 of the Convention on the Law of the Sea, a royalty on production beyond 200 nautical miles shared through the International Seabed Authority.
+    url: https://www.un.org/depts/los/convention_agreements/texts/unclos/part6.htm
+  - text: Hotelling's 1931 economics of exhaustible resources.
+    url: https://doi.org/10.1086/254195
+  - text: The Alaska Permanent Fund Dividend, paid to every resident since 1982.
+    url: https://pfd.alaska.gov/Division-Info/summary-of-dividend-applications-payments
+  - text: Norway's fund and its rule of spending only the expected real return.
+    url: https://www.nbim.no/en/investments/the-funds-value/
+  - text: GiveDirectly, which has sent over 1 billion dollars directly to more than 2 million people.
+    url: https://www.givedirectly.org/about/
+  - text: The Kenyan study that found each dollar of cash transfers raised local activity by 2.5 dollars.
+    url: https://doi.org/10.3982/ECTA17945
+experiment:
+  goal: Show that a resource royalty can be paid as an equal dividend to a whole population at low cost, and measure what it does.
+  setup: >-
+    With a government that already collects mining royalties, pay a set share of those royalties for
+    two years as an equal monthly dividend, by mobile money, to every adult in 60 randomly chosen
+    districts, with 60 matched districts as controls.
+  measure: The share of residents enrolled and paid; delivery cost per dollar paid; consumption, savings, small businesses and school enrolment against the controls; local prices; trust in the government and in the mine.
+  succeedsIf: At least 90 percent of residents receive their payments, delivery costs less than 5 cents per dollar, and households gain in consumption while local prices rise by no more than 2 percent.
+  costUsd: 8000000
+  months: 30
+path:
+  - phase: bench
+    what: A model of the fund, testing royalty rates, the climb's growth and payout rules over a century.
+    scale: "Scenarios through {year-type-2}"
+    proves: Which royalty gives a meaningful dividend without slowing the industry.
+  - phase: prototype
+    what: The two-year dividend from mining royalties.
+    scale: 120 districts.
+    proves: Equal dividends from resource income can be delivered cheaply, and they help.
+  - phase: pilot
+    what: The lunar registry's royalties from the first ice and oxygen plants pay the first global dividend.
+    scale: Every person, a few cents each.
+    proves: A payment to everyone on Earth is possible.
+  - phase: first-plant
+    what: Royalties from lunar and near-Earth industry, and a share of space solar power sales, fund a dividend worth a real share of the poorest people's income.
+    scale: The Earth and Moon economy.
+    proves: Space industry raises incomes on Earth.
+  - phase: fleet
+    what: Royalties from the asteroids and Mercury, and a share of the swarm's power, grow the fund with the industry.
+    scale: The inner solar system.
+    proves: The dividend grows as fast as the industry.
+  - phase: civilization
+    what: Every person on every world holds an equal share of the power the swarm catches.
+    scale: "{type-2-power}"
+    proves: The climb's gains are shared by everyone.
+risks: >-
+  A royalty could make space industry less competitive at its fragile start; it begins near zero and
+  rises only after plants have run for years, as Article 82 does. Governments may divert the fund; a
+  charter that spends only real returns and pays people directly, with no government in between,
+  makes that harder. A dividend in one currency may be worth little in some places; paying in a
+  basket of currencies, or in electricity credits, keeps its value.
+scene:
+  kind: network
+  focus: Royalties flowing from the Moon into one fund, then out to every person on Earth.
+  params: { shape: globe, nodes: 4000, clusters: 36, links: 0.25, pulses: 0.9 }

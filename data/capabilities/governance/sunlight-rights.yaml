@@ -1,0 +1,40 @@
+id: sunlight-rights
+title: Every world keeps its sunlight
+domain: governance
+stage: k15
+needs: [solar-system-governance]
+summary: >-
+  The swarm will catch most of the Sun's light, and by {year-type-2} the Sun seen from outside has
+  dimmed to an infrared glow. Earth, and every other world where people or living things depend on
+  sunlight, must keep receiving the light it has always had. No one alive owns that light, and no
+  law today protects it from a builder far away.
+target: >-
+  A guarantee, written into the federation's law and built into every collector's orbit, that each
+  inhabited or living world keeps the sunlight it receives today, to within a fraction of a percent,
+  for as long as the swarm flies, watched openly and enforceable against any builder.
+exists:
+  - text: English law has protected a building's light since the Prescription Act 1832, under which twenty years of uninterrupted light gives an absolute right to it.
+    url: https://www.legislation.gov.uk/ukpga/Will4/2-3/71/section/3
+    year: 1832
+  - text: In Illinois Central Railroad v. Illinois (1892) the US Supreme Court held that a state holds the lands under navigable waters in trust for its people and cannot give up control of them, the root of the public trust doctrine.
+    url: https://tile.loc.gov/storage-services/service/ll/usrep/usrep146/usrep146387/usrep146387.pdf
+    year: 1892
+  - text: The ENMOD Convention, in force since 1978, bans hostile use of techniques that modify the environment and had 78 parties in 2026.
+    url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-1&chapter=26&clang=_en
+    year: 2026
+  - text: The DSCOVR spacecraft, launched in 2015, sits at the Sun-Earth L1 point with a continuous view of the Sun and of Earth's sunlit side.
+    url: https://science.nasa.gov/mission/dscovr/
+    year: 2015
+  - text: The Montreal Protocol, with 198 parties, showed that every country can agree to protect a shared part of the sky, the ozone layer.
+    url: https://ozone.unep.org/all-ratifications
+    year: 2009
+gap: >-
+  Right-to-light law protects a window from a neighbour's wall, and the public trust doctrine
+  protects shared waters, but neither reaches beyond one planet. ENMOD bans hostile changes to the
+  environment, not the side effects of building. No instrument watches the light reaching each world
+  for a builder's shadow, and no law keeps the swarm out of the line between the Sun and a world.
+inventions: [sunlight-easement]
+scene:
+  kind: swarm
+  focus: The swarm around the Sun, with a clear cone of open space running from the Sun to Earth.
+  params: { built: 0.7 }

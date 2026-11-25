@@ -1,0 +1,35 @@
+id: food-from-air
+title: Food from air and electricity
+domain: food
+stage: k08
+needs: [programmable-biology, abundant-water]
+summary: >-
+  The most land-free food of all is made from carbon dioxide, water and electricity. Microbes that
+  live on hydrogen split from water, breathing in carbon dioxide from the air, grow into a protein-rich
+  powder needing no soil, no sunlight and almost no water. Where power is cheap and clean, which the
+  climb makes true, food can be made in a windowless plant anywhere: a desert, a ship, a base on the
+  Moon.
+target: >-
+  Make complete, protein-rich food from carbon dioxide, water and clean electricity at a cost
+  competitive with farmed protein, in plants that need no arable land and little water, and that run
+  anywhere power is available.
+exists:
+  - text: Solar Foods' Factory 01 produces Solein, a single-cell protein, from carbon dioxide, hydrogen and air at about 160 tonnes a year, with production begun in 2024.
+    url: https://solarfoods.com/factory/
+    year: 2024
+  - text: A bionic-leaf system coupling electrolysis to hydrogen-eating microbes scrubbed 180 grams of carbon dioxide per kilowatt-hour into biomass at about 10 percent solar-to-chemical efficiency, beating natural photosynthesis.
+    url: https://doi.org/10.1126/science.aaf5039
+    year: 2016
+  - text: Outdoor systems now convert up to 31.3 percent of sunlight into hydrogen, the clean feedstock a food-from-air plant runs on.
+    url: https://doi.org/10.1038/s44172-026-00610-x
+    year: 2026
+gap: >-
+  Output today is a few hundred tonnes a year against a world protein demand of hundreds of millions,
+  the product is a plain powder needing formulation into real food, and cost depends on cheap hydrogen
+  and carbon dioxide capture that are not yet cheap everywhere. Scaling by a factor of millions, and
+  making the food appetising, are both ahead.
+inventions: [electro-protein-plant]
+scene:
+  kind: field
+  focus: A compact windowless plant of gas-fermentation tanks turning air and power into protein.
+  params: { unit: tank, count: 200, terrain: desert }

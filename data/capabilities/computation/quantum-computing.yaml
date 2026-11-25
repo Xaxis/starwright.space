@@ -1,0 +1,39 @@
+id: quantum-computing
+title: Quantum computers that correct their own errors
+domain: computation
+stage: k08
+needs: []
+summary: >-
+  Some of the climb's hardest design problems are quantum chemistry: catalysts that fix nitrogen or
+  split water cheaply, battery and magnet materials, the surfaces where reactions happen. Classical
+  computers can only approximate them. A quantum computer that corrects its own errors can
+  simulate them directly, and design the materials the buildout runs on.
+target: >-
+  Error-corrected machines with thousands of logical qubits running billions of gates, enough to
+  compute the reaction energies of molecules like the nitrogenase cofactor, in service for materials
+  and catalyst design well before {year-k08}.
+exists:
+  - text: Google's Willow chip ran the first surface code below threshold, 101 qubits at distance 7 with 0.143 percent error per cycle, halving the error at each step up in size.
+    url: https://www.nature.com/articles/s41586-024-08449-y
+    year: 2024
+  - text: Quantinuum's Helios has 98 fully connected trapped-ion qubits, 50 logical qubits and 99.921 percent two-qubit gate fidelity.
+    url: https://www.quantinuum.com/products-solutions/quantinuum-systems/helios
+    year: 2026
+  - text: IBM plans Starling, a fault-tolerant machine running 100 million gates on 200 logical qubits, by 2029 at Poughkeepsie.
+    url: https://www.ibm.com/quantum/blog/large-scale-ftqc
+    year: 2025
+  - text: Reiher and colleagues showed how an error-corrected quantum computer could work out the reaction mechanism of biological nitrogen fixation, beyond classical methods.
+    url: https://arxiv.org/abs/1605.03590
+    year: 2017
+  - text: Gidney estimated that a machine of under a million noisy qubits could factor a 2048-bit RSA number in under a week, down from 20 million in 2019.
+    url: https://arxiv.org/abs/2505.15917
+    year: 2025
+gap: >-
+  Today's best machines have tens of logical qubits; useful chemistry needs thousands, running for
+  days without a fault. Each logical qubit costs hundreds to thousands of physical ones, and the
+  wiring, cooling and control electronics do not yet scale to a million.
+inventions: []
+scene:
+  kind: compute
+  focus: A cryostat's stack of cold plates, with a grid of qubits checking each other's errors at the bottom.
+  params: { kind: quantum, racks: 12 }

@@ -1,0 +1,45 @@
+id: thin-film-collectors
+title: Collectors of film a few microns thick
+domain: energy
+stage: type-1
+needs: [in-space-resources, self-replicating-factory, space-solar-power, durable-thin-films, collector-film-manufacture, breakthrough-funding]
+summary: >-
+  The swarm is built out of area. Each square metre at {swarm-radius} from the Sun catches
+  {swarm-flux}, and at {collector-density} each kilogram of collector gives {collector-specific-power}.
+  The full swarm needs {swarm-full-area} of collector weighing {swarm-full-mass}. At the weight of
+  today's glass-covered panels it would outweigh all the mass the industry can reach,
+  {mass-available}, so collectors must become film.
+target: >-
+  Collectors at {collector-density} that turn {collector-efficiency} of sunlight into power, last
+  decades in strong sunlight and solar wind, and are made in space from lunar, asteroid and Mercurian
+  rock with nothing brought from Earth.
+exists:
+  - text: JAXA's IKAROS, launched in 2010, unfurled a 14 m square sail of polyimide 7.5 microns thick carrying thin-film solar cells.
+    url: https://global.jaxa.jp/projects/sas/ikaros/
+    year: 2010
+  - text: NASA's Advanced Composite Solar Sail System, launched in April 2024, deployed a sail of about 80 square metres on lightweight composite booms.
+    url: https://www.nasa.gov/mission/acs3/
+    year: 2024
+  - text: Kaltenbrunner and colleagues made perovskite solar cells about 3 microns thick giving up to 23 W per gram.
+    url: https://doi.org/10.1038/nmat4388
+    year: 2015
+  - text: MIT's printed ultrathin solar modules reach about 730 W per kilogram free-standing and about 370 W per kilogram bonded to fabric.
+    url: https://news.mit.edu/2022/ultrathin-solar-cells-1209
+    year: 2022
+  - text: Blue Origin has made solar cells and transmission wire from lunar regolith simulant by molten regolith electrolysis, and its Blue Alchemist system passed critical design review in September 2025.
+    url: https://satnews.com/2025/09/10/blue-origins-major-milestone-toward-permanent-sustainable-lunar-infrastructure/
+    year: 2025
+  - text: Freundlich, Ignatiev and colleagues at the University of Houston designed a rover that would evaporate thin-film silicon solar cells straight onto melted lunar regolith in the Moon's vacuum.
+    url: https://ntrs.nasa.gov/api/citations/20050110155/downloads/20050110155.pdf
+    year: 2005
+gap: >-
+  The lightest cells are made in clean rooms on Earth from elements the Moon lacks, on polymer films
+  that yellow and crack in ultraviolet light. IKAROS's sail film alone weighs {ikaros-density}, and its
+  cells covered only a small part of it. Making cells from rock has been done only from simulant, a
+  few at a time. Nobody has made a collector light enough, efficient enough and durable enough at
+  once, or made one in space.
+inventions: [vapour-loom]
+scene:
+  kind: machine
+  focus: One collector of film, thinner than a soap bubble's wall in places, turning slowly in full sunlight.
+  params: { shape: sail, spin: 0.2 }

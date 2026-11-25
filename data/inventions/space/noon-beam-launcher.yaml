@@ -1,0 +1,80 @@
+id: noon-beam-launcher
+title: The Noon Beam Launcher
+domain: space
+for: [cheap-launch]
+pitch: >-
+  A single-stage rocket with no oxidiser tank, its hydrogen heated by a microwave beam from a field
+  of gyrotrons on the ground that runs on surplus solar power at midday.
+principle: >-
+  A rocket's exhaust speed rises with the square root of the gas temperature divided by its
+  molecular mass. Hydrogen heated to about 2,000 K in a heat exchanger leaves at 7 to 9 km/s, about
+  twice as fast as the best chemical exhaust, because it carries no oxygen and its molecules are the
+  lightest there are. By the rocket equation, a single stage can then reach orbit with a fuelled mass
+  about three times its empty mass, instead of ten to twenty, so the vehicle can be simple, rugged
+  and flown again the same day. The energy comes from the ground: a phased array of gyrotrons, the
+  millimetre-wave tubes built to heat fusion plasmas, tracks the rocket for the few minutes of its
+  climb and shines on a ceramic heat exchanger on its underside. The array runs only minutes per
+  launch, so it can draw on solar farms at noon, when grids already have power to spare. The array
+  is the costly part, and every launch shares it.
+buildsOn:
+  - text: Kevin Parkin's Caltech thesis proposed microwave thermal rockets and projected 700 to 900 s specific impulse with hydrogen, against 825 s for nuclear thermal rockets.
+    url: https://thesis.caltech.edu/2405
+    year: 2006
+  - text: The DARPA and NASA Millimeter-wave Thermal Launch System project, led by Parkin, ran from May 2012 to March 2014.
+    url: https://ntrs.nasa.gov/citations/20170009162
+    year: 2017
+  - text: Escape Dynamics' prototype microwave thermal thruster reached a specific impulse above 500 s on helium before the company closed at the end of 2015.
+    url: https://en.wikipedia.org/wiki/Escape_Dynamics
+    year: 2015
+  - text: ITER heats its plasma with 1 MW gyrotrons at 170 GHz, 24 of them built by Russia, Japan, Europe and India.
+    url: https://www.iter.org/mach/Heating
+    year: 2024
+  - text: NERVA's nuclear thermal engines heated hydrogen to about 2,500 K in a reactor core and reached 841 s specific impulse in vacuum in the 1960s, the same physics with a different heat source.
+    url: https://en.wikipedia.org/wiki/NERVA
+    year: 1969
+experiment:
+  goal: Show that a ceramic heat exchanger heated by a millimetre-wave beam gives hydrogen exhaust above 700 s specific impulse, at the heat flux a launch vehicle needs.
+  setup: >-
+    A megawatt-class gyrotron at a fusion laboratory beams onto a silicon carbide tube heat
+    exchanger 30 cm square on a vacuum thrust stand, fed with hydrogen through a nozzle into a vacuum
+    chamber. Infrared cameras map the exchanger's temperature; a load cell measures thrust.
+  measure: Exhaust speed from thrust and mass flow, the share of beam power absorbed, the exchanger's temperature map, and its condition after repeated heating and cooling.
+  succeedsIf: Specific impulse above 700 s at an absorbed heat flux above 2 MW per square metre, and the exchanger survives 100 heating cycles without cracking.
+  costUsd: 4000000
+  months: 12
+path:
+  - phase: bench
+    what: The single-gyrotron test stand running on hydrogen.
+    scale: One megawatt-class gyrotron, one heat exchanger tile.
+    proves: The exhaust speed and heat flux the design depends on.
+  - phase: prototype
+    what: A 50 kg vehicle making vertical hops to a few kilometres on a beam from a small array.
+    scale: An array of tens of megawatts.
+    proves: Tracking a moving vehicle and heating it in flight.
+  - phase: pilot
+    what: A suborbital vehicle reaching space, landing, and flying again within a day.
+    scale: An array of a few hundred megawatts.
+    proves: The beam reaches altitude through real weather, and the vehicle is reusable.
+  - phase: first-plant
+    what: A beam site near the equator launching small payloads to orbit several times each sunny day.
+    scale: A gigawatt-class array, tonnes a day to orbit.
+    proves: A cost per kilogram set by electricity and the array, not by the vehicle.
+  - phase: fleet
+    what: Beam sites on several continents, each beside its own solar farm, launching freight to depots and orbital factories.
+    scale: Thousands of tonnes a year per site.
+    proves: Launch at the price of freight.
+  - phase: civilization
+    what: Beam launch carries the steady traffic of people and parts the climb needs from Earth, while bulk mass comes from the Moon.
+    scale: Earth's launch demand through {year-type-1}.
+    proves: Earth's gravity well stops limiting the climb.
+risks: >-
+  Clouds and rain absorb millimetre waves, so sites must be high and dry, or the beam moved to lower
+  frequencies with larger antennas. Hydrogen is bulky, and its tank mass may eat much of the gain
+  from the faster exhaust; if so, the next design heats methane or ammonia instead. A beam of
+  gigawatts pointed at the sky needs airspace rules and fail-safe shut-off within milliseconds of
+  losing lock. Heat exchangers may crack under thermal shock, so silicon carbide and carbon
+  composites will be tested side by side.
+scene:
+  kind: launch
+  focus: A slim rocket climbing on an invisible beam from a field of antennas.
+  params: { method: rocket, cadence: 0.6, world: earth }

@@ -1,0 +1,40 @@
+id: regolith-refining
+title: Splitting rock into its elements
+domain: materials
+stage: k09
+needs: [in-space-resources, clean-metals]
+summary: >-
+  A factory that copies itself from rock must first turn rock into iron, aluminium, silicon, glass
+  and oxygen. On Earth each element has its own ore and its own industry; on the Moon, the asteroids
+  and Mercury there is mostly one feed, a mixture of silicate minerals, and one plant must split it
+  all, with sunlight and electricity and no water or coke.
+target: >-
+  A refinery that turns raw regolith into metals, glass and oxygen at a known energy per tonne,
+  light enough to fly in a {seed-mass} seed and able to process that seed's own mass every
+  {doubling-time}, so the industry's doubling is not held back by its feedstock.
+exists:
+  - text: MIT's Donald Sadoway showed molten oxide electrolysis, which splits a melt of oxides into liquid metal and oxygen with an inert anode, as a route to steel without carbon and to oxygen on the Moon.
+    url: https://news.mit.edu/2013/steel-without-greenhouse-gas-emissions-0508
+    year: 2013
+  - text: Blue Origin's Blue Alchemist melts regolith simulant and electrolyses it into iron, silicon, aluminium and oxygen, reporting silicon above 99.999 percent pure and solar cells with cover glass from the by-products.
+    url: https://www.blueorigin.com/news/blue-alchemist-powers-our-lunar-future/
+    year: 2023
+  - text: University of Glasgow research for ESA extracted essentially all the oxygen from a pile of lunar regolith simulant, leaving a mixture of metal alloys.
+    url: https://www.esa.int/ESA_Multimedia/Images/2019/10/Oxygen_and_metal_from_lunar_regolith
+    year: 2019
+  - text: Metalysis pilot reactors, working with ESA, extracted oxygen from simulated moonrock and left kilograms of powdered metal, the first time the by-product was made in such quantities.
+    url: https://esa.int/Space_in_Member_States/United_Kingdom/Oxygen_and_metal_powder_extracted_from_moonrocks
+    year: 2021
+  - text: NASA's 1980 study of a self-replicating lunar factory laid out the chemical processing a seed would need to make its own parts from regolith.
+    url: https://ntrs.nasa.gov/api/citations/19830007081/downloads/19830007081.pdf
+    year: 1980
+gap: >-
+  Each process makes some elements and wastes others, and each has run only on simulant, by the
+  kilogram, on Earth. Molten electrolysis needs anodes that survive oxygen at 1,600 C; salt
+  processes need salt resupplied. No plant yet splits real regolith into all its useful products at
+  the throughput a doubling industry needs.
+inventions: [sun-still, magma-lake-cell]
+scene:
+  kind: moon
+  focus: A refinery on the lunar plain, regolith going in, ingots, glass and oxygen tanks coming out.
+  params: { bases: 0.4, mines: 0.6, domes: 0.2 }

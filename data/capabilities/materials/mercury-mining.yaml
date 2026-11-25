@@ -1,0 +1,36 @@
+id: mercury-mining
+title: Taking Mercury apart
+domain: materials
+stage: k15
+needs: [autonomous-industry, mass-drivers, regolith-refining, mercury-operations, mercury-power]
+summary: >-
+  The swarm needs more mass than the asteroids can spare in one place, and Mercury is the best
+  quarry in the solar system: {mercury-mass}, most of it metal, close to the Sun where sunlight is
+  strongest, with low gravity and no air to stop a mass driver. Armstrong and Sandberg showed that a
+  self-replicating industry could take it apart in {armstrong-sandberg-years}.
+target: >-
+  Mining and refining {mercury-usable} of Mercury, crust first, at a rate that keeps the swarm
+  doubling every {doubling-time}, so that with the asteroids it supplies the {swarm-full-mined} of
+  processed mass the swarm needs, out of {mass-available} the industry can reach.
+exists:
+  - text: Mercury has a mass of 0.33010 times 10^24 kg, receives 9,082.7 watts of sunlight per square metre, 6.7 times Earth's, and has an escape velocity of 4.3 km/s; its solar day lasts 4,222.6 hours, and its sunward side runs at 590 to 725 K.
+    url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html
+    year: 2024
+  - text: MESSENGER orbited Mercury for more than four years until 2015, mapped its whole surface, determined its surface composition and found evidence of water ice in craters at its poles that never see sunlight.
+    url: https://science.nasa.gov/mission/messenger/
+    year: 2015
+  - text: BepiColombo, Europe's first mission to Mercury, made with Japan, launched on 20 October 2018.
+    url: https://sci.esa.int/web/bepicolombo
+    year: 2018
+  - text: Armstrong and Sandberg modelled a swarm built from Mercury starting from a square kilometre of solar panels on its surface, and found Mercury could be disassembled in 31 years and 85 days, using a tenth of the power to launch mass at about nine megajoules a kilogram.
+    url: https://web.archive.org/web/20210216214733/http://www.fhi.ox.ac.uk/wp-content/uploads/intergalactic-spreading.pdf
+    year: 2013
+gap: >-
+  No machine has touched Mercury. Its sunward side runs at 590 to 725 K and its night falls far
+  below freezing, each lasting about three Earth months. Everything known about mining assumes
+  water, air or people; Mercury offers none, and the quarry is a whole planet.
+inventions: [magma-lake-cell]
+scene:
+  kind: mercury
+  focus: Mercury's crust worked by sunlight, its metal streaming out along the mass drivers.
+  params: { mined: 0.3, drivers: 8 }

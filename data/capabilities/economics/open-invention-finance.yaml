@@ -1,0 +1,35 @@
+id: open-invention-finance
+title: Paying inventors without locking ideas up
+domain: economics
+stage: k08
+needs: [open-knowledge-base]
+summary: >-
+  Patents pay inventors by letting them charge more for a while, which also stops others building
+  the invention. For the climb that trade is costly: a seed factory or a cheaper way to make solar
+  cells is worth most when every country and every world can copy it freely. The climb needs ways to
+  reward inventors at least as well as patents do while leaving the ideas open to all.
+target: >-
+  The key inventions of the climb free for anyone to build, with their inventors paid at least what
+  a patent would have earned them, so that open does not mean unpaid.
+exists:
+  - text: Kremer proposed in 1998 that governments buy patents at a price set by auction and place them in the public domain, with a few patents sold to the top bidder to keep bids honest.
+    url: https://doi.org/10.1162/003355398555865
+    year: 1998
+  - text: A 2022 White House policy requires research funded by US federal agencies to be free to read with no embargo, with agencies to comply by the end of 2025.
+    url: https://bidenwhitehouse.archives.gov/ostp/news-updates/2022/08/25/ostp-issues-guidance-to-make-federally-funded-research-freely-available-without-delay/
+    year: 2022
+  - text: In 2021, 194 countries adopted the UNESCO Recommendation on Open Science, the first global framework of its kind.
+    url: https://www.unesco.org/en/open-science
+    year: 2021
+  - text: arXiv, the open archive of research papers, had received 3,262,976 submissions by 24 November 2026.
+    url: https://arxiv.org/stats/monthly_submissions
+    year: 2026
+gap: >-
+  Open access now covers much publicly funded research, but not the patents and know-how of the
+  companies that turn research into products. Patent buyouts have been proposed but never run at
+  scale, and no fund exists to buy the climb's key patents into the open.
+inventions: [climb-buyout]
+scene:
+  kind: network
+  focus: Patents as locked nodes, opening one by one as they are bought, their links spreading to new builders.
+  params: { shape: flat, nodes: 1000, clusters: 20, links: 0.5, pulses: 0.4 }

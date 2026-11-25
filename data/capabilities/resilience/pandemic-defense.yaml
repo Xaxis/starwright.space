@@ -1,0 +1,44 @@
+id: pandemic-defense
+title: Stopping a pandemic in its first weeks
+domain: resilience
+stage: k08
+needs: [programmable-biology, pandemic-resilient-medicine]
+summary: >-
+  A new virus that spreads through the air can reach every country in weeks, faster than vaccines
+  can be made. Stopping it takes three things working together: seeing it early, slowing it in the
+  air people share indoors, and making a vaccine before most people have caught it. The pieces
+  exist; they are not yet fast enough or everywhere.
+target: >-
+  A new pathogen spotted in sewage or air within days of its first spread, indoor transmission cut
+  by cleaning the air in every shared room, and a safe vaccine ready for the world within 100 days,
+  so no outbreak becomes a pandemic.
+exists:
+  - text: The genome of the novel coronavirus was posted publicly on 10 January 2020, weeks after the first cases in Wuhan.
+    url: https://virological.org/t/novel-2019-coronavirus-genome/319
+    year: 2020
+  - text: Moderna and the US NIH designed the mRNA-1273 vaccine within 24 hours of that genome being released, using work done earlier on related coronaviruses.
+    url: https://www.nature.com/articles/s41586-020-2622-0
+    year: 2020
+  - text: CEPI's 100 Days Mission aims to have safe, effective vaccines within 100 days of a new pandemic threat being identified.
+    url: https://cepi.net/100-days-mission
+    year: 2026
+  - text: SecureBio's CASPER links labs across the United States in an early-warning system that sequences wastewater for any pathogen, known or new.
+    url: https://naobservatory.org/
+    year: 2026
+  - text: In a room-sized chamber, far-UVC light at 222 nm cut the airborne load of a bacterium by 98.4 percent, worth 184 extra air changes an hour, at doses inside today's exposure limits.
+    url: https://www.nature.com/articles/s41598-022-08462-z
+    year: 2022
+  - text: Far-UVC light at 222 nm also inactivated airborne human coronaviruses efficiently at low doses that are considered safe for people.
+    url: https://www.nature.com/articles/s41598-020-67211-2
+    year: 2020
+gap: >-
+  Metagenomic surveillance covers a few cities, not the world. Indoor air is still cleaned mostly
+  by opening windows and by filters that change it a few times an hour. Far-UVC lamps work but are
+  costly and few, and nobody has measured what they do to infections across whole buildings for
+  years. Vaccine design takes a day; testing, making and delivering billions of doses still takes
+  most of a year.
+inventions: [clean-air-ceiling]
+scene:
+  kind: network
+  focus: Sewage and air monitors lighting up across the globe as one city's signal is caught and answered.
+  params: { shape: globe, nodes: 2500, clusters: 30, links: 0.3, pulses: 0.7 }

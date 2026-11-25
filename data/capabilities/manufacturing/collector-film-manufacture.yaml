@@ -1,0 +1,38 @@
+id: collector-film-manufacture
+title: Making collector film by the square kilometre a minute
+domain: manufacturing
+stage: type-1
+needs: [self-replicating-factory, durable-thin-films]
+summary: >-
+  The swarm is mostly area: {swarm-full-area} of film at {collector-density}. Even the first
+  collectors around Earth need square kilometres a day, and the whole swarm needs more film than
+  every factory on Earth has ever made of anything. The film must be made in space, from rock, on
+  lines that the self-copying industry can build and copy.
+target: >-
+  Film lines in space that turn refined glass and metal into finished collector film at square
+  kilometres per minute per plant, built and copied by the industry itself, so that the
+  {collector-share} of industrial output that becomes collectors is limited by mass, not by how fast
+  film can be made.
+exists:
+  - text: IKAROS flew a 7.5 micrometre polyimide sail 20 metres on the diagonal, with thin-film solar cells built into the membrane.
+    url: https://en.wikipedia.org/wiki/IKAROS
+    year: 2010
+  - text: First Solar mass-produces cadmium telluride thin-film solar modules by depositing the semiconductor directly onto glass.
+    url: https://www.firstsolar.com/
+    year: 2026
+  - text: Nippon Electric Glass's G-Leaf is thin enough below 100 micrometres to be handled roll to roll.
+    url: https://www.neg.co.jp/en/products/g-leaf/index.html
+    year: 2026
+  - text: Basalt fibres are made by melting basalt rock and drawing the melt into fibres, a precedent for drawing glass from rock.
+    url: https://en.wikipedia.org/wiki/Basalt_fiber
+    year: 2026
+gap: >-
+  Thin film is made on Earth on plastic carriers, in vacuum chambers, at widths of a few metres.
+  Nothing makes micrometre glass film continuously, and no film line has been built in space or from
+  rock. One of the fastest film lines on Earth would need longer than the age of the universe to
+  cover the swarm.
+inventions: [ribbon-draw]
+scene:
+  kind: orbit
+  focus: Film lines in orbit unrolling bright ribbons that are cut and folded into collectors.
+  params: { stations: 0.3, collectors: 0.9, radiators: 0.2 }

@@ -1,0 +1,39 @@
+id: industrial-printing
+title: Printing big metal parts as cheaply as casting them
+domain: manufacturing
+stage: k08
+needs: [clean-metals]
+summary: >-
+  A factory that prints its parts needs no moulds, dies or special tools for each one, so it can
+  make many kinds of part in small numbers, change a design overnight, and make its own spares.
+  Printing is already how rocket engines and turbine parts are made, but it is still slow and costly
+  next to casting and forging.
+target: >-
+  Metal and ceramic printing at tonnes per hour per machine, at a cost per kilogram near that of
+  casting, for parts from millimetres to tens of metres, so that most of what the buildout to
+  {power-k08} needs, and most of what a self-copying factory needs, can be made without tooling.
+exists:
+  - text: Additive manufacturing earned 24.2 billion dollars in 2025, growing 10.9 percent, according to the Wohlers Report.
+    url: https://www.tctmagazine.com/wohlers-report-2026-additive-manufacturing-revenues-reach-24-2-billion/
+    year: 2025
+  - text: About 85 percent of Relativity Space's Terran 1 rocket by mass was 3D printed.
+    url: https://spectrum.ieee.org/relativity-space-launch
+    year: 2023
+  - text: Cranfield University printed a 6 m, 300 kg aluminium aircraft spar by wire-arc additive manufacturing.
+    url: https://www.tctmagazine.com/cranfield-university-believe-they-have-3d-printed-the-bigges/
+    year: 2016
+  - text: The University of Maine's polymer printer measures 100 by 22 by 10 feet and holds the record for the largest solid printed object, 2.06 cubic metres.
+    url: https://composites.umaine.edu/?p=23909
+    year: 2022
+  - text: COBOD printers are building a two-storey, 20,000 square metre school in Qatar with 30,000 square metres of printed walls.
+    url: https://www.3dnatives.com/en/3d-printed-school-qatar-30102026/
+    year: 2026
+gap: >-
+  Metal printers build slowly next to a foundry, and their parts cost several times as much per
+  kilogram as castings. Parts often need machining and heat treatment afterwards, and each new alloy
+  and machine must be qualified again.
+inventions: []
+scene:
+  kind: machine
+  focus: A wire-arc printer laying down a long metal spar, bead by bead.
+  params: { shape: printer, spin: 0.2 }

@@ -1,0 +1,51 @@
+id: clean-metals
+title: Steel, aluminium and copper made with clean power
+domain: materials
+stage: k08
+needs: [terawatt-solar-factories, grid-storage, abundant-minerals]
+summary: >-
+  A world at {power-k08} is built of steel, aluminium and copper, by the billion tonnes. Today most
+  iron is still made by burning coke in blast furnaces, and aluminium smelters run day and night on
+  whatever power is cheapest, often coal. Both must move to electricity and hydrogen made from
+  sunlight, and they must learn to run when the sun shines rather than around the clock.
+target: >-
+  Every new tonne of steel, aluminium and copper made with clean electricity or clean hydrogen by
+  {year-k08}, at a cost no higher than fossil metal, from plants that can follow a solar day so they
+  draw on the {pv-factory-capacity} of new panels the world can build each year rather than on firm
+  power that costs more.
+exists:
+  - text: World crude steel production reached 1,849.4 million tonnes in 2025, and only 30.3 percent of it came from electric furnaces.
+    url: https://worldsteel.org/wp-content/uploads/World-Steel-in-Figures-2026.pdf
+    year: 2025
+  - text: The blast furnace route used 23.88 GJ per tonne of crude steel in 2024, against 9.84 GJ for steel remelted from scrap in electric furnaces.
+    url: https://worldsteel.org/wider-sustainability/sustainability-indicators/
+    year: 2024
+  - text: Stegra (formerly H2 Green Steel) is building an integrated hydrogen direct-reduction steel plant at Boden in Sweden with what it calls Europe's largest green hydrogen plant; its reduction tower has topped out at 145 metres.
+    url: https://stegra.com/en
+    year: 2026
+  - text: HYBRIT, the venture of SSAB, LKAB and Vattenfall, says its hydrogen direct reduction, able to remove more than 10 percent of Sweden's CO2 emissions, is ready for industrialisation.
+    url: https://www.hybritdevelopment.se/en/
+    year: 2026
+  - text: Boston Metal's molten oxide electrolysis makes liquid iron from ore of any grade with electricity alone, no coke.
+    url: https://www.bostonmetal.com/
+    year: 2026
+  - text: ELYSIS, the Alcoa and Rio Tinto venture, reports inert-anode aluminium smelting in a commercial-size cell, which gives off oxygen instead of CO2.
+    url: https://elysis.com/en
+    year: 2026
+  - text: US Hall-Heroult smelting used 15.1 MWh per tonne of aluminium in 2010, against a thermodynamic minimum of 6.0 MWh, so most of the energy leaves as heat.
+    url: https://www.energy.gov/sites/prod/files/2017/12/f46/Aluminum_bandwidth_study_2017.pdf
+    year: 2017
+  - text: EnPot's heat exchangers let a smelter use 30 percent more or less power without upsetting the cell's heat balance, in commercial use at TRIMET's Essen smelter since May 2019.
+    url: https://www.enpot.com/
+    year: 2019
+gap: >-
+  Hydrogen steel and electrolytic iron are at pilot and first-plant scale, against nearly two
+  billion tonnes a year. Inert anodes are not yet in commercial pot lines. And every clean route
+  still assumes steady power: an aluminium cell that loses its heat balance for a few hours freezes
+  and is lost, so smelters cannot yet ride the daily swing of a grid built on sunlight, which is
+  where clean power is cheapest.
+inventions: [tidecell]
+scene:
+  kind: field
+  focus: Rows of electric smelters and hydrogen towers where blast furnaces stood.
+  params: { unit: fab, count: 240, terrain: plain }

@@ -1,0 +1,82 @@
+id: magma-probe
+title: The Magma Probe
+domain: energy
+for: [clean-firm-power]
+pitch: >-
+  A sealed heat exchanger lowered into the edge of a shallow magma body, drawing heat from melt at
+  900 °C and more through closed pipes, so no magma, gas or brine ever enters the well.
+principle: >-
+  At Krafla in Iceland in 2009 a geothermal well hit magma at 2.1 km and produced steam at about
+  450 °C, enough for some 36 MW of electricity from one well, about ten times an ordinary geothermal
+  well. It could not be used for long, because the open well let corrosive volcanic fluids into its
+  casing. Magma is the richest heat a drill can reach: melt at 900 °C or more, still releasing the
+  latent heat of crystallisation, a few hundred kilojoules per kilogram, as it cools. The Magma Probe
+  never opens the well to the rock. A double-walled nickel-alloy tube, branched into several laterals
+  at the bottom, sits in the hot margin of the magma body. A working fluid, supercritical water or
+  CO2, flows down the outer channel and up the inner one, takes heat through the wall and drives a
+  turbine at the surface. Magma freezes onto the probe into a shell of glass that conducts heat
+  inward, and the melt behind it keeps convecting new heat to that shell. The probe's yield per
+  square metre, which nobody has measured, decides how many branches a well needs.
+buildsOn:
+  - text: The Iceland Deep Drilling Project's IDDP-1 well struck magma at 2,100 m at Krafla in 2009, and IDDP-2 reached 4,659 m and 427 °C at Reykjanes in 2017.
+    url: https://en.wikipedia.org/wiki/Iceland_Deep_Drilling_Project
+    year: 2017
+  - text: The Krafla Magma Testbed, the first project designed to drill into magma on purpose, secured two years of financing from Iceland's government and power companies in September 2024.
+    url: https://kmt.is/kmt-government-industry-support/
+    year: 2024
+  - text: The Clean Air Task Force finds wells into rock above 400 °C can yield five to ten times the energy of conventional geothermal wells, and notes that the Krafla magma well produced fluid at 452 °C with about 36 MW of electric potential.
+    url: https://www.catf.us/superhot-rock/
+    year: 2026
+  - text: Eavor's closed-loop project at Geretsried, Germany, circulates fluid through sealed wells about 4,500 m deep to make about 8.2 MW of electricity with no fluid exchanged with the rock.
+    url: https://eavor.de/projekt-geretsried/
+    year: 2026
+  - text: Quaise Energy is drilling with millimetre-wave energy toward rock at about 370 °C at Newberry, Oregon, aiming for 50 MW by 2030.
+    url: https://www.quaise.com/news/confirming-the-resource-at-project-obsidian
+    year: 2026
+experiment:
+  goal: Measure how much heat a sealed probe can draw from magma per square metre, and whether it survives and can be withdrawn.
+  setup: >-
+    In the Krafla Magma Testbed's well into magma at about 2 km, lower a 30 m double-walled
+    nickel-alloy probe on a coiled supply line, cooled by pressurised water at a metered flow, with
+    fibre-optic temperature sensing along its length and the heat rejected at a surface air cooler.
+    Coupons of candidate alloys and ceramics hang beside it.
+  measure: Heat drawn per square metre of probe over time; thickness of the frozen glass shell, from temperature profiles; corrosion and creep of the probe and coupons; the force needed to pull the probe out.
+  succeedsIf: The probe draws more than 5 kW per square metre for 90 days without a leak, and can be withdrawn intact.
+  costUsd: 15000000
+  months: 30
+path:
+  - phase: bench
+    what: Probe sections in a furnace of molten rhyolite, then the 30 m probe in the Krafla well.
+    scale: About 100 kW of heat.
+    proves: The heat flux from magma into a sealed probe, and that it survives.
+  - phase: prototype
+    what: A branched probe feeding a small turbine at Krafla.
+    scale: About 5 MW of heat, 1.5 MW of electricity.
+    proves: A working power plant on magma heat through closed pipes.
+  - phase: pilot
+    what: Ten probe wells into one magma body feeding one plant.
+    scale: About 50 MW of electricity.
+    proves: Cost per megawatt, and how the magma body responds over years of extraction.
+  - phase: first-plant
+    what: A plant over a shallow magma body on another volcanic arc or rift, such as in Kamchatka, Indonesia, Japan, Ethiopia or the Andes.
+    scale: About 500 MW of electricity.
+    proves: The method travels to other magmas and other countries.
+  - phase: fleet
+    what: Magma plants wherever melt lies within reach of a drill, deepening as millimetre-wave drilling matures.
+    scale: Tens to hundreds of plants.
+    proves: Firm power from volcanic regions at large scale.
+  - phase: civilization
+    what: Part of the firm clean power for a grid at {power-k08}, and the know-how for wells into superhot rock everywhere.
+    scale: A share of the firm power for {power-k08}.
+    proves: Earth's internal heat, {geothermal-flow} flowing out on its own, tapped where it is hottest.
+risks: >-
+  Drilling into magma could trigger an eruption at the well; the Krafla Magma Testbed exists to study
+  exactly this, and the 2009 well did not. The glass shell may grow until it starves the probe of
+  heat; then the probe is moved, or wells use more and longer branches. Nickel alloys creep at
+  900 °C; ceramic liners or refractory metals are the next try. A magma body holds a finite amount of
+  heat: drawing 100 MW of heat for ten years takes about as much as cooling a cubic kilometre of magma
+  by 10 °C, so a large body lasts centuries, but each field must be tracked and managed.
+scene:
+  kind: reactor
+  focus: A branched probe in a glowing magma margin, a shell of black glass growing around it.
+  params: { type: geothermal, glow: 1 }

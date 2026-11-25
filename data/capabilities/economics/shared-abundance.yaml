@@ -1,0 +1,43 @@
+id: shared-abundance
+title: Sharing what the machines make
+domain: economics
+stage: k08
+needs: [automated-factories]
+summary: >-
+  As factories run themselves and energy gets cheap, more of what the economy makes comes from
+  machines and less from wages. That can make everyone richer, or leave the gains with whoever owns
+  the machines while work dries up for everyone else. The climb needs everyone to be better off as it
+  goes, or many will refuse it, and people need a stake in the industry, not only a job in
+  it.
+target: >-
+  Every person receives a growing, unconditional share of the income from automated industry and
+  from the natural resources the climb uses, enough to cover the basics of a good life by the time
+  machines do most of the work.
+exists:
+  - text: Alaska has paid every resident a dividend from its oil fund each year since 1982, from 1,000 dollars in the first year to 1,702 dollars in 2024.
+    url: https://pfd.alaska.gov/Division-Info/summary-of-dividend-applications-payments
+    year: 2025
+  - text: Norway's oil fund was worth 22,014 billion kroner at the end of September 2026, saved for its people and spent only at its expected real return of about 3 percent a year.
+    url: https://www.nbim.no/en/investments/the-funds-value/
+    year: 2026
+  - text: A randomized study in Kenya found that cash transfers of about 1,000 dollars to over 10,500 households raised local economic activity by 2.5 dollars for each dollar given (Egger and colleagues, 2022).
+    url: https://doi.org/10.3982/ECTA17945
+    year: 2022
+  - text: Acemoglu and Restrepo found in 2020 that each additional robot per thousand US workers lowered the employment-to-population ratio by 0.2 percentage points and wages by 0.42 percent.
+    url: https://doi.org/10.1086/705716
+    year: 2020
+  - text: GiveDirectly had sent over 1 billion dollars in cash directly to more than 2 million people living in poverty by 2026.
+    url: https://www.givedirectly.org/about/
+    year: 2026
+  - text: Mongolia's Human Development Fund paid cash from mining revenue to every citizen, 21,000 tugriks, about 15 dollars, each for 2011.
+    url: https://www.brookings.edu/articles/mongolias-quest-to-balance-human-development-in-its-booming-mineral-based-economy/
+    year: 2012
+gap: >-
+  Resource dividends exist in a few places and cash transfers are well tested, but none is tied to
+  the growth of automated industry, and none spans countries. As automation spreads, nothing yet
+  gives people everywhere a share of what the machines make.
+inventions: [heritage-dividend]
+scene:
+  kind: network
+  focus: Every person on Earth a point of light, each pulsing as the dividend arrives.
+  params: { shape: globe, nodes: 3000, clusters: 30, links: 0.3, pulses: 0.8 }

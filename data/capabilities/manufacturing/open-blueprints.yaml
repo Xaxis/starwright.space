@@ -1,0 +1,36 @@
+id: open-blueprints
+title: Blueprints any factory can build from
+domain: manufacturing
+stage: k08
+needs: [universal-connectivity, open-knowledge-base, open-invention-finance]
+summary: >-
+  A machine is only as reproducible as its description. Today a design lives in drawings, in the
+  heads of the people who make it and in the settings of particular machines, so moving production,
+  or copying a whole factory, means relearning it. A self-copying industry needs every part
+  described so completely that a machine can make it from the description alone.
+target: >-
+  Open, machine-readable descriptions of how every part of the buildout's key machines is made, from
+  raw material to tested part, that any capable factory can compile into its own process, and that
+  tell a self-copying factory exactly what it can and cannot yet make of itself.
+exists:
+  - text: Open Source Ecology's Global Village Construction Set publishes open designs for the 50 industrial machines it says a small, sustainable civilization needs.
+    url: https://www.opensourceecology.org/gvcs/
+    year: 2026
+  - text: OSHWA defines open source hardware as hardware whose design is public so that anyone can study, modify, distribute, make and sell it, and certifies hardware against that definition.
+    url: https://oshwa.org/definition/
+    year: 2026
+  - text: ISO 10303, known as STEP, is the family of standards for computer-interpretable representation and exchange of product manufacturing information.
+    url: https://en.wikipedia.org/wiki/ISO_10303
+    year: 2026
+  - text: About 4,500 RepRap self-copying printers had been built from open designs by 2010.
+    url: https://doi.org/10.1017/S026357471000069X
+    year: 2011
+gap: >-
+  Standards describe shapes and tolerances, not how to make a part from rock or which processes it
+  needs. Open hardware designs still assume a workshop full of bought tools and parts. No format yet
+  carries the whole recipe, from feedstock to test, in a form a machine can follow without a person.
+inventions: [process-genome]
+scene:
+  kind: network
+  focus: One blueprint flowing out to many factories, each building the same machine.
+  params: { nodes: 800, clusters: 30, links: 0.5, pulses: 0.6, shape: flat }

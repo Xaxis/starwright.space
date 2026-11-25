@@ -1,0 +1,78 @@
+id: fermented-structural-fiber
+title: The Brewed Fibre Line
+domain: biology
+for: [biomanufactured-materials]
+pitch: >-
+  A microbe engineered to secrete silk-strong structural protein by the tankful, paired with a
+  spinning line that pulls it into fibre, so a material tougher than steel by weight is brewed from
+  sugar or carbon dioxide instead of drawn from oil.
+principle: >-
+  Spider silk and similar structural proteins get their strength from long chains of a few short
+  motifs repeated hundreds of times, which line up and crystallise when drawn into a fibre. Cells
+  dislike making such long, repetitive proteins: they stall, truncate and clog. The Brewed Fibre
+  Line solves both ends. A chassis strain is engineered with codon-balanced, repeat-stable genes and
+  a secretion pathway so it pushes finished protein out of the cell at high yield, with protein
+  design tools used to find sequences that fold and spin well yet are easy for a microbe to make.
+  The broth is then concentrated and extruded through a spinneret into a bath that draws and aligns
+  the chains into fibre, the same physics a spider uses. Fed on sugar, or on carbon dioxide and
+  hydrogen through a gas-fermentation front end, the line turns renewable feedstock into
+  high-performance fibre continuously.
+buildsOn:
+  - text: Precision fermentation already makes animal proteins at commercial scale without animals (Perfect Day's dairy whey), the manufacturing base a fibre line extends.
+    url: https://perfectday.com/
+    year: 2024
+  - text: The fermentation sector's 4.1 billion USD of investment has built the large bioreactors and strain-engineering know-how a structural-protein line needs.
+    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
+    year: 2024
+  - text: ESM3 designed a functional protein far from any natural one, and RFdiffusion designs binding proteins from scratch, letting a line search for structural sequences that both spin well and brew easily.
+    url: https://www.evolutionaryscale.ai/blog/esm3-release
+    year: 2025
+experiment:
+  goal: Secrete a high-strength structural protein at high yield and spin it into fibre meeting a strength target.
+  setup: >-
+    Engineer a chassis strain to secrete a designed repetitive structural protein, optimise yield in
+    stirred-tank fermentation, concentrate the broth and spin it through a lab spinneret with a
+    controlled draw. Test fibres on a tensile rig against natural silk and a commodity synthetic.
+  measure: >-
+    Grams of secreted protein per litre; fibre tensile strength and toughness; feedstock and energy
+    per kilogram of fibre.
+  succeedsIf: >-
+    The strain secretes at least 10 grams of protein per litre and the spun fibre reaches at least
+    80 percent of natural spider silk's toughness, with a feedstock cost path toward commodity-fibre
+    prices.
+  costUsd: 18000000
+  months: 42
+path:
+  - phase: bench
+    what: A secreting strain and spun fibres meeting the strength target at lab scale.
+    scale: Litres of broth, metres of fibre.
+    proves: The protein brews and spins into a strong fibre.
+  - phase: prototype
+    what: Pilot fermentation and continuous spinning with consistent fibre.
+    scale: Cubic-metre reactors, kilometres of fibre.
+    proves: Yield and quality hold as the tanks grow.
+  - phase: pilot
+    what: A gas-fermentation front end feeding the line on carbon dioxide and hydrogen.
+    scale: Tonnes of fibre a year.
+    proves: Fibre made from air and clean power, not just sugar.
+  - phase: first-plant
+    what: A commercial plant selling brewed fibre into real products.
+    scale: Thousands of tonnes a year.
+    proves: Grown fibre competes on price and performance with its petrochemical rival.
+  - phase: fleet
+    what: Plants worldwide, and compact lines in habitats making fibre and composite from local feedstock.
+    scale: Global, plus off-world units.
+    proves: A large share of structural polymer is grown, not refined from oil.
+  - phase: civilization
+    what: Brewed structural materials as a default, made wherever feedstock and power are, including in space.
+    scale: Planet and inner solar system.
+    proves: Materials decoupled from mining and petrochemistry for a large class of uses.
+risks: >-
+  Secretion yields may stay too low for commodity prices; the project would try surface-display and
+  intracellular-granule routes and target premium uses first. Spinning designed proteins to full
+  natural strength is unproven at scale, so the line iterates sequence and draw together. Gas
+  fermentation adds cost and complexity, kept as a later phase once the sugar-fed line works.
+scene:
+  kind: lattice
+  focus: Repetitive protein chains crystallising and aligning as a fibre is drawn from the broth.
+  params: { structure: protein, defects: 0.15 }

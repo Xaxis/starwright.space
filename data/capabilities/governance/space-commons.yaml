@@ -1,0 +1,47 @@
+id: space-commons
+title: Shared rules for orbits and resources
+domain: governance
+stage: k09
+needs: []
+summary: >-
+  The Moon's poles hold water ice in a few cold craters and near-constant sunlight on a few high
+  ridges, and useful radio bands and orbits are finite too. Whoever builds first could take the best
+  of each, and a rush could start a conflict or leave latecomers with nothing. The climb needs rules
+  everyone accepts for who may use what, for how long, and what they owe the rest, before the seed
+  factory lands in {seed-year}.
+target: >-
+  One set of rules, accepted by every spacefaring state and company, under which lunar sites, ice,
+  orbits and spectrum can be claimed for use, held only while used, registered openly, and shared so
+  that latecomers and countries without space programmes also gain.
+exists:
+  - text: The 1967 Outer Space Treaty, which bars any nation from claiming sovereignty over the Moon or other bodies, had 118 states parties on 1 January 2026.
+    url: https://www.unoosa.org/unoosa/uploads/res/oosadoc/data/documents/2026/aac_105c_22026crp/aac_105c_22026crp_9rev_1_0_html/AC105_C2_2026_CRP09Rev01E.pdf
+    year: 2026
+  - text: A 2015 US law entitles US citizens to possess, own, use and sell any space resource they obtain.
+    url: https://www.govinfo.gov/content/pkg/USCODE-2023-title51/html/USCODE-2023-title51-subtitleV-chap513-sec51303.htm
+    year: 2015
+  - text: Luxembourg's 2017 space resources law opens with the words that space resources are capable of being owned, and it issued its first mission authorisation in 2024.
+    url: https://data.legilux.public.lu/eli/etat/leg/loi/2017/07/20/a674/jo/fr/html
+    year: 2017
+  - text: The Artemis Accords, non-binding principles for civil lunar exploration first signed by 8 nations in 2020, had 78 signatories after Vietnam joined on 28 October 2026.
+    url: https://www.nasa.gov/artemis-accords/
+    year: 2026
+  - text: China's International Lunar Research Station, the rival lunar coalition, had 17 member countries and international organisations and more than 50 research institutions in April 2025.
+    url: https://english.www.gov.cn/news/202504/24/content_WS680976d7c6d0868f4e8f2045.html
+    year: 2025
+  - text: The UN space committee's working group published 9 draft, non-binding principles for space resource activities in October 2026, aiming to finish them in April 2027.
+    url: https://www.unoosa.org/unoosa/uploads/documents/pdf/copuos/lsc/space-resources/TranslatedDraftPrinciples2026/2615648E.pdf
+    year: 2026
+  - text: The 2023 World Radiocommunication Conference added an item on radio frequencies for the Moon to the agenda of the 2027 conference.
+    url: https://www.itu.int/en/itunews/Documents/2024/2024-01/2024_ITUNewsMag01-en.pdf
+    year: 2023
+gap: >-
+  Two camps are writing rules apart: the Artemis Accords and China's lunar station partners. National
+  laws let companies own what they extract, but nothing says who may work a given crater, for how
+  long, or how overlapping claims are settled. The UN principles under negotiation are non-binding,
+  and no shared registry of claimed sites exists.
+inventions: [lunar-claims-registry]
+scene:
+  kind: moon
+  focus: The lunar south pole, its sunlit ridges and shadowed craters marked out as registered, time-limited claims.
+  params: { bases: 0.3, mines: 0.3 }

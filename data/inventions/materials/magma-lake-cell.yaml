@@ -1,0 +1,79 @@
+id: magma-lake-cell
+title: The Magma Lake Cell
+domain: materials
+for: [mercury-mining, regolith-refining]
+pitch: >-
+  An electrolysis cell with no walls: a pond of molten rock held in a pit of its own frozen crust,
+  kept liquid by the current passing through it, with metal pooling at the bottom and oxygen rising
+  from anodes hung above. The mine is the cell; the regolith is shovelled straight in.
+principle: >-
+  Molten oxide electrolysis passes current through melted rock: at the cathode, metal oxides are
+  reduced to liquid metal, which is denser than the melt and sinks; at an inert anode, oxygen is
+  given off as gas. The melt's own electrical resistance turns part of the current into heat, as in
+  an aluminium smelter, so a large enough pond keeps itself molten. The Magma Lake Cell uses that to
+  do away with the crucible, the part that fails first at 1,600 C. A pit is dug into the crust and
+  its centre melted, first by sunlight concentrated by a ring of mirrors, then by the current. The
+  rock at the rim stays solid because it loses heat to the cold ground, so the pond is held in a
+  shell of its own frozen material, as in the skull melting used to grow cubic zirconia. The metal
+  pool at the bottom is the cathode and is tapped through the floor; anodes hang from a gantry
+  above. Voltage is stepped to take the easier oxides first, iron and silicon, then aluminium and
+  titanium. Fresh regolith is tipped in at the edge, so the pond never stops and its frozen walls
+  grow outward into new ore. On Mercury, sunlight is {mercury-sunlight-multiple} as strong as at Earth, so a small
+  mirror ring and a modest field of panels run a large lake.
+buildsOn:
+  - text: Molten oxide electrolysis, developed at MIT for oxygen on the Moon and steel without carbon.
+    url: https://news.mit.edu/2013/steel-without-greenhouse-gas-emissions-0508
+  - text: Boston Metal's industrial molten oxide electrolysis cells, which make liquid iron from ore with electricity alone.
+    url: https://www.bostonmetal.com/
+  - text: Skull melting, in which the outer layers of a melt form its own crucible.
+    url: https://en.wikipedia.org/wiki/Skull_crucible
+  - text: Blue Origin's molten regolith electrolysis of simulant into iron, silicon, aluminium and oxygen.
+    url: https://www.blueorigin.com/news/blue-alchemist-powers-our-lunar-future/
+  - text: NASA's Mercury fact sheet, with the 9,082.7 W per square metre of sunlight that powers the lake.
+    url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html
+experiment:
+  goal: Hold a pond of molten regolith in its own frozen rim, with no crucible, and electrolyse it for a month.
+  setup: >-
+    A vacuum chamber with a bed of low-iron, sulfur-bearing simulant shaped like Mercury's crust,
+    two tonnes in all, with a 1 m pit at its centre. A solar simulator array melts a 30 cm pond;
+    then a 5 kA supply takes over through an iron-alloy inert anode and a molybdenum floor contact.
+    Fresh simulant is fed at the rim.
+  measure: Pond depth and rim thickness by thermocouples and ground-penetrating radar; current efficiency for oxygen and for metal; metal composition; anode wear; energy per kilogram of metal.
+  succeedsIf: The pond stays molten and self-contained for 30 days without breaching its rim, current efficiency is at least 60 percent, at least 20 kg of metal is tapped, and anode wear is under 1 mm a day.
+  costUsd: 4500000
+  months: 24
+path:
+  - phase: bench
+    what: The 30 cm pond in simulant, in vacuum.
+    scale: Tens of kilograms of metal a month.
+    proves: A melt can be its own crucible and still be electrolysed.
+  - phase: prototype
+    what: A 3 m pond fed continuously, with metal tapped through the floor.
+    scale: About a tonne a day.
+    proves: The rim grows outward into fresh ore as the cell runs.
+  - phase: pilot
+    what: A lake on the Moon, as the regolith refinery of an early seed.
+    scale: Thousands of tonnes a year.
+    proves: Real regolith, vacuum and the lunar night.
+  - phase: first-plant
+    what: The first lake on Mercury, on the terminator where heat and shade can both be had.
+    scale: About a million tonnes a year.
+    proves: Mercury's crust is an ore.
+  - phase: fleet
+    what: Lakes built by the factories they feed, spreading across Mercury.
+    scale: Doubling every {doubling-time}.
+    proves: Mining grows as fast as the industry.
+  - phase: civilization
+    what: Mercury's crust turned to silicon, metal and glass for the swarm.
+    scale: "{mercury-usable} of {mercury-mass}"
+    proves: A planet can be taken apart at the pace the swarm needs.
+risks: >-
+  The rim may creep or crack under thermal cycling and let the melt escape; a deeper pit or a ring
+  of cooling pipes in the walls would be tried next. Sulfur, abundant on Mercury, may foul the
+  anodes or carry off current; a sulfur-removal stage, boiling it off before electrolysis, would
+  follow. Inert anodes may wear too fast at these temperatures; the fallback is anodes made on site
+  from the cell's own metal and replaced as consumables.
+scene:
+  kind: mercury
+  focus: One glowing lake in Mercury's crust under a ring of mirrors, oxygen rising and metal tapped beneath.
+  params: { mined: 0.05, drivers: 1 }

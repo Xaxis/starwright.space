@@ -1,0 +1,75 @@
+id: process-genome
+title: The Process Genome
+domain: manufacturing
+for: [open-blueprints, self-replicating-factory]
+pitch: >-
+  An open format that describes a machine not as drawings but as the full recipe for every part,
+  from the element it starts as to the test it must pass, so any capable factory can compile it, and
+  a self-copying factory can read off exactly which of its own parts it can make.
+principle: >-
+  A drawing says what a part is; it does not say how to make it, and the how is where production
+  breaks when it moves. The Process Genome records each part as a graph: feedstock (an element or
+  compound and its form), a chain of machine-independent operations (melt, cast, draw, machine,
+  anneal, coat), the tolerance each operation must hold, and the physical test that accepts the
+  part. Each operation names the capability it needs, such as a melt at 1,600 C or a flat to 2
+  micrometres, never a brand of machine, so a factory compiles the genome against the capabilities
+  it has, the way a compiler targets a processor. Every record is content-addressed (named by the
+  hash of its contents), so a copy is either identical or visibly different, and every change
+  carries its test results. Run against a factory's own genome, the same compiler computes closure:
+  the share of the factory, by mass and by part, that it can make from its feedstock, and the list
+  of parts it must still import, which is the to-do list for the next generation.
+buildsOn:
+  - text: ISO 10303 (STEP), the standards for computer-interpretable product manufacturing information, which the genome's geometry reuses.
+    url: https://en.wikipedia.org/wiki/ISO_10303
+  - text: Open Source Ecology's Global Village Construction Set, open designs for 50 industrial machines, a first corpus to encode.
+    url: https://www.opensourceecology.org/gvcs/
+  - text: The OSHWA definition of open source hardware, whose freedoms the genome keeps.
+    url: https://oshwa.org/definition/
+  - text: RepRap, whose self-copying printers were the first open machines to count their own closure.
+    url: https://reprap.org/wiki/RepRap
+experiment:
+  goal: Show that a machine described only by its genome can be built correctly by two different shops that have never seen it, with no drawings and no phone calls.
+  setup: >-
+    Encode one complete machine from the Global Village Construction Set, about 300 parts, as a
+    genome, with a compiler that targets a shop's list of machines and their measured capabilities.
+    Two shops with different equipment each compile it and build the machine, logging every question
+    they had to ask and every part that failed its test.
+  measure: Parts right first time; human questions per hundred parts; hours to compile and plan; whether parts from the two shops interchange; closure computed for each shop against what it actually made.
+  succeedsIf: At least 90 percent of parts pass their tests first time in both shops, fewer than five questions per hundred parts reach a person, the two builds interchange, and computed closure matches the shops' real make-or-buy within 5 percent by mass.
+  costUsd: 600000
+  months: 12
+path:
+  - phase: bench
+    what: One machine, two shops.
+    scale: About 300 parts.
+    proves: A genome carries enough to build from, and closure can be computed.
+  - phase: prototype
+    what: The whole Global Village Construction Set and a RepRap encoded, with an open compiler and a public registry.
+    scale: About 50 machines.
+    proves: The format covers a full set of industrial machines.
+  - phase: pilot
+    what: A contract manufacturing network that takes genomes as orders.
+    scale: Thousands of parts a day across many shops.
+    proves: Production can move between factories in hours, not months.
+  - phase: first-plant
+    what: The bench loop of the Seed Foundry described entirely in genome form, closure tracked part by part.
+    scale: About a tonne of machine, a few dozen part families.
+    proves: A self-copying loop can be specified, audited and improved as data.
+  - phase: fleet
+    what: Every seed and its descendants carry and update their genomes, sharing improvements.
+    scale: Every factory in the industry.
+    proves: Lineages improve together without drifting apart.
+  - phase: civilization
+    what: The shared, signed recipe book of the whole industry, from the first seed in {seed-year} to the swarm.
+    scale: All of industry.
+    proves: Making anything anywhere is a question of compiling it.
+risks: >-
+  Tacit knowledge (how a weld should sound, how a casting should look) may resist encoding; the
+  genome would then carry sensor signatures recorded from good runs, and accept a part by matching
+  them. Companies may not share genomes; the project starts with open machines and makes the format
+  useful inside one firm first. Compilers may plan badly on unfamiliar machines; human review of
+  plans stays in the loop until measured right-first-time rates say otherwise.
+scene:
+  kind: network
+  focus: A machine's recipe as a branching graph, from elements at the roots to finished parts at the tips.
+  params: { nodes: 600, clusters: 12, links: 0.6, pulses: 0.5, shape: flat }

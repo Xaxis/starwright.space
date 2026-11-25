@@ -1,0 +1,79 @@
+id: self-regenerating-cell-free-reactor
+title: The Self-Regenerating Cell-Free Reactor
+domain: biology
+for: [cell-free-biomanufacturing]
+pitch: >-
+  A cell-free factory that rebuilds its own worn-out machinery as it runs, including the ribosome, so
+  it keeps making protein for days from simple feedstock instead of dying after a few hours.
+principle: >-
+  A cell-free system is the inside of a cell poured into a reactor: ribosomes, enzymes and the
+  parts that read DNA and build protein. It works, but the machinery wears out and nothing replaces
+  it, so output fades within hours. The key missing trick is self-regeneration: having the system
+  use some of its own output to rebuild its own parts. Reconstituted systems have already regenerated
+  most of their non-ribosomal proteins; the ribosome, made of RNA and dozens of proteins that must
+  self-assemble, is the hard remainder. This reactor couples a continuous-flow chamber, which feeds
+  in amino acids, nucleotides and energy and removes waste, with a designed regeneration circuit that
+  devotes a fixed share of synthesis to remaking enzymes, then ribosomal proteins, then whole
+  ribosomes from fed RNA. Once ribosome production balances ribosome loss, the reactor runs at steady
+  state: a biological factory with no cells, that maintains itself.
+buildsOn:
+  - text: A reconstituted (PURE) system regenerated 36 of its own non-ribosomal proteins in microfluidic reactors, leaving ribosome self-synthesis as the open problem this reactor targets.
+    url: https://doi.org/10.1038/s41467-020-20180-6
+    year: 2020
+  - text: All-E.-coli cell-free systems reach 2.3 milligrams of protein per millilitre in batch, the output level a continuous reactor must sustain.
+    url: https://doi.org/10.1016/j.biochi.2013.11.025
+    year: 2014
+  - text: Cell-free chemoenzymatic synthesis of starch from carbon dioxide at 8.5 times the maize rate shows cell-free pathways can run fast and long when fed and tuned.
+    url: https://doi.org/10.1126/science.abh4049
+    year: 2021
+experiment:
+  goal: Run a cell-free reactor at steady state by regenerating its enzymes and, in part, its ribosomes.
+  setup: >-
+    A continuous-flow microfluidic reactor seeded with a reconstituted transcription-translation
+    system, fed amino acids, nucleotides and energy, with a designed circuit allocating a fixed
+    fraction of output to regenerating aminoacyl-tRNA synthetases, polymerase and ribosomal proteins
+    from fed ribosomal RNA. Run against a non-regenerating control.
+  measure: >-
+    Hours of sustained protein output above half the starting rate; the fraction of ribosomal
+    proteins and assembled ribosomes made inside the reactor; feedstock consumed per gram of product.
+  succeedsIf: >-
+    The reactor holds at least half its initial output for 72 hours while regenerating all
+    non-ribosomal machinery and at least a quarter of its ribosomal protein, far beyond the few-hour
+    life of a batch.
+  costUsd: 12000000
+  months: 36
+path:
+  - phase: bench
+    what: A microfluidic reactor regenerating enzymes and partial ribosomes.
+    scale: Microlitres, days of running.
+    proves: Self-regeneration extends output well past a batch.
+  - phase: prototype
+    what: Full ribosome regeneration, so the reactor runs at true steady state.
+    scale: Millilitres, continuous.
+    proves: A cell-free system can maintain itself indefinitely.
+  - phase: pilot
+    what: A bench-top unit making a real product, a vaccine antigen or enzyme, on demand.
+    scale: Doses and grams per run.
+    proves: Useful product at useful purity from a self-maintaining reactor.
+  - phase: first-plant
+    what: Rugged units for clinics, forward sites and the first spacecraft.
+    scale: Point-of-use production.
+    proves: Biology runs where a living culture cannot be kept.
+  - phase: fleet
+    what: Reactors throughout habitats, ships and off-world bases, making medicine and materials locally.
+    scale: Across the inner solar system.
+    proves: On-demand biomanufacturing travels with the climb.
+  - phase: civilization
+    what: Cell-free production as a standard utility, feedstock in, proteins and chemicals out, anywhere.
+    scale: Planet and space.
+    proves: Biological synthesis decoupled from living culture.
+risks: >-
+  Ribosome self-assembly in vitro may prove too inefficient to balance loss; the project would supply
+  ribosomes from a companion culture while the circuit improves, still a large gain over batch.
+  Feedstock purity and contamination may limit run length, so the reactor is designed to be sealed
+  and single-use where needed. Regeneration competes with product for capacity, a trade-off the
+  experiment measures directly.
+scene:
+  kind: machine
+  focus: A flow reactor whose internal machinery visibly rebuilds itself as product streams out.
+  params: { shape: membrane, spin: 0.4 }

@@ -1,0 +1,39 @@
+id: abundant-water
+title: Clean water for everyone
+domain: water
+stage: k08
+needs: [low-energy-desalination, water-from-air]
+summary: >-
+  Water is not globally scarce, but clean fresh water is unevenly spread, and billions live where it
+  is short, expensive or dirty. With abundant clean energy, which the climb delivers, water scarcity
+  becomes an energy-and-engineering problem, not a fate: desalinate the sea, pull water from the air,
+  recycle every drop used, and move and clean water wherever it is needed. Abundance on Earth in
+  {year-k08} includes water security for everyone.
+target: >-
+  Give every person reliable access to clean, safe water for drinking, sanitation, farming and
+  industry, by desalination, atmospheric harvesting and near-total recycling powered by cheap clean
+  energy, so that water shortage is engineered away rather than endured.
+exists:
+  - text: The UN World Water Development Report 2024 found that 2.2 billion people had no access to safely managed drinking water in 2022, and that agriculture uses 72 percent of freshwater withdrawals.
+    url: https://www.unesco.org/reports/wwdr/en/2024
+    year: 2024
+  - text: Global desalination capacity reached about 97 million cubic metres a day from over 16,800 plants by 2020, with energy intensity down to about 3 kWh per cubic metre in 2018, a tenfold improvement since 1970.
+    url: https://en.wikipedia.org/wiki/Desalination
+    year: 2020
+  - text: The International Space Station's life-support system reached 98 percent water recovery in 2023, proving that water can be recycled almost completely when it must be.
+    url: https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/
+    year: 2023
+  - text: The XPRIZE Water Scarcity competition, with a 119-million-USD purse, marks how large and unsolved affordable fresh water at scale still is.
+    url: https://www.xprize.org/
+    year: 2026
+gap: >-
+  Desalination is still energy-hungry and costly, and its concentrated brine is dumped back to sea as
+  a pollutant; atmospheric harvesting is small and dear; and most used water on Earth is discharged
+  rather than recycled. Making fresh water cheap and abundant everywhere, without wrecking coasts with
+  brine, needs lower-energy desalination, water from air, near-total recycling at city scale, and the
+  clean power to run them all.
+inventions: []
+scene:
+  kind: globe
+  focus: Coastlines dotted with desalination and water-recycling plants, dry regions turning green.
+  params: { green: 0.5, look: coasts }

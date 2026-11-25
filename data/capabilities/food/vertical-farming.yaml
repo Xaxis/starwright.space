@@ -1,0 +1,35 @@
+id: vertical-farming
+title: Farming in stacked, controlled rooms
+domain: food
+stage: k08
+needs: [terawatt-solar-factories]
+summary: >-
+  A controlled-environment farm grows crops in stacked trays indoors, with light, water, nutrients
+  and air all tuned, using a tiny fraction of the land and water of a field and no pesticides. Placed
+  in or near cities, it cuts transport and spoilage and grows fresh food through any climate. Its one
+  great cost is energy for artificial light, which is exactly what the climb makes abundant, and which
+  a smarter use of light can slash.
+target: >-
+  Grow a wide range of crops, not just leafy greens, in stacked controlled rooms at a cost
+  competitive with field farming, using far less land and water, powered cleanly and lit efficiently
+  enough that the energy cost is small.
+exists:
+  - text: Field crops convert only about one percent of sunlight to biomass over a season, so a controlled farm that delivers only the light plants use can in principle beat the field's efficiency.
+    url: https://www.ars.usda.gov/news-events/news/research-news/2012/comparing-energy-conversion-of-plants-and-solar-cells/
+    year: 2012
+  - text: Agriculture uses about half the world's habitable land, the pressure indoor farming relieves by stacking crops and cutting the footprint per tonne.
+    url: https://ourworldindata.org/environmental-impacts-of-food
+    year: 2024
+  - text: Engineered photosynthesis gains of 15 to 40 percent show crops can be tuned to a controlled light environment for higher output.
+    url: https://doi.org/10.1126/science.aat9077
+    year: 2019
+gap: >-
+  Vertical farms today are profitable mainly for leafy greens and herbs, because lighting energy and
+  capital cost make staple grains and fruiting crops uneconomic. Getting the energy per kilogram down,
+  by better light delivery and crops bred for indoor light, and widening the crop range, are the
+  unsolved problems.
+inventions: [daylight-piped-farm]
+scene:
+  kind: field
+  focus: Stacked towers of growing trays indoors, crops lit tray by tray.
+  params: { unit: tower, count: 300, terrain: city }

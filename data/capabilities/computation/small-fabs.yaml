@@ -1,0 +1,46 @@
+id: small-fabs
+title: Chip fabs small enough for any city
+domain: computation
+stage: k08
+needs: [automated-factories]
+summary: >-
+  Every machine the climb builds needs chips, and nearly all of them come from a few dozen giant
+  fabs that cost tens of billions of dollars each and take years to build. That makes chips a
+  bottleneck and a single point of failure. Fabs that fit in a room, need no cleanroom and no masks,
+  and make useful chips in small batches would let any city, and later any space factory, make its
+  own.
+target: >-
+  A fab the size of a shipping container that makes working logic and power chips from wafers to
+  packaged parts, with no cleanroom and no photomasks, at a cost a city or a university can carry,
+  in hundreds of cities by {year-k08} and as the pattern for fabs in space.
+exists:
+  - text: Japan's Minimal Fab, from AIST and a consortium of companies, processes half-inch wafers one at a time in desk-sized tools for small-batch chip and MEMS production.
+    url: https://www.minimalfab.com/en/about/greeting.php
+    year: 2026
+  - text: Sam Zeloof made a 100-transistor chip on a 10 micron polysilicon-gate process, the technology of Intel's first processor, in a home garage fab.
+    url: http://sam.zeloof.xyz/second-ic/
+    year: 2021
+  - text: The Hacker Fab at Carnegie Mellon University, started in January 2023, is building an open-source semiconductor fab anyone can copy.
+    url: https://hackerfab.org
+    year: 2023
+  - text: Google and SkyWater released an open process design kit for SkyWater's 130 nm node, so anyone can design a manufacturable chip.
+    url: https://github.com/google/skywater-pdk
+    year: 2020
+  - text: Tiny Tapeout puts many small designs on one shared chip run, so making your own chip is quicker, easier and cheaper.
+    url: https://tinytapeout.com/
+    year: 2026
+  - text: Multibeam builds miniature electron-beam columns that write chip patterns directly, in parallel, with no mask.
+    url: https://www.multibeamcorp.com/
+    year: 2026
+  - text: Modern fabs are among the most expensive things built, costing tens of billions of dollars, and all of their work happens inside cleanrooms.
+    url: https://en.wikipedia.org/wiki/Semiconductor_fabrication_plant
+    year: 2026
+gap: >-
+  Small fabs today make simple chips slowly, or only some steps of a process. Masks cost more than
+  a small run is worth, maskless writing is slow, and a cleanroom costs more than the tools in it.
+  No small fab yet makes a whole modern chip, wafer to package, at a price that competes.
+inventions: [vacuum-fab]
+scene:
+  kind: field
+  focus: Container fabs on city blocks, each one lit while it runs a batch.
+  params: { unit: fab, count: 400, terrain: city }

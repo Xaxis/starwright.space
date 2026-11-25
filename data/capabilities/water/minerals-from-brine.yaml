@@ -1,0 +1,35 @@
+id: minerals-from-brine
+title: Minerals from the brine
+domain: water
+stage: k08
+needs: [low-energy-desalination]
+summary: >-
+  Every litre of fresh water that desalination makes leaves behind a litre and a half of brine, and
+  the world's plants now pour out brine faster than they make water. Dumped back to the sea, it is a
+  pollutant that smothers the sea floor. But brine is also a concentrated ore: magnesium, bromine,
+  potassium, lithium and plain salt, dissolved and waiting. Mining the brine turns desalination's
+  worst waste into a source of critical minerals and removes the pollution at the same time.
+target: >-
+  Recover salt, magnesium, bromine, potassium, lithium and other elements from desalination brine and
+  natural brines at useful rates and purities, so that desalination produces minerals as well as
+  water and discharges little or no brine.
+exists:
+  - text: Jones and colleagues estimated global brine production at about 142 million cubic metres a day, roughly 50 percent more than earlier figures and more than the 95 million cubic metres of water produced, with 55 percent from Saudi Arabia, the UAE, Kuwait and Qatar.
+    url: https://doi.org/10.1016/j.scitotenv.2018.12.076
+    year: 2019
+  - text: Brine is already mined for elements, as all the world's bromine comes from brine, and seawater magnesium plants (Dow at Freeport from 1941, Norsk Hydro) supplied more than half the world's primary magnesium through the 1950s and 1960s. Seawater holds about 1,350 mg per litre of magnesium and 65 mg per litre of bromine.
+    url: https://en.wikipedia.org/wiki/Brine_mining
+    year: 2024
+  - text: Zero-liquid-discharge treatment pushes brine to dryness, recovering 60 to 80 percent of its water with membrane pre-concentration before a crystalliser, though the final stages are energy-intensive and leave solid waste.
+    url: https://en.wikipedia.org/wiki/Zero_liquid_discharge
+    year: 2024
+gap: >-
+  Recovering minerals from brine is done today only for a few elements where the economics already
+  work, like bromine and salt. The low-value, dilute elements, and the goal of discharging no brine
+  at all, are blocked by the energy and cost of pushing brine to dryness. Making brine mining pay for
+  itself across many elements, at the scale desalination now produces, is unsolved.
+inventions: [zero-brine-desalinator]
+scene:
+  kind: field
+  focus: Crystalliser and recovery tanks beside a desalination plant, brine turning into stacks of minerals.
+  params: { unit: tank, count: 150, terrain: sea }

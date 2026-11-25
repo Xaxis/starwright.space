@@ -1,0 +1,76 @@
+id: inner-lab
+title: The Inner Lab
+domain: manufacturing
+for: [autonomous-industry, automated-factories, materials-discovery]
+pitch: >-
+  A small robotic research line built into every factory, which runs its own experiments on the
+  factory's own feedstock day and night, so the plant retunes itself when its ore changes and learns
+  new products without waiting for engineers, and shares every result with its whole lineage.
+principle: >-
+  A factory fails to adapt not because the physics is unknown but because finding the new settings
+  takes experiments, and experiments take people. Robot labs like the A-Lab have shown that a loop
+  of planning, synthesis, measurement and learning can run unattended for weeks. The Inner Lab puts
+  that loop inside production: a side line, about a twentieth of the plant, with the same processes
+  at small scale (a melt, a caster, a furnace, a test rig) and instruments to measure what comes
+  out. When the feed or a product changes, it runs designed experiments chosen by Bayesian
+  optimisation, which picks each next trial to learn the most from the fewest, and it hands the main
+  line a new recipe only once its parts pass their tests. Every recipe and every result is written
+  back to the plant's Process Genome and signed, so other factories, light-minutes away, start from
+  what this one learned. Faults are treated the same way: a failing machine is copied in the lab,
+  its fault reproduced and fixed, and the fix spread.
+buildsOn:
+  - text: Berkeley Lab's A-Lab, which made 36 of 57 target compounds in 17 days of unattended operation (Nature, 2023).
+    url: https://www.nature.com/articles/s41586-023-06734-w
+  - text: Bayesian optimisation, the method for choosing each next experiment to learn the most from few trials.
+    url: https://en.wikipedia.org/wiki/Bayesian_optimization
+  - text: Xiaomi's self-optimising phone factory, which tunes its own lines.
+    url: https://newatlas.com/robotics/xiaomi-dark-robotic-factory/
+  - text: GNoME's predictions of stable materials, a source of candidates for the lab to try.
+    url: https://www.nature.com/articles/s41586-023-06735-9
+experiment:
+  goal: Show that a plant with an Inner Lab can recover full product quality after blind changes to its feedstock, with no person involved.
+  setup: >-
+    A pilot casting line making iron parts from ore, run by a contract research centre, with a 5
+    percent side line holding a small furnace, caster, heat treatment and test rig, and the control
+    software. Over six months it is fed ten blind changes of ore and scrap blend, chosen by a team
+    the plant never hears from.
+  measure: Hours from each change to parts back in specification; scrap rate in that time; experiments run; whether a recipe learned on one ore transfers to a second, separate line.
+  succeedsIf: After each of the ten changes, parts are back in specification within 48 hours with no human input, scrap stays under 5 percent over the whole trial, and recipes transferred to the second line work first time at least 7 times in 10.
+  costUsd: 3000000
+  months: 18
+path:
+  - phase: bench
+    what: One casting line with its lab, on blind feed changes.
+    scale: Tonnes of parts a day.
+    proves: A plant can retune itself without people.
+  - phase: prototype
+    what: Inner Labs in three different plants on Earth (metal, glass and cement), sharing recipes.
+    scale: Three plants, one shared recipe book.
+    proves: What one plant learns, another can use.
+  - phase: pilot
+    what: The Inner Lab inside the first lunar seed, adapting it to real regolith.
+    scale: "A {seed-mass} seed"
+    proves: Self-tuning works where people cannot reach in time.
+  - phase: first-plant
+    what: Every seed lineage on the Moon and in orbit with its lab, sharing across the light-second gap.
+    scale: Hundreds of seeds.
+    proves: Lineages improve faster together than apart.
+  - phase: fleet
+    what: Labs adapting industry to asteroid and Mercury rock, light-minutes from Earth.
+    scale: Industry across the inner system from {year-planet}.
+    proves: New worlds can be learned without people on site.
+  - phase: civilization
+    what: The industry's shared research, running in every factory of the swarm's supply chain.
+    scale: Every factory.
+    proves: Industry learns as fast as it grows.
+risks: >-
+  Small-scale trials may not predict the full-size line, because heat and flow scale differently;
+  the lab's results would then pass through a short trial on the main line before release, and the
+  bench measures how often small and large disagree. Optimisers may find settings that pass tests
+  but fail in service; tests in the Genome would grow to include accelerated ageing. A lab that
+  learns can also learn the wrong thing; every change stays reversible and logged, and lineages vote
+  before a recipe spreads.
+scene:
+  kind: machine
+  focus: A robot arm at the lab's side line, testing a part while the main line runs on behind it.
+  params: { shape: arm, spin: 0.4 }

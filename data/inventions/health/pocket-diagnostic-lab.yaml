@@ -1,0 +1,77 @@
+id: pocket-diagnostic-lab
+title: The Pocket Lab
+domain: health
+for: [point-of-care-medicine, universal-health]
+pitch: >-
+  A handheld device that runs many medical tests on a drop of blood, a swab or a breath, reads DNA
+  and proteins on the spot, interprets the result with on-board intelligence, and works offline, so a
+  full first-line clinic fits in a pocket anywhere on Earth or off it.
+principle: >-
+  A diagnosis needs three things: a sample prepared, its molecules measured, and the result
+  interpreted. The Pocket Lab puts all three in one sealed device. A microfluidic cartridge takes raw
+  sample and does the chemistry, preparing it without a technician. A pair of sensors measures it: a
+  nanopore channel reads DNA and RNA to identify pathogens and variants, and an optical sensor reads
+  proteins and small molecules for the common blood tests. On-board models interpret the readings,
+  flagging an infection, a marker or a variant and suggesting next steps, all without a connection, so
+  it works in a village or a crater. When a link exists, the result and a specialist's review pass
+  both ways. Cartridges are cheap and single-use; the reader is reusable and rugged. The same device
+  that extends first-line care to the unreached on Earth serves a crew months from the nearest
+  hospital.
+buildsOn:
+  - text: Oxford Nanopore's portable, real-time sequencers already read DNA and RNA outside a central lab, the nanopore sensing a pocket lab builds in.
+    url: https://nanoporetech.com/
+    year: 2024
+  - text: AlphaFold 3's accurate molecular predictions let on-board software interpret a reading and link it to disease and treatment.
+    url: https://doi.org/10.1038/s41586-024-07487-w
+    year: 2024
+  - text: Wellcome Leap's UZIMA program, funded at 100 million USD, builds and delivers health tools for underserved populations, the deployment path for a pocket lab.
+    url: https://wellcomeleap.org/
+    year: 2024
+experiment:
+  goal: Build a handheld device that runs a panel of tests from raw sample to interpreted result offline, and validate it against lab references.
+  setup: >-
+    Integrate a microfluidic sample-prep cartridge, a nanopore sequencing channel and an optical
+    biosensor with an on-board interpretation model in a rugged handheld. Test a panel (common
+    infections, a blood panel, key variants) on patient samples against central-lab references, offline.
+  measure: >-
+    Agreement with lab references across the panel (sensitivity and specificity); time to result;
+    cost per cartridge; performance with no connectivity; ruggedness.
+  succeedsIf: >-
+    The device matches lab references across the panel within clinical tolerance, offline, in under an
+    hour per sample, at a cartridge cost low enough for routine use in low-income settings.
+  costUsd: 28000000
+  months: 42
+path:
+  - phase: bench
+    what: An integrated handheld running a test panel from raw sample, validated against labs.
+    scale: One device, many sample types.
+    proves: A full first-line panel runs offline in one pocket device.
+  - phase: prototype
+    what: Field trials in low-resource settings with real patients and carers.
+    scale: Clinics and villages.
+    proves: It works and is trusted outside the lab.
+  - phase: pilot
+    what: Deployment through a health program at regional scale.
+    scale: A region's first-line diagnosis.
+    proves: It extends care to the unreached affordably.
+  - phase: first-plant
+    what: Mass production driving cartridge cost down and the test menu up.
+    scale: Millions of devices.
+    proves: Point-of-care diagnosis is ordinary, not exceptional.
+  - phase: fleet
+    what: Hardened versions on ships, bases and habitats off Earth.
+    scale: Inner solar system.
+    proves: Crews diagnose and treat far from any hospital.
+  - phase: civilization
+    what: A clinic in every hand, on every world people live on.
+    scale: Planet and space.
+    proves: Distance from a hospital no longer limits care.
+risks: >-
+  Integrating sample prep, sensing and interpretation cheaply and ruggedly is hard; the project builds
+  the panel up from the most valuable tests. On-board interpretation can err, so the device shows
+  confidence and defers to a human when linked. Cartridge cost and cold-chain-free reagents are the
+  gating problems for the poorest settings and are tackled first.
+scene:
+  kind: machine
+  focus: A handheld reader with a sample cartridge, giving an interpreted result on its screen.
+  params: { shape: chip, spin: 0.1 }

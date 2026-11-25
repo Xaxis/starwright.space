@@ -1,0 +1,47 @@
+id: clean-firm-power
+title: Clean power that runs day and night
+domain: energy
+stage: k08
+needs: [fast-permitting, buildout-finance, workforce-transition]
+summary: >-
+  Sun and storage can carry most of the load, but a grid is cheaper and safer with some sources that
+  run day and night in any weather. Fission, heat from deep rock and, later, fusion can supply that
+  firm share without carbon. Earth's interior already leaks {geothermal-flow} of heat; drills that
+  reach hot rock under every country would let any grid tap it.
+target: >-
+  Firm clean power of about a tenth of {power-k08}: fission plants built on time and on budget, wells
+  into superhot rock almost anywhere, and the first fusion plants, each at a cost close to that of a
+  solar field with storage.
+exists:
+  - text: The World Nuclear Association counts 444 operable reactors of 406,748 MWe and 81 under construction in November 2026; Ontario's Darlington SMR-1, a 300 MWe small modular reactor, began construction in June 2026.
+    url: https://world-nuclear.org/information-library/current-and-future-generation/nuclear-power-in-the-world-today
+    year: 2026
+  - text: Fervo Energy's Cape Station in Utah, an enhanced geothermal plant, declared its first 33 MW in commercial operation on 30 September 2026, with 400 MW more contracted to Google from 2028.
+    url: https://fervoenergy.com/fervo-energy-reports-third-quarter-2026-results/
+    year: 2026
+  - text: The Clean Air Task Force defines superhot rock as above 400 °C, where one well can yield five to ten times the energy of a conventional geothermal well.
+    url: https://www.catf.us/superhot-rock/
+    year: 2026
+  - text: Quaise Energy drilled granite with a 100 kW millimetre-wave gyrotron in a full-scale demonstration near Houston in May 2025.
+    url: https://www.quaise.com/news/major-demo-keeps-quaise-energy-on-track-to-power-the-world-with-clean-renewable-geothermal-energy
+    year: 2025
+  - text: On 7 April 2025 the National Ignition Facility put 2.08 MJ of laser light on a target and got 8.6 MJ of fusion energy back, a target gain of 4.13.
+    url: https://lmf.llnl.gov/science/achieving-fusion-ignition
+    year: 2025
+  - text: Helion's Polaris became the first privately built machine to show measurable deuterium-tritium fusion, announced in February 2026.
+    url: https://www.powermag.com/helion-announces-fusion-milestone-moves-closer-to-commercial-deployment/
+    year: 2026
+  - text: Commonwealth Fusion Systems delivered the first of the 18 superconducting field magnets for its SPARC tokamak in January 2026.
+    url: https://blog.cfs.energy/cfs-delivers-its-first-fusion-magnet-a-stronger-smaller-design/
+    year: 2026
+gap: >-
+  Fission plants in the West have run years late and billions over budget, and the first small
+  modular reactors are only now being built. Enhanced geothermal works where hot rock lies near the
+  surface; reaching rock above 400 °C, which gives several times the power per well, needs drills,
+  casings and pipes that survive heat no oil well meets. Fusion has passed ignition in a laser
+  laboratory but has not yet made net electricity.
+inventions: [magma-probe]
+scene:
+  kind: reactor
+  focus: A well reaching down through the crust to rock hot enough to glow.
+  params: { type: geothermal, glow: 0.8 }

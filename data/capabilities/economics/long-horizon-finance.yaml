@@ -1,0 +1,43 @@
+id: long-horizon-finance
+title: Capital that can wait a century
+domain: economics
+stage: k09
+needs: [buildout-finance, long-term-stewardship]
+summary: >-
+  The climb's biggest projects pay off over longer than any investor waits. The seed factory doubles
+  every {doubling-time} and reaches the full swarm {years-seed-to-sun} later, and a mass driver or a
+  fleet of collectors earns for decades. Markets discount the far future steeply, so a project worth
+  a great deal to our grandchildren looks worth little today. The climb needs money that can wait.
+target: >-
+  Ways for savers today to fund projects that pay out over 50 to 150 years, priced at a discount
+  rate that falls with the horizon as theory and practice now recommend, so the seed factory and its
+  first doublings can be financed long before they earn.
+exists:
+  - text: Austria sold a 100-year government bond in 2017, raising 3.5 billion euros at a 2.1 percent coupon, and a second one in 2020 at 0.85 percent, bid nearly nine times over.
+    url: https://uk.investing.com/analysis/austria-100year-bond-hugely-oversubscribed-as-investors-scramble-for-returns-200443446
+    year: 2020
+  - text: Britain's consols, perpetual government bonds first consolidated in 1752, were finally redeemed in 2015.
+    url: https://en.wikipedia.org/wiki/Consol_(bond)
+    year: 2015
+  - text: Kamstra and Shiller proposed in 2009 the trill, a perpetual security paying a trillionth of a country's GDP, so investors could share in national growth.
+    url: https://cowles.yale.edu/publications/cfdp/cfdp-1717
+    year: 2009
+  - text: Argentina's 2005 debt restructuring included 30-year warrants that paid out only when its GDP grew faster than a set path.
+    url: https://www.imf.org/external/pubs/ft/wp/2006/wp0685.pdf
+    year: 2006
+  - text: Weitzman showed in 2001 that uncertainty about long-run interest rates makes the right discount rate fall over time, drawing on a survey of 2,160 economists.
+    url: https://doi.org/10.1257/aer.91.1.260
+    year: 2001
+  - text: The UK Treasury's 2026 Green Book discounts at 3 percent for the first 30 years, 2.5 percent for years 31 to 75 and 2.25 percent after that.
+    url: https://www.gov.uk/government/publications/the-green-book--2/the-green-book-2026
+    year: 2026
+gap: >-
+  Century bonds exist, but they are government debt at a fixed coupon, not finance for a project,
+  and they pay the same whether the project thrives or fails. Nothing lets an investor own a share of
+  a growth that only begins decades from now, and no project has been financed over the span the
+  climb needs.
+inventions: [doubling-bond]
+scene:
+  kind: ladder
+  focus: The rungs from today to the seed factory and beyond, with a thread of capital running up them.
+  params: { at: 2 }

@@ -141,5 +141,7 @@ export const SCENE_PARAMS = {
 
 export function sceneProblems(kind: SceneKind, params: unknown): string[] {
   const r = SCENE_PARAMS[kind].safeParse(params);
-  return r.success ? [] : r.error.issues.map((i) => `scene.params.${i.path.join(".")}: ${i.message}`);
+  return r.success
+    ? []
+    : r.error.issues.map((i) => `scene.params.${i.path.join(".")}: ${i.message}`);
 }

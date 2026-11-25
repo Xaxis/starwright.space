@@ -1,0 +1,43 @@
+id: biosecurity
+title: Making engineered pandemics hard to start
+domain: resilience
+stage: k08
+needs: [programmable-biology]
+summary: >-
+  The climb needs biology as an engineering discipline, and the same tools that make crops and
+  medicines could make a pathogen worse than any natural one. The defence is layered: every order
+  for synthetic DNA screened, the most dangerous research kept under shared rules, and some lines,
+  such as mirror life, not crossed at all.
+target: >-
+  Every gene synthesis provider and benchtop synthesizer in the world screening every order and
+  customer against an up-to-date list of hazards, verifiably and for free, under shared
+  international rules, with no gap a determined bad actor could slip through.
+exists:
+  - text: The International Gene Synthesis Consortium is an industry group whose members screen both the sequences of synthetic gene orders and the customers who place them, under a common Harmonized Screening Protocol, revised in 2017.
+    url: https://genesynthesisconsortium.org/
+    year: 2017
+  - text: SecureDNA offers a free, cryptographically secure and verifiably up-to-date system to screen all DNA synthesis for potential hazards.
+    url: https://securedna.org/
+    year: 2026
+  - text: IBBIS gives away free, open-source synthesis screening software (commec) and tools for checking that customers are legitimate.
+    url: https://ibbis.bio/
+    year: 2026
+  - text: The US Office of Science and Technology Policy issued a framework in April 2024 recommending that providers of synthetic nucleic acids screen purchases to prevent misuse.
+    url: https://bidenwhitehouse.archives.gov/ostp/news-updates/2024/04/29/framework-for-nucleic-acid-synthesis-screening/
+    year: 2024
+  - text: In December 2024 a group of scientists warned in Science that mirror bacteria, built from mirror-image molecules, could pose serious and wide-ranging risks to people, animals and plants, and called for them not to be made.
+    url: https://purl.stanford.edu/cv716pj4036
+    year: 2024
+  - text: The Biological Weapons Convention bans the development and stockpiling of biological weapons; the UN Office for Disarmament Affairs supports its meetings and confidence-building measures.
+    url: https://disarmament.unoda.org/biological-weapons/
+    year: 1975
+gap: >-
+  Screening is voluntary in most countries, and benchtop synthesizers are spreading into labs that
+  no provider screens. The Biological Weapons Convention has no inspectors. Screening lists name
+  known threats, while AI design tools make it easier to make sequences that look unlike anything
+  on a list.
+inventions: []
+scene:
+  kind: cell
+  focus: A microbe under the screen, its genome read and checked before it can be made.
+  params: { type: microbe, organelles: 0.4, divide: false, glow: 0.6 }

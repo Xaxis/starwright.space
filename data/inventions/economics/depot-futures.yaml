@@ -1,0 +1,74 @@
+id: depot-futures
+title: Depot Futures
+domain: economics
+for: [space-economy]
+pitch: >-
+  Standard, cleared contracts to deliver a tonne of propellant, water or oxygen to a named depot in
+  a named year, so the first plants that make them in space can borrow against sales they have
+  already made.
+principle: >-
+  Power plants on Earth are financed on offtake contracts: a bank lends because a buyer it trusts has
+  promised to buy the output at a known price for years. A futures market adds standard terms, a
+  clearing house that stands behind both sides, and a public price. Resources made in space have
+  none of these, so buyers and sellers each wait for the other. Depot Futures supplies the contract:
+  one tonne of liquid oxygen, water, hydrogen or methane of published purity, delivered to a named
+  depot in a named quarter, with margin posted to a clearing house. Space agencies are the anchor
+  buyers at first, as NASA was for cargo to the space station, but anyone may buy, including launch
+  firms that already state what they would pay for propellant in orbit. A plant builder that has
+  sold five years of futures can raise debt against them, and the price curve the market publishes
+  tells every planner what propellant in space will cost, and when.
+buildsOn:
+  - text: NASA's 2020 purchase of lunar regolith from four companies, the first contracts for resources gathered in space.
+    url: https://www.nasa.gov/news-release/nasa-selects-companies-to-collect-lunar-resources-for-artemis-demonstrations/
+  - text: NASA's Commercial Lunar Payload Services, buying deliveries to the Moon as a service since 2018.
+    url: https://www.nasa.gov/news-release/nasa-announces-new-partnerships-for-commercial-lunar-payload-delivery-services/
+  - text: United Launch Alliance's 2016 offer of prices for propellant delivered in low Earth orbit and on the Moon.
+    url: https://www.space.com/33297-satellite-refueling-business-proposal-ula.html
+  - text: NASA's 2011 estimate that a commercial approach cut the cost of developing Falcon 9 to well under half of traditional methods.
+    url: https://www.nasa.gov/pdf/586023main_8-3-11_NAFCOM.pdf
+experiment:
+  goal: Show that standard contracts for delivery in space draw enough buyers and sellers to set a price, and that a plant can raise money against them.
+  setup: >-
+    A real but small market, run for two years by an exchange or a space agency, in contracts for
+    water ice and oxygen delivered to low Earth orbit and to the lunar surface between 2032 and 2040,
+    with margin held by a clearing bank. One or more agencies commit to buy a set volume; launch and
+    resource firms trade the rest.
+  measure: Active buyers and sellers; volume traded; whether a forward price curve forms and how wide its spreads are; debt or equity raised by sellers on the strength of contracts sold.
+  succeedsIf: At least ten active participants, a price curve with spreads under 20 percent, and at least one resource firm raising 50 million dollars or more against its contracts.
+  costUsd: 5000000
+  months: 24
+path:
+  - phase: bench
+    what: A trading simulation using firms' own estimates of cost and demand.
+    scale: 20 firms, a simulated decade.
+    proves: The contract terms are ones both sides will trade.
+  - phase: prototype
+    what: The two-year market for future deliveries.
+    scale: Hundreds of tonnes of forward contracts.
+    proves: A price forms and plants can borrow against it.
+  - phase: pilot
+    what: The first physical deliveries settle contracts at a lunar or orbital depot.
+    scale: Tonnes delivered.
+    proves: Contracts can be met and verified in space.
+  - phase: first-plant
+    what: A liquid market in propellant and water across the Earth and Moon system, with private buyers outnumbering agencies.
+    scale: Thousands of tonnes a year.
+    proves: Space industry pays its own way.
+  - phase: fleet
+    what: Contracts for metal, glass and power from the seed industries, at depots from Earth orbit to the asteroids.
+    scale: "The industry from {seed-year} onward"
+    proves: The doubling industry finances itself through its own sales.
+  - phase: civilization
+    what: Markets across the inner solar system clearing the materials and power the swarm is built from.
+    scale: "{swarm-full-mined} of processed mass"
+    proves: The climb's industry is financed by what it sells.
+risks: >-
+  With few buyers at first, prices may be thin and easy to move; anchor purchases by agencies and
+  limits on positions steady them. A new plant may fail to deliver; contracts can allow delivery from
+  any qualified source, with the clearing house covering the gap from margin. Regulators may treat a
+  new kind of derivative with suspicion; starting as forward contracts between known parties, then
+  moving to an exchange, keeps it inside existing rules.
+scene:
+  kind: orbit
+  focus: Depots in orbit filling with propellant as the contracts for each quarter come due.
+  params: { depots: 0.8, stations: 0.4 }

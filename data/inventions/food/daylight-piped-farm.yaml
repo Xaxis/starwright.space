@@ -1,0 +1,76 @@
+id: daylight-piped-farm
+title: The Daylight-Piped Farm
+domain: food
+for: [vertical-farming]
+pitch: >-
+  A vertical farm lit by real sunlight piped indoors through light guides, delivering only the colours
+  plants use, so the biggest cost of indoor farming, the electricity for lamps, nearly vanishes.
+principle: >-
+  Vertical farms are held back by the energy their lamps burn, because converting electricity to
+  light and then light to plant growth throws most of the energy away, and field crops use only about
+  one percent of the sunlight that reaches them in any case. The Daylight-Piped Farm skips the lamps.
+  Rooftop collectors track the Sun and focus it into bundles of optical fibres or light guides that
+  carry daylight down into the stacked growing rooms, spreading it across the trays. Spectral filters
+  pass the red and blue light plants use for photosynthesis and shunt the infrared away as heat to be
+  used or dumped, so the plants get the light they want and the building does not cook. On dull days
+  or at night, efficient tuned lamps on clean power fill in. Because sunlight is free and delivered
+  directly, the farm's running cost drops toward the cost of water, nutrients and the building, and
+  staple and fruiting crops, not just greens, can pay their way indoors.
+buildsOn:
+  - text: Field crops convert only about one percent of incident sunlight to biomass over a season, the inefficiency that makes delivering only usable light worthwhile.
+    url: https://www.ars.usda.gov/news-events/news/research-news/2012/comparing-energy-conversion-of-plants-and-solar-cells/
+    year: 2012
+  - text: Engineered photosynthesis gains of 15 to 40 percent show crops can be tuned to a controlled light spectrum for more growth.
+    url: https://doi.org/10.1126/science.aat9077
+    year: 2019
+  - text: Soybean seed yield rose up to 33 percent with a photosynthetic fix, evidence that light-optimised staple crops can pay off indoors.
+    url: https://doi.org/10.1126/science.adc9831
+    year: 2022
+experiment:
+  goal: Grow crops indoors on piped, filtered daylight and show the energy cost per kilogram falls far below a lamp-lit farm.
+  setup: >-
+    Build a small stacked growing room fed by tracking rooftop collectors, fibre or light-guide
+    delivery and spectral filters, with efficient lamps for fill light. Grow leafy greens and a
+    fruiting crop against a matched lamp-lit room.
+  measure: >-
+    Light delivered to the canopy versus collected; crop yield per square metre; electricity per
+    kilogram of crop against the lamp-lit control; building heat load.
+  succeedsIf: >-
+    The piped-daylight room matches the lamp-lit room's yield while using at least 60 percent less
+    electricity per kilogram, with the heat load managed.
+  costUsd: 8000000
+  months: 30
+path:
+  - phase: bench
+    what: A piped-daylight growing room beating a lamp-lit control on energy per kilogram.
+    scale: One room.
+    proves: Piped filtered daylight grows crops at far lower energy.
+  - phase: prototype
+    what: A multi-storey farm on piped daylight with fill lighting, growing staples and fruit.
+    scale: A building.
+    proves: The crop range widens beyond greens at acceptable cost.
+  - phase: pilot
+    what: A commercial farm in a city selling staples grown on daylight.
+    scale: A city district's fresh food.
+    proves: Indoor staples pay their way.
+  - phase: first-plant
+    what: Daylight-piped farms built into new developments at scale.
+    scale: Many cities.
+    proves: Indoor farming competes with field farming on cost for more crops.
+  - phase: fleet
+    what: The light-delivery approach reused in habitats and bases to light crops with piped sunlight.
+    scale: Global and off-world.
+    proves: The same optics feed crops on Earth and in space.
+  - phase: civilization
+    what: Cities growing much of their fresh and staple food indoors on sunlight, land returned to nature.
+    scale: Planet and space.
+    proves: Food production moved off farmland without burning energy for light.
+risks: >-
+  Piping daylight loses light at every bend and junction, and may not deliver enough on cloudy days;
+  the design pairs it with efficient fill lamps and is tested in real weather. Collector and optics
+  cost may outweigh the energy saved, which the experiment measures directly. Some crops may still
+  need more light than daylight piping provides, keeping those on lamps.
+scene:
+  kind: field
+  focus: Stacked indoor trays lit by sunlight piped down through glowing light guides from the roof.
+  params: { unit: tower, count: 200, terrain: city }

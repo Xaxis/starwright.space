@@ -1,0 +1,43 @@
+id: lunar-industry
+title: Industry on the Moon
+domain: space
+stage: k09
+needs: [cheap-launch, propellant-depots, in-space-resources, cislunar-transport, lunar-power, space-ice-mining, cislunar-network, space-commons, space-economy]
+summary: >-
+  The Moon is the nearest store of rock, metal and ice outside a deep gravity well. Escaping it
+  takes about a twentieth of the energy per kilogram that escaping Earth does, and there is no air
+  to push through. Industry there mines regolith and polar ice for oxygen, metals and glass, and it
+  is where the first seed factory lands in {seed-year}.
+target: >-
+  Bases at the poles and on the maria that make oxygen, water, iron, aluminium, silicon and glass
+  from local rock at thousands of tonnes a year, keep working through nights of {lunar-night}, and host
+  the {seed-mass} seed factory and the mass drivers that follow it.
+exists:
+  - text: India's Chandrayaan-3 landed on 23 August 2023 near the lunar south pole, the first landing there.
+    url: https://en.wikipedia.org/wiki/Chandrayaan-3
+    year: 2023
+  - text: Firefly's Blue Ghost Mission 1 landed in Mare Crisium on 2 March 2025 and ran more than 14 days of surface operations, the first fully successful commercial Moon landing.
+    url: https://fireflyspace.com/missions/blue-ghost-mission-1/
+    year: 2025
+  - text: China's Chang'e 6 brought 1,935.3 grams of rock from the far side of the Moon back to Earth on 25 June 2024.
+    url: https://en.wikipedia.org/wiki/Chang%27e_6
+    year: 2024
+  - text: Artemis II carried four astronauts around the Moon and back in nine days in April 2026, the first crewed lunar flight since 1972.
+    url: https://www.nasa.gov/mission/artemis-ii/
+    year: 2026
+  - text: The LCROSS impact into the shadowed crater Cabeus found water at 5.6 plus or minus 2.9 percent by mass in the ejected soil (Colaprete and colleagues, Science, 2010).
+    url: https://doi.org/10.1126/science.1186986
+    year: 2010
+  - text: NASA's MOXIE made 122 grams of oxygen from the Martian air over 16 runs, the first oxygen made from local resources on another world.
+    url: https://www.jpl.nasa.gov/news/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/
+    year: 2023
+gap: >-
+  Landings have only become routine in the 2020s, and every mission so far has been a visit. No one
+  has made oxygen or metal on the Moon, mined its ice, or run a plant through a night of {lunar-night}.
+  Dust wears seals and fouls radiators, and nothing there is built to work for decades. The rock
+  also has to leave: lunar industry needs a cheap way to throw its products into space.
+inventions: [iron-jacket-driver]
+scene:
+  kind: moon
+  focus: A polar base mining regolith and ice, with landers coming and going.
+  params: { bases: 0.5, mines: 0.6, domes: 0.2 }

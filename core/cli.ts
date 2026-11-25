@@ -2,27 +2,19 @@
  * The model from the command line.
  *   node core/cli.ts                 the ladder: each rung's power and year, and the eras' limits
  *   node core/cli.ts --check         parse and cross-check data/; exit 1 listing every problem
- *   node core/cli.ts --check --lane energy,space
- *                                    only those domains' problems; ids planned in spine.yaml count
  *   node core/cli.ts --only ID       one quantity: value, formula and inputs
  *   node core/cli.ts --ids           every quantity prose may cite as {id}, with its value
  *   node core/cli.ts --set ID=VALUE  a variant (repeatable)
  */
 import { DataError, format, RUNGS, run } from "./src/index.ts";
-import { loadData, plannedIds } from "./src/load.ts";
+import { loadData } from "./src/load.ts";
 
 const args = process.argv.slice(2);
-const laneAt = args.indexOf("--lane");
 // Only --check insists on every reference; the other commands run on whatever parses.
-const lane =
-  laneAt >= 0
-    ? { domains: (args[laneAt + 1] ?? "").split(","), planned: plannedIds() }
-    : args.includes("--check")
-      ? undefined
-      : { domains: [], planned: [] };
+const lenient = !args.includes("--check");
 let data: ReturnType<typeof loadData>;
 try {
-  data = loadData(undefined, { lane });
+  data = loadData(undefined, { lenient });
 } catch (e) {
   if (e instanceof DataError) {
     console.error(e.message);
@@ -49,7 +41,8 @@ for (let i = 0; i < args.length; i++) {
 }
 const m = run(data.constants, data.assumptions, overrides);
 if (args.includes("--ids")) {
-  for (const q of m.q.values()) console.log(`${q.id.padEnd(30)} ${format(q.value, q.unit).padEnd(18)} ${q.label}`);
+  for (const q of m.q.values())
+    console.log(`${q.id.padEnd(30)} ${format(q.value, q.unit).padEnd(18)} ${q.label}`);
   process.exit(0);
 }
 const only = args.indexOf("--only");
@@ -73,7 +66,9 @@ console.log(`K today: ${format(m.q.get("k-now")?.value ?? 0, "K")}`);
 for (const r of RUNGS) {
   const p = m.q.get(r.power);
   const y = m.q.get(`year-${r.id}`);
-  console.log(`${r.id.padEnd(8)} ${format(p?.value ?? 0, "W").padEnd(16)} ${y ? format(y.value, "year") : ""}`);
+  console.log(
+    `${r.id.padEnd(8)} ${format(p?.value ?? 0, "W").padEnd(16)} ${y ? format(y.value, "year") : ""}`,
+  );
 }
 console.log("eras:");
 for (const e of m.eras) console.log(`  ${Math.round(e.from)} to ${Math.round(e.to)}: ${e.limit}`);

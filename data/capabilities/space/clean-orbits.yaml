@@ -1,0 +1,51 @@
+id: clean-orbits
+title: Orbits kept clear of debris
+domain: space
+stage: k08
+needs: [orbital-traffic]
+summary: >-
+  Every rung above the heat ceiling is reached through low Earth orbit, and that orbit is filling
+  up. Tens of thousands of tracked objects already share it with a million smaller fragments, each
+  moving at about 8 km/s. A run of collisions could make the busiest shells too dangerous to use for
+  decades. Keeping orbits clean means tracking every object, coordinating every manoeuvre and
+  removing whatever dies up there.
+target: >-
+  Every object larger than a centimetre tracked; every operator sharing positions and planned
+  manoeuvres through one open system; every dead satellite and spent stage removed within a few
+  years of its end; and the count of debris falling year on year while launch traffic grows a
+  hundredfold.
+exists:
+  - text: ESA's Space Environment Report 2025 counts about 40,000 objects tracked by surveillance networks, about 11,000 of them active payloads, and estimates over 1.2 million objects larger than 1 cm.
+    url: https://www.esa.int/Space_Safety/Space_Debris/ESA_Space_Environment_Report_2025
+    year: 2025
+  - text: ESA's 2026 report found that in 2025 more than 300 launches put over 4,000 new payloads into orbit.
+    url: https://www.esa.int/Space_Safety/Space_Debris/ESA_Space_Environment_Report_2026
+    year: 2025
+  - text: Kessler and Cour-Palais showed in 1978 that collisions between satellites could feed themselves into a debris belt that "could begin to form within this century".
+    url: https://doi.org/10.1029/JA083iA06p02637
+    year: 1978
+  - text: On 10 February 2009 the working Iridium 33 and the dead Kosmos 2251 collided, the first accidental hypervelocity collision of two intact spacecraft, leaving two debris clouds across low orbit.
+    url: https://orbitaldebris.jsc.nasa.gov/quarterly-news/pdfs/odqnv13i2.pdf
+    year: 2009
+  - text: The US FCC cut the time allowed for disposing of a dead satellite in low orbit from 25 years to five, in a rule adopted in September 2022.
+    url: https://docs.fcc.gov/public/attachments/FCC-22-74A1.pdf
+    year: 2022
+  - text: Astroscale's ADRAS-J, launched in February 2024 for JAXA, made the first approach to a large piece of debris, a spent upper stage, closing to 15 m.
+    url: https://astroscale.com/missions/adras-j/
+    year: 2024
+  - text: The US Office of Space Commerce's traffic coordination system, TraCSS, had 90 pilot user organisations covering over 15,580 satellites in 2026.
+    url: https://www.space.commerce.gov/traffic-coordination-system-for-space-tracss/
+    year: 2026
+  - text: ESA's ClearSpace-1, meant to remove the dead PROBA-1 satellite, is planned to launch in 2028.
+    url: https://clearspace.today/
+    year: 2026
+gap: >-
+  Removal has only been rehearsed: no mission has yet taken a large dead object out of orbit, and
+  each planned one is a whole mission for a single object, while thousands need removing. Tracking
+  below about 10 cm is patchy, and no rule binds every nation to share data or clean up after
+  itself.
+inventions: [lorentz-shepherd]
+scene:
+  kind: orbit
+  focus: Earth's low orbits crowded with satellites and debris, and the first tugs clearing them.
+  params: { stations: 0.3, depots: 0.1 }

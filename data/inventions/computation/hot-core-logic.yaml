@@ -1,0 +1,85 @@
+id: hot-core-logic
+title: Hot Core Logic
+domain: computation
+for: [compute-radiators]
+pitch: >-
+  Computers in space that run at 600 kelvin, hot enough to glow faintly, in silicon carbide
+  instead of silicon, so their radiators shrink about elevenfold and the mass of orbital computing
+  falls with them.
+principle: >-
+  A radiator sheds sigma T to the fourth per square metre ({stefan-boltzmann}). Silicon chips must
+  stay below about 360 K, so space radiators run near 330 K. Silicon carbide, with a band gap three
+  times silicon's, keeps its transistors working far hotter: NASA's silicon carbide junction
+  transistor circuits have run for weeks at 730 K in Venus conditions. Run the whole compute module
+  at 600 K and each square metre of radiator sheds (600/330) to the fourth, about eleven times as
+  much heat; at 700 K, twenty times. No pumps or fluid loops are needed when chips are bonded
+  straight to the radiator. The price is paid in Landauer's bound, kT ln 2, which at 600 K is twice
+  the {landauer-300k} it costs at room temperature; but today's chips spend {gpu-vs-landauer} that on each
+  operation, so the bound costs nothing yet. Hot Core Logic pairs wide-bandgap logic with
+  refractory interconnect and ceramic packaging, and picks the temperature that minimises the mass
+  of radiator plus solar array plus chips for each operation. At the swarm's distance, a sheet in
+  full sunlight already sits near 430 K, so the swarm's computers will need hot logic in any case.
+buildsOn:
+  - text: Neudeck and colleagues at NASA Glenn ran silicon carbide JFET integrated circuits for weeks, unpackaged and uncooled, in a reproduction of Venus's 460 °C surface.
+    url: https://doi.org/10.1063/1.4973429
+    year: 2016
+  - text: The International Space Station's photovoltaic radiators, about 53 kg per kilowatt of heat at near room temperature, the baseline to beat.
+    url: https://www.nasa.gov/wp-content/uploads/2021/02/473486main_iss_atcs_overview.pdf
+    year: 2006
+  - text: Starcloud's sizing of radiators for an orbital data centre, about 838 W per square metre of plate at 20 °C.
+    url: https://www.starcloud.com/wp
+    year: 2024
+  - text: Liquid droplet radiators, judged much lighter than other radiators below about 700 K, a route for the heat that chips cannot shed alone.
+    url: https://en.wikipedia.org/wiki/Liquid_droplet_radiator
+    year: 2026
+  - text: Silicon carbide, a wide-bandgap semiconductor already sold as Schottky diodes, junction transistors and MOSFETs for high-power, high-temperature switching.
+    url: https://en.wikipedia.org/wiki/Silicon_carbide
+    year: 2026
+experiment:
+  goal: Measure how much radiator a unit of computing needs as its chips run hotter, and whether hot logic lasts.
+  setup: >-
+    Small silicon carbide JFET logic chips, a ring oscillator and a 4-bit counter made on a
+    research silicon carbide process, bonded straight to blackened radiator plates in a thermal
+    vacuum chamber with a cold shroud at 100 K. Heaters and the chips' own power hold each plate at
+    330, 450, 600 and 700 K. A calorimeter, thermocouples and a data logger track power and
+    temperature; the chips run continuously.
+  measure: Heat rejected per square metre of radiator at each temperature; energy per gate switch and top clock rate at each temperature; drift and failures over 1,000 hours at 600 K.
+  succeedsIf: The logic runs for 1,000 hours at 600 K with no failures, each square metre of radiator rejects at least 9 times more heat than at 330 K, and energy per switch rises by less than half.
+  costUsd: 900000
+  months: 12
+path:
+  - phase: bench
+    what: Silicon carbide logic on radiator plates in vacuum, 330 K to 700 K.
+    scale: A few chips, watts of heat.
+    proves: Hot logic works and sheds heat by the fourth power of temperature.
+  - phase: prototype
+    what: A silicon carbide controller and a small hot compute payload on a cubesat, bonded to its own radiator.
+    scale: Tens of watts, one satellite.
+    proves: Hot logic survives radiation, cycling and years in orbit.
+  - phase: pilot
+    what: A hot compute module for orbital data centres, with dense wide-bandgap logic and ceramic packaging.
+    scale: Kilowatts per module.
+    proves: Mass per unit of computing in orbit beats a cool silicon module with its radiators.
+  - phase: first-plant
+    what: Megawatt orbital clusters built from hot modules.
+    scale: Megawatts.
+    proves: Hot computing pays at scale.
+  - phase: fleet
+    what: Hot logic as the standard for computing in space, made in space fabs from local silicon and carbon.
+    scale: Gigawatts, from {year-k09}.
+    proves: Radiator mass stops limiting orbital computing.
+  - phase: civilization
+    what: The swarm's computers, running at the temperature their own sunlight sets.
+    scale: "Computing at {swarm-radius} from the Sun, from {year-k15}"
+    proves: Computing can run wherever the light is, without carrying cold with it.
+risks: >-
+  Silicon carbide logic is large and slow next to silicon; if it cannot be made dense enough, the
+  fallback is a split module, with dense silicon on a small cold plate and everything else hot,
+  or gallium nitride and diamond logic. Metals in chips creep and migrate faster when hot; the next
+  step is refractory metals such as tungsten for wiring. Hotter chips leak more current, which may
+  wipe out part of the gain; the experiment measures exactly that, and a lower optimum temperature
+  is an acceptable result.
+scene:
+  kind: compute
+  focus: A compute wafer glowing dull red, its small radiator beside it, against a larger cool one for comparison.
+  params: { kind: wafer, racks: 4, radiators: 0.35, orbit: true }

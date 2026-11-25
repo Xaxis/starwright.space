@@ -1,0 +1,77 @@
+id: full-closure-water-loop
+title: The Zero-Loss Water Loop
+domain: water
+for: [closed-water-recycling]
+pitch: >-
+  A water-recycling loop that captures even the brine and the vapour the best current systems throw
+  away, so a habitat recovers essentially all its water and runs for years as a utility, not a
+  tended experiment.
+principle: >-
+  Today's best loop, on the International Space Station, recovers 98 percent of water; the lost two
+  percent is mostly in a concentrated brine that is hard to process and in vented humidity. The
+  Zero-Loss Water Loop closes both. A brine-drying stage pushes the leftover brine to dryness,
+  recovering its water as vapour and leaving only solid salts, which are collected rather than dumped.
+  A membrane-and-condensation stage recaptures humidity from cabin air and from every process vent.
+  A biological polishing stage, borrowed from the compartments ESA has developed, breaks down the
+  organic traces that foul physical filters, so the loop does not depend on a steady supply of
+  replacement cartridges. Sensors watch purity continuously and route any off-spec water back for
+  another pass. The result is a loop that loses water only to what leaves as product or in sealed
+  solids, approaching total closure, and that maintains itself well enough to be trusted for years.
+buildsOn:
+  - text: The International Space Station's 98 percent water recovery, reached by adding a brine processor, is the baseline this loop pushes toward total closure.
+    url: https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/
+    year: 2023
+  - text: Lunar Palace 1 achieved total oxygen and water recycling within a 370-day closure, showing near-total water closure is attainable with biology in the loop.
+    url: https://doi.org/10.1101/2021.01.12.426282
+    year: 2018
+  - text: ESA's MELiSSA developed the biological polishing compartments this loop uses to cut dependence on consumable filters.
+    url: https://en.wikipedia.org/wiki/MELiSSA
+    year: 2023
+experiment:
+  goal: Run a water loop that recovers essentially all input water, including brine and vapour, for months without consumable-filter swaps.
+  setup: >-
+    A closed bench loop fed simulated habitat waste water, combining membrane recovery, a
+    brine-to-dryness stage, humidity recapture and a biological polishing compartment, with
+    continuous purity sensing. Run against an ISS-type loop as control.
+  measure: >-
+    Fraction of input water recovered; litres lost per person-day; months of running without
+    replacing filters; output water quality held to drinking standard.
+  succeedsIf: >-
+    The loop recovers at least 99.5 percent of input water at drinking quality for 180 days with no
+    consumable-filter replacement, beating the control on both closure and maintenance.
+  costUsd: 16000000
+  months: 36
+path:
+  - phase: bench
+    what: The full loop on simulated waste water, closing brine and vapour.
+    scale: One crew-equivalent.
+    proves: Near-total closure with little maintenance is achievable.
+  - phase: prototype
+    what: A ruggedised loop run continuously for a year on real mixed waste water.
+    scale: A few people.
+    proves: It holds drinking quality and closure over a year.
+  - phase: pilot
+    what: The loop flown and run on a crewed station or base.
+    scale: A small crew in space.
+    proves: It works in microgravity or on the Moon as a utility.
+  - phase: first-plant
+    what: The loop supplying a town-sized habitat's water with only tiny make-up.
+    scale: A settlement.
+    proves: A community's water is recycled, not imported.
+  - phase: fleet
+    what: Standard water utilities on habitats and ships, and dry-city versions on Earth.
+    scale: Inner solar system and arid Earth.
+    proves: Near-total water recycling is ordinary infrastructure.
+  - phase: civilization
+    what: Water treated as a closed, reused resource everywhere people live off abundant water.
+    scale: Planet and space.
+    proves: Settlement no longer gated by water supply.
+risks: >-
+  Drying brine and recapturing vapour cost energy, which only abundant clean power makes cheap; the
+  loop is designed for where that power exists. Biological polishing can be upset by shock loads, so
+  the loop buffers and can bypass to physical-only treatment. Long-term reliability is the real test,
+  which the year-long prototype addresses before any community depends on it.
+scene:
+  kind: machine
+  focus: A water loop with brine-drying and polishing stages, almost nothing leaving but pure water.
+  params: { shape: membrane, spin: 0.3 }

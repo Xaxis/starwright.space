@@ -1,0 +1,43 @@
+id: space-habitats
+title: Homes in space for millions
+domain: space
+stage: type-1
+needs: [closed-life-support, space-health, lunar-industry, in-orbit-assembly, space-farming, closed-water-recycling, mass-drivers]
+summary: >-
+  The people who run industry in space need homes, not capsules: gravity from spin, shielding from
+  cosmic rays, room to live and green space. Built from lunar and asteroid rock rather than lifted
+  from Earth, rotating habitats can each hold thousands of people, and many of them millions. Most
+  of their mass is the shield, so the question is how to pile up rock in orbit cheaply.
+target: >-
+  Rotating habitats near the Moon and at L5 that give close to Earth's gravity at a gentle spin,
+  shielded by several tonnes of rock or slag on every square metre, growing their own food, and
+  housing millions of people by the time the climb reaches Type I in {year-type-1}.
+exists:
+  - text: The ISS has been continuously occupied since November 2000.
+    url: https://www.nasa.gov/international-space-station/space-station-facts-and-figures/
+    year: 2000
+  - text: NASA's 1975 summer study, published as Space Settlements, A Design Study (Johnson and Holbrow, 1977), designed a rotating habitat for space colonists.
+    url: https://ntrs.nasa.gov/citations/19770014162
+    year: 1977
+  - text: That study's Stanford torus is about 1.8 km across, turns once a minute and houses 10,000 people.
+    url: https://en.wikipedia.org/wiki/Stanford_torus
+    year: 1977
+  - text: Gerard O'Neill's paper "The colonization of space" in Physics Today, September 1974, set out rotating cylinders built from lunar material.
+    url: https://doi.org/10.1063/1.3128863
+    year: 1974
+  - text: Bigelow's inflatable BEAM module was expanded on the ISS in May 2016 to 16 cubic metres, and is still in use in 2026.
+    url: https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module
+    year: 2016
+  - text: Vast's Haven-1, a single-module commercial station with 45 cubic metres of living space, is targeted to launch in 2027.
+    url: https://www.vastspace.com/haven-1
+    year: 2026
+gap: >-
+  The largest home in space holds a handful of people in free fall, and was lifted from Earth piece
+  by piece. No one has lived for long in spin gravity, and nothing large has been built from space
+  materials. Shielding of tonnes per square metre means a habitat for thousands needs millions of
+  tonnes of local mass, cast or packed into place.
+inventions: [spun-shell]
+scene:
+  kind: habitat
+  focus: A rotating cylinder with farms and towns along its inner surface, shielded in cast rock.
+  params: { type: cylinder, spin: 0.5, green: 0.8 }

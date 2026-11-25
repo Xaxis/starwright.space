@@ -1,0 +1,77 @@
+id: ice-harvester
+title: The Cold-Trap Ice Harvester
+domain: water
+for: [space-ice-mining]
+pitch: >-
+  A rover that heats shadowed lunar regolith with microwaves just enough to sublimate its water ice,
+  then catches the vapour on a cold plate, pulling clean water from frozen ground without ever
+  digging it up or letting it melt away.
+principle: >-
+  Water ice in a lunar polar crater sits in permanent darkness at around 40 kelvin, mixed through the
+  regolith. Scooping and hauling frozen soil is slow and wears machines out in abrasive dust. The
+  Cold-Trap Ice Harvester instead works the ground in place. A skirt seals a patch of regolith from
+  the vacuum, and microwave emitters warm the soil a few tens of degrees, enough to sublimate the ice
+  directly to vapour without melting, since there is no liquid phase at that pressure. The vapour
+  flows to a cold plate held colder still, where it refreezes as clean ice, leaving the dust behind.
+  The harvester collects the recaptured ice, melts and filters it to water, and can feed part of it
+  to an electrolyser for propellant. Because it heats rather than digs, it has few moving parts in
+  the dust and leaves the regolith roughly in place. It runs on power beamed or cabled from a sunlit
+  ridge, so it can work the dark crater floor where the ice is.
+buildsOn:
+  - text: NASA's in-situ resource utilization programme develops and field-tests hardware for extracting water and volatiles from regolith, the engineering base for in-place extraction.
+    url: https://www.nasa.gov/mission/in-situ-resource-utilization-isru/
+    year: 2024
+  - text: ESA's Space Resources Strategy frames lunar water extraction as the foundation of a space economy, setting the purpose this harvester serves.
+    url: https://sci.esa.int/documents/34161/35992/1567260390250-ESA_Space_Resources_Strategy.pdf
+    year: 2019
+  - text: Karman+ is building asteroid mining to sell water as propellant, evidence of a market for extracted off-world water.
+    url: https://www.karmanplus.com/
+    year: 2024
+experiment:
+  goal: Sublimate water ice from cold icy regolith with microwaves and recapture it as clean water on a cold trap.
+  setup: >-
+    In a vacuum chamber, prepare lunar simulant mixed with ice and chilled to polar-crater
+    temperatures. Seal a patch, apply microwave heating, and collect the sublimated vapour on a
+    cold plate, then melt and filter it. Measure against the ice known to be in the sample.
+  measure: >-
+    Grams of water recovered per hour; fraction of the sample's ice captured; energy in kilowatt-hours
+    per kilogram of water; purity of the recovered water; dust carried over to the cold trap.
+  succeedsIf: >-
+    The rig recovers at least 80 percent of the sample's water as clean water at an energy cost per
+    kilogram low enough to beat launching water from Earth, with dust carryover within limits.
+  costUsd: 22000000
+  months: 42
+path:
+  - phase: bench
+    what: Microwave sublimation and cold-trap capture from icy simulant in a vacuum chamber.
+    scale: Kilograms of water.
+    proves: In-place extraction recovers clean water efficiently.
+  - phase: prototype
+    what: A rover-mounted harvester tested in a simulated crater with real dust and cold.
+    scale: Tens of kilograms a day.
+    proves: The method works as a mobile machine in crater conditions.
+  - phase: pilot
+    what: The harvester landed and run in a real lunar polar crater.
+    scale: Hundreds of kilograms a day.
+    proves: It extracts water on the Moon, in the dark and cold, unattended.
+  - phase: first-plant
+    what: A cluster of harvesters feeding a depot that stores water and makes propellant.
+    scale: Tonnes a day.
+    proves: Off-world water supplies a base and refuels ships.
+  - phase: fleet
+    what: Harvesters at lunar poles and adapted for icy asteroids and comets.
+    scale: Inner solar system.
+    proves: Water comes from space across many bodies.
+  - phase: civilization
+    what: Space water as abundant infrastructure for drink, air, shielding and fuel, all mined off Earth.
+    scale: Planet and space.
+    proves: Settlement and industry in space freed from Earth's water.
+risks: >-
+  Microwaves may heat regolith unevenly or lose vapour through the seal; the design iterates the
+  skirt and emitter pattern and measures carryover. Ice may be scarcer or more bound than maps
+  suggest, so a prospecting step precedes any plant. Running cold electronics and power in permanent
+  shadow is hard, addressed by beamed or cabled power from a sunlit ridge.
+scene:
+  kind: moon
+  focus: A rover sealing a patch of shadowed regolith, microwaves subliming ice onto a cold trap.
+  params: { mines: 0.5, bases: 0.2 }

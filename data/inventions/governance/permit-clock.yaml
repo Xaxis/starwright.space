@@ -1,0 +1,82 @@
+id: permit-clock
+title: The Permit Clock
+domain: governance
+for: [fast-permitting]
+pitch: >-
+  One public docket and one clock for every large project: every agency reviews at the same time,
+  each must answer by a fixed date, and an agency that stays silent past its date is taken to have
+  said yes on standard conditions.
+principle: >-
+  Slow permitting is a coordination failure with no price on delay. Each reviewing body is blamed
+  for a bad approval but bears none of the cost of a slow one, so the safe move for each is to wait,
+  the asymmetric accountability that public choice economics describes. The Permit Clock changes the
+  default. All reviews run in parallel on one shared docket. Each body gets a fixed window by project
+  class, such as 90 days for a design already assessed and 12 months for a new one, and when a window
+  closes without a reasoned refusal the permit is deemed granted on a published set of standard
+  conditions, as the EU Services Directive already does for service licences. To keep the speed
+  fair, the clock starts only after a short, required early hearing where neighbours can still change
+  the design, and a fixed share of the project's revenue goes to a local benefit fund written into
+  the permit, its use decided by the hearing. Challenges must be filed within a short window after
+  the decision, not years later. Standard designs, a type of solar field or a family of transmission
+  towers, are assessed once for all their copies, so each copy needs only a site check.
+buildsOn:
+  - text: The EU Services Directive of 2006, Article 13(4), under which an authorisation is deemed granted if the authority does not answer in time.
+    url: https://eur-lex.europa.eu/eli/dir/2006/123/oj
+  - text: The US FCC's shot clocks for siting wireless equipment, 90 and 150 days from 2009 and 60 and 90 days for small cells from 2018, after which a missed deadline counts against the authority.
+    url: https://docs.fcc.gov/public/attachments/FCC-18-133A1.pdf
+  - text: SolarAPP+, which issues permits for home solar automatically after an online code check, in more than 350 jurisdictions.
+    url: https://www.gosolarapp.org/
+  - text: The EU's renewables acceleration areas, where permits must be decided within 12 months.
+    url: https://eur-lex.europa.eu/eli/dir/2023/2413/oj
+  - text: The FAST-41 Permitting Council, which puts large US projects' federal reviews on one public timetable.
+    url: https://www.permitting.gov/newsroom/press-releases/year-one-trump-administration-fast-41-accomplishments
+  - text: The US Council on Environmental Quality's 2020 measurement of how long environmental impact statements take.
+    url: https://nepa.gov/sites/default/files/documents/CEQ_EIS_Timeline_Report_2020-6-12.pdf
+experiment:
+  goal: Show that a deemed-approval clock with an early hearing and a benefit share cuts decision time for large solar and storage projects without raising later challenges or local opposition.
+  setup: >-
+    Partner with one US state or EU region and 20 to 40 counties or municipalities that agree to run
+    the clock for utility-scale solar and battery projects, with matched counties keeping their
+    current process as controls. Run the shared docket as open software, hold the early hearings, and
+    write the benefit share into each permit.
+  measure: Days from a complete application to a decision; the share of decisions that are deemed grants; challenges filed per decision; residents' support, surveyed before and after; megawatts approved.
+  succeedsIf: Median decision time falls by at least half against the control counties, while challenges per decision and residents' opposition are no higher.
+  costUsd: 3000000
+  months: 24
+path:
+  - phase: bench
+    what: A simulation of permitting queues built from real US and EU docket records, testing clock lengths, project classes and the deemed-approval default.
+    scale: Thousands of past projects replayed.
+    proves: Which clock lengths cut delay most, and where a deemed approval would have let a bad project through.
+  - phase: prototype
+    what: The clock run for solar and storage in 20 to 40 counties, against matched controls.
+    scale: Hundreds of projects, a few gigawatts.
+    proves: Decision time halves without more conflict.
+  - phase: pilot
+    what: A whole state or EU member state adopts the clock for every clean energy and grid project, transmission included.
+    scale: Tens of gigawatts and thousands of kilometres of line.
+    proves: It works for large projects that cross many counties, and it survives court tests.
+  - phase: first-plant
+    what: A national law, or an EU-wide rule, puts every class of energy and industrial project on the clock.
+    scale: A large economy's whole buildout.
+    proves: A country can decide at the pace the climb builds.
+  - phase: fleet
+    what: Model laws adopted in many countries, with linked dockets so a line crossing a border runs on one clock.
+    scale: Dozens of countries.
+    proves: Continental grids can be permitted as single projects.
+  - phase: civilization
+    what: Every jurisdiction on Earth decides on the buildout within a known time, and the same rules carry to the Moon and orbit.
+    scale: "The buildout to {power-k08}, reached in {year-k08}"
+    proves: Decisions no longer set the pace of the climb.
+risks: >-
+  Deemed approval can let a harmful project through when an agency is understaffed rather than
+  satisfied; the fallback is a short, funded right to stop the clock for a reasoned safety concern,
+  and review staffing paid for in proportion to the docket. Courts may refuse silence as consent for
+  environmental decisions, as EU law already does where overriding public interest applies; then the
+  default becomes automatic escalation to a named senior official rather than an automatic yes.
+  Benefit shares can look like buying consent, which is why the hearing, not the developer, decides
+  how the fund is spent.
+scene:
+  kind: network
+  focus: One project at the centre, every reviewing agency around it, each review's clock running down at once.
+  params: { shape: flat, nodes: 200, clusters: 10, links: 0.6, pulses: 1 }

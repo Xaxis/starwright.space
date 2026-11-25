@@ -1,0 +1,79 @@
+id: telomere-lock
+title: The Telomere Lock
+domain: manufacturing
+for: [safe-replication]
+pitch: >-
+  A leash for self-copying machines built the way biology contains engineered organisms: each copy
+  depends on one part it cannot make, that part will only wake with a licence signed by many
+  independent keyholders, and every licence carries a countdown of the generations left.
+principle: >-
+  Engineered bacteria can be contained by making them depend on a nutrient that does not exist in
+  nature, so escape needs not one mutation but a new metabolism. The Telomere Lock does the same for
+  machines. Every replicator's controller boots only through a small root-of-trust chip, the
+  vitamin, which the replicator is never given the design or the process to make: it is made in a
+  few fabs, under separate control, with physical unclonable functions that make each chip unique
+  and copies detectable. To build a copy, a machine needs a new vitamin, and the vitamin activates
+  only with a licence signed by a threshold of independent keyholders (say five of nine, spread
+  across Earth and off it), so no single party, nor any thief, can license a copy. The licence names
+  the design by its hash, so the vitamin refuses to run any design but the approved one, which stops
+  copying errors from spreading; and it carries a generation counter, the telomere, decremented at
+  each copy, so a lineage stops after a set depth unless renewed. Renewal is a decision people make,
+  slowly, in public.
+buildsOn:
+  - text: Mandell and colleagues' bacteria that depend on a non-standard amino acid, contained by design rather than by walls (Nature, 2015).
+    url: https://www.nature.com/articles/nature14121
+  - text: The TPM 2.0 root of trust, which lets a device attest to the code it runs.
+    url: https://trustedcomputinggroup.org/resource/tpm-library-specification/
+  - text: Threshold cryptosystems, in which a set number of keyholders out of a larger group must cooperate to sign or decrypt.
+    url: https://en.wikipedia.org/wiki/Threshold_cryptosystem
+  - text: NASA's 1980 study, which called the 4 to 10 percent of parts a seed must import vitamin parts; the Lock chooses one such part on purpose.
+    url: https://ntrs.nasa.gov/api/citations/19830007081/downloads/19830007081.pdf
+  - text: Freitas and Merkle's review of replicator safety and the guidelines proposed for it.
+    url: http://www.molecularassembler.com/KSRM/5.11.htm
+experiment:
+  goal: Find out whether a red team with full physical access to a population of self-copying machines can make an unlicensed copy that runs.
+  setup: >-
+    Twenty small self-copying cells (printers and robot arms that build each other's parts, each
+    with a vitamin chip) and a software population of 100,000 simulated lineages, run under the lock
+    for six months. A paid red team with a 200,000 dollar budget, the designs, the tools and the
+    machines tries to make a copy that boots without a licence, runs a changed design, or resets its
+    counter.
+  measure: Successful escapes and how they were done; time and cost to each attempt; licence latency; the lock's overhead in copy time and mass.
+  succeedsIf: In six months the red team makes no copy that boots without a licence, runs an unapproved design or outlives its counter, and the lock adds less than 1 percent to copy time and mass.
+  costUsd: 1500000
+  months: 12
+path:
+  - phase: bench
+    what: Twenty cells under red-team attack.
+    scale: Twenty machines, 100,000 simulated lineages.
+    proves: The lock holds against people who know it well.
+  - phase: prototype
+    what: The lock in the Seed Foundry's Earth loop, with keyholders in several countries.
+    scale: Ten tonnes, two generations.
+    proves: Licensing works at the pace of real copying.
+  - phase: pilot
+    what: The lunar seed, licensed copy by copy from Earth.
+    scale: "{seed-mass} and its first descendants"
+    proves: The lock works across a light-second and through outages.
+  - phase: first-plant
+    what: An international licensing body with published rules, ahead of the industry's spread.
+    scale: Thousands of licences a year.
+    proves: People can decide how fast replicators grow.
+  - phase: fleet
+    what: Vitamin fabs and keyholders off Earth, so the lock works at light-minutes.
+    scale: Millions of licensed copies.
+    proves: Control does not need Earth in every loop.
+  - phase: civilization
+    what: Every lineage of the swarm's industry under the lock, through all {doublings-to-sun} doublings.
+    scale: The whole industry.
+    proves: The most powerful machine humanity builds stays under its control.
+risks: >-
+  A capable industry may one day learn to make the vitamin anyway; the lock then buys time, and the
+  plan would keep the vitamin's process beyond the replicators' fabs by a growing margin of feature
+  size. Keyholders may be too slow, or may be coerced; the threshold and spread of keys can be
+  tuned, and the bench measures latency. Too tight a lock may stall the climb, which is a cost the
+  licensing body must weigh openly rather than a reason to drop the lock.
+scene:
+  kind: replicator
+  focus: A factory waiting for its licence before the copy beside it wakes.
+  params: { unit: cube, generations: 6, closure: 0.9 }

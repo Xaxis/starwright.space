@@ -1,0 +1,80 @@
+id: heat-permits
+title: Planetary Heat Permits
+domain: economics
+for: [heat-pricing, planetary-coordination]
+pitch: >-
+  A cap on the heat humanity adds at Earth's surface, split into tradable permits of one watt each:
+  fuel, fission, fusion, geothermal and power beamed down from space must all hold them, and the cap
+  is set by the climate.
+principle: >-
+  Waste heat is an externality with a hard physical cap, the kind of problem cap and trade suits.
+  The US acid rain programme and the EU emissions trading system both cut pollution at lower cost
+  than rules alone, by letting firms trade allowances under a fixed cap. A heat permit is the right to
+  release one watt of added heat at the surface, averaged over a year. The cap is the model's
+  {heat-cap-power}, the heat that adds {heat-limit} across Earth. Every source that adds to the
+  surface's heat balance needs permits: fuels burned, fission and fusion plants, geothermal heat drawn
+  faster than Earth's own flow, and power beamed down from space. Solar panels and wind turbines add
+  no new energy, only change how much sunlight the ground absorbs, so they are counted by that net
+  change alone. Permits are auctioned and the revenue is paid out per person, so every country gains.
+  As demand nears the cap the permit price rises, until the most heat-intensive work, such as large
+  computing, moves to orbit, where space takes its heat.
+buildsOn:
+  - text: The US Acid Rain Program, the first national cap and trade scheme.
+    url: https://www.epa.gov/acidrain/acid-rain-program-results
+  - text: The EU Emissions Trading System, cap and trade for carbon since 2005.
+    url: https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets/what-eu-ets_en
+  - text: Flanner's 2009 estimate of the heat from human energy use, globally and by region.
+    url: https://doi.org/10.1029/2008GL036465
+  - text: The 2021 global map of human heat emissions at 1 km and hourly resolution (Varquez and colleagues).
+    url: https://doi.org/10.1038/s41597-021-00850-w
+  - text: Chaisson's 2008 warning that growing energy use alone will warm the planet.
+    url: https://doi.org/10.1029/2008EO280001
+  - text: Nordhaus's 2015 climate club, a way to hold a coalition together with penalties on outsiders.
+    url: https://www.aeaweb.org/articles?id=10.1257/aer.15000001
+experiment:
+  goal: Build the measurement a heat market needs, and test the market's design with real traders.
+  setup: >-
+    Two parts. First, a heat ledger for one large metropolitan region, Tokyo or the Rhine-Ruhr,
+    built from metered energy data and the global 1 km heat map, accounting every source of added
+    heat hour by hour and checked against satellite surface temperatures. Second, a laboratory market
+    in which 200 participants from energy firms trade heat permits under a cap through a simulated
+    century of growth.
+  measure: The ledger's error against independent estimates; how well the market prices permits against the cost of moving power to orbit; how fast it reaches the efficient allocation; the revenue raised.
+  succeedsIf: The ledger accounts added heat to within 15 percent at 1 km and hourly, and the market comes within 10 percent of the efficient allocation within five simulated trading periods.
+  costUsd: 1200000
+  months: 18
+path:
+  - phase: bench
+    what: The city heat ledger and the laboratory market.
+    scale: One metropolitan region; 200 traders.
+    proves: Heat can be counted and traded.
+  - phase: prototype
+    what: A national heat ledger, published every year, with heat reported alongside carbon in the emissions trading system.
+    scale: One country's energy system.
+    proves: Reporting heat is practical at national scale.
+  - phase: pilot
+    what: A shadow heat price attached to the carbon price in one large economy, with no cap binding yet.
+    scale: A large economy.
+    proves: Firms plan for a heat price before it binds.
+  - phase: first-plant
+    what: A treaty sets the global cap and starts the auctions as total power on Earth nears it.
+    scale: "Every country, under a cap of {heat-cap-power}"
+    proves: The climate can set the cap and a market can keep to it.
+  - phase: fleet
+    what: The permit price decides which industries move to space, and power beamed down from orbit buys permits like any other source.
+    scale: "Earth near its ceiling of {earth-cap}"
+    proves: The cap holds as the climb grows past what Earth can host.
+  - phase: civilization
+    what: Earth keeps a fixed, shared heat budget while the climb's power, most of it used in space, passes Type I.
+    scale: "{type-1-power}, with Earth's surface inside its budget"
+    proves: A planet can host a Type I civilization without overheating.
+risks: >-
+  The cap is far above today's heat, so a market now would trade nothing; the plan starts with a
+  ledger and a shadow price and binds only as heat nears the cap. Local heat matters more than the
+  global total, as cities already show; permits can be zoned, with tighter caps where heat gathers.
+  Countries may fight over the first allocation; auctioning every permit and paying the revenue out
+  per person sidesteps that fight.
+scene:
+  kind: globe
+  focus: Permits as light over Earth's cities, dimming where heat-heavy work leaves for orbit.
+  params: { lights: 1, rings: 0.4, look: cities }

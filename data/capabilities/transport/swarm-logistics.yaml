@@ -1,0 +1,36 @@
+id: swarm-logistics
+title: Moving parts and people around the swarm
+domain: transport
+stage: type-2
+needs: [swarm-construction, swarm-station-keeping, mercury-freight, beamed-propulsion, materials-recycling]
+summary: >-
+  A swarm of about a trillion collectors wears out: films darken, cells fail, small impacts punch
+  holes. Replacing and recycling them, and supplying the factories and the people who tend them,
+  needs a transport network across a whole shell {swarm-radius} from the Sun, where a trip half way
+  round takes months even at the speed of a fast ship.
+target: >-
+  Every failed collector found, collected and recycled into new film, and parts, people and data
+  moved around the shell by sail and beam, so that the swarm runs itself for as long as the Sun
+  shines.
+exists:
+  - text: Starlink satellites have been linked by lasers in space since 2021, with more than 1,000 laser terminals at 100 Gbit/s each deployed by 2024.
+    url: https://en.wikipedia.org/wiki/Laser_communication_in_space
+    year: 2024
+  - text: Of 13,122 Starlinks launched by November 2026, 1,564 had been retired by planned disposal, burned up in the atmosphere.
+    url: https://planet4589.org/space/con/star/stats.html
+    year: 2026
+  - text: Northrop Grumman's Mission Robotic Vehicle and three Mission Extension Pods launched on 21 July 2026, to install life-extending pods on satellites in orbit.
+    url: https://www.northropgrumman.com/space/space-logistics-services
+    year: 2026
+  - text: Northrop Grumman's MEV-2 docked with Intelsat 10-02 in April 2021, and MEV-1 moved on to a second client in May 2025 after five years on its first.
+    url: https://www.northropgrumman.com/space/space-logistics-services
+    year: 2025
+gap: >-
+  Today's constellations dispose of satellites by burning them up in the air, which solar orbit
+  does not have. Servicing in orbit is done one satellite at a time, and no network has ever spanned
+  more than Earth's own orbits.
+inventions: [homing-petals]
+scene:
+  kind: swarm
+  focus: The swarm's shell, with sails carrying failed collectors back to the forges near Mercury.
+  params: { built: 0.95, radiusAu: 0.6, mercury: true }

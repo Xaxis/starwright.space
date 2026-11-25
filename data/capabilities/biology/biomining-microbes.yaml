@@ -1,0 +1,35 @@
+id: biomining-microbes
+title: Microbes that mine and refine
+domain: biology
+stage: k09
+needs: [programmable-biology, in-space-resources]
+summary: >-
+  Microbes have mined metal for billions of years, leaching copper and gold from ore with their own
+  chemistry at ordinary temperatures. Engineered to the task, they can win metals from low-grade ore
+  and waste on Earth without smelters, recover critical metals from recycled electronics, and, hardened
+  for vacuum and radiation, pull iron, aluminium and rare metals out of lunar regolith and asteroid
+  rock for the factories that will build in space.
+target: >-
+  Extract and concentrate chosen metals from ore, waste and extraterrestrial rock using engineered
+  microbial consortia, at rates and purities useful to industry, on Earth and in the low gravity,
+  vacuum and radiation of the Moon and asteroids.
+exists:
+  - text: ESA's closed-loop and resource work shows biology running reliably in space hardware, the foundation any off-world microbial process builds on.
+    url: https://en.wikipedia.org/wiki/MELiSSA
+    year: 2023
+  - text: NASA's in-situ resource utilization programme runs analog missions that validate hardware for extracting usable materials from regolith and volcanic deposits.
+    url: https://www.nasa.gov/mission/in-situ-resource-utilization-isru/
+    year: 2024
+  - text: Synthetic minimal cells such as JCVI-syn3.0, with only 473 genes, give a clean chassis that can be fitted with the exact leaching and uptake pathways a mining microbe needs.
+    url: https://doi.org/10.1126/science.aad6253
+    year: 2016
+gap: >-
+  Biomining on Earth is slow and works on only a few metals. No engineered microbe yet refines a metal
+  to industrial purity on its own, and nothing has been shown leaching useful amounts of metal from
+  real regolith under space conditions. The organisms, the reactors and the low-gravity chemistry all
+  have to be built.
+inventions: [regolith-microbe-loop]
+scene:
+  kind: cell
+  focus: Microbes coating a grain of regolith, drawing metal out of the rock into solution.
+  params: { type: microbe, organelles: 0.5, divide: true, glow: 0.4 }
