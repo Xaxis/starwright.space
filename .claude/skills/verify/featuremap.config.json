@@ -1,0 +1,205 @@
+{
+  "manual": [
+    {
+      "kind": "scene",
+      "label": "ladder",
+      "entry": "web/components/scene/kinds/ladder.ts",
+      "reach": "/lab/ladder",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "globe",
+      "entry": "web/components/scene/kinds/globe.ts",
+      "reach": "/lab/globe",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "orbit",
+      "entry": "web/components/scene/kinds/orbit.ts",
+      "reach": "/lab/orbit",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "moon",
+      "entry": "web/components/scene/kinds/moon.ts",
+      "reach": "/lab/moon",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "swarm",
+      "entry": "web/components/scene/kinds/swarm.ts",
+      "reach": "/lab/swarm",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "mercury",
+      "entry": "web/components/scene/kinds/mercury.ts",
+      "reach": "/lab/mercury",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "replicator",
+      "entry": "web/components/scene/kinds/replicator.ts",
+      "reach": "/lab/replicator",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "reactor",
+      "entry": "web/components/scene/kinds/reactor.ts",
+      "reach": "/lab/reactor",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "lattice",
+      "entry": "web/components/scene/kinds/lattice.ts",
+      "reach": "/lab/lattice",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "machine",
+      "entry": "web/components/scene/kinds/machine.ts",
+      "reach": "/lab/machine",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "field",
+      "entry": "web/components/scene/kinds/field.ts",
+      "reach": "/lab/field",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "network",
+      "entry": "web/components/scene/kinds/network.ts",
+      "reach": "/lab/network",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "cell",
+      "entry": "web/components/scene/kinds/cell.ts",
+      "reach": "/lab/cell",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "habitat",
+      "entry": "web/components/scene/kinds/habitat.ts",
+      "reach": "/lab/habitat",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "launch",
+      "entry": "web/components/scene/kinds/launch.ts",
+      "reach": "/lab/launch",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "compute",
+      "entry": "web/components/scene/kinds/compute.ts",
+      "reach": "/lab/compute",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "tower",
+      "entry": "web/components/scene/kinds/tower.ts",
+      "reach": "/lab/tower",
+      "area": "scenes"
+    },
+    {
+      "kind": "scene",
+      "label": "engine",
+      "entry": "web/components/scene/engine.ts",
+      "reach": "any page with a Scene3D; canvas.scene-canvas dataset",
+      "area": "scenes"
+    },
+    {
+      "kind": "cli",
+      "label": "model",
+      "entry": "core/cli.ts",
+      "reach": "pnpm model [--only id] [--set id=v] [--ids]",
+      "area": "model"
+    },
+    {
+      "kind": "cli",
+      "label": "check-data",
+      "entry": "core/cli.ts",
+      "reach": "pnpm check:data, or node core/cli.ts --check --lane a,b",
+      "area": "model"
+    },
+    {
+      "kind": "cli",
+      "label": "style",
+      "entry": "tools/style.ts",
+      "reach": "node tools/style.ts",
+      "area": "tools"
+    },
+    {
+      "kind": "cli",
+      "label": "shot",
+      "entry": "tools/shot.ts",
+      "reach": "heavy node tools/shot.ts URL OUT.png --progress 0,0.5,1",
+      "area": "tools"
+    },
+    {
+      "kind": "cli",
+      "label": "og",
+      "entry": "tools/og.ts",
+      "reach": "heavy node tools/og.ts http://localhost:4527",
+      "area": "tools"
+    },
+    {
+      "kind": "cli",
+      "label": "icons",
+      "entry": "tools/icons.ts",
+      "reach": "heavy node tools/icons.ts",
+      "area": "tools"
+    },
+    {
+      "kind": "cli",
+      "label": "deploy",
+      "entry": "tools/deploy.sh",
+      "reach": "tools/deploy.sh [--check [SHA]]",
+      "area": "tools"
+    },
+    {
+      "kind": "page",
+      "label": "404",
+      "entry": "web/app/not-found.tsx",
+      "reach": "/no-such-page",
+      "area": "site"
+    },
+    {
+      "kind": "asset",
+      "label": "icons",
+      "entry": "web/app/icon.svg",
+      "reach": "/icon.svg /favicon.ico /apple-icon.png",
+      "area": "site"
+    },
+    {
+      "kind": "asset",
+      "label": "og-image",
+      "entry": "web/app/opengraph-image.png",
+      "reach": "<meta property=og:image> on /",
+      "area": "site"
+    }
+  ],
+  "tests": [
+    "core/test/*.test.ts",
+    "web/test/*.test.ts"
+  ],
+  "url": "http://localhost:4527"
+}

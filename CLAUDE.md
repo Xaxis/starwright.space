@@ -32,12 +32,18 @@ pnpm model                        # the ladder: each rung's power and year, and 
 pnpm model --only <id>            # one quantity: value, formula, inputs
 pnpm model --set id=value         # a variant
 pnpm check:data                   # parse and cross-check data/
-node core/cli.ts --check --lane energy,environment   # one lane's problems only
 pnpm lint                         # biome, types, the data check, style
 pnpm test
 pnpm build                        # the site
 tools/deploy.sh                   # production deploy of HEAD, then proves it live
+heavy node tools/shot.ts URL OUT.png --progress 0,0.5,1   # screenshots along a scene's story
+heavy node tools/og.ts            # the share card, from the running site's hero
+heavy node tools/icons.ts         # favicon.ico and apple-icon.png from web/app/icon.svg
 ```
+
+`/lab/<kind>?params=<json>&story=invention|capability` shows any scene kind on its own, for building
+and reviewing scenes. Screenshots run on SwiftShader with reduced motion: one settled frame each, at
+the low detail a software renderer gets.
 
 Port 4527 for this project's dev server. Heavy work (builds, browser runs, renders) goes through
 `~/.claude/claude-core/bin/heavy`; Chromium stays on SwiftShader (`tools/lib/chromium.ts`).
@@ -55,4 +61,6 @@ checks and deploy.
 
 Vercel project `starwright` in the `xaxis-projects` team. `tools/deploy.sh` uploads a git archive of
 HEAD (uncommitted work is not deployed), waits for it and proves the live site serves that commit.
-`VERCEL_TOKEN` is in `.env`, never on a command line.
+`VERCEL_TOKEN` is in `.env`, never on a command line. Until the owner registers starwright.space the
+site lives at its vercel.app address; then run deploys with `STARWRIGHT_APEX=starwright.space` and
+the script attaches the domain and its www redirect. Never buy a domain without the owner's yes.

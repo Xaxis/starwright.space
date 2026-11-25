@@ -21,6 +21,9 @@ const AU = 23481;
 const SUN_R = 109.2;
 const MOON_D = 60.3;
 const MOON_R = 0.273;
+/** Where the Moon sits on its orbit, as a turn about y from +x. */
+const MOON_ANGLE = 2.1;
+type Shot = [number, number, number, number, number?];
 
 /** 0 before a, 1 after b, smooth between. */
 const ramp = (x: number, a: number, b: number) => {
@@ -84,7 +87,11 @@ const ladder: Kind = (ctx) => {
   const ll = (lon: number, lat: number, r: number) => {
     const a = (lon * Math.PI) / 180;
     const b = (lat * Math.PI) / 180;
-    return new T.Vector3(Math.cos(b) * Math.cos(a) * r, Math.sin(b) * r, -Math.cos(b) * Math.sin(a) * r);
+    return new T.Vector3(
+      Math.cos(b) * Math.cos(a) * r,
+      Math.sin(b) * r,
+      -Math.cos(b) * Math.sin(a) * r,
+    );
   };
   const gridPos: number[] = [];
   const gridAlong: number[] = [];
@@ -163,7 +170,7 @@ const ladder: Kind = (ctx) => {
     rMax: 6.9,
     tilt: 0.02,
     colour: "#ffe2a8",
-    size: 0.03,
+    size: 0.06,
     speed: 0.08,
     ref: 6.6,
     seed: 5,
@@ -175,7 +182,7 @@ const ladder: Kind = (ctx) => {
     rMax: 9,
     tilt: 0.25,
     colour: "#ff6a3d",
-    size: 0.05,
+    size: 0.09,
     speed: 0.05,
     ref: 6.6,
     seed: 7,
@@ -190,7 +197,8 @@ const ladder: Kind = (ctx) => {
   const moon = makeRock(ctx, "moon.jpg", MOON_R, sunPos);
   moon.mesh.position.set(MOON_D, 0, 0);
   moonGroup.add(moon.mesh);
-  moonGroup.rotation.y = 2.1;
+  // The Moon holds its place, so the Type I shot keeps the driver's stream in frame.
+  moonGroup.rotation.y = MOON_ANGLE;
   scene.add(moonGroup);
   const driver = makeStream(ctx, {
     count: 2500,
@@ -294,18 +302,23 @@ const ladder: Kind = (ctx) => {
   // --- The camera's path: one shot per beat ------------------------------------------------------
   const dir = (az: number, el: number) =>
     new T.Vector3(Math.cos(el) * Math.cos(az), Math.sin(el), Math.cos(el) * Math.sin(az));
-  // [distance, target (0 Earth, 1 the Sun), azimuth, elevation]
-  const shots: [number, number, number, number][] = [
-    [3.1, 0, 2.6, 0.3], // today: Earth at night, the terminator in view
-    [2.7, 0, 3.0, 0.38], // abundance: over the deserts at dusk
-    [16, 0, 2.3, 0.5], // the heat ceiling: Earth's orbits fill
-    [230, 0, 2.0, 0.6], // Type I: the Earth and Moon system
-    [0.9 * AU, 0.35, 1.2, 0.9], // a planet's sunlight: pull back toward the Sun
+  // [distance, target (0 Earth, 1 the Sun), azimuth, elevation, pan (default PAN)]
+  // The Sun lies along -x, so azimuths near PI/2 see the terminator and smaller ones the night.
+  const shots: Shot[] = [
+    [4.6, 0, 1.05, 0.32], // today: Earth at night, its cities lit, dawn at the edge
+    [3.6, 0, 1.75, 0.42], // abundance: the day side, deserts in panels, the grid at dusk
+    [17, 0, 1.4, 0.45], // the heat ceiling: Earth's orbits fill
+    [50, 0, 1.4, 0.3, 0.3], // Type I: Earth's industry, the driver's stream arcing over it to L5
+    [0.9 * AU, 0.35, 1.0, 0.9], // a planet's sunlight: pull back toward the Sun
     [1.9 * AU, 1, 0.6, 0.7], // the inner system at work
     [2.2 * AU, 1, 0.2, 0.45], // Type II
     [2.6 * AU, 1, -0.2, 0.3], // the whole Sun
   ];
-  const shot = (i: number) => shots[Math.min(shots.length - 1, Math.max(0, i))] as [number, number, number, number];
+  /** How far the subject sits right of centre, as a share of the distance: room for the title. */
+  const PAN = 0.22;
+  const up = new T.Vector3(0, 1, 0);
+  const right = new T.Vector3();
+  const shot = (i: number) => shots[Math.min(shots.length - 1, Math.max(0, i))] as Shot;
   const target = new T.Vector3();
   const pos = new T.Vector3();
   const pose = (p: number): View => {
@@ -318,8 +331,14 @@ const ladder: Kind = (ctx) => {
     const tw = a[1] + (b[1] - a[1]) * k;
     const az = a[2] + (b[2] - a[2]) * k;
     const el = a[3] + (b[3] - a[3]) * k;
+    const pan = (a[4] ?? PAN) + ((b[4] ?? PAN) - (a[4] ?? PAN)) * k;
     target.set(0, 0, 0).lerp(sunPos, tw);
-    pos.copy(target).addScaledVector(dir(az, el), d);
+    const look = dir(az, el);
+    pos.copy(target).addScaledVector(look, d);
+    // Aim a little left of the subject, so it sits right of the headline.
+    right.crossVectors(up, look).normalize();
+    target.addScaledVector(right, -d * pan);
+    pos.addScaledVector(right, -d * pan);
     return {
       position: [pos.x, pos.y, pos.z],
       target: [target.x, target.y, target.z],
@@ -351,7 +370,6 @@ const ladder: Kind = (ctx) => {
       geo.built.value = ramp(p, at(1) + 0.06, at(3) + 0.05);
       radiators.built.value = ramp(p, at(2), at(3) + 0.1);
       for (const o of [low, geo, radiators, l5]) o.update(time, pr, size.y);
-      moonGroup.rotation.y = 2.1 + time * 0.01;
       moon.mesh.getWorldPosition(driver.uniforms.uFrom.value);
       // L5 trails the Moon by 60 degrees on its orbit.
       const l5a = moonGroup.rotation.y - Math.PI / 3;
@@ -363,10 +381,12 @@ const ladder: Kind = (ctx) => {
       driver.update(time, pr, size.y);
       // The inner system: Mercury mined, the swarm built, the Sun's light caught.
       const far = ramp(p, at(3) + 0.05, at(4));
-      for (const r of rings) r.material.uniforms.uOpacity.value = 0.22 * far;
+      for (const r of rings) r.opacity.value = 0.22 * far;
       mercuryGroup.rotation.y = 0.9 + time * 0.004;
       mercury.mesh.getWorldPosition(mine.uniforms.uFrom.value);
-      mine.uniforms.uTo.value.copy(sunPos).add(new T.Vector3(swarmR * 0.3, swarmR * 0.6, swarmR * 0.7));
+      mine.uniforms.uTo.value
+        .copy(sunPos)
+        .add(new T.Vector3(swarmR * 0.3, swarmR * 0.6, swarmR * 0.7));
       mine.uniforms.uBend.value.set(0, swarmR * 0.4, 0);
       mine.uniforms.uOn.value = ramp(p, at(4), at(5)) * (1 - ramp(p, at(6), at(7)) * 0.7);
       mine.update(time, pr, size.y);

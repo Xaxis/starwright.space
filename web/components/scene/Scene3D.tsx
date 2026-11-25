@@ -8,7 +8,7 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import type { Engine } from "./engine.ts";
 import type { KindName } from "./kinds/index.ts";
-import type { Beat, Params } from "./types.ts";
+import type { Beat, Params, Picked } from "./types.ts";
 
 export interface SceneProps {
   kind: KindName;
@@ -23,6 +23,10 @@ export interface SceneProps {
   autoplay?: boolean;
   duration?: number;
   variant?: "hero" | "panel";
+  /** Where the story starts, 0 to 1. */
+  start?: number;
+  /** Drives the story from outside (the Builder's year), in place of the scene's own story bar. */
+  progress?: number;
 }
 
 type Mode = "loading" | "live" | "still" | "none";
@@ -47,12 +51,13 @@ export function Scene3D(p: SceneProps) {
   const engineRef = useRef<Engine | undefined>(undefined);
   const [mode, setMode] = useState<Mode>("loading");
   const [still, setStill] = useState("");
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(p.start ?? 0);
   const [playing, setPlaying] = useState(false);
   const [beats, setBeats] = useState<Beat[]>([]);
   const [open, setOpen] = useState(false);
+  const [picked, setPicked] = useState<(Picked & { x: number; y: number }) | undefined>(undefined);
   const shownRef = useRef(false);
-  const progressRef = useRef(0);
+  const progressRef = useRef(p.start ?? 0);
   const propsRef = useRef(p);
   propsRef.current = p;
 
@@ -162,13 +167,21 @@ export function Scene3D(p: SceneProps) {
     openerRef.current?.focus();
   };
 
-  const beat = beats.length
-    ? beats.reduce((best, b) => (b.at <= progress + 1e-6 ? b : best), beats[0] as Beat)
+  // Follow a driven progress.
+  useEffect(() => {
+    if (p.progress === undefined || mode !== "live") return;
+    engineRef.current?.setProgress(p.progress);
+  }, [p.progress, mode]);
+
+  // The world spaces the beats; their words may change later (the Builder re-dates them).
+  const shown = beats.map((b, i) => ({ ...b, ...(p.data?.beats?.[i] ?? {}) }));
+  const beat = shown.length
+    ? shown.reduce((best, b) => (b.at <= progress + 1e-6 ? b : best), shown[0] as Beat)
     : undefined;
   const e = engineRef.current;
-  const story = beats.length > 0 && (
+  const story = shown.length > 0 && p.progress === undefined && (
     <StoryBar
-      beats={beats}
+      beats={shown}
       beat={beat}
       progress={progress}
       playing={playing}
@@ -181,10 +194,50 @@ export function Scene3D(p: SceneProps) {
     />
   );
 
+  // Pointing at a part that leads somewhere names it; clicking goes there.
+  const downAt = useRef<[number, number]>([0, 0]);
+  const pointing = {
+    onPointerDown(ev: React.PointerEvent<HTMLDivElement>) {
+      downAt.current = [ev.clientX, ev.clientY];
+    },
+    onPointerMove(ev: React.PointerEvent<HTMLDivElement>) {
+      if (mode !== "live" || ev.pointerType === "touch") return;
+      const r = ev.currentTarget.getBoundingClientRect();
+      const hit = e?.pick(ev.clientX - r.left, ev.clientY - r.top);
+      setPicked(hit ? { ...hit, x: ev.clientX - r.left, y: ev.clientY - r.top } : undefined);
+    },
+    onPointerLeave() {
+      setPicked(undefined);
+    },
+    onClick(ev: React.MouseEvent<HTMLDivElement>) {
+      // A drag to turn the scene is not a click on what it ends over.
+      const [x0, y0] = downAt.current;
+      if (mode !== "live" || Math.hypot(ev.clientX - x0, ev.clientY - y0) > 5) return;
+      const r = ev.currentTarget.getBoundingClientRect();
+      const hit = e?.pick(ev.clientX - r.left, ev.clientY - r.top);
+      if (hit?.href) window.location.assign(hit.href);
+    },
+  };
+  const tip = picked ? (
+    <div className="scene-pick" style={{ left: picked.x, top: picked.y }} aria-hidden="true">
+      <strong>{picked.label}</strong>
+      {picked.detail ? <span>{picked.detail}</span> : null}
+    </div>
+  ) : null;
+
   return (
     <figure className={`scene scene-${p.variant ?? "panel"}`} data-mode={mode} data-kind={p.kind}>
-      <div className="scene-stage" ref={hostRef}>
-        {mode === "still" && still ? <img className="scene-still" src={still} alt="" /> : null}
+      <div
+        className="scene-stage"
+        ref={hostRef}
+        {...pointing}
+        data-picked={picked ? "1" : undefined}
+      >
+        {!open ? tip : null}
+        {mode === "still" && still ? (
+          // biome-ignore lint/performance/noImgElement: a data URL of the canvas's last frame; nothing to optimise
+          <img className="scene-still" src={still} alt="" />
+        ) : null}
         {mode === "none" ? (
           <p className="scene-none">
             This 3D scene needs WebGL 2, which this browser does not offer. {p.alt}
@@ -205,11 +258,21 @@ export function Scene3D(p: SceneProps) {
           </button>
         ) : null}
         {mode === "still" ? (
-          <button type="button" className="scene-wake" onClick={claim} aria-label={`Show ${p.title} live`}>
+          <button
+            type="button"
+            className="scene-wake"
+            onClick={claim}
+            aria-label={`Show ${p.title} live`}
+          >
             <span aria-hidden="true">▶</span>
           </button>
         ) : null}
       </div>
+      {beat?.meter ? (
+        <p className="scene-meter" aria-hidden="true">
+          {beat.meter}
+        </p>
+      ) : null}
       <figcaption className="scene-alt">{p.alt}</figcaption>
       {story}
       <dialog
@@ -221,14 +284,26 @@ export function Scene3D(p: SceneProps) {
           close();
         }}
       >
-        <div className="scene-dialog-stage" ref={dialogHostRef} />
+        <div
+          className="scene-dialog-stage"
+          ref={dialogHostRef}
+          {...pointing}
+          data-picked={picked ? "1" : undefined}
+        >
+          {open ? tip : null}
+        </div>
         <div className="scene-dialog-bar">
           <h2 className="scene-dialog-title">{p.title}</h2>
           <p className="scene-dialog-hint">Drag to turn, scroll or pinch to zoom.</p>
           <button type="button" className="scene-reset" onClick={() => e?.resetView()}>
             Reset view
           </button>
-          <button type="button" className="scene-close" onClick={close} aria-label="Close the 3D view">
+          <button
+            type="button"
+            className="scene-close"
+            onClick={close}
+            aria-label="Close the 3D view"
+          >
             Close
           </button>
         </div>

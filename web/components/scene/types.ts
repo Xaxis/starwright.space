@@ -29,6 +29,8 @@ export interface Beat {
   at: number;
   title: string;
   caption: string;
+  /** A short reading for the corner of the scene, such as "K 0.80 · 2071". */
+  meter?: string;
 }
 
 export interface View {
@@ -49,9 +51,16 @@ export interface KindWorld {
   /** A camera the story wants at this progress; when given, the engine eases toward it unless the
    * reader has taken the camera. */
   pose?(progress: number): View;
-  /** Labels to draw over the canvas, in world coordinates. */
-  labels?(): { id: string; text: string; position: [number, number, number] }[];
+  /** What is under the reader's pointer, for kinds whose parts lead somewhere (the tower). */
+  pick?(ray: THREE.Raycaster): Picked | undefined;
   dispose(): void;
+}
+
+export interface Picked {
+  label: string;
+  /** A second line, such as the area and the rung. */
+  detail?: string;
+  href?: string;
 }
 
 export type Kind = (ctx: KindContext) => KindWorld;

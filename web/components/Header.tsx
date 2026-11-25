@@ -32,9 +32,19 @@ export function Header({ current }: { current?: string }) {
             </svg>
           </a>
           <ThemeToggle />
-          <button type="button" className="icon-button" popoverTarget="all-pages" aria-label="All pages">
+          <button
+            type="button"
+            className="icon-button"
+            popoverTarget="all-pages"
+            aria-label="All pages"
+          >
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
-              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path
+                d="M4 7h16M4 12h16M4 17h16"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
             </svg>
           </button>
           <AllPagesMenu pages={ALL_PAGES} />

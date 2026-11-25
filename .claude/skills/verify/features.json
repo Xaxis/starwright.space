@@ -1,0 +1,466 @@
+{
+  "version": 1,
+  "generated_by": "featuremap (claude-core) - regenerate with `featuremap generate --write`; do not edit by hand",
+  "checks": [
+    {
+      "id": "check:lint",
+      "kind": "lint",
+      "run": "pnpm lint",
+      "script": "biome check . && pnpm -r run typecheck && node core/cli.ts --check && node tools/style.ts"
+    },
+    {
+      "id": "check:test",
+      "kind": "test",
+      "run": "pnpm test",
+      "script": "pnpm -r run test"
+    },
+    {
+      "id": "check:build",
+      "kind": "build",
+      "run": "pnpm build",
+      "script": "pnpm --filter @starwright/web build"
+    },
+    {
+      "id": "check:typecheck:core",
+      "kind": "typecheck",
+      "run": "cd core && pnpm typecheck",
+      "script": "tsc --noEmit"
+    },
+    {
+      "id": "check:typecheck:web",
+      "kind": "typecheck",
+      "run": "cd web && pnpm typecheck",
+      "script": "next typegen && tsc --noEmit"
+    }
+  ],
+  "launch": [
+    {
+      "id": "launch:dev",
+      "run": "pnpm dev",
+      "script": "pnpm --filter @starwright/web dev"
+    },
+    {
+      "id": "launch:dev:web",
+      "run": "cd web && pnpm dev",
+      "script": "next dev --port 4527"
+    }
+  ],
+  "features": [
+    {
+      "id": "api:GET /manifest.webmanifest",
+      "kind": "api",
+      "entry": "web/app/manifest.ts",
+      "reach": "GET http://localhost:4527/manifest.webmanifest",
+      "area": "manifest",
+      "tests": []
+    },
+    {
+      "id": "api:GET /robots.txt",
+      "kind": "api",
+      "entry": "web/app/robots.ts",
+      "reach": "GET http://localhost:4527/robots.txt",
+      "area": "robots",
+      "tests": []
+    },
+    {
+      "id": "api:GET /sitemap.xml",
+      "kind": "api",
+      "entry": "web/app/sitemap.ts",
+      "reach": "GET http://localhost:4527/sitemap.xml",
+      "area": "sitemap",
+      "tests": []
+    },
+    {
+      "id": "asset:icons",
+      "kind": "asset",
+      "entry": "web/app/icon.svg",
+      "reach": "/icon.svg /favicon.ico /apple-icon.png",
+      "area": "site",
+      "tests": []
+    },
+    {
+      "id": "asset:og-image",
+      "kind": "asset",
+      "entry": "web/app/opengraph-image.png",
+      "reach": "<meta property=og:image> on /",
+      "area": "site",
+      "tests": []
+    },
+    {
+      "id": "cli:check-data",
+      "kind": "cli",
+      "entry": "core/cli.ts",
+      "reach": "pnpm check:data, or node core/cli.ts --check --lane a,b",
+      "area": "model",
+      "tests": []
+    },
+    {
+      "id": "cli:deploy",
+      "kind": "cli",
+      "entry": "tools/deploy.sh",
+      "reach": "tools/deploy.sh [--check [SHA]]",
+      "area": "tools",
+      "tests": []
+    },
+    {
+      "id": "cli:icons",
+      "kind": "cli",
+      "entry": "tools/icons.ts",
+      "reach": "heavy node tools/icons.ts",
+      "area": "tools",
+      "tests": []
+    },
+    {
+      "id": "cli:model",
+      "kind": "cli",
+      "entry": "core/cli.ts",
+      "reach": "pnpm model [--only id] [--set id=v] [--ids]",
+      "area": "model",
+      "tests": []
+    },
+    {
+      "id": "cli:og",
+      "kind": "cli",
+      "entry": "tools/og.ts",
+      "reach": "heavy node tools/og.ts http://localhost:4527",
+      "area": "tools",
+      "tests": []
+    },
+    {
+      "id": "cli:shot",
+      "kind": "cli",
+      "entry": "tools/shot.ts",
+      "reach": "heavy node tools/shot.ts URL OUT.png --progress 0,0.5,1",
+      "area": "tools",
+      "tests": []
+    },
+    {
+      "id": "cli:style",
+      "kind": "cli",
+      "entry": "tools/style.ts",
+      "reach": "node tools/style.ts",
+      "area": "tools",
+      "tests": []
+    },
+    {
+      "id": "export:@starwright/core",
+      "kind": "export",
+      "entry": "core/src/index.ts",
+      "reach": "import from '@starwright/core'",
+      "area": "exports",
+      "tests": []
+    },
+    {
+      "id": "export:@starwright/core/*",
+      "kind": "export",
+      "entry": "core/src/*.ts",
+      "reach": "import from '@starwright/core/*'",
+      "area": "exports",
+      "tests": []
+    },
+    {
+      "id": "export:@starwright/core/load",
+      "kind": "export",
+      "entry": "core/src/load.ts",
+      "reach": "import from '@starwright/core/load'",
+      "area": "exports",
+      "tests": []
+    },
+    {
+      "id": "page:/",
+      "kind": "page",
+      "entry": "web/app/page.tsx",
+      "reach": "http://localhost:4527/",
+      "area": "home",
+      "tests": []
+    },
+    {
+      "id": "page:/about",
+      "kind": "page",
+      "entry": "web/app/about/page.tsx",
+      "reach": "http://localhost:4527/about",
+      "area": "about",
+      "tests": []
+    },
+    {
+      "id": "page:/builder",
+      "kind": "page",
+      "entry": "web/app/builder/page.tsx",
+      "reach": "http://localhost:4527/builder",
+      "area": "builder",
+      "tests": []
+    },
+    {
+      "id": "page:/capabilities/[id]",
+      "kind": "page",
+      "entry": "web/app/capabilities/[id]/page.tsx",
+      "reach": "http://localhost:4527/capabilities/[id]",
+      "area": "capabilities",
+      "tests": [
+        "core/test/data.test.ts"
+      ]
+    },
+    {
+      "id": "page:/domains",
+      "kind": "page",
+      "entry": "web/app/domains/page.tsx",
+      "reach": "http://localhost:4527/domains",
+      "area": "domains",
+      "tests": []
+    },
+    {
+      "id": "page:/domains/[id]",
+      "kind": "page",
+      "entry": "web/app/domains/[id]/page.tsx",
+      "reach": "http://localhost:4527/domains/[id]",
+      "area": "domains",
+      "tests": []
+    },
+    {
+      "id": "page:/inventions",
+      "kind": "page",
+      "entry": "web/app/inventions/page.tsx",
+      "reach": "http://localhost:4527/inventions",
+      "area": "inventions",
+      "tests": [
+        "core/test/data.test.ts"
+      ]
+    },
+    {
+      "id": "page:/inventions/[id]",
+      "kind": "page",
+      "entry": "web/app/inventions/[id]/page.tsx",
+      "reach": "http://localhost:4527/inventions/[id]",
+      "area": "inventions",
+      "tests": [
+        "core/test/data.test.ts"
+      ]
+    },
+    {
+      "id": "page:/lab",
+      "kind": "page",
+      "entry": "web/app/lab/page.tsx",
+      "reach": "http://localhost:4527/lab",
+      "area": "lab",
+      "tests": []
+    },
+    {
+      "id": "page:/lab/[kind]",
+      "kind": "page",
+      "entry": "web/app/lab/[kind]/page.tsx",
+      "reach": "http://localhost:4527/lab/[kind]",
+      "area": "lab",
+      "tests": []
+    },
+    {
+      "id": "page:/ladder",
+      "kind": "page",
+      "entry": "web/app/ladder/page.tsx",
+      "reach": "http://localhost:4527/ladder",
+      "area": "ladder",
+      "tests": []
+    },
+    {
+      "id": "page:/ladder/[id]",
+      "kind": "page",
+      "entry": "web/app/ladder/[id]/page.tsx",
+      "reach": "http://localhost:4527/ladder/[id]",
+      "area": "ladder",
+      "tests": []
+    },
+    {
+      "id": "page:/numbers",
+      "kind": "page",
+      "entry": "web/app/numbers/page.tsx",
+      "reach": "http://localhost:4527/numbers",
+      "area": "numbers",
+      "tests": []
+    },
+    {
+      "id": "page:/sources",
+      "kind": "page",
+      "entry": "web/app/sources/page.tsx",
+      "reach": "http://localhost:4527/sources",
+      "area": "sources",
+      "tests": []
+    },
+    {
+      "id": "page:/start",
+      "kind": "page",
+      "entry": "web/app/start/page.tsx",
+      "reach": "http://localhost:4527/start",
+      "area": "start",
+      "tests": []
+    },
+    {
+      "id": "page:/tower",
+      "kind": "page",
+      "entry": "web/app/tower/page.tsx",
+      "reach": "http://localhost:4527/tower",
+      "area": "tower",
+      "tests": [
+        "web/test/scenes.test.ts"
+      ]
+    },
+    {
+      "id": "page:404",
+      "kind": "page",
+      "entry": "web/app/not-found.tsx",
+      "reach": "/no-such-page",
+      "area": "site",
+      "tests": []
+    },
+    {
+      "id": "scene:cell",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/cell.ts",
+      "reach": "/lab/cell",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:compute",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/compute.ts",
+      "reach": "/lab/compute",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:engine",
+      "kind": "scene",
+      "entry": "web/components/scene/engine.ts",
+      "reach": "any page with a Scene3D; canvas.scene-canvas dataset",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:field",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/field.ts",
+      "reach": "/lab/field",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:globe",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/globe.ts",
+      "reach": "/lab/globe",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:habitat",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/habitat.ts",
+      "reach": "/lab/habitat",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:ladder",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/ladder.ts",
+      "reach": "/lab/ladder",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:lattice",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/lattice.ts",
+      "reach": "/lab/lattice",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:launch",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/launch.ts",
+      "reach": "/lab/launch",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:machine",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/machine.ts",
+      "reach": "/lab/machine",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:mercury",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/mercury.ts",
+      "reach": "/lab/mercury",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:moon",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/moon.ts",
+      "reach": "/lab/moon",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:network",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/network.ts",
+      "reach": "/lab/network",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:orbit",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/orbit.ts",
+      "reach": "/lab/orbit",
+      "area": "scenes",
+      "tests": [
+        "core/test/data.test.ts"
+      ]
+    },
+    {
+      "id": "scene:reactor",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/reactor.ts",
+      "reach": "/lab/reactor",
+      "area": "scenes",
+      "tests": [
+        "core/test/data.test.ts"
+      ]
+    },
+    {
+      "id": "scene:replicator",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/replicator.ts",
+      "reach": "/lab/replicator",
+      "area": "scenes",
+      "tests": []
+    },
+    {
+      "id": "scene:swarm",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/swarm.ts",
+      "reach": "/lab/swarm",
+      "area": "scenes",
+      "tests": [
+        "core/test/data.test.ts"
+      ]
+    },
+    {
+      "id": "scene:tower",
+      "kind": "scene",
+      "entry": "web/components/scene/kinds/tower.ts",
+      "reach": "/lab/tower",
+      "area": "scenes",
+      "tests": [
+        "web/test/scenes.test.ts"
+      ]
+    }
+  ]
+}

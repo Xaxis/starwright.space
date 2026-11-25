@@ -14,7 +14,7 @@ import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { KINDS, type KindName } from "./kinds/index.ts";
-import type { Beat, KindWorld, Params, View } from "./types.ts";
+import type { Beat, KindWorld, Params, Picked, View } from "./types.ts";
 
 export interface ShowOptions {
   kind: KindName;
@@ -37,6 +37,8 @@ export interface Engine {
   /** Lets the reader turn and zoom the camera. */
   setInteractive(on: boolean): void;
   setVisible(on: boolean): void;
+  /** What lies under a point of the canvas, given in CSS pixels from its top left. */
+  pick(x: number, y: number): Picked | undefined;
   setProgress(p: number): void;
   play(): void;
   pause(): void;
@@ -64,10 +66,17 @@ export function createEngine(): Engine {
   const canvas = document.createElement("canvas");
   canvas.className = "scene-canvas";
   canvas.setAttribute("aria-hidden", "true");
+  // A software renderer (SwiftShader, or a machine without a GPU) draws every pixel on the CPU:
+  // fewer points, no multisampling and a lower resolution keep it usable. It also keeps its last
+  // frame, since an idle scene (reduced motion) draws only once and a software compositor may read
+  // the canvas again after the buffer has been cleared.
+  const software = /swiftshader|llvmpipe|software/i.test(gpuName());
+  canvas.dataset.software = software ? "1" : "0";
   const renderer = new THREE.WebGLRenderer({
     canvas,
-    antialias: true,
+    antialias: !software,
     powerPreference: "high-performance",
+    preserveDrawingBuffer: software,
     // The climb spans a city's lights to the whole Sun: one depth buffer has to hold both.
     logarithmicDepthBuffer: true,
   });
@@ -80,7 +89,7 @@ export function createEngine(): Engine {
   let scene = new THREE.Scene();
   const composer = new EffectComposer(
     renderer,
-    new THREE.WebGLRenderTarget(1, 1, { type: THREE.HalfFloatType, samples: 4 }),
+    new THREE.WebGLRenderTarget(1, 1, { type: THREE.HalfFloatType, samples: software ? 0 : 4 }),
   );
   const pass = new RenderPass(scene, camera);
   composer.addPass(pass);
@@ -113,6 +122,22 @@ export function createEngine(): Engine {
   let width = 0;
   let height = 0;
   let build = 0;
+  /** Lowered while frames run slow, so a weak GPU loses sharpness rather than smoothness. */
+  let dprCap = software ? 0.75 : 2;
+  let frameTime = 1 / 60;
+  let sinceResize = 0;
+  function adapt(dt: number) {
+    if (!dt) return;
+    frameTime += (dt - frameTime) * 0.08;
+    sinceResize++;
+    const dpr = renderer.getPixelRatio();
+    if (frameTime > 1 / 30 && sinceResize > 45 && dpr > 0.5) {
+      dprCap = Math.max(0.5, dpr - 0.25);
+      sinceResize = 0;
+      frameTime = 1 / 40;
+      resize();
+    }
+  }
   const listeners = new Set<(e: { progress: number; playing: boolean }) => void>();
   const emit = () => {
     for (const f of listeners) f({ progress, playing });
@@ -123,7 +148,7 @@ export function createEngine(): Engine {
     const r = host.getBoundingClientRect();
     const w = Math.max(1, Math.round(r.width));
     const h = Math.max(1, Math.round(r.height));
-    const dpr = Math.min(window.devicePixelRatio || 1, w < 800 ? 1.5 : 1.75);
+    const dpr = Math.min(window.devicePixelRatio || 1, w < 800 ? 1.5 : 1.75, dprCap);
     if (w !== width || h !== height || renderer.getPixelRatio() !== dpr) {
       width = w;
       height = h;
@@ -141,6 +166,8 @@ export function createEngine(): Engine {
     request();
   });
 
+  const raycaster = new THREE.Raycaster();
+  const pointer = new THREE.Vector2();
   const easeTo = new THREE.Vector3();
   const easeTarget = new THREE.Vector3();
   function apply(view: View, k: number) {
@@ -165,7 +192,10 @@ export function createEngine(): Engine {
       }
     }
     if (!REDUCED) time += dt;
-    if (world.pose && !taken) apply(world.pose(progress), dt ? 1 - Math.exp(-dt * 2.5) : 1);
+    adapt(dt);
+    // Reduced motion jumps straight to the story's camera rather than gliding there.
+    if (world.pose && !taken)
+      apply(world.pose(progress), dt && !REDUCED ? 1 - Math.exp(-dt * 2.5) : 1);
     controls.update(dt);
     camera.near = Math.max(1e-4, camera.position.distanceTo(controls.target) * 0.002);
     camera.far = camera.near * 1e6;
@@ -213,7 +243,7 @@ export function createEngine(): Engine {
         params: o.params,
         colour: o.colour,
         data: o.data,
-        detail: small ? 0.5 : 1,
+        detail: software ? 0.3 : small ? 0.5 : 1,
         redraw: () => request(),
       });
       canvas.dataset.kind = o.kind;
@@ -239,6 +269,12 @@ export function createEngine(): Engine {
       controls.enabled = on;
       if (!on) taken = false;
       request();
+    },
+    pick(x, y) {
+      if (!world?.pick || !width || !height) return undefined;
+      pointer.set((x / width) * 2 - 1, -(y / height) * 2 + 1);
+      raycaster.setFromCamera(pointer, camera);
+      return world.pick(raycaster);
     },
     setVisible(on) {
       visible = on;
@@ -300,4 +336,14 @@ let shared: Engine | undefined;
 export function theEngine(): Engine {
   shared ??= createEngine();
   return shared;
+}
+
+/** The GPU's name, from a throwaway context, or "" where the browser hides it. */
+function gpuName(): string {
+  const gl = document.createElement("canvas").getContext("webgl2");
+  if (!gl) return "";
+  const info = gl.getExtension("WEBGL_debug_renderer_info");
+  const name = info ? String(gl.getParameter(info.UNMASKED_RENDERER_WEBGL)) : "";
+  gl.getExtension("WEBGL_lose_context")?.loseContext();
+  return name;
 }

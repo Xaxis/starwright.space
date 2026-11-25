@@ -14,7 +14,8 @@ export function map(ctx: KindContext, name: string): THREE.Texture {
   if (hit) return hit;
   const T = ctx.three;
   const tex = new T.TextureLoader().load(`/maps/${name}`, () => ctx.redraw());
-  tex.colorSpace = name.includes("night") || name.includes("clouds") ? T.NoColorSpace : T.SRGBColorSpace;
+  tex.colorSpace =
+    name.includes("night") || name.includes("clouds") ? T.NoColorSpace : T.SRGBColorSpace;
   tex.anisotropy = 4;
   cache.set(name, tex);
   return tex;
@@ -79,6 +80,7 @@ void main() {
   float day = smoothstep(-0.12, 0.18, mu);
   vec3 albedo = texture2D(uDay, vUv).rgb;
   float cloud = texture2D(uClouds, vUv + vec2(uTime * 0.0006, 0.0)).r;
+  cloud = smoothstep(0.15, 0.95, cloud) * 0.8;
   vec2 ll = vec2(vUv.x * 360.0 - 180.0, vUv.y * 180.0 - 90.0);
   // Panels: fields of dark glass that spread across the desert boxes as uSolar grows.
   float field = desert(ll) * step(1.0 - uSolar, vnoise(vObj * 90.0) * 0.6 + vnoise(vObj * 13.0) * 0.4);
@@ -156,7 +158,11 @@ export function makeEarth(ctx: KindContext, o: EarthOptions): Earth {
     cPanel: { value: lin(ctx, "#0c1630") },
     cPower: { value: lin(ctx, "#ffb347", 1.2) },
   };
-  const mat = new T.ShaderMaterial({ vertexShader: EARTH_VERT, fragmentShader: EARTH_FRAG, uniforms });
+  const mat = new T.ShaderMaterial({
+    vertexShader: EARTH_VERT,
+    fragmentShader: EARTH_FRAG,
+    uniforms,
+  });
   const globe = new T.Mesh(geo, mat);
   const airGeo = new T.SphereGeometry(1.025, 64, 32);
   const airMat = new T.ShaderMaterial({
@@ -340,6 +346,13 @@ export function makeSky(ctx: KindContext, radius: number): { mesh: THREE.Mesh; d
   });
   const mesh = new T.Mesh(geo, mat);
   mesh.renderOrder = -10;
+  mesh.frustumCulled = false;
+  // The sky follows the camera and sits just inside its far plane, which moves with the zoom.
+  mesh.onBeforeRender = (_r, _s, cam) => {
+    mesh.position.copy(cam.position);
+    mesh.scale.setScalar(((cam as THREE.PerspectiveCamera).far * 0.5) / radius);
+    mesh.updateMatrixWorld();
+  };
   return {
     mesh,
     dispose() {

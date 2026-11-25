@@ -6,8 +6,8 @@
  */
 import type * as THREE from "three";
 import type { KindContext } from "../types.ts";
-import { FRAG_HEAD, FRAG_TAIL, VERT_HEAD, VERT_TAIL } from "./glsl.ts";
 import { glowTexture, lin } from "./bodies.ts";
+import { FRAG_HEAD, FRAG_TAIL, VERT_HEAD, VERT_TAIL } from "./glsl.ts";
 
 /** A seeded random stream, so every reader sees the same swarm. */
 export function rng(seed: number): () => number {
@@ -44,10 +44,14 @@ void main() {
   vec4 mv = modelViewMatrix * vec4(p, 1.0);
   gl_Position = projectionMatrix * mv;
   float on = smoothstep(aBorn.x, aBorn.x + 0.02, uBuilt);
-  vAlpha = on;
+  // A point smaller than a pixel is drawn at the minimum size, so it gives only its share of light:
+  // thousands of far orbiters then glow faintly instead of piling into a white blot.
+  float px = uPixel * uSize / max(-mv.z, 1e-6);
+  vAlpha = on * clamp(px / 1.2, 0.0, 1.0);
   // A collector flashes as it turns its face to the viewer.
   vGlint = 0.55 + 0.45 * pow(max(0.5 + 0.5 * sin(th * 3.0 + aBorn.y * 40.0 + uTime * 0.7), 0.0), 6.0) * aBorn.y;
-  gl_PointSize = uPixel * clamp(uSize / max(-mv.z, 1e-6), 1.2, 6.0) * on;
+  // The clamp is on the size in pixels: far points stay visible, near ones stay points.
+  gl_PointSize = clamp(px, 1.2, 6.0) * on;
   ${VERT_TAIL}
 }`;
 
@@ -171,9 +175,10 @@ void main() {
   p += side * aSeed.y * spread + vec3(0.0, aSeed.z * spread, 0.0);
   vec4 mv = modelViewMatrix * vec4(p, 1.0);
   gl_Position = projectionMatrix * mv;
-  vAlpha = uOn * smoothstep(0.0, 0.05, s) * (1.0 - smoothstep(0.9, 1.0, s));
+  float px = uPixel * uSize / max(-mv.z, 1e-6);
+  vAlpha = uOn * smoothstep(0.0, 0.05, s) * (1.0 - smoothstep(0.9, 1.0, s)) * clamp(px, 0.0, 1.0);
   vGlint = 1.0;
-  gl_PointSize = uPixel * clamp(uSize / max(-mv.z, 1e-6), 1.0, 3.0);
+  gl_PointSize = clamp(px, 1.0, 3.0);
   ${VERT_TAIL}
 }`;
 
@@ -249,7 +254,12 @@ export function makeRing(
   radius: number,
   colour: string,
   opacity: number,
-): { line: THREE.LineLoop; material: THREE.ShaderMaterial; dispose(): void } {
+): {
+  line: THREE.LineLoop;
+  material: THREE.ShaderMaterial;
+  opacity: { value: number };
+  dispose(): void;
+} {
   const T = ctx.three;
   const n = 256;
   const pos = new Float32Array(n * 3);
@@ -260,10 +270,11 @@ export function makeRing(
   }
   const geo = new T.BufferGeometry();
   geo.setAttribute("position", new T.BufferAttribute(pos, 3));
+  const uOpacity = { value: opacity };
   const material = new T.ShaderMaterial({
     vertexShader: `${VERT_HEAD}\nvoid main(){ gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); ${VERT_TAIL} }`,
     fragmentShader: `${FRAG_HEAD}\nuniform vec3 cColour; uniform float uOpacity; void main(){ gl_FragColor = vec4(cColour * uOpacity, uOpacity); ${FRAG_TAIL} }`,
-    uniforms: { cColour: { value: lin(ctx, colour) }, uOpacity: { value: opacity } },
+    uniforms: { cColour: { value: lin(ctx, colour) }, uOpacity },
     transparent: true,
     depthWrite: false,
     blending: T.AdditiveBlending,
@@ -272,6 +283,7 @@ export function makeRing(
   return {
     line,
     material,
+    opacity: uOpacity,
     dispose() {
       geo.dispose();
       material.dispose();

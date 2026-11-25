@@ -1,5 +1,7 @@
 /** Where the site lives and what it is called. */
-export const SITE = "https://starwright.space";
+/** The site's own address. tools/deploy.sh sets it to the live production domain: the project's
+ * vercel.app address until starwright.space is registered and pointed here. */
+export const SITE = process.env.STARWRIGHT_SITE ?? "https://starwright.space";
 export const REPO = "https://github.com/Xaxis/starwright.space";
 export const NAME = "Starwright";
 export const TAGLINE = "every technology and plan for the climb to Type I and Type II";
@@ -18,6 +20,7 @@ export const ALL_PAGES: { href: string; label: string }[] = [
   ...NAV,
   { href: "/domains", label: "Every Area" },
   { href: "/numbers", label: "Every Number" },
+  { href: "/sources", label: "Every Source" },
   { href: "/about", label: "About" },
 ];
 
