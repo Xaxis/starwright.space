@@ -35,34 +35,29 @@ export default function Tower() {
           data={tower as unknown as Record<string, unknown>}
           duration={48}
         />
-        <h2 style={{ marginTop: "2.5rem" }}>Floor by floor</h2>
+        <h2>Floor by floor</h2>
         {data.stages.map((s, i) => {
           const caps = data.capabilities.filter((c) => c.stage === s.id);
           return (
             <section key={s.id} className="floor">
               <h3>
-                <a href={`/ladder/${s.id}`}>
-                  {i + 1}. {s.title}
-                </a>{" "}
+                <a href={`/ladder/${s.id}`}>{s.title}</a>
                 <small>
-                  K {stageK(s.power)} · {stageYear(s.id)} · {caps.length} capabilities
+                  Rung {i + 1} · K {stageK(s.power)} · {stageYear(s.id)} · {caps.length}{" "}
+                  capabilities
                 </small>
               </h3>
-              <div className="chips">
+              <ul className="index-list">
                 {caps.map((c) => {
                   const d = domainOf(c.domain);
                   return (
-                    <a
-                      key={c.id}
-                      className="chip"
-                      href={`/capabilities/${c.id}`}
-                      style={{ "--area": d.colour } as React.CSSProperties}
-                    >
-                      <span className="area-dot" aria-hidden="true" /> {c.title}
-                    </a>
+                    <li key={c.id} style={{ "--area": d.colour } as React.CSSProperties}>
+                      <span className="area-dot" aria-hidden="true" />
+                      <a href={`/capabilities/${c.id}`}>{c.title}</a>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
             </section>
           );
         })}

@@ -29,6 +29,8 @@ heavy node tools/shot.ts 'http://localhost:4527/lab/reactor?params=%7B%22type%22
 heavy node tools/shot.ts http://localhost:4527/tower $S/tower.png --size 1100x750 --progress 0.3,1
 ```
 
+Full screen: `heavy node tools/explore.ts http://localhost:4527/ http://localhost:4527/inventions/cold-spine` (see [tools](tools.md)). The view once opened black: the scene's in-view watcher re-ran on `open`, released the canvas and claimed it back into the page behind the dialog.
+
 Proves it when: each printed line has `"kind":"<kind>"`, `"idle":"1"`, the requested `progress` and `"errors":[]`, and each PNG shows the scene's subject at that point of the story: today's Earth at night, then the Earth and Moon, then the swarm, then the closed swarm around the Sun for the hero; a lit tower with labelled floors and coloured spokes.
 
 ## Gotchas

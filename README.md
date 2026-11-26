@@ -5,7 +5,7 @@ humanity up the Kardashev scale: what it must be able to do in every area, what 
 build on, and an invention for every gap, each with the experiment that would prove it and the path
 from the bench to civilization scale. Every rung, capability and invention can be explored in 3D.
 
-Read it at **[starwright-kappa.vercel.app](https://starwright-kappa.vercel.app)** (starwright.space once the domain is registered).
+Read it at **[starwright.space](https://starwright.space)**.
 
 ## What makes it useful
 
@@ -19,7 +19,7 @@ Read it at **[starwright-kappa.vercel.app](https://starwright-kappa.vercel.app)*
   with their sources and quotes, chosen ones in [`data/assumptions.yaml`](data/assumptions.yaml) with
   their reasons, and [`core/src/model.ts`](core/src/model.ts) derives the rest. Prose never types a
   number by hand.
-- **You can change the plan.** The [Builder](https://starwright-kappa.vercel.app/builder) reruns the model in
+- **You can change the plan.** The [Builder](https://starwright.space/builder) reruns the model in
   your browser as you move any choice, and the link keeps your variant.
 
 ## Run it

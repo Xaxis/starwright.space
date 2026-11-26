@@ -69,7 +69,11 @@ function textSprite(T: typeof THREE, text: string, colour: string, height: numbe
   const canvas = document.createElement("canvas");
   const g = canvas.getContext("2d");
   if (!g) throw new Error("no 2D canvas");
-  const font = `${weight} 56px Inter, ui-sans-serif, system-ui, sans-serif`;
+  // The site's own interface face (next/font names it), so the labels match the page around them.
+  const family =
+    getComputedStyle(document.documentElement).getPropertyValue("--font-sans").trim() ||
+    "ui-sans-serif, system-ui, sans-serif";
+  const font = `${weight} 56px ${family}`;
   g.font = font;
   const w = Math.ceil(g.measureText(text).width) + 24;
   canvas.width = w;

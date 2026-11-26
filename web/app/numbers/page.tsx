@@ -49,9 +49,7 @@ export default function Numbers() {
           </a>
         </nav>
 
-        <h2 id="measured" style={{ marginTop: "2rem" }}>
-          Measured
-        </h2>
+        <h2 id="measured">Measured</h2>
         <dl className="ledger-list">
           {Object.entries(data.constants).map(([id, c]) => (
             <div key={id} id={id} className="ledger-row">
@@ -70,9 +68,7 @@ export default function Numbers() {
           ))}
         </dl>
 
-        <h2 id="chosen" style={{ marginTop: "2rem" }}>
-          Chosen
-        </h2>
+        <h2 id="chosen">Chosen</h2>
         <dl className="ledger-list">
           {Object.entries(data.assumptions).map(([id, a]) => (
             <div key={id} id={id} className="ledger-row">
@@ -93,9 +89,7 @@ export default function Numbers() {
           ))}
         </dl>
 
-        <h2 id="derived" style={{ marginTop: "2rem" }}>
-          Derived
-        </h2>
+        <h2 id="derived">Derived</h2>
         <dl className="ledger-list">
           {derived.map((q) => (
             <div key={q.id} id={q.id} className="ledger-row">
@@ -122,7 +116,7 @@ export default function Numbers() {
             </div>
           ))}
         </dl>
-        <p style={{ marginTop: "2rem" }}>
+        <p className="more">
           The model is <a href={repoUrl("core/src/model.ts")}>core/src/model.ts</a>; its inputs are{" "}
           <a href={repoUrl("data/constants.yaml")}>data/constants.yaml</a> and{" "}
           <a href={repoUrl("data/assumptions.yaml")}>data/assumptions.yaml</a>.

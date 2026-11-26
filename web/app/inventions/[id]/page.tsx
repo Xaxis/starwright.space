@@ -52,7 +52,8 @@ export default async function InventionPage({ params }: { params: Promise<{ id: 
       <main id="content" className="record" style={{ "--area": d.colour } as React.CSSProperties}>
         <div className="record-head">
           <p className="eyebrow">
-            <span className="chip chip-invented">Invented here, untested</span>{" "}
+            <span className="chip-invented">Invented here, untested</span>
+            <span aria-hidden="true"> · </span>
             <span className="area-dot" aria-hidden="true" />
             <a href={`/domains/${d.id}`}>{d.title}</a>
           </p>
@@ -62,7 +63,7 @@ export default async function InventionPage({ params }: { params: Promise<{ id: 
           </p>
           {serves.length > 0 ? (
             <div className="chips">
-              <span>For:</span>
+              <span>It closes the gap in</span>
               {serves.map((c) => (
                 <a key={c.id} className="chip" href={`/capabilities/${c.id}`}>
                   {c.title}
@@ -91,6 +92,16 @@ export default async function InventionPage({ params }: { params: Promise<{ id: 
             </section>
             <section className="experiment" aria-labelledby="exp-h">
               <h2 id="exp-h">The first experiment</h2>
+              <div className="exp-figures">
+                <div>
+                  <b>${e.costUsd.toLocaleString("en-US")}</b>
+                  <span>estimated cost</span>
+                </div>
+                <div>
+                  <b>{e.months}</b>
+                  <span>months</span>
+                </div>
+              </div>
               <dl>
                 <dt>Goal</dt>
                 <dd>
@@ -108,13 +119,11 @@ export default async function InventionPage({ params }: { params: Promise<{ id: 
                 <dd>
                   <Prose text={e.succeedsIf} model={model} />
                 </dd>
-                <dt>Cost</dt>
-                <dd>About ${e.costUsd.toLocaleString("en-US")} (an estimate)</dd>
-                <dt>Time</dt>
-                <dd>{e.months} months</dd>
               </dl>
               <p>
-                <a href={issue}>Run it, or report a result</a>
+                <a className="button" href={issue}>
+                  Run it, or report a result
+                </a>
               </p>
             </section>
             <section>

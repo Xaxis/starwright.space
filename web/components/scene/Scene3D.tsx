@@ -36,6 +36,8 @@ interface Claimant {
   release(): void;
 }
 let holder: Claimant | undefined;
+/** The scene whose full-screen view is open: while it is, no other scene may take the canvas. */
+let fullScreen: string | undefined;
 let enginePromise: Promise<Engine> | undefined;
 function getEngine(): Promise<Engine> {
   enginePromise ??= import("./engine.ts").then((m) => m.theEngine());
@@ -60,44 +62,53 @@ export function Scene3D(p: SceneProps) {
   const progressRef = useRef(p.start ?? 0);
   const propsRef = useRef(p);
   propsRef.current = p;
+  const openRef = useRef(false);
+  openRef.current = open;
 
-  const claim = useCallback(async () => {
-    if (holder?.id === id) return;
-    holder?.release();
-    const me: Claimant = {
-      id,
-      release() {
-        const e = engineRef.current;
-        if (e) setStill(e.snapshot());
-        e?.pause();
-        setPlaying(false);
-        setMode("still");
-        if (holder?.id === id) holder = undefined;
-      },
+  // A claim in flight: opening full screen waits for it, so the view never opens before its scene.
+  const claimingRef = useRef<Promise<void>>(Promise.resolve());
+  const claim = useCallback((): Promise<void> => {
+    if (fullScreen && fullScreen !== id) return Promise.resolve();
+    if (holder?.id === id) return claimingRef.current;
+    const take = async () => {
+      holder?.release();
+      const me: Claimant = {
+        id,
+        release() {
+          const e = engineRef.current;
+          if (e) setStill(e.snapshot());
+          e?.pause();
+          setPlaying(false);
+          setMode("still");
+          if (holder?.id === id) holder = undefined;
+        },
+      };
+      holder = me;
+      const e = await getEngine();
+      if (holder !== me) return;
+      engineRef.current = e;
+      const host = hostRef.current;
+      if (!host) return;
+      e.attach(host);
+      e.setInteractive(false);
+      const q = propsRef.current;
+      const first = !shownRef.current;
+      shownRef.current = true;
+      await e.show({
+        kind: q.kind,
+        params: q.params ?? {},
+        colour: q.colour,
+        data: q.data,
+        progress: progressRef.current,
+        autoplay: first && !!q.autoplay,
+        duration: q.duration,
+      });
+      if (holder !== me) return;
+      setBeats(e.beats());
+      setMode("live");
     };
-    holder = me;
-    const e = await getEngine();
-    if (holder !== me) return;
-    engineRef.current = e;
-    const host = hostRef.current;
-    if (!host) return;
-    e.attach(host);
-    e.setInteractive(false);
-    const q = propsRef.current;
-    const first = !shownRef.current;
-    shownRef.current = true;
-    await e.show({
-      kind: q.kind,
-      params: q.params ?? {},
-      colour: q.colour,
-      data: q.data,
-      progress: progressRef.current,
-      autoplay: first && !!q.autoplay,
-      duration: q.duration,
-    });
-    if (holder !== me) return;
-    setBeats(e.beats());
-    setMode("live");
+    claimingRef.current = take();
+    return claimingRef.current;
   }, [id]);
 
   // Follow the engine's clock while this scene holds it.
@@ -112,7 +123,10 @@ export function Scene3D(p: SceneProps) {
     });
   }, [mode]);
 
-  // Claim the canvas when this scene is the one in view.
+  // Claim the canvas when this scene is the one in view. The full-screen view reads `open` through a
+  // ref: with it as a dependency, opening the view re-ran this effect, whose cleanup released the
+  // canvas and whose observer, seeing the page's scene still in view behind the dialog, claimed it
+  // back into the page, leaving the full-screen view black.
   useEffect(() => {
     const host = hostRef.current;
     if (!host) return;
@@ -127,8 +141,9 @@ export function Scene3D(p: SceneProps) {
     const io = new IntersectionObserver(
       (entries) => {
         for (const en of entries) {
+          if (openRef.current) continue;
           if (en.intersectionRatio >= 0.45) void claim();
-          else if (holder?.id === id && en.intersectionRatio === 0 && !open) {
+          else if (holder?.id === id && en.intersectionRatio === 0) {
             engineRef.current?.setVisible(false);
           } else if (holder?.id === id) engineRef.current?.setVisible(true);
         }
@@ -140,7 +155,7 @@ export function Scene3D(p: SceneProps) {
       io.disconnect();
       if (holder?.id === id) holder.release();
     };
-  }, [claim, id, open]);
+  }, [claim, id]);
 
   const showDialog = async () => {
     await claim();
@@ -152,11 +167,13 @@ export function Scene3D(p: SceneProps) {
     const d = dialogRef.current;
     if (!e || !d) return;
     if (open) {
+      fullScreen = id;
       if (!d.open) d.showModal();
       if (dialogHostRef.current) e.attach(dialogHostRef.current);
       e.setVisible(true);
       e.setInteractive(true);
     } else {
+      if (fullScreen === id) fullScreen = undefined;
       e.setInteractive(false);
       if (hostRef.current && holder?.id === id) e.attach(hostRef.current);
     }
@@ -382,6 +399,9 @@ function StoryBar(p: {
             ))}
           </span>
         </div>
+        <span className="story-count" aria-hidden="true">
+          {i + 1} / {p.beats.length}
+        </span>
       </div>
     </div>
   );

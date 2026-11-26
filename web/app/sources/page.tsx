@@ -62,11 +62,7 @@ export default function Sources() {
           const rows = [...(byArea.get(d.id)?.values() ?? [])];
           if (rows.length === 0) return null;
           return (
-            <section
-              key={d.id}
-              id={d.id}
-              style={{ "--area": d.colour, marginTop: "2.25rem" } as React.CSSProperties}
-            >
+            <section key={d.id} id={d.id} style={{ "--area": d.colour } as React.CSSProperties}>
               <h2>
                 <span className="area-dot" aria-hidden="true" /> {d.title}
               </h2>

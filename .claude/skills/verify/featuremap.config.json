@@ -156,6 +156,13 @@
     },
     {
       "kind": "cli",
+      "label": "explore",
+      "entry": "tools/explore.ts",
+      "reach": "heavy node tools/explore.ts URL...",
+      "area": "tools"
+    },
+    {
+      "kind": "cli",
       "label": "og",
       "entry": "tools/og.ts",
       "reach": "heavy node tools/og.ts http://localhost:4527",

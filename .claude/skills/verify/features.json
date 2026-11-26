@@ -103,6 +103,14 @@
       "tests": []
     },
     {
+      "id": "cli:explore",
+      "kind": "cli",
+      "entry": "tools/explore.ts",
+      "reach": "heavy node tools/explore.ts URL...",
+      "area": "tools",
+      "tests": []
+    },
+    {
       "id": "cli:icons",
       "kind": "cli",
       "entry": "tools/icons.ts",

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Prose } from "../../components/Prose";
@@ -35,8 +36,8 @@ export default function Ladder() {
           data={{ beats: ladderBeats(), swarmAu: val("swarm-radius") }}
           duration={64}
         />
-        <ol className="rungs" style={{ marginTop: "2rem" }}>
-          {data.stages.map((s, i) => (
+        <ol className="rungs">
+          {data.stages.map((s) => (
             <li key={s.id}>
               <a className="rung" href={`/ladder/${s.id}`}>
                 <span className="rung-k">
@@ -44,9 +45,7 @@ export default function Ladder() {
                   <small>{show(s.power)}</small>
                 </span>
                 <div>
-                  <h2 className="rung-title">
-                    {i + 1}. {s.title}
-                  </h2>
+                  <h2 className="rung-title">{s.title}</h2>
                   <p>{fillText(s.picture)}</p>
                 </div>
                 <span className="rung-year">{stageYear(s.id)}</span>
@@ -54,22 +53,22 @@ export default function Ladder() {
             </li>
           ))}
         </ol>
-        <h2 style={{ marginTop: "2.5rem" }}>What holds the climb, era by era</h2>
+        <h2>What holds the climb, era by era</h2>
         <p className="section-lead">
           In the model, one limit sets the pace at a time. Move the plan's choices in the{" "}
           <a href="/builder">Builder</a> and the eras move with them.
         </p>
-        <ul className="sources">
+        <dl className="eras">
           {series.map((e) => (
-            <li key={e.from}>
-              <strong>
+            <Fragment key={e.from}>
+              <dt>
                 {Math.floor(e.from)} to{" "}
                 {Number.isFinite(e.to) ? Math.floor(e.to) : "the end of the run"}
-              </strong>
-              : {LIMIT[e.limit]}
-            </li>
+              </dt>
+              <dd>{LIMIT[e.limit]}</dd>
+            </Fragment>
           ))}
-        </ul>
+        </dl>
       </main>
       <Footer source="data/stages.yaml" />
     </>

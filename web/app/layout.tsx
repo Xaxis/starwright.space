@@ -1,19 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, IBM_Plex_Mono, Inter } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans, Newsreader } from "next/font/google";
 import Script from "next/script";
 import type { ReactNode } from "react";
 import "./globals.css";
 import { DESCRIPTION, NAME, SITE, TAGLINE } from "../lib/site";
 import { THEME_SCRIPT } from "../lib/theme-script";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const fraunces = Fraunces({
+// A book face for reading and titles, a plain grotesque for the interface, and a mono for figures
+// that line up. Newsreader's optical sizes keep it light at display sizes and sturdy in text.
+const serif = Newsreader({
   subsets: ["latin"],
-  axes: ["opsz", "SOFT"],
-  variable: "--font-fraunces",
+  axes: ["opsz"],
+  style: ["normal", "italic"],
+  variable: "--font-newsreader",
   display: "swap",
 });
-const plexMono = IBM_Plex_Mono({
+const sans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-sans",
+  display: "swap",
+});
+const mono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-plex-mono",
@@ -44,8 +52,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: "dark light",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fbf7ef" },
-    { media: "(prefers-color-scheme: dark)", color: "#090a12" },
+    { media: "(prefers-color-scheme: light)", color: "#f6f2ea" },
+    { media: "(prefers-color-scheme: dark)", color: "#08090d" },
   ],
 };
 
@@ -53,7 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} ${plexMono.variable}`}
+      className={`${serif.variable} ${sans.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
       <head>

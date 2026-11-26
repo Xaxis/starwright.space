@@ -234,7 +234,7 @@ export function Builder({ constants, assumptions, stages }: Props) {
           </p>
           <button
             type="button"
-            className="chip"
+            className="text-button"
             disabled={changed.length === 0}
             onClick={() => setSet({})}
           >

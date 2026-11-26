@@ -38,9 +38,9 @@ export default async function DomainPage({ params }: { params: Promise<{ id: str
       <main id="content" className="section" style={{ "--area": d.colour } as React.CSSProperties}>
         <p className="eyebrow">
           <span className="area-dot" aria-hidden="true" />
-          An area of the climb
+          <a href="/domains">Every area</a> · {caps.length} capabilities · {invs.length} inventions
         </p>
-        <h1 className="record-head">{d.title}</h1>
+        <h1>{d.title}</h1>
         <p className="section-lead">{d.role}</p>
         <Scene3D
           kind="tower"
@@ -50,7 +50,7 @@ export default async function DomainPage({ params }: { params: Promise<{ id: str
           data={towerData(d.id) as unknown as Record<string, unknown>}
           duration={40}
         />
-        <h2 style={{ marginTop: "2rem" }}>What it must be able to do</h2>
+        <h2>What it must be able to do</h2>
         <ul className="cards">
           {caps.map((c) => (
             <li key={c.id}>
@@ -66,7 +66,7 @@ export default async function DomainPage({ params }: { params: Promise<{ id: str
         </ul>
         {invs.length > 0 ? (
           <>
-            <h2 style={{ marginTop: "2.5rem" }}>What this project invents</h2>
+            <h2>What this project invents</h2>
             <ul className="cards">
               {invs.map((i) => (
                 <li key={i.id}>

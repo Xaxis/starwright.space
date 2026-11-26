@@ -1,7 +1,7 @@
 # Starwright
 
 An open builder of every technology and plan humanity needs to climb the Kardashev scale, first to
-Type I, then Type II, published at starwright-kappa.vercel.app (starwright.space once registered). The repository is the source of truth; the
+Type I, then Type II, published at starwright.space. The repository is the source of truth; the
 site renders it, and every stage, capability and invention is explorable in 3D.
 
 ## Rules that are easy to break
@@ -61,6 +61,6 @@ checks and deploy.
 
 Vercel project `starwright` in the `xaxis-projects` team. `tools/deploy.sh` uploads a git archive of
 HEAD (uncommitted work is not deployed), waits for it and proves the live site serves that commit.
-`VERCEL_TOKEN` is in `.env`, never on a command line. Until the owner registers starwright.space the
-site lives at https://starwright-kappa.vercel.app; then run deploys with `STARWRIGHT_APEX=starwright.space` and
-the script attaches the domain and its www redirect. Never buy a domain without the owner's yes.
+`VERCEL_TOKEN` is in `.env`, never on a command line. The site is https://starwright.space (registered
+at Namecheap, DNS pointing at Vercel); www redirects to it, and https://starwright-kappa.vercel.app
+serves the same deployment. Never buy a domain without the owner's yes.

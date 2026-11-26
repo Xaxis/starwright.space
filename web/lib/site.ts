@@ -1,6 +1,6 @@
 /** Where the site lives and what it is called. */
-/** The site's own address. tools/deploy.sh sets it to the live production domain: the project's
- * vercel.app address until starwright.space is registered and pointed here. */
+/** The site's own address. tools/deploy.sh sets it to the live production domain, starwright.space
+ * once its DNS answers, else the project's vercel.app address. */
 export const SITE = process.env.STARWRIGHT_SITE ?? "https://starwright.space";
 export const REPO = "https://github.com/Xaxis/starwright.space";
 export const NAME = "Starwright";

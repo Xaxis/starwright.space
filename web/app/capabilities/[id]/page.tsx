@@ -111,30 +111,32 @@ export default async function CapabilityPage({ params }: { params: Promise<{ id:
             {needs.length > 0 || neededBy.length > 0 ? (
               <section>
                 <h2>How it connects</h2>
-                {needs.length > 0 ? (
-                  <>
-                    <p>It needs:</p>
-                    <div className="chips">
-                      {needs.map((n) => (
-                        <a key={n.id} className="chip" href={`/capabilities/${n.id}`}>
-                          {n.title}
-                        </a>
-                      ))}
-                    </div>
-                  </>
-                ) : null}
-                {neededBy.length > 0 ? (
-                  <>
-                    <p>It opens the way to:</p>
-                    <div className="chips">
-                      {neededBy.map((n) => (
-                        <a key={n.id} className="chip" href={`/capabilities/${n.id}`}>
-                          {n.title}
-                        </a>
-                      ))}
-                    </div>
-                  </>
-                ) : null}
+                <dl className="by-area">
+                  {needs.length > 0 ? (
+                    <>
+                      <dt>It needs</dt>
+                      <dd className="chips">
+                        {needs.map((n) => (
+                          <a key={n.id} className="chip" href={`/capabilities/${n.id}`}>
+                            {n.title}
+                          </a>
+                        ))}
+                      </dd>
+                    </>
+                  ) : null}
+                  {neededBy.length > 0 ? (
+                    <>
+                      <dt>It opens the way to</dt>
+                      <dd className="chips">
+                        {neededBy.map((n) => (
+                          <a key={n.id} className="chip" href={`/capabilities/${n.id}`}>
+                            {n.title}
+                          </a>
+                        ))}
+                      </dd>
+                    </>
+                  ) : null}
+                </dl>
               </section>
             ) : null}
           </div>

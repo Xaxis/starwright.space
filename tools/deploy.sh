@@ -10,10 +10,9 @@
 # marker names exactly what went live and nothing untracked, like .env, is uploaded. Vercel builds
 # it: pnpm installs the workspace from the root lockfile and builds web/, the project's root
 # directory, reading data/ and core/ from the workspace. The project and its settings are set here,
-# so they live in the repo. The custom domain (starwright.space, www redirecting to it) is added only
-# once it is registered: until then STARWRIGHT_APEX is unset and the site's own address is the
-# project's vercel.app domain, which the build is told (STARWRIGHT_SITE) for canonical links, the
-# sitemap and share cards.
+# so they live in the repo, and so is the custom domain: starwright.space, with www redirecting to
+# it. The site's own address, which the build is told (STARWRIGHT_SITE) for canonical links, the
+# sitemap and share cards, is that domain once its DNS answers, else the project's vercel.app one.
 #
 # A deploy counts only when a production domain proves it:
 #   - / answers 200 with the security headers and this commit's build marker;
@@ -28,8 +27,8 @@ set -euo pipefail
 
 team="xaxis-projects"
 project="starwright"
-# Set once starwright.space is registered (the owner buys it); then the script attaches it.
-apex="${STARWRIGHT_APEX:-}"
+# The custom domain; STARWRIGHT_APEX= (empty) deploys without it.
+apex="${STARWRIGHT_APEX-starwright.space}"
 
 check_only=0
 want=""

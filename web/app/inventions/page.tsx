@@ -28,10 +28,7 @@ export default function Inventions() {
           const list = data.inventions.filter((i) => i.domain === d.id);
           if (list.length === 0) return null;
           return (
-            <section
-              key={d.id}
-              style={{ "--area": d.colour, marginTop: "2.5rem" } as React.CSSProperties}
-            >
+            <section key={d.id} style={{ "--area": d.colour } as React.CSSProperties}>
               <h2>
                 <span className="area-dot" aria-hidden="true" />{" "}
                 <a href={`/domains/${d.id}`}>{d.title}</a>

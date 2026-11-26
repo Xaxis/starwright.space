@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Fragment } from "react";
 import { Footer } from "../../../components/Footer";
 import { Header } from "../../../components/Header";
 import { Prose } from "../../../components/Prose";
@@ -52,8 +53,8 @@ export default async function StagePage({ params }: { params: Promise<{ id: stri
       <main id="content" className="record">
         <div className="record-head">
           <p className="eyebrow">
-            Rung {i + 1} of {data.stages.length} · K {stageK(s.power)} · {show(s.power)} ·{" "}
-            {stageYear(s.id)}
+            <a href="/ladder">The ladder</a>, rung {i + 1} of {data.stages.length} · K{" "}
+            {stageK(s.power)} · {show(s.power)} · {stageYear(s.id)}
           </p>
           <h1>{s.title}</h1>
           <p className="record-pitch">
@@ -91,7 +92,7 @@ export default async function StagePage({ params }: { params: Promise<{ id: stri
                   return (
                     <li
                       key={step.ref}
-                      style={{ borderLeft: `3px solid ${d?.colour ?? "var(--line)"}` }}
+                      style={d ? ({ "--area": d.colour } as React.CSSProperties) : undefined}
                     >
                       <span className="path-phase">{d?.title ?? "Planned"}</span>
                       {rec ? (
@@ -117,39 +118,41 @@ export default async function StagePage({ params }: { params: Promise<{ id: stri
                     {here.length} capabilities, by area. The <a href={`/tower`}>Tower</a> shows how
                     they connect.
                   </p>
-                  {data.domains.map((d) => {
-                    const caps = here.filter((c) => c.domain === d.id);
-                    if (caps.length === 0) return null;
-                    return (
-                      <div
-                        key={d.id}
-                        className="chips"
-                        style={
-                          { "--area": d.colour, marginBottom: "0.5rem" } as React.CSSProperties
-                        }
-                      >
-                        <span className="area-dot" aria-hidden="true" />
-                        <strong>{d.title}</strong>
-                        {caps.map((c) => (
-                          <a key={c.id} className="chip" href={`/capabilities/${c.id}`}>
-                            {c.title}
-                          </a>
-                        ))}
-                      </div>
-                    );
-                  })}
+                  <dl className="by-area">
+                    {data.domains.map((d) => {
+                      const caps = here.filter((c) => c.domain === d.id);
+                      if (caps.length === 0) return null;
+                      return (
+                        <Fragment key={d.id}>
+                          <dt style={{ "--area": d.colour } as React.CSSProperties}>
+                            <span className="area-dot" aria-hidden="true" />
+                            {d.title}
+                          </dt>
+                          <dd className="chips">
+                            {caps.map((c) => (
+                              <a key={c.id} className="chip" href={`/capabilities/${c.id}`}>
+                                {c.title}
+                              </a>
+                            ))}
+                          </dd>
+                        </Fragment>
+                      );
+                    })}
+                  </dl>
                 </section>
               );
             })()}
-            <nav className="chips" aria-label="Other rungs">
+            <nav className="pager" aria-label="Other rungs">
               {prev ? (
-                <a className="chip" href={`/ladder/${prev.id}`}>
-                  Before: {prev.title}
+                <a href={`/ladder/${prev.id}`}>
+                  <span>The rung below</span>
+                  <strong>{prev.title}</strong>
                 </a>
               ) : null}
               {next ? (
-                <a className="chip" href={`/ladder/${next.id}`}>
-                  Next: {next.title}
+                <a className="next" href={`/ladder/${next.id}`}>
+                  <span>The rung above</span>
+                  <strong>{next.title}</strong>
                 </a>
               ) : null}
             </nav>

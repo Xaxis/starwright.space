@@ -44,13 +44,15 @@ export default function Home() {
         </section>
 
         <section className="section" aria-labelledby="ladder-h">
-          <h2 id="ladder-h">The ladder</h2>
-          <p className="section-lead">
-            Humanity uses <Prose text="{power-now}" model={model} />, a Kardashev rating of{" "}
-            <Prose text="{k-now}" model={model} />. Each rung below is ten times or more the last.
-            The years are the model's, from the plan's choices; the <a href="/builder">Builder</a>{" "}
-            moves them.
-          </p>
+          <div className="section-head">
+            <h2 id="ladder-h">The ladder</h2>
+            <p className="section-lead">
+              Humanity uses <Prose text="{power-now}" model={model} />, a Kardashev rating of{" "}
+              <Prose text="{k-now}" model={model} />. Each rung below is ten times or more the last.
+              The years are the model's, from the plan's choices; the <a href="/builder">Builder</a>{" "}
+              moves them.
+            </p>
+          </div>
           <ol className="rungs">
             {data.stages.map((s) => (
               <li key={s.id}>
@@ -70,22 +72,26 @@ export default function Home() {
           </ol>
         </section>
 
-        <section className="section" aria-labelledby="heat-h">
-          <h2 id="heat-h">Why Type I is climbed in space</h2>
-          <p className="section-lead">
-            <Prose
-              text="Type I is {type-1-power}. Used on Earth, all of it ends as heat: {type-1-earth-heat}, {type-1-heat-vs-co2} the warming push of doubling CO2. Earth's surface can use at most about {earth-cap}, panels on the land and the new heat it can shed. So the plan moves industry and computing to orbit, where sunlight is free and space takes the heat, and grows it by factories that copy themselves. The first starts in {seed-year}; from there the industry doubles every {doubling-time}."
-              model={model}
-            />
-          </p>
+        <section className="section section-essay" aria-labelledby="heat-h">
+          <div className="section-head">
+            <h2 id="heat-h">Why Type I is climbed in space</h2>
+            <p className="section-lead">
+              <Prose
+                text="Type I is {type-1-power}. Used on Earth, all of it ends as heat: {type-1-earth-heat}, {type-1-heat-vs-co2} the warming push of doubling CO2. Earth's surface can use at most about {earth-cap}, panels on the land and the new heat it can shed. So the plan moves industry and computing to orbit, where sunlight is free and space takes the heat, and grows it by factories that copy themselves. The first starts in {seed-year}; from there the industry doubles every {doubling-time}."
+                model={model}
+              />
+            </p>
+          </div>
         </section>
 
         <section className="section" aria-labelledby="areas-h">
-          <h2 id="areas-h">Every area</h2>
-          <p className="section-lead">
-            The climb needs every field at once. Each area lists what it must be able to do, what
-            already exists toward it, and what this project invents where nothing does.
-          </p>
+          <div className="section-head">
+            <h2 id="areas-h">Every area</h2>
+            <p className="section-lead">
+              The climb needs every field at once. Each area lists what it must be able to do, what
+              already exists toward it, and what this project invents where nothing does.
+            </p>
+          </div>
           <ul className="cards">
             {data.domains.map((d) => {
               const n = data.capabilities.filter((c) => c.domain === d.id).length;
@@ -111,11 +117,13 @@ export default function Home() {
 
         {experiments.length > 0 ? (
           <section className="section" aria-labelledby="start-h">
-            <h2 id="start-h">Start here</h2>
-            <p className="section-lead">
-              Every invention begins with one experiment. These are the cheapest first. Pick one,
-              run it, and report what you find.
-            </p>
+            <div className="section-head">
+              <h2 id="start-h">Start here</h2>
+              <p className="section-lead">
+                Every invention begins with one experiment. These are the cheapest first. Pick one,
+                run it, and report what you find.
+              </p>
+            </div>
             <ul className="cards">
               {experiments.slice(0, 6).map((i) => (
                 <li key={i.id}>
@@ -129,8 +137,8 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <p>
-              <a href="/start">Every first experiment</a>
+            <p className="more">
+              <a href="/start">Every first experiment, cheapest first</a>
             </p>
           </section>
         ) : null}
