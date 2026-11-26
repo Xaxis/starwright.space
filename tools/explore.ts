@@ -62,7 +62,7 @@ for (const url of urls) {
   try {
     await page.goto(url, { waitUntil: "load", timeout: 300_000 });
     // A scene takes the canvas only once it is mostly in view, as a reader would scroll it.
-    await page.locator(".scene-stage").first().scrollIntoViewIfNeeded();
+    await page.locator(".scene-stage").first().scrollIntoViewIfNeeded({ timeout: 120_000 });
     step = "first frame";
     await page.waitForFunction(settled, null, { timeout: 300_000 });
   } catch (e) {
