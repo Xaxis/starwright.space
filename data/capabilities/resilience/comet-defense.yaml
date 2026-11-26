@@ -11,25 +11,32 @@ summary: >-
 target: >-
   Interceptors parked in deep space that can reach a newly found long-period comet within weeks,
   measure what each hit does, and change its path enough to miss Earth, the Moon or any settled
-  world, with as little as a year of warning.
+  world, with as little as 1 year of warning.
 exists:
-  - text: ESA selected Comet Interceptor in June 2019, three spacecraft that will travel to a long-period comet or interstellar object not yet discovered, flying past it as it approaches Earth's orbit.
-    url: https://www.cosmos.esa.int/web/comet-interceptor
-    year: 2019
-  - text: Comet C/2013 A1 (Siding Spring) was discovered on 3 January 2013, 7.2 AU from the Sun, and passed Mars at about 140,000 km on 19 October 2014; for a time a collision with Mars could not be ruled out.
-    url: https://en.wikipedia.org/wiki/C/2013_A1_(Siding_Spring)
+  - text: ESA's Comet Interceptor, due to launch in late 2028 or early 2029, will wait at the Sun-Earth L2 point for a long-period comet or interstellar object not yet discovered, then fly out to meet it.
+    url: https://www.esa.int/Science_Exploration/Space_Science/Comet_Interceptor/Comet_Interceptor_factsheet
+    year: 2026
+  - text: The interstellar comet 3I/ATLAS was found on 1 July 2025 and reached perihelion about four months later, the short notice a fast interloper gives.
+    url: https://science.nasa.gov/solar-system/comets/3i-atlas/3i-atlas-facts-and-faqs/
+    year: 2025
+  - text: Comet C/2013 A1 (Siding Spring) was discovered on 3 January 2013, far out from the Sun, and passed Mars at 139,500 km on 19 October 2014; for a time a collision with Mars could not be ruled out.
+    url: https://mars.nasa.gov/comets/sidingspring/
     year: 2014
-  - text: Comet Shoemaker-Levy 9 was discovered in March 1993, already torn into more than 20 pieces; the fragments hit Jupiter in July 1994.
+  - text: Comet Shoemaker-Levy 9 was discovered in March 1993, already torn into more than 20 pieces by Jupiter's gravity; the fragments hit Jupiter in July 1994.
     url: https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/
     year: 1994
+  - text: NASA's 2018 planetary defence strategy notes that a large comet from the outer solar system could appear and reach Earth with warning as short as a few months.
+    url: https://www.nasa.gov/wp-content/uploads/2022/03/ostp-neo-strategy-action-plan-jun18.pdf
+    year: 2018
   - text: NASA's NEO Surveyor, launching no earlier than September 2027, will look for comets as well as asteroids, in infrared light.
     url: https://science.nasa.gov/mission/neo-surveyor/
     year: 2026
 gap: >-
   Nothing can launch toward a newly found comet in less than months, and the later a push comes,
-  the larger it must be to make the comet miss. Comets are fragile and active,
-  venting gas that changes their paths on its own, so a deflection is harder to plan and to
-  check. No interceptor is kept in reserve.
+  the larger it must be to make the comet miss. Comets are fragile and active, venting gas that
+  changes their paths on its own, so a deflection is harder to plan and to check. Comet Interceptor
+  will wait in space, but only to fly past one comet, not to push it; no interceptor is kept ready
+  to deflect, and a late comet can give as little as 4 months from discovery to perihelion.
 inventions: [impactor-train]
 scene:
   kind: launch

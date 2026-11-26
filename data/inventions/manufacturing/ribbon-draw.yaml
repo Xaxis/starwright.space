@@ -8,26 +8,38 @@ pitch: >-
   line as it runs, at metres per second.
 principle: >-
   Hot glass flows like thick honey and can be stretched almost without limit while it stays soft;
-  optical fibre is drawn from a rod tens of millimetres across down to a hair at tens of metres per
-  second, and thin display glass is made by drawing a sheet down from a slot. Mass is conserved, so
-  a slab drawn a thousand times longer becomes a thousand times thinner, with edge rollers holding
-  its width while its thickness falls. On Earth gravity sags the ribbon and air cools it unevenly;
-  in orbit there is neither, and a micrometre ribbon radiates its heat to space in a fraction of a
-  second, so it sets almost as it leaves the hot zone, its thickness held by the temperature profile
-  across the slot. The Ribbon Draw is a slab feeder, a heated slot and draw zone with zoned radiant
-  heaters, edge rollers, and then the coating stations that need no chamber in space: evaporators
-  that lay down aluminium and the absorber, then a thin glass cover, as the ribbon passes. A
-  metre-wide ribbon at 10 m/s is 10 square metres a second, about 300 square kilometres a year per
-  line, from a fraction of a kilogram of glass a second.
+  optical fibre is drawn from a rod tens of millimetres across down to a hair at tens of metres
+  per second, and thin display glass is made by drawing a sheet down from a slot. Mass is
+  conserved, so a slab drawn a thousand times longer becomes a thousand times thinner, with edge
+  rollers holding its width while its thickness falls. On Earth gravity sags the ribbon and air
+  cools it unevenly; in orbit there is neither, and a micrometre ribbon radiates its heat to space
+  in a fraction of a second, so it sets almost as it leaves the hot zone, its thickness held by
+  the temperature profile across the slot. The arithmetic is short: a square metre of glass 10
+  micrometres thick weighs 25 grams and holds about 25 joules per degree, while at 1,000 K its two
+  faces radiate about 100 kilowatts, so it cools at roughly 4,000 degrees a second and sets within
+  a tenth of a second, about ten centimetres below the slot at 1 m/s and a metre below it at 10
+  m/s. The Ribbon Draw is a slab feeder, a heated slot and draw zone with zoned radiant heaters,
+  edge rollers, and then the coating stations that need no chamber in space: evaporators that lay
+  down aluminium and the absorber, then a thin glass cover, as the ribbon passes. A metre-wide
+  ribbon at 10 m/s is 10 square metres a second, about 300 square kilometres a year per line, from
+  a fraction of a kilogram of glass a second. Mass sets the thickness. At {collector-density} a
+  whole collector weighs as much as glass about 8 micrometres thick, so the ribbon must be drawn
+  to about 7 micrometres, leaving the last micrometre's worth of mass for the aluminium, absorber
+  and cover. The bench starts at 10 micrometres, where drawing is easier, and the pilot line must
+  reach 7.
 buildsOn:
   - text: Nippon Electric Glass's G-Leaf, ultra-thin glass handled roll to roll below 100 micrometres.
     url: https://www.neg.co.jp/en/products/g-leaf/index.html
-  - text: Basalt fibre, drawn from melted rock, proof that rock glass can be drawn continuously.
-    url: https://en.wikipedia.org/wiki/Basalt_fiber
-  - text: First Solar's in-line deposition of thin-film cells directly onto glass, the model for coating in line.
-    url: https://www.firstsolar.com/
-  - text: IKAROS's membrane with integrated thin-film cells, the collector the ribbon replaces.
-    url: https://en.wikipedia.org/wiki/IKAROS
+    year: 2026
+  - text: Continuous basalt fibre, drawn from melted crushed rock onto a reel inside a working window only 70 to 100 degrees wide, proof that rock glass can be drawn continuously and a measure of how tight the control must be.
+    url: https://patents.google.com/patent/US8042363B2/en
+    year: 2011
+  - text: First Solar's continuous lines, which turn a sheet of glass into a finished thin-film module in about four hours under one roof, the model for coating in line.
+    url: https://www.firstsolar.com/Technology/Manufacturing
+    year: 2026
+  - text: IKAROS's 7.5 micrometre polyimide sail, 14 metres square, with thin-film solar cells attached, the collector the ribbon replaces.
+    url: https://global.jaxa.jp/countdown/f17/pdf/presskit_ikaros_e.pdf
+    year: 2010
 experiment:
   goal: Draw lunar simulant glass into a continuous ribbon about ten micrometres thick, and coat it in line, at a speed that scales.
   setup: >-
@@ -41,23 +53,23 @@ experiment:
 path:
   - phase: bench
     what: The redraw tower on simulant glass.
-    scale: Hundreds of metres of narrow ribbon.
+    scale: About 1 km of 50 mm ribbon, 50 square metres.
     proves: Rock glass can be drawn to collector thickness.
   - phase: prototype
     what: A half-metre-wide draw flown on a free-flying platform in orbit, fed Earth glass.
-    scale: Square kilometres before it is retired.
+    scale: About 5 square kilometres over its life, at half a square metre a second.
     proves: Drawing and coating work in weightlessness and vacuum, without a chamber.
   - phase: pilot
     what: A line beside the lunar seeds, fed glass from the regolith refinery and launched to orbit as slabs.
-    scale: Hundreds of square kilometres a year.
+    scale: About 300 square kilometres a year, 10 square metres a second.
     proves: Collector film from rock at a known cost.
   - phase: first-plant
     what: A ring of lines making the first collectors at scale, built by the seeds.
-    scale: The share of output that becomes collectors, {collector-share}.
+    scale: About 30 lines, 10,000 square kilometres a year.
     proves: Film supply keeps pace with the industry's doubling every {doubling-time}.
   - phase: fleet
     what: Lines built near Mercury and the asteroids, each copied by the factories it serves.
-    scale: Square kilometres a minute per plant, across the inner system.
+    scale: 1 square kilometre a minute per plant, about 500,000 square kilometres a year each.
     proves: The swarm's area can be made as fast as its mass can be mined.
   - phase: civilization
     what: The film of the whole swarm.

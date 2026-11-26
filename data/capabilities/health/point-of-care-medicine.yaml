@@ -5,29 +5,36 @@ stage: k08
 needs: [universal-connectivity, abundant-compute, programmable-biology]
 summary: >-
   Most of the world's people live far from a well-equipped hospital. Point-of-care medicine brings
-  the diagnosis to them: cheap devices that read blood, breath or a swab on the spot, an artificial
-  intelligence that interprets the result, and a connection to a human specialist when needed. The
-  same tools that serve a remote village serve a base on the Moon or a ship between worlds, where the
-  nearest hospital is months away.
+  the diagnosis to them: cheap devices that read blood, breath or a swab on the spot, software that
+  interprets the result, and a connection to a human specialist when needed. The same tools that
+  serve a remote village serve a base on the Moon or a ship between worlds, where the nearest hospital
+  is months away.
 target: >-
-  Put reliable diagnosis and much of treatment within reach of everyone, through cheap handheld
-  devices, on-device interpretation and a link to remote specialists, working on Earth and across the
-  worlds people settle.
+  By {year-k08}, the WHO's essential tests within an hour's reach of at least 95 percent of people,
+  up from 53 percent; a handheld unit that runs at least 50 of them, costs under 100 USD and gives a
+  result in under 30 minutes for under 1 USD a test, interpreted on board and working offline; and
+  a link to a remote specialist for the cases it cannot settle, on Earth and across the worlds
+  people settle.
 exists:
-  - text: Oxford Nanopore's portable, real-time sequencers brought DNA and RNA readout out of the central lab and into the field, a core piece of point-of-care diagnosis.
-    url: https://nanoporetech.com/
-    year: 2024
-  - text: AlphaFold 3's accurate prediction of molecular interactions lets software interpret a test result and suggest a treatment, the intelligence behind a handheld clinic.
-    url: https://doi.org/10.1038/s41586-024-07487-w
-    year: 2024
-  - text: Wellcome Leap's UZIMA program, funded at 100 million USD, develops health tools for underserved populations, the delivery path point-of-care devices need.
-    url: https://wellcomeleap.org/
-    year: 2024
+  - text: The Lancet Commission on Diagnostics found in 2021 that 47 percent of the world's people have limited or no access to key diagnostic tests, and that in primary care only about 19 percent of people in low and lower-middle income countries can get the simplest tests other than for HIV or malaria.
+    url: https://www.eurekalert.org/news-releases/930549
+    year: 2021
+  - text: Quick and colleagues ran a palm-sized Oxford Nanopore MinION sequencer in a mobile lab during the 2014 to 2016 Ebola outbreak in Guinea, returning genome results in under 24 hours away from any central lab (Nature, 2016).
+    url: https://doi.org/10.1038/nature16996
+    year: 2016
+  - text: WHO published the fourth edition of its Model List of Essential In Vitro Diagnostics, chosen by its Strategic Advisory Group of Experts, on 18 October 2023, the menu of tests a handheld clinic must cover.
+    url: https://www.who.int/publications/i/item/9789240081093
+    year: 2023
+  - text: Danaher agreed in September 2023 to sell Cepheid's Xpert MTB/RIF Ultra tuberculosis cartridge at 7.97 USD to the Global Fund and its partners, at cost and down 20 percent from 9.98 USD.
+    url: https://www.theglobalfund.org/en/news/2023/2023-09-19-global-fund-stop-tb-partnership-and-usaid-announce-new-collaboration-with-danaher-to-reduce-price-and-increase-access-to-cepheids-tb-test/
+    year: 2023
 gap: >-
-  Portable diagnostics still cover only a few tests, cost more than the poorest can bear, and need
-  cold chains, reagents or connectivity that remote places lack. A single cheap device that runs many
-  tests, interprets them on board and works offline or across light-minutes of delay does not yet
-  exist.
+  47 percent of people lack key tests, against the target's 5, and in the poorest countries' primary
+  care only 19 percent can get even the simplest. A molecular TB test sold at cost is 7.97 USD a
+  cartridge, 8 times the target's 1 USD.
+  Portable diagnostics cover a few tests each and need cold chains, reagents or connectivity that
+  remote places lack; a single cheap device that runs dozens of tests, interprets them on board and
+  works offline or across light-minutes of delay does not yet exist.
 inventions: [pocket-diagnostic-lab]
 scene:
   kind: network

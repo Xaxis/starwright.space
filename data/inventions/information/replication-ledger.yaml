@@ -11,20 +11,28 @@ principle: >-
   part. Each recipe in the Ledger is an Open Know-How record: inputs, tools, steps and the measured
   properties of what it makes (the strength of a mortar, the efficiency of a cell, the torque of a
   motor). Builders who try it log what they used, what they got and where they got stuck, with
-  photos and measurements. The Ledger publishes each recipe's replication rate with its
-  uncertainty, ties every failure to the step that caused it, and asks the author to revise.
-  Failures point to exactly where tacit knowledge was missing from the text, so each round of
-  attempts writes more of it down. It is science's replication step made routine for engineering.
+  photos and measurements. The Ledger publishes each recipe's replication rate with its uncertainty,
+  ties every failure to the step that caused it, and asks the author to revise. The statistics are
+  those of any reliability test: 8 successes in 10 attempts give a rate of 80 percent, but with a 95
+  percent interval of 49 to 94 percent; 40 in 50 narrow it to 67 to 89. The rate matters because
+  steps multiply. A chain of 10 recipes that each work 95 percent of the time works only 60 percent
+  of the time end to end; at 99 percent each, it works 90 percent of the time, so a chain from ore
+  to a working motor needs recipes measured to about 1 percent. Failures point to exactly where
+  tacit knowledge was missing from the text, so each round of attempts writes more of it down. It is
+  science's replication step made routine for engineering.
 buildsOn:
-  - text: The Open Know-How specification, an open data model for describing how hardware is made.
+  - text: The Open Know-How specification, a standard manifest for describing open hardware projects, with a self-hostable federated search.
     url: https://www.internetofproduction.org/openknowhow
     year: 2026
   - text: protocols.io, which since 2014 has published citable, versioned methods with comments from those who used them.
     url: https://www.protocols.io/about
     year: 2014
-  - text: The Reproducibility Project, which in 2015 measured how many of 100 published studies replicated, the model for measuring recipes the same way.
-    url: https://en.wikipedia.org/wiki/Reproducibility_Project
+  - text: The Open Science Collaboration's repeat of 100 psychology studies, in which 97 percent of the originals but only 36 percent of the replications had statistically significant results.
+    url: https://doi.org/10.1126/science.aac4716
     year: 2015
+  - text: The Reproducibility Project's cancer biology study, which in preparing to repeat 193 experiments from 53 papers found 0 percent of protocols completely described, the model for measuring recipes the same way.
+    url: https://www.cos.io/rpcb
+    year: 2021
   - text: Open Source Ecology's open designs for 50 industrial machines, a first library of recipes to test.
     url: https://www.opensourceecology.org/gvcs/
     year: 2026
@@ -63,15 +71,15 @@ path:
     proves: The ledger can cover a whole chain, from ore to a working motor.
   - phase: first-plant
     what: Funders and factories ask for a measured replication rate before they adopt or pay for a process.
-    scale: "Tens of thousands of recipes, industrial processes included"
+    scale: "About 20,000 recipes, 2,000 industrial processes included"
     proves: Measured recipes change what gets built.
   - phase: fleet
     what: Every rung of this project's ladder linked to recipes with measured rates, in many languages, with robots logging their own attempts.
-    scale: "Every process the climb uses"
+    scale: "All 10,000 processes the climb uses, about 100,000 recipes"
     proves: The know-how of industry is public and tested.
   - phase: civilization
     what: The ledger travels with the seed factories, and every new world's industry logs its attempts in it.
-    scale: "Every world and every process"
+    scale: "About 1 million recipes, logged on every world"
     proves: Industry can be rebuilt anywhere from the record.
 risks: >-
   Companies may keep their processes secret; the ledger starts with open and expired-patent

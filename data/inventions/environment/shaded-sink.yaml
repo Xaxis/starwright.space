@@ -3,30 +3,36 @@ title: The Shaded Sink
 domain: environment
 for: [carbon-drawdown]
 pitch: >-
-  Spread crushed basalt under the solar fields the plan builds anyway, and water it with the rinse
-  water that cleans the panels, so that millions of square kilometres of panel shade become a slow,
-  permanent carbon sink.
+  Spread crushed basalt in the strips under the lower edges of the solar fields the plan builds
+  anyway, where each panel row pours the rain that falls on it, so that dry land under panels gets
+  the water of a farm in a wet climate and becomes a slow, permanent carbon sink that is easy to
+  measure.
 principle: >-
-  Rain and CO2 slowly dissolve silicate rock: calcium and magnesium silicates react with carbonic acid
-  to make bicarbonate, which rivers and groundwater carry to the sea, where it stays for tens of
-  thousands of years. Crushing basalt to a fine powder speeds this from geological time to years;
-  in an Illinois field trial, 50 t of basalt per hectare each year removed about 10 t of CO2 per
-  hectare over four years. Weathering needs water and warmth. Deserts have the warmth but not the
-  water, and their open soil bakes dry. Under solar panels it does not: the panels shade the ground,
-  cut evaporation and keep soil moist for longer, and in deserts they are washed regularly to clear
-  dust, water that now runs off to waste. The Shaded Sink lays basalt powder in the rows beneath the
-  panels, routes the washing water and any rain onto it, and collects the drainage in lined trenches
-  where its alkalinity is measured before it soaks away or is piped to the sea. The plan puts panels on
-  {land-share} of Earth's land; at just 1 t of CO2 per hectare per year, that area would remove the
-  better part of a billion tonnes a year.
+  Rain and CO2 slowly dissolve silicate rock: calcium and magnesium silicates react with carbonic
+  acid to make bicarbonate, which rivers and groundwater carry to the sea, where it stays for tens
+  of thousands of years. Crushing basalt to a fine powder speeds this from geological time to years,
+  but it needs water: in Illinois, with a wet climate, 50 t of basalt per hectare each year removed
+  an estimated 10.5 t of CO2 per hectare over four years, while in dry soils the reaction stalls.
+  Solar fields change where the rain goes. A panel row that covers 40 percent of the ground catches
+  the rain falling on it and sheds it from its lower edge. If that water lands on a strip a tenth as
+  wide as the row spacing, the strip receives its own rain plus four times as much from the panel,
+  five times the rainfall in all: 300 mm a year of semi-arid rain becomes 1,500 mm on the strip,
+  more than Illinois gets. The panels also shade the soil and cut evaporation, so it stays moist for
+  longer. The Shaded Sink lays basalt in those drip strips and lines and drains the strips, so the
+  water that has passed through the rock can be sampled for alkalinity before it soaks away, which
+  makes the measurement that troubles field trials direct. Washing panels does not help: most solar
+  farms use about a gallon of water per MWh or clean dry. On a farm with a tenth of its ground in
+  strips removing 2.5 t of CO2 per hectare of strip each year, the farm removes about 0.25 t per
+  hectare, so the plan's solar land, {land-share} of Earth's land, would remove something like a
+  couple of hundred million tonnes a year.
 buildsOn:
-  - text: Beerling and colleagues measured 10.5 t of CO2 removed per hectare over four years in Illinois with 50 t of basalt per hectare spread each autumn, while maize and soy yields rose 12 to 16 percent.
+  - text: Beerling and colleagues estimated 10.5 t of CO2 removed per hectare over four years in Illinois, from the loss of cations out of basalt spread at 50 t per hectare each autumn, while maize and soy yields rose 12 to 16 percent.
     url: https://doi.org/10.1073/pnas.2319436121
     year: 2024
   - text: Kantola and colleagues found basalt spread on miscanthus in Illinois added about 8.6 t of CO2 removal per hectare per year and raised yields 29 to 42 percent.
     url: https://doi.org/10.1111/gcb.16903
     year: 2023
-  - text: Larkin and colleagues found treated and untreated oil palm catchments in Malaysia exported similar alkalinity, a caution that weathering is hard to measure in the field.
+  - text: Larkin and colleagues found treated and untreated oil palm catchments in Malaysia exported similar alkalinity, a caution that weathering is hard to measure in the open field.
     url: https://doi.org/10.3389/fclim.2022.959229
     year: 2022
   - text: Adeh and colleagues found soil under solar panels in Oregon stayed wetter through the season, with 90 percent more late-season plant growth.
@@ -35,53 +41,59 @@ buildsOn:
   - text: Barron-Gafford and colleagues found that panels over crops in the Arizona desert reduced plant drought stress and kept the panels themselves cooler.
     url: https://www.nature.com/articles/s41893-019-0364-5
     year: 2019
-  - text: Beerling and colleagues estimated that rock spread on croplands worldwide could remove 0.5 to 2 billion t of CO2 a year.
+  - text: Macknick and colleagues found utility solar plants use a median of about 1 gallon of water per MWh, and that most operators do not wash their panels.
+    url: https://doi.org/10.1088/1748-9326/7/4/045802
+    year: 2012
+  - text: Beerling and colleagues estimated that rock spread on croplands worldwide could remove 0.5 to 2 billion t of CO2 a year at about 80 to 180 US dollars a tonne.
     url: https://doi.org/10.1038/s41586-020-2448-9
     year: 2020
 experiment:
-  goal: Measure how fast basalt weathers under desert solar panels watered with panel-washing water, against the same basalt in open desert.
+  goal: Measure how fast basalt weathers in the drip strips of a semi-arid solar farm, against the same basalt between the rows and in open ground.
   setup: >-
-    Twenty-four lined lysimeter plots, each 10 m by 2 m, at an operating desert solar farm: half under
-    panel rows and half in open ground beside them. Two-thirds of the plots get 50 t per hectare of
-    fine basalt and the rest none. Washing water is applied on the farm's normal schedule, drainage is
-    collected and analysed monthly, and soil cores are taken each quarter.
-  measure: Alkalinity, dissolved inorganic carbon, calcium and magnesium in the drainage; cations held in the soil; soil moisture and temperature; CO2 removed per hectare per year by mass balance.
-  succeedsIf: Plots under panels remove more than 1 t of CO2 per hectare per year, at least twice the rate of open-desert plots with the same basalt, with the mass balance closed to within 30 percent.
+    Thirty lined plots, each 10 m long, at an operating solar farm with 250 to 500 mm of rain a
+    year: ten in the drip strips under the panels' lower edges, ten in the open ground between rows
+    and ten outside the farm. Two-thirds of each set get fine basalt at 50 t per hectare and the
+    rest none. Each plot drains to a sealed collector. Rain gauges sit under the drip edges and in
+    the open; drainage is analysed after every rain and soil cores are taken each quarter.
+  measure: Water reaching each plot; alkalinity, dissolved inorganic carbon, calcium and magnesium in the drainage; cations held in the soil; soil moisture and temperature; CO2 removed per hectare per year by mass balance.
+  succeedsIf: Drip-strip plots receive at least three times the open-ground rainfall and remove CO2 at least three times as fast as basalt in open ground, more than 2 t per hectare of strip per year, with the mass balance closed to within 30 percent.
   costUsd: 1500000
   months: 24
 path:
   - phase: bench
-    what: The lined plots at one desert solar farm.
-    scale: Twenty-four plots, about a twentieth of a hectare.
-    proves: The rate under panels and a measurement that closes.
+    what: The lined plots at one semi-arid solar farm.
+    scale: 30 plots, a few hundred square metres in all.
+    proves: The rate in drip strips and a measurement that closes.
   - phase: prototype
-    what: One whole solar farm spread with basalt from a nearby quarry, its drainage sampled across the site.
-    scale: About 100 hectares, 5,000 t of basalt a year.
+    what: Every drip strip of one solar farm spread with basalt from a nearby quarry, its drains sampled across the site.
+    scale: About 100 hectares of farm, about 500 t of basalt and 25 t of CO2 a year.
     proves: Cost per tonne removed, and that spreading fits panel operations.
   - phase: pilot
-    what: A gigawatt solar park in a desert with basalt nearby, in a place such as Arizona, Rajasthan, Chile or Saudi Arabia.
-    scale: About 2,000 hectares.
+    what: A gigawatt solar park on dry land with basalt nearby, in a place such as Arizona, Rajasthan, Chile or Saudi Arabia.
+    scale: About 2,000 hectares, about 500 t of CO2 a year.
     proves: Verified removal at the scale of a power plant.
   - phase: first-plant
-    what: Every new solar field in one region adopts the sink, paid per measured tonne.
-    scale: About 100,000 hectares.
+    what: Every new solar field in one dry region builds drip strips and drains into its rows, paid per measured tonne.
+    scale: About 100,000 hectares, about 25,000 t of CO2 a year.
     proves: The practice pays its way through carbon removal markets.
   - phase: fleet
-    what: The standard way to build desert and dryland solar worldwide.
-    scale: Millions of hectares.
+    what: The standard way to build dryland solar worldwide, with the strip width matched to each climate's rain.
+    scale: About 10 million hectares, about 2.5 million t of CO2 a year.
     proves: The solar buildout draws carbon down instead of only stopping emissions.
   - phase: civilization
     what: The {land-share} of Earth's land under panels doubles as a carbon sink.
-    scale: All of the plan's solar land.
+    scale: The {land-share} of Earth's land under panels, about 0.2 billion t of CO2 a year.
     proves: The energy system helps return the air toward 350 ppm.
 risks: >-
-  Deserts may be too dry even under panels; then the sink works only in semi-arid and seasonal
-  climates, or adds water from desalination at extra cost. Measurement is the hardest part, as the
-  Malaysian trial found; lined plots and drainage sampling make the mass balance direct, and the
-  fallback is to credit only what is measured leaving the plots. Some basalts carry nickel and
-  chromium; low-metal rock is chosen and groundwater watched. Dust from spreading could soil the
-  panels, so the powder is spread wet or as pellets.
+  Where it rains less than about 200 mm a year, even five times the rain may be too little, so the
+  sink starts in semi-arid and seasonal climates, and in true deserts waits for water from
+  desalination or dew. Water pouring off panel edges erodes the ground, which farms already have to
+  manage; the basalt layer is laid as pellets or under gravel so it is not washed away. Measurement
+  is the hardest part, as the Malaysian and Minnesota trials found; lined, drained strips make the
+  mass balance direct, and only what is measured leaving the strips is credited. Some basalts carry
+  nickel and chromium; low-metal rock is chosen and groundwater watched. Dust from spreading could
+  soil the panels, so the powder is spread wet or as pellets.
 scene:
   kind: field
-  focus: Rows of panels in a desert, dark rock powder beneath them darkening further each time the washers pass.
+  focus: Rows of panels on dry land, dark strips of rock powder beneath their lower edges where the rain runs off.
   params: { unit: panel, count: 5000, terrain: desert }

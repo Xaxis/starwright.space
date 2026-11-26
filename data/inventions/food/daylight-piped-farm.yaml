@@ -4,72 +4,86 @@ domain: food
 for: [vertical-farming]
 pitch: >-
   A vertical farm lit by real sunlight piped indoors through light guides, delivering only the colours
-  plants use, so the biggest cost of indoor farming, the electricity for lamps, nearly vanishes.
+  plants use, so the lighting electricity that is indoor farming's biggest cost nearly vanishes.
 principle: >-
-  Vertical farms are held back by the energy their lamps burn, because converting electricity to
-  light and then light to plant growth throws most of the energy away, and field crops use only about
-  one percent of the sunlight that reaches them in any case. The Daylight-Piped Farm skips the lamps.
-  Rooftop collectors track the Sun and focus it into bundles of optical fibres or light guides that
-  carry daylight down into the stacked growing rooms, spreading it across the trays. Spectral filters
-  pass the red and blue light plants use for photosynthesis and shunt the infrared away as heat to be
-  used or dumped, so the plants get the light they want and the building does not cook. On dull days
-  or at night, efficient tuned lamps on clean power fill in. Because sunlight is free and delivered
-  directly, the farm's running cost drops toward the cost of water, nutrients and the building, and
-  staple and fruiting crops, not just greens, can pay their way indoors.
+  Lettuce wants a daily light integral of about 15 moles of photons per square metre a day. Grow
+  lamps are near their physical limit at 4.1 micromoles per joule and reach about 3 in service, so
+  supplying that integral costs roughly 15 million micromoles divided by 3, about 1.4 kWh per square
+  metre of canopy a day, before the heat those lamps add is pumped back out. That lighting load is why
+  a plant factory takes about 247 kWh for a kilogram of dry lettuce. The Daylight-Piped Farm replaces
+  the lamp photons with sunlight. Rooftop collectors track the Sun, whose beam carries about 2,000
+  micromoles per square metre a second at noon, and focus it into bundles of optical fibres that carry
+  it down into the stacked rooms. A NASA study delivered about 40 percent of collected sunlight this
+  way and grew lettuce with no loss of weight against a lamp-lit control. On a clear day a tracking
+  square metre gathers roughly 60 moles of usable photons, so at 40 percent it delivers about 24
+  moles, enough to light one to two square metres of tray to 15 moles a day while drawing only the
+  power of a tracking motor and a pump. Spectral filters pass the red and blue bands plants use and
+  shunt the infrared, more than half of sunlight's energy, so the rooms do not cook. The collector
+  field roughly matches the lit canopy area, but the trays stack, so the ground footprint falls by the
+  number of layers while the lighting electricity nearly disappears. Tuned lamps on clean power fill
+  in through cloud and night, keeping the farm daylight-first with an electric backstop.
 buildsOn:
-  - text: Field crops convert only about one percent of incident sunlight to biomass over a season, the inefficiency that makes delivering only usable light worthwhile.
-    url: https://www.ars.usda.gov/news-events/news/research-news/2012/comparing-energy-conversion-of-plants-and-solar-cells/
-    year: 2012
-  - text: Engineered photosynthesis gains of 15 to 40 percent show crops can be tuned to a controlled light spectrum for more growth.
-    url: https://doi.org/10.1126/science.aat9077
-    year: 2019
+  - text: A NASA-sponsored study collected sunlight and piped it through optical fibres at about 40 percent efficiency, and grew lettuce with no significant difference in weight from a lamp-lit reference chamber.
+    url: https://ntrs.nasa.gov/citations/20040087633
+    year: 2002
+  - text: Oak Ridge National Laboratory's hybrid solar lighting focused sunlight onto 127 optical fibres to light building interiors and filtered out the infrared, the piping and heat-rejection approach this farm reuses.
+    url: https://www.osti.gov/scitech/biblio/991661
+    year: 2006
+  - text: The best grow lights are near their physical limit of about 4.1 micromoles of photons per joule, and reach about 3 in service, so most of the saving left in indoor farming is in delivering light, not making it.
+    url: https://academic.oup.com/hr/article/6445391
+    year: 2020
+  - text: Virginia Tech extension puts full sun near 2,000 micromoles per square metre a second and lettuce's daily light integral near 15 moles per square metre a day, the targets this farm must hit.
+    url: https://pubs.ext.vt.edu/SPES/spes-720/spes-720.html
+    year: 2025
+  - text: Graamans and colleagues find a plant factory needs about 247 kWh of electricity for a kilogram of dry lettuce, most of it the lamps, the cost this design removes.
+    url: https://repository.tudelft.nl/record/uuid:52d3a62e-2bd6-440e-ac96-fb81645670d1
+    year: 2018
   - text: Soybean seed yield rose up to 33 percent with a photosynthetic fix, evidence that light-optimised staple crops can pay off indoors.
     url: https://doi.org/10.1126/science.adc9831
     year: 2022
 experiment:
-  goal: Grow crops indoors on piped, filtered daylight and show the energy cost per kilogram falls far below a lamp-lit farm.
+  goal: Grow crops indoors on piped, filtered daylight and show the lighting electricity per kilogram falls far below a lamp-lit farm at the same yield.
   setup: >-
-    Build a small stacked growing room fed by tracking rooftop collectors, fibre or light-guide
-    delivery and spectral filters, with efficient lamps for fill light. Grow leafy greens and a
-    fruiting crop against a matched lamp-lit room.
-  measure: >-
-    Light delivered to the canopy versus collected; crop yield per square metre; electricity per
-    kilogram of crop against the lamp-lit control; building heat load.
-  succeedsIf: >-
-    The piped-daylight room matches the lamp-lit room's yield while using at least 60 percent less
-    electricity per kilogram, with the heat load managed.
-  costUsd: 8000000
+    A stacked growing room of about 20 square metres of tray fed by tracking rooftop collectors of
+    similar aperture, fibre or light-guide delivery and red and blue spectral filters, with efficient
+    fill lamps. It grows leafy greens and one fruiting crop against a matched lamp-lit room on the same
+    nutrient and climate system. Both are metered through a full year of weather.
+  measure: Moles of photons delivered to the canopy against those collected; crop yield per square metre; kWh of electricity per kilogram against the lamp-lit control; the building's heat load; the share of days needing fill lighting.
+  succeedsIf: The piped-daylight room matches the lamp-lit room's yield within 10 percent while using at least 60 percent less lighting electricity per kilogram over the year, with canopy delivery at or above 30 percent of collected light.
+  costUsd: 6000000
   months: 30
 path:
   - phase: bench
-    what: A piped-daylight growing room beating a lamp-lit control on energy per kilogram.
-    scale: One room.
-    proves: Piped filtered daylight grows crops at far lower energy.
+    what: One piped-daylight growing room beside a lamp-lit control.
+    scale: 20 square metres of tray, about 1 tonne of greens a year.
+    proves: Piped filtered daylight grows crops at far lower lighting energy.
   - phase: prototype
     what: A multi-storey farm on piped daylight with fill lighting, growing staples and fruit.
-    scale: A building.
+    scale: 1,000 square metres of tray, about 50 tonnes a year.
     proves: The crop range widens beyond greens at acceptable cost.
   - phase: pilot
     what: A commercial farm in a city selling staples grown on daylight.
-    scale: A city district's fresh food.
+    scale: About 1,000 tonnes a year, a city district's fresh food.
     proves: Indoor staples pay their way.
   - phase: first-plant
     what: Daylight-piped farms built into new developments at scale.
-    scale: Many cities.
+    scale: About 100,000 tonnes a year across many cities.
     proves: Indoor farming competes with field farming on cost for more crops.
   - phase: fleet
-    what: The light-delivery approach reused in habitats and bases to light crops with piped sunlight.
-    scale: Global and off-world.
+    what: The light-delivery optics reused in habitats and bases to light crops with piped sunlight.
+    scale: About 1 million tonnes a year, on Earth and off it.
     proves: The same optics feed crops on Earth and in space.
   - phase: civilization
-    what: Cities growing much of their fresh and staple food indoors on sunlight, land returned to nature.
-    scale: Planet and space.
+    what: Cities growing much of their fresh and staple food indoors on sunlight, field land returned to nature.
+    scale: Over 10 million tonnes a year.
     proves: Food production moved off farmland without burning energy for light.
 risks: >-
-  Piping daylight loses light at every bend and junction, and may not deliver enough on cloudy days;
-  the design pairs it with efficient fill lamps and is tested in real weather. Collector and optics
-  cost may outweigh the energy saved, which the experiment measures directly. Some crops may still
-  need more light than daylight piping provides, keeping those on lamps.
+  Piping daylight loses light at every bend and junction and may not deliver enough on cloudy days;
+  the design pairs it with efficient fill lamps and is tested through a full year of real weather.
+  Collector and fibre cost may outweigh the energy saved, which the experiment measures directly
+  against the capital. Some crops may still want more light than piping provides, keeping those on
+  lamps. The collector field takes roof and facade area roughly equal to the lit canopy, so the design
+  suits tall buildings whose roof can serve the stack below, not deep windowless blocks.
 scene:
   kind: field
   focus: Stacked indoor trays lit by sunlight piped down through glowing light guides from the roof.

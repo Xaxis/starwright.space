@@ -11,23 +11,30 @@ summary: >-
   a smarter use of light can slash.
 target: >-
   Grow a wide range of crops, not just leafy greens, in stacked controlled rooms at a cost
-  competitive with field farming, using far less land and water, powered cleanly and lit efficiently
-  enough that the energy cost is small.
+  competitive with field farming, using far less land and water and lighting energy well below today's
+  roughly 250 kWh per kilogram of dry lettuce, so the energy cost is small.
 exists:
-  - text: Field crops convert only about one percent of sunlight to biomass over a season, so a controlled farm that delivers only the light plants use can in principle beat the field's efficiency.
-    url: https://www.ars.usda.gov/news-events/news/research-news/2012/comparing-energy-conversion-of-plants-and-solar-cells/
-    year: 2012
-  - text: Agriculture uses about half the world's habitable land, the pressure indoor farming relieves by stacking crops and cutting the footprint per tonne.
-    url: https://ourworldindata.org/environmental-impacts-of-food
+  - text: Photosynthesis converts at most 4.6 percent of sunlight to biomass in C3 crops and 6 percent in C4 crops, and field crops manage about one percent over a season, so a farm that delivers only the light plants use has room to beat the field.
+    url: https://pubmed.ncbi.nlm.nih.gov/18374559/
+    year: 2008
+  - text: The best grow lights are near their physical limit, about 4.1 micromoles of photons per joule for blue-and-red fixtures, so most of the saving left in indoor farming is in delivering light, not making it.
+    url: https://academic.oup.com/hr/article/6445391
+    year: 2020
+  - text: Asseng and colleagues estimate a ten-layer wheat farm could yield 700 to 1,940 tonnes per hectare a year, hundreds of times the field, but find capital and energy cost, not biology, the obstacle.
+    url: https://doi.org/10.1073/pnas.2002655117
+    year: 2020
+  - text: Agriculture uses about 44 percent of the world's habitable land, the pressure indoor farming relieves by stacking crops and cutting the footprint per tonne.
+    url: https://ourworldindata.org/global-land-for-agriculture
     year: 2024
-  - text: Engineered photosynthesis gains of 15 to 40 percent show crops can be tuned to a controlled light environment for higher output.
-    url: https://doi.org/10.1126/science.aat9077
-    year: 2019
+  - text: Lighting cost has already broken several large vertical farms, with AeroFarms filing for Chapter 11 in 2023, Bowery Farming shutting down in 2024, and Plenty filing in 2025 and retreating to strawberries.
+    url: https://www.plenty.ag/plenty-undertakes-restructuring-process-to-support-focus-on-premium-strawberry-market/
+    year: 2025
 gap: >-
   Vertical farms today are profitable mainly for leafy greens and herbs, because lighting energy and
-  capital cost make staple grains and fruiting crops uneconomic. Getting the energy per kilogram down,
-  by better light delivery and crops bred for indoor light, and widening the crop range, are the
-  unsolved problems.
+  capital cost make staple grains and fruiting crops uneconomic, and the wave of closures since 2023
+  shows how thin the margins are. With grow lights already near their efficiency limit, the saving
+  left is in cheaper light delivery and in crops bred for indoor light, and widening the crop range to
+  staples is still unsolved.
 inventions: [daylight-piped-farm]
 scene:
   kind: field

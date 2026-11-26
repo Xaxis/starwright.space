@@ -10,9 +10,9 @@ summary: >-
   first seed in {seed-year} needs rules and technical checks, agreed before it is built, that keep
   every copy answerable to people.
 target: >-
-  Every self-copying machine, from the first seed onward, built so that it cannot finish a working
-  copy of itself without a permission that people can grant, track and withdraw, with an open
-  register of every lineage and an inspection regime that rival blocs both trust.
+  Every self-copying machine, from the first seed in {seed-year} onward, built so that it cannot
+  finish a working copy of itself without a permission that people can grant, track and withdraw,
+  with an open register of every lineage and an inspection regime that rival blocs both trust.
 exists:
   - text: The Foresight Institute's guidelines for molecular manufacturing (version 6, 2006) say manufacturing needs no autonomous replicators, and that any replicator can be made safe by a broadcast architecture with no instructions on board, or by dependence on a substance not found in nature.
     url: https://www.imm.org/policy/guidelines/
@@ -23,16 +23,23 @@ exists:
   - text: At Asilomar in 1975, the scientists who invented recombinant DNA agreed safety rules for their own field before the risks were known.
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC432675/
     year: 1975
-  - text: Daisy-chain gene drives, published in 2019, spread through a population only for a limited number of generations, because each link of the chain is lost in turn and the drive runs out.
+  - text: Daisy-chain gene drives, published in 2019, spread through a population only until the chain runs out, because each link is lost in turn and the drive exhausts itself.
     url: https://doi.org/10.1073/pnas.1716358116
     year: 2019
-  - text: The International Atomic Energy Agency applied nuclear safeguards, its accounting and inspection of nuclear material, in 189 states in 2023.
-    url: https://www.iaea.org/sites/default/files/gc/gc68-2.pdf
+  - text: The International Atomic Energy Agency applied nuclear safeguards, its accounting and inspection of nuclear material, in 190 states in 2024.
+    url: https://www.iaea.org/sites/default/files/gc/gc69-3.pdf
+    year: 2025
+  - text: The open-source RepRap project built a 3D printer in 2008 that printed the parts for a working copy of itself, the nearest existing thing to a machine that copies itself.
+    url: https://reprap.org/wiki/About
+    year: 2008
+  - text: The EU's Machinery Regulation, which applies from January 2027, treats machinery with fully or partly self-evolving, machine-learning behaviour as a category needing independent safety assessment.
+    url: https://eur-lex.europa.eu/eli/reg/2023/1230/oj
     year: 2023
 gap: >-
-  No law anywhere covers machines that copy themselves, because none yet do. The ideas that exist,
+  No law yet covers machines that fully copy themselves, and the one that comes closest, the EU's
+  rule on self-evolving machinery, which applies from 2027, governs safety, not replication. The oversight ideas that exist,
   broadcast instructions and dependence on an outside input, are design principles, not tested
-  systems. There is no register, licence or inspection body for replicating lineages.
+  systems, and there is no register, licence or inspection body for replicating lineages.
 inventions: [lineage-licence]
 scene:
   kind: replicator

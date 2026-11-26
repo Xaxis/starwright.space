@@ -14,33 +14,34 @@ target: >-
   with the shared knowledge of the climb in their own
   language whether or not they can pay for two-way data.
 exists:
-  - text: About 6 billion people, three quarters of the world, used the internet in 2025. 2.2 billion remained offline, 96 percent of them in low- and middle-income countries.
-    url: https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx
-    year: 2025
-  - text: Mobile networks of 3G or better reached 96 percent of the world's people in 2025 and 4G reached 93 percent, but 4G covered only 56 percent of people in low-income countries.
-    url: https://www.itu.int/itu-d/reports/statistics/2025/10/15/ff25-mobile-network-coverage/
-    year: 2025
-  - text: A basic mobile broadband plan cost a median 1.4 percent of income per head in 2025, but people in low-income economies spent about 22 times as large a share of their income on it as people in high-income ones. The Broadband Commission's target is no more than 2 percent of income per head.
-    url: https://www.itu.int/itu-d/reports/statistics/2025/10/15/ff25-affordability-of-ict-services/
-    year: 2025
-  - text: 82 percent of people aged 10 and over owned a mobile phone in 2025, against 53 percent in low-income economies.
-    url: https://www.itu.int/itu-d/reports/statistics/2025/10/15/ff25-mobile-phone-ownership/
-    year: 2025
-  - text: TeleGeography tracked more than 600 active and planned submarine cables in 2026, the fibre that carries traffic between continents.
-    url: https://www2.telegeography.com/submarine-cable-faqs-frequently-asked-questions
+  - text: About 6.3 billion people, 76 percent of the world, used the internet in 2026, and 2 billion did not; 93 percent of people in high-income countries were online against 32 percent in low-income ones.
+    url: https://www.itu.int/en/mediacentre/Pages/PR-2026-11-03-Facts-and-Figures.aspx
     year: 2026
-  - text: T-Mobile's T-Satellite service connects ordinary phones directly to satellites for texts and some apps, with no change of handset or settings.
+  - text: In 2026, 4G reached 94 percent of the world's people but only 68 percent in low-income countries, and 3G or better reached 97 percent, leaving about 282 million people with no mobile broadband signal.
+    url: https://www.itu.int/itu-d/reports/statistics/2026/10/13/ff26-mobile-network-coverage/
+    year: 2026
+  - text: A basic mobile broadband plan cost a median 1.2 percent of income per head in 2026, under the 2 percent target, but people in low-income economies spent about 20 times as large a share of their income on it as people in high-income ones.
+    url: https://www.itu.int/itu-d/reports/statistics/2026/10/13/ff26-affordability-of-ict-services/
+    year: 2026
+  - text: 84 percent of people aged 10 and over owned a mobile phone in 2026, against 57 percent in low-income economies.
+    url: https://www.itu.int/itu-d/reports/statistics/2026/10/13/ff26-mobile-phone-ownership/
+    year: 2026
+  - text: 79 percent of men used the internet in 2026 against 74 percent of women, over 200 million more men than women online.
+    url: https://www.itu.int/itu-d/reports/statistics/2026/10/13/ff26-the-gender-digital-divide/
+    year: 2026
+  - text: T-Mobile's T-Satellite service connects ordinary phones directly to satellites where towers cannot reach.
     url: https://www.t-mobile.com/coverage/satellite-phone-service
     year: 2026
-  - text: Taara, spun out of Alphabet's X in 2025, carries broadband between towers on beams of light instead of cables.
+  - text: Taara, which left Alphabet's X as an independent company in 2025, carries broadband between towers on beams of light instead of cables.
     url: https://x.company/projects/taara/
     year: 2025
 gap: >-
-  The last people offline are the hardest to reach: rural, poor, and more often women than men.
-  Coverage is mostly there; the price per bit is not. Two-way networks charge every user for every
-  request, even when millions want the same encyclopedia, schoolbook or health guide. A link has to
-  cost what a few minutes of a day's wage buys, and much of what people need could reach them
-  without a two-way link at all.
+  The last 2 billion people offline are the hardest to reach: rural, poor, and more often women than
+  men. Coverage is mostly there, with 97 percent of people under a mobile broadband signal; the
+  phone and the price are not, and only 57 percent of people in low-income countries own a phone.
+  Two-way networks charge every user for every request, even when millions want the same
+  encyclopedia, schoolbook or health guide. A link has to cost what a few minutes of a day's wage
+  buys, and much of what people need could reach them without a two-way link at all.
 inventions: [sky-library]
 scene:
   kind: network

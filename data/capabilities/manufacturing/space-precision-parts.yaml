@@ -9,8 +9,8 @@ summary: >-
   gauges, built up over two centuries. A factory in space must make that chain for itself, from cast
   metal and rock, with almost nothing brought from Earth.
 target: >-
-  Factories on the Moon and in orbit that make micrometre-accurate bearings, spindles, gears, lenses
-  and mirrors from local metal and glass, starting from a kit of a few tonnes, so that the
+  Factories on the Moon and in orbit that make micrometre-accurate bearings, spindles, gears,
+  lenses and mirrors from local metal and glass, starting from a kit of a few tonnes, so that the
   {seed-mass} seeds from {seed-year} can maintain and copy their own moving parts.
 exists:
   - text: Flawless Photonics pulled more than 11 kilometres of ZBLAN optical fibre in microgravity on the International Space Station and returned it to Earth.
@@ -22,16 +22,19 @@ exists:
   - text: Space Forge calls its ForgeStar the first returnable and reusable in-space manufacturing platform, aimed at semiconductor substrates grown in microgravity.
     url: https://www.spaceforge.com/
     year: 2026
-  - text: Surface plates are not made from more precise standards; three rough plates rubbed against each other in turn become flat, a method Henry Maudslay used around 1800 and Joseph Whitworth described.
-    url: https://en.wikipedia.org/wiki/Surface_plate
-    year: 1840
+  - text: Surface plates are not copied from a more precise standard. Two plates lapped to fit can still be one convex and one concave, so Whitworth, following Maudslay, made them flat by matching three against each other.
+    url: https://collection.sciencemuseumgroup.org.uk/objects/co59390/two-whitworth-surface-plates-6-x-4-in-box
+    year: 1850
   - text: A laser interferometer measures length to within 0.5 parts per million, because the wavelength of light is itself the unit of length.
     url: https://www.renishaw.com/en/xl-80-laser-system--8268
     year: 2026
 gap: >-
-  What is made in space today is high-value material in tiny amounts, on machines built on Earth.
-  Nothing has yet made a machine tool, a bearing or a gauge from material won in space, and no one
-  has shown how far precision can be bootstrapped from crude castings with almost nothing imported.
+  What is made in space today is high-value material in small amounts, such as 11 kilometres of
+  fibre, on machines built on Earth. Not 1 machine tool, bearing or gauge has yet been made from
+  material won in space. Earth's precision rests on references such as a laser good to 0.5 parts
+  per million and on plates made flat by the three-plate method, and no one has shown how far
+  precision can be bootstrapped from crude castings to the micrometre the target needs, with
+  almost nothing imported.
 inventions: [accuracy-seed]
 scene:
   kind: orbit

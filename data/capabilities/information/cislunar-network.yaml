@@ -10,28 +10,45 @@ summary: >-
   Earth and navigation signals, lets landers, rovers and mass drivers work like machines on one
   factory floor.
 target: >-
-  Continuous broadband and positioning across the whole Moon, the far side and the polar craters
-  included, through relay satellites and surface towers that any mission can join, linked to Earth
-  by laser at gigabits per second.
+  Continuous broadband of at least 10 Mbit/s to any user and positioning to within 10 m across the
+  whole Moon, the far side and the polar craters included, available 99 percent of the time,
+  through relay satellites and surface towers that any mission can join, linked to Earth by laser
+  at 10 Gbit/s or more.
 exists:
   - text: The Lunar Laser Communication Demonstration on NASA's LADEE set a downlink record of 622 megabits per second from lunar orbit in 2013.
     url: https://en.wikipedia.org/wiki/Lunar_Laser_Communication_Demonstration
     year: 2013
-  - text: Artemis II, launched on 1 April 2026 with four crew, tested O2O, a laser terminal on Orion that sent data to Earth at up to 260 megabits per second.
-    url: https://en.wikipedia.org/wiki/Artemis_II
-    year: 2026
-  - text: NASA's LunaNet architecture sets out a lunar network that industry, academia and partners can build nodes for, offering networking, navigation, detection and science services.
+  - text: NASA's O2O laser terminal, built for Orion on the Artemis II crewed lunar flight, sends data to Earth at up to 260 megabits per second.
+    url: https://www.nasa.gov/directorates/somd/space-communications-navigation-program/whats-next-the-future-of-nasas-laser-communications/
+    year: 2022
+  - text: China's Queqiao-2 relay satellite entered lunar orbit on 25 March 2024, after about 112 hours in flight, and moved to a 24-hour elliptical orbit to relay for the far-side Chang'e-4 and Chang'e-6 missions.
+    url: http://www.news.cn/tech/20240325/4ed8c38382cb436d8ea4d991445a16b9/c.html
+    year: 2024
+  - text: Intuitive Machines won NASA's Near Space Network Services relay contract in September 2024 and plans five lunar data relay satellites, the first on its IM-3 mission.
+    url: https://en.wikipedia.org/wiki/Intuitive_Machines
+    year: 2024
+  - text: On 3 March 2025 NASA and the Italian Space Agency's LuGRE receiver on the Blue Ghost lander became the first to acquire and track GPS and Galileo signals on the Moon's surface, and got a navigation fix there.
+    url: https://www.nasa.gov/directorates/somd/space-communications-navigation-program/nasa-successfully-acquires-gps-signals-on-moon/
+    year: 2025
+  - text: Nokia Bell Labs built a 4G/LTE network for the IM-2 lander to link it with Lunar Outpost's MAPP rover and Intuitive Machines' Micro-Nova hopper, with more bandwidth than the UHF radios used in space.
+    url: https://www.space.com/nokia-4g-cell-network-on-the-moon
+    year: 2024
+  - text: IM-2 touched down on its side in a crater near the south pole at about 11:30 a.m. on 6 March 2025, and Intuitive Machines ended the mission at 12:15 a.m. the next day, about 13 hours later, its batteries spent.
+    url: https://www.nasa.gov/news-release/nasa-receives-some-data-before-intuitive-machines-ends-lunar-mission/
+    year: 2025
+  - text: NASA's LunaNet framework lets industry, academia and international partners build and operate network nodes at the Moon alongside NASA.
     url: https://www.nasa.gov/humans-in-space/lunanet-empowering-artemis-with-communications-and-navigation-interoperability/
     year: 2021
-  - text: ESA's Lunar Pathfinder, a relay satellite built by SSTL, is due to launch no earlier than 2027 as the precursor of the Moonlight constellation.
-    url: https://en.wikipedia.org/wiki/Lunar_Pathfinder
-    year: 2026
 gap: >-
-  There is no network at the Moon yet, only plans, single relays and tests. The far side and the
-  polar craters never see Earth. Position on the surface comes from tracking by dishes on Earth,
-  and the shared standards are still drafts. Nobody yet runs relays that sell service to every
-  mission, the way phone towers do.
-inventions: []
+  There is no shared network at the Moon yet. One national relay serves its own missions, the first
+  commercial relays are only now launching, and the one surface cell network so far ran for about
+  13 hours. The fastest Moon-to-Earth laser link, 622 Mbit/s in 2013, is a sixteenth of the 10
+  Gbit/s target, and nothing yet carries data at the Moon around the clock. The far side and the
+  floors of the polar craters never see Earth, and the crater floors never see the Sun to power a
+  radio. Position on the surface still comes mostly from tracking by dishes on Earth; GPS was first
+  tracked there in 2025. Nobody yet runs towers or relays that sell service to every mission, the
+  way phone towers do.
+inventions: [rim-masts, clockwork-beacons]
 scene:
   kind: moon
   focus: Relay satellites over the Moon's poles linking bases on the near side and the far side.

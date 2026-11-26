@@ -7,28 +7,33 @@ pitch: >-
   kites on a smooth gas stream and settling in parallel on a slowly moving tape, which is then
   tightened, relaxed and packed into a ribbon whose every tube runs the length of many others.
 principle: >-
-  A fibre made of millimetre tubes fails when tubes slide past each other, because only weak van der
+  A fibre of millimetre-long tubes fails when tubes slide past each other, because only weak van der
   Waals forces hold them together; strength then grows with how far each tube overlaps its
   neighbours, the shear-lag effect that sets the strength of paper and of every short-fibre
-  composite. Make each tube ten centimetres long and the overlap is so large that sliding is no
-  longer the weak link, and the tubes themselves carry the load. Ultralong tubes grow by the kite
+  composite. Make each tube 10 centimetres long, 100 times a millimetre tube, and the overlap is so
+  large that sliding is no longer the weak link: the tubes themselves carry the load, toward their own
+  25 to 66 gigapascals rather than the 12.5 of today's best fibre. Ultralong tubes grow by the kite
   mechanism: a catalyst particle lifts off the substrate and the tube grows behind it, floating in a
   laminar gas flow, for as long as the catalyst stays active and the flow stays smooth. The Tubeloom
   makes that happen across a wide front: a line of catalyst stripes across a broad, flat quartz
   channel, a carefully laminar flow of hydrogen and carbon feed, and a collection tape that advances
   as the tubes land, so they lie down straight and overlapping. Two finishing steps follow from the
   recent records: tightening and relaxing the ribbon in step, which evens out the tubes' initial
-  strains (the Daniels effect that limits bundles), and high-velocity solvent jets that pack the
-  tubes tight.
+  strains (the Daniels effect that limits bundles) and reached over 80 gigapascals in centimetre
+  bundles, and high-velocity solvent jets that pack the tubes tight.
 buildsOn:
   - text: Tsinghua University's centimetre-long bundles of ultralong, defect-free tubes, over 80 GPa after synchronous tightening and relaxing (Nature Nanotechnology, 2018).
     url: https://www.nature.com/articles/s41565-018-0141-z
+    year: 2018
   - text: Fluidic scouring with ethanol jets, which packed short-tube fibres to 12.5 GPa (Nature Communications, 2026).
     url: https://www.nature.com/articles/s41467-026-75150-1
+    year: 2026
   - text: Zhang and colleagues' growth of half-metre-long nanotubes, 550 mm (ACS Nano, 2013).
     url: https://doi.org/10.1021/nn401995z
+    year: 2013
   - text: The measured strength of single tubes of known structure, 25 to 66 GPa, which sets the ceiling.
     url: https://www.nature.com/articles/s41467-019-10959-7
+    year: 2019
 experiment:
   goal: Make the first ribbon of overlapping tubes each at least ten centimetres long, and measure whether its strength approaches that of the tubes.
   setup: >-
@@ -42,11 +47,11 @@ experiment:
 path:
   - phase: bench
     what: The 30 cm furnace and its first ribbons.
-    scale: Grams of ribbon.
+    scale: About 10 grams of ribbon a day.
     proves: Long-tube ribbons are far stronger than short-tube fibre.
   - phase: prototype
     what: A metre-wide furnace running for days, with continuous densification.
-    scale: Kilograms a week.
+    scale: About 5 kilograms a week.
     proves: Growth stays stable for days; strength holds over metre lengths.
   - phase: pilot
     what: A line of furnaces fed by methane pyrolysis, selling hydrogen as the co-product.
@@ -58,7 +63,7 @@ path:
     proves: Kilometre-long tape of uniform strength.
   - phase: fleet
     what: Tubelooms in orbit and on the Moon, fed by carbon from asteroids.
-    scale: Millions of tonnes a year.
+    scale: About 1 million tonnes a year.
     proves: Light structures can be made where they are used.
   - phase: civilization
     what: The fibre for skyhooks, habitats and the swarm's structural members.

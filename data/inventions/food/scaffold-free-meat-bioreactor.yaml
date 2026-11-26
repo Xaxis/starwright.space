@@ -3,75 +3,88 @@ title: The Self-Structuring Meat Reactor
 domain: food
 for: [cellular-agriculture]
 pitch: >-
-  A bioreactor that grows muscle and fat cells to high density and lets them knit themselves into a
-  textured cut, with no animal serum and no plastic scaffold, so cultured meat can be made as a
-  steak and at a price that competes with the farm.
+  A cartridge of fine hollow fibres that feeds muscle and fat cells the way capillaries do, so they
+  grow to the density of real meat along a grain, and leaves no scaffold behind when the fibres are
+  drawn out.
 principle: >-
-  Two things make cultured meat costly: the growth medium, long dependent on animal serum, and the
-  structure, since loose cells make only mince. The Self-Structuring Meat Reactor attacks both. It
-  feeds cells a serum-free medium whose growth factors are supplied by precision fermentation rather
-  than extracted from animals, cutting the dominant cost. And instead of seeding cells onto a plastic
-  scaffold, it grows muscle and fat cells together at high density on temperature- and
-  texture-patterned surfaces that cue the cells to align and fuse into fibres, then release the
-  tissue, so the structure is grown, not built. Perfusion keeps the dense culture fed and clean, and
-  the same reactor makes fat and muscle in tunable proportion. The output is a structured cut, grown
-  from a cell line on fermented feedstock, at a cost set by the medium and the energy, both of which
-  the climb drives down.
+  Two things set the price of cultured meat: the medium and the density. Specht's model puts medium
+  at $376.80 a litre with today's growth factors and about $0.24 with factors made by precision
+  fermentation in food-grade plants; at roughly 23 litres per kilogram of meat, that is the
+  difference between about $8,600 and $5.50 a kilogram. Density is the other half. Humbird takes a
+  cell as 3,000 pg, so a kilogram of tissue is about 330 billion cells, and finds a stirred tank
+  stops near 110 g/L as ammonia builds up, or 195 g/L with perfusion as oxygen runs short, against
+  258 g/L for packed cells. Real meat reaches tissue density because capillaries run through it. The
+  reactor copies that: medium flows through a bed of porous hollow fibres about 0.35 mm across set
+  0.9 mm apart, the layout of the University of Tokyo's 2023 reactor, so every cell sits within half
+  a millimetre of a fibre wall. Muscle cells grow along the fibres, which gives the cut a grain, and
+  the fibres are drawn out before harvest, so no scaffold stays in the food. A cartridge 10 cm by 10
+  cm by 30 cm holds about 12,000 fibres and 2.6 kg of tissue. At Beefy-9's measured 39 hour doubling,
+  a cartridge seeded at a sixteenth of full density fills in about 6.5 days; with seeding,
+  differentiation and harvest it turns over every 12 days, about 80 kg a year.
 buildsOn:
-  - text: Precision fermentation already makes animal proteins and growth factors without animals, the route to a serum-free medium that is cultured meat's largest cost.
-    url: https://perfectday.com/
-    year: 2024
-  - text: Pasture is the largest single human land use at 3,200 million hectares, the prize cultured meat targets by replacing raised animals.
-    url: https://ourworldindata.org/environmental-impacts-of-food
-    year: 2024
-  - text: The fermentation sector's 4.1 billion USD of investment supplies the reactors and ingredient supply chains a meat reactor shares.
-    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
-    year: 2024
+  - text: Humbird's techno-economic analysis takes a cell as 3,000 pg and finds a fed-batch process stops near 110 g/L from ammonia and a perfusion process near 195 g/L from oxygen, against 258 g/L for packed cells, at about $37 and $51 per kg.
+    url: https://doi.org/10.1002/bit.27848
+    year: 2021
+  - text: Specht's GFI model puts culture medium at $376.80 a litre in its base case and $0.24 in its low-cost case, and finds growth factors are over 99 percent of the base cost.
+    url: https://gfi.org/wp-content/uploads/2021/01/clean-meat-production-volume-and-medium-cost.pdf
+    year: 2020
+  - text: Stout and colleagues' Beefy-9, a serum-free medium built on recombinant albumin, grew bovine muscle cells through seven passages at a 39 hour doubling time.
+    url: https://doi.org/10.1038/s42003-022-03423-8
+    year: 2022
+  - text: The University of Tokyo's first hollow-fibre reactor perfused 50 fibres 300 to 350 micrometres across at 0.9 mm pitch and grew a chicken tissue 2 cm by 1 cm by 5 mm in 9 days.
+    url: https://www.biorxiv.org/content/10.1101/2023.09.04.555230.full.pdf
+    year: 2023
+  - text: Its 2025 successor, with 1,125 hollow fibres, grew a whole-cut chicken piece of more than 10 g, the largest perfused cultured piece reported.
+    url: https://www.eurekalert.org/news-releases/1080163
+    year: 2025
 experiment:
-  goal: Grow a textured meat cut in a serum-free, scaffold-free reactor and measure cost and quality.
+  goal: Grow one aligned, perfused piece ten times the size of the Tokyo piece on serum-free medium, and find whether its centre stays alive and how much medium each kilogram takes.
   setup: >-
-    Culture a muscle and fat cell line in a perfusion reactor on a fully serum-free medium with
-    fermentation-made growth factors, on surfaces patterned to cue alignment and fusion. Harvest the
-    tissue and assess it against farmed meat.
-  measure: >-
-    Cell density reached; whether fibres align into a textured cut; medium and energy cost per
-    kilogram; taste and texture panel against farmed meat.
-  succeedsIf: >-
-    The reactor yields a structured cut graded close to farmed meat on a taste panel, serum-free, at
-    a medium-and-energy cost per kilogram within a factor of three of farmed meat and falling.
-  costUsd: 25000000
-  months: 42
+    Cartridges 5 cm on a side, each holding about 3,000 porous hollow fibres 0.35 mm across at 0.9 mm
+    pitch, seeded with bovine satellite cells and fat precursor cells in a thin food-grade gel that
+    the cells replace as they grow. A peristaltic loop with inline oxygen, pH, ammonia and lactate
+    sensors perfuses a Beefy-9 type serum-free medium made with fermentation-derived growth factors.
+    Three cartridges run in parallel in a standard cell-culture lab, beside a 1,125-fibre cartridge
+    of the Tokyo design as the control.
+  measure: Tissue mass and wet density; the share of live cells at the centre and at the edge, from stained sections; fibre alignment angle; litres of medium per kilogram; outlet ammonia and lactate; texture by compression test against beef.
+  succeedsIf: A single piece of at least 80 g at a cell density of 200 g/L or more, at least 80 percent live cells at its centre, muscle fibres within 20 degrees of the fibre axis, no serum or animal-derived inputs, and no more than 30 litres of medium per kilogram.
+  costUsd: 5000000
+  months: 24
 path:
   - phase: bench
-    what: Serum-free, scaffold-free structured tissue at lab scale.
-    scale: Grams per run.
-    proves: A textured cut can be grown without serum or a scaffold.
+    what: The 5 cm cartridges, grown in triplicate.
+    scale: Pieces of 100 g, about ten times the Tokyo piece.
+    proves: A thick piece stays alive and aligned on serum-free medium.
   - phase: prototype
-    what: A perfusion reactor making consistent cuts at higher density.
-    scale: Kilograms per run.
-    proves: Density, texture and cost improve together.
+    what: Full 10 by 10 by 30 cm cartridges in a rack, with a taste and texture panel against farmed beef.
+    scale: 2.6 kg per cartridge, 1 tonne a year from about 13 cartridges.
+    proves: The cartridge scales in length and section and gives a cut, not mince.
   - phase: pilot
-    what: A pilot line selling cultured cuts in one market.
-    scale: Tonnes a year.
-    proves: Consumers buy a grown steak, not just mince.
+    what: A pilot line selling grown cuts in one approved market.
+    scale: 100 tonnes a year from about 1,300 cartridges.
+    proves: Medium below $1 a litre, and people buying a grown steak.
   - phase: first-plant
-    what: A commercial plant approaching price parity with farmed meat.
-    scale: Tens of thousands of tonnes a year.
-    proves: Grown meat competes on price and form.
+    what: A commercial plant of cartridge racks with its own growth-factor fermentation.
+    scale: 10,000 tonnes a year from about 125,000 cartridges.
+    proves: A cost per kilogram near farmed meat, set by medium and cartridges.
   - phase: fleet
-    what: Plants worldwide and compact units in habitats, freeing pasture back to nature.
-    scale: Global and off-world.
-    proves: Much of meat demand met without livestock.
+    what: Plants worldwide, and compact racks in habitats making fresh cuts for crews.
+    scale: 1 million tonnes a year.
+    proves: Grown meat as a normal part of the food supply.
   - phase: civilization
-    what: Most meat grown, not raised, with pasture returned to wild and off-world crews eating fresh cuts.
-    scale: Planet and space.
-    proves: Meat decoupled from animals and land.
+    what: Most meat grown rather than raised, its pasture returned to forest and grassland.
+    scale: 100 million tonnes a year.
+    proves: Meat without livestock or the land they need.
 risks: >-
-  Serum-free media may not support dense growth of every cell type; the project would build a library
-  of media and cell lines and start with the easiest meats. Self-structuring may give texture short
-  of a real cut, so the reactor iterates surface patterning and muscle-fat ratio. Scale-up of
-  perfusion without contamination is unproven at food scale and is the focus of the pilot.
+  Cells may grow into the fibre pores and block them as the bed fills; the bench tests two pore
+  sizes, and fibres that dissolve in a food-safe wash are the fallback. Muscle and fat want different
+  media, so the cartridge may need zones fed separately, which the prototype adds if the bench shows
+  it. Drawing the fibres out may tear the tissue; edible fibres of a food polysaccharide, left in
+  place, are the alternative. The low-cost medium depends on growth factors made at food prices,
+  which precision fermentation has not yet shown at scale, so the pilot runs its own factor plant
+  and publishes its cost. Each cartridge is closed and single-use, which limits contamination but
+  makes cartridge cost a large term that the first plant must bring down.
 scene:
   kind: cell
-  focus: Muscle and fat cells aligning and fusing into textured fibres in a perfusion reactor.
+  focus: Muscle and fat cells growing in rows along fine hollow fibres that carry their food.
   params: { type: animal, organelles: 0.6, divide: true, glow: 0.2 }

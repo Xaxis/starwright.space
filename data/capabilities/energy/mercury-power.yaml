@@ -9,14 +9,17 @@ summary: >-
   dayside reaches over 700 K, solar panels lose power as they heat, and a solar day lasts 176 Earth
   days, so any spot on the surface spends about three months in darkness.
 target: >-
-  Power for the industry that takes Mercury apart, rising from megawatts at the first seeds to a large
-  share of the power of {power-k15}, from collectors and converters that thrive in Mercury's heat,
-  carry its long nights and feed mass drivers launching its rock toward {swarm-radius}.
+  Power for the industry that takes Mercury apart, from 1 MW at the first seed to about 10^20 W at
+  its peak after {year-k15}. Launching the swarm's {swarm-full-mass} of collectors over about 30
+  years, at about 20 MJ per kilogram to leave Mercury on a path out to {swarm-radius}, needs about
+  4 x 10^19 W, and mining and refining more again. It must come from collectors and converters that work in Mercury's
+  heat and carry its long nights.
 exists:
   - text: NASA's Mercury fact sheet gives a mean solar irradiance of 9,082.7 W per square metre, a solar day of 175.9 Earth days, and a subsolar surface of 590 to 725 K.
     url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html
-  - text: ESA and JAXA's BepiColombo entered orbit around Mercury on 21 November 2026, after a seven-year cruise powered by solar arrays.
-    url: https://www.esa.int/articles/about-us/directorates/operations/bepicolombo-safely-in-mercury-orbit-despite-unexpected-challenge
+    year: 2024
+  - text: ESA and JAXA's BepiColombo entered orbit around Mercury on 21 November 2026 after a seven-year cruise; a thruster burn ended early, leaving it in a 75-hour orbit instead of the planned 58-hour one.
+    url: https://www.esa.int/Science_Exploration/Space_Science/BepiColombo/Latest_updates_BepiColombo_s_arrival_at_Mercury
     year: 2026
   - text: BepiColombo's solar arrays are tilted away from the Sun because they degrade if they face it for long, so they need more area for the same power.
     url: https://www.esa.int/Science_Exploration/Space_Science/BepiColombo/BepiColombo_factsheet
@@ -31,7 +34,7 @@ exists:
     url: https://doi.org/10.1126/science.1229953
     year: 2013
 gap: >-
-  No power system has worked on Mercury's surface. Ordinary cells lose much of their output at the
+  Nothing has yet made a watt on Mercury's surface, against a target of about 10^20 W. Ordinary cells lose much of their output at the
   temperatures there, and spacecraft survive only by turning their panels away from the Sun. Night on
   any patch of ground lasts about 88 Earth days, so a plant must store power for months, follow the
   dawn, or be fed by beams from orbit, and none of these has been designed for industrial loads.

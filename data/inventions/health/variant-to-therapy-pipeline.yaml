@@ -7,24 +7,27 @@ pitch: >-
   designs a therapy aimed at the exact fault, turning a sequenced genome from a list of unknowns into
   a treatment plan.
 principle: >-
-  Reading a genome is cheap, but most of its variants are of unknown effect, and even a known driver
-  rarely has a matched therapy on the shelf. The Variant-to-Therapy Pipeline joins three advances into
-  one flow. A genome model predicts, for each variant, whether and how it changes a gene or protein,
-  ranking the ones likely to drive the patient's disease. A structure model then shows the molecular
-  consequence of the top variants, how the faulty protein folds, binds or fails. A protein-design
-  stage uses that to propose a therapy: a designed binder or antibody against the faulty protein, a
-  corrected gene, or a drug the structure suggests. Each proposal is checked in the patient's own
-  cells where possible before anything reaches them. The pipeline is the missing middle of genomic
-  medicine: it connects a sequenced genome to a specific, designed treatment instead of leaving the
-  genome as data no one can act on.
+  Reading a genome is cheap, but a person's genome differs from the reference at millions of sites,
+  most of unknown effect, and even a known driver rarely has a matched therapy on the shelf. The
+  Variant-to-Therapy Pipeline joins three advances into one flow. A genome model ranks which variants
+  drive the disease: Evo 2, trained on 9.3 trillion base pairs, scored variants across species at an
+  AUROC of 0.921 when blinded to the answer, enough to put the likely drivers near the top. A
+  structure model then shows the molecular consequence of those variants: AlphaFold 3 predicts how a
+  variant protein folds and binds about 50 percent more accurately than the best docking. A
+  protein-design stage proposes a therapy against the faulty protein: RFdiffusion designs binders and
+  antibodies from scratch at about a 19 percent experimental success rate, so the pipeline runs
+  several designs per target to expect a hit. Each proposal is checked in the patient's own cells
+  before anything reaches them. The pipeline is the missing middle of genomic medicine: it connects a
+  sequenced genome to a specific, designed treatment instead of leaving the genome as data no one can
+  act on.
 buildsOn:
   - text: Evo 2, trained on 9.3 trillion base pairs, predicts the functional effect of genetic variants across life, the first stage that ranks a patient's drivers.
     url: https://arcinstitute.org/news/evo-2-one-year-later
     year: 2025
-  - text: AlphaFold 3 predicts how a variant protein folds and binds with about 50 percent better accuracy than docking, revealing the molecular consequence of a driver variant.
+  - text: AlphaFold 3 predicts the joint structures of proteins, nucleic acids, small molecules and modified residues, with far greater accuracy for protein and drug binding than docking tools and substantially higher antibody and antigen accuracy than AlphaFold-Multimer, the stage that models the faulty protein and what can bind it (Nature, 2024).
     url: https://doi.org/10.1038/s41586-024-07487-w
     year: 2024
-  - text: RFdiffusion designs binding proteins and antibodies from scratch at a 19 percent experimental success rate, the stage that proposes a therapy against the faulty protein.
+  - text: RFdiffusion designs protein binders from scratch with an overall experimental success rate of 19 percent across five targets, the stage that proposes a therapy against the faulty protein (Nature, 2023).
     url: https://doi.org/10.1038/s41586-023-06415-8
     year: 2023
   - text: Portable, affordable sequencing from Oxford Nanopore makes a patient's genome routinely available to feed the pipeline.
@@ -40,34 +43,35 @@ experiment:
     Accuracy of driver-variant ranking against known causes; fraction of cases with a candidate that
     acts on the target in patient cells; time and cost per case.
   succeedsIf: >-
-    The pipeline correctly identifies the driver in most cases and yields a candidate that hits the
-    target in patient-derived cells for a meaningful fraction, within a set time and cost per case.
+    The pipeline ranks the true driver among its top 10 candidates in at least 80 percent of cases
+    and yields a designed candidate that engages the target in patient-derived cells in at least 30
+    percent of cases, within a set time and cost per case.
   costUsd: 30000000
   months: 42
 path:
   - phase: bench
     what: The three-stage pipeline validated on a disease cohort against known biology.
-    scale: Dozens of cases.
+    scale: About 50 cases of known cause.
     proves: Genome to driver to candidate therapy works and is accurate.
   - phase: prototype
     what: The pipeline run prospectively on new patients with candidates tested in their cells.
-    scale: Hundreds of cases.
+    scale: About 500 cases.
     proves: It produces actionable, patient-specific candidates in time to matter.
   - phase: pilot
     what: Candidates from the pipeline entering early trials for rare and cancer cases.
-    scale: Trial cohorts.
+    scale: About 1,000 cases into trial cohorts.
     proves: Designed therapies from the pipeline are safe and help patients.
   - phase: first-plant
     what: A clinical service that takes a genome and returns a treatment plan.
-    scale: A health system.
+    scale: About 100,000 genomes a year in one health system.
     proves: Tailored therapy from the genome becomes routine care.
   - phase: fleet
     what: The service widely available, including compact versions for remote and off-world care.
-    scale: Global and off-world.
+    scale: About 1 million cases a year, on Earth and off it.
     proves: Genomic medicine reaches everyone, not just major centres.
   - phase: civilization
     what: Disease treated at the level of each person's exact molecular fault, everywhere people live.
-    scale: Planet and space.
+    scale: About 8 billion people.
     proves: Medicine matched to the individual as standard.
 risks: >-
   Variant-effect prediction is weakest outside well-studied populations, so the pipeline reports

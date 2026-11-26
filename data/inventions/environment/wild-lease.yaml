@@ -1,0 +1,91 @@
+id: wild-lease
+title: The Wild Lease
+domain: environment
+for: [rewilded-earth, biodiversity]
+pitch: >-
+  A standing auction in which farmers offer land into 30-year rewilding leases. The land stays
+  theirs, the lease pays a yearly rent, and bids are ranked by how much wildlife, connection and
+  carbon each hectare returns for each dollar.
+principle: >-
+  Land leaves farming only if the people who own and work it are paid at least what farming earns
+  them. A flat payment per hectare overpays some owners and fails to tempt others; an auction lets
+  each owner name the rent they need. Victoria's BushTender trial found an auction of conservation
+  contracts could cost far less than a fixed-price scheme for the same result, and the US
+  Conservation Reserve Program has long ranked farmers' bids by environmental benefit and paid
+  annual rent on 10 to 15 year contracts, filling nearly all of its 27 million acre cap. Where the
+  land is matters as much as how much: Strassburg and colleagues found that restoring 15 percent of
+  converted land in the right places could avoid 60 percent of expected extinctions and store 299
+  billion tonnes of CO2, and that choosing places well makes restoration up to 13 times more
+  cost-effective. The Wild Lease joins the two. Each bid names a parcel and a yearly rent. A public
+  map scores every parcel for the species it would help, its links to other wild land, and the
+  carbon its soils and trees would store. The auction accepts bids in order of score per dollar
+  until the year's budget is spent. Leases run 30 years and renew, long enough for woods and herds
+  to establish, and a share of the rent is paid on measured results, from surveys and the Air
+  Census. Parcels that join neighbours earn a bonus, so corridors form. As the climb grows more food
+  on less land, the rent needed per hectare falls and more land enters.
+buildsOn:
+  - text: The US Conservation Reserve Program ranks General signup offers by a competitive bid scored on national environmental criteria, and in February 2026 was within 1.9 million acres of its 27 million acre cap.
+    url: https://www.fsa.usda.gov/news-events/news/02-10-2026/usda-open-continuous-general-conservation-reserve-program-enrollment
+    year: 2026
+  - text: Stoneham and colleagues ran BushTender, a pilot auction of conservation contracts in two regions of Victoria, Australia, and found it could offer large cost savings against a fixed-price scheme.
+    url: https://doi.org/10.1111/j.1467-8489.2003.t01-1-00224.x
+    year: 2003
+  - text: Strassburg and colleagues found that restoring 15 percent of converted land in priority areas could avoid 60 percent of expected extinctions and sequester 299 billion tonnes of CO2, with cost-effectiveness up to 13 times higher when places are chosen well.
+    url: https://doi.org/10.1038/s41586-020-2784-9
+    year: 2020
+  - text: England's Landscape Recovery scheme chose 22 projects in 2022, and its first two moved into delivery in 2025 with over 55 million pounds of public and private money over 20 to 30 years.
+    url: https://defrafarming.blog.gov.uk/2025/08/29/landscape-recovery-first-projects-move-into-delivery-phase/
+    year: 2025
+  - text: The Knepp estate in England sold its dairy herds and machinery in 2000 and let 3,500 acres of farmland go wild.
+    url: https://knepp.co.uk/rewilding/background/
+    year: 2002
+experiment:
+  goal: Show that a ranked auction for rewilding leases buys more wildlife and connection per dollar than a flat payment, and that farmers take part.
+  setup: >-
+    A farming region of about 5,000 square km with mixed farm types, such as an English county or a
+    French département, runs two lease rounds a year apart, each with 10 million dollars for the
+    first five years of rent. A priority map built from species records, habitat links and soil
+    carbon scores every parcel. A matched neighbouring region offers the same money as a flat rate
+    per hectare. Surveys of birds, insects and plants, and Air Census stations, run on enrolled and
+    comparison land in both regions each year.
+  measure: Bids received; hectares enrolled; rent per hectare; priority score bought per dollar in each region; the share of enrolled land that joins other wild land; farm incomes and farmers' views; early change in species and soil carbon.
+  succeedsIf: The auction region buys at least 1.5 times the priority score per dollar of the flat-rate region, at least 30 percent of eligible farms bid, and at least half the enrolled hectares connect to other wild land.
+  costUsd: 24000000
+  months: 36
+path:
+  - phase: bench
+    what: Auction rules tested with 200 farmers bidding on their own farms in a laboratory market.
+    scale: 200 farmers.
+    proves: Rules that farmers understand and bid honestly under.
+  - phase: prototype
+    what: The two lease rounds in one region against a flat-rate region.
+    scale: About 5,000 hectares, 20 million dollars of rent.
+    proves: More nature per dollar, with farmers willing.
+  - phase: pilot
+    what: A national lease programme in one country, paid from part of its farm subsidies and from carbon and nature buyers.
+    scale: About 1 million hectares, 0.5 to 1 billion dollars a year of rent.
+    proves: Rewilding at the scale of a country's farm budget, with rural incomes held.
+  - phase: first-plant
+    what: Leases across a continent, linked into corridors across borders by the neighbour bonus.
+    scale: About 20 million hectares across a continent.
+    proves: Corridors that let large animals move between countries.
+  - phase: fleet
+    what: Lease auctions on every continent, as more food comes from fermentation, vertical farms and higher yields.
+    scale: About 300 million hectares, 2 percent of Earth's land.
+    proves: Land freed from farming goes to nature instead of sprawl.
+  - phase: civilization
+    what: Former farmland leased from the people and communities who hold it, joined to the wild land that remains, so that half of Earth's land is wild and linked, with rents falling as farmland frees up.
+    scale: About 1 billion hectares under lease, within half of Earth's {earth-land-area} kept wild.
+    proves: The land the climb no longer needs returns to nature while its people are paid.
+risks: >-
+  Owners may offer land they would have left idle anyway; the score weights land in active use, and
+  audits check what would have happened. Rents could raise land and food prices locally; caps per
+  district and pairing leases with yield gains elsewhere hold them down. Communal and customary
+  lands often lack the titles an auction expects, so communities bid as groups and the lease
+  recognises customary rights. Wild land with large animals brings conflict with neighbours, such as
+  wolves and livestock; compensation funds and virtual fencing come with the leases. A lease can
+  end; long terms, renewal and a right of first refusal for conservation buyers make that rare.
+scene:
+  kind: globe
+  focus: Farmland parcels across a continent turning green one by one and joining into corridors.
+  params: { green: 0.8, look: farms }

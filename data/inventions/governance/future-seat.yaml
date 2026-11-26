@@ -22,14 +22,19 @@ principle: >-
 buildsOn:
   - text: Future Design in Yahaba, Japan, where groups acting as imaginary future generations shaped the town's long-term plan (Hara and colleagues, 2019).
     url: https://doi.org/10.1007/s11625-019-00684-x
+    year: 2019
   - text: Deliberative Polling, run over 150 times in over 50 countries and jurisdictions since 1988.
     url: https://deliberation.stanford.edu/what-deliberative-pollingr
+    year: 2026
   - text: France's Citizens' Convention for Climate of 2019 and 2020, in which 150 members drawn by lot produced 149 proposals.
     url: https://www.conventioncitoyennepourleclimat.fr/
+    year: 2020
   - text: Ireland's Citizens' Assembly of 2016 to 2018, 99 members of the public selected at random.
     url: https://citizensassembly.ie/previous-assemblies/2016-2018-citizens-assembly/
+    year: 2018
   - text: The Future Generations Commissioner for Wales, created by statute in 2015.
     url: https://www.legislation.gov.uk/anaw/2015/2/section/17
+    year: 2015
 experiment:
   goal: Measure whether a Future Seat with a suspensive delay moves long-lived decisions toward long-term value, and whether residents accept it as legitimate.
   setup: >-
@@ -52,15 +57,15 @@ path:
     proves: It changes real budgets and is trusted.
   - phase: pilot
     what: A national government gives its infrastructure commission or energy regulator a Future Seat.
-    scale: One country's long-lived infrastructure.
+    scale: 1 country's long-lived infrastructure.
     proves: It works at national stakes.
   - phase: first-plant
     what: The bodies that run the climb's century-long work, such as the lunar registry and the heat budget, each seat one by charter.
-    scale: The climb's international institutions.
+    scale: The climb's international institutions, 5 or more bodies.
     proves: Commitments hold through changes of government.
   - phase: fleet
     what: Future Seats in most national legislatures and in the councils of habitats off Earth.
-    scale: Most of humanity.
+    scale: Over 100 national legislatures.
     proves: The future has a voice wherever long decisions are made.
   - phase: civilization
     what: Every decision on the climb heard by people speaking for those who will live with it.

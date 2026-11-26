@@ -4,34 +4,42 @@ domain: manufacturing
 stage: type-1
 needs: [self-replicating-factory, space-commons, replicator-oversight, ai-safety]
 summary: >-
-  A machine that copies itself every {doubling-time} is the most powerful tool the climb has, and
-  for the same reason the one that most needs a leash. A fault in its design is copied as fast as
-  the design; a lineage that copies without limit, or that someone captures, could spread where no
-  one wants it. Biology faced this with engineered organisms and answered with containment by
-  design.
+  A machine that copies itself every {doubling-time} is the most powerful tool the climb has, and for
+  the same reason the one that most needs a leash. A fault in its design is copied as fast as the
+  design; a lineage that copies without limit, or that someone captures, could spread where no one
+  wants it. Biology faced this with engineered organisms and answered with containment by design.
 target: >-
   Every self-copying machine able to copy only with a licence that can be withheld, only from its
-  approved design, and only for a set number of generations, with these limits as hard to remove as
-  to forge a signature, so that the {doublings-to-sun} doublings from seed to swarm stay under human
-  decision.
+  approved design, and only for a set number of generations, with these limits as hard to remove
+  as a signature is to forge, so that the {doublings-to-sun} doublings from seed to swarm stay
+  under human decision.
 exists:
   - text: Freitas and Merkle's Kinematic Self-Replicating Machines surveys the public safety concerns raised by artificial replicators and the guidelines proposed to address them.
     url: http://www.molecularassembler.com/KSRM/5.11.htm
     year: 2004
+  - text: The 1975 Asilomar statement on recombinant DNA held that containment should match each experiment's estimated risk, set four levels from minimal to high, and required moderate-risk work to use hosts with an impaired capacity to multiply outside the laboratory.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC432675/
+    year: 1975
   - text: Harvard researchers redesigned essential enzymes so bacteria depend on a non-standard amino acid the environment does not supply, and showed they resist escaping that dependence by mutation or by taking up genes.
     url: https://www.nature.com/articles/nature14121
     year: 2015
-  - text: The TPM 2.0 library specification defines the hardware root of trust that lets a computer prove which software it booted and refuse unsigned code.
+  - text: In December 2024, 38 scientists warned in Science that mirror-image bacteria could cause unprecedented and irreversible harm, and that unless compelling evidence emerges otherwise they should not be made, even with engineered biocontainment.
+    url: https://par.nsf.gov/servlets/purl/10591160
+    year: 2024
+  - text: The TPM 2.0 library specification defines the hardware root of trust that lets a computer prove which software it booted.
     url: https://trustedcomputinggroup.org/resource/tpm-library-specification/
     year: 2026
-  - text: Robotic Budding showed modular robots assembling a structurally identical copy of themselves from spare modules, still under teleoperation.
+  - text: Robotic Budding showed modular robots assembling a structurally identical copy of themselves from spare modules, still under human teleoperation.
     url: https://arxiv.org/abs/2610.31929
     year: 2026
 gap: >-
-  No replicator yet exists to control, so no controls have been tested against one. Software locks
-  can be patched out by anyone who can rebuild the controller, and a factory that makes its own
-  chips can rebuild its controller. A safeguard must survive the machine's own ability to make
-  parts.
+  No replicator has yet finished even 1 generation on its own, so no control has been tested
+  against one, while the swarm needs {doublings-to-sun} doublings. Software locks can be patched
+  out by anyone who can rebuild the controller, and a factory that makes its own chips can rebuild
+  its controller. Biology's best containment, the 2015 synthetic dependence on an unnatural amino
+  acid, is the kind of measure the 38 authors of the mirror-life warning judged not enough to make
+  mirror bacteria safe to create. A safeguard must survive the machine's own ability to make
+  parts, across dozens of generations and light-minutes of delay.
 inventions: [telomere-lock]
 scene:
   kind: network

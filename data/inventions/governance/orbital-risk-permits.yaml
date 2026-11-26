@@ -10,7 +10,8 @@ principle: >-
   Debris is a textbook negative externality: each operator gains from launching but bears only a
   small part of the collision risk it creates for others, so a shared orbit is overused: Hardin's
   tragedy of the commons, here with a tipping point, the Kessler cascade. Rao, Burgess and Kaffine
-  showed a fee per satellite-year could multiply the industry's value. Permits reach the same end by
+  showed a fee per satellite-year, rising to about 235,000 dollars by 2040, could raise the industry's
+  long-run value from about 600 billion to 3 trillion dollars. Permits reach the same end by
   fixing quantity rather than price, which is the safer choice near a tipping point: Weitzman showed
   that when harm rises steeply past a threshold, setting the quantity beats setting the price. Each
   band of altitude gets a risk budget, set from a physics model of the debris so that the band stays
@@ -22,16 +23,25 @@ principle: >-
 buildsOn:
   - text: Rao, Burgess and Kaffine's 2020 estimate that orbital-use fees could more than quadruple the long-run value of the satellite industry.
     url: https://doi.org/10.1073/pnas.1921260117
+    year: 2020
+  - text: Weitzman's 1974 result that when harm rises steeply past a threshold, capping the quantity beats setting a price, the case for permits over a fee.
+    url: https://doi.org/10.2307/2296698
+    year: 1974
   - text: Kessler and Cour-Palais's 1978 model of how collisions feed a growing debris belt.
     url: https://doi.org/10.1029/JA083iA06p02637
+    year: 1978
   - text: The FCC's 2022 rule that low-orbit satellites leave orbit within five years of their mission's end.
     url: https://docs.fcc.gov/public/attachments/FCC-22-74A1.pdf
+    year: 2022
   - text: The Space Sustainability Rating, begun by the World Economic Forum in 2016 and run since 2021 with EPFL, which scores missions on their debris risk.
     url: https://spacesustainabilityrating.org/
+    year: 2021
   - text: The US Acid Rain Program, the first national cap and trade scheme, which helped cut annual sulphur dioxide emissions by over 95 percent.
     url: https://www.epa.gov/acidrain/acid-rain-program-results
+    year: 2024
   - text: The EU Emissions Trading System, a cap and trade market running since 2005.
     url: https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets/what-eu-ets_en
+    year: 2005
 experiment:
   goal: Show that a risk-permit market keeps a simulated band of orbits below its runaway threshold at lower cost than per-satellite rules, and that operators can work with it.
   setup: >-
@@ -50,19 +60,19 @@ path:
     proves: Permits hold the cap at least cost, and operators can use them.
   - phase: prototype
     what: A shadow market in which real operators report their satellites and plans, receive risk scores and trade permits with no money changing hands, alongside a national traffic system.
-    scale: Tens of operators, thousands of satellites.
+    scale: About 20 operators, thousands of satellites.
     proves: Risk scores can be computed for real objects and are accepted as fair.
   - phase: pilot
     what: One licensing state makes permits binding for the satellites it licenses, with credits for removed debris.
-    scale: That state's share of low Earth orbit.
+    scale: 1 licensing state's share of low Earth orbit.
     proves: A binding market works with real money, and removal companies get paid.
   - phase: first-plant
     what: The main licensing states link their permit registers into one market per band of orbits.
-    scale: Every major operator in low Earth orbit.
+    scale: Every major operator, 1 market per altitude band.
     proves: A shared cap can be run across borders.
   - phase: fleet
     what: The market extends to high orbits, the space between Earth and the Moon, and the lanes used by ships and mass-driver cargo.
-    scale: Earth orbit to the Moon.
+    scale: Earth orbit out to the Moon, some 380,000 km.
     proves: The same rules manage traffic of every kind.
   - phase: civilization
     what: Every orbit the swarm and its industry use carries a risk budget, so a trillion collectors fly without a cascade.

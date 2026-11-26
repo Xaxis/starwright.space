@@ -10,29 +10,36 @@ summary: >-
   radio. The network must keep working when the Sun stands between two worlds, which cuts Earth off
   from Mars for weeks at a time every two years or so.
 target: >-
-  Gigabits per second between any two inner worlds at any time, through relays that route around
-  the Sun, with store-and-forward networking so that every message arrives however long the path.
+  At least 1 Gbit/s between any two inner worlds at any time, Earth and Mars included at their
+  farthest, through relays that route around the Sun so that no conjunction cuts a link for more
+  than an hour, with store-and-forward networking so that every message arrives however long the
+  path.
 exists:
-  - text: NASA's Deep Space Optical Communications on the Psyche probe streamed video by laser at 267 megabits per second from 31 million km on 11 December 2023, received by a photon-counting detector at Palomar Observatory.
+  - text: NASA's Deep Space Optical Communications on the Psyche probe streamed video by laser at 267 megabits per second from 31 million km on 11 December 2023.
     url: https://www.jpl.nasa.gov/news/nasas-tech-demo-streams-first-video-from-deep-space-via-laser/
     year: 2023
-  - text: On 3 December 2024 the same experiment downlinked data from 494 million km, farther than Mars ever is from Earth; its ground stations received 13.6 terabits in all.
+  - text: On 3 December 2024 the same experiment downlinked data from 494 million km, farther than Mars ever is from Earth; its ground stations received 13.6 terabits in all before it concluded on 2 September 2025.
     url: https://www.jpl.nasa.gov/missions/deep-space-optical-communications-dsoc/
-    year: 2024
-  - text: NASA's Mars Reconnaissance Orbiter relays data from landers to Earth at up to 6 megabits per second, averaging 0.5 to 4, and has served as the main relay at Mars since 2006.
-    url: https://en.wikipedia.org/wiki/Mars_Reconnaissance_Orbiter
+    year: 2025
+  - text: NASA's Mars Reconnaissance Orbiter was designed to send at least 500 kbit/s to Earth from its farthest, 400 million km, and 3 to 4 Mbit/s for several months at its closest, about 100 million km.
+    url: https://descanso.jpl.nasa.gov/DPSummary/MRO_092106.pdf
+    year: 2006
+  - text: On 1 September 2026 NASA awarded Blue Origin a fixed-price contract worth up to about 700 million dollars to deliver a Mars telecommunications orbiter by 31 December 2028, with the network expected in service at Mars by 2030.
+    url: https://www.nasa.gov/news-release/nasa-selects-blue-origin-as-mars-telecommunications-network-provider/
     year: 2026
   - text: The Bundle Protocol, version 7, standardised in RFC 9171 in January 2022, is the store-and-forward protocol of delay-tolerant networking.
     url: https://www.rfc-editor.org/info/rfc9171/
     year: 2022
-  - text: During solar conjunction the Sun blocks radio between Earth and Mars; in 2013 the Curiosity rover was left in autonomous mode for 25 days.
-    url: https://en.wikipedia.org/wiki/Solar_conjunction
-    year: 2013
+  - text: Mars solar conjunction comes every two years; in 2021 NASA stopped commanding most of its Mars missions from 2 to 16 October, because the Sun's ionised gas can corrupt radio commands.
+    url: https://www.jpl.nasa.gov/news/nasas-mars-fleet-lies-low-with-sun-between-earth-and-red-planet
+    year: 2021
 gap: >-
   Deep-space links today are point to point: one craft, one dish, one schedule. The rate falls with
-  the square of the distance, and the best optical link so far was a single demonstration. Nothing
-  relays around the Sun, so every conjunction is a blackout. Store-and-forward protocols are
-  standard but barely flown.
+  the square of the distance, so a link that carries 267 Mbit/s at 31 million km carries about 1 at
+  494 million km, a thousandth of the target; the best optical link so far was a single
+  demonstration, now ended, and Mars's own relays run at 0.5 to 4 Mbit/s. Nothing relays around the
+  Sun, so every conjunction, once every two years, cuts commands for about two weeks against a
+  target of an hour. Store-and-forward protocols are standard but barely flown.
 inventions: [photon-bucket-relay]
 scene:
   kind: network

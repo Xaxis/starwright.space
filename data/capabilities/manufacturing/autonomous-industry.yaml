@@ -4,32 +4,43 @@ domain: manufacturing
 stage: planet
 needs: [self-replicating-factory, safe-replication, interplanetary-network, industrial-ai]
 summary: >-
-  By {year-planet} industry spans the Moon, the asteroids and the space between, minutes of light
-  away from Earth. There will never be enough people on site to run it, and Earth is too far away to
-  steer each machine. Factories must repair themselves, adapt to each new rock and learn new
-  products, keeping their doubling every {doubling-time} with people setting goals rather than
-  running machines.
+  By {year-planet} industry spans the Moon, the asteroids and the space between, from light-seconds
+  to light-minutes away from Earth. There will never be enough people on site to run it, and Earth
+  is too far away to steer each machine. Factories must repair themselves, adapt to each new rock and
+  learn new products, keeping their doubling every {doubling-time} while people set goals rather
+  than run machines.
 target: >-
-  Industry that runs for years on worlds where no one lives, fixes its own faults, retunes its
-  processes when its ore changes, and shares what it learns across every lineage, so that from
-  {year-planet} it grows on its own while people, through its replication licences, decide how far.
+  Industry that runs for years at a time on worlds where no one lives, replaces any of its own
+  failed parts, retunes a process within days when its ore changes, and shares what it learns
+  across every lineage, so that from {year-planet} it grows on its own while people, through its
+  replication licences, decide how far.
 exists:
-  - text: Perseverance's AutoNav plans its own route while the wheels turn; JPL sped it up four to five times, enough for a top speed of about 120 metres an hour on Mars.
+  - text: Perseverance's AutoNav plans the rover's route while its wheels turn; JPL made it four to five times faster, enough for about 120 metres an hour on Mars.
     url: https://www.jpl.nasa.gov/news/nasas-self-driving-perseverance-mars-rover-takes-the-wheel/
     year: 2021
-  - text: MOXIE ran 16 times on Mars, making oxygen from the Martian air with no one nearby.
+  - text: MOXIE made oxygen from the Martian air 16 times aboard Perseverance before its mission ended in 2023.
     url: https://www.jpl.nasa.gov/news/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/
     year: 2023
-  - text: The A-Lab ran for 17 days without stopping, planning, running and interpreting its own syntheses.
+  - text: Berkeley Lab's A-Lab ran for 17 days, planning, running and interpreting its own syntheses, and made 36 of the 57 compounds it was set.
     url: https://www.nature.com/articles/s41586-023-06734-w
     year: 2023
-  - text: FANUC's robot factories have long been cited for running unsupervised for up to about a month at a time.
-    url: https://newatlas.com/robotics/xiaomi-dark-robotic-factory/
+  - text: Rio Tinto's first fully autonomous ore train carried about 28,000 tonnes over 280 km in the Pilbara, watched from an operations centre in Perth more than 1,500 km away.
+    url: https://www.riotinto.com/news/stories/how-did-worlds-biggest-robot
+    year: 2018
+  - text: Equinor's Oseberg H, the first unmanned platform on the Norwegian shelf, is run from a field centre and visited for maintenance once or twice a year.
+    url: https://www.equinor.com/news/archive/october2018-oseberg-vestflanken2
+    year: 2018
+  - text: In April 2024 engineers brought back Voyager 1's engineering data by moving code away from a failed memory chip, commanding a spacecraft 24 billion km away with a 45-hour round trip.
+    url: https://www.jpl.nasa.gov/news/nasas-voyager-1-resumes-sending-engineering-updates-to-earth/
     year: 2024
 gap: >-
-  Machines in space today run one task each, watched from Earth by teams of people. Factories on
-  Earth run lights-out for weeks, but people still fix them, change them and decide what they make.
-  No industrial system has yet run, repaired and improved itself for years without people.
+  Machines far from people do one task each and are watched and repaired by teams on Earth. The
+  Voyager fix came after 5 months without engineering data, worked out by engineers over a 45-hour
+  round trip, and Oseberg H, the first unmanned platform on the Norwegian shelf, still needs a
+  crew 1 or 2 times a year, so 6 to 12 months between visits against a target of years. A-Lab ran
+  itself for 17 days. Factories on Earth still need people to repair them, change them and decide
+  what they make, and no industrial system has yet run, repaired and improved itself for a year
+  without a visit.
 inventions: [inner-lab]
 scene:
   kind: network

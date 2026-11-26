@@ -1,0 +1,99 @@
+id: charge-well-engine
+title: The Charge Well Engine
+domain: computation
+for: [photonic-computing, abundant-compute]
+pitch: >-
+  An optical matrix engine that adds up a thousand products as charge in each detector before it
+  converts once to digital, so the cost of each conversion is shared by a thousand operations
+  instead of sixty-four.
+principle: >-
+  In a photonic matrix engine the light does the multiplying almost for free. The cost is in what
+  surrounds it: the lasers, the converters that write numbers onto the light and read answers back,
+  and the drivers between. Lightelligence's 64 by 64 PACE chip, with all of that counted, spends
+  about 0.42 pJ per operation, more than a GPU's {gpu-energy-per-op}. In a mesh each conversion
+  serves only 64 products, and the mesh cannot grow much, because its light weakens at every stage
+  it crosses. The Charge Well Engine moves the multiply from the mesh to the detectors. To multiply
+  matrix A by matrix B, at each clock step one column of A is written on a row of modulators and one
+  row of B on a column of modulators, both fed by the same laser. Lenses spread the two sets of
+  beams into stripes that cross on a square array of balanced photodetectors, and the detector where
+  row i meets column j sees their interference, a current proportional to the product of the two
+  numbers. Each detector keeps that charge in a small capacitor, its well, for K steps, and only
+  then is the sum converted, once. With K of 1,000, an 8-bit conversion of about a picojoule costs 1
+  fJ per multiply-accumulate. Each beam crosses only lenses, never a chain of stages, so the array
+  can grow: on a 1,024 by 1,024 array, each step's 2,048 modulator writes feed a million products,
+  and segmented modulators driven straight from digital logic, at about 100 fJ a write, add 0.2 fJ
+  more. The light is cheap too: an 8-bit answer needs about 65,000 detected photons to rise above
+  shot noise, 65 per product at K of 1,000, about 8 aJ of light at 1,550 nm, or 40 aJ from the wall
+  with a laser 20 percent efficient. All together that is about 1.3 fJ per multiply-accumulate,
+  under 1 fJ per operation, hundreds of times below a GPU before memory and overheads take their
+  share.
+buildsOn:
+  - text: Hamerly and colleagues' design for a photonic accelerator based on coherent detection, scalable to a million neurons, with weights and inputs both encoded in light and a shot-noise limit as low as 50 zJ per multiply-accumulate.
+    url: https://arxiv.org/abs/1812.07614
+    year: 2019
+  - text: Wang and colleagues' optical neural network, 99 percent accurate on handwritten digits with about 3.1 detected photons per multiplication.
+    url: https://www.nature.com/articles/s41467-021-27774-8
+    year: 2022
+  - text: Netcast, a silicon photonic transceiver that broadcasts weights as light, recognising images at 98.8 percent accuracy with 40 aJ of optical energy per multiplication.
+    url: https://arxiv.org/abs/2203.05466
+    year: 2022
+  - text: Lightelligence's PACE, a 64 by 64 photonic matrix chip with more than 16,000 components, at 2.38 trillion operations per joule with its lasers, the baseline to beat.
+    url: https://www.nature.com/articles/s41586-025-08786-6
+    year: 2025
+  - text: Lightmatter's photonic processor, which ran ResNet and BERT at near-electronic precision for many workloads.
+    url: https://www.nature.com/articles/s41586-025-08854-x
+    year: 2025
+  - text: Xu and colleagues' optical convolution accelerator, above ten trillion operations a second, interleaving time, wavelength and space from one microcomb.
+    url: https://www.nature.com/articles/s41586-020-03063-0
+    year: 2021
+experiment:
+  goal: Show that charge integration keeps 8-bit accuracy on a real model while spreading each conversion over a thousand products, and measure every part's energy.
+  setup: >-
+    An optical-table engine: one narrow-linewidth 1,550 nm laser split into two arms, 64 row and 64
+    column thin-film lithium niobate modulators driven at 1 GHz from an FPGA, cylindrical optics
+    that spread the beams into crossing stripes, and a 64 by 64 array of balanced photodiodes bonded
+    to a custom CMOS readout chip with an integrating capacitor and an 8-bit converter per pixel,
+    reading out after up to 1,024 steps. It runs the matrix multiplications of a
+    125-million-parameter open language model, layer by layer, against the same arithmetic in 8-bit
+    integers on a GPU. Power meters log the laser, modulator drivers, readout chip and converters
+    separately.
+  measure: Error of each output against 8-bit integer arithmetic; the model's perplexity on a standard text set; energy per multiply-accumulate of each part at K from 64 to 1,024; drift of phase and offset over hours.
+  succeedsIf: The model's perplexity is within 1 percent of the 8-bit digital run, the readout and conversion cost under 2 fJ per multiply-accumulate at K of 1,024, and the measured energy of every part, scaled to a 256 by 256 array, comes to under a tenth of {gpu-energy-per-op} per operation.
+  costUsd: 1500000
+  months: 15
+path:
+  - phase: bench
+    what: The 64 by 64 engine on an optical table, running a small language model.
+    scale: 4,096 detectors, about 8 trillion operations a second.
+    proves: Charge wells keep 8-bit accuracy and share each conversion among a thousand products.
+  - phase: prototype
+    what: A 256 by 256 engine with modulators on a silicon photonics chip and detectors and wells on a CMOS chip in one package, on an accelerator card.
+    scale: About 130 trillion operations a second per card.
+    proves: Wall-plug energy per operation, memory included, is at least ten times below a GPU's.
+  - phase: pilot
+    what: Racks of engine cards serving language-model inference in a data centre.
+    scale: About 1 MW, some 10,000 cards.
+    proves: Cost per operation beats GPUs on real traffic.
+  - phase: first-plant
+    what: Engines made in standard silicon photonics and CMOS fabs and sold as accelerators.
+    scale: About 1 million cards a year.
+    proves: The design survives volume manufacture and calibration in the field.
+  - phase: fleet
+    what: Most matrix arithmetic in data centres done in light, with digital chips kept for control and training.
+    scale: About 100 million cards in service by {year-k08}.
+    proves: Computing multiplies many times while its share of electricity falls.
+  - phase: civilization
+    what: Engines in orbital and swarm computers, where every watt saved is radiator never built.
+    scale: "Computing at {swarm-radius} from the Sun, from {year-k15}"
+    proves: Light computes where light is caught.
+risks: >-
+  Phase drift and crosstalk between neighbouring pixels may cost bits of accuracy; the next step is
+  per-pixel offset calibration against known test matrices, or intensity encoding with a second
+  detector per pixel instead of interference. Moving weights from memory may cost more than the
+  optics save; the engine then holds weights fixed for batches of requests, or uses memory stacked
+  under the modulator drivers. Training needs more than 8 bits; the engine serves inference first,
+  and training stays on digital chips until mixed-precision methods catch up.
+scene:
+  kind: compute
+  focus: Two fans of laser stripes crossing on a square detector array, each crossing a multiply, the wells filling before each readout.
+  params: { kind: optical, racks: 60 }

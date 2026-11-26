@@ -11,19 +11,24 @@ principle: >-
   language's rules. The Plant Compiler does the same with matter and energy. Its library holds unit
   operations (reactors, pumps, heat exchangers, electrolysers, filters, dryers), each as an
   executable physics model: mass and energy balances, reaction kinetics, phase equilibria, pressure
-  and temperature ratings. A language model proposes flowsheets; a search tunes their sizes; and
-  every candidate is type-checked by physics: mass must balance to the gram, energy to the watt,
-  every vessel must stay inside its rating. The compiler then writes the control program, in the
-  languages industrial controllers already run, and tests design and code together in a dynamic
-  simulation with faults injected: a pump fails, a feed runs impure, power drops. Only a design that
-  meets its specification through all of it is emitted, with a bill of materials and assembly steps.
-  Every plant built feeds its measured performance back into the library, so the models sharpen
-  with each one.
+  and temperature ratings. A flowsheet of 10 units drawn from a first library of 40, each in 3
+  sizes, has about 6 × 10^20 possible forms, so the compiler never enumerates them: a language model
+  proposes a few thousand flowsheets and a search tunes their sizes. Every candidate is type-checked
+  by physics: mass must balance within 0.1 percent, energy within 1 percent, and every vessel must
+  stay inside its rating with a margin of 1.5. At about a second of steady-state simulation each,
+  10,000 candidates take under 3 hours on one machine. The compiler then writes the control
+  program, in the languages industrial controllers already run, and tests design and code together
+  in a dynamic simulation with 100 injected faults: a pump fails, a feed runs impure, power drops.
+  Only a design that meets its specification through all of them is emitted, with a bill of
+  materials and assembly steps. The A-Lab, which planned with no physics check of this kind, made
+  36 of its 57 targets, 63 percent; the compiler aims at 4 in 5 working first time on the bench and
+  9 in 10 by the pilot. Every plant built feeds its measured performance back into the library, so
+  the models sharpen with each one.
 buildsOn:
   - text: Coscientist, an AI that designed, planned and ran chemistry experiments on its own.
     url: https://www.nature.com/articles/s41586-023-06792-0
     year: 2023
-  - text: The A-Lab, which planned, ran and interpreted 17 days of inorganic syntheses without people.
+  - text: The A-Lab, which planned, ran and interpreted 17 days of continuous inorganic syntheses and made 36 of 57 targets.
     url: https://www.nature.com/articles/s41586-023-06734-w
     year: 2023
   - text: Reinforcement learning that lays out chip floorplans as well as human experts in under six hours, a precedent for searching a design space under hard physical rules.
@@ -32,9 +37,12 @@ buildsOn:
   - text: DWSIM, an open-source chemical process simulator with steady-state and dynamic models of unit operations.
     url: https://dwsim.org/
     year: 2026
-  - text: DeepMind's data centre cooling controller, an AI running a real plant within limits set by its operators.
+  - text: DeepMind's data centre cooling controller, which cut the energy Google's data centres use for cooling by up to 40 percent.
     url: https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/
     year: 2016
+  - text: Yokogawa's reinforcement-learning controller, which ran a distillation column at an ENEOS Materials plant for almost a year and became the first such AI formally adopted to control a plant directly.
+    url: https://www.yokogawa.com/news/press-releases/2023/2023-03-30/
+    year: 2023
 experiment:
   goal: Find out whether a compiled plant design works the first time it is built, with no human design changes.
   setup: >-
@@ -51,23 +59,23 @@ experiment:
 path:
   - phase: bench
     what: Five compiled benchtop plants, each built by a technician from the compiler's output.
-    scale: Five plants, litres per hour.
+    scale: 5 plants, 1 to 10 litres an hour each.
     proves: Physics-checked designs work first time at bench scale.
   - phase: prototype
     what: A compiled skid-mounted plant for a real product, such as water treatment or fertiliser for one village.
-    scale: Tonnes a day.
+    scale: 1 plant, about 1 tonne a day.
     proves: The compiler handles scale-up, real feedstocks and real faults.
   - phase: pilot
     what: Compiled plants for a dozen products, built by contractors in several countries and run under AI operators within human-set limits.
-    scale: A dozen plants.
+    scale: 12 plants, about 10 tonnes a day each.
     proves: Designs and their measured results feed back into a library that gets better with each plant.
   - phase: first-plant
     what: A full-scale chemical or metals plant designed by the compiler and certified by regulators.
-    scale: Hundreds of tonnes a day.
+    scale: 1 plant, about 300 tonnes a day.
     proves: Compiled designs can be trusted at the scale industry builds.
   - phase: fleet
     what: The compiler as the normal way to design plants, with the open unit-operation library shared like a standard.
-    scale: Thousands of plants a year.
+    scale: About 1,000 plants a year.
     proves: Design stops being the bottleneck on the buildout.
   - phase: civilization
     what: The compiler designs factories for regolith and sunlight, the parts of the seed factories that fly from {seed-year}.

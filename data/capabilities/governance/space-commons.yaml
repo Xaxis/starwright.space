@@ -10,9 +10,10 @@ summary: >-
   everyone accepts for who may use what, for how long, and what they owe the rest, before the seed
   factory lands in {seed-year}.
 target: >-
-  One set of rules, accepted by every spacefaring state and company, under which lunar sites, ice,
-  orbits and spectrum can be claimed for use, held only while used, registered openly, and shared so
-  that latecomers and countries without space programmes also gain.
+  One set of rules, accepted by every spacefaring state and company before the seed factory lands in
+  {seed-year}, under which lunar sites, ice, orbits and spectrum can be claimed for use, held only
+  while used, registered openly, and shared so that latecomers and countries without space
+  programmes also gain.
 exists:
   - text: The 1967 Outer Space Treaty, which bars any nation from claiming sovereignty over the Moon or other bodies, had 118 states parties on 1 January 2026.
     url: https://www.unoosa.org/unoosa/uploads/res/oosadoc/data/documents/2026/aac_105c_22026crp/aac_105c_22026crp_9rev_1_0_html/AC105_C2_2026_CRP09Rev01E.pdf
@@ -36,9 +37,9 @@ exists:
     url: https://www.itu.int/en/itunews/Documents/2024/2024-01/2024_ITUNewsMag01-en.pdf
     year: 2023
 gap: >-
-  Two camps are writing rules apart: the Artemis Accords and China's lunar station partners. National
-  laws let companies own what they extract, but nothing says who may work a given crater, for how
-  long, or how overlapping claims are settled. The UN principles under negotiation are non-binding,
+  Two camps are writing rules apart: the Artemis Accords, now 78 signatories, and China's lunar
+  station, 17 members. National laws let companies own what they extract, but nothing says who may
+  work a given crater, for how long, or how overlapping claims are settled. The UN principles under negotiation are non-binding,
   and no shared registry of claimed sites exists.
 inventions: [lunar-claims-registry]
 scene:

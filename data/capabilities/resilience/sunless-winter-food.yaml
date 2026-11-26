@@ -9,13 +9,13 @@ summary: >-
   months of food in store. The way through is food that does not need sunlight, made from
   electricity, gas or stored biomass, ready to scale in months.
 target: >-
-  Enough standby capacity to feed every person for several years with crops cut sharply worldwide:
-  plants that make protein and calories from electricity, hydrogen and air, plans to switch farming
-  to cold-tolerant crops, and stores to bridge the first months.
+  Enough standby capacity to feed all 8 billion people for several years with crops cut sharply
+  worldwide: plants that make protein and calories from electricity, hydrogen and air, plans to
+  switch farming to cold-tolerant crops, and stores to bridge the first months.
 exists:
-  - text: Mount Tambora erupted in April 1815; in 1816, the Year Without a Summer, global average temperatures fell by 0.4 to 0.7 degrees C, and crops failed with major food shortages across the Northern Hemisphere.
-    url: https://en.wikipedia.org/wiki/Year_Without_a_Summer
-    year: 1816
+  - text: Mount Tambora erupted in April 1815, and in 1816, the Year Without a Summer, Northern Hemisphere temperatures fell by roughly 0.4 to 0.8 degrees C, with crop failures and food shortages.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6686350/
+    year: 2016
   - text: The Toba caldera in Sumatra erupted about 74,000 years ago, a supereruption whose effects on climate and people are still debated; people living in South Africa came through it and thrived.
     url: https://www.nature.com/articles/nature25967
     year: 2018
@@ -25,13 +25,17 @@ exists:
   - text: ALLFED researches resilient foods and country plans for an abrupt reduction of sunlight, including seaweed, single-cell protein and adapted farming.
     url: https://allfed.info/
     year: 2026
-  - text: Solar Foods' Factory 01 in Finland, opened in 2024, can make up to 160 tons a year of Solein, a protein grown by bacteria on hydrogen, carbon dioxide and air; its next plant is designed for 6,400 tons.
+  - text: Solar Foods' Factory 01 in Finland, opened in 2024, makes up to 160 tons a year of Solein, a protein grown by bacteria on hydrogen, carbon dioxide and air, and plans a 6,400-ton plant.
     url: https://solarfoods.com/factory/
     year: 2024
+  - text: Calysta and Adisseo's Calysseo plant in Chongqing, which broke ground in 2021, is designed for 20,000 tons a year of FeedKind protein from methane-eating bacteria in its first phase.
+    url: https://calysta.com/adisseo-and-calystas-world-leading-alternative-protein-joint-venture-breaks-ground-in-china/
+    year: 2021
 gap: >-
   No country has standby capacity to make food without sunlight at the scale of its population.
-  Microbial protein plants exist at a few hundred tonnes a year, about a million times too small, and
-  nobody has run one through a sudden switch from occasional use to flat out. Plans for a
+  Microbial protein plants exist at a few hundred tonnes a year, Solar Foods' Factory 01 at 160, about
+  a million times too small, and nobody has run one through a sudden switch from occasional use to
+  flat out. Plans for a
   sunless year exist on paper for a handful of countries.
 inventions: [winter-larder]
 scene:

@@ -10,7 +10,7 @@ summary: >-
   law today protects it from a builder far away.
 target: >-
   A guarantee, written into the federation's law and built into every collector's orbit, that each
-  inhabited or living world keeps the sunlight it receives today, to within a fraction of a percent,
+  inhabited or living world keeps the sunlight it receives today, to within 0.1 percent,
   for as long as the swarm flies, watched openly and enforceable against any builder.
 exists:
   - text: English law has protected a building's light since the Prescription Act 1832, under which twenty years of uninterrupted light gives an absolute right to it.
@@ -32,7 +32,8 @@ gap: >-
   Right-to-light law protects a window from a neighbour's wall, and the public trust doctrine
   protects shared waters, but neither reaches beyond one planet. ENMOD bans hostile changes to the
   environment, not the side effects of building. No instrument watches the light reaching each world
-  for a builder's shadow, and no law keeps the swarm out of the line between the Sun and a world.
+  for a builder's shadow, and no law keeps the swarm, which by {year-type-2} catches most of the
+  Sun's light, out of the line between the Sun and a world.
 inventions: [sunlight-easement]
 scene:
   kind: swarm

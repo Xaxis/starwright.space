@@ -19,16 +19,25 @@ principle: >-
   map, so the machine makes parts more accurate than its own slides. Those parts (lapped flats,
   ground ways, better spindles) are built into a second machine, which is mapped and corrected in
   turn. Each round tightens the tolerance, until the factory holds micrometres, and the only
-  imported precision is a laser and a few optics.
+  imported precision is a laser and a few optics. The numbers set the rules of the shop. A laser good
+  to 0.5 parts per million measures a metre of travel to half a micrometre, so the ruler is never the
+  limit. Heat is: cast iron grows about 11 parts per million for each degree, so a metre-long bed
+  that warms by one degree grows 11 micrometres. Holding micrometres over a metre therefore means
+  holding the machine to about a tenth of a degree, or measuring its temperature and correcting for
+  it, which the controller does with the same error map.
 buildsOn:
-  - text: The three-plate method of Maudslay and Whitworth, which originates flatness without a more precise standard.
-    url: https://en.wikipedia.org/wiki/Surface_plate
-  - text: Kinematic couplings and the theory of exact constraint, from MIT's precision engineering research.
-    url: https://pergatory.mit.edu/kinematiccouplings/
+  - text: The three-plate method, by which Whitworth, following Maudslay, made plates flat by matching three against each other, so that flatness comes from no more precise standard.
+    url: https://collection.sciencemuseumgroup.org.uk/objects/co59390/two-whitworth-surface-plates-6-x-4-in-box
+    year: 1850
+  - text: Slocum's review of kinematic couplings, which constrain exactly the six degrees of freedom between two parts and are used to locate parts to below a micrometre.
+    url: https://doi.org/10.1016/j.ijmachtools.2009.10.006
+    year: 2010
   - text: Renishaw's XL-80 laser interferometer, which calibrates and error-maps machine tools to within 0.5 parts per million.
     url: https://www.renishaw.com/en/xl-80-laser-system--8268
+    year: 2026
   - text: NASA's 1980 seed factory study, which named ball bearings and precision instruments among the vitamin parts a seed would still have to import.
     url: https://ntrs.nasa.gov/api/citations/19830007081/downloads/19830007081.pdf
+    year: 1980
 experiment:
   goal: Show that a shop with nothing precise but a laser kit can bootstrap from sand castings to micrometre parts in months.
   setup: >-
@@ -43,27 +52,27 @@ experiment:
 path:
   - phase: bench
     what: The shop of sand castings and one laser kit.
-    scale: A lathe, three plates and a bearing.
+    scale: "About 1 tonne of machine: a lathe, 3 plates and 1 bearing."
     proves: Micrometres can be grown from castings and light.
   - phase: prototype
     what: A full machine shop bootstrapped the same way, with robots doing the lapping and fitting.
-    scale: A lathe, a mill, a grinder and gauges, about 20 tonnes.
+    scale: "About 20 tonnes: a lathe, a mill, a grinder and gauges."
     proves: The whole chain of machine tools can be grown, and grown by robots.
   - phase: pilot
     what: The Accuracy Seed inside the Seed Foundry's Earth loop, making its spindles and bearings.
-    scale: The moving parts of a ten-tonne loop.
+    scale: The moving parts of a 10-tonne loop and 2 generations of its copies, about 70 tonnes of machine.
     proves: Precision parts close in a self-copying loop.
   - phase: first-plant
     what: The precision shop of the first lunar seed, cast from regolith iron and basalt.
-    scale: The spares and copies a {seed-mass} seed needs.
+    scale: The moving parts of a {seed-mass} seed and its first 10 doublings, about 100,000 tonnes of machine.
     proves: Precision holds in lunar dust, vacuum and thermal swings.
   - phase: fleet
     what: Each seed builds the next generation's shop from its own; only the laser kit is copied from a master.
-    scale: Every lineage of the industry.
+    scale: About 5 billion tonnes of industry by {year-planet}.
     proves: Precision spreads as fast as the industry doubles, every {doubling-time}.
   - phase: civilization
     what: Precision manufacturing across the inner solar system, with lasers themselves made by the industry.
-    scale: All of the swarm's moving parts.
+    scale: The machines that process {swarm-full-mined}.
     proves: Nothing precise needs to come from Earth.
 risks: >-
   Thermal drift on the Moon, where shade and sun differ by hundreds of degrees, may swamp micrometre

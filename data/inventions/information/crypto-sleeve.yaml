@@ -1,0 +1,97 @@
+id: crypto-sleeve
+title: The Crypto Sleeve
+domain: information
+for: [post-quantum-security]
+pitch: >-
+  A small box that sits on the cable of any old controller, meter or ground-station modem and wraps
+  its traffic in quantum-safe encryption, with a root of trust that can change algorithms by signed
+  command, so machines built to last decades never have to be replaced to stay safe.
+principle: >-
+  Grids, pipelines, water plants and satellite ground links run on controllers that can last more
+  than 20 years and speak protocols such as Modbus, which cannot authenticate a command. Many cannot
+  be patched, and replacing them all by 2030 would mean rebuilding much of the world's
+  infrastructure in four years. A sleeve goes in the wire between the old device and the network and
+  changes neither end. Two sleeves set up a tunnel with hybrid key agreement, X25519 together with
+  ML-KEM-768, so the link stays safe if either one falls, and then protect each message with
+  AES-256, adding about 20 bytes. The new keys are large: an ML-KEM-768 key and ciphertext together
+  are 2,272 bytes, about 1.9 seconds on a 9,600 bit/s serial radio, so sleeves agree a key once per
+  session and refresh it in the background, never per message. A 2,420-byte ML-DSA-44 signature
+  would cost 2 seconds a message on the same link, so commands that must be signed are signed in
+  batches: one signature covers the root of a hash tree over a thousand commands, and each command
+  carries only its 10 hashes along the tree, 320 bytes. The sleeve's firmware and its choice of
+  algorithm are signed with LMS, a hash-based signature whose security rests only on the hash
+  function. If lattice mathematics ever falls, an LMS-signed policy can still switch every sleeve to
+  HQC, which rests on codes instead, with no site visit.
+buildsOn:
+  - text: RFC 4301, the IPsec architecture, which describes bump-in-the-wire implementations, a dedicated inline security processor serving a host or a gateway, common in military systems and some commercial ones.
+    url: https://www.rfc-editor.org/rfc/rfc4301
+    year: 2005
+  - text: NIST SP 800-82r3, the guide to operational technology security, which notes that such systems can last more than 20 years, that many legacy ones cannot be patched, and that many field devices and protocols cannot be authenticated, so data can be replayed, modified or spoofed.
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf
+    year: 2023
+  - text: FIPS 203's ML-KEM-768, with a 1,184-byte encapsulation key and a 1,088-byte ciphertext.
+    url: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf
+    year: 2024
+  - text: The hybrid key agreement X25519MLKEM768, enabled by default in recent browsers and TLS libraries, which carried most human-initiated traffic through Cloudflare by October 2025.
+    url: https://blog.cloudflare.com/pq-2025/
+    year: 2025
+  - text: NIST SP 800-208, which standardises the stateful hash-based signatures LMS and XMSS.
+    url: https://csrc.nist.gov/pubs/sp/800/208/final
+    year: 2020
+  - text: HQC, chosen by NIST in 2025 as a backup to ML-KEM because it rests on different mathematics.
+    url: https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption
+    year: 2025
+  - text: Ed25519, whose 64-byte signatures and 32-byte public keys set the size today's slow links were designed around.
+    url: https://www.rfc-editor.org/rfc/rfc8032
+    year: 2017
+experiment:
+  goal: Show that sleeves can protect real legacy control traffic with quantum-safe cryptography without breaking its timing, and change algorithm in the field by signed command.
+  setup: >-
+    Twenty sleeves built on a microcontroller with a hardware AES engine and a secure element, in a
+    utility or university grid test bed, fitted to real remote terminal units and programmable logic
+    controllers speaking DNP3 and Modbus, over Ethernet and over 9,600 bit/s serial radio. The
+    control loops run for six months. In the fourth month a single LMS-signed policy, sent from the
+    control room, switches every sleeve from ML-KEM to HQC. A red team with access to the radio and
+    the network tries to read, replay and inject commands throughout.
+  measure: Latency added to each message on each link; time to set up and refresh sessions; control loops that miss their timing; time and link loss during the algorithm switch; every successful read, replay or injection by the red team.
+  succeedsIf: The sleeves add under 10 ms per message on Ethernet and under 50 ms beyond airtime on serial radio, no control loop misses its timing, all twenty switch algorithm by signed command with under one minute of lost link and no site visit, and the red team reads or injects nothing.
+  costUsd: 800000
+  months: 12
+path:
+  - phase: bench
+    what: Twenty sleeves on real controllers in a grid test bed, with a red team.
+    scale: 20 devices, 6 months.
+    proves: Quantum-safe protection fits legacy timing, and algorithms can change in the field.
+  - phase: prototype
+    what: Sleeves across one substation or water plant and on one satellite ground station's command link, for a year.
+    scale: About 300 devices at 2 sites.
+    proves: Sleeves survive real operations, maintenance and failures without stopping the plant.
+  - phase: pilot
+    what: A utility's whole control network sleeved, with keys and policies run from its control room.
+    scale: About 5,000 devices in 1 utility.
+    proves: Operators can run fleet-wide key and algorithm changes as routine work.
+  - phase: first-plant
+    what: The sleeve shrunk to a certified chip built into new terminal units, meters and modems.
+    scale: About 1 million chips a year.
+    proves: New equipment ships able to change its cryptography for its whole life.
+  - phase: fleet
+    what: Grids, pipelines, water systems and satellite links across the world sleeved or rebuilt with the chip.
+    scale: About 100 million devices, before the 2030 deadlines.
+    proves: The move to quantum-safe cryptography does not wait for equipment to wear out.
+  - phase: civilization
+    what: Every long-lived machine of the climb, from lunar mines to the swarm's collectors, able to change its cryptography by signed command.
+    scale: "Every link the industry depends on as it nears {power-k09}"
+    proves: No machine is ever replaced, or left open, because its mathematics aged.
+risks: >-
+  The fastest protection messages in substations must arrive within a few milliseconds and may not
+  tolerate even a sleeve's delay; the next try is an authentication-only mode with hardware hashing
+  for those messages. Cryptographic code on small chips can leak keys through power and timing;
+  masked implementations and certification testing come before any field trial. Stateful hash
+  signatures fail if a key state is ever reused; the root key lives in a hardware module at the
+  operator that counts every signature, with a second, independent root held in reserve. Operators
+  may refuse inline devices on safety grounds; each sleeve has a bypass that only the operator can
+  switch.
+scene:
+  kind: network
+  focus: Old controllers across a grid, each gaining a small glowing sleeve, the links between them changing colour as one signed command passes through.
+  params: { shape: flat, nodes: 800, clusters: 16, links: 0.6, pulses: 0.6 }

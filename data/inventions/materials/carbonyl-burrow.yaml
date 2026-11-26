@@ -7,27 +7,32 @@ pitch: >-
   over the metal face, turns iron, nickel and cobalt into gases, and carries them out to be laid
   down again as pure metal parts, leaving the platinum metals behind as a rich sludge.
 principle: >-
-  Nickel, iron and cobalt react with carbon monoxide at modest temperature and pressure to form
-  volatile carbonyls, nickel tetracarbonyl and iron pentacarbonyl, which are gases or low-boiling
-  liquids; heated a little further, they fall apart again into pure metal and carbon monoxide. The
-  Mond process has used this to refine nickel for over a century, and it is reversible, so the
-  carbon monoxide is not consumed. Few other elements form carbonyls under those conditions, so the
-  platinum group metals that metal asteroids are expected to carry are left behind untouched. The
+  Nickel reacts with carbon monoxide near 50 degrees Celsius to form nickel tetracarbonyl, a gas that
+  decomposes back to pure metal near 230 degrees; iron forms iron pentacarbonyl at raised pressure
+  near 150 degrees, and cobalt a carbonyl in the same range. The Mond process has used this to refine
+  nickel for over a century, and it is reversible, so the carbon monoxide is recycled, under 0.1
+  percent lost per pass. Few other elements form carbonyls under these conditions, so the platinum
+  group metals that metal asteroids are expected to carry are left behind untouched. The
   Burrow is a pressure-tight bell sealed by a soft-metal gasket against a patch of the asteroid's
   metal face that it first mills flat. Concentrated sunlight warms the face; carbon monoxide
-  circulates, reacts and leaves loaded with carbonyl vapour; the bell advances as the face recedes.
+  circulates, reacts and leaves loaded with carbonyl vapour; the bell advances as the face recedes, at
+  least a millimetre a day below 20 bar.
   Outside, the vapour passes over heated mandrels, where it deposits pure metal in the shape of the
   mandrel (vapour forming), so the refinery's output is finished shells, sheets and tubes, not ore.
   No drill, no chips, nothing thrown loose in weightlessness.
 buildsOn:
   - text: The Mond process, which since the 1890s has refined nickel by forming and decomposing nickel carbonyl.
     url: https://en.wikipedia.org/wiki/Mond_process
+    year: 1890
   - text: CVMR, which refines nickel, iron and other metals by chemical vapour metal refining and sells them as fine powders.
     url: https://cvmr.ca/
+    year: 2026
   - text: NASA's Psyche mission to a metal-rich asteroid, which will show what such a body is made of and how it is built.
     url: https://science.nasa.gov/mission/psyche/
+    year: 2023
   - text: AstroForge's commercial missions toward refining asteroid metal.
     url: https://www.astroforge.com/
+    year: 2026
 experiment:
   goal: Measure how fast warm carbon monoxide eats into solid iron-nickel meteoritic metal, and how cleanly it leaves the platinum metals behind.
   setup: >-
@@ -42,19 +47,19 @@ experiment:
 path:
   - phase: bench
     what: The pressure cell on meteorite metal.
-    scale: Kilograms of metal a week.
+    scale: About 5 kilograms of metal a week.
     proves: Rates, purity and residue enrichment on real asteroid-like metal.
   - phase: prototype
     what: A sealed bell clamped to a metre-wide slab in a vacuum chamber, advancing as it eats.
-    scale: About a tonne a month.
+    scale: About 1 tonne a month.
     proves: The seal holds and the bell can follow a receding, uneven face.
   - phase: pilot
     what: A Burrow on a small metal near-Earth asteroid, returning platinum metal concentrate and making its own tanks.
-    scale: Tens of tonnes a year.
+    scale: About 50 tonnes a year.
     proves: The chemistry works in microgravity on a real body.
   - phase: first-plant
     what: Burrows across a metal asteroid, feeding a factory there.
-    scale: Thousands of tonnes a year.
+    scale: About 5,000 tonnes a year.
     proves: Asteroid metal at a cost below lunar metal.
   - phase: fleet
     what: Burrows made by the factories they feed, spreading through the belt.
@@ -62,7 +67,7 @@ path:
     proves: The belt can feed industry without people on site.
   - phase: civilization
     what: The metal for the swarm's frames and machines, from the belt's {asteroid-belt-mass}, of which the industry can use {asteroid-usable}.
-    scale: A large share of the metal the climb needs.
+    scale: A large share of the {swarm-full-mined} the swarm must process.
     proves: The asteroids feed the climb to Type II.
 risks: >-
   Carbonyl formation may be too slow on massive metal, which reacts best when finely divided; the

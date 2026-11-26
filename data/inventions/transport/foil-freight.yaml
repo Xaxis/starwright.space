@@ -6,32 +6,39 @@ pitch: >-
   Ship metal as the sail that moves it: refine asteroid or Mercury metal into aluminium film a
   micron thick, and let each sheet of cargo sail itself to the factory that will melt it down.
 principle: >-
-  A sail's acceleration is the push of light divided by its mass per square metre, so the thinnest
-  sails are the fastest. Aluminium film a micron thick weighs under 3 grams a square metre; at
-  Earth's distance from the Sun it is pushed at about half the strength of the Sun's pull, enough
-  to cross from the asteroid belt to the inner system in a year or two. Making such film is ordinary
-  industry: metal is evaporated in vacuum onto a moving release layer, as packaging film is
-  metallised. In space the vacuum is free. Foil Freight refines aluminium from asteroid or Mercury
-  rock, deposits it into free-standing sheets with thin wire edges and tip vanes, and launches them
-  folded from a mass driver. Each sheet is both spacecraft and cargo: it unfolds, steers by tilting,
-  and spirals to its destination, where it is caught, folded and melted. No ship is built, nothing
-  returns, and the only fuel is sunlight. Denser metals such as iron travel as thicker, slower
-  sheets, or as small cores carried by aluminium sails.
+  A sail's acceleration is the push of light divided by its mass per square metre. Sunlight at
+  Earth's distance, {solar-constant}, presses on a perfect mirror facing it with 2S/c = 9.1 µN per
+  square metre, and on aluminium reflecting 90 percent with about 8.6 µN. Aluminium at 2,700 kg per
+  cubic metre weighs 2.7 g per square metre at 1 µm thick, so a bare sheet accelerates at 3.2 mm/s²,
+  0.54 of the Sun's 5.9 mm/s² pull at 1 AU. Wire edges and tip vanes that raise it to 4 g per square
+  metre still leave a lightness number of 0.36, against 0.15 for IKAROS's {ikaros-density} polyimide.
+  Light and gravity both fall with the square of distance, so that ratio holds everywhere. Tilted 35
+  degrees to the sunlight, a sail gets 0.385 of its full push along its orbit and spirals, changing
+  its orbital speed by the difference between the two circular speeds: 11.7 km/s from the main belt
+  at 2.7 AU in to 1 AU, which a first-order spiral estimate puts at 1.3 years for a 4 g sheet, and
+  9.4 km/s from Mercury's orbit out to the swarm at {swarm-radius}, about 31 days. Making the film
+  is ordinary industry, as packaging film is metallised by evaporating aluminium in vacuum onto a
+  moving release layer; in space the vacuum is free. Foil Freight refines aluminium from asteroid or
+  Mercury rock, deposits it into free-standing sheets, and launches them folded from a mass driver.
+  Each sheet is both spacecraft and cargo: a tonne of it is 250,000 square metres of sail that
+  unfolds, steers by tilting its vanes, and spirals to its destination, where it is caught, folded
+  and melted. Denser metals such as iron travel as thicker, slower sheets, or as small cores carried
+  by aluminium sails.
 buildsOn:
-  - text: Eric Drexler's MIT thesis designed high-performance solar sails of thin metal film, and he made metal thin films to show they were possible.
+  - text: Eric Drexler's MIT thesis, Design of a high performance solar sail system, is early prior art for sails far lighter than plastic film.
     url: https://dspace.mit.edu/handle/1721.1/16234
     year: 1979
-  - text: JAXA's IKAROS sailed between Earth and Venus in 2010 on a polyimide sail 14 m on a side and 0.0075 mm thick.
+  - text: JAXA's IKAROS, launched with the Venus orbiter Akatsuki on 21 May 2010, was the first craft to fly on both the push of sunlight and thin-film solar power during an interplanetary cruise.
     url: https://global.jaxa.jp/projects/sas/ikaros/
     year: 2010
-  - text: Metallised film is made by evaporating aluminium in vacuum onto a moving cooled film, giving layers of about half a micrometre.
-    url: https://en.wikipedia.org/wiki/Metallized_film
-    year: 2026
-  - text: NASA's Psyche, launched in October 2023, is flying to a metal-rich asteroid whose bulk is estimated at about 30 to 60 percent metal by volume (Elkins-Tanton and colleagues, 2020).
+  - text: NASA's Advanced Composite Solar Sail System deployed a sail about 9 m on a side on four 7 m composite booms in low Earth orbit, with boom technology NASA says could carry sails up to 500 square metres.
+    url: https://www.nasa.gov/smallspacecraft/what-is-acs3/
+    year: 2024
+  - text: NASA's Psyche launched on 13 October 2023 for a metal-rich asteroid it is due to begin exploring by August 2029, a test of how much refinable metal the belt holds.
     url: https://science.nasa.gov/mission/psyche/
     year: 2023
-  - text: Shepard and colleagues found M-type asteroids have radar albedos at least twice those of other types, consistent with iron and nickel (Icarus, 2015).
-    url: https://doi.org/10.1016/j.icarus.2014.09.016
+  - text: The IAU's 2015 nominal solar constant, 1361 W per square metre, sets the light pressure every sail in the inner system works with.
+    url: https://arxiv.org/abs/1510.07674
     year: 2015
 experiment:
   goal: Make free-standing aluminium film about a micron thick by vacuum evaporation with no plastic backing, and show it can be handled, folded, unfolded and steered.
@@ -40,30 +47,30 @@ experiment:
     side are lifted off with wire edge frames, folded into packages and deployed in a vacuum chamber.
     A small sheet hangs from a torsion balance under a solar simulator to measure the push and turn
     of light as its tip vanes tilt.
-  measure: Mass per square metre, pinholes, tensile strength, reflectivity, survival through folding and unfolding, and the light-pressure torque.
-  succeedsIf: Free-standing 3 m sheets under 4 grams per square metre with reflectivity above 85 percent, that survive packing and deployment in at least nine of ten trials.
+  measure: Mass per square metre, pinholes, tensile strength, reflectivity, survival through folding and unfolding, and the light-pressure force and torque.
+  succeedsIf: Free-standing 3 m sheets under 4 grams per square metre with reflectivity above 85 percent, that survive packing and deployment in at least nine of ten trials and show a light-pressure force within 10 percent of 8 µN per square metre scaled to the simulator's intensity.
   costUsd: 800000
   months: 12
 path:
   - phase: bench
     what: Free-standing film made, folded and deployed in a chamber.
-    scale: Sheets 3 m on a side.
+    scale: Sheets 3 m on a side, under 4 g per square metre.
     proves: Bare metal sails can be made and handled.
   - phase: prototype
-    what: A foil sheet 10 m on a side released from a rideshare in high Earth orbit, steering with tip vanes and raising its orbit.
-    scale: One sheet, under a kilogram.
+    what: A foil sheet released from a rideshare in high Earth orbit, steering with tip vanes and raising its orbit.
+    scale: One sheet 10 m on a side, 0.4 kg.
     proves: A bare metal sail flies and steers.
   - phase: pilot
     what: A refinery at a near-Earth asteroid making film from local metal and sending sheets to a factory near the Moon.
-    scale: Tonnes a year.
+    scale: 10 tonnes a year, 2.5 million square metres of foil.
     proves: Mass delivered as its own sail.
   - phase: first-plant
     what: Refineries in the main belt sending metal to the inner system.
-    scale: Thousands to millions of tonnes a year.
+    scale: 1,000 to 1 million tonnes a year.
     proves: Freight priced by refining, not by ships.
   - phase: fleet
     what: Mercury's industry sending its metal as foil out to the swarm's orbits {swarm-radius} from the Sun.
-    scale: Billions of tonnes a year.
+    scale: 1 billion tonnes a year, each sheet a month in transit.
     proves: The swarm's factories fed by sunlight alone.
   - phase: civilization
     what: Most mass moving between orbits in the inner system travels as foil.
@@ -71,11 +78,11 @@ path:
     proves: Freight at the scale of a star system.
 risks: >-
   Free-standing film may tear or curl; the fallback is a fine metal mesh frame or film a few microns
-  thick, which sails slower but still sails. Billions of sheets in transit are a traffic problem of
-  their own; their paths can be planned like the swarm's orbits, and sheets that fail are aimed to
-  fall toward the Sun, never into planets. Catching and folding sheets at the far end must be
-  automatic; factories may instead let sheets wind flat onto a receiving drum, which the pilot will
-  test.
+  thick, which at 3 µm still has a lightness number near 0.18 and sails at half the speed. Billions of
+  sheets in transit are a traffic problem of their own; their paths can be planned like the swarm's
+  orbits, and sheets that fail are aimed to fall toward the Sun, never into planets. Catching and
+  folding sheets at the far end must be automatic; factories may instead let sheets wind flat onto a
+  receiving drum, which the pilot will test.
 scene:
   kind: machine
   focus: A bright sheet of metal sailing in from the asteroid belt, its own cargo.

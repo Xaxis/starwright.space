@@ -27,8 +27,8 @@ buildsOn:
   - text: The US Naval Research Laboratory's TEPCE flew a 1 km braided-tape conducting tether in 2019.
     url: https://space.skyrocket.de/doc_sdat/tepce.htm
     year: 2019
-  - text: JAXA's KITE on HTV-6 in 2017 failed to deploy its 700 m tether but demonstrated a carbon-nanotube field-emission cathode in orbit.
-    url: https://en.wikipedia.org/wiki/Kounotori_6
+  - text: JAXA's KITE electrodynamic tether on the HTV-6 freighter in 2017 failed to unroll its tether, a reminder that deployment is the step most likely to go wrong.
+    url: https://global.jaxa.jp/press/2017/02/20170206_kounotori6.html
     year: 2017
   - text: Astroscale's ELSA-d made repeated magnetic captures of a client satellite fitted with a docking plate in 2021, the capture method the Shepherd starts with.
     url: https://astroscale.com/missions/elsa-d/
@@ -55,15 +55,15 @@ path:
     proves: Thrust in both directions from one tether.
   - phase: pilot
     what: A 300 kg Shepherd captures a dead satellite fitted with a docking plate, drags it from 800 km to re-entry range, and climbs back.
-    scale: One tug, one to three objects.
+    scale: 1 tug, 1 to 3 objects.
     proves: Capture, drag, release and return, end to end.
   - phase: first-plant
     what: Twenty Shepherds working one band of inclinations, each removing an object every few months.
-    scale: About a hundred objects a year.
+    scale: 20 tugs, about 100 objects a year.
     proves: A cost per object low enough for operators and agencies to buy removal as a service.
   - phase: fleet
     what: Hundreds of Shepherds keeping every busy shell clear, paid per object removed.
-    scale: Thousands of objects a year.
+    scale: Hundreds of tugs, over 1,000 objects a year.
     proves: Debris can fall year on year while launches grow.
   - phase: civilization
     what: Shepherds as the tow trucks of near-Earth space, also moving working satellites and parts between orbits for orbital industry.

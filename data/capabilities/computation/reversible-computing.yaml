@@ -4,15 +4,16 @@ domain: computation
 stage: k09
 needs: [abundant-compute]
 summary: >-
-  Landauer showed in 1961 that only erasing information must cost energy, {landauer-300k} per bit
-  at room temperature. Everything else a computer does could, in principle, be done with almost no
-  loss, if the charge that switches each gate is gently drawn back out and reused instead of dumped
-  to ground. As Earth nears its heat ceiling, {earth-cap}, computing that recycles its energy is
-  how thinking keeps growing without heating the planet.
+  Landauer showed in 1961 that only erasing information must cost energy, {landauer-300k} per bit at
+  room temperature. Everything else a computer does could, in principle, be done with almost no
+  loss, if the charge that switches each gate is drawn gently back out and reused instead of dumped
+  to ground. As Earth nears its heat ceiling, {earth-cap}, computing that recycles its energy is how
+  thinking keeps growing without heating the planet.
 target: >-
-  Commercial chips whose logic recovers most of its switching energy through a resonant power
-  clock, using a hundred to a thousand times less energy per operation than conventional chips of
-  the same year, by the time Earth's industry reaches {power-k09} in {year-k09}.
+  Commercial chips whose logic recovers 99 to 99.9 percent of its switching energy each cycle
+  through a resonant power clock, using a hundred to a thousand times less energy per operation than
+  conventional chips of the same year, by the time Earth's industry reaches {power-k09} in
+  {year-k09}.
 exists:
   - text: Landauer's paper Irreversibility and Heat Generation in the Computing Process set the least energy of erasing a bit at kT ln 2.
     url: https://doi.org/10.1147/rd.53.0183
@@ -20,23 +21,27 @@ exists:
   - text: Bennett proved that any computation can be done in a logically reversible way, keeping a record instead of erasing it.
     url: https://doi.org/10.1147/rd.176.0525
     year: 1973
+  - text: Bérut and colleagues measured the heat of erasing one bit and found it settles at Landauer's bound, kT ln 2, for slow erasures.
+    url: https://www.nature.com/articles/nature10872
+    year: 2012
+  - text: Schrom's thesis on ultra-low-power CMOS notes that high-Q inductors cannot be made in a CMOS process, which limits inductor-driven adiabatic switching to designs with a few external inductors, and that charging a node in N steps cuts its loss by a factor of N.
+    url: http://www.iue.tuwien.ac.at/phd/schrom/node127.html
+    year: 1998
+  - text: Vaire Computing taped out its first reversible chip prototype in 2025, recovering 50 percent of the energy in its resonator circuit; Frank's work at Sandia projects gains of up to 4,000 times.
+    url: https://spectrum.ieee.org/reversible-computing
+    year: 2025
   - text: Michael Frank argued in IEEE Spectrum that computing's future efficiency depends on reversible, adiabatic circuits.
     url: https://spectrum.ieee.org/the-future-of-computing-depends-on-making-it-reversible
     year: 2017
-  - text: Vaire Computing taped out its first reversible computing chip in 2025, recovering 50 percent of the energy in its resonator circuit; Frank's Sandia work projects gains of up to 4,000 times.
-    url: https://spectrum.ieee.org/reversible-computing
-    year: 2025
   - text: Takeuchi, Yamanashi and Yoshikawa built a reversible logic gate from adiabatic superconducting circuits.
-    url: https://doi.org/10.1038/srep06354
+    url: https://www.nature.com/articles/srep06354
     year: 2014
-  - text: The first measurement of Landauer's bound found the heat of erasure settling at kT ln 2 for slow erasures.
-    url: https://www.nature.com/articles/nature10872
-    year: 2012
 gap: >-
-  Adiabatic logic only saves energy if its power clock is a resonator that hands the energy back
-  each cycle, and on-chip inductors lose much of it. Reversible designs need new logic styles,
-  new design tools and more transistors per function, and they trade speed for energy. No
-  reversible chip yet beats a conventional one on a whole workload.
+  A power clock that recovers a share r of its energy each cycle cuts switching loss by at most 1/(1
+  - r). Vaire's 50 percent is a factor of two; the target needs 99 to 99.9 percent, and on-chip
+  coils lose far more than that. Reversible designs also need new logic styles, new design tools and
+  more transistors per function, and they trade speed for energy. No reversible chip yet beats a
+  conventional one on a whole workload.
 inventions: [acoustic-clock-logic]
 scene:
   kind: machine

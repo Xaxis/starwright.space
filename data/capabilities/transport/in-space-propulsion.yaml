@@ -4,38 +4,49 @@ domain: transport
 stage: k09
 needs: [space-solar-power]
 summary: >-
-  A chemical rocket's exhaust leaves at a few kilometres a second. An electric thruster's leaves
-  five to ten times faster, so for the same trip it burns a small fraction of the propellant, and a
-  sail burns none at all. Moving bulk cargo between orbits and worlds is work for electric engines
-  at megawatts per ship, and for sails where time does not matter.
+  A chemical rocket's exhaust leaves at a few kilometres a second. An electric thruster's leaves 7
+  to 10 times faster, so for the same trip it burns a small fraction of the propellant, and a sail
+  burns none at all. From low Earth orbit to low lunar orbit a hydrogen and oxygen stage, at a 4.4
+  km/s exhaust, spends about 60 percent of its starting mass on the 4 km/s of burns; an electric tug
+  at 25 km/s spirals out on about 8 km/s and spends about 27 percent, because the propellant share
+  is 1 minus e to the power of minus the speed change over the exhaust speed. Moving bulk cargo
+  between orbits and worlds is work for electric engines at megawatts per ship, and for sails where
+  time does not matter.
 target: >-
-  Electric thrusters at megawatts per ship, running for years on propellant made in space, and sails
-  for cargo in no hurry, so that moving a tonne between Earth orbit, the Moon, Mars and the asteroids
-  costs mostly electricity.
+  By {year-k09}, cargo tugs of 1 to 10 MW of electric power each, at exhaust speeds of 20 to 50 km/s
+  and thruster lives of 50,000 hours or more; at least 90 percent of their propellant made in space
+  from lunar or asteroid argon, oxygen or metals; and sails for cargo in no hurry, so that moving a
+  tonne from low Earth orbit to lunar orbit spends under 30 percent of the starting mass as
+  propellant and costs mostly electricity.
 exists:
-  - text: NASA's Dawn changed its own speed by 11.5 km/s with ion engines of 3,100 s specific impulse and 90 mN thrust, a record for solar-electric propulsion, before its mission ended in 2018.
-    url: https://en.wikipedia.org/wiki/Dawn_(spacecraft)
+  - text: Dawn's ion propulsion ran about 51,250 hours, used about 416 kg of xenon and gave the spacecraft almost 11.5 km/s, a record for any on-board propulsion system, before the mission ended in 2018.
+    url: https://ntrs.nasa.gov/citations/20210008613
     year: 2018
-  - text: SpaceX's second-generation Starlinks, from 2023, use Hall thrusters running on argon, cheaper and more plentiful than krypton or xenon, with 2.4 times the thrust of the earlier krypton thruster.
-    url: https://en.wikipedia.org/wiki/Hall-effect_thruster
+  - text: SpaceX's Starlink V2 mini satellites, from 2023, use argon Hall thrusters, many times cheaper than xenon and more plentiful than krypton, with 2.4 times the thrust and 1.5 times the specific impulse of earlier Starlink thrusters.
+    url: https://techcrunch.com/2023/03/03/spacexs-acquisition-of-swarm-is-paying-off-with-new-starlink-thrusters
     year: 2023
-  - text: NASA and Aerojet Rocketdyne began qualifying the AEPS, a 12.5 kW Hall thruster with up to 2,900 s specific impulse, in July 2023.
-    url: https://en.wikipedia.org/wiki/Advanced_Electric_Propulsion_System
-    year: 2023
-  - text: The Gateway's power and propulsion element was to fly three 12 kW thrusters, just under 50 kW in all, but NASA paused Gateway as designed in March 2026.
-    url: https://en.wikipedia.org/wiki/Gateway_(space_station)
+  - text: Aerojet Rocketdyne, part of L3Harris, and NASA developed AEPS, a 12 kW Hall thruster for the Gateway; three flight thrusters were near completion in 2025 while qualification tests went on.
+    url: https://ntrs.nasa.gov/api/citations/20250008681/downloads/IEPC2025AEPSOverviewPaper128GRCreviewcopyUpdated.pdf
+    year: 2025
+  - text: The Gateway's power and propulsion element was to carry a 60 kW solar-electric propulsion system, but in 2026 NASA said it would pause Gateway in its current form to put its effort into a base on the surface.
+    url: https://flightplan.forecastinternational.com/2026/04/02/nasa-scraps-lunar-gateway-for-now/
     year: 2026
-  - text: Ad Astra ran its VASIMR VX-200SS plasma engine for 88 hours at 80 kW in July 2021.
-    url: https://en.wikipedia.org/wiki/Variable_Specific_Impulse_Magnetoplasma_Rocket
+  - text: The University of Michigan's X3 nested Hall thruster ran at 5 to 102 kW and up to 260 amperes in 2017, giving 5.4 N, the highest thrust reached by any plasma thruster at the time.
+    url: https://www.space.com/38444-mars-thruster-design-breaks-records.html
+    year: 2017
+  - text: Ad Astra ran its VASIMR VX-200SS plasma engine for 88 hours of continuous operation at 80 kW in its Texas laboratory in July 2021.
+    url: https://www.adastrarocket.com/pressReleases/2021/20210722-PressRelease.pdf
     year: 2021
-  - text: ThrustMe flew the first iodine electric thruster in space, launched in November 2020; iodine is stored as a solid (Nature, 2021).
-    url: https://en.wikipedia.org/wiki/ThrustMe
+  - text: ThrustMe's iodine ion thruster, run at 55 W and 0.8 mN on a 20 kg CubeSat launched on 6 November 2020, showed in orbit that iodine, stored as an unpressurized solid and cheaper and more abundant than xenon, works as a propellant (Nature, 2021).
+    url: https://www.nature.com/articles/s41586-021-04015-y
     year: 2021
 gap: >-
-  Electric thrusters in flight run at kilowatts, and the largest ones tested on the ground at about
-  a hundred; cargo ships between worlds need megawatts each. Every thruster's propellant, whether
-  xenon, krypton, argon or iodine, is still brought up from Earth. Sails have flown only as small
-  tests.
+  The largest Hall thruster built for flight, the 12 kW AEPS, is still in qualification: a 1 MW tug
+  needs about 80 of them and a 10 MW tug about 800. The most powerful thrusters tested on the ground,
+  X3 at 102 kW and VASIMR at 80 kW for 88 hours, reach a tenth of 1 MW, and the largest electric
+  ship planned, Gateway's 60 kW element, is paused. Every thruster's propellant flown so far,
+  whether xenon, krypton, argon or iodine, was launched from Earth: 0 kg made in space against the
+  target's 90 percent. Sails have flown only as small tests.
 inventions: [moon-metal-hall-drive]
 scene:
   kind: machine

@@ -30,9 +30,9 @@ exists:
     url: https://www.huntsman.com/products/miralon
     year: 2026
 gap: >-
-  Fibres made of short tubes slip between them, so their strength is set by the weak grip between
-  tubes rather than by the tubes. Ultralong tubes avoid that, but they grow sparsely, slowly and in
-  tiny amounts. No process yet makes long, aligned, defect-free tubes continuously and densely.
+  Single tubes reach 25 to 66 gigapascals, but the best continuous fibre reaches only 12.5, because
+  short tubes slip past each other rather than carry the load. Ultralong tubes avoid that but grow by
+  the milligram. No process yet makes long, aligned, defect-free tubes continuously and densely.
 inventions: [tubeloom]
 scene:
   kind: lattice

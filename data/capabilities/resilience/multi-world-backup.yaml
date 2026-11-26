@@ -10,30 +10,30 @@ summary: >-
   their own people, food, factories, records and the seeds and cells of Earth's life.
 target: >-
   Self-sufficient settlements on the Moon and in free space, each large enough in people and
-  industry to survive and grow if contact with Earth stopped for good, each holding a full copy of
-  humanity's knowledge and a frozen record of Earth's species.
+  industry, on the order of 100 people and up, to survive and grow if contact with Earth stopped for
+  good, each holding a full copy of humanity's knowledge and a frozen record of Earth's species.
 exists:
   - text: The International Space Station marked 25 years of continuous human presence on 2 November 2025.
-    url: https://www.nasa.gov/international-space-station/
+    url: https://www.nasa.gov/missions/station/
     year: 2025
-  - text: Biosphere 2 in Arizona sealed eight people inside a closed ecosystem for two years from 1991; the run struggled with low food and oxygen.
-    url: https://en.wikipedia.org/wiki/Biosphere_2
-    year: 1993
-  - text: BIOS-3 in Krasnoyarsk kept a crew of three in a closed system for 180 days in 1972 and 1973, with wheat and vegetables grown in its phytotrons.
-    url: https://en.wikipedia.org/wiki/BIOS-3
-    year: 1973
+  - text: Biosphere 2 in Arizona sealed eight people inside a closed ecosystem for two years from 1991; oxygen fell to 14 percent and the farm yielded less food than expected, so the run needed outside help.
+    url: https://www.earthmagazine.org/article/benchmarks-september-26-1991-crew-sealed-inside-biosphere-2/
+    year: 2015
+  - text: Lunar Palace 365 in Beijing kept eight volunteers in a closed bioregenerative system for 370 days in 2017 and 2018, growing food and recycling air and water inside, the longest run of its kind.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10124008/
+    year: 2023
   - text: Marin and Beluffi computed that a crew of at least 98 people avoids inbreeding and survives a 6,300-year voyage with full success under their assumptions.
     url: https://arxiv.org/abs/1806.03856
     year: 2018
   - text: Seeds carried in a sealed biosphere on China's Chang'e 4, among them cotton, sprouted on the Moon's far side in January 2019, the first plants to sprout on the Moon.
-    url: https://en.wikipedia.org/wiki/Chang%27e_4
+    url: http://www.xinhuanet.com/english/2019-01/15/c_137745432.htm
     year: 2019
   - text: The Frozen Ark saves the DNA and viable cells of the world's endangered species.
     url: https://www.frozenark.org/
     year: 2026
 gap: >-
   No settlement off Earth makes its own food, air or parts; every one depends on resupply. The
-  longest closed-ecosystem runs lasted months to two years and needed outside help. The biological
+  longest closed run, Lunar Palace 365, lasted 370 days and still leaned on resupply. The biological
   record of Earth's life is kept only on Earth, in freezers that need power.
 inventions: [shadow-vault]
 scene:

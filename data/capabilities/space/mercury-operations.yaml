@@ -9,9 +9,9 @@ summary: >-
   machines: a day there lasts half a year, noon is hot enough to melt lead, and the nights are as
   cold as the Moon's.
 target: >-
-  Mines, factories and mass drivers that run on Mercury for decades without people, live through
-  the heat of noon and the cold of night, and copy themselves until they can process the crust at
-  the rate the swarm needs.
+  Mines, factories and mass drivers that run on Mercury for decades without people, work through a
+  noon above 700 K and the cold of a night half a year long, and copy themselves until they can
+  process the crust toward {mercury-usable} of the planet at the rate the swarm needs.
 exists:
   - text: NASA's MESSENGER orbited Mercury from March 2011 to April 2015 and found evidence of water ice in craters at its poles in 2012.
     url: https://science.nasa.gov/mission/messenger/
@@ -29,9 +29,9 @@ exists:
     url: https://ntrs.nasa.gov/api/citations/20180006758/downloads/20180006758.pdf
     year: 2018
 gap: >-
-  Only two missions have ever orbited Mercury, and nothing has landed there. Electronics that survive
-  Mercury's noon have run for a year on Earth, but only as small chips; no motor, bearing or
-  mechanism has run on its surface, and no machine has been designed to work there for decades.
+  Only 2 missions have ever orbited Mercury, and nothing has landed there. Electronics that survive
+  Mercury's noon have run for over 10,000 hours on Earth, but only as small chips; no motor, bearing
+  or mechanism has run on its surface, and no machine has been designed to work there for decades.
 inventions: [dawnline-crawler]
 scene:
   kind: mercury

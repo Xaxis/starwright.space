@@ -8,29 +8,39 @@ pitch: >-
   anything outside them.
 principle: >-
   Proving that a large learned model will always behave is beyond today's methods; proving that a
-  few thousand lines of code behave is not. The Governor applies runtime assurance, used for
-  decades in flight control, to AI-run industry. It is a separate processor running a verified
-  kernel, wired so that every actuator command must pass through it: motor torques, valve
-  positions, heater power, flow rates, launch commands. People write an envelope in physical units,
-  such as the most force near a person, the most energy stored in a vessel, the highest temperature
-  of a reactor, the most of any chemical on site. For each command the Governor runs a simple,
-  conservative physics model a short way ahead and checks that every reachable state stays inside
-  the envelope; if not, it clips the command to the nearest safe one or brings the machine to a safe
-  stop. It is proven, by machine-checked proof, to do exactly that. The AI can see the envelope but
-  cannot change it: changes need keys held by several people. Every refusal is logged, so people see
-  where the AI pushes. The channel from AI to the physical world becomes narrow, auditable and
-  fixed, however capable the AI behind it grows.
+  few thousand lines of code behave is not. seL4, an operating-system kernel of about 10,000 lines,
+  was proven correct by roughly 200,000 lines of machine-checked proof; the Governor is code of that
+  order. It applies runtime assurance, used for decades in flight control, to AI-run industry. It is
+  a separate processor running a verified kernel, wired so that every actuator command must pass
+  through it: motor torques, valve positions, heater power, flow rates, launch commands. People
+  write an envelope in physical units, such as no more than 150 newtons within reach of a person, a
+  reactor below 200 degrees C, or a set mass of any chemical on site. For each command, hundreds of
+  times a second, the Governor runs a simple, conservative physics model a short way ahead and
+  checks that every reachable state stays inside the envelope; if not, it clips the command to the
+  nearest safe one or brings the machine to a safe stop. Built to the highest safety integrity
+  level, below one dangerous failure in 100 million hours, and proven by machine-checked proof, it
+  does exactly that. The AI can see the envelope but cannot change it: changes need keys held by
+  several of five people, and every refusal is logged. The channel from AI to the physical world
+  becomes narrow, auditable and fixed, however capable the AI behind it grows.
 buildsOn:
-  - text: The seL4 microkernel, whose correctness is proven mathematically, the base the Governor's code would run on.
+  - text: The seL4 microkernel, about 10,000 lines proven correct by some 200,000 lines of machine-checked proof, the base the Governor's code would run on.
     url: https://sel4.systems/
-  - text: IEC 61508, the international standard for safety-related control systems and their safety integrity levels.
-    url: https://webstore.iec.ch/en/publication/5515
+    year: 2009
+  - text: ASTM F3269, the standard practice for bounding the behaviour of complex aircraft systems with run-time assurance, the certification pattern the Governor follows.
+    url: https://store.astm.org/f3269-21.html
+    year: 2021
   - text: The guaranteed safe AI framework of a world model, a safety specification and a verifier that proves a system meets it.
     url: https://arxiv.org/abs/2405.06624
-  - text: ARIA's Safeguarded AI programme, which aims to give AI-produced control systems quantitative guarantees of correctness and fail-safety.
-    url: https://www.aria.org.uk/programme-safeguarded-ai/
+    year: 2024
+  - text: Lui Sha's Simplex architecture, which since 2001 has let a small, trusted controller keep a complex one inside safe bounds, the runtime-assurance pattern the Governor applies to AI.
+    url: https://doi.org/10.1109/MS.2001.936213
+    year: 2001
+  - text: ARIA's Safeguarded AI programme, backed by 59 million pounds, which aims to give AI-produced control systems quantitative guarantees of correctness and fail-safety.
+    url: https://www.aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai
+    year: 2024
   - text: Anthropic's Responsible Scaling Policy, which ties safeguards to measured capability, the model for tightening envelopes as AI grows.
     url: https://www.anthropic.com/news/anthropics-responsible-scaling-policy
+    year: 2023
 experiment:
   goal: Show that a verified Governor stops an AI controller from ever leaving its physical envelope, even under deliberate attack, at a small cost in work done.
   setup: >-
@@ -51,23 +61,23 @@ path:
     proves: The envelope holds under attack at a small cost in throughput.
   - phase: prototype
     what: A working factory cell of ten robots and a small real chemical skid run by an AI planner.
-    scale: One cell, a year of shifts.
+    scale: 10 robots and 1 chemical skid, a year of shifts.
     proves: Envelopes can be written for real work and the Governor keeps up in real time.
   - phase: pilot
     what: A whole automated factory with an AI planner, every machine behind its own Governor.
-    scale: Hundreds of machines.
+    scale: Over 100 machines in one plant.
     proves: Envelopes over the whole plant, such as total energy and chemicals on site, catch harms no single machine shows.
   - phase: first-plant
     what: Governor boards certified to the highest safety integrity level and sold as a standard part, like a safety relay.
-    scale: Millions of boards a year.
+    scale: 1 million boards a year.
     proves: Safety is cheap enough that nobody skips it.
   - phase: fleet
     what: Rules that every AI-commanded actuator above a set power ships with a Governor, as cars ship with brakes.
-    scale: Every AI-run factory, vehicle and lab robot on Earth.
+    scale: Some 1 billion actuators on Earth.
     proves: AI can run industry far faster than people can watch it, inside limits people chose.
   - phase: civilization
     what: The factories that copy themselves every {doubling-time} and the swarm's builders, all running through Governors whose envelopes people set and can tighten.
-    scale: Industry across the solar system.
+    scale: Self-copying industry doubling every {doubling-time}.
     proves: Industry can grow faster than human oversight without escaping it.
 risks: >-
   The envelope may be wrong or incomplete: a harm can come from many safe-looking actions together,

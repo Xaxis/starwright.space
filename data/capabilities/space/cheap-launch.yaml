@@ -19,21 +19,18 @@ exists:
   - text: BryceTech counted 325 orbital launches in 2025, carrying about 2.7 million kg of spacecraft, 82 percent of it on SpaceX rockets.
     url: https://brycetech.com/reports/report-documents/global-orbital-activity-2025/BryceTech_Orbital_Launches_2025.pdf
     year: 2025
-  - text: By November 2026 one Falcon 9 first stage, B1067, had flown and landed 37 times.
-    url: https://en.wikipedia.org/wiki/List_of_Falcon_9_first-stage_boosters
+  - text: By August 2026 one Falcon 9 first stage, B1067, had flown and landed 37 times, the fleet record, since entering service in June 2021.
+    url: https://spaceflightnow.com/2026/08/24/live-coverage-spacex-to-launch-starlink-mission-on-a-falcon-boosters-record-breaking-37th-flight/
     year: 2026
-  - text: Starship reached orbit for the first time on Flight 14, on 28 September 2026, deploying 26 Starlink V3 satellites.
-    url: https://en.wikipedia.org/wiki/SpaceX_Starship_flight_tests
+  - text: Starship reached orbit for the first time on Flight 14, on 28 September 2026, deploying 26 third-generation Starlink satellites.
+    url: https://spaceflightnow.com/2026/09/28/starship-returns-to-earth-rocket-splashes-down-north-of-hawaii-after-three-hour-flight/
     year: 2026
-  - text: On Flight 15, on 13 November 2026, the launch tower caught a Starship upper stage for the first time, about 22 hours after liftoff.
-    url: https://en.wikipedia.org/wiki/SpaceX_Starship_flight_tests
+  - text: On Flight 15, on 13 November 2026, the launch tower caught a returning Starship upper stage for the first time, about 22 hours after liftoff.
+    url: https://www.cbsnews.com/news/spacex-catch-starship-rocket/
     year: 2026
-  - text: Blue Origin's New Glenn landed its first stage for the first time on 13 November 2025.
-    url: https://en.wikipedia.org/wiki/New_Glenn
+  - text: Blue Origin's New Glenn landed its first stage for the first time on 13 November 2025, on its second flight, after launching NASA's ESCAPADE Mars probes.
+    url: https://www.space.com/space-exploration/launches-spacecraft/blue-origin-lands-huge-new-glenn-rocket-booster-for-1st-time-after-acing-mars-escapade-launch-for-nasa
     year: 2025
-  - text: CSIS puts the cost to low orbit in 2021 dollars at $1,500 per kilogram on Falcon Heavy and $23,100 on Rocket Lab's small Electron.
-    url: https://aerospace.csis.org/data/space-launch-to-low-earth-orbit-how-much-does-it-cost/
-    year: 2021
 gap: >-
   No vehicle is yet fully reusable in service: Falcon 9 still throws away its upper stage, and
   Starship has only begun to bring its own back. Freight prices need hundreds of flights from each

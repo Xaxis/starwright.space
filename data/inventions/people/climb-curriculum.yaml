@@ -16,20 +16,28 @@ principle: >-
   certify each step. It runs offline on a phone or a shared tablet and syncs when a connection
   appears, as Kolibri does, in local languages. Credentials are digitally signed and portable, so a
   learner in a village can show an employer or a university anywhere what they can do. Teachers stay
-  at the centre: the tutor sorts and supports, the teacher leads.
+  at the centre: the tutor sorts and supports, the teacher leads. The cost is set by hardware and it
+  is small: a 100-dollar tablet shared by five children and used for three years comes to about 7
+  dollars a child a year, which leaves most of a 20-dollar budget for solar charging, content and
+  training teachers.
 buildsOn:
   - text: Bloom's 2 sigma finding on one-to-one tutoring with mastery learning (1984).
     url: https://doi.org/10.3102/0013189X013006004
+    year: 1984
   - text: Pratham's Teaching at the Right Level, evaluated with J-PAL.
     url: https://www.povertyactionlab.org/case-study/teaching-right-level-improve-learning
+    year: 2022
   - text: The World Bank's 2025 AI tutor pilot in Edo State, Nigeria, about 0.3 standard deviations in six weeks.
     url: https://blogs.worldbank.org/en/education/From-chalkboards-to-chatbots-Transforming-learning-in-Nigeria
+    year: 2025
   - text: The 2025 randomized trial of an AI tutor in a Harvard physics course.
     url: https://doi.org/10.1038/s41598-025-97652-6
+    year: 2025
   - text: Kolibri, Learning Equality's offline-first learning platform, used in more than 220 countries and territories.
     url: https://learningequality.org/kolibri/
+    year: 2026
 experiment:
-  goal: Show that an offline AI tutor following a mastery map raises learning at scale over a full school year, not only in a short trial.
+  goal: Show that an offline AI tutor following a mastery map raises learning at scale over a full school year rather than a few weeks.
   setup: >-
     A randomized trial in 120 primary and lower-secondary schools in two low-income countries.
     Treated schools get shared tablets with the offline tutor in the local language for 45 minutes a
@@ -50,19 +58,19 @@ path:
     proves: Gains hold for a year, offline, at low cost.
   - phase: pilot
     what: A national rollout in one country's public schools, with credentials recognised by its employers and universities.
-    scale: Millions of learners.
+    scale: About 5 million learners.
     proves: It works as public policy.
   - phase: first-plant
     what: The curriculum adopted in dozens of countries, in a hundred languages, with credentials recognised across borders.
-    scale: Hundreds of millions of learners.
+    scale: About 300 million learners in 100 languages.
     proves: A shared, open standard for learning can span the world.
   - phase: fleet
     what: The curriculum extended to adults and to every skill the buildout needs, from wiring to orbital mechanics.
-    scale: Everyone who wants to learn.
+    scale: About 1 billion learners, adults included.
     proves: Anyone can learn the climb's work.
   - phase: civilization
     what: Every person on every world able to learn anything the climb knows, from one open curriculum its users keep current.
-    scale: Billions of learners across worlds.
+    scale: About 5 billion learners across worlds.
     proves: Talent anywhere can reach the work of the climb.
 risks: >-
   AI tutors can be wrong, and confidently so; the map's tests check mastery independently of the

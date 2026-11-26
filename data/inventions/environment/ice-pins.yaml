@@ -3,47 +3,58 @@ title: The Ice Pins
 domain: environment
 for: [ice-sheets]
 pitch: >-
-  Fields of passive heat pipes drilled through fast-sliding glaciers that carry heat from the bed up to
-  the frozen surface, refreezing the meltwater the ice slides on and pinning the glacier to its bed,
-  with no moving parts and no power supply.
+  Fields of passive heat pipes drilled through fast-sliding glaciers that carry heat from the bed up
+  to the frozen surface, refreezing the meltwater the ice slides on and pinning the glacier to its
+  bed, with no moving parts and no power supply.
 principle: >-
-  Fast glaciers slide on a thin film of meltwater at their bed, melted by heat from the Earth below
-  and by friction. Freeze that water and the ice sticks: in West Antarctica the Kamb Ice Stream stopped
-  flowing about 200 years ago, probably because its bed froze. A thermosiphon is a sealed pipe of CO2
-  or ammonia. At its warm bottom the liquid boils, the vapour rises to the cold top, condenses and
-  gives up its heat, and the liquid runs back down, all on gravity alone; thousands of them keep the
-  permafrost frozen under the Trans-Alaska Pipeline. In winter the surface of an ice sheet is at
-  -30 °C or colder while its bed sits at the melting point, so a pipe through the ice links a cold
-  sink to a warm source. Heat flowing up from the rock under an ice stream is about 0.1 to 0.3 W per
-  square metre, and sliding adds a similar amount; pins about 50 m apart must each carry a kilowatt or
-  two through the winter to freeze the bed between them. Once the bed starts to freeze, the ice slows,
-  friction falls, and less heat has to be removed, so the effect feeds itself.
+  Fast glaciers slide on a thin film of meltwater at their bed, melted by heat from the rock below
+  and by friction. Freeze that water and the ice sticks: in West Antarctica the Kamb Ice Stream
+  stopped flowing fast 150 to 200 years ago, probably because its bed froze or lost its water, and
+  Engelhardt and Kamb measured water still freezing onto its base at 6.5 to 9 mm a year. A
+  thermosiphon is a sealed pipe of ammonia or CO2. At its warm bottom the liquid boils, the vapour
+  rises to the cold top, condenses and gives up its heat, and the liquid runs back down, on gravity
+  alone; about 124,000 of them keep the permafrost frozen under the Trans-Alaska Pipeline. In winter
+  the surface of an ice sheet is at -30 °C or colder while its bed sits at the melting point, about
+  -1 °C under a kilometre of ice, so a pipe through the ice links a cold sink to a warm source with
+  almost 30 °C between them. The heat to remove is the rock's heat, about 0.1 to 0.3 W/m² under ice
+  streams, plus friction, the drag on the bed times the sliding speed: 10 kPa at 400 m a year is
+  about 0.13 W/m². Pins 50 m apart each drain 2,500 square metres, so at 0.4 W/m² each must carry
+  about 1 kW all year, or 2 kW if it works only in the cold half. Freezing a water film 10 mm thick
+  takes 3.3 MJ per square metre, about 8 GJ per pin, some fifty days at 2 kW. The fluid matters at
+  this depth: CO2 vapour is dense, so over a kilometre its own weight means the bottom must run
+  about 8 °C warmer than the top before it boils, against about 2 °C for the much lighter ammonia
+  vapour, so deep pins use ammonia. Once the bed starts to freeze the ice slows, friction falls and
+  less heat has to be removed, so the effect feeds itself.
 buildsOn:
-  - text: The Trans-Alaska Pipeline's support members carry thermosiphons, four to a support and about 12 m long, first filled with ammonia and later with CO2, that keep permafrost frozen with no power.
-    url: https://en.wikipedia.org/wiki/Heat_pipe
-    year: 1977
+  - text: A US Army cold-regions review records that about 124,000 thermosiphons were installed along the Trans-Alaska Pipeline, all first charged with ammonia, with 14,000 later recharged with CO2.
+    url: https://dot.alaska.gov/stwddes/research/assets/pdf/erdc-crrel-tr-14-1.pdf
+    year: 2014
   - text: Huang and colleagues built a gravity heat pipe 4,149 m long, the longest ever, and drove a vapour turbine generator with it.
     url: https://doi.org/10.1039/d4ee01235f
     year: 2024
   - text: Ebeling and colleagues tested a CO2 two-phase thermosiphon 368 m deep feeding a heat pump in the field.
     url: https://doi.org/10.1016/j.jppr.2017.05.002
     year: 2017
-  - text: Fisher and colleagues measured 285 mW per square metre of geothermal heat under Subglacial Lake Whillans in West Antarctica.
+  - text: Fisher and colleagues measured 285 mW per square metre of geothermal heat under Subglacial Lake Whillans in West Antarctica, with 105 mW per square metre conducted up through the ice.
     url: https://doi.org/10.1126/sciadv.1500093
     year: 2015
-  - text: A University of Chicago research vision for glacial intervention cites the Kamb Ice Stream's shutdown and suggests drill fields that remove water or heat from glacier beds, possibly with passive thermosyphons.
+  - text: Engelhardt and Kamb found the Kamb Ice Stream stopped flowing fast about 150 years ago as freeze-on at its base reached a critical limit or its water ran short, measured freeze-on of 6.5 to 9 mm a year, and drilled 1,000 m holes in under a day with hot water.
+    url: https://doi.org/10.3189/2013AoG63A535
+    year: 2013
+  - text: IceCube's 5 MW hot-water drill bored 86 holes 2,500 m deep into the South Pole ice, at up to 2.2 m a minute and 48 hours a hole on average.
+    url: https://doi.org/10.1088/1748-0221/12/03/P03012
+    year: 2017
+  - text: A University of Chicago research vision for glacial intervention cites the Kamb Ice Stream's shutdown about 200 years ago and suggests drill fields that remove water or heat from glacier beds, possibly with passive thermosyphons.
     url: https://knowledge.uchicago.edu/records/t21ey-t9b30
     year: 2024
-  - text: Lockley and colleagues reviewed glacier interventions including draining or freezing the bed, and rated such ideas at the earliest stage of readiness.
-    url: https://doi.org/10.1016/j.accre.2020.11.008
-    year: 2020
 experiment:
   goal: Show that thermosiphons through a sliding glacier can draw heat from its bed and cool the bed around them below the melting point.
   setup: >-
-    Three hot-water boreholes 200 to 300 m deep through a fast-sliding outlet glacier in Svalbard or
-    Alaska, each fitted with a CO2 thermosiphon and a finned condenser above the surface, alongside
-    three control boreholes. All six carry fibre-optic temperature cables and bed water-pressure
-    sensors, and GPS stations track the surface above and between them.
+    Three hot-water boreholes 200 to 300 m deep through a fast-sliding polythermal glacier in
+    Svalbard, whose cold upper ice and wet bed are like an ice stream's, each fitted with an ammonia
+    thermosiphon and a finned condenser above the surface, alongside three control boreholes. All
+    six carry fibre-optic temperature cables and bed water-pressure sensors, and GPS stations track
+    the surface above and between them.
   measure: Heat carried by each pipe through the winter; bed temperature around each pipe; bed water pressure; surface speed near the pipes against the controls.
   succeedsIf: Each pipe carries more than 500 W on average through the winter, and the bed within 10 m of it falls below the pressure melting point by spring.
   costUsd: 2500000
@@ -55,31 +66,35 @@ path:
     proves: Heat removed from a real glacier bed, and a frozen patch around each pin.
   - phase: prototype
     what: A field of pins across the bed of a small, fast glacier.
-    scale: About 100 pins over a square kilometre.
+    scale: About 400 pins at 50 m spacing over 1 square km.
     proves: Whether a pinned patch slows the glacier measurably.
   - phase: pilot
     what: Pins across the trunk of a fast outlet glacier in Greenland.
-    scale: Thousands of pins over tens of square kilometres.
+    scale: About 5,000 pins over about 12 square km of a Greenland outlet glacier.
     proves: Slowing a glacier that matters for sea level.
   - phase: first-plant
     what: A band of pins across a key ice stream in West Antarctica, where a frozen band could act as the Kamb's bed did.
-    scale: Tens of thousands of pins along about 100 km.
+    scale: About 40,000 pins in a band 1 km wide and 100 km long.
     proves: Pins work under thick polar ice and hold through the years.
   - phase: fleet
     what: Pins across the fastest streams of Greenland and West Antarctica, combined with sea-floor sills where warm water attacks.
-    scale: Hundreds of thousands of pins.
+    scale: About 500,000 pins over about 1,250 square km, removing about 1 GW of heat in winter.
     proves: Ice-sheet loss slowed across whole basins.
   - phase: civilization
-    what: The ice sheets held near balance while the climate is repaired.
-    scale: Ice-sheet loss a small fraction of today's.
+    what: The ice sheets losing half as much as today while the climate is repaired.
+    scale: Pins on the 10 to 20 fastest outlet glaciers, ice loss cut from about 400 billion tonnes a year to under 200.
     proves: Coasts kept where they are for the centuries the climate takes to recover.
 risks: >-
-  In the fastest streams friction may make more heat than pins can carry; then pins go where ice is
-  slower and the bed already near freezing, at margins and sticky spots, to grow them. Pins work only
-  in winter, so the frozen bed must stay frozen through summer by its own thermal inertia. Moving ice
-  will bend and shear the pipes; flexible pipes that slide in their holes are tried, and pins may need
-  replacing every few years. Drilling thousands of holes kilometres deep in Antarctica is a vast task
-  that the Antarctic Treaty governs, so work starts in Greenland and on mountain glaciers.
+  In the fastest outlet glaciers, where the bed drag is high and the ice moves kilometres a year,
+  friction may make several watts per square metre, more than pins can carry; then pins go where ice
+  is slower and the bed already near freezing, at margins and sticky spots, to grow them. Siegert
+  and colleagues expect little from draining or drying glacier beds, and the first field test
+  measures how much heat and speed a pin field really removes, and those data decide where pins go.
+  Pins work only in winter, so the frozen bed must stay frozen through summer by its own thermal
+  inertia. Moving ice will bend and shear the pipes; flexible pipes that slide in their holes are
+  tried, and pins may need replacing every few years. Drilling thousands of holes kilometres deep in
+  Antarctica is a vast task that the Antarctic Treaty governs, so work starts in Greenland and on
+  mountain glaciers.
 scene:
   kind: field
   focus: Rows of slim condensers standing above the white surface of a glacier, its crevasses closing as it slows.

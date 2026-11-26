@@ -10,29 +10,33 @@ summary: >-
   needed. The climb must offer people valued ways to take part even when the machines could manage
   without them.
 target: >-
-  Everyone who wants it has a way to contribute that others value and that gives structure, company
-  and purpose, in care, teaching, science, art and the climb's own work, recognised and rewarded
-  whether or not it is a job.
+  Everyone who wants it has a way to contribute that others value and that gives structure,
+  company and purpose, in care, teaching, science, art and the climb's own work, for at least 10
+  hours a week, recognised and rewarded whether or not it is a job, with loneliness and life
+  satisfaction among people without jobs no worse than among people with them.
 exists:
   - text: Jahoda's research on unemployment, summarised in 1981, argued that jobs meet needs beyond income, including time structure, social contact, shared goals, status and regular activity.
     url: https://doi.org/10.1037/0003-066X.36.2.184
     year: 1981
-  - text: Zooniverse, the largest platform for volunteer research, reached 3 million volunteers in April 2026.
-    url: https://blog.zooniverse.org/2026/04/21/3-million-volunteers/
+  - text: In the OpenResearch study, 1,000 low-income Americans given 1,000 dollars a month for three years worked 1 to 2 hours a week less than controls, gained most in time spent on leisure, and saw no gain in the quality of their jobs.
+    url: https://www.nber.org/papers/w32719
+    year: 2024
+  - text: The Zooniverse, the largest platform for volunteer research, draws on millions of volunteers who help professional researchers with work they could not do alone.
+    url: https://www.zooniverse.org/about
     year: 2026
   - text: In 2011 players of Foldit, an online protein-folding game, produced the model that let researchers solve the crystal structure of a retroviral protease.
     url: https://doi.org/10.1038/nsmb.2119
     year: 2011
-  - text: A 2004 trial found older adults who tutored children through Experience Corps grew more active and stronger, with more people to turn to, than controls.
-    url: https://doi.org/10.1093/jurban/jth094
-    year: 2004
   - text: Atkinson proposed in 1996 a participation income, paid to people who contribute to society in a broad sense, such as caring or volunteering, rather than to those with jobs alone.
     url: https://doi.org/10.1111/j.1467-923X.1996.tb01568.x
     year: 1996
 gap: >-
   Volunteering and citizen science give purpose to millions, but they are unpaid and unrecognised,
-  and most people who lose work never find them. Cash can replace a wage; no programme yet replaces
-  the social side of a job at scale.
+  and most people who lose work never find them. Cash on its own does not fill the gap: in a
+  3-year US trial, 1,000 dollars a month cut work by 1 to 2 hours a week, and leisure was where
+  people's time grew most. Jahoda's 5 needs a job meets beyond income (time structure, social
+  contact, shared goals, status and regular activity) are met for the unemployed by no programme
+  at scale.
 inventions: [climb-corps]
 scene:
   kind: network

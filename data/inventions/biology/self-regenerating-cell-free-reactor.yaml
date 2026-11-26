@@ -8,14 +8,16 @@ pitch: >-
 principle: >-
   A cell-free system is the inside of a cell poured into a reactor: ribosomes, enzymes and the
   parts that read DNA and build protein. It works, but the machinery wears out and nothing replaces
-  it, so output fades within hours. The key missing trick is self-regeneration: having the system
-  use some of its own output to rebuild its own parts. Reconstituted systems have already regenerated
-  most of their non-ribosomal proteins; the ribosome, made of RNA and dozens of proteins that must
-  self-assemble, is the hard remainder. This reactor couples a continuous-flow chamber, which feeds
-  in amino acids, nucleotides and energy and removes waste, with a designed regeneration circuit that
-  devotes a fixed share of synthesis to remaking enzymes, then ribosomal proteins, then whole
-  ribosomes from fed RNA. Once ribosome production balances ribosome loss, the reactor runs at steady
-  state: a biological factory with no cells, that maintains itself.
+  it, so output near 2.3 milligrams per millilitre fades within hours. The key missing trick is
+  self-regeneration: having the system use some of its own output to rebuild its own parts.
+  Reconstituted systems have already regenerated 36 of their non-ribosomal proteins; the ribosome,
+  more than 50 proteins and 3 RNAs that must self-assemble, is the hard remainder, and whole ribosomes
+  have been built in vitro but not yet in a loop that sustains itself. This reactor couples a
+  continuous-flow chamber, which feeds in amino acids, nucleotides and energy and removes waste, with a
+  designed regeneration circuit that devotes a fixed share of synthesis to remaking enzymes, then
+  ribosomal proteins, then whole ribosomes from fed RNA, aiming to hold at least half its output for 72
+  hours. Once ribosome production balances ribosome loss, the reactor runs at steady state: a
+  biological factory with no cells, that maintains itself.
 buildsOn:
   - text: A reconstituted (PURE) system regenerated 36 of its own non-ribosomal proteins in microfluidic reactors, leaving ribosome self-synthesis as the open problem this reactor targets.
     url: https://doi.org/10.1038/s41467-020-20180-6
@@ -26,6 +28,9 @@ buildsOn:
   - text: Cell-free chemoenzymatic synthesis of starch from carbon dioxide at 8.5 times the maize rate shows cell-free pathways can run fast and long when fed and tuned.
     url: https://doi.org/10.1126/science.abh4049
     year: 2021
+  - text: The iSAT method built functional E. coli ribosomes in vitro, running rRNA synthesis, ribosome assembly and translation in one pot, the step this reactor must make continuous (Jewett and colleagues, 2013).
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3964315
+    year: 2013
 experiment:
   goal: Run a cell-free reactor at steady state by regenerating its enzymes and, in part, its ribosomes.
   setup: >-
@@ -45,27 +50,27 @@ experiment:
 path:
   - phase: bench
     what: A microfluidic reactor regenerating enzymes and partial ribosomes.
-    scale: Microlitres, days of running.
+    scale: About 100 microlitres, days of running.
     proves: Self-regeneration extends output well past a batch.
   - phase: prototype
     what: Full ribosome regeneration, so the reactor runs at true steady state.
-    scale: Millilitres, continuous.
+    scale: About 10 millilitres, continuous.
     proves: A cell-free system can maintain itself indefinitely.
   - phase: pilot
     what: A bench-top unit making a real product, a vaccine antigen or enzyme, on demand.
-    scale: Doses and grams per run.
+    scale: About 1 gram per run.
     proves: Useful product at useful purity from a self-maintaining reactor.
   - phase: first-plant
     what: Rugged units for clinics, forward sites and the first spacecraft.
-    scale: Point-of-use production.
+    scale: About 10 grams a day at point of use.
     proves: Biology runs where a living culture cannot be kept.
   - phase: fleet
     what: Reactors throughout habitats, ships and off-world bases, making medicine and materials locally.
-    scale: Across the inner solar system.
+    scale: About 100 units across the inner solar system.
     proves: On-demand biomanufacturing travels with the climb.
   - phase: civilization
     what: Cell-free production as a standard utility, feedstock in, proteins and chemicals out, anywhere.
-    scale: Planet and space.
+    scale: About 1,000 tonnes of protein a year, planet and space.
     proves: Biological synthesis decoupled from living culture.
 risks: >-
   Ribosome self-assembly in vitro may prove too inefficient to balance loss; the project would supply

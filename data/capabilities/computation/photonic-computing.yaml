@@ -5,35 +5,44 @@ stage: k08
 needs: []
 summary: >-
   Most of the energy in a modern AI chip goes into moving numbers, not into arithmetic. Light can
-  carry data across a chip or a building with little loss, and an interferometer multiplies a whole
-  matrix in one pass of the light at almost no energy. Photonics is how computing escapes the cost
-  of copper wires.
+  carry data across a chip or a building with little loss, and light passing through a mesh of
+  modulators or interferometers multiplies a whole matrix in one pass with almost no energy.
+  Photonics is how computing escapes the cost of copper wires.
 target: >-
-  Photonic links and photonic matrix engines that cut the energy of each multiply and each bit
-  moved tenfold or more against the best electronic chips of the same year, made in ordinary
-  silicon photonics fabs and used across the data centres of {year-k08}.
+  Photonic links and photonic matrix engines that use at least ten times less energy per bit moved
+  and per operation than the best electronics of the same year, starting from {gpu-energy-per-op}
+  per operation today, counting lasers, converters and memory, made in ordinary silicon photonics
+  fabs and used across the data centres of {year-k08}.
 exists:
-  - text: Shen and colleagues ran a neural network on a programmable mesh of 56 silicon interferometers, the first coherent nanophotonic deep-learning chip.
-    url: https://doi.org/10.1038/nphoton.2017.93
+  - text: Shen and colleagues ran a neural network on a programmable mesh of 56 silicon Mach-Zehnder interferometers, the first coherent nanophotonic deep-learning chip.
+    url: https://www.nature.com/articles/nphoton.2017.93
     year: 2017
-  - text: Lightmatter's photonic processor ran ResNet, BERT and reinforcement learning workloads at near-electronic precision.
+  - text: Lightmatter's photonic processor ran ResNet, BERT and DeepMind's Atari reinforcement learning at near-electronic precision for many workloads.
     url: https://www.nature.com/articles/s41586-025-08854-x
     year: 2025
-  - text: Lightelligence's PACE accelerator put more than 16,000 photonic components on one chip, reaching about 4.21 trillion operations per joule without its lasers and 2.38 with them.
+  - text: Lightelligence's PACE accelerator put more than 16,000 photonic components on one 64 by 64 matrix chip, reaching about 4.21 trillion operations per joule without its lasers and 2.38 with them.
     url: https://www.nature.com/articles/s41586-025-08786-6
     year: 2025
   - text: Tsinghua's Taichi photonic chiplet reported 160 trillion operations per joule for inference.
     url: https://doi.org/10.1126/science.adl1203
     year: 2024
-  - text: Lightmatter's Passage platform sells co-packaged optics that link chips with light instead of copper.
-    url: https://lightmatter.co/products/passage/
+  - text: Wang and colleagues ran an optical neural network at 99 percent accuracy on handwritten digits with about 3 detected photons per multiplication, showing the light itself costs almost nothing.
+    url: https://www.nature.com/articles/s41467-021-27774-8
+    year: 2022
+  - text: NVIDIA's co-packaged silicon photonics switches, announced in March 2025 with 1.6 Tbit/s ports and four times fewer lasers, claim 3.5 times the power efficiency of pluggable optics, with Ethernet models due in 2026.
+    url: https://nvidianews.nvidia.com/news/nvidia-announces-spectrum-x-photonics-co-packaged-optics-networking-switches-to-scale-ai-factories-to-millions-of-gpus
+    year: 2025
+  - text: Lightmatter's Passage L200 co-packaged optics carry 32 to 64 Tbit/s per chip.
+    url: https://lightmatter.com/products/passage/
     year: 2025
 gap: >-
-  Optical arithmetic is analog and holds only a few bits of precision. The lasers, modulators and
-  the converters between light and electronics eat most of the savings, and optical memory and
-  nonlinear steps still need electronics. Links are ready to scale; optical compute engines are not
-  yet better than the best GPUs on whole workloads.
-inventions: []
+  Optical arithmetic is analog and holds only a few bits of precision. In whole systems the lasers,
+  modulators and converters between light and electronics eat the savings: PACE reaches 2.38
+  trillion operations per joule with its lasers, about 0.42 picojoules each, no better than
+  {gpu-energy-per-op} on a GPU. Meshes stop near 64 by 64 because loss and part count grow with
+  size, so each conversion is shared by few operations. Optical memory and nonlinear steps still
+  need electronics. Links are shipping; compute engines are not yet ahead on whole workloads.
+inventions: [charge-well-engine]
 scene:
   kind: compute
   focus: Light threading a mesh of interferometers on a chip, each crossing a multiply.

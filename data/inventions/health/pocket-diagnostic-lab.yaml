@@ -8,25 +8,31 @@ pitch: >-
   full first-line clinic fits in a pocket anywhere on Earth or off it.
 principle: >-
   A diagnosis needs three things: a sample prepared, its molecules measured, and the result
-  interpreted. The Pocket Lab puts all three in one sealed device. A microfluidic cartridge takes raw
-  sample and does the chemistry, preparing it without a technician. A pair of sensors measures it: a
-  nanopore channel reads DNA and RNA to identify pathogens and variants, and an optical sensor reads
-  proteins and small molecules for the common blood tests. On-board models interpret the readings,
-  flagging an infection, a marker or a variant and suggesting next steps, all without a connection, so
-  it works in a village or a crater. When a link exists, the result and a specialist's review pass
-  both ways. Cartridges are cheap and single-use; the reader is reusable and rugged. The same device
-  that extends first-line care to the unreached on Earth serves a crew months from the nearest
-  hospital.
+  interpreted. The Pocket Lab puts all three in one sealed device the size of a phone. A microfluidic
+  cartridge takes a drop of raw sample, a few tens of microlitres of blood, a swab or a breath, and
+  does the chemistry without a technician, the lab-on-a-chip approach that shrinks a bench of pipettes
+  onto a card. A pair of sensors then measures it. A nanopore channel reads DNA and RNA to identify
+  pathogens and variants: the same technology weighs about 90 grams, costs from a few hundred dollars,
+  and returned sequencing results in 15 to 60 minutes in the field. An optical sensor reads proteins
+  and small molecules for the common blood panels. On-board models interpret the readings and suggest
+  next steps with no connection, so it works in a village or a crater; when a link exists, the result
+  and a specialist's review pass both ways. The target is a panel of 10 to 20 first-line tests, a
+  single-use cartridge under a few dollars, and an answer in under an hour. That is what it takes to
+  reach the roughly 47 percent of people who today have little or no access to basic diagnostics, and
+  the same rugged device serves a crew months from the nearest hospital.
 buildsOn:
-  - text: Oxford Nanopore's portable, real-time sequencers already read DNA and RNA outside a central lab, the nanopore sensing a pocket lab builds in.
-    url: https://nanoporetech.com/
-    year: 2024
-  - text: AlphaFold 3's accurate molecular predictions let on-board software interpret a reading and link it to disease and treatment.
-    url: https://doi.org/10.1038/s41586-024-07487-w
-    year: 2024
-  - text: Wellcome Leap's UZIMA program, funded at 100 million USD, builds and delivers health tools for underserved populations, the deployment path for a pocket lab.
-    url: https://wellcomeleap.org/
-    year: 2024
+  - text: Quick and colleagues carried a palm-sized Oxford Nanopore MinION to Guinea as airline luggage and sequenced 142 Ebola samples in a mobile lab, returning results less than 24 hours after a positive sample with runs as short as 15 to 60 minutes (Nature, 2016).
+    url: https://doi.org/10.1038/nature16996
+    year: 2016
+  - text: Sackmann, Fulton and Beebe reviewed how microfluidics performs sample preparation and assays on a chip from microlitre volumes, the lab-on-a-chip front end a pocket lab needs (Nature, 2014).
+    url: https://doi.org/10.1038/nature13118
+    year: 2014
+  - text: WHO published the fourth edition of its Model List of Essential In Vitro Diagnostics on 18 October 2023, the menu of tests a pocket lab must run.
+    url: https://www.who.int/publications/i/item/9789240081093
+    year: 2023
+  - text: The Lancet Commission on Diagnostics found 47 percent of the world's people have limited or no access to key diagnostic tests, and only about 19 percent in the primary care of low and lower-middle income countries can get the simplest ones, the gap a pocket lab must close.
+    url: https://www.eurekalert.org/news-releases/930549
+    year: 2021
 experiment:
   goal: Build a handheld device that runs a panel of tests from raw sample to interpreted result offline, and validate it against lab references.
   setup: >-
@@ -37,34 +43,35 @@ experiment:
     Agreement with lab references across the panel (sensitivity and specificity); time to result;
     cost per cartridge; performance with no connectivity; ruggedness.
   succeedsIf: >-
-    The device matches lab references across the panel within clinical tolerance, offline, in under an
-    hour per sample, at a cartridge cost low enough for routine use in low-income settings.
+    Across a panel of at least 15 tests the device matches central-lab references at 95 percent
+    sensitivity and 95 percent specificity, offline, in under 1 hour per sample, at a cartridge cost
+    under 5 USD.
   costUsd: 28000000
   months: 42
 path:
   - phase: bench
-    what: An integrated handheld running a test panel from raw sample, validated against labs.
-    scale: One device, many sample types.
+    what: An integrated handheld running a 15-test panel from raw sample, validated against labs.
+    scale: One device, about 1,000 clinical samples.
     proves: A full first-line panel runs offline in one pocket device.
   - phase: prototype
     what: Field trials in low-resource settings with real patients and carers.
-    scale: Clinics and villages.
+    scale: 10 to 20 clinics, tens of thousands of patients.
     proves: It works and is trusted outside the lab.
   - phase: pilot
     what: Deployment through a health program at regional scale.
-    scale: A region's first-line diagnosis.
+    scale: About 1 million patients a year in one region.
     proves: It extends care to the unreached affordably.
   - phase: first-plant
     what: Mass production driving cartridge cost down and the test menu up.
-    scale: Millions of devices.
+    scale: About 10 million devices a year.
     proves: Point-of-care diagnosis is ordinary, not exceptional.
   - phase: fleet
     what: Hardened versions on ships, bases and habitats off Earth.
-    scale: Inner solar system.
+    scale: About 500 units across the inner solar system.
     proves: Crews diagnose and treat far from any hospital.
   - phase: civilization
     what: A clinic in every hand, on every world people live on.
-    scale: Planet and space.
+    scale: About 8 billion people on Earth and off it.
     proves: Distance from a hospital no longer limits care.
 risks: >-
   Integrating sample prep, sensing and interpretation cheaply and ruggedly is hard; the project builds

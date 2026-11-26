@@ -5,22 +5,22 @@ stage: k15
 needs: [simple-chip-fabs, materials-discovery, programmable-biology]
 summary: >-
   At the scale of a star, every joule and kilogram counts, and the best computers, collectors and
-  machines are those whose every atom is in its place. Biology already builds this way: a ribosome
-  joins amino acids one at a time from a tape of instructions. Machines that place atoms where they
-  are wanted, and build more such machines, would let the swarm's industry make things no fab or
-  furnace can.
+  machines are those with every atom in its place. Biology already builds this way: a ribosome joins
+  amino acids one at a time from a tape of instructions. Machines that place atoms where they are
+  wanted, and build more such machines, would let the swarm's industry make things no fab or furnace
+  can.
 target: >-
-  Atomically precise manufacturing that builds structures and devices atom by atom at useful rates,
-  in parallel and by self-assembly, so that by {year-k15} the computing and collectors of the swarm
-  can be made with every atom placed by design.
+  Atomically precise manufacturing that builds structures and devices atom by atom, in parallel
+  and by self-assembly, at grams a day per line and rising, so that by {year-k15} the computing
+  and collectors of the swarm can be made with every atom placed by design.
 exists:
   - text: Eigler and Schweizer used a scanning tunnelling microscope at 4 K to position individual xenon atoms on a nickel surface.
     url: https://www.nature.com/articles/344524a0
     year: 1990
-  - text: Fuechsle and colleagues placed a single phosphorus atom in silicon with a spatial accuracy of one lattice site, by hydrogen-resist lithography with a scanning tunnelling microscope, and made a transistor of it.
+  - text: Fuechsle and colleagues placed a single phosphorus atom in silicon to within one lattice site, by hydrogen-resist lithography with a scanning tunnelling microscope, and made a transistor of it.
     url: https://www.nature.com/articles/nnano.2012.21
     year: 2012
-  - text: Rothemund's DNA origami folds a 7-kilobase strand with over 200 staple strands into arbitrary shapes about 100 nm across, with 6 nm resolution.
+  - text: Rothemund's DNA origami folds a 7-kilobase strand with over 200 short staple strands into chosen shapes about 100 nm across, at 6 nm resolution.
     url: https://www.nature.com/articles/nature04586
     year: 2006
   - text: Leigh's group built an artificial molecular machine that moves a substrate between active sites to make chosen stereoisomers, programmed like a tiny assembly line.
@@ -29,12 +29,14 @@ exists:
   - text: Zyvex Labs develops atomically precise manufacturing, which it expects to matter first for quantum devices, where a single atom or atomic layer sets how they behave.
     url: https://www.zyvexlabs.com/apm/
     year: 2026
-  - text: IBM's Millipede storage experiment ran 1,024 scanning probes in parallel in a 32 by 32 array.
-    url: https://en.wikipedia.org/wiki/Millipede_memory
+  - text: IBM's Millipede storage chip ran a 32 by 32 array of 1,024 scanning-probe cantilevers in parallel, each able to write, read and erase, the largest such array built.
+    url: https://research.ibm.com/publications/the-millipede-nanotechnology-entering-data-storage
+    year: 2002
 gap: >-
-  Atom placement works one atom at a time with one tip, far too slowly to make a gram of anything.
-  DNA and molecular machines build precisely but only soft, small structures. Nothing yet places
-  atoms in parallel at useful rates, or builds a tool that builds its own kind.
+  Atom placement works one atom at a time with one tip. A gram of silicon holds about 2 × 10²²
+  atoms, so even a tip placing a million atoms a second would need some 700 million years to build
+  it. DNA and molecular machines build precisely but only soft, small structures. Nothing yet
+  places atoms in parallel at useful rates, or builds a tool that builds its own kind.
 inventions: [lattice-pen-array]
 scene:
   kind: lattice

@@ -9,24 +9,27 @@ pitch: >-
 principle: >-
   On Earth these are separate industries; in a sealed habitat they are one problem, because every
   atom must be used again. The Regolith Loop joins closed life support to biomining in one consortium
-  of engineered microbes. Waste-eating strains break down crew waste and inedible plant matter into
-  carbon dioxide, water and nutrient salts, which feed algae and plants that return oxygen and food,
-  the loop demonstrated on Earth for decades. In parallel, chemolithotrophic strains leach iron,
-  aluminium and useful metals from crushed regolith, using the carbon dioxide and acids the waste
-  loop produces, and concentrate them for the local foundry. The two halves share water, gases and
-  energy: the mining half consumes carbon dioxide the crew exhales, the life-support half cleans the
-  water the mining half fouls. Driven by sunlight, the loop turns a base from a consumer of supplies
-  into a maker of them.
+  of engineered microbes. Lunar Palace 1 already closed 98.2 percent of its material over 370 days
+  with crew; the Loop adds a mining compartment to that. Waste-eating strains break down crew waste and
+  inedible plant matter into carbon dioxide, water and nutrient salts, which feed algae and plants that
+  return oxygen and food. In parallel, chemolithotrophic strains leach iron and aluminium, 10 to 20
+  percent of regolith by mass, from crushed rock, using the carbon dioxide and acids the waste loop
+  produces, and concentrate them for the local foundry. The two halves share water, gases and energy,
+  holding water and oxygen closure above 95 percent while metal flows out. Driven by sunlight, the loop
+  turns a base from a consumer of supplies into a maker of them.
 buildsOn:
   - text: Beihang University's Lunar Palace 1 ran a 370-day crewed closure at 98.2 percent material closure, the strongest proof a bioregenerative loop can sustain people.
     url: https://doi.org/10.1101/2021.01.12.426282
     year: 2018
-  - text: ESA's MELiSSA built a five-compartment regenerative loop over three decades, the engineering template for coupling microbial compartments.
-    url: https://en.wikipedia.org/wiki/MELiSSA
-    year: 2023
+  - text: ESA's MELiSSA built a five-compartment regenerative loop over more than 35 years, the engineering template for coupling microbial compartments.
+    url: https://melissafoundation.org/the-melissa-program/scientific-concept/
+    year: 2026
   - text: NASA's in-situ resource utilization programme validates hardware for winning materials from regolith, the mining half the loop makes biological.
     url: https://www.nasa.gov/mission/in-situ-resource-utilization-isru/
     year: 2024
+  - text: The BioRock experiment on the International Space Station showed microbes leaching rare earth elements from basalt in microgravity, the first proof the mining half can run in space.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7656455
+    year: 2020
 experiment:
   goal: Run a coupled waste-recycling and regolith-leaching microbial loop that closes water and gas while recovering metal.
   setup: >-
@@ -44,27 +47,27 @@ experiment:
 path:
   - phase: bench
     what: The three-compartment loop on lunar simulant and simulated waste.
-    scale: One crew-equivalent, bench scale.
+    scale: About 1 crew-equivalent, bench scale.
     proves: Life support and biomining can share one loop and both work.
   - phase: prototype
     what: A larger loop with engineered strains tuned for space conditions.
-    scale: A few people's worth of recycling and mining.
+    scale: About 4 people's worth of recycling and mining.
     proves: Engineered consortia raise closure and leaching rates together.
   - phase: pilot
     what: The loop flown to the Moon and run in real regolith, vacuum and radiation.
-    scale: A small crewed base.
+    scale: A base of about 10 people.
     proves: It runs on the real ground, not simulant, under space conditions.
   - phase: first-plant
     what: A base that feeds its crew and feeds metal to a local foundry from the loop.
-    scale: A town-sized settlement.
+    scale: A settlement of about 1,000 people.
     proves: A base makes more of its own supplies than it imports.
   - phase: fleet
     what: Loops seeded at bases across the Moon and asteroids, each adapted to local rock.
-    scale: Inner solar system bases.
+    scale: About 50 bases across the inner solar system.
     proves: Settlements bootstrap life support and mining from local material.
   - phase: civilization
     what: Self-provisioning habitats as the norm, closing matter and mining their own ground.
-    scale: Planet and space.
+    scale: About 1 million people in self-provisioning habitats.
     proves: Off-world settlement no longer depends on resupply from Earth.
 risks: >-
   Coupling may let a failure in one half poison the other; the design keeps the compartments

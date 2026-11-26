@@ -4,21 +4,25 @@ domain: people
 stage: k15
 needs: [habitat-communities, solar-system-governance, space-health, space-farming]
 summary: >-
-  By {year-k15} millions of people may live in habitats and on other worlds, many of them born there.
-  They will need what any society needs, families, schools, work, art, law and a sense of who they
-  are, in places where the air, water and food are all made. They must stay part of one civilization
-  with Earth while becoming societies of their own.
+  By {year-k15} millions of people may live in habitats and on other worlds, many of them born
+  there. They will need what any society needs, families, schools, work, art, law and a sense of who
+  they are, in places where the air, water and food are all made. They must stay part of one
+  civilization with Earth while becoming societies of their own.
 target: >-
-  Self-sustaining societies off Earth, large enough to be genetically and culturally healthy,
-  raising children who thrive, running their own affairs under the federation's charter, and linked
-  to Earth by trade, travel and a shared culture.
+  Self-sustaining societies off Earth, each of at least 1,000 people, ten times the smallest
+  genetic estimate, raising children whose health and schooling match Earth's, running their own
+  affairs under the federation's charter, and linked to Earth by trade, travel and a shared
+  culture.
 exists:
-  - text: Marin and Beluffi computed in 2018 that a crew of at least 98 people would be needed for a multi-generation voyage of thousands of years to stay genetically healthy.
+  - text: Marin and Beluffi computed in 2018 that a crew of at least 98 people would be needed to stay genetically healthy on a voyage of 6,300 years.
     url: https://arxiv.org/abs/1806.03856
     year: 2018
-  - text: Smith estimated in 2014, for Project Hyperion, how many people a multi-generation interstellar voyage would need to stay genetically viable.
+  - text: Smith estimated in 2014, for Project Hyperion, how large a population a multi-generation interstellar voyage would need to stay genetically viable.
     url: https://doi.org/10.1016/j.actaastro.2013.12.013
     year: 2014
+  - text: Mouse sperm stored freeze-dried on the International Space Station, the longest any biological sample had been kept there, gave genetically normal pups at the same rate as sperm kept on the ground (Wakayama and colleagues, 2021).
+    url: https://doi.org/10.1126/sciadv.abg5554
+    year: 2021
   - text: The International Space Station has had people aboard without a break since November 2000, the longest continuous human presence off Earth.
     url: https://www.nasa.gov/international-space-station/space-station-facts-and-figures/
     year: 2026
@@ -26,10 +30,11 @@ exists:
     url: https://www.archmission.org/
     year: 2019
 gap: >-
-  No one has been born, raised or lived a whole life off Earth, and nobody knows how low gravity,
-  radiation and isolation will shape children, families and culture over generations. Estimates of
-  the smallest healthy population range widely, and there is no experience of a society that must
-  make its own air.
+  No one has been born, raised or lived a whole life off Earth: the count is 0, against societies
+  of 1,000 or more. The longest presence, the space station's, has been continuous since November
+  2000. Nobody knows how low gravity, radiation and isolation will shape pregnancy, children,
+  families and culture over generations. Estimates of the smallest healthy population start at 98
+  and range widely above it, and there is no experience of a society that must make its own air.
 inventions: [return-ticket-charter]
 scene:
   kind: habitat

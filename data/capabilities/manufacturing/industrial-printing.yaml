@@ -4,35 +4,37 @@ domain: manufacturing
 stage: k08
 needs: [clean-metals]
 summary: >-
-  A factory that prints its parts needs no moulds, dies or special tools for each one, so it can
-  make many kinds of part in small numbers, change a design overnight, and make its own spares.
-  Printing is already how rocket engines and turbine parts are made, but it is still slow and costly
-  next to casting and forging.
+  A factory that prints its parts needs no moulds, dies or special tools for each one, so it can make
+  many kinds of part in small numbers, change a design overnight, and make its own spares. Printing
+  is already how some rocket engines and turbine parts are made, but it is still slow and costly next
+  to casting and forging.
 target: >-
-  Metal and ceramic printing at tonnes per hour per machine, at a cost per kilogram near that of
-  casting, for parts from millimetres to tens of metres, so that most of what the buildout to
-  {power-k08} needs, and most of what a self-copying factory needs, can be made without tooling.
+  Metal printing at a tonne an hour per machine, at under twice the cost per kilogram of a sand
+  casting, for parts from millimetres to tens of metres, accepted on the record of how each part
+  was made rather than by testing every one, so that most of what the buildout to {power-k08} and
+  a self-copying factory need can be made without moulds or dies.
 exists:
-  - text: Additive manufacturing earned 24.2 billion dollars in 2025, growing 10.9 percent, according to the Wohlers Report.
+  - text: Additive manufacturing earned 24.2 billion dollars worldwide in 2025, growing 10.9 percent, according to the Wohlers Report 2026.
     url: https://www.tctmagazine.com/wohlers-report-2026-additive-manufacturing-revenues-reach-24-2-billion/
     year: 2025
-  - text: About 85 percent of Relativity Space's Terran 1 rocket by mass was 3D printed.
-    url: https://spectrum.ieee.org/relativity-space-launch
-    year: 2023
-  - text: Cranfield University printed a 6 m, 300 kg aluminium aircraft spar by wire-arc additive manufacturing.
+  - text: Sciaky's electron beam additive manufacturing deposits 3.2 to 18 kg of metal an hour, depending on the material and the part.
+    url: https://www.sciaky.com/additive-manufacturing/electron-beam-additive-manufacturing-technology
+    year: 2026
+  - text: Cranfield University printed a six-metre, 300 kg aluminium spar by wire-arc additive manufacturing on its 10-metre printer.
     url: https://www.tctmagazine.com/cranfield-university-believe-they-have-3d-printed-the-bigges/
     year: 2016
-  - text: The University of Maine's polymer printer measures 100 by 22 by 10 feet and holds the record for the largest solid printed object, 2.06 cubic metres.
-    url: https://composites.umaine.edu/?p=23909
-    year: 2022
-  - text: COBOD printers are building a two-storey, 20,000 square metre school in Qatar with 30,000 square metres of printed walls.
+  - text: Relativity Space said about 85 percent of its Terran 1 rocket by mass was 3D printed.
+    url: https://spectrum.ieee.org/relativity-space-launch
+    year: 2023
+  - text: COBOD printers are building two-storey schools of 20,000 square metres each in Qatar; the first has 30,000 square metres of printed walls.
     url: https://www.3dnatives.com/en/3d-printed-school-qatar-30102026/
     year: 2026
 gap: >-
-  Metal printers build slowly next to a foundry, and their parts cost several times as much per
-  kilogram as castings. Parts often need machining and heat treatment afterwards, and each new alloy
-  and machine must be qualified again.
-inventions: []
+  The fastest metal printers deposit 3 to 18 kg an hour, so a tonne an hour is about 55 to 300
+  times beyond one machine. Printed metal still costs more per kilogram than cast metal, parts
+  usually need machining and heat treatment afterwards, and each new alloy, machine and part must
+  be qualified again by testing, so no printed part is yet accepted on its process record alone.
+inventions: [bead-mill]
 scene:
   kind: machine
   focus: A wire-arc printer laying down a long metal spar, bead by bead.

@@ -19,9 +19,9 @@ exists:
   - text: NASA's Psyche spacecraft launched on 13 October 2023 to explore a metal-rich asteroid, thought to be part of the core of a planetesimal, by August 2029.
     url: https://science.nasa.gov/mission/psyche/
     year: 2023
-  - text: AstroForge is a commercial company flying missions toward mining metal from asteroids.
-    url: https://www.astroforge.com/
-    year: 2026
+  - text: AstroForge launched Odin on 26 February 2025 to image the metallic near-Earth asteroid 2022 OB5; it got signals past the Moon but could not complete the mission, and the company is building its next spacecraft, DeepSpace-2.
+    url: https://www.astroforge.com/odin-mission
+    year: 2025
   - text: Karman+ plans to mine water from asteroids and sell it in space as propellant.
     url: https://www.karmanplus.com/
     year: 2026
@@ -29,9 +29,10 @@ exists:
     url: https://en.wikipedia.org/wiki/Mond_process
     year: 1890
 gap: >-
-  Humanity has brought back less than a kilogram from asteroids in total. Nobody has anchored to
-  one, cut it or refined it. Metal asteroids are tough alloys that drills and saws wear against, and
-  in weightlessness every chip and fragment flies away unless it is caught.
+  Humanity has brought back 121.6 grams from asteroid Bennu, under a kilogram from all asteroids
+  together, against a belt of {asteroid-belt-mass}. Nobody has anchored to an asteroid, cut it or
+  refined it. Metal asteroids are tough alloys that drills and saws wear against, and in weightlessness
+  every chip and fragment flies away unless it is caught.
 inventions: [carbonyl-burrow]
 scene:
   kind: launch

@@ -4,39 +4,47 @@ domain: environment
 stage: k08
 needs: [earth-monitoring]
 summary: >-
-  Monitored wildlife populations have fallen by an average of 73 percent since 1970, and around a
-  million species are threatened with extinction. A civilization that multiplies its energy use must
-  not take the rest of life down with it. The plan itself puts panels on {land-share} of the land, so
-  panels, mines and lines must go where they do least harm, and other land must go back to nature.
+  The wildlife populations that scientists follow have fallen by an average of 73 percent since
+  1970, and around a million species are threatened with extinction. A civilization that multiplies
+  its energy use must not take the rest of life down with it. The plan itself puts panels on
+  {land-share} of the land, so panels, mines and lines must go where they do least harm, farmland
+  must give room back to nature, and the world must be able to see whether any of it is working.
 target: >-
-  Conserve at least 30 percent of land and sea well by 2030, halt human-driven extinctions, and track
-  life well enough to know whether it is working, while solar fields spread across {land-share} of
-  the land.
+  At least 30 percent of land and sea conserved well by 2030, human-driven extinctions halted, and
+  the Living Planet Index rising again by the 2030s, with life tracked species by species well
+  enough to know, year by year, whether this is working, while solar fields spread across
+  {land-share} of the land.
 exists:
   - text: Target 3 of the Kunming-Montreal Global Biodiversity Framework, agreed in December 2022, asks that at least 30 percent of land, inland waters and seas be effectively conserved by 2030.
     url: https://www.cbd.int/gbf/targets/3
     year: 2022
-  - text: The Living Planet Report 2026 finds monitored vertebrate populations fell by an average of 73 percent between 1970 and 2022.
+  - text: WWF's Living Planet Report 2026 finds that the 35,803 vertebrate populations it follows fell by an average of 73 percent between 1970 and 2022.
     url: https://wwflpr.awsassets.panda.org/downloads/living-planet-report-2026-english.pdf
     year: 2026
-  - text: The IPBES Global Assessment found in 2019 that around 1 million animal and plant species are threatened with extinction, and that 75 percent of the land has been significantly altered by people.
+  - text: The IPBES Global Assessment found in 2019 that around 1 million animal and plant species are threatened with extinction, and that three quarters of the land has been significantly altered by people.
     url: https://www.ipbes.net/news/Media-Release-Global-Assessment
     year: 2019
-  - text: The Protected Planet Report 2024 put protected and conserved areas at 17.6 percent of land and 8.4 percent of the ocean.
-    url: https://digitalreport.protectedplanet.net/
-    year: 2024
-  - text: Littlefair and colleagues recovered DNA from more than 180 kinds of animals, plants and fungi on the filters of UK air-quality stations, showing existing networks could monitor life across a continent.
-    url: https://doi.org/10.1016/j.cub.2023.04.036
-    year: 2023
-  - text: Colossal Biosciences announced gene-edited wolves bred to resemble the extinct dire wolf, born in 2024 and 2025 and healthy at two years old.
-    url: https://colossal.com/direwolf/
+  - text: The IUCN Red List had assessed 175,909 species by July 2026, of which 49,505 are threatened with extinction.
+    url: https://iucn.org/press-release/202607/desert-frog-deep-sea-molluscs-remarkable-species-risk-iucn-red-list
+    year: 2026
+  - text: Protected Planet counted 18.66 percent of land and inland waters, and 9.99 percent of the ocean, in protected or conserved areas in November 2026.
+    url: https://www.protectedplanet.net/en
+    year: 2026
+  - text: The biodiversity summit COP17 in Yerevan closed on 31 October 2026 after a review found the world off track to meet all 23 of the Framework's targets by 2030.
+    url: https://www.cbd.int/doc/press/2026/pr-2026-10-31-cop17-en.pdf
+    year: 2026
+  - text: IPBES estimated in February 2026 that 7.3 trillion dollars of public and private finance flowed to activities that directly harm nature in 2023, against 220 billion dollars for conservation.
+    url: https://www.ipbes.net/bba-report/media-release
     year: 2026
 gap: >-
-  Protected areas cover under a fifth of the land and a tenth of the sea, and protection on paper
-  does not stop decline. Most species have never been counted, so most losses go unseen. Farming is
-  still the largest cause of habitat loss, and the buildout of panels, mines and lines adds pressure
-  of its own.
-inventions: []
+  Protected areas cover under a fifth of the land and a tenth of the sea, about three fifths and a
+  third of the way to the 2030 goal, and protection on paper does not stop decline: the 2026 review
+  found every target off track. Money pulls the other way, more than thirty dollars against nature
+  for each dollar spent protecting it. The Red List has assessed fewer than 180,000 species, and
+  most species have never been counted at all, so most losses go unseen. Farming is still the
+  largest cause of habitat loss, and the buildout of panels, mines and lines adds pressure of its
+  own.
+inventions: [air-census, wild-lease]
 scene:
   kind: globe
   focus: Forests, wetlands and grasslands linked into corridors across the continents.

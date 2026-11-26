@@ -6,42 +6,46 @@ pitch: >-
   An electric thruster that runs on magnesium refined from lunar rock, so cargo ships between
   worlds burn propellant mined in space instead of xenon or argon lifted from Earth.
 principle: >-
-  A Hall thruster traps electrons in a radial magnetic field, where they ionise the propellant, and
-  an axial electric field then accelerates the ions to tens of kilometres a second. Any atom that
-  ionises easily can be the propellant. Xenon is the usual choice, but it is rare and all of it is on
-  Earth. Metals work too. Magnesium ionises easily and is light, so at the same voltage its ions
-  leave more than twice as fast as xenon's; and it is a solid, stored as wire with no tanks. Lunar
-  soil is several percent magnesium oxide, and the electrolysis plants that make lunar oxygen
-  release magnesium along with iron, silicon and aluminium. The Drive feeds magnesium wire into a
-  heated anode that vaporises it at the rate the thruster needs, the method Michigan Tech has
-  tested. A metal plume condenses on anything cold, so ships are laid out with nothing cold in its
-  path.
+  A Hall thruster traps electrons in a radial magnetic field, where they ionise the propellant, and an
+  axial electric field then accelerates the ions. An ion of mass m falling through V volts leaves at
+  v = √(2qV/m). Through 300 V, xenon at 131 atomic mass units leaves at 21 km/s, a specific impulse
+  of 2,140 s; magnesium at 24.3 leaves at 49 km/s, 2.3 times faster. To reach 3,000 s, magnesium
+  needs only 109 V where xenon needs 590 V. At any propellant, thrust per watt is 2η/v, so at 3,000 s
+  and 50 percent efficiency a thruster makes 34 mN per kW: a 1 MW cargo tug pushes with 34 N and uses
+  1.16 g of magnesium a second, 36 tonnes a year of firing. Magnesium is also a solid, stored as wire
+  with no tanks. The Moon has it in quantity: average soils run from 5.7 percent magnesium oxide in
+  the Apollo 16 highlands to 10.4 percent at Apollo 17, and magnesium is 60 percent of the oxide by
+  mass, so Apollo 17 soil is 6.3 percent magnesium and a 1 MW tug's year needs about 1,200 tonnes of
+  soil at half recovery. Freeing it takes at least the oxide's heat of formation, 602 kJ per mole or
+  25 MJ per kilogram of magnesium; at 50 percent efficiency that is 50 MJ/kg, a steady 57 kW for
+  one tug's supply, under 6 percent of the power the tug itself spends, and the oxygen comes out as
+  a second product. The electrolysis plants that make lunar oxygen release magnesium along with
+  iron, silicon and aluminium. The Drive feeds magnesium wire into a heated anode whose temperature sets
+  the rate it vaporises, the thermal flow control King and Hopkins demonstrated. A metal plume condenses on
+  anything cold, so ships are laid out with nothing cold in its path.
 buildsOn:
-  - text: Hopkins and King at Michigan Tech ran a magnesium Hall thruster with active thermal control of the metal flow (Journal of Propulsion and Power, 2014).
-    url: https://doi.org/10.2514/1.B34888
-    year: 2014
-  - text: King's group at Michigan Tech also developed bismuth hollow cathodes for metal-fed Hall thrusters (2008).
+  - text: King and Hopkins at Michigan Tech ran a magnesium Hall thruster with active thermal control of the metal flow (Journal of Propulsion and Power, May 2014), and King's group also built a bismuth hollow cathode for Hall thrusters.
     url: https://www.mtu.edu/mechanical/people/faculty/king/
-    year: 2008
-  - text: ThrustMe's iodine thruster, stored as a solid and sublimed in use, was the first iodine electric propulsion in orbit (Rafalskyi and colleagues, Nature, 2021).
+    year: 2014
+  - text: ThrustMe's iodine electric propulsion system, which stores its propellant unpressurised as a solid and sublimates it as needed, was demonstrated in orbit (Rafalskyi and colleagues, Nature, 2021).
     url: https://doi.org/10.1038/s41586-021-04015-y
     year: 2021
-  - text: SpaceX moved Starlink's Hall thrusters to argon in 2023, for its price and supply, showing that propellant choice follows what is cheap and plentiful.
-    url: https://en.wikipedia.org/wiki/Hall-effect_thruster
-    year: 2023
-  - text: Lunar surface soils are about 9.2 percent magnesium oxide in the maria and 7.5 percent in the highlands.
-    url: https://en.wikipedia.org/wiki/Geology_of_the_Moon
-    year: 1975
-  - text: ESA and Metalysis used molten salt electrolysis to take oxygen from lunar regolith simulant, leaving a mixture of metal alloys (Lomax and colleagues, Planetary and Space Science, 2020).
+  - text: The Lunar Sourcebook's table of average soils at the landing sites gives magnesium oxide from 5.7 percent at Apollo 16 to 11.5 percent at Apollo 15 and 10.4 percent at Apollo 17.
+    url: https://www.lpi.usra.edu/publications/books/lunar_sourcebook/pdf/Chapter07.pdf
+    year: 1991
+  - text: Researchers working with ESA and Metalysis used molten salt electrolysis to take essentially all the oxygen from lunar regolith simulant, leaving a mixture of metal alloys; lunar regolith is 40 to 45 percent oxygen by weight.
     url: https://www.esa.int/ESA_Multimedia/Images/2019/10/Oxygen_and_metal_from_lunar_regolith
     year: 2019
+  - text: NIST gives the standard heat of formation of solid magnesium oxide as -601.6 kJ per mole (CODATA), the least energy needed to free magnesium from it.
+    url: https://webbook.nist.gov/cgi/cbook.cgi?ID=C1309484&Mask=2
+    year: 1984
 experiment:
   goal: Run a magnesium-fed Hall thruster for a thousand hours, on magnesium made from lunar simulant, and measure its performance and what its plume does to nearby surfaces.
   setup: >-
-    A 5 kW Hall thruster with a wire-fed vaporising anode in a large vacuum chamber, run in turns on
-    commercial magnesium and on magnesium reduced from lunar simulant by molten salt electrolysis.
-    Witness plates sit at angles around the plume; the chamber walls themselves pump the metal by
-    condensing it.
+    A 5 kW Hall thruster with a wire-fed vaporising anode in a vacuum chamber at least 6 m long, run in
+    turns on commercial magnesium and on magnesium reduced from lunar simulant by molten salt
+    electrolysis. Witness plates sit at angles around the plume; the chamber walls themselves pump
+    the metal by condensing it.
   measure: Thrust, specific impulse and efficiency; erosion of the channel walls; magnesium deposited on the witness plates by angle; flow stability; the effect of impurities in simulant-made metal.
   succeedsIf: Specific impulse above 2,500 s at over 45 percent efficiency for 1,000 hours, stable on simulant-made magnesium, with deposits confined within 60 degrees of the thrust axis.
   costUsd: 2000000
@@ -49,34 +53,34 @@ experiment:
 path:
   - phase: bench
     what: A thousand hours at 5 kW.
-    scale: One thruster.
+    scale: One 5 kW thruster, 1,000 hours, about 30 kg of magnesium.
     proves: Performance and life on lunar-derived metal.
   - phase: prototype
-    what: A 100 kW cluster tested on the ground, then flown on a demonstration tug in Earth orbit fed from a magnesium cassette.
-    scale: 100 kW.
+    what: A cluster tested on the ground, then flown on a demonstration tug in Earth orbit fed from a magnesium cassette.
+    scale: 100 kW, one demonstration tug.
     proves: High power, and a spacecraft that lives with a metal plume.
   - phase: pilot
-    what: A cargo tug of a megawatt or two between low Earth orbit and lunar orbit, fuelled with magnesium made at a lunar base.
-    scale: Cargoes of tens of tonnes.
+    what: A cargo tug between low Earth orbit and lunar orbit, fuelled with magnesium made at a lunar base.
+    scale: One 1 MW tug, 20 tonne cargoes, 36 tonnes of magnesium a year.
     proves: A closed loop of lunar propellant.
   - phase: first-plant
     what: Tugs carrying cargo between Earth, the Moon, Mars and the main belt, fuelled at lunar and asteroid refineries.
-    scale: Tens of megawatt-class tugs.
+    scale: 20 tugs of 1 to 10 MW, about 2,000 tonnes of metal a year.
     proves: Freight between worlds at the cost of electricity and refined metal.
   - phase: fleet
     what: Every slow freight route in the inner system running on metal from space.
-    scale: Hundreds of tugs.
+    scale: 500 tugs, 1 GW of thrusters, about 36,000 tonnes of metal a year.
     proves: Propulsion that needs nothing from Earth.
   - phase: civilization
     what: Electric freighters burning metals from the Moon, the asteroids and Mercury carry the climb's goods between worlds.
-    scale: The inner solar system.
+    scale: 100 GW of electric propulsion, about 3.6 million tonnes of metal a year.
     proves: Transport between worlds runs on what the worlds provide.
 risks: >-
   Metal plumes coat solar arrays and radiators; if deposits cannot be kept off them, thrusters move
   to long booms or the ship switches to a gas made in space, such as oxygen, which needs a different
   thruster. Lunar magnesium may carry impurities that wear the thruster faster, and the bench runs on
-  simulant-made metal to find out. Freeing magnesium costs more energy than freeing iron or oxygen;
-  if it proves too dear, calcium, sodium and aluminium are the next candidates.
+  simulant-made metal to find out. Freeing magnesium costs more energy per kilogram than freeing
+  iron or oxygen; if it proves too dear, calcium, sodium and aluminium are the next candidates.
 scene:
   kind: machine
   focus: A Hall thruster's ring of plasma, fed from a spool of moon-metal wire.

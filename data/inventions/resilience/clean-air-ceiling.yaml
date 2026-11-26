@@ -21,14 +21,22 @@ principle: >-
 buildsOn:
   - text: Eadie and colleagues' room-sized chamber test of 222 nm far-UVC, 98.4 percent fewer airborne pathogens and 184 equivalent air changes an hour.
     url: https://www.nature.com/articles/s41598-022-08462-z
-  - text: Buonanno and colleagues' measurement that low doses of 222 nm light inactivate airborne human coronaviruses.
+    year: 2022
+  - text: Buonanno and colleagues' measurement that doses near 1 mJ/cm2 of 222 nm light inactivate 99.9 percent of airborne human coronaviruses.
     url: https://www.nature.com/articles/s41598-020-67211-2
+    year: 2020
   - text: Welch and colleagues' 2018 paper proposing far-UVC as a new tool against airborne disease.
     url: https://www.nature.com/articles/s41598-018-21058-w
+    year: 2018
+  - text: A 2026 trial in Danish care homes that found far-UVC in common rooms cut hospital-treated infections, the first building-scale evidence.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13237172/
+    year: 2026
   - text: Kneissl and colleagues' review of aluminium gallium nitride deep-ultraviolet LEDs, their efficiency and their path to shorter wavelengths.
     url: https://www.nature.com/articles/s41566-019-0359-9
-  - text: What is known of far-UVC's safety and side effects, chiefly the ozone it can make.
-    url: https://en.wikipedia.org/wiki/Far-UVC
+    year: 2019
+  - text: The ACGIH 2022 exposure limits for 222 nm light, 161 mJ/cm2 for the eyes and 479 for the skin over eight hours, the dose budget the tile must stay inside.
+    url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299421
+    year: 2024
 experiment:
   goal: Show that LED ceiling tiles alone give a room tens of air changes an hour against an airborne microbe, with little ozone and safe exposure at eye height.
   setup: >-
@@ -47,23 +55,23 @@ path:
     proves: LED tiles clean the air fast enough, with little ozone and a safe dose.
   - phase: prototype
     what: Tiles in ten rooms of a working school or office through one winter, with air sampling for real respiratory viruses.
-    scale: About a hundred tiles.
+    scale: 100 tiles, 10 rooms.
     proves: The cleaning holds up with people moving, doors opening and dust.
   - phase: pilot
     what: A school district or hospital fitted throughout, compared with matched buildings for respiratory infections over two winters.
-    scale: Thousands of tiles.
+    scale: 5,000 tiles.
     proves: Fewer people fall ill, by a measured amount.
   - phase: first-plant
     what: A tile factory making them at the price of a good light fitting.
-    scale: A million tiles a year.
+    scale: 1 million tiles a year.
     proves: Clean air costs about as much as lighting.
   - phase: fleet
     what: Building codes that ask for clean-air tiles in every new school, hospital, office and transit hall.
-    scale: Hundreds of millions of rooms.
+    scale: 100 million rooms.
     proves: A new airborne pathogen spreads indoors far more slowly everywhere at once.
   - phase: civilization
     what: Every shared indoor space on Earth, and every habitat in space, cleaned by light.
-    scale: All the air people share.
+    scale: About 3 billion rooms, all the air people share.
     proves: Airborne disease no longer rides the indoor air of a civilization.
 risks: >-
   Years of daily exposure have not been studied, and if any harm to skin or eyes appears the tiles

@@ -6,12 +6,13 @@ needs: [universal-connectivity, open-knowledge-base, open-invention-finance]
 summary: >-
   A machine is only as reproducible as its description. Today a design lives in drawings, in the
   heads of the people who make it and in the settings of particular machines, so moving production,
-  or copying a whole factory, means relearning it. A self-copying industry needs every part
+  or copying a whole factory, means learning it again. A self-copying industry needs every part
   described so completely that a machine can make it from the description alone.
 target: >-
-  Open, machine-readable descriptions of how every part of the buildout's key machines is made, from
-  raw material to tested part, that any capable factory can compile into its own process, and that
-  tell a self-copying factory exactly what it can and cannot yet make of itself.
+  Open, machine-readable descriptions of how every part of the buildout's key machines is made,
+  from raw material to tested part, that any capable factory can compile into its own process
+  plan, with at least 90 percent of parts right first time in a shop that has never made them, and
+  that tell a self-copying factory exactly which of its own parts it can and cannot yet make.
 exists:
   - text: Open Source Ecology's Global Village Construction Set publishes open designs for the 50 industrial machines it says a small, sustainable civilization needs.
     url: https://www.opensourceecology.org/gvcs/
@@ -19,16 +20,23 @@ exists:
   - text: OSHWA defines open source hardware as hardware whose design is public so that anyone can study, modify, distribute, make and sell it, and certifies hardware against that definition.
     url: https://oshwa.org/definition/
     year: 2026
-  - text: ISO 10303, known as STEP, is the family of standards for computer-interpretable representation and exchange of product manufacturing information.
-    url: https://en.wikipedia.org/wiki/ISO_10303
+  - text: ISO 10303, known as STEP, represents parts, assemblies and their dimensions and tolerances for exchange between design, manufacturing, analysis and inspection software.
+    url: https://www.nist.gov/services-resources/software/step-file-analyzer-and-viewer
     year: 2026
-  - text: About 4,500 RepRap self-copying printers had been built from open designs by 2010.
+  - text: The Internet of Production Alliance's Open Know-How is an open data model, with a manifest format and federated search, for publishing how a piece of hardware is made.
+    url: https://www.internetofproduction.org/openknowhow
+    year: 2024
+  - text: About 4,500 RepRap self-copying printers were built from open designs in the project's first two and a half years.
     url: https://doi.org/10.1017/S026357471000069X
     year: 2011
 gap: >-
-  Standards describe shapes and tolerances, not how to make a part from rock or which processes it
-  needs. Open hardware designs still assume a workshop full of bought tools and parts. No format yet
-  carries the whole recipe, from feedstock to test, in a form a machine can follow without a person.
+  Standards describe shapes and tolerances, and open hardware formats describe where the documents
+  are, not how to make a part from raw material or which processes it needs. The 50 open machines
+  of the Global Village Construction Set and the 4,500 RepRaps of the first two and a half years
+  were built in workshops full of bought tools and parts, by people reading the documents. No
+  format yet carries the whole recipe, from feedstock to test, in a form a machine can follow, so
+  the share of parts a machine can make from one unaided is, in practice, 0, against the target of
+  90 percent.
 inventions: [process-genome]
 scene:
   kind: network

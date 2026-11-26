@@ -9,11 +9,13 @@ summary: >-
   seed factory, the first of which starts in {seed-year}, must keep working through it, on power that
   is made or stored on the Moon rather than shipped from Earth.
 target: >-
-  Power for lunar industry through every night, at any latitude, from megawatts at the first bases to
-  gigawatts as the industry grows, with nearly all of the hardware's mass made from lunar material.
+  Power for lunar industry through every night of {lunar-night}, at any latitude: about 100 kW at the
+  first mine or seed factory from {seed-year}, 1 MW at the first industrial base and 1 GW as the
+  industry grows, with more than 90 percent of the power plant's mass made from lunar material.
 exists:
   - text: NASA's Moon fact sheet gives a synodic month of 29.53 days, so a lunar night lasts about 14.8 Earth days, with equatorial temperatures from about 95 K to 390 K.
     url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html
+    year: 2024
   - text: NASA's Fission Surface Power design is a 40 kWe reactor within 6,000 kg, using four Stirling converters and radiators above 400 K, built to last ten years.
     url: https://ntrs.nasa.gov/api/citations/20230006731/downloads/NETS%202023%20FSP%20Presentation%20FINAL.pdf
     year: 2023
@@ -30,10 +32,11 @@ exists:
     url: https://www.astrobotic.com/lunar-delivery/lunar-surface-power/
     year: 2025
 gap: >-
-  Batteries for a night of {lunar-night} weigh tonnes per kilowatt, all shipped from Earth. Fission reactors
-  give tens of kilowatts, not the megawatts industry needs, and none has yet flown. Tall solar towers
-  work only on a few polar peaks. No lander has run industry through a lunar night, and no power
-  system has been built from lunar material.
+  One kilowatt through a night of {lunar-night} is about 355 kWh; at about 0.2 kWh per kilogram of
+  battery that is nearly 2 t, all shipped from Earth. NASA's reactor design gives 40 kWe for 6 t, so
+  1 MW would take 25 of them and 150 t, and the first is not due on the Moon before 2030. Tall solar
+  towers work only on a few polar peaks. No lander has run industry through a lunar night, and no
+  part of any power system has yet been made from lunar material.
 inventions: [night-kiln]
 scene:
   kind: moon

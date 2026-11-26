@@ -10,29 +10,33 @@ summary: >-
   product is data, which light carries home. Orbital computing is the first big use of space
   power, and a market that pays for the launch and the factories the rest of the climb needs.
 target: >-
-  Gigawatts of computing in orbit by {year-k09}, flying as clusters of satellites linked by lasers,
-  powered by their own sunlight, cooled by their own surfaces and costing no more per operation
-  than computing on the ground.
+  At least a gigawatt of computing in orbit by {year-k09}, a millionfold the first satellites,
+  flying as clusters of satellites linked by lasers, powered by their own sunlight, cooled by their
+  own surfaces and costing no more per operation than computing on the ground.
 exists:
   - text: Starcloud-1 launched in November 2025 carrying the first NVIDIA H100 GPU into orbit, and in December became the first spacecraft to train a language model in space, Karpathy's nanoGPT.
     url: https://www.starcloud.com/starcloud-1
     year: 2025
-  - text: Google's Project Suncatcher proposes clusters of 81 TPU satellites flying within about a kilometre of each other, and has shown 1.6 Tbit/s between one pair of optical transceivers on the bench.
+  - text: Google's Project Suncatcher design flies 81 TPU satellites in a cluster about a kilometre across at 650 km, and a bench test carried 1.6 Tbit/s between one pair of optical transceivers.
     url: https://research.google/blog/exploring-a-space-based-scalable-ai-infrastructure-system-design/
     year: 2025
-  - text: The Suncatcher paper reports Trillium TPUs surviving a radiation dose equal to a five-year mission without permanent failure, and expects launch to low Earth orbit to reach about 200 dollars a kilogram by the mid-2030s.
+  - text: The Suncatcher paper reports Trillium TPUs surviving a total ionising dose equal to a five-year mission with no permanent failure, and expects launch to low Earth orbit to reach about 200 dollars a kilogram by the mid-2030s.
     url: https://arxiv.org/abs/2511.19468
     year: 2025
-  - text: Google put four TPUs into orbit on a prototype Suncatcher satellite on 1 October 2026, aboard SpaceX's Transporter-18.
+  - text: Google put four Trillium TPUs into orbit on a prototype Suncatcher satellite on 1 October 2026, aboard SpaceX's Transporter-18.
     url: https://gcn.com/google-project-suncatcher-puts-four-chips/22176/
     year: 2026
-  - text: NVIDIA describes Starcloud-1 as a 60 kg satellite, about the size of a small fridge, with 100 times more GPU compute than any previous space-based operation.
-    url: https://blogs.nvidia.com/blog/starcloud/
-    year: 2025
+  - text: Starcloud's first commercial satellite, Starcloud-2, is to carry a GPU cluster with persistent storage and its own thermal and power systems, fully operating in sun-synchronous orbit by 2027.
+    url: https://www.starcloud.com/starcloud-2
+    year: 2026
+  - text: In January 2026 SpaceX filed plans with the US Federal Communications Commission for millions of satellites to carry cloud and AI computing into orbit.
+    url: https://en.wikipedia.org/wiki/Space-based_data_center
+    year: 2026
 gap: >-
-  The first orbital computers carry a handful of chips. A gigawatt needs square kilometres of solar
-  array and radiator, chips that survive years of radiation, laser links fast enough to make many
-  satellites act as one machine, and a launch price far below today's.
+  The first orbital computers carry one GPU or four TPUs, about a kilowatt. A gigawatt is a
+  millionfold more: square kilometres of solar array and radiator, chips that last years in
+  radiation, laser links fast enough to make many satellites act as one machine, and launch near 200
+  dollars a kilogram instead of {launch-cost-falcon-9} today.
 inventions: [compute-leaf]
 scene:
   kind: compute

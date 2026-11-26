@@ -7,26 +7,42 @@ summary: >-
   Meat is muscle and fat, and both can be grown from animal cells in a bioreactor without raising or
   killing an animal. Cultured meat promises the taste and nutrition of meat on a fraction of the
   land, water and emissions of livestock, and frees the largest single use of land, pasture, to
-  return to nature. It is the hardest of the new food routes to scale, and the most transformative if
-  it works.
+  return to nature. It is the hardest of the new food routes to scale, and the one that would change
+  the most if it works.
 target: >-
-  Grow structured meat and fat from cultured cells at the price and volume of farmed meat, with the
-  texture of cuts and not just mince, so that most meat can be grown rather than raised.
+  Grow structured meat and fat from cultured cells at the price of farmed meat, a few dollars a
+  kilogram, and at tissue density above 200 g/L, with the texture of cuts and not just mince, so that
+  more than half of meat by weight can be grown rather than raised.
 exists:
-  - text: Pasture covers 3,200 million hectares, the largest single human use of land, which cultured meat could largely return to nature.
-    url: https://ourworldindata.org/environmental-impacts-of-food
-    year: 2024
-  - text: Food is responsible for about a quarter of global greenhouse-gas emissions, much of it from livestock, the burden cultured meat aims to cut.
-    url: https://ourworldindata.org/environmental-impacts-of-food
-    year: 2024
-  - text: Precision fermentation already makes animal proteins at commercial scale, supplying growth factors and media ingredients that cultured meat depends on.
-    url: https://perfectday.com/
-    year: 2024
+  - text: Singapore approved Eat Just's cultured chicken for sale in December 2020, the first regulatory clearance of cultured meat anywhere; the US followed in June 2023, when UPSIDE Foods and GOOD Meat got USDA grants of inspection after FDA safety reviews.
+    url: https://gfi.org/press/good-meat-and-upside-foods-approved-to-sell-cultivated-chicken-following-landmark-usda-action/
+    year: 2023
+  - text: In 2025 the US FDA completed safety consultations for Mission Barns' cultured pork fat (March) and Wildtype's cultured coho salmon (May), widening approvals beyond chicken.
+    url: https://www.fda.gov/food/hfp-constituent-updates/fda-completes-pre-market-consultation-human-food-made-cultured-pork-fat-cells
+    year: 2025
+  - text: Humbird's 2021 techno-economic analysis put the cost of a fed-batch animal-cell process at about $37 per kg of wet cell mass, with growth capped near 110 g/L by ammonia build-up, far above farmed meat.
+    url: https://doi.org/10.1002/bit.27848
+    year: 2021
+  - text: Growth factors are the dominant cost of culture medium, over 99 percent by one GFI estimate, so cutting them is the main lever on price; Stout and colleagues' serum-free Beefy-9 medium grew bovine cells over seven passages at a 39 hour doubling time.
+    url: https://doi.org/10.1038/s42003-022-03423-8
+    year: 2022
+  - text: Vow runs a 20,000 litre bioreactor for cultured quail, the largest food-grade vessel in the sector, and sells Forged quail in Singapore and Australia after approvals in 2024 and 2025.
+    url: https://www.foodstandards.gov.au/food-standards-code/applications/A1269-Cultured-Quail-as-a-Novel-Food
+    year: 2025
+  - text: A University of Tokyo group grew a whole-cut chicken piece of over 10 grams by perfusing cells through 1,125 hollow fibres, a step toward thick structured tissue rather than mince.
+    url: https://www.eurekalert.org/news-releases/1080163
+    year: 2025
+  - text: Seven US states, among them Florida, Alabama and Texas, had banned the sale of cultured meat by 2025, and Italy banned it in 2023, so markets as well as biology stand in the way.
+    url: https://www.foodsafetynews.com/2025/06/texas-is-the-7th-state-to-put-brakes-on-lab-grown-meat/
+    year: 2025
 gap: >-
-  Cultured meat is made only in small, costly batches. Cheap growth media, bioreactors that grow cells
-  to high density without contamination, and scaffolds that turn a cell mass into a textured cut are
-  all unsolved at scale, and no product yet matches farmed meat on price. Growing a steak, not just a
-  nugget, by the megatonne is the challenge.
+  Cultured meat is sold only in tiny volumes, and the largest reactor yet is 20,000 litres, small
+  against the hundreds of cubic metres a commodity fermentation plant runs. Cheap serum-free medium,
+  growth to high density
+  without ammonia poisoning or contamination, and a way to turn a cell mass into a textured cut rather
+  than mince are all unsolved at scale, and no product matches farmed meat on price. Growing a steak,
+  not just a nugget, by the megatonne is the challenge, and several large producers, among them
+  Believer Meats, closed in 2025 before reaching it.
 inventions: [scaffold-free-meat-bioreactor]
 scene:
   kind: cell

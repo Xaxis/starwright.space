@@ -7,67 +7,72 @@ pitch: >-
   days, by designing the immunogen on a computer and making it in a cell-free reactor, so defence
   keeps pace with an outbreak instead of trailing it by a year.
 principle: >-
-  When a new pathogen appears, its genome can be sequenced within hours, almost anywhere. The bottleneck
-  is everything after: choosing what part of it to target, designing a stable immunogen, making it,
-  and testing it. The Standing Vaccine Foundry keeps that whole chain built and idle, ready to run.
-  Structure-prediction and protein-design tools take the sequenced antigen, pick conserved targets and
-  design a stable, well-folded immunogen, or a messenger-RNA that encodes one, in a day. A cell-free
-  reactor makes the immunogen without a living culture, so production starts the same week and can run
-  anywhere, including at the site of an outbreak. Standardised animal and organ-on-chip assays test
-  safety and the immune response on a fixed protocol, so the foundry produces not a guess but a tested
-  candidate ready for trials. Because the pipeline is standing and standardised, each new threat runs
-  the same proven path, and the slow part becomes the clinical trial, not the science.
+  When a new pathogen appears, its genome can be sequenced within hours, almost anywhere. The slow
+  part is everything after: choosing what to target, designing a stable immunogen, making it, and
+  testing it. The Standing Vaccine Foundry keeps that whole chain built and idle. Structure-prediction
+  and protein-design tools take the published antigen sequence, pick conserved targets and design a
+  stable immunogen, or a messenger-RNA that encodes one, in about a day. A cell-free reactor makes the
+  immunogen without a living culture, so production starts the same week and can run at an outbreak
+  site. Standardised animal and organ-on-chip assays then test safety and immune response on a fixed
+  protocol, so the output is a tested candidate, not a guess. The benchmark is the 100 Days Mission.
+  Against the roughly 11 months the fastest vaccine ever, for COVID-19, took from shared sequence to
+  authorisation, recent responses show the pieces working: a Phase 2 Marburg vaccine trial begun 21
+  days after an outbreak, and 400,000 doses of a Rift Valley fever vaccine made in 16 days. The target
+  is a tested candidate within 30 days of a sequence, every time, so the slow step becomes the
+  regulated clinical trial, not the science.
 buildsOn:
-  - text: AlphaFold 3 predicts antigen structure and molecular interactions with about 50 percent better accuracy than docking, the design engine for choosing and stabilising an immunogen.
+  - text: AlphaFold 3 predicts the joint structures of proteins, nucleic acids, small molecules and modified residues, with far greater accuracy for protein and drug binding than docking tools and substantially higher antibody and antigen accuracy than AlphaFold-Multimer, the design engine for choosing and stabilising an immunogen (Nature, 2024).
     url: https://doi.org/10.1038/s41586-024-07487-w
     year: 2024
-  - text: RFdiffusion designs binding proteins and antibodies from scratch at a 19 percent experimental success rate, enabling designed immunogens and countermeasures to a new target.
+  - text: RFdiffusion designs protein binders from scratch with an overall experimental success rate of 19 percent across five targets, including influenza haemagglutinin, for designed countermeasures to a new target (Nature, 2023).
     url: https://doi.org/10.1038/s41586-023-06415-8
     year: 2023
-  - text: Cell-free transcription-translation systems make protein without living cells at useful yields, the route to starting production the same week a sequence arrives.
-    url: https://doi.org/10.1016/j.biochi.2013.11.025
-    year: 2014
-  - text: Wellcome Leap funds DARPA-style health resilience programs, the institutional model a standing foundry would run within.
-    url: https://wellcomeleap.org/
-    year: 2024
+  - text: Pardee, Collins and colleagues freeze-dried cell-free transcription and translation machinery into pellets that stay stable for at least a year and, rehydrated with DNA, made small proteins that could serve as a diphtheria vaccine (Cell, 2016), the route to starting production the same week a sequence arrives.
+    url: https://news.mit.edu/2016/to-produce-biopharmaceuticals-on-demand-just-add-water-0922
+    year: 2016
+  - text: CEPI reported in 2025 that a Phase 2 Marburg vaccine trial was initiated within 21 days of the outbreak and 400,000 doses of Rift Valley fever vaccine substance were produced in 16 days, the response speed a standing foundry industrialises.
+    url: https://static.cepi.net/downloads/2026-07/CEPI%202025%20Annual%20Progress%20Report_FINAL.pdf
+    year: 2025
 experiment:
   goal: Take a pathogen sequence to a tested vaccine candidate on a standing pipeline, and measure the time.
   setup: >-
-    Using a recently characterised pathogen as a blind test, run the full pipeline: design an immunogen
-    from the sequence with structure and protein-design tools, make it in a cell-free reactor, and run
-    a fixed set of immunogenicity and safety assays in animals and organ-on-chip systems. Time every step.
+    Using a well-characterised, licensed antigen as a blind test (for example an influenza
+    haemagglutinin or the SARS-CoV-2 spike), run the full pipeline from its published sequence: design
+    an immunogen with structure and protein-design tools, make it in a cell-free reactor, and run a
+    fixed set of immunogenicity and safety assays in mice and organ-on-chip systems. Time every step.
+    No live pathogen is grown or handled.
   measure: >-
     Days from sequence to a candidate that passes the assay panel; the candidate's immune response and
-    safety signal against a known benchmark vaccine; cost per candidate.
+    safety signal against the matching licensed benchmark vaccine; cost per candidate.
   succeedsIf: >-
-    The pipeline yields a candidate that meets the immunogenicity and safety benchmark within 30 days
-    of receiving the sequence, repeatably across several test pathogens.
+    The pipeline yields a candidate meeting the immunogenicity and safety benchmark within 30 days of
+    receiving the sequence, repeatably across at least 5 licensed test antigens.
   costUsd: 35000000
   months: 48
 path:
   - phase: bench
-    what: The design-make-test chain run end to end on known pathogens.
-    scale: One candidate at a time.
-    proves: Sequence to tested candidate is possible in days.
+    what: The design-make-test chain run end to end on licensed benchmark antigens.
+    scale: 5 to 10 candidates in all.
+    proves: Sequence to tested candidate is possible in under 30 days.
   - phase: prototype
-    what: A standing foundry that runs the pipeline on demand against blind test pathogens.
-    scale: Several candidates a month.
+    what: A standing foundry that runs the pipeline on demand against blind benchmark antigens.
+    scale: 5 to 10 candidates a month.
     proves: The timeline and quality hold repeatably.
   - phase: pilot
     what: The foundry feeding candidates into real clinical trials during a live outbreak.
-    scale: Trial-ready doses.
+    scale: About 10,000 trial-ready doses per candidate.
     proves: It shortens the real race against a spreading pathogen.
   - phase: first-plant
     what: Regional foundries with surge manufacturing linked to the biosurveillance network.
-    scale: Millions of doses in weeks.
+    scale: About 10 million doses within weeks of a sequence.
     proves: Detection to deployed countermeasure in weeks, at scale.
   - phase: fleet
     what: Foundries worldwide and compact units for remote regions and off-world settlements.
-    scale: Global and off-world.
+    scale: 10 to 50 foundry sites, on Earth and off it.
     proves: No population is far from a rapid countermeasure.
   - phase: civilization
     what: Pandemic defence as a standing utility that outpaces any single pathogen.
-    scale: Planet and inner solar system.
+    scale: About 1 billion doses within weeks of any new threat.
     proves: Outbreaks are contained before they become pandemics.
 risks: >-
   A designed immunogen may not protect as well as a traditionally developed vaccine; the foundry keeps

@@ -4,35 +4,38 @@ domain: people
 stage: type-1
 needs: [space-habitats]
 summary: >-
-  The first people to live in space for years will live in small, sealed communities with no easy way
-  out. Studies of polar stations and long analogue missions find that isolation and confinement bring
-  tension, boredom and conflict, and in a sealed habitat a feud can endanger everyone. The climb
-  needs ways to choose, prepare and organise communities so they stay healthy and fair for years, and
-  then for generations.
+  The first people to live in space for years will live in small, sealed communities with no easy
+  way out. Studies of polar stations and long analogue missions find that isolation and confinement
+  bring tension, boredom and conflict, and in a sealed habitat a feud can endanger everyone. The
+  climb needs ways to choose, prepare and organise communities so they stay healthy and fair for
+  years, and then for generations.
 target: >-
-  Communities of hundreds to tens of thousands living in habitats for years, with mental health and
-  conflict no worse than in a small town on Earth, governed by rules their members chose, and with
-  every member free to leave.
+  Communities of 100 to 10,000 people living in habitats for 5 years or more, with rates of mental
+  illness and serious conflict no higher than in a small town on Earth, governed by rules their
+  members chose, and with every member free to leave within 6 months.
 exists:
-  - text: In the Mars-520 simulation, six crew sealed in for 520 days grew steadily less active and their sleep shifted in length and timing (Basner and colleagues, 2013).
+  - text: In the Mars-520 simulation, six crew sealed in for 520 days grew steadily less active, and most had disturbed sleep or lapses in vigilance (Basner and colleagues, 2013).
     url: https://doi.org/10.1073/pnas.1212646110
     year: 2013
-  - text: Palinkas and Suedfeld reviewed in 2008 what is known about the psychological effects of polar expeditions and of wintering at Antarctic stations.
+  - text: Palinkas and Suedfeld's 2008 review of polar expeditions found disturbed sleep, low mood and interpersonal tension and conflict common, and about 5 percent of members meeting the criteria for a psychiatric disorder.
     url: https://doi.org/10.1016/S0140-6736(07)61056-3
     year: 2008
   - text: Six crew lived for 365 days in the HI-SEAS Mars habitat on Mauna Loa, Hawaii, ending in August 2016.
     url: https://www.hawaii.edu/news/2016/08/28/global-media-document-historic-university-of-hawaii-mars-simulation/
     year: 2016
-  - text: The International Space Station has been continuously occupied since November 2000, and 298 people from 26 countries had visited it by 2026.
-    url: https://www.nasa.gov/international-space-station/space-station-facts-and-figures/
+  - text: More than 290 people from 26 countries have visited the International Space Station.
+    url: https://www.nasa.gov/international-space-station/space-station-visitors-by-country/
     year: 2026
-  - text: Hirschman's Exit, Voice, and Loyalty (1970) showed that people answer a failing organisation by leaving or by speaking up, and that voice is strongest when leaving is possible.
+  - text: Hirschman's Exit, Voice, and Loyalty (1970) set out the two ways people answer a failing organisation, leaving it or pressing for change from within, and how loyalty delays exit so that voice can work.
     url: https://www.hup.harvard.edu/books/9780674276604
     year: 1970
 gap: >-
-  Analogue missions have about six crew and last a year or two at most; nobody has studied a sealed
-  community of hundreds over years, with families, births and people coming and going. Leaving,
-  which keeps power in check in ordinary towns, is close to impossible in a sealed habitat.
+  Analogue missions have had 4 to 6 crew for at most 520 days, and even polar crews show
+  psychiatric disorder in about 5 percent of members. A community of 100 for 5 years is about 17
+  times the people and 3.5 times the time of Mars-520, and 10,000 is some 1,700 times the people.
+  Nobody has studied a sealed community of hundreds over years, with families, births and people
+  coming and going. Leaving, which keeps power in check in ordinary towns, is close to impossible
+  in a sealed habitat.
 inventions: [return-ticket-charter]
 scene:
   kind: habitat

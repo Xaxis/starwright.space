@@ -10,10 +10,14 @@ summary: >-
   be brewed in tanks from renewable feedstock instead of pumped from oil or baked in furnaces, with
   far less heat and carbon.
 target: >-
-  Produce high-performance structural proteins and polymers, silk-strong fibres, tough bioplastics
-  and self-assembling composites, by fermentation at commodity scale and price, so that grown
-  materials replace a large fraction of petrochemical and energy-intensive ones.
+  Brew structural proteins at titres of tens of grams per litre and spin them into fibres with the
+  toughness of natural spider silk, at a few dollars a kilogram, so that grown materials replace a
+  large share of the 430 million tonnes of plastics made each year and a share of energy-intensive
+  fibres.
 exists:
+  - text: Spiber makes a structural protein, its Brewed Protein, by fermentation at commercial scale, with production strains reaching 50 grams per litre in fermenters over 100 kilolitres at its plant in Rayong, Thailand.
+    url: https://vegconomist.com/fermentation/spiber-opens-brewed-protein-fermentation-plant-third-party-protein-producers/
+    year: 2026
   - text: Precision fermentation already makes animal proteins without animals; Perfect Day brews dairy whey protein in microbes as a commercial product.
     url: https://perfectday.com/
     year: 2024
@@ -27,10 +31,11 @@ exists:
     url: https://doi.org/10.1038/s41586-023-06415-8
     year: 2023
 gap: >-
-  Grown materials work at small scale and premium prices. Getting a microbe to secrete long, repetitive
-  structural proteins at high yield, spinning them into fibres as strong as the natural ones, and
-  doing it at the cost of bulk plastic are all unsolved. Nobody has shown a grown structural material
-  competing on price with the petrochemical it would replace.
+  Spiber brews structural protein at 50 grams per litre, but its fibre goes into premium apparel, not
+  into the 430 million tonnes of bulk plastics; closing that gap means spinning to the toughness of
+  spider silk, hundreds of megajoules per cubic metre, and cutting cost by one to two orders of
+  magnitude. Getting a microbe to secrete long, repetitive proteins at high yield, spinning them to
+  the natural strength, and doing it at commodity cost are all unsolved.
 inventions: [fermented-structural-fiber]
 scene:
   kind: lattice

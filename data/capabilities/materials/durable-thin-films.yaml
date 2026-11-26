@@ -14,8 +14,8 @@ target: >-
   conversion for at least thirty years at {swarm-radius}, made only from elements common in rock:
   silicon, oxygen, aluminium, iron and magnesium.
 exists:
-  - text: JAXA's IKAROS, the first interplanetary solar sail, flew a polyimide membrane 7.5 micrometres thick and 20 metres on the diagonal, carrying thin-film solar cells 25 micrometres thick.
-    url: https://en.wikipedia.org/wiki/IKAROS
+  - text: JAXA's IKAROS, the first interplanetary solar sail, flew a polyimide membrane 7.5 micrometres thick and 14 metres square, about 20 on the diagonal, carrying thin-film solar cells.
+    url: https://global.jaxa.jp/projects/sas/ikaros/
     year: 2010
   - text: The Planetary Society's LightSail 2 sailed on sunlight alone in Earth orbit from June 2019 until it re-entered in November 2022.
     url: https://www.planetary.org/sci-tech/lightsail
@@ -30,9 +30,10 @@ exists:
     url: https://www.blueorigin.com/news/blue-alchemist-powers-our-lunar-future/
     year: 2023
 gap: >-
-  Polymer films have flown for a few years at most, not for decades this close to the Sun, and they
-  cannot be made from rock. Glass survives sunlight and can be made from rock, but the thinnest
-  glass in production is still many times thicker and heavier than a collector can be.
+  Polymer films have flown about 3 years at most, not the 30 a collector at {swarm-radius} needs, and
+  they cannot be made from rock. Glass survives sunlight and can be made from rock, but the thinnest
+  production glass is 100 micrometres or more, over ten times the few micrometres a collector at
+  {collector-density} allows.
 inventions: [glasswing]
 scene:
   kind: machine

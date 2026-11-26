@@ -10,8 +10,9 @@ summary: >-
   holds, because it fills and empties only a few times a year.
 target: >-
   Enough storage that a grid on sun and wind serves {power-k08} through every night and every winter:
-  hours from batteries, days from cheap long-duration stores, and seasons from fuels or metals made
-  with summer's surplus.
+  about 1,200 TWh for the night, 12 hours of {power-k08}, from batteries and other daily stores at
+  under 20 US dollars per kWh of capacity; about 17,000 TWh for a dark week; and tens of thousands of
+  terawatt-hours carried from summer to winter in fuels or metals at a few dollars per kWh.
 exists:
   - text: BloombergNEF's 2025 survey found stationary storage battery packs fell to 70 US dollars per kWh, 45 percent below 2024.
     url: https://about.bnef.com/insights/clean-transport/lithium-ion-battery-pack-prices-fall-to-108-per-kilowatt-hour-despite-rising-metal-prices-bloombergnef/
@@ -25,17 +26,20 @@ exists:
   - text: Form Energy's iron-air batteries store power for 100 hours; its system for Google and Xcel at Pine Island, Minnesota is planned at 300 MW and 30 GWh, coming online in phases from 2028.
     url: https://www.canarymedia.com/articles/batteries/gigantic-form-energy-battery-google-minnesota
     year: 2026
-  - text: Hydrostor is building compressed-air stores in rock caverns, including Willow Rock in California at 500 MW for more than 8 hours.
-    url: https://www.hydrostor.ca/
+  - text: Hydrostor's Willow Rock in Kern County, California, a compressed-air store in a rock cavern of 500 MW and 4,000 MWh, was in late-stage development in 2026.
+    url: https://www.hydrostor.ca/project/willow-rock-energy-storage-center/
     year: 2026
-  - text: ACES Delta in Utah, built by Chevron and Mitsubishi Power, makes hydrogen with electrolyser banks of 20 to 200 MW and stores it in salt caverns for seasonal use.
-    url: https://aces-delta.com/
+  - text: ACES Delta in Utah won a 504.4 million US dollar DOE loan guarantee in June 2022 for a 220 MW electrolyser bank and two salt caverns of up to 150 GWh each, to store hydrogen seasonally for the Intermountain Power Plant.
+    url: https://www.powermag.com/massive-utah-hydrogen-storage-project-garners-finalized-504m-doe-loan-guarantee/
+    year: 2022
 gap: >-
-  Lithium-ion batteries cover hours, but storing a week of a nation's demand in them would cost many
-  times the grid itself. Iron-air and compressed air reach a hundred hours, and only in first
-  projects. Seasonal storage hardly exists: hydrogen in salt caverns works only where there are salt
-  caverns, and loses more than half its energy on the round trip. Nothing yet stores a winter's power
-  for a few dollars per kilowatt-hour of capacity.
+  Batteries cover hours. A week of {power-k08} is about 17,000 TWh, which at today's 70 US dollars
+  per kilowatt-hour would cost over a thousand trillion dollars in packs alone. Compressed air and
+  iron-air reach 8 to 100 hours, and only in first projects of a few to 30 GWh. Seasonal storage
+  hardly exists: the largest planned hydrogen store, two caverns at ACES Delta, holds up to 300 GWh,
+  needs salt beds that most countries lack, and loses more than half its energy on the round trip. A
+  northern winter needs stores thousands of times larger, at a few dollars per kilowatt-hour of
+  capacity.
 inventions: [aluminium-tide]
 scene:
   kind: field

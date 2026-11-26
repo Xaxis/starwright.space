@@ -7,15 +7,16 @@ pitch: >-
   photosynthesise so fast: a protein shell that floods the fixing enzyme with carbon dioxide so it
   stops wasting energy on oxygen.
 principle: >-
-  Rubisco, the enzyme that fixes carbon, often grabs oxygen by mistake, and the plant burns energy
-  undoing it. This is photorespiration, and it is the single largest loss in C3 crops like rice and
-  wheat. Cyanobacteria avoid it with a carboxysome: a protein shell that packs Rubisco together with
-  carbonic anhydrase, fed by pumps that concentrate bicarbonate, so the enzyme sits in a pocket of
-  nearly pure carbon dioxide and almost never sees oxygen. The Carboxysome Graft moves this whole
-  module, the shell proteins, the enzymes and the bicarbonate pumps, into a crop's chloroplast,
-  tuned by design tools so the parts express and assemble in a plant rather than a microbe. The crop
-  keeps its roots, leaves and grain, but fixes carbon closer to the microbial rate, so more sunlight
-  becomes food on the same land.
+  Rubisco, the enzyme that fixes carbon, grabs oxygen instead of carbon dioxide in about one reaction
+  in four at today's {co2-now} and warm temperatures, and the plant burns energy undoing it. This
+  photorespiration can cut a C3 crop's net carbon gain by 20 to 50 percent, the single largest loss in
+  crops like rice and wheat. Cyanobacteria avoid it with a carboxysome: a protein shell that packs
+  Rubisco together with carbonic anhydrase, fed by pumps that concentrate bicarbonate, so the enzyme
+  sits in carbon dioxide at tens of times the outside level and almost never sees oxygen. The
+  Carboxysome Graft moves this whole module, the shell proteins, the enzymes and the bicarbonate pumps,
+  into a crop's chloroplast, tuned by design tools so the parts express and assemble in a plant rather
+  than a microbe. The crop keeps its roots, leaves and grain, but fixes carbon closer to the microbial
+  rate, moving from near 1 percent of sunlight captured toward the 4.6 percent C3 ceiling.
 buildsOn:
   - text: The theoretical photosynthesis ceiling (4.6 percent C3, 6 percent C4) and the gap to the one percent crops reach, which the carbon-concentrating mechanism is meant to close.
     url: https://doi.org/10.1016/j.copbio.2008.02.004
@@ -49,27 +50,27 @@ experiment:
 path:
   - phase: bench
     what: Carboxysomes assembled and fed in a model crop chloroplast in growth chambers.
-    scale: Individual plants.
+    scale: About 20 plants in growth chambers.
     proves: The module assembles and lifts carbon fixation in a plant cell.
   - phase: prototype
     what: The full module in rice, with yield measured in greenhouses.
-    scale: Hundreds of plants.
+    scale: About 500 plants.
     proves: A staple crop carries the trait and sets more grain per unit light.
   - phase: pilot
     what: First confined field trials across seasons and climates.
-    scale: Field plots.
+    scale: Field plots of about 1 hectare.
     proves: The gain survives pests, weather and real soil.
   - phase: first-plant
     what: Regulatory approval and seed increase for one crop in one region.
-    scale: Farms in a single country.
+    scale: About 10,000 hectares in one country.
     proves: Farmers grow it and it yields as promised at scale.
   - phase: fleet
     what: The graft moved into the world's major staple crops and licensed widely.
-    scale: Millions of hectares.
+    scale: About 100 million hectares.
     proves: A large share of global grain uses less land and water per tonne.
   - phase: civilization
     what: Carbon-concentrating crops and algae as the default, feeding people and capturing carbon on a shrinking footprint.
-    scale: Global cropland and algae farms.
+    scale: About 1.5 billion hectares of cropland and algae farms.
     proves: Food and carbon capture decoupled from land as the climb needs.
 risks: >-
   The shell may not assemble in a plant, or the pumps may cost more energy than the graft saves; the

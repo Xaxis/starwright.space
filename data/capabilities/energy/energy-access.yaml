@@ -5,19 +5,21 @@ stage: now
 needs: []
 summary: >-
   The climb starts with the people who have almost no energy at all. Humanity uses {power-now}, a
-  Kardashev rating of {k-now}, but {people-without-power} have no electricity and billions
-  still cook over smoke. Reaching {power-k08} by {year-k08} means every person using as much energy
-  as the richest countries do today, so the first new watts must reach the people who have none.
+  Kardashev rating of {k-now}, but {people-without-power} have no electricity and about two billion
+  still cook on wood, charcoal, dung or kerosene, whose smoke kills millions a year. Reaching
+  {power-k08} by {year-k08} means every person using as much energy as the richest countries do
+  today, so the first new watts must reach the people who have none.
 target: >-
   Every household on a supply that runs lights, a refrigerator, a fan, a phone, a water pump and a
-  clean stove, and that can grow as its owners' needs grow, so that no one is left behind on the way
-  to {power-k08}.
+  clean stove, about 1 to 3 kWh a day to start, and that grows with its owners' needs, with universal
+  electricity by the mid-2030s and clean cooking for all by 2040, so that no one is left behind on
+  the way to {power-k08}.
 exists:
-  - text: The UN's 2025 SDG report counts 666.4 million people without electricity in 2023, with global access at 92 percent; only 74 percent had clean cooking, leaving about 2.1 billion people on polluting fuels.
-    url: https://unstats.un.org/sdgs/report/2025/Goal-07/
-    year: 2025
-  - text: The IEA counts 730 million people without electricity in 2025 and, on current policies, still 710 million in 2030.
-    url: https://www.iea.org/topics/energy-access
+  - text: Tracking SDG7 2026, from the IEA, IRENA, the UN, the World Bank and the WHO, finds 655 million people without electricity and two billion cooking with polluting fuels, more than 560 million and 970 million of them in sub-Saharan Africa.
+    url: https://www.iea.org/news/655-million-people-still-living-without-electricity-underscore-urgent-need-to-deliver-on-universal-energy-access-target
+    year: 2026
+  - text: The IEA's World Energy Outlook 2025 estimates universal access needs about 23 billion US dollars a year for electricity until 2035 and 4 billion a year for clean cooking until 2040.
+    url: https://www.iea.org/reports/world-energy-outlook-2025/achieving-access-for-all
     year: 2025
   - text: Mission 300, led by the World Bank Group and the African Development Bank, aims to connect 300 million Africans to electricity by 2030, with 30 billion US dollars from the World Bank for 2024 to 2030.
     url: https://www.worldbank.org/en/programs/energizing-africa
@@ -25,18 +27,24 @@ exists:
   - text: The ESMAP and GOGLA Off-Grid Solar Market Trends Report 2026 finds off-grid solar products served 149 million people in 2025, up 26 percent from 2023.
     url: https://mtr.esmap.org/
     year: 2026
-  - text: Sun King reports more than 27 million households using its solar products, sold largely on pay-as-you-go credit through more than 45,000 field agents.
-    url: https://sunking.com/
-    year: 2026
+  - text: In a MECS study of BURN's electric pressure cookers in Kenya, households cooking on them used an average of 1.16 kWh a day.
+    url: https://mecs.org.uk/wp-content/uploads/2024/03/Understanding-the-impact-of-EPCs-in-East-Africa-Working-Paper-FINAL_25-3-24.pdf
+    year: 2023
+  - text: The UNEP Copenhagen Climate Centre puts a solar electric cooking system, a 250 to 630 W array with 1 to 2.2 kWh of battery, at 400 to 1,000 US dollars.
+    url: https://unepccc.org/wp-content/uploads/2025/06/25245-unepccc-solco-report-v08-jm-hq.pdf
+    year: 2025
   - text: The WHO attributes 2.9 million deaths in 2021 to household air pollution from cooking with solid fuels and kerosene.
     url: https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health
     year: 2025
 gap: >-
   Most people still without power live in rural sub-Saharan Africa, far from any grid, on incomes too
-  small to buy a system outright. Solar kits sold on credit light homes but rarely run a stove, a pump
-  or a workshop, and mini-grids cost more to build than their customers can repay. Clean cooking lags
-  furthest: smoke from fires and stoves still kills nearly three million people a year.
-inventions: []
+  small to buy a system outright. Solar kits sold on credit now reach 149 million people, but they
+  are sized for lights and phones, tens of watts, while cooking takes about 1 kWh a day. A solar
+  cooking system with a battery costs 400 to 1,000 US dollars, and households in Ugandan pilots paid
+  instalments of 8.50 to 16 dollars a month. Panels are now the cheap part; the battery that carries
+  noon's power to the evening meal is what keeps the price up. Clean cooking lags furthest: two
+  billion people still cook on smoke.
+inventions: [evening-pot]
 scene:
   kind: globe
   focus: Africa at night, its villages lighting up one by one as panels and mini-grids reach them.

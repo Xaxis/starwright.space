@@ -1,0 +1,98 @@
+id: flux-pulse-control
+title: Flux Pulse Control
+domain: computation
+for: [quantum-computing]
+pitch: >-
+  Control a million superconducting qubits from inside the fridge. Superconducting digital logic
+  beside the qubits makes their gate pulses from single quanta of magnetic flux, and a few optical
+  fibres carry the instructions in, so no analog wire runs from room temperature to each qubit.
+principle: >-
+  Each superconducting qubit today is driven by several coaxial lines from electronics at room
+  temperature, and their heat and bulk cap a fridge at a few thousand qubits. A dilution
+  refrigerator's coldest plate, at about 20 mK, can remove only tens of microwatts; its 4 K plate
+  can remove about a watt. Single flux quantum logic computes by moving one quantum of magnetic
+  flux, 2.07 × 10⁻¹⁵ Wb, through a Josephson junction, which dissipates about that flux times the
+  junction's critical current: 4 × 10⁻²⁰ J per pulse at 20 µA. A train of such pulses timed to the
+  qubit's own oscillation rotates it, about a hundred pulses for a full flip. With a few gates per
+  qubit in each microsecond of error correction, the drivers beside a million qubits would dissipate
+  about ten microwatts, within what the coldest plate can take. Flux Pulse Control splits the
+  machine by temperature. At the mixing chamber, a driver chip bump-bonded beneath the qubit chip
+  holds one small pulse generator per qubit, on its own chip so the heat and stray charge it makes
+  stay away from the qubits. At 4 K, superconducting sequencers store the pulse programs and decode
+  error syndromes, where a watt of cooling is plenty. Instructions arrive as light: a million qubits
+  making three 8-bit gate choices each microsecond need about 24 Tbit/s, about a thousand fibres at
+  25 Gbit/s, or a few dozen with wavelength multiplexing, against millions of coaxial lines. Glass
+  carries far less heat than copper. Readout first stays on shared frequency-multiplexed lines, then
+  moves to flux-pulse counters at the chip.
+buildsOn:
+  - text: Leonard and colleagues drove a transmon qubit with a single flux quantum pulse driver made on the qubit chip, reaching about 95 percent gate fidelity, limited by quasiparticles from the driver.
+    url: https://arxiv.org/abs/1806.07930
+    year: 2019
+  - text: Liu and colleagues moved the flux quantum driver to a separate chip joined by indium bump bonds, cutting the error per Clifford gate tenfold to 1.2 percent, and expect 99.9 percent fidelity from a redesigned driver.
+    url: https://arxiv.org/abs/2301.05696
+    year: 2023
+  - text: Superconducting indium bump interconnects compatible with qubits, measured superconducting below 1.1 K and mechanically sound through shear and thermal cycling tests.
+    url: https://arxiv.org/abs/1708.04270
+    year: 2017
+  - text: Lecocq and colleagues at NIST controlled and read out a superconducting qubit through an optical fibre and a photodetector at millikelvin temperatures.
+    url: https://www.nature.com/articles/s41586-021-03268-x
+    year: 2021
+  - text: Krinner and colleagues measured the passive and active heat loads of the coaxial drive, flux and output lines in a dilution refrigerator wired for superconducting qubits.
+    url: https://arxiv.org/abs/1806.07862
+    year: 2019
+  - text: Xue and colleagues drove silicon spin qubits at 20 mK from a cryogenic CMOS control chip working at 3 K.
+    url: https://www.nature.com/articles/s41586-021-03469-4
+    year: 2021
+  - text: Google's Willow chip, which ran a 101-qubit surface code below threshold with a real-time decoder.
+    url: https://www.nature.com/articles/s41586-024-08449-y
+    year: 2024
+experiment:
+  goal: Show that flux pulse drivers in the fridge, fed only by optical fibre, can drive many qubits at once at high fidelity, with heat per qubit small enough for a million.
+  setup: >-
+    A 16-qubit fixed-frequency transmon chip bump-bonded to a driver chip with one flux pulse
+    generator per qubit, mounted at the mixing chamber of a commercial dilution refrigerator. A
+    sequencer chip at 4 K holds the pulse programs; one single-mode fibre brings instructions at 10
+    Gbit/s from an FPGA at room temperature to a photodiode at 4 K. Both chips are made at an
+    existing niobium superconducting electronics foundry. Readout uses two frequency-multiplexed
+    lines with standard amplifiers. A second, identical qubit chip on ordinary coaxial control in
+    the same fridge is the control.
+  measure: Single-qubit gate error of every qubit, alone and with all 16 driven at once, by interleaved randomised benchmarking; qubit relaxation and coherence times with the drivers on and off; heat added at the mixing chamber and the 4 K plate; lines entering the fridge.
+  succeedsIf: Every qubit's single-qubit gate error is below 0.1 percent with all 16 driven at once, relaxation time falls by less than 10 percent with the drivers running, the drivers add under 30 pW per qubit at the mixing chamber, what a million qubits could afford, and no coaxial drive line enters the fridge.
+  costUsd: 5000000
+  months: 24
+path:
+  - phase: bench
+    what: Sixteen qubits driven by flux pulses, instructed through one fibre.
+    scale: 16 qubits.
+    proves: Flux pulse drive reaches the fidelity error correction needs, many qubits at once.
+  - phase: prototype
+    what: A distance-5 surface code under flux pulse control, decoded at 4 K.
+    scale: About 50 qubits.
+    proves: Error correction works under cold digital control, and logical errors fall as the code grows.
+  - phase: pilot
+    what: A module of ten thousand qubits in one fridge, fed by fibres and shared readout lines.
+    scale: 10,000 qubits.
+    proves: Wiring and heat no longer cap a fridge at a few thousand qubits.
+  - phase: first-plant
+    what: A machine of linked fridges that computes the chemistry of FeMoco and other catalysts.
+    scale: About 4 million physical qubits in 400 fridges.
+    proves: Quantum simulation answers chemistry that classical computers cannot.
+  - phase: fleet
+    what: Quantum machines in materials and chemical firms, designing catalysts, magnets and battery materials.
+    scale: About 30 machines, well before {year-k08}.
+    proves: Quantum design pays for itself in industry.
+  - phase: civilization
+    what: Quantum simulation as a routine tool for every new material the climb needs, from cell films to radiator coatings.
+    scale: "Every material the industry adopts as it nears {power-k09} by {year-k09}"
+    proves: Materials are designed from physics instead of found by trial.
+risks: >-
+  Flux pulse drivers make quasiparticles and stray microwave photons that shorten qubit lifetimes;
+  Liu's team traced the remaining error to the pulses' bandwidth, so the next step is drivers that
+  filter their own pulses, more distance or shielding between chips, and quasiparticle traps. Pulse
+  timing jitter may limit fidelity; sequencers can lock to a shared low-noise clock. Superconducting
+  foundries are few and small; if they cannot make enough chips, cryogenic CMOS sequencers at 4 K
+  take over the logic and flux pulse drivers stay only at the last stage.
+scene:
+  kind: compute
+  focus: A cryostat's stack of cold plates, a few glass fibres running down where bundles of coaxial cable used to, and a grid of qubits pulsing at the bottom.
+  params: { kind: quantum, racks: 16 }

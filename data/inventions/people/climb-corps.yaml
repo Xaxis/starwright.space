@@ -10,24 +10,34 @@ principle: >-
   Jahoda's studies of unemployment found that a job's hidden benefits, time structure, social
   contact, shared goals, status and regular activity, matter for wellbeing as much as its pay.
   Atkinson proposed a participation income, paid for contributing in a broad sense rather than for
-  holding a job. Citizen science shows ordinary people make real discoveries, as Foldit's players
-  did, and Experience Corps showed older people who tutor children grow stronger and more active. The
-  Climb Corps combines them. Members join teams of 6 to 12 that meet weekly in person and take tasks
+  holding a job. Money alone does not supply the rest: in the OpenResearch trial, 1,000 dollars a
+  month for three years cut work by 1 to 2 hours a week, and leisure was where people's time grew
+  most. Citizen science shows ordinary people make real discoveries, as Foldit's players did, and
+  Experience Corps showed older people who tutor children grow stronger and more active. The Climb
+  Corps combines them. Members join teams of 6 to 12 that meet weekly in person and take tasks
   from a public board: tutoring in the Climb Curriculum, caring for elders, checking data for the
   climb's research, testing open designs, building local projects. They earn a modest income for
-  tasks that peers and the tasks' owners verify as done well. It sits on top of a dividend; it never
-  replaces one, and never becomes a condition for one.
+  tasks that peers and the tasks' owners verify as done well. It sits on top of a dividend; it
+  never replaces one, and never becomes a condition for one. The cost is set by the hours. At 10
+  hours a week and 15 dollars an hour a member earns about 7,800 dollars a year, so the 300,000
+  members of a national pilot cost about 2.3 billion dollars a year before teams, training and the
+  board, which the bench measures.
 buildsOn:
   - text: Jahoda's 1981 account of what employment gives people beyond income.
     url: https://doi.org/10.1037/0003-066X.36.2.184
+    year: 1981
   - text: Atkinson's 1996 case for a participation income.
     url: https://doi.org/10.1111/j.1467-923X.1996.tb01568.x
+    year: 1996
   - text: Foldit, whose players produced the model behind a protease structure in 2011.
     url: https://doi.org/10.1038/nsmb.2119
-  - text: Zooniverse, with 3 million volunteers working on research projects by 2026.
-    url: https://blog.zooniverse.org/2026/04/21/3-million-volunteers/
+    year: 2011
+  - text: The OpenResearch unconditional income study, whose three years of 1,000 dollars a month raised leisure most and left job quality unchanged (2024).
+    url: https://www.nber.org/papers/w32719
+    year: 2024
   - text: The 2004 trial of Experience Corps, older volunteers tutoring in schools.
     url: https://doi.org/10.1093/jurban/jth094
+    year: 2004
 experiment:
   goal: Measure whether paid, team-based contribution raises wellbeing and produces useful work among people who are out of work or retired, beyond what the same money alone does.
   setup: >-
@@ -49,19 +59,19 @@ path:
     proves: Contribution in teams gives more than the same money alone.
   - phase: pilot
     what: A national government runs the corps in several regions, open to everyone, alongside unemployment and pension systems.
-    scale: Hundreds of thousands of members.
+    scale: About 300,000 members.
     proves: It works as public policy at a cost that can be kept up.
   - phase: first-plant
     what: The corps open in many countries, its income funded partly by the Common Heritage Dividend.
-    scale: Tens of millions of members.
+    scale: About 30 million members.
     proves: Contribution outside jobs can become a normal part of life.
   - phase: fleet
     what: Corps teams in habitats off Earth, where shared work holds small communities together.
-    scale: Habitats and settlements across the inner system.
+    scale: About 300 million members, the first of them in habitats off Earth.
     proves: It carries over to new societies.
   - phase: civilization
     what: Everyone who wants to take part in the climb can, at any age, while machines do most of the work.
-    scale: Billions of members across worlds.
+    scale: About 3 billion members across worlds.
     proves: A civilization of machines can still be a civilization of people with purpose.
 risks: >-
   Paying for tasks may crowd out volunteering people did for its own sake; members choose their

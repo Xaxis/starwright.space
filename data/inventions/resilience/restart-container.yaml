@@ -17,14 +17,18 @@ principle: >-
   and falling share of its mass. A standard 40-foot container carries about 26 tonnes, goes by ship,
   rail, truck or helicopter sling, and doubles as the workshop.
 buildsOn:
-  - text: Open Source Ecology's Global Village Construction Set, 50 open-source industrial machines for a small self-sufficient economy.
+  - text: Open Source Ecology's Global Village Construction Set, 50 open-source industrial machines for a small self-sufficient economy, about a third of them built.
     url: https://www.opensourceecology.org/gvcs/
+    year: 2018
   - text: Lewis Dartnell's The Knowledge, on the order in which technologies must be rebuilt.
     url: https://the-knowledge.org/en-gb/
-  - text: The Long Now Foundation's Manual for Civilization, a library chosen to sustain or rebuild civilization.
+    year: 2014
+  - text: The Long Now Foundation's Manual for Civilization, a library of about 3,500 books chosen to sustain or rebuild civilization.
     url: https://longnow.org/ideas/manual-for-civilization-begins/
+    year: 2014
   - text: Appropedia, the open wiki of appropriate technology that the archive's how-to layer would draw on.
     url: https://www.appropedia.org/
+    year: 2026
 experiment:
   goal: Measure how fast a group of non-specialists can go from a container to power, water and a working machine shop, and how much of the kit they can make again.
   setup: >-
@@ -38,27 +42,27 @@ experiment:
 path:
   - phase: bench
     what: One container, ten volunteers, six months on a rural site.
-    scale: One kit.
+    scale: 1 kit, 10 volunteers, 6 months.
     proves: Non-specialists reach power, water and machine tools from the kit and its archive.
   - phase: prototype
     what: Three containers in a hot, a cold and a wet climate, used by disaster-relief teams.
-    scale: Three kits, real field use.
+    scale: 3 kits in 3 climates.
     proves: The kit works where it is needed, not only where it was designed.
   - phase: pilot
     what: A hundred containers with disaster agencies, sent to restore power and water after real disasters.
-    scale: A hundred kits.
+    scale: 100 kits with disaster agencies.
     proves: The kits pay for themselves in ordinary disasters, so they are maintained and ready.
   - phase: first-plant
     what: A line building containers in series, with stocks in every region.
-    scale: Ten thousand kits a year.
+    scale: 10,000 kits a year.
     proves: Closure above half, with each kit able to supply parts for more.
   - phase: fleet
     what: A stock sized to restart industry anywhere a catastrophe strikes, and kits sent with every settlement on the Moon and beyond.
-    scale: Every region and every settled world.
+    scale: 1 kit within a shipment of every region and settled world.
     proves: No region is more than one shipment from restarting.
   - phase: civilization
     what: Any community, on any world, can restart industry from one container and its archive.
-    scale: Civilization's floor, everywhere.
+    scale: 1 restart kit reachable from anywhere.
     proves: A collapse becomes a setback, not an ending.
 risks: >-
   Closure may stall well below half, as it does for electronics everywhere; then the kit carries

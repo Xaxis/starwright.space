@@ -7,30 +7,41 @@ pitch: >-
   on the swarm's output, paid into one fund whose income goes in equal shares to every person alive.
 principle: >-
   The Moon Agreement and the law of the sea call the Moon's resources and the deep seabed the common
-  heritage of mankind, and the law of the sea already sets a royalty on the outer continental shelf
-  for the benefit of all. Hotelling showed that a resource that runs out earns a rent above the cost
-  of extracting it; Alaska's fund shows such a rent can be saved and paid to every resident for
-  decades. The Common Heritage Dividend joins them. The royalty set by the lunar registry, and later
-  a small share of the swarm's output, flows into one fund that invests, spends only its real return
-  as Norway's fiscal rule does, and pays that out as an equal dividend to every person, by mobile
-  money where needed, as GiveDirectly already does. Because the industry doubles every
-  {doubling-time}, a small royalty grows into a large dividend: the first payments are cents, and
-  later ones cover the basics of a good life.
+  heritage of mankind, and the law of the sea already sets a royalty for the benefit of all on
+  production from the outer continental shelf: nothing for five years, then 1 percent of the value,
+  rising a point a year to 7 percent from the twelfth year, shared through the Seabed Authority.
+  Hotelling showed that a resource that runs out earns a rent above the cost of extracting it;
+  Alaska's fund shows such a rent can be saved and paid to every resident for decades. The Common
+  Heritage Dividend joins them. The royalty set by the lunar registry, and later a small share of
+  the swarm's output, flows into one fund that invests, spends only its real return as Norway's
+  fiscal rule does, about 3 percent a year, and pays that out as an equal dividend to every person,
+  by mobile money where needed, as GiveDirectly already does. Because the industry doubles every
+  {doubling-time}, a fixed royalty doubles with it: ten doublings make it a thousand times larger,
+  twenty a million times. The first payments are cents, and later ones cover the basics of a good
+  life; at Type II, even 1 percent of {type-2-power} is many billions of times all the power
+  humanity uses today, {power-now}.
 buildsOn:
-  - text: Article 11 of the 1979 Moon Agreement, which names the Moon and its resources the common heritage of mankind.
+  - text: Article 11 of the 1979 Moon Agreement, which names the Moon and its natural resources the common heritage of mankind.
     url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/moon-agreement.html
-  - text: Article 82 of the Convention on the Law of the Sea, a royalty on production beyond 200 nautical miles shared through the International Seabed Authority.
+    year: 1979
+  - text: Article 82 of the 1982 Convention on the Law of the Sea, a royalty on production beyond 200 nautical miles of 1 percent from the sixth year rising to 7 percent from the twelfth, shared through the International Seabed Authority.
     url: https://www.un.org/depts/los/convention_agreements/texts/unclos/part6.htm
+    year: 1982
   - text: Hotelling's 1931 economics of exhaustible resources.
     url: https://doi.org/10.1086/254195
-  - text: The Alaska Permanent Fund Dividend, paid to every resident since 1982.
+    year: 1931
+  - text: The Alaska Permanent Fund Dividend, paid in equal shares to every resident since 1982.
     url: https://pfd.alaska.gov/Division-Info/summary-of-dividend-applications-payments
-  - text: Norway's fund and its rule of spending only the expected real return.
-    url: https://www.nbim.no/en/investments/the-funds-value/
-  - text: GiveDirectly, which has sent over 1 billion dollars directly to more than 2 million people.
+    year: 2025
+  - text: Norway's fund, set up in law in 1990, and its rule that the government spends only the fund's expected real return, about 3 percent a year.
+    url: https://www.nbim.no/en/about-us/about-the-fund/
+    year: 2026
+  - text: GiveDirectly, which since 2009 has sent over 1 billion dollars directly to more than 2 million people living in poverty.
     url: https://www.givedirectly.org/about/
-  - text: The Kenyan study that found each dollar of cash transfers raised local activity by 2.5 dollars.
+    year: 2026
+  - text: The Kenyan study by Egger and colleagues that found each dollar of cash transfers raised local economic activity by 2.5 dollars.
     url: https://doi.org/10.3982/ECTA17945
+    year: 2022
 experiment:
   goal: Show that a resource royalty can be paid as an equal dividend to a whole population at low cost, and measure what it does.
   setup: >-
@@ -52,15 +63,15 @@ path:
     proves: Equal dividends from resource income can be delivered cheaply, and they help.
   - phase: pilot
     what: The lunar registry's royalties from the first ice and oxygen plants pay the first global dividend.
-    scale: Every person, a few cents each.
+    scale: At least 1 billion people paid by mobile money, a few cents each.
     proves: A payment to everyone on Earth is possible.
   - phase: first-plant
-    what: Royalties from lunar and near-Earth industry, and a share of space solar power sales, fund a dividend worth a real share of the poorest people's income.
-    scale: The Earth and Moon economy.
+    what: Royalties from lunar and near-Earth industry, and a share of space solar power sales, fund a dividend of about 10 dollars a year or more for every person.
+    scale: 100 billion dollars a year or more paid out.
     proves: Space industry raises incomes on Earth.
   - phase: fleet
     what: Royalties from the asteroids and Mercury, and a share of the swarm's power, grow the fund with the industry.
-    scale: The inner solar system.
+    scale: Royalties on industry using {power-k15} across the inner system.
     proves: The dividend grows as fast as the industry.
   - phase: civilization
     what: Every person on every world holds an equal share of the power the swarm catches.

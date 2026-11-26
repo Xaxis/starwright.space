@@ -1,0 +1,88 @@
+id: neighbourhood-nursery
+title: The Neighbourhood Nursery
+domain: people
+for: [demographic-change]
+pitch: >-
+  Small nurseries in every neighbourhood, open the hours parents work, run by a trained early-years
+  teacher with healthy older people as paid carers, so that the cost and scarcity of childcare stop
+  costing families the children they want, and older people gain work that keeps them strong.
+principle: >-
+  Two lines of evidence meet here. Childcare raises births: when Germany expanded public care for
+  children under three, fertility rose where places grew (Bauernschuster, Hener and Rainer), and in
+  Norway more childcare places raised completed fertility at every birth order (Rindfuss and
+  colleagues). And caring work is good for older people: in the Experience Corps trial, volunteers
+  aged 60 to 86 who worked in schools grew more active and stronger and had more people to turn to
+  than controls. And money is a leading reason people give for falling short of the family they
+  want: 39 percent cited it in UNFPA's 14-country survey. The Neighbourhood Nursery joins the two. Each nursery takes 12 children aged one
+  to three, within walking distance of home, open from early morning to evening. It is led by one
+  trained early-years teacher paid a professional wage, with four older carers who work shifts of a
+  few hours and are paid a participation income, as Atkinson proposed, rather than a full wage. With
+  five adults to twelve children, care is close, and the cost comes mainly from the teacher's pay,
+  the carers' income and the rooms: at a teacher's 45,000 dollars, four carers at 15,000 and 25,000
+  dollars for space, about 130,000 dollars a year, or 11,000 dollars a child, before any public
+  subsidy. The carers are screened, trained and supervised as any childcare staff are, and parents
+  choose the nursery as they would any other.
+buildsOn:
+  - text: Bauernschuster, Hener and Rainer's study of Germany's expansion of childcare for under-threes, which found significant positive effects on fertility (Journal of the European Economic Association, 2016).
+    url: https://doi.org/10.1111/jeea.12158
+    year: 2016
+  - text: Rindfuss and colleagues' finding that more childcare in Norway raised completed fertility at every birth order (Population and Development Review, 2010).
+    url: https://doi.org/10.1111/j.1728-4457.2010.00355.x
+    year: 2010
+  - text: The 2004 Experience Corps pilot trial, in which older volunteers in schools grew more active and stronger than controls.
+    url: https://doi.org/10.1093/jurban/jth094
+    year: 2004
+  - text: UNFPA's State of World Population 2025 and its 14-country survey of the gap between the children people want and have.
+    url: https://www.unfpa.org/swp2025
+    year: 2025
+  - text: Atkinson's 1996 case for a participation income, paid for contribution rather than employment.
+    url: https://doi.org/10.1111/j.1467-923X.1996.tb01568.x
+    year: 1996
+experiment:
+  goal: Show that neighbourhood nurseries with older carers raise births among couples who want another child, keep children's development at least as good as standard care, and improve the carers' health.
+  setup: >-
+    A cluster-randomised trial in 80 neighbourhoods of two low-fertility cities, in a country such
+    as South Korea or Italy. Forty neighbourhoods each get nurseries enough for every child aged one
+    to three whose parents want a place, staffed as designed; forty keep the services they have.
+    Couples aged 25 to 40 are surveyed at the start on how many children they want. Four years.
+  measure: Childcare use and hours; parents' employment and income; births, and second and third births above all, among couples who wanted another child; children's development on standard scales at ages two and three; carers' physical activity, strength, loneliness and memory; cost per child a year.
+  succeedsIf: Among couples who wanted another child, births over the four years are at least 10 percent higher in nursery neighbourhoods; children's development scores are no worse than with standard care; carers gain in physical activity and strength against matched controls; and the cost stays under 12,000 dollars a child a year.
+  costUsd: 30000000
+  months: 60
+path:
+  - phase: bench
+    what: Two licensed nurseries run for a year in one city.
+    scale: 24 children, 8 older carers, 2 teachers.
+    proves: Older carers can staff safe, licensed care that parents choose and trust.
+  - phase: prototype
+    what: The 80-neighbourhood randomised trial.
+    scale: About 3,000 children.
+    proves: The nurseries raise wanted births and keep carers healthy, at a known cost.
+  - phase: pilot
+    what: A city or region offers a nursery place to every family that wants one.
+    scale: About 30,000 children.
+    proves: It works as public policy, with enough older people willing to care.
+  - phase: first-plant
+    what: A national programme in a low-fertility country, folded into its pension and childcare systems.
+    scale: About 300,000 children.
+    proves: A country can narrow the gap between wanted and actual family size.
+  - phase: fleet
+    what: Nurseries in many countries, and in the first habitats, where every family's time counts.
+    scale: About 3 million children.
+    proves: The model carries across cultures and into new societies.
+  - phase: civilization
+    what: Care for young children within reach of every home on every world, given in part by its elders.
+    scale: About 30 million children, on Earth and off it.
+    proves: A long-lived society can keep having the children its people want.
+risks: >-
+  Older carers may tire or fall ill; shifts stay short, each nursery keeps spare carers, and the
+  teacher is always present. Parents may not trust carers who are not professionals; licensing,
+  training, the teacher's lead and open doors to parents answer that, and the bench measures how
+  many parents choose a place. Births respond slowly and many things move them; the trial measures
+  wanted and actual births for four years and follows the families for ten. A government may use the
+  scheme to cut early-years pay; the design keeps the teacher on a professional wage and adds the
+  carers on top, never in place of trained staff.
+scene:
+  kind: network
+  focus: Neighbourhood nurseries as small clusters, each linking older carers to the young families around them.
+  params: { shape: flat, nodes: 1200, clusters: 30, links: 0.4, pulses: 0.5 }

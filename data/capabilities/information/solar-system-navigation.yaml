@@ -10,9 +10,9 @@ summary: >-
   and speed set how fast a clock ticks. An industry spread across the inner system by
   {year-type-1} needs every ship and factory to know where and when it is, on its own.
 target: >-
-  Any craft anywhere in the inner solar system fixes its own position to metres and its time to
-  nanoseconds within minutes, from beacons and its own clock, with no call to Earth; and one agreed
-  set of time scales for every world.
+  Any craft anywhere in the inner solar system fixes its own position to within 10 m and its time to
+  within 10 ns in under 10 minutes, from beacons and its own clock, with no call to Earth; and one
+  agreed set of time scales for every world.
 exists:
   - text: NASA's Deep Space Atomic Clock, a mercury-ion clock launched in 2019, ran for more than a year in orbit with a stability of 3 parts in 10^15 over 23 days, up to ten times better than earlier space clocks.
     url: https://www.nature.com/articles/s41586-021-03571-7
@@ -20,20 +20,22 @@ exists:
   - text: In November 2017 NASA's SEXTANT experiment on the ISS timed X-ray pulses from four millisecond pulsars and fixed its own position to within 10 miles, with no help from Earth.
     url: https://www.nasa.gov/centers-and-facilities/goddard/nasa-team-first-to-demonstrate-x-ray-navigation-in-space/
     year: 2018
-  - text: In April 2024 the White House asked NASA to set up a Coordinated Lunar Time by 2026; a clock on the Moon gains about 58.7 microseconds a day on one on Earth.
-    url: https://en.wikipedia.org/wiki/Coordinated_Lunar_Time
+  - text: A White House memorandum of 2 April 2024 asked NASA for a strategy to set lunar time standards by 31 December 2026; to an observer on the Moon, a clock on Earth appears to lose on average 58.7 microseconds per Earth-day.
+    url: https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/04/Celestial-Time-Standardization-Policy.pdf
     year: 2024
   - text: A strontium optical lattice clock at JILA reached a total systematic uncertainty of 8.1 parts in 10^19 in 2024, the lowest of any clock.
     url: https://arxiv.org/abs/2403.10664
     year: 2024
-  - text: NASA's Deep Space Network tracks and steers interplanetary missions from three sites, Goldstone, Madrid and Canberra, each with one 70 m dish and several 34 m ones.
+  - text: NASA's Deep Space Network tracks and steers interplanetary missions from three sites, Goldstone, Madrid and Canberra, each with one 70 m dish, one 26 m and several 34 m ones.
     url: https://www.nasa.gov/communicating-with-missions/dsn/
     year: 2026
 gap: >-
-  Deep-space navigation still hangs on a few dishes on Earth, which are oversubscribed and answer
-  only after the light delay. Clocks in space lag far behind the best on the ground. Pulsar
-  navigation fixes a position to kilometres, not metres. There is no beacon network beyond
-  Earth's satellite navigation, and the time scales for the Moon and Mars are still being agreed.
+  Deep-space navigation still hangs on dishes at 3 sites on Earth, which are oversubscribed and
+  answer only after the light delay, up to 22 minutes each way from Mars at 400 million km. Clocks
+  in space lag far behind the best on the ground: 3 parts in 10^15 in orbit against 8.1 parts in
+  10^19 at JILA. Pulsar navigation fixed a position to within 10 miles, about 1,600 times the 10 m
+  target. There is no beacon network beyond Earth's satellite navigation, and the time scales for
+  the Moon and Mars are still being agreed.
 inventions: [clockwork-beacons]
 scene:
   kind: network

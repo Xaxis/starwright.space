@@ -1,78 +1,92 @@
 id: atmospheric-harvester
 title: The Sorbent Water Panel
 domain: water
-for: [water-from-air]
+for: [water-from-air, abundant-water]
 pitch: >-
-  A flat panel of water-grabbing framework that breathes in cool night air, then releases its catch
-  as clean water when the Sun warms it, scaled from a laboratory gram to a household's daily supply
-  with no power but sunlight.
+  A rooftop panel of two stacked sorbent layers that drinks in night air and gives up water by day,
+  in which the heat released as the top layer's vapour condenses drives water out of the layer below,
+  so one square metre of desert sunlight makes nearly twice the water of a single-layer panel.
 principle: >-
-  Certain metal-organic frameworks have a vast internal surface pocked with pores tuned to the size
-  of a water molecule, so they pull water vapour out of even dry air at night and hold it. When the
-  Sun warms the panel by a few tens of degrees in the day, the frameworks let the water go as vapour,
-  which condenses on a cool plate and runs off as liquid. The Sorbent Water Panel turns that cycle
-  into a device built for scale: thin sheets of low-cost framework with air flowing through them, a
-  passive condenser, and a daily adsorb-by-night, desorb-by-day rhythm needing only sunlight. The
-  frameworks are chosen and designed to grab water at the lowest humidity, to give it up at the
-  lowest heat, and to survive many thousands of cycles. Stacking panels raises the daily yield from
-  grams toward the tens of litres a household needs, anywhere with air and sun.
+  A sorbent panel works in two halves of a day. At night louvres open, air flows across the sorbent
+  and it loads with water. By day the louvres close, sunlight heats the sorbent, and the vapour comes
+  off and condenses on a cooler plate. Almost all the energy is latent heat: about 2.6 MJ to drive
+  out each litre, and the same heat comes back when the vapour condenses. A single-layer panel throws
+  that heat away through its condenser. A sunny desert day delivers about 23 MJ per square metre, so
+  even a perfect single layer makes under 9 L, and the best field device has made 4.3. The Sorbent
+  Water Panel reuses the heat once, as a multiple-effect still does. The top layer sits under a
+  glazed selective absorber and is driven to about 80 °C. Its vapour condenses on a plate that is
+  also the heater for the second layer, at about 55 °C, whose own condenser faces the sky and sheds
+  the heat. The layers are matched in order: a salt-loaded hydrogel that holds a lot of water and
+  gives it up only when hot on top, and a framework such as MOF-303, which releases water near 50 °C,
+  below. If the second layer recovers 70 percent of the first layer's heat, the panel makes 1.7 times
+  a single layer: about 6 to 7 L per square metre a day where today's best makes 4.3. Each layer must
+  load its share at night, about 3 L per square metre, so the panel holds a few kilograms of sorbent
+  per layer. Twenty litres a day for a household then takes about 3 square metres.
 buildsOn:
-  - text: The original sunlight-driven MOF-801 harvester captured about 2.8 litres per kilogram a day at 20 percent humidity, regenerating near 65 degrees Celsius, the proof of the adsorb-desorb cycle.
+  - text: Kim, Yaghi, Wang and colleagues ran the first sunlight-driven framework harvester, with MOF-801, measuring about 0.24 L per kilogram per cycle on an MIT rooftop and modelling 2.8 L per kilogram per day at 20 percent humidity.
     url: https://yaghi.cchem.berkeley.edu/pdfPublications/WaterHarvesting.pdf
     year: 2017
-  - text: The MOF-303 desert device more than doubled the water yield of MOF-801 in Arizona field tests, showing framework design can multiply output.
-    url: https://yaghi.cchem.berkeley.edu/pdfPublications/NComm2018.pdf
+  - text: Hanikel and colleagues measured 0.7 L per kilogram per day from MOF-303 in the Mojave Desert at humidity as low as 10 percent, by cycling it several times a day.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6813556
+    year: 2019
+  - text: LaPotin, Wang and colleagues at MIT built a two-stage harvester with a zeolite sorbent, in which condensation heat from the top stage drives the bottom one; it made about 0.8 L per square metre per day, roughly double their single-stage device, and works at humidity as low as 20 percent.
+    url: https://news.mit.edu/2020/solar-extracts-drinkable-water-1014
+    year: 2020
+  - text: Guan, Yu and colleagues' solar gel-fabric harvester made 4.3 L per square metre per day in the Chihuahuan Desert at about 26 percent humidity.
+    url: https://www.nature.com/articles/s44221-026-00645-6
+    year: 2026
+  - text: Swanson gives the least work to take water from air at 50 percent humidity and 25 °C as 95 kJ per kilogram, a small fraction of the latent heat that sorbent panels spend.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10293683
+    year: 2023
+  - text: The Water Abundance XPRIZE asked for at least 2,000 litres a day from air on renewable energy at no more than two US cents a litre, and was won by the Skysource/Skywater Alliance in October 2018.
+    url: https://go.xprize.org/news/waxp-grand-prize-winner
     year: 2018
-  - text: Independent reporting confirmed the frameworks extract water from thin air and withstand many cycles without structural damage.
-    url: https://physicstoday.aip.org/news/metal-organic-framework-extracts-water-from-thin-air
-    year: 2017
 experiment:
-  goal: Build a scaled sorbent panel delivering household-relevant daily water from dry air on sunlight alone, and measure yield and cost.
+  goal: Show in a desert that a two-layer panel makes at least 1.6 times the water of the same panel with one layer, and that the water is fit to drink.
   setup: >-
-    Fabricate panels from a low-cost water-selective framework with passive airflow and condenser,
-    and run a multi-panel array through day-night cycles in a dry climate. Measure output, the energy
-    used, and the frameworks' durability over months.
-  measure: >-
-    Litres of water per day per kilogram of framework and per panel; minimum humidity at which it
-    works; sunlight-only operation confirmed; water purity; yield retained after thousands of cycles;
-    cost per litre at the array's scale.
-  succeedsIf: >-
-    A sunlight-only array delivers at least 10 litres of clean water a day at desert humidity from a
-    household-sized panel, holding its yield over thousands of cycles, at a cost per litre affordable
-    for off-grid use.
-  costUsd: 9000000
-  months: 30
+    Two 1 square metre panels side by side at a desert field station, one with both layers and one
+    with the top layer only, under identical glazed selective absorbers and motorised louvres. Tipping
+    buckets meter each condensate line; thermocouples sit in every layer and plate; a weather station
+    logs humidity, air temperature, wind and sunlight. Water samples go weekly to an accredited
+    laboratory. The run lasts 60 days at 15 to 35 percent night humidity.
+  measure: Litres per square metre per day from each layer; temperatures of each layer and plate; heat reused by the second layer; water taken up by each layer at night; chloride, lithium, metals, organics and bacteria in the water; yield lost to dust and ageing over the run.
+  succeedsIf: Averaged over 60 days, the two-layer panel makes at least 1.6 times the water of its single-layer twin and at least 6 L per square metre a day, with chloride under 250 mg and lithium under 0.01 mg per litre, and loses less than 10 percent of its yield from the first week to the last.
+  costUsd: 750000
+  months: 18
 path:
   - phase: bench
-    what: Low-cost framework panels delivering litres a day in dry-air tests.
-    scale: A single household panel.
-    proves: The cycle scales from grams to litres on sunlight alone.
+    what: The pair of panels in the desert.
+    scale: 2 panels of 1 square metre, about 10 L a day together.
+    proves: Heat reuse between layers and the yield per square metre.
   - phase: prototype
-    what: A multi-panel array meeting a household's daily water need in the field.
-    scale: One household.
-    proves: Real desert output and durability over months.
+    what: Arrays on 30 homes in two dry climates, run for a year by their owners.
+    scale: 90 square metres, about 600 litres a day in all.
+    proves: A year of yields, cleaning, water quality and how households use it.
   - phase: pilot
-    what: Village-scale deployments with local maintenance.
-    scale: A village's drinking water.
-    proves: It supplies a community without a grid or water source.
+    what: The drinking water point for a village with no well, run by a local operator.
+    scale: 1,300 square metres, about 8 cubic metres a day for 2,000 people.
+    proves: A community supply that a local business keeps working and paid for.
   - phase: first-plant
-    what: Mass-produced frameworks and panels driving cost per litre down.
-    scale: Many thousands of households.
-    proves: Air-drawn water is affordable at scale.
+    what: A factory making panels and sorbent in a dry region.
+    scale: 1 million square metres of panel a year, for about 300,000 households.
+    proves: Water from air at under two US cents a litre over a ten-year panel life.
   - phase: fleet
-    what: Panels for arid regions worldwide, and sealed versions for bases drawing water from habitat air.
-    scale: Global and off-world.
-    proves: Water from air wherever there is air and sun.
+    what: Panels on homes, schools and clinics across the dry belts, and sealed versions that take water from habitat air.
+    scale: 100 million square metres, about 600,000 cubic metres a day.
+    proves: Drinking water for 150 million people with no pipe or well.
   - phase: civilization
-    what: Atmospheric water as a routine off-grid supply, no one short of drinking water for lack of infrastructure.
-    scale: Planet and space.
-    proves: Drinking water decoupled from pipes, wells and rivers.
+    what: Air as the drinking-water source for everyone that pipes do not reach.
+    scale: About 500 square kilometres of panel for 700 million people.
+    proves: No one goes without drinking water for lack of a network.
 risks: >-
-  The frameworks are still costly to make in bulk; the project targets low-cost, water-stable
-  frameworks and simple manufacture. Yield may stay too low in the driest air, so the design widens
-  airflow and panel count and picks frameworks tuned for low humidity. Durability over many cycles
-  must be proven, which the months-long field test addresses.
+  Salt-loaded gels can swell and leak salt into the water in humid weeks; the next try is a gel that
+  binds its salt, or frameworks in both layers at a lower yield. On hot desert afternoons the second
+  layer's condenser may run too warm to condense; a sky-facing radiative cooler on the condenser is
+  the first fix, and running as one layer at midday the fallback. Below 15 percent humidity every
+  sorbent loads slowly, so yields fall and the panel needs more area. Frameworks cost far more than
+  salts, so the bottom layer uses whichever sorbent gives the cheapest litre over its life. Dust on
+  the glazing cuts the heat; panels are tilted and wiped like solar modules.
 scene:
   kind: machine
-  focus: A stack of sorbent panels cycling between drinking night air and giving up water by day.
+  focus: A two-layer sorbent panel by day, vapour rising from its top layer and condensing to warm the layer below.
   params: { shape: panel, spin: 0.3 }

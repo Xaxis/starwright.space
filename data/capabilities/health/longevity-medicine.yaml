@@ -10,24 +10,35 @@ summary: >-
   life, keeping people healthy and productive for the decades a long climb demands. Healthspan, the
   years lived in good health, is the target, not mere lifespan.
 target: >-
-  Slow, halt or reverse the biological processes of ageing enough to extend healthy years
-  substantially, so that people stay well and capable far longer and the diseases of old age arrive
-  later and compressed.
+  By {year-k08}, healthy life expectancy raised from 61.9 years worldwide to at least 85, and the
+  years lived in poor health at the end of life cut from about 9.5 to under 5; therapies that
+  restore muscle, immune and cognitive function in older people by 20 years, the XPRIZE's stretch
+  goal; and a measure of biological age accepted by regulators as a trial endpoint, so that a trial
+  of an ageing drug takes 2 years rather than the decades needed to count deaths.
 exists:
-  - text: The Rejuvenation Roadmap tracks regulated therapies grouped by the 12 hallmarks of ageing and by trial stage, showing ageing is being attacked as specific, druggable processes.
-    url: https://www.lifespan.io/road-maps/the-rejuvenation-roadmap/
+  - text: WHO found global life expectancy fell 1.8 years between 2019 and 2021, to 71.4 years, and healthy life expectancy fell 1.5 years, to 61.9, both back to their 2012 levels.
+    url: https://www.who.int/news/item/24-05-2024-covid-19-eliminated-a-decade-of-progress-in-global-level-of-life-expectancy
     year: 2024
-  - text: The XPRIZE Healthspan competition, a 101-million-USD purse with ten finalists each funded a million dollars, marks both the seriousness and the unsolved state of restoring function in ageing.
-    url: https://www.xprize.org/
+  - text: Horvath's epigenetic clock reads a "DNA methylation age" from 353 sites in the genome for most tissues and cell types; applied to blood, saliva and brain it found men's tissues age faster than women's (Genome Biology, 2016).
+    url: https://dash.harvard.edu/server/api/core/bitstreams/7312037e-0a39-6bd4-e053-0100007fdf3b/content
+    year: 2016
+  - text: Lu and colleagues restored vision in aged and glaucoma-damaged mice by expressing three reprogramming factors in retinal cells, resetting them toward a younger epigenetic state without erasing their identity (Nature, 2020).
+    url: https://doi.org/10.1038/s41586-020-2975-4
+    year: 2020
+  - text: Altos Labs launched in January 2022 with about 3 billion USD to pursue cellular rejuvenation through partial reprogramming, the largest single bet that ageing is a process that can be reversed.
+    url: https://www.nature.com/articles/d41587-022-00002-4
+    year: 2022
+  - text: The XPRIZE Healthspan competition offers a 101-million-USD purse for therapies that restore muscle, cognitive and immune function in older people by at least ten years, with a goal of twenty, marking both the seriousness and the unsolved state of the field.
+    url: https://www.xprize.org/prizes/healthspan
     year: 2026
-  - text: Biology foundation models such as ESM3 and Evo 2 let researchers design proteins and read genomes at a scale that makes ageing's molecular machinery far more tractable to study and to target.
-    url: https://www.evolutionaryscale.ai/blog/esm3-release
-    year: 2025
 gap: >-
-  No therapy has yet been shown to reverse human ageing, measures of biological age are still being
-  validated, and interventions that work in mice often fail in people. Turning the hallmarks of
-  ageing from a descriptive list into safe, proven treatments, and doing it without raising cancer or
-  other risks, is the unsolved core.
+  People live 71.4 years on average and 61.9 in good health, so the target needs about 23 more
+  healthy years and the last 9.5 years of poor health roughly halved. No therapy has yet been shown
+  to reverse human ageing: the XPRIZE's minimum, a 10-year restoration of function, has not been
+  won, reprogramming that works in a mouse eye is far from a safe whole-body treatment, and no
+  measure of biological age is yet accepted as an endpoint, so a trial must still wait years for
+  disease and death. Turning the processes of ageing into safe, proven treatments, without raising
+  cancer or other risks, is the unsolved core.
 inventions: [partial-reprogramming-therapy]
 scene:
   kind: cell

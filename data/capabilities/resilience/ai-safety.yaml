@@ -11,34 +11,37 @@ summary: >-
 target: >-
   AI systems whose goals and reasoning can be inspected, whose dangerous capabilities are measured
   before release, and whose every physical action passes limits that people set, so that AI can run
-  industry at the scale of the solar system without anyone losing control of it.
+  industry that doubles every {doubling-time}, out to the scale of the solar system, without anyone
+  losing control of it.
 exists:
-  - text: The International AI Safety Report, written by over 100 experts led by Yoshua Bengio and backed by more than 30 countries, published its second edition in February 2026.
+  - text: The second International AI Safety Report, led by Yoshua Bengio and written by over 100 experts with backing from more than 30 countries, was published in February 2026.
     url: https://internationalaisafetyreport.org/
     year: 2026
   - text: Researchers set out a framework for guaranteed safe AI in 2024, in which a world model, a mathematical safety specification and a verifier give an auditable proof that a system's effects stay acceptable.
     url: https://arxiv.org/abs/2405.06624
     year: 2024
-  - text: The UK AI Security Institute evaluates frontier models; in 2026 it found leading open-weight models matched closed models released 4 to 7 months earlier on cyber skills.
-    url: https://www.aisi.gov.uk/
+  - text: The UK AI Security Institute found in 2026 that leading open-weight models trail the best closed models on cyber tasks by 4 to 7 months, down from 6 to 10 months through most of 2025.
+    url: https://www.aisi.gov.uk/work/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber
     year: 2026
-  - text: Anthropic's Responsible Scaling Policy defines AI Safety Levels, modelled on biosafety levels, that tie stricter safeguards to more dangerous capabilities.
-    url: https://www.anthropic.com/news/anthropics-responsible-scaling-policy
-    year: 2023
-  - text: Google DeepMind published its Frontier Safety Framework in May 2024, defining Critical Capability Levels at which a model could help cause severe harm, and early-warning evaluations to detect them.
-    url: https://deepmind.google/discover/blog/introducing-the-frontier-safety-framework/
-    year: 2024
-  - text: Interpretability researchers extracted millions of human-readable features from inside a production language model, Claude 3 Sonnet.
-    url: https://transformer-circuits.pub/2024/scaling-monosemanticity/
-    year: 2024
-  - text: The EU's Artificial Intelligence Act entered into force on 1 August 2024, with its rules phasing in over the following three years.
-    url: https://en.wikipedia.org/wiki/Artificial_Intelligence_Act
-    year: 2024
+  - text: Anthropic activated its ASL-3 deployment and security standards with Claude Opus 4 in May 2025, the first time its Responsible Scaling Policy switched on stricter safeguards, aimed first at biological misuse.
+    url: https://www.anthropic.com/news/activating-asl3-protections
+    year: 2025
+  - text: Google DeepMind's Frontier Safety Framework, in its third version of September 2025, added critical capability levels for harmful manipulation and for a model resisting attempts to modify or shut it down.
+    url: https://deepmind.google/blog/strengthening-our-frontier-safety-framework/
+    year: 2025
+  - text: Anthropic's interpretability team reported in 2025 that their attribution graphs give satisfying insight into a production model's reasoning for only about a quarter of the prompts they tried.
+    url: https://transformer-circuits.pub/2025/attribution-graphs/biology.html
+    year: 2025
+  - text: The EU AI Act's obligations for general-purpose AI models took effect on 2 August 2025, with a voluntary Code of Practice on transparency, copyright and safety published that July.
+    url: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+    year: 2025
 gap: >-
   Nobody can yet read a large model's goals from its weights, and evaluations find dangerous skills
-  only if someone thought to test for them. Safety frameworks are mostly voluntary. Almost nothing
-  stands between an AI agent and the machines it commands except the agent's own training, which
-  is not good enough for factories that run themselves.
+  only if someone thought to test for them. The capabilities grow fast: on the AI Security
+  Institute's own tests, AI agents' success at copying themselves onto new machines rose from 5 to
+  60 percent between 2023 and 2025. Safety frameworks are mostly voluntary, and almost nothing
+  stands between an AI agent and the machines it commands except the agent's own training, which is
+  not good enough for factories that run themselves.
 inventions: [the-governor]
 scene:
   kind: compute

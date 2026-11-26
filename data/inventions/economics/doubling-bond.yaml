@@ -8,29 +8,43 @@ pitch: >-
 principle: >-
   Kamstra and Shiller proposed the trill, a perpetual bond paying a trillionth of a country's GDP,
   so investors share in national growth; Argentina's GDP warrants showed growth-linked debt can be
-  issued and traded. The Doubling Bond links its coupon to the output of space industry instead:
-  each bond pays a fixed fraction of the mass, or power, the seed industry produces each year, above
-  a small floor. Because the industry is planned to double every {doubling-time}, the expected
-  coupon grows exponentially, so the bond is worth a good deal today even though its first coupons
-  are tiny. That lets the seed and its first decades of doublings be financed by selling a share of
-  their growth rather than by borrowing against early revenue that does not yet exist. Weitzman's
-  result that uncertain long-run rates make the right discount rate fall with the horizon, now used
-  in the UK Treasury's Green Book, is the basis for pricing it. The bond is issued by a public and
-  private trust that owns a share of the seed lineages' output, counted by the audited register that
-  the Lineage Licence keeps.
+  issued and traded, and solar asset-backed notes showed that a pool of machines can repay investors
+  from nothing but its own output. The Doubling Bond links its coupon to the output of space
+  industry instead: each bond pays a fixed fraction of the mass, or power, the seed industry
+  produces each year, above a small floor. The numbers that price it are extreme in both directions.
+  If the lineage doubles every {doubling-time} for {doublings-to-sun} doublings, its output grows by
+  a factor of 2 raised to that power, more than ten quadrillion. A dollar due when the swarm is
+  finished, {years-seed-to-sun} after the seed starts in {seed-year}, is worth a few cents today at
+  the Green Book's 2026 rates, and a fraction of a cent at the 6.125 percent Alphabet pays on its
+  century notes. Growth outruns the discount by many orders of magnitude, so even a tiny share of
+  output is worth a good deal today. Its price is set almost entirely by the chance that the
+  doublings happen, and on time: each year of delay costs a few percent, while each doubling that
+  fails halves everything after it. That lets the seed and its first decades of doublings be
+  financed by selling a share of their growth rather than by borrowing against early revenue that
+  does not yet exist. The bond is issued by a public and private trust that owns a share of the seed
+  lineages' output, counted by the audited register that the Lineage Licence keeps.
 buildsOn:
-  - text: Kamstra and Shiller's 2009 proposal for trills, perpetual bonds paying a share of GDP.
+  - text: Kamstra and Shiller's 2009 proposal for trills, long and ideally perpetual securities paying a trillionth of GDP each year.
     url: https://cowles.yale.edu/publications/cfdp/cfdp-1717
-  - text: Argentina's GDP-linked warrants, issued in its 2005 debt exchange.
+    year: 2009
+  - text: Argentina's GDP-linked warrants, issued in its 2005 debt exchange, which paid only when growth beat a set path.
     url: https://www.imf.org/external/pubs/ft/wp/2006/wp0685.pdf
-  - text: Austria's 100-year bonds of 2017 and 2020, which found willing buyers for a century of debt.
-    url: https://uk.investing.com/analysis/austria-100year-bond-hugely-oversubscribed-as-investors-scramble-for-returns-200443446
+    year: 2006
+  - text: SolarCity's first solar securitisation in November 2013, 54.4 million dollars of notes at 4.80 percent repaid solely from the cash flow of a pool of solar systems.
+    url: https://www.sec.gov/Archives/edgar/data/1408356/000119312513440715/d628803dex991.htm
+    year: 2013
+  - text: Austria's 100-year bonds of 2017 and 2020, the second bid 12 times over, which found willing buyers for a century of debt.
+    url: https://www.oebfa.at/en/ueber-die-oebfa/geschichte.html
+    year: 2020
+  - text: Alphabet's 1 billion pounds of 100-year notes at 6.125 percent, sold in February 2026.
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000119312526044473/d37599dfwp.htm
+    year: 2026
   - text: Weitzman's 2001 gamma discounting, the case for discount rates that fall with time.
     url: https://doi.org/10.1257/aer.91.1.260
-  - text: The UK Green Book's declining long-term discount rates, revised in 2026.
+    year: 2001
+  - text: The UK Green Book's declining long-term discount rates, revised in 2026 to 3, 2.5 and 2.25 percent.
     url: https://www.gov.uk/government/publications/the-green-book--2/the-green-book-2026
-  - text: Britain's consols, perpetual bonds that ran from 1752 to 2015.
-    url: https://en.wikipedia.org/wiki/Consol_(bond)
+    year: 2026
 experiment:
   goal: Measure what investors will pay for a coupon linked to a physical output that grows exponentially but uncertainly, and whether that price can finance a first stage.
   setup: >-
@@ -50,31 +64,31 @@ path:
     proves: Long-horizon investors price growth at low rates.
   - phase: prototype
     what: The 25 million dollar growth-linked issue on an existing growing asset.
-    scale: One issue.
+    scale: One issue of 25 million dollars.
     proves: The instrument can be issued and traded.
   - phase: pilot
     what: A trust issues doubling bonds to finance the Seed Foundry's prototypes on Earth and the first seed on the Moon.
-    scale: Billions of dollars.
+    scale: 2 to 5 billion dollars of bonds.
     proves: The seed can be financed by selling its future growth.
   - phase: first-plant
     what: Doubling bonds held by pension and sovereign funds worldwide, financing the seed lineages through their first ten doublings.
-    scale: The seed industry grown a thousandfold.
+    scale: The seed industry through its first 10 doublings, about 1,000 times its starting mass.
     proves: The industry's growth repays investors as promised.
   - phase: fleet
     what: New issues fund the lineages sent to the asteroids and to Mercury, each with its own bond.
-    scale: Industry across the inner solar system.
+    scale: About 30 doublings, a billion times the seed's mass, each frontier with its own issue.
     proves: Each new frontier can be financed by its own growth.
   - phase: civilization
     what: The industry that builds the swarm, part-owned by savers worldwide whose grandchildren collect its coupons.
     scale: "{doublings-to-sun} doublings, {years-seed-to-sun} from the seed to the full swarm"
     proves: A century-long project can be financed by the people who will gain from it.
 risks: >-
-  Doubling may run slower or start later than planned, and the bond's value falls steeply with
-  delay; issuing in tranches tied to the bench and pilot results lets each stage be priced on
-  evidence. Output in space must be measured in a way investors trust; the register's audited counts
-  and independent inspectors provide that. A bond on all of space industry could concentrate its
-  ownership among the rich; a share of every issue can go to the Common Heritage fund, so everyone
-  holds some.
+  Doubling may stall or run slower than planned, and each doubling that does not happen halves the
+  bond's value, far more than a few years' delay costs; issuing in tranches tied to the bench and
+  pilot results lets each stage be priced on evidence. Output in space must be measured in a way
+  investors trust; the register's audited counts and independent inspectors provide that. A bond on
+  all of space industry could concentrate its ownership among the rich; a share of every issue can
+  go to the Common Heritage fund, so everyone holds some.
 scene:
   kind: replicator
   focus: Seed factories doubling, each new copy adding to the coupon the bond pays.

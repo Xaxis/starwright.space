@@ -6,26 +6,33 @@ pitch: >-
   A rotating greenhouse ring that gives crops the gravity they evolved under while they grow in
   space, on recycled water and sunlight, so a habitat or base can grow staples and not just salad.
 principle: >-
-  Plants use gravity to know up from down, to set roots, move water and fill grain. In free fall or
-  weak lunar gravity they grow oddly and yield poorly, a problem no closed-loop food result on Earth
-  has had to face. The Spun Greenhouse supplies gravity by spinning: a ring of growing modules
-  rotates so that centrifugal force presses outward like weight, tunable from lunar to full Earth
-  gravity by the rate of spin. Inside, crops grow hydroponically on water and nutrients recovered by
-  the habitat's closed loop, lit by piped sunlight or clean power, with carbon dioxide from the crew
-  and oxygen returned to them. Because the spin is set by the operator, the greenhouse can find the
-  least gravity at which each crop still yields well, saving structure and energy. It makes space
-  farming a matter of engineering a known plant, not gambling on how crops behave in gravity they
-  have never known.
+  Plants use gravity to know up from down, to set roots, move water and fill grain, and in free fall
+  or weak gravity they grow oddly. On the ISS centrifuge, seedlings already responded weakly to light
+  below about 0.3 g. The Spun Greenhouse supplies gravity by spinning, since centrifugal acceleration
+  is the spin rate squared times the radius. To press outward at a full Earth 9.81 metres per second
+  squared, a ring of 56 m radius turns at 4 rpm, or a 14 m module at 8 rpm; slowing the same ring to
+  2.5 rpm gives Mars gravity and to 1.6 rpm the Moon's. Crops take more spin than people, who feel
+  sick much above 2 rpm, so a greenhouse can be smaller and spin faster than a habitat. Inside, crops
+  grow hydroponically on water and nutrients from the closed loop, lit by piped sunlight or clean
+  power, breathing the crew's carbon dioxide and returning oxygen. NASA's life-support baseline needs
+  about 65 square metres of crops to feed one person a full diet, at yields like wheat's 20 grams of
+  dry grain per square metre a day, so a ring for a few people is tens of metres across. Because the
+  operator sets the spin, the greenhouse can find the least gravity at which each crop still makes 80
+  percent of its full-gravity yield, saving structure and power, and turns space farming into
+  engineering a known plant rather than gambling on gravity it has never known.
 buildsOn:
   - text: Lunar Palace 1's 370-day crewed closure at 98.2 percent material closure shows crops can feed a closed crew, the loop a spun greenhouse plugs into.
     url: https://doi.org/10.1101/2021.01.12.426282
     year: 2018
-  - text: BIOS-3 grew about half a crew's food with plants and algae in closure, the baseline for a space farm's yield.
-    url: https://en.wikipedia.org/wiki/BIOS-3
-    year: 1973
-  - text: ESA's MELiSSA has developed the plant and algae compartments and water recovery a spun greenhouse would use.
-    url: https://en.wikipedia.org/wiki/MELiSSA
-    year: 2023
+  - text: At Krasnoyarsk's BIOS-3, Gitelson's group ran crews for four to six months on about 13 square metres of plants per person, which supplied all their oxygen and water and 40 to 45 percent of their food, meeting crew needs 95 percent by weight.
+    url: https://ntrs.nasa.gov/api/citations/19910015430/downloads/19910015430.pdf
+    year: 1989
+  - text: On a centrifuge in the ISS European Modular Cultivation System, Kiss and colleagues found seedlings respond weakly to light at 0.1 to 0.3 g, direct evidence that crops behave differently under partial gravity and that the right spin must be measured.
+    url: https://doi.org/10.1007/s00425-012-1633-y
+    year: 2012
+  - text: On China's Tiangong station rice completed a full seed-to-seed cycle in microgravity in 2022, showing a cereal can close its life cycle in space, though yield and seed set under partial gravity are still unmeasured.
+    url: https://pubmed.ncbi.nlm.nih.gov/39067990/
+    year: 2022
 experiment:
   goal: Find the least gravity at which staple crops yield well, using a spinning greenhouse module.
   setup: >-
@@ -42,28 +49,28 @@ experiment:
   months: 48
 path:
   - phase: bench
-    what: A centrifuge greenhouse on Earth mapping yield against gravity for staple crops.
-    scale: A few modules.
+    what: An Earth centrifuge mapping yield against gravity for staple crops.
+    scale: A 2 m centrifuge, a few square metres of crop at 0.16 to 1 g.
     proves: The gravity each crop needs is measured, not guessed.
   - phase: prototype
     what: A spun greenhouse module flown and run in orbit on a closed loop.
-    scale: One crew's salad and some staples.
+    scale: One module of about 65 square metres, one person's diet.
     proves: Crops yield under real spun gravity in space.
   - phase: pilot
     what: A greenhouse ring feeding a small crewed base much of its food.
-    scale: A small base.
+    scale: A ring about 56 m across, roughly 400 square metres of crop for 6 people.
     proves: A space farm is a dependable part of a closed loop.
   - phase: first-plant
     what: A habitat that grows a full, varied diet for its people.
-    scale: A town-sized settlement.
+    scale: About 65,000 square metres of crop for about 1,000 people.
     proves: A settlement feeds itself without food from Earth.
   - phase: fleet
     what: Spun greenhouses standard on habitats and ships across the inner system.
-    scale: Inner solar system.
+    scale: Hundreds of habitats, feeding more than 100,000 people.
     proves: Food travels with people as a built system, not a supply line.
   - phase: civilization
     what: Every off-world settlement growing its own staples under chosen gravity.
-    scale: Planet and space.
+    scale: Self-feeding settlements for the millions living off Earth by {year-type-1}.
     proves: Human settlement off Earth is self-feeding.
 risks: >-
   Spin may cause crop or equipment problems (uneven watering, motion effects) that Earth tests miss;

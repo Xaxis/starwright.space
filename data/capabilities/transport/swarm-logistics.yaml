@@ -9,12 +9,14 @@ summary: >-
   needs a transport network across a whole shell {swarm-radius} from the Sun, where a trip half way
   round takes months even at the speed of a fast ship.
 target: >-
-  Every failed collector found, collected and recycled into new film, and parts, people and data
-  moved around the shell by sail and beam, so that the swarm runs itself for as long as the Sun
-  shines.
+  Collectors built to last 50 years, so that of about 10^12, some 2 × 10^10 retire each year, about
+  600 a second; each one found, brought to a forge by sail and beam and remade, with at least 99
+  percent of its mass going back into new film, about a fiftieth of {swarm-full-mass} a year; parts
+  and crews delivered anywhere on the shell within a year; and every collector on a laser link, so
+  that the swarm runs itself for as long as the Sun shines.
 exists:
-  - text: Starlink satellites have been linked by lasers in space since 2021, with more than 1,000 laser terminals at 100 Gbit/s each deployed by 2024.
-    url: https://en.wikipedia.org/wiki/Laser_communication_in_space
+  - text: SpaceX told SPIE Photonics West in January 2024 that Starlink's mesh of over 9,000 laser terminals, at 100 Gbit/s each, carried 5.6 Tbit/s over links of up to 5,400 km lasting up to weeks, with 99.99 percent uptime from fast rerouting.
+    url: https://hackaday.com/2024/02/05/starlinks-inter-satellite-laser-links-are-setting-new-record-with-42-million-gb-per-day/
     year: 2024
   - text: Of 13,122 Starlinks launched by November 2026, 1,564 had been retired by planned disposal, burned up in the atmosphere.
     url: https://planet4589.org/space/con/star/stats.html
@@ -26,9 +28,11 @@ exists:
     url: https://www.northropgrumman.com/space/space-logistics-services
     year: 2025
 gap: >-
-  Today's constellations dispose of satellites by burning them up in the air, which solar orbit
-  does not have. Servicing in orbit is done one satellite at a time, and no network has ever spanned
-  more than Earth's own orbits.
+  Starlink, the largest constellation, has retired 1,564 satellites in all, by burning them up in
+  an atmosphere that solar orbit does not have; the swarm must retire about 55 million a day,
+  35,000 times that total every day. Servicing in orbit has managed 3 dockings by 2 vehicles since
+  2020, against 600 a second. The largest network in space spans links of up to 5,400 km; half way
+  round the shell at {swarm-radius} is about 2.8 × 10^8 km, some 50,000 times as far.
 inventions: [homing-petals]
 scene:
   kind: swarm

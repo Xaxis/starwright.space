@@ -2,38 +2,44 @@ id: abundant-water
 title: Clean water for everyone
 domain: water
 stage: k08
-needs: [low-energy-desalination, water-from-air]
+needs: [low-energy-desalination, water-from-air, buildout-finance]
 summary: >-
-  Water is not globally scarce, but clean fresh water is unevenly spread, and billions live where it
-  is short, expensive or dirty. With abundant clean energy, which the climb delivers, water scarcity
-  becomes an energy-and-engineering problem, not a fate: desalinate the sea, pull water from the air,
-  recycle every drop used, and move and clean water wherever it is needed. Abundance on Earth in
-  {year-k08} includes water security for everyone.
+  Humanity withdraws about 4,000 cubic kilometres of fresh water a year, most of it for farms, and
+  {people-without-safe-water} still lack safe water at home. Fresh water is short where people live, not on
+  the planet as a whole, and making more of it is mostly a matter of energy. Desalinating all of it
+  at 3 to 4 kWh per cubic metre would take about 1.4 to 1.8 TW, under 2 percent of {power-k08}. The
+  climb to {year-k08} can afford to make, move and clean all the water people need.
 target: >-
-  Give every person reliable access to clean, safe water for drinking, sanitation, farming and
-  industry, by desalination, atmospheric harvesting and near-total recycling powered by cheap clean
-  energy, so that water shortage is engineered away rather than endured.
+  Safely managed drinking water at home for every person by {year-k08}, and enough fresh water for
+  farms and industry that no river basin or aquifer is drawn down faster than it refills. Desalination
+  and reuse grow from under 1 percent of withdrawals today to at least a tenth, about a billion cubic
+  metres a day, made without dumping brine on the coasts.
 exists:
-  - text: The UN World Water Development Report 2024 found that 2.2 billion people had no access to safely managed drinking water in 2022, and that agriculture uses 72 percent of freshwater withdrawals.
-    url: https://www.unesco.org/reports/wwdr/en/2024
-    year: 2024
-  - text: Global desalination capacity reached about 97 million cubic metres a day from over 16,800 plants by 2020, with energy intensity down to about 3 kWh per cubic metre in 2018, a tenfold improvement since 1970.
-    url: https://en.wikipedia.org/wiki/Desalination
-    year: 2020
-  - text: The International Space Station's life-support system reached 98 percent water recovery in 2023, proving that water can be recycled almost completely when it must be.
-    url: https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/
-    year: 2023
-  - text: The XPRIZE Water Scarcity competition, with a 119-million-USD purse, marks how large and unsolved affordable fresh water at scale still is.
-    url: https://www.xprize.org/
+  - text: The WHO and UNICEF Joint Monitoring Programme counts 2.1 billion people without safely managed drinking water in 2024, of whom 696 million lack even a basic service and 106 million drink from rivers, lakes and ponds.
+    url: https://washdata.org/report/jmp-2025-wash-households
+    year: 2025
+  - text: The UN World Water Development Report 2026 finds about 4 billion people live under high water stress for at least a month a year, and puts withdrawals at about 4,000 cubic kilometres a year, 72 percent of it for agriculture.
+    url: https://unepdhi.org/wp-content/uploads/sites/2/2026/03/397159eng.pdf
     year: 2026
+  - text: The International Desalination and Reuse Association puts installed desalination capacity at about 91.5 million cubic metres a day in 2024, or about 105 million counting plants under contract.
+    url: https://idrawater.org/?p=12245
+    year: 2025
+  - text: The IEA estimated that the water sector used about 820 TWh of electricity in 2014, 4 percent of the world's total, more than 310 TWh of it to pump water from the ground and from rivers.
+    url: https://www.iea.org/files/e4a7e1a5-b6ed-4f36-911f-b0111e49aab9/WorldEnergyOutlook2016ExcerptWaterEnergyNexus.pdf
+    year: 2016
+  - text: Foster and colleagues estimate that about one handpump in four in sub-Saharan Africa is broken at any time, roughly 175,000 water points out of use in 2015.
+    url: https://opus.lib.uts.edu.au/handle/10453/142744
+    year: 2020
 gap: >-
-  Desalination is still energy-hungry and costly, and its concentrated brine is dumped back to sea as
-  a pollutant; atmospheric harvesting is small and dear; and most used water on Earth is discharged
-  rather than recycled. Making fresh water cheap and abundant everywhere, without wrecking coasts with
-  brine, needs lower-energy desalination, water from air, near-total recycling at city scale, and the
-  clean power to run them all.
-inventions: []
+  Desalination supplies under 1 percent of the water people withdraw, almost all of it on desert
+  coasts, and it would have to grow more than tenfold to reach the target. Lifting water inland costs
+  energy too: 1,000 m of height adds 2.7 kWh per cubic metre before pipe friction, as much as the
+  desalting. Where water is free in the ground, the systems that deliver it fail: a quarter of rural
+  handpumps in Africa are broken at any time, for want of spare parts and money for repairs. Each
+  cubic metre of desalinated water also leaves about one and a half of brine that is now poured back
+  into the sea.
+inventions: [zero-brine-desalinator, atmospheric-harvester]
 scene:
   kind: globe
-  focus: Coastlines dotted with desalination and water-recycling plants, dry regions turning green.
+  focus: Desert coasts lined with desalination plants, their water piped inland to farms turning green.
   params: { green: 0.5, look: coasts }

@@ -1,0 +1,92 @@
+id: rim-masts
+title: Rim Masts
+domain: information
+for: [cislunar-network]
+pitch: >-
+  Tall, sunlit masts on the rims of the Moon's polar craters, each carrying a cell base station, a
+  timing beacon and a dish to a relay, so rovers and mines working on the dark crater floors stay
+  connected and know where they are without a satellite overhead.
+principle: >-
+  Near the poles the Sun skims the horizon: the Moon's spin axis stands only about 1.5 degrees from
+  the normal to its orbit around the Sun, so sunlight always arrives at a low angle, and some peaks
+  stay lit for long stretches while crater floors never are. The south pole itself sits on the rim
+  of Shackleton, a crater 20 km across whose interior is almost all in permanent shadow, below about
+  90 K. Radio at these frequencies needs line of sight, and on a sphere of radius R a mast of height
+  h sees to a horizon of the square root of 2Rh. With the Moon's radius of 1,737 km, a 100 m mast
+  sees 18.6 km over level ground, and two such masts see each other 37 km apart; set on a rim, a
+  mast looks down the crater wall onto the floor below. The Moon has no air, rain or wind, so a
+  link's reach is set by power and line of sight alone, and a mast in one-sixth gravity with no wind
+  load can be a light guyed lattice of a few hundred kilograms. Each mast carries a vertical solar
+  array that turns with the Sun around the horizon, batteries for the hours a peak spends in shadow,
+  a cell base station of the kind Nokia flew on IM-2, a dish to a relay satellite or to Earth, and a
+  timing transmitter. Masts keep their clocks in step with one another, as Locata's ground beacons
+  do, so a rover that hears three or more masts fixes its own position to under a metre, in a crater
+  where no satellite can be seen.
+buildsOn:
+  - text: Nokia Bell Labs' 4G/LTE network built for the IM-2 lander to link it with a rover and a hopper near the south pole, with more bandwidth than the UHF radios used in space.
+    url: https://www.space.com/nokia-4g-cell-network-on-the-moon
+    year: 2024
+  - text: Spudis and colleagues' geology of the lunar south pole, which notes that the Moon's spin axis is about 1.5 degrees from the normal to the ecliptic and that the pole lies on the rim of Shackleton, a 20 km crater whose interior is almost completely in permanent shadow.
+    url: https://www.lpi.usra.edu/meetings/lpsc2008/pdf/1626.pdf
+    year: 2008
+  - text: Haruyama and colleagues' images of Shackleton's floor from SELENE, lit only faintly by sunlight scattered off the upper inner wall, with a floor temperature below about 90 K.
+    url: https://doi.org/10.1126/science.1164020
+    year: 2008
+  - text: ESA's SMART-1 search for peaks of eternal light at the lunar poles, places lit nearly all the time that would suit outposts, and power for masts.
+    url: https://www.esa.int/Science_Exploration/Space_Science/SMART-1/SMART-1_search_for_lunar_peaks_of_eternal_light
+    year: 2005
+  - text: Locata's ground transmitters, which its makers say give centimetre positions and picosecond synchronisation over the air without satellites or atomic clocks, tested in an EU report on alternative positioning, navigation and timing.
+    url: https://www.locata.com/
+    year: 2026
+  - text: NASA's LunaNet framework, under which industry can build and operate network nodes at the Moon.
+    url: https://www.nasa.gov/humans-in-space/lunanet-empowering-artemis-with-communications-and-navigation-interoperability/
+    year: 2021
+experiment:
+  goal: Show that masts on the rim of a deep pit can give rovers on its floor broadband and metre positions from their own signals alone, on a power budget a lunar rim can supply.
+  setup: >-
+    Three guyed 30 m masts on the rim of a deep open-pit mine, each with a solar array and battery,
+    a commercial 4G network-in-a-box, a GPS-free timing transmitter kept in step with the others,
+    and a microwave link to a control room standing in for the relay. A small rover with a cell
+    modem and a timing receiver drives set routes across the pit floor and up its walls for a month.
+    An RTK GPS unit on the rover is logged as a referee but never used. The base station and timing
+    electronics are also cycled in a thermal vacuum chamber between minus 150 and plus 100 °C.
+  measure: Signal strength and throughput over the whole pit floor; rover position error against the referee; power each mast draws; how coverage and position degrade when one mast is switched off; failures in the chamber.
+  succeedsIf: The rover keeps at least 10 Mbit/s up and down over 95 percent of the floor, its position from the masts alone stays within 1 m of the referee, each mast runs on under 300 W on average, and the electronics survive 100 thermal vacuum cycles.
+  costUsd: 1200000
+  months: 12
+path:
+  - phase: bench
+    what: Three masts on the rim of an open-pit mine on Earth, serving a rover on the floor.
+    scale: 3 masts of 30 m, 1 pit, 1 rover.
+    proves: Rim masts cover a crater floor with broadband and positions, on solar power.
+  - phase: prototype
+    what: One 10 m mast deployed from a lander on a lit ridge near the south pole, serving one rover for a lunar day.
+    scale: 1 mast of 10 m, 1 rover, 14 days.
+    proves: The mast deploys, holds its clocks and serves a rover through lunar heat, cold and dust.
+  - phase: pilot
+    what: Three or four masts around Shackleton's rim, linked to a relay satellite, serving prospecting rovers on the crater floor.
+    scale: 3 to 4 masts, about 12 users.
+    proves: Work in permanent shadow can run like work on a lit plain.
+  - phase: first-plant
+    what: A south polar network of masts selling service to every mission and mine, any maker's rover welcome.
+    scale: About 20 masts, about 100 users.
+    proves: Lunar connectivity can be a utility, not something each mission brings.
+  - phase: fleet
+    what: Masts around both poles and along the mass-driver routes, built from lunar aluminium.
+    scale: About 300 masts, about 3,000 users.
+    proves: The Moon's industry has the coverage of a terrestrial mining region.
+  - phase: civilization
+    what: The same design on Mercury's poles and on large asteroids, wherever industry works in shadow.
+    scale: "Every surface work site in the inner system, by {year-type-1}"
+    proves: Machines anywhere can work like machines on one factory floor.
+risks: >-
+  Dust lifted by landers and rovers may coat the arrays and dishes; the next try is tilted panels,
+  electrostatic dust shields and masts set back from landing pads. Rim peaks are few and prized for
+  power and ice access, so masts may have to share them with other users, or stand on lower ridges
+  with taller lattices. Signals reflecting off crater walls may confuse positions; rovers can reject
+  reflected paths using more masts or carry their own clock. Interference between operators needs a
+  frequency plan agreed among the nations working at the poles.
+scene:
+  kind: moon
+  focus: A crater rim at the lunar south pole lined with slim masts catching the low Sun, their signals reaching rovers on the dark floor below.
+  params: { bases: 0.4, mines: 0.4, telescopes: false }

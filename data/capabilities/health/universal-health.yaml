@@ -5,28 +5,40 @@ stage: k08
 needs: [universal-connectivity, abundant-compute, energy-access]
 summary: >-
   A civilization climbing the ladder needs its people healthy, and today good health care reaches
-  only some of them. Abundant energy, cheap diagnostics, designed medicines and a connected world
-  make it possible to give everyone the basics and more: prevention, diagnosis and treatment of the
-  diseases that cut lives short, delivered close to where people live. Global life expectancy reached
-  73.3 years in 2024; the floor can be raised everywhere, and the ceiling lifted.
+  only some of them. Cheap diagnostics, designed medicines, trained carers and a connected world can
+  give everyone the basics and more: prevention, diagnosis and treatment of the diseases that cut
+  lives short, delivered close to where people live. The floor can be raised everywhere, and the
+  ceiling lifted.
 target: >-
-  Give every person access to effective prevention, diagnosis and treatment for the major causes of
-  illness and early death, through cheap tools, designed medicines and connected care, so that where
-  someone is born no longer sets how long or how well they live.
+  By {year-k08}, essential health services reaching everyone, against about 4.6 billion people not
+  fully covered in 2025; no one pushed into financial hardship by health costs, against 2.1 billion;
+  and life expectancy at birth above 80 years in every country, up from a world average of 73.3 in
+  2024, through cheap tools, designed medicines and connected care, so that where someone is born no
+  longer sets how long or how well they live.
 exists:
-  - text: Global life expectancy at birth reached 73.3 years in 2024, up 8.4 years since 1995, showing fast, uneven progress that better tools and access can spread.
+  - text: The WHO and World Bank reported in September 2023 that more than half the world, about 4.5 billion people, was not fully covered by essential health services, and that coverage had not improved from 2019 to 2021.
+    url: https://www.worldbank.org/en/news/press-release/2023/09/18/billions-left-behind-on-the-path-to-universal-health-coverage
+    year: 2023
+  - text: The WHO and World Bank's December 2025 update put the number still without essential services at about 4.6 billion, with 2.1 billion facing financial hardship from health costs.
+    url: https://www.who.int/news/item/06-12-2025-most-countries-make-progress-towards-universal-health-coverage-but-major-challenges-remain-who-world-bank-report-finds
+    year: 2025
+  - text: Global life expectancy at birth reached 73.3 years in 2024, up 8.4 years since 1995, uneven progress that better tools and access can spread.
     url: https://desapublications.un.org/file/20622/download
     year: 2024
-  - text: Wellcome Leap runs a DARPA-style breakthrough engine for global health, with programs of 50 to 100 million USD across 36 countries, building the pipeline from invention to deployed care.
-    url: https://wellcomeleap.org/
-    year: 2024
-  - text: AlphaFold 3 predicts how proteins interact with drugs and other molecules far more accurately than before, turning drug design for neglected diseases into a tractable, cheaper problem.
+  - text: The WHO recommended a second malaria vaccine, R21/Matrix-M, on 2 October 2023, a low-cost designed vaccine that cut cases in trials and is now rolling out through routine immunisation in African countries, showing designed medicine reaching the unreached.
+    url: https://www.who.int/news/item/02-10-2023-who-recommends-r21-matrix-m-vaccine-for-malaria-prevention-in-updated-advice-on-immunization
+    year: 2023
+  - text: AlphaFold 3 predicts how proteins interact with drugs and other molecules far more accurately than docking, turning drug design for neglected diseases into a cheaper, more tractable problem.
     url: https://doi.org/10.1038/s41586-024-07487-w
     year: 2024
 gap: >-
-  Billions still lack reliable diagnosis, medicines and trained care, and the tools that could reach
-  them, cheap point-of-care diagnostics, designed drugs, connected clinicians, are unevenly built and
-  deployed. Closing the gap is as much about delivery, cost and training as about new science.
+  About 4.6 billion people lack full coverage of essential services and 2.1 billion face hardship
+  from health costs, against 0 for each in the target; coverage barely moved between 2019 and 2021,
+  so the trend has to be bent, not just continued. The world average life expectancy must rise
+  about 7 years to reach the target's floor, and far more in the countries furthest below it. The
+  tools that could reach them, cheap point-of-care diagnostics, designed drugs and connected
+  clinicians, are unevenly built and deployed, so closing the gap is as much about delivery, cost and
+  workforce as about new science.
 inventions: [pocket-diagnostic-lab]
 scene:
   kind: network

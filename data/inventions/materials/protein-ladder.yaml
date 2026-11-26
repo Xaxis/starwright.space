@@ -7,11 +7,12 @@ pitch: >-
   than its neighbour, that separates all fifteen lanthanides in a dozen stages of water chemistry
   instead of hundreds of stages of solvent.
 principle: >-
-  The rare earths are hard to separate because their ions differ in radius by only a few picometres.
-  Solvent extraction exploits that tiny difference once per stage, so a plant needs hundreds of
-  stages. Lanmodulin, a protein bacteria use to gather lanthanides, binds them through EF-hand loops
-  far more tightly than it binds common ions such as calcium, and some variants change shape
-  depending on the ion's radius, so one stage can do the work of many. The Protein Ladder
+  The rare earths are hard to separate because their ions shrink by only 1 to 2 picometres from one to
+  the next, from 103 picometres for lanthanum to 86 for lutetium. Solvent extraction exploits that tiny
+  difference once per stage, so a plant needs hundreds of mixer-settler stages. Lanmodulin, a protein
+  bacteria use to gather lanthanides, binds them through EF-hand loops far more tightly than it binds
+  common ions such as calcium, and a metal-sensitive variant separated neodymium from dysprosium to
+  over 98 percent purity in one stage, the work of many. The Protein Ladder
   immobilises a different engineered variant in each column, each chosen to split one pair of
   neighbours (light from heavy first, then pair by pair), and runs them as a simulated moving bed,
   the continuous counter-current chromatography the sugar industry uses: inlets and outlets step
@@ -21,12 +22,16 @@ principle: >-
 buildsOn:
   - text: Mattocks and colleagues' metal-sensitive lanmodulin dimer, which separated neodymium from dysprosium to more than 98 percent purity in one column stage (Nature, 2023).
     url: https://www.nature.com/articles/s41586-023-05945-5
+    year: 2023
   - text: Simulated moving bed chromatography, run continuously at industrial scale for sugars and fine chemicals.
     url: https://en.wikipedia.org/wiki/Simulated_moving_bed
+    year: 1961
   - text: Lynas, which runs one of the few solvent extraction separation plants outside China, as the baseline to beat on cost and purity.
     url: https://lynasrareearths.com/
+    year: 2026
   - text: Cyclic Materials' collection and recovery of rare earths from end-of-life products, a source of magnet feed.
     url: https://cyclicmaterials.earth/
+    year: 2026
 experiment:
   goal: Separate the four magnet rare earths (neodymium, praseodymium, dysprosium, terbium) from leached magnet scrap to magnet grade in a few protein stages.
   setup: >-
@@ -40,11 +45,11 @@ experiment:
 path:
   - phase: bench
     what: The eight-column ring on magnet leachate.
-    scale: About a kilogram of oxide a week.
+    scale: About 1 kilogram of oxide a week.
     proves: Magnet-grade purity in a handful of stages, and the protein's working life.
   - phase: prototype
     what: All fifteen lanthanides plus yttrium separated from a mixed concentrate, with a variant for each split.
-    scale: About a tonne of oxide a year.
+    scale: About 1 tonne of oxide a year.
     proves: The full ladder works on real ore, not just on magnets.
   - phase: pilot
     what: A plant beside a coal ash pond or phosphate works, fed its waste leachate.
@@ -56,11 +61,11 @@ path:
     proves: Cost per kilogram below solvent extraction, with no organic solvent waste.
   - phase: fleet
     what: Ladders at mines, recyclers and ash ponds on every continent.
-    scale: A large share of the world's rare earth separation.
+    scale: About 100,000 tonnes of oxide a year.
     proves: The choke point in rare earths is gone.
   - phase: civilization
     what: Ladders that win rare earths and other trace metals from regolith leachate on the Moon, where the protein is grown in the habitat's bioreactors.
-    scale: Wherever industry needs magnets.
+    scale: The trace metals in a {seed-mass} seed's throughput.
     proves: Trace elements can be won anywhere water and biology can go.
 risks: >-
   Proteins may foul or denature in real leachates full of iron, aluminium and organics; the fallback

@@ -9,7 +9,7 @@ summary: >-
   and cells kept in places and materials that last for millennia, and that a survivor with no
   computer can still open.
 target: >-
-  Several complete copies of humanity's knowledge, including how to make every tool on the climb,
+  At least 3 complete copies of humanity's knowledge, including how to make every tool on the climb,
   and of the seeds and cells of its crops and species, held in stable media at sites on Earth and
   the Moon, each readable starting from the naked eye.
 exists:
@@ -19,10 +19,13 @@ exists:
   - text: The Arctic World Archive stores data deep in a decommissioned Svalbard mine on piqlFilm, readable for centuries with no electricity or software.
     url: https://www.arcticworldarchive.org/
     year: 2026
-  - text: Microsoft's Project Silica writes data into quartz glass, a write-once medium immune to electromagnetic fields, with lifetimes of tens to hundreds of thousands of years.
-    url: https://www.microsoft.com/en-us/research/project/project-silica/
+  - text: Microsoft's Project Silica writes data into quartz glass, a write-once medium immune to electromagnetic fields; a 2026 Nature paper reported 4.8 terabytes in one glass platter, with accelerated ageing suggesting lifetimes beyond 10,000 years.
+    url: https://www.nature.com/articles/s41586-025-10042-w
     year: 2026
-  - text: The Arch Mission Foundation's Lunar Library, 30 million pages on 25 nickel discs each 40 microns thick, the first four layers analog images of pages, reached the Moon on the Beresheet lander in April 2019.
+  - text: University of Southampton researchers stored a full human genome on a 5D memory crystal in 2024, a fused-silica disc holding up to 360 terabytes that survives temperatures up to 1000 degrees C.
+    url: https://www.southampton.ac.uk/news/2024/09/human-genome-stored-on-everlasting-memory-crystal-.page
+    year: 2024
+  - text: The Arch Mission Foundation's Lunar Library, 30 million pages on 25 nickel discs each 40 microns thick, the first four layers analog images of pages, was carried toward the Moon on the Beresheet lander, which crashed on landing in April 2019.
     url: https://www.archmission.org/spaceil
     year: 2019
   - text: The Long Now Foundation's Rosetta Disk micro-etched hundreds of thousands of pages about the world's languages onto a 3-inch nickel disk meant to last thousands of years.
@@ -34,7 +37,8 @@ exists:
 gap: >-
   Every long-lived archive today assumes the reader has a microscope, a film scanner or a computer.
   None teaches a survivor how to build the tool that reads it. Seed and cell banks need power and
-  people to stay cold and to regrow their samples, and all of the large ones are on one planet.
+  people to stay cold and to regrow their samples, and the biggest, Svalbard's 1.4 million seed
+  samples, sits with all the rest on one planet.
 inventions: [bootstrap-glass, shadow-vault]
 scene:
   kind: globe

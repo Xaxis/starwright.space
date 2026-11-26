@@ -19,8 +19,8 @@ exists:
   - text: JAXA's IKAROS, launched in May 2010, unfolded a square sail 14 m on a side of polyimide 0.0075 mm thick; JAXA calls it the first sail craft driven by both the push of light and thin-film solar power.
     url: https://global.jaxa.jp/projects/sas/ikaros/
     year: 2010
-  - text: NASA's ACS3 deployed an 80 square metre sail on four 7 m composite booms in 2024, before a bent boom left it tumbling.
-    url: https://en.wikipedia.org/wiki/Advanced_Composite_Solar_Sail_System
+  - text: NASA's ACS3 deployed an 80 square metre sail on composite booms about 7 m long in 2024, a test of the roll-out booms a thin sail needs.
+    url: https://www.nasa.gov/mission/acs3/
     year: 2024
   - text: By November 2026 SpaceX had launched 13,122 Starlink satellites, with 11,203 still in orbit, the largest constellation ever flown.
     url: https://planet4589.org/space/con/star/stats.html

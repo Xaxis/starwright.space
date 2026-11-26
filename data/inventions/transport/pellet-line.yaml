@@ -7,38 +7,42 @@ pitch: >-
   departing ship, and the ship catches each one in a coil that brakes it, taking its momentum and
   storing its energy as electricity.
 principle: >-
-  A beam of light spreads as it travels, so it can push a ship only near its source. A stream of
-  pellets does not spread if each is aimed well, so its push can reach a ship millions of kilometres
-  away. Each pellet carries momentum, and a ship that brings a pellet to rest relative to itself
-  gains all of it. The Pellet Line does that without contact. The ship carries a short receiving
-  coilgun, a mass driver run backwards: as each conducting pellet enters, the coils' rising fields
-  induce currents in it that brake it, which pushes the ship forward and turns the pellet's energy of
-  motion into current that charges the ship's banks. Stopped pellets are kept as cargo or as
-  reaction mass for later. The station end is the same machine the climb builds to launch lunar and
-  Mercury mass, firing small loads very often. Trim coils just past the muzzle, or along the first
-  part of the line, correct each pellet's path.
+  Light is a weak and spreading push. A beam of power P gives a mirror 2P/c, 6.7 N per gigawatt, and
+  a 10 m laser at 1 µm wavelength spreads to a spot 2.44λL/D = 240 m wide at a million kilometres,
+  which is why laser designs such as Duplay's work only in cislunar space. A pellet stream carrying
+  the same kinetic power at 10 km/s delivers momentum at 2P/v, 200 kN per gigawatt, 30,000 times
+  more push per watt, and pellets do not diffract: their spread comes only from aiming error, so
+  landing within 5 m at 100,000 km needs 50 nanoradians, which trim coils past the muzzle correct.
+  A ship that brings each pellet to rest relative to itself gains all its momentum; for pellets
+  fired at speed u after a ship that starts at rest, m dv = (u - v) dm gives a final mass ratio of
+  u/(u - v). With u = 10 km/s and a 3 km/s push, that is 1.43: a 50 tonne ship catches 21 tonnes of
+  pellets and keeps them as cargo or reaction mass, where a hydrogen-oxygen rocket at 450 s would
+  burn 49 percent of its starting mass for the same change of speed. At 0.5 kg a second, 500 one-gram
+  pellets, the push starts at 5 kN and the transfer takes about 12 hours. The station pays the energy,
+  50 MJ for each kilogram fired, 1.07 TJ in all, and the ship's receiving coilgun, a mass driver run
+  backwards, induces currents in each conducting pellet that brake it and turn part of its energy of
+  motion into current for the ship's banks. The station end is the same machine the climb builds to
+  launch lunar and Mercury mass, firing small loads very often.
 buildsOn:
-  - text: Jordin Kare's SailBeam study for NIAC (2002) proposed pushing a ship with a stream of laser-driven microsails caught by a magnetic sail, and cites Singer's 1980 pellet-stream propulsion and Nordley's 1999 self-steering beamriders.
+  - text: Jordin Kare's SailBeam study for NIAC proposed pushing a ship with a stream of laser-driven microsails, turned to plasma and reflected by the ship's magnetic sail, building on Singer's earlier proposal of propulsion by a particle stream, aimed by guidance stations spaced along its track.
     url: http://www.niac.usra.edu/files/studies/final_report/597Kare.pdf
     year: 2002
-  - text: Landis analysed pushing a spacecraft with a beam of particles instead of light (AIP Conference Proceedings, 2001).
-    url: https://doi.org/10.1063/1.1357952
-    year: 2001
-  - text: Zubrin and Andrews designed the magnetic sail, a superconducting loop whose field deflects charged particles to make thrust (Journal of Spacecraft and Rockets, 1991).
-    url: https://doi.org/10.2514/3.26230
-    year: 1991
-  - text: NASA's NIAC funded Davoyan's pellet-beam propulsion study at UCLA in 2023, using microscopic particles at more than 120 km/s to push tonne-class payloads to 500 AU in under 20 years.
+  - text: NASA's NIAC funded Davoyan's pellet-beam study at UCLA in 2023, using microscopic particles at more than 120 km/s to push payloads of a tonne or more, reaching 100 AU in about 3 years and 500 AU in about 15.
     url: https://www.nasa.gov/general/pellet-beam-propulsion-for-breakthrough-space-exploration/
     year: 2023
-  - text: NASA's 1977 Ames summer study (SP-428) designed electromagnetic mass drivers for the Moon, the station end of a pellet line.
+  - text: NASA's 1977 Ames summer study designed electromagnetic mass drivers as lunar launchers, as interorbital engines and as tugs for asteroidal material, the station end of a pellet line.
     url: https://ntrs.nasa.gov/citations/19790024054
     year: 1979
+  - text: Duplay and colleagues designed a rapid Mars transit in which a 10 m, 100 MW laser array on Earth delivers power to a ship in cislunar space for 3,000 s laser-thermal propulsion, the light-beam alternative and its reach.
+    url: https://arxiv.org/abs/2201.00244
+    year: 2022
 experiment:
   goal: Measure how much momentum a receiving coil takes from conducting pellets fired into it, and how much of their energy it stores.
   setup: >-
-    A small gas gun or coilgun fires 1 gram aluminium pellets at 500 m/s into a 1 m train of
-    receiving coils mounted on an air-bearing sled in a vacuum chamber. The coils switch to brake each
-    pellet and feed a capacitor bank.
+    A small gas gun or coilgun fires 1 gram aluminium pellets at 500 m/s, each carrying 0.5 N·s and
+    125 J, into a 1 m train of receiving coils mounted on an air-bearing sled in a vacuum chamber.
+    Stopping in 1 m takes a 125 N braking force for 4 ms. The coils switch to brake each pellet and
+    feed a capacitor bank.
   measure: Momentum given to the sled per pellet, energy captured in the bank, the share of pellets stopped, pellet heating and deformation, and tolerance to pellets arriving off-axis.
   succeedsIf: At least 90 percent of each pellet's momentum passes to the sled for pellets arriving up to 5 mm off-axis, and at least 30 percent of their energy of motion is stored as electricity.
   costUsd: 900000
@@ -49,32 +53,33 @@ path:
     scale: 1 gram pellets at 500 m/s.
     proves: Momentum taken without contact, with energy recovered.
   - phase: prototype
-    what: A small driver on one satellite firing pellets across tens of kilometres to a receiving satellite.
-    scale: Kilograms of pellets.
+    what: A small driver on one satellite firing pellets across to a receiving satellite.
+    scale: 10 kg of pellets at 2 km/s over 30 km.
     proves: Aim and capture over distance in orbit.
   - phase: pilot
     what: A lunar mass driver pushing a cargo tug out of lunar orbit toward Mars along a pellet line.
-    scale: Tonnes of pellets, a tug of tens of tonnes.
+    scale: 21 tonnes of pellets at 10 km/s pushing a 50 tonne tug by 3 km/s.
     proves: A useful push far beyond the reach of a laser of similar size.
   - phase: first-plant
     what: Pellet stations at the Moon and at Mars pushing and catching cargo both ways, so ships carry no main engine.
-    scale: Thousands of tonnes a year.
+    scale: 2 stations, 5,000 tonnes of cargo a year.
     proves: A highway with stations at both ends.
   - phase: fleet
     what: Pellet lines between the Moon, Mars, the main belt and Mercury, sharing drivers that also launch freight.
-    scale: Tens of stations.
+    scale: 20 stations, 100,000 tonnes a year.
     proves: Transits of weeks for crews and cargo.
   - phase: civilization
     what: The fast routes of the inner solar system, with ships pushed out and caught by stations at each end.
-    scale: The inner solar system.
+    scale: 100 stations, 10 million tonnes a year.
     proves: Speed between worlds limited by stations, not by ships.
 risks: >-
-  Pellets drift off aim over long distances from tiny errors at launch; trim coils along the first
-  part of the line, or pellets nudged by laser as they fly, are the fallbacks to test. A pellet that
-  misses is a fast projectile, so lines are aimed so that misses leave the inner system or fall
-  toward the Sun, never across busy orbits. At high relative speeds pellets may heat and vaporise in
-  the coil before they stop; then the receiver becomes a magnetic nozzle that reflects pellet plasma,
-  as Landis and Nordley proposed for particle beams.
+  Pellets drift off aim over long distances from tiny errors at launch; holding 50 nanoradians is
+  beyond any gun today, so guidance stations along the first part of the line that measure and nudge
+  each pellet, as Singer proposed, are the fallback to test. A pellet that misses is a fast projectile, so lines are aimed
+  so that misses leave the inner system or fall toward the Sun, never across busy orbits. At high
+  relative speeds pellets may heat and vaporise in the coil before they stop; then the receiver
+  becomes a magnetic field that reflects pellet plasma, the coupling Kare's SailBeam study worked out
+  for microsails turned to plasma.
 scene:
   kind: machine
   focus: A ship's receiving coil catching a line of glinting pellets from a distant station.

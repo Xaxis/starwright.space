@@ -12,32 +12,38 @@ summary: >-
 target: >-
   Keep the heat of human energy use under {heat-limit} on average and within safe limits in each
   region, measured and counted alongside greenhouse gases, while Earth's own energy use approaches
-  {earth-cap} and the rest moves to space.
+  {earth-cap} and the rest moves to space, with a way to make room for more by shading the planet if
+  the world chooses to.
 exists:
-  - text: Forster and colleagues found Earth's energy imbalance more than doubled to 0.89 W per square metre over 2005 to 2024, with human-made warming of 1.36 °C in 2024.
-    url: https://essd.copernicus.org/articles/17/2641/2025/
-    year: 2025
+  - text: The 2025 update of the climate indicators by Forster and colleagues puts Earth's energy imbalance at 1.04 W per square metre over 2006 to 2025, up from 0.40 over 1976 to 1995, and human-induced warming at 1.37 °C in 2025.
+    url: https://doi.org/10.5194/essd-18-3889-2026
+    year: 2026
   - text: Loeb and colleagues showed satellite and ocean measurements agree that Earth's energy imbalance rose by about 0.5 W per square metre per decade from 2005 to 2019.
     url: https://doi.org/10.1029/2021GL093047
     year: 2021
   - text: Flanner estimated human waste heat at 0.028 W per square metre averaged over the globe but 0.39 over the continental United States and 0.68 over western Europe.
     url: https://doi.org/10.1029/2008GL036465
     year: 2009
-  - text: Roger Angel proposed a sunshade at the Sun-Earth L1 point that blocks 1.8 percent of sunlight with trillions of light flyers, about 20 million tonnes in all.
+  - text: Roger Angel proposed a sunshade at the Sun-Earth L1 point that blocks 1.8 percent of sunlight with 16 trillion light flyers, about 20 million tonnes in all, lasting about 50 years.
     url: https://doi.org/10.1073/pnas.0608163103
     year: 2006
   - text: Bromley, Khan and Kenyon found that dust launched from the Moon toward L1 could shade Earth efficiently, since lunar grains are near the ideal size for scattering sunlight.
     url: https://journals.plos.org/climate/article?id=10.1371/journal.pclm.0000133
     year: 2023
-  - text: Szapudi proposed a sunshade tethered to a counterweight near L1, needing orders of magnitude less mass, almost all of it lunar dust or asteroid rock.
+  - text: Szapudi proposed a sunshade tethered to a counterweight near L1 that could cut the mass needed by orders of magnitude, with only 1 percent of it from Earth.
     url: https://doi.org/10.1073/pnas.2307434120
     year: 2023
+  - text: The Planetary Sunshade Institute's 2026 survey of space sunshades, funded by ARIA, judges that one could be built with no new physics but is realistically 20 to 40 years away.
+    url: https://planetarysunshade.org/publications/download-the-2026-space-reflector-baseline-survey/
+    year: 2026
 gap: >-
-  No one counts waste heat as a climate forcing; inventories track carbon, not heat. Heat is already
-  concentrated where energy is used, over cities and industrial regions, and it will grow most there.
-  Every sunshade idea is on paper, and none has flown even a test flake. A world near its ceiling
-  needs both an account of its heat and a way to make room for it.
-inventions: [glass-parasol]
+  No one counts waste heat as a climate forcing; inventories track carbon, not heat, and the only
+  global maps of it are research datasets for single years. Heat is already concentrated where
+  energy is used: Flanner put it at 0.68 W per square metre over western Europe, above the plan's
+  global limit of {heat-limit}, and it will grow most there. Every sunshade is on paper; the most
+  thorough survey puts one decades away, and none has flown even a test flake. A world near its
+  ceiling needs both an account of its heat and a way to make room for it.
+inventions: [heat-census, glass-parasol]
 scene:
   kind: globe
   focus: Earth near its ceiling, its cities and deserts glowing with use, a ring of industry overhead.

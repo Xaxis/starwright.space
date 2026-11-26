@@ -6,36 +6,42 @@ needs: [automated-factories]
 summary: >-
   As factories run themselves and energy gets cheap, more of what the economy makes comes from
   machines and less from wages. That can make everyone richer, or leave the gains with whoever owns
-  the machines while work dries up for everyone else. The climb needs everyone to be better off as it
-  goes, or many will refuse it, and people need a stake in the industry, not only a job in
-  it.
+  the machines while work dries up for everyone else. The climb needs everyone to be better off as
+  it goes, or many will refuse it, and people need a stake in the industry as well as jobs in it.
 target: >-
   Every person receives a growing, unconditional share of the income from automated industry and
-  from the natural resources the climb uses, enough to cover the basics of a good life by the time
-  machines do most of the work.
+  from the natural resources the climb uses: at least 100 dollars a year in today's money by
+  {year-k08}, when Earth uses {power-k08}, and enough to cover the basics of a good life, several
+  thousand dollars a year, by the time machines do most of the work.
 exists:
-  - text: Alaska has paid every resident a dividend from its oil fund each year since 1982, from 1,000 dollars in the first year to 1,702 dollars in 2024.
+  - text: Alaska has paid every resident an equal dividend from its oil fund each year since 1982; it was 1,702 dollars in 2024 and 1,000 dollars in 2025.
     url: https://pfd.alaska.gov/Division-Info/summary-of-dividend-applications-payments
     year: 2025
-  - text: Norway's oil fund was worth 22,014 billion kroner at the end of September 2026, saved for its people and spent only at its expected real return of about 3 percent a year.
+  - text: Norway's oil fund, saved for its people, was worth 22,014 billion kroner at the end of September 2026.
     url: https://www.nbim.no/en/investments/the-funds-value/
     year: 2026
   - text: A randomized study in Kenya found that cash transfers of about 1,000 dollars to over 10,500 households raised local economic activity by 2.5 dollars for each dollar given (Egger and colleagues, 2022).
     url: https://doi.org/10.3982/ECTA17945
     year: 2022
-  - text: Acemoglu and Restrepo found in 2020 that each additional robot per thousand US workers lowered the employment-to-population ratio by 0.2 percentage points and wages by 0.42 percent.
-    url: https://doi.org/10.1086/705716
-    year: 2020
-  - text: GiveDirectly had sent over 1 billion dollars in cash directly to more than 2 million people living in poverty by 2026.
-    url: https://www.givedirectly.org/about/
+  - text: In a US trial, 1,000 low-income people got 1,000 dollars a month with no conditions for three years; their earnings fell by about 1,900 dollars a year and they worked 1 to 2 hours a week less.
+    url: https://www.nber.org/papers/w32719
+    year: 2024
+  - text: Iran began monthly cash deposits to every family in 2011, worth 29 percent of median household income; a later study found no fall in work except among young people.
+    url: https://doi.org/10.1016/j.jdeveco.2018.08.005
+    year: 2018
+  - text: The ILO estimates that labour's share of world income fell from 53 percent in 2014 to 52.4 percent in 2024, about 1 trillion dollars less for workers in 2024.
+    url: https://www.ilo.org/sites/default/files/2025-05/WESOUpdate_May2025_1.pdf
+    year: 2025
+  - text: US payroll data to June 2026 show employment of 22 to 25 year olds in the jobs most exposed to AI 19 percent below its trend, while older workers in the same jobs show no such gap.
+    url: https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/
     year: 2026
-  - text: Mongolia's Human Development Fund paid cash from mining revenue to every citizen, 21,000 tugriks, about 15 dollars, each for 2011.
-    url: https://www.brookings.edu/articles/mongolias-quest-to-balance-human-development-in-its-booming-mineral-based-economy/
-    year: 2012
 gap: >-
-  Resource dividends exist in a few places and cash transfers are well tested, but none is tied to
-  the growth of automated industry, and none spans countries. As automation spreads, nothing yet
-  gives people everywhere a share of what the machines make.
+  Machines are starting to take work: labour's share of world income fell by more than half a point
+  in a decade, and young workers in the jobs AI does best are already a fifth below trend. Resource
+  dividends exist in a few places, and cash transfers are well tested, raising local activity and
+  barely denting work, but none is tied to the growth of automated industry, and none spans
+  countries. Alaska's dividend swings with oil and politics, from 1,702 to 1,000 dollars in a year.
+  As automation spreads, nothing yet gives people everywhere a share of what the machines make.
 inventions: [heritage-dividend]
 scene:
   kind: network

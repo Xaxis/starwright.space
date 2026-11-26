@@ -10,30 +10,38 @@ summary: >-
   for budgets on Earth.
 target: >-
   By the time the seed factory starts work in {seed-year}, markets in Earth orbit and on the Moon
-  where propellant, water, oxygen, metal and power are bought and sold at published prices, with
-  enough private demand that space industry can double every {doubling-time}.
+  where propellant, water, oxygen, metal and power are bought and sold at published prices,
+  thousands of tonnes a year, with enough private demand that space industry can double every
+  {doubling-time}.
 exists:
-  - text: The Space Foundation put the global space economy at 613 billion US dollars in 2024, up 7.8 percent on the year before.
-    url: https://satellitemarkets.com/market-trends/space-report-2025-q2-highlights-record-us-613-bil-global-space-economy-2024
-    year: 2025
-  - text: The World Economic Forum and McKinsey projected in 2024 that the space economy would triple to 1.8 trillion dollars by 2035.
-    url: https://weforum.org/press/2024/04/space-economy-set-to-triple-to-1-8-trillion-by-2035-new-research-reveals
+  - text: The Space Foundation put the global space economy at 686 billion US dollars in 2025, up 12 percent on the year before, with commercial activity 79 percent of it.
+    url: https://www.spacefoundation.org/wp-content/uploads/2026/07/SF-GSE-REPORT-2026July-FOR-RELEASE.pdf
+    year: 2026
+  - text: The World Economic Forum and McKinsey projected in 2024 that the space economy would reach 1.8 trillion dollars by 2035, from 630 billion in 2023.
+    url: https://www3.weforum.org/docs/WEF_Space_2024.pdf
     year: 2024
   - text: In 2018 NASA started Commercial Lunar Payload Services, buying deliveries to the Moon from private landers under contracts worth up to 2.6 billion dollars over ten years.
     url: https://www.nasa.gov/news-release/nasa-announces-new-partnerships-for-commercial-lunar-payload-delivery-services/
     year: 2018
-  - text: In 2020 NASA agreed to buy lunar regolith collected by four companies, for between 1 and 15,000 dollars each, to set a precedent for trading resources gathered in space.
+  - text: In 2020 NASA agreed to buy lunar regolith collected by four companies for between 1 and 15,000 dollars each, 25,001 dollars in all, with ownership passing to NASA on the Moon.
     url: https://www.nasa.gov/news-release/nasa-selects-companies-to-collect-lunar-resources-for-artemis-demonstrations/
     year: 2020
-  - text: In 2016 United Launch Alliance said it would pay about 3,000 dollars a kilogram for propellant delivered to low Earth orbit and about 500 dollars a kilogram on the lunar surface.
+  - text: In May 2025 the US Department of Energy agreed to buy three litres of helium-3 gathered on the Moon from Interlune, for delivery by April 2029, the first government purchase of a natural resource from space.
+    url: https://www.interlune.space/press-release/u-s-department-of-energy-buys-helium-3-from-u-s-space-resources-company-interlune-in-historic-agreement
+    year: 2025
+  - text: In September 2025 Bluefors agreed to buy up to 10,000 litres of lunar helium-3 a year from Interlune, for delivery from 2028 to 2037.
+    url: https://www.interlune.space/press-release/bluefors-to-source-helium-3-from-the-moon-with-interlune-to-power-next-phase-of-quantum-industry-growth
+    year: 2025
+  - text: In 2016 United Launch Alliance said it would pay about 3,000 dollars a kilogram for propellant in low Earth orbit and 1,000 dollars a kilogram at L1, and put the going rate on the lunar surface at about 500 dollars a kilogram.
     url: https://www.space.com/33297-satellite-refueling-business-proposal-ula.html
     year: 2016
-  - text: A 2011 NASA cost model estimated Falcon 9 at about 4 billion dollars to develop by traditional NASA methods, and 1.7 billion with a commercial approach.
-    url: https://www.nasa.gov/pdf/586023main_8-3-11_NAFCOM.pdf
-    year: 2011
 gap: >-
-  Almost every buyer of space goods today is a government or a company on Earth. No one has yet sold
-  a tonne of anything made in space to someone else in space, and the first resource plants cannot
+  Almost every buyer of space goods today is a government or a company on Earth: four fifths of the
+  686 billion dollar space economy is commercial, but nearly all of it sells services to the ground.
+  The first contracts for a resource from the Moon, three litres of helium-3 for the US government
+  and up to 10,000 litres a year for Bluefors, are for delivery to Earth. No one has yet sold a
+  tonne of anything made in space to someone else in space, and transferring propellant between
+  ships, which every depot needs, was still a plan in late 2026. The first resource plants cannot
   borrow against promises that are not binding contracts.
 inventions: [depot-futures]
 scene:

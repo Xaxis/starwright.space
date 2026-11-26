@@ -22,12 +22,19 @@ principle: >-
 buildsOn:
   - text: Solar Foods' Factory 01, opened in 2024, making up to 160 tons a year of Solein, a protein grown on hydrogen, carbon dioxide and air.
     url: https://solarfoods.com/factory/
-  - text: Cupriavidus necator, the knallgas bacterium, studied for decades, including as a protein source for life support in space.
-    url: https://en.wikipedia.org/wiki/Cupriavidus_necator
+    year: 2024
+  - text: A review of Cupriavidus necator, the knallgas bacterium studied for decades as a food and life-support organism, whose dry matter can be about three-quarters protein.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9996702/
+    year: 2020
   - text: ALLFED's research on resilient foods, including single-cell protein, for an abrupt reduction of sunlight.
     url: https://allfed.info/
-  - text: Xia and colleagues' estimate of how far crops would fall after a nuclear war, the scale of the gap to fill.
+    year: 2026
+  - text: Garcia Martinez and colleagues' 2021 estimate that hydrogen-fed single-cell protein could meet 3 to 10 percent of the world's protein needs within a year of a catastrophe.
+    url: https://doi.org/10.1016/j.spc.2020.08.011
+    year: 2021
+  - text: Xia and colleagues' 2022 estimate of how far crops would fall after a nuclear war, the scale of the gap to fill.
     url: https://www.nature.com/articles/s43016-022-00573-0
+    year: 2022
 experiment:
   goal: Show that a hydrogen-fed protein culture can follow a grid's surplus on and off for months without losing yield or dying.
   setup: >-
@@ -42,27 +49,27 @@ experiment:
 path:
   - phase: bench
     what: A 300-litre fermenter following a replayed grid surplus signal.
-    scale: Kilograms of protein a week.
+    scale: About 5 kg of protein a week.
     proves: The culture survives stop and start with its yield intact.
   - phase: prototype
     what: A 20 cubic metre plant beside a wind farm, running on its real surplus.
-    scale: Tens of tonnes a year.
+    scale: About 50 tonnes a year.
     proves: Surplus power pays for the plant, and the product passes as animal feed.
   - phase: pilot
     what: A plant selling feed in normal years, with a drill in which it runs flat out for a month.
-    scale: About a thousand tonnes a year.
+    scale: About 1,000 tonnes a year.
     proves: Output can jump several times over in days when needed.
   - phase: first-plant
     what: Plants across one grid region sized to give its people their protein for a year if crops fail.
-    scale: About a hundred thousand tonnes a year.
+    scale: About 100,000 tonnes a year.
     proves: A region can survive a year without summer on its own power.
   - phase: fleet
     what: Larders in every grid region, with designs and parts stocked to triple their number in a year.
-    scale: Millions of tonnes a year.
+    scale: Some 5 million tonnes a year.
     proves: The world holds standby food that does not depend on the Sun.
   - phase: civilization
     what: Enough standby capacity to give everyone protein through years without summer, and the same plants feeding habitats in space.
-    scale: Under a terawatt of electricity when called on.
+    scale: Under 1 terawatt of electricity when called on.
     proves: No darkened sky can starve the climb.
 risks: >-
   Novel foods need approval and acceptance, and bacterial protein carries nucleic acids that must be

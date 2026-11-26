@@ -21,12 +21,16 @@ principle: >-
 buildsOn:
   - text: Pyroprocessing, the molten-salt electrorefining in lithium and potassium chloride pioneered at Argonne National Laboratory to separate the elements of spent nuclear fuel.
     url: https://en.wikipedia.org/wiki/Pyroprocessing
+    year: 1994
   - text: Rice University's flash Joule heating, which pulls precious metals from e-waste by evaporation, a candidate first step for the residue.
     url: https://www.nature.com/articles/s41467-021-26038-9
+    year: 2021
   - text: The FFC Cambridge process, electrolysis in molten calcium chloride, now run commercially by Metalysis to make metal powders.
     url: https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Turning_Moon_dust_into_oxygen
+    year: 2020
   - text: The Global E-waste Monitor's measure of what is lost today, the baseline the Staircase must beat.
     url: https://ewastemonitor.info/wp-content/uploads/2024/03/GEM_2024_18-03_web_executive-Summery.pdf
+    year: 2022
 experiment:
   goal: Show that one molten-salt cell can split mixed circuit board scrap into its main metals at saleable purity.
   setup: >-
@@ -44,7 +48,7 @@ path:
     proves: Clean splits between neighbouring metals and a salt that survives real scrap.
   - phase: prototype
     what: A continuous cell with automatic basket feed and cathode harvesting, adding a magnet-scrap line for the rare earths.
-    scale: About a tonne a day.
+    scale: About 1 tonne a day.
     proves: Weeks of unattended running, and rare earths recovered as metal.
   - phase: pilot
     what: A recycling plant taking a city's e-waste.
@@ -56,11 +60,11 @@ path:
     proves: One process can serve most mixed scrap.
   - phase: fleet
     what: Staircases beside every large city, fed by automated disassembly lines.
-    scale: Most of the world's e-waste.
+    scale: Of order 60 million tonnes of e-waste a year.
     proves: Electronics become an ore body that renews itself.
   - phase: civilization
     what: The same cells refining scrap and worn-out machines in space factories, where nothing can be thrown away.
-    scale: Every closed industry off Earth.
+    scale: The scrap of an industry doubling every {doubling-time}.
     proves: Industry beyond Earth can recycle what it cannot resupply.
 risks: >-
   Plastic and halogen residues may poison the salt faster than it can be cleaned; better

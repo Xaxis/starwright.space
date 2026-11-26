@@ -10,8 +10,8 @@ summary: >-
   weighing {swarm-full-mass}, built from {swarm-full-mined} of processed rock, {swarm-mass-share} of
   the mass the industry can reach. The model reaches Type II in {year-type-2}.
 target: >-
-  Collectors around the Sun at {swarm-radius} that catch most of its light, harnessing {type-2-power}
-  by {year-type-2} and {sun-harnessed} when closed, each using its power where it is made or sending
+  Collectors around the Sun at {swarm-radius} that catch most of its light, turning it into
+  {type-2-power} by {year-type-2} and {sun-harnessed} when closed, each using its power where it is made or sending
   it on, and all of them kept flying for as long as the Sun shines.
 exists:
   - text: Freeman Dyson proposed in 1960 that an advanced civilization would surround its star with a loose swarm of collectors, not a shell, and that its waste heat would shine at about 10 microns.
@@ -35,8 +35,8 @@ exists:
 gap: >-
   A swarm exists only on paper. No collector has been designed in detail for the sunlight and heat at
   {swarm-radius}, nor for decades of solar wind. There is no plan for using {type-2-power}: it cannot
-  all be wired anywhere, so it must be used in place or beamed. A trillion collectors must fly without
-  colliding, and the swarm must not darken or heat the Earth.
+  all be wired anywhere, so it must be used in place or beamed. If each collector is a kilometre across, about
+  10^17 of them must fly without colliding, and the swarm must not darken or heat the Earth.
 inventions: [cascade-collector]
 scene:
   kind: swarm

@@ -2,31 +2,46 @@ id: space-ice-mining
 title: Mining water in space
 domain: water
 stage: k09
-needs: [in-space-resources, cheap-launch]
+needs: [in-space-resources, cheap-launch, lunar-power]
 summary: >-
-  Water is the most valuable resource in space. It is drink, air and radiation shielding, and split
-  into hydrogen and oxygen it is rocket propellant. Lifting it from Earth is ruinously expensive, but
-  it is already up there: as ice in the permanently shadowed craters of the Moon, in asteroids and in
-  comets. Mining that ice is what lets industry and settlement in space stop depending on Earth for
-  the one thing they need most.
+  Water is drink, air and radiation shielding, and split into hydrogen and oxygen it is rocket
+  propellant. Every kilogram lifted from Earth costs at least {launch-cost-falcon-9} to reach low
+  orbit and far more to reach the Moon. Ice already lies in the craters near the Moon's poles that
+  never see the Sun, and clays in carbon-rich asteroids hold water too. Mining it lets space industry,
+  from the first seed factory in {seed-year}, stop depending on Earth for the thing it uses most.
 target: >-
-  Find, extract and purify water ice from the Moon, asteroids and comets at the scale industry and
-  settlement need, and split part of it into propellant, so that water in space comes from space.
+  Water from the Moon's cold traps and from asteroids at thousands of tonnes a year by {seed-year},
+  rising to millions of tonnes a year as space industry grows, at under 3 kWh per kilogram and cheaper
+  where it is used than water shipped from Earth.
 exists:
-  - text: NASA's in-situ resource utilization programme develops and tests hardware for extracting water and other volatiles from regolith, with analog missions validating the equipment.
-    url: https://www.nasa.gov/mission/in-situ-resource-utilization-isru/
-    year: 2024
-  - text: Karman+ is developing asteroid mining to sell water as propellant in space, an early commercial bet on off-world water.
-    url: https://www.karmanplus.com/
-    year: 2024
-  - text: ESA's Space Resources Strategy sets out Europe's plan to use off-world materials, water foremost, as the basis for a space economy.
-    url: https://sci.esa.int/documents/34161/35992/1567260390250-ESA_Space_Resources_Strategy.pdf
-    year: 2019
+  - text: LCROSS hit the shadowed floor of Cabeus crater in October 2009, and Colaprete and colleagues estimated 5.6 plus or minus 2.9 percent water ice by mass in the regolith at the impact site.
+    url: https://experts.arizona.edu/en/publications/detection-of-water-in-the-lcross-ejecta-plume/
+    year: 2010
+  - text: Li and colleagues found ice exposed in the top few millimetres of thousands of pixels within 20 degrees of both lunar poles in Chandrayaan-1 M3 data, but in only about 3.5 percent of the cold traps.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/6130389
+    year: 2018
+  - text: The Diviner instrument on NASA's Lunar Reconnaissance Orbiter measured 25 K on the floor of Hermite crater, the coldest temperature then measured in the solar system.
+    url: https://science.nasa.gov/wp-content/uploads/2024/01/lrolitho7temperaturevariation27may2014.pdf
+    year: 2013
+  - text: NASA's PRIME-1 drill and mass spectrometer reached the Moon on Intuitive Machines' Athena in March 2025, but the lander came to rest on its side and the instruments worked for about 12 of 240 planned hours, never reaching icy ground.
+    url: https://ntrs.nasa.gov/api/citations/20260003150/downloads/MSolo%20PRIME-1%20overview%20and%20results%20-%20LSSW.pdf
+    year: 2026
+  - text: In September 2025 NASA chose Blue Origin to land its VIPER ice-prospecting rover at the lunar south pole in late 2027, on the second Blue Moon MK1 lander.
+    url: https://www.nasa.gov/news-release/nasa-selects-blue-origin-to-deliver-viper-rover-to-moons-south-pole/
+    year: 2025
+  - text: China's Chang'e-7, an orbiter and lander carrying a rover and a hopper to look for water ice at the south pole, was postponed by weather from its 23 August 2026 launch with no new date set.
+    url: https://www.space.com/space-exploration/launches-spacecraft/bad-weather-delays-launch-of-chinas-historic-change-7-mission-to-moons-south-pole
+    year: 2026
+  - text: NASA's first look at the 121.6 g sample OSIRIS-REx returned from asteroid Bennu found abundant water-bearing clay minerals.
+    url: https://www.nasa.gov/news-release/nasas-bennu-asteroid-sample-contains-carbon-water/
+    year: 2023
 gap: >-
-  No one has yet mined water in space. The ice in lunar craters sits in darkness near 40 kelvin, mixed
-  through regolith in amounts still being mapped; asteroid water is locked in minerals. Extracting it
-  with machines that run cold, dusty and unattended, purifying it, and doing so at industrial rates
-  are all unproven. Every step from prospecting to the first litre of propellant is ahead.
+  No water has yet been taken from the Moon or an asteroid. The only drill to reach the south pole
+  ran for 12 hours on a lander lying on its side, and the first rover built to map the ice will not
+  land before late 2027. The best estimate of ice in one crater is uncertain by half, and exposed
+  ice shows in only one cold trap in thirty. The ground is at 25 to 40 K, in permanent darkness, so
+  machines there need power from outside and must work in cold that most electronics and lubricants
+  cannot take. Asteroid water is bound in clays and has to be baked out of the rock.
 inventions: [ice-harvester]
 scene:
   kind: moon

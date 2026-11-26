@@ -8,31 +8,36 @@ summary: >-
   {year-k08} than in all of history, and most of the growth must come in countries that use little
   energy today. Clean power is cheap to run but costly to build, so its price is mostly the price of
   money: where borrowing costs more, the same solar field yields dearer power. The climb needs
-  capital that is cheap and plentiful everywhere, not only in rich countries.
+  capital that is cheap and plentiful in every country, rich or poor.
 target: >-
   Capital for clean energy, grids and industry at a cost close to the rates rich countries pay, in
   every country, growing in step with energy use that grows at {earth-growth}, so that the world
   reaches {power-k08} by {year-k08}.
 exists:
-  - text: The IEA expected global energy investment to reach 3.3 trillion US dollars in 2025, about 2.2 trillion of it for renewables, nuclear, grids, storage, low-emission fuels, efficiency and electrification.
-    url: https://www.iea.org/reports/world-energy-investment-2025/executive-summary
-    year: 2025
+  - text: The IEA expects energy investment to reach 3.4 trillion US dollars in 2026, about 2.2 trillion of it for renewables, nuclear, grids, storage, low-emission fuels, efficiency and electrification, and 1.2 trillion for oil, gas and coal.
+    url: https://www.iea.org/files/64594543-cf6e-4fd9-8238-d3cae35daf48/WorldEnergyInvestment2026.pdf
+    year: 2026
   - text: The IEA found in 2024 that the cost of capital for utility-scale solar in emerging and developing economies outside China is well over twice that in advanced economies.
     url: https://www.iea.org/reports/reducing-the-cost-of-capital/executive-summary
     year: 2024
-  - text: TCX, a fund founded in 2007 to let lenders finance poorer countries in their own currencies, hedged in 104 currencies across 121 countries in 2026.
-    url: https://www.tcxfund.com/
+  - text: At COP29 in 2024, developed countries pledged at least 300 billion dollars a year for developing countries' climate action by 2035, within a goal of at least 1.3 trillion dollars a year from all sources.
+    url: https://news.un.org/en/story/2024/11/1157416
+    year: 2024
+  - text: TCX, founded in 2007 to let lenders finance poorer countries in their own currencies, hedged a record 2.84 billion dollars in 54 currencies in 2025, and almost 20 billion dollars since it began.
+    url: https://tcxfund.com/news-reports/tcx-announces-2025-results
     year: 2026
-  - text: Mission 300, run by the World Bank Group and the African Development Bank Group, aims to connect 300 million people in Africa to electricity by 2030.
-    url: https://www.worldbank.org/en/programs/energizing-africa
+  - text: Mission 300, run by the World Bank Group and the African Development Bank Group, aims to connect 300 million people in Sub-Saharan Africa to electricity by 2030.
+    url: https://www.worldbank.org/ext/en/energizingafrica
     year: 2024
   - text: Way, Ives, Mealy and Farmer found in 2022 that a fast transition to clean energy is likely to save many trillions of dollars against a fossil-fuel system, because clean technologies keep getting cheaper as they are built.
     url: https://doi.org/10.1016/j.joule.2022.08.009
     year: 2022
 gap: >-
-  Clean energy investment goes mostly to a few large economies. Poorer countries pay much more to
-  borrow, in currencies that can fall, so projects that would pay off are never built. Guarantees and
-  currency hedges exist but are small next to the need, and no instrument yet turns the learning
+  Clean energy investment, about 2.2 trillion dollars a year, goes mostly to a few large economies.
+  Poorer countries pay at least twice as much to borrow, in currencies that can fall, so projects
+  that would pay off are never built. The tools that address this are small next to the need: TCX
+  hedged 2.84 billion dollars in 2025, about a thousandth of a year's clean energy investment, and
+  the COP29 pledge reaches 300 billion a year only in 2035. No instrument yet turns the learning
   curve, the fact that each doubling of a technology makes it cheaper, into money up front.
 inventions: [wright-commitment]
 scene:

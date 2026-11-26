@@ -10,8 +10,10 @@ principle: >-
   the atmosphere moving slower than orbital speed, then swings up moving faster. A suborbital
   vehicle that meets the tip at its low point is carried round and released at the top, on a path to
   a higher orbit or the Moon. With a tip speed of about 3.5 km/s, the figure Boeing's HASTOL study
-  chose, the rocket has to reach only about half of orbital speed, which by the rocket equation cuts
-  its propellant by about two thirds. Each lift takes momentum and orbital energy from the tether,
+  chose, the rocket has to reach only about half of low orbit's 7.8 km/s, and because the rocket
+  equation is exponential in that speed, cutting it roughly halves the exhaust velocity needed and
+  cuts propellant by about two thirds. HASTOL sized a tether about 600 km long and roughly 90 times
+  the payload mass to throw 14 tonne payloads. Each lift takes momentum and orbital energy from the tether,
   which sinks; a tether that only lifts must be pushed back up. But lunar industry sends mass the
   other way: oxygen, metals, shielding and products bound for Earth orbit. A tether that catches that
   inbound cargo at the top of its swing and drops it at the bottom gains back what it lost. The
@@ -32,7 +34,7 @@ buildsOn:
     url: https://doi.org/10.2514/6.1991-2322
     year: 1991
   - text: ESA's YES2 deployed a 31.7 km tether in orbit in 2007, the longest yet.
-    url: https://en.wikipedia.org/wiki/Young_Engineers%27_Satellite_2
+    url: https://www.eurekalert.org/news-releases/726090
     year: 2007
 experiment:
   goal: Prove the catch, the riskiest step, with a spinning tip meeting a moving payload at relative speeds and position errors scaled from orbit.
@@ -52,23 +54,23 @@ path:
     proves: A grapple that catches reliably.
   - phase: prototype
     what: Two small satellites on a spinning 2 km tether that release and recatch a 1 kg payload in orbit.
-    scale: Kilograms.
+    scale: 1 kg payloads on a 2 km tether.
     proves: Spin control and catching in orbit.
   - phase: pilot
     what: A 100 km rotovator that throws small payloads to high orbit and catches satellites coming down, with an electrodynamic section.
-    scale: Tens of tonnes of tether, payloads of a tonne.
+    scale: 1 tonne payloads, tens of tonnes of tether.
     proves: Momentum kept by balancing up and down traffic.
   - phase: first-plant
     what: A full rotovator meeting suborbital rockets from Earth, its momentum restored by lunar cargo bound for Earth orbit.
-    scale: Hundreds of payloads a year.
+    scale: 14 tonne payloads, hundreds a year.
     proves: Launch costs fall as the tether does most of the rocket's work.
   - phase: fleet
     what: A chain of tethers in low orbit, high orbit and lunar orbit, handing cargo from suborbital launchers on Earth to the lunar surface.
-    scale: Thousands of payloads a year.
+    scale: Thousands of payloads a year, over 10,000 tonnes.
     proves: Earth and Moon traffic with little propellant.
   - phase: civilization
     what: Tether chains between every pair of worlds with steady traffic, balanced by the flows the industry already makes.
-    scale: The inner solar system.
+    scale: Over 1 million tonnes a year across the inner solar system.
     proves: Momentum, not propellant, as the currency of transport.
 risks: >-
   A tether hundreds of kilometres long is a large target for debris, and a cut sends both halves into

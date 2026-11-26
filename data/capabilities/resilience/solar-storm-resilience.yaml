@@ -14,33 +14,33 @@ target: >-
   transformer, a shared stock of spares that can replace any failed unit in days, and satellites
   that can ride out a sudden rise in drag.
 exists:
-  - text: The Carrington Event of 1 and 2 September 1859 drove currents through telegraph systems across Europe and North America until they failed, in some cases shocking their operators.
-    url: https://en.wikipedia.org/wiki/Carrington_Event
-    year: 1859
-  - text: In March 1989 a smaller storm tripped protection on the Hydro-Quebec grid and cut power to more than six million people for nine hours.
-    url: https://assets.lloyds.com/assets/pdf-solar-storm-risk-to-the-north-american-electric-grid/1/pdf-Solar-Storm-Risk-to-the-North-American-Electric-Grid.pdf
+  - text: The Carrington Event of 1 and 2 September 1859 drove currents through telegraph systems until they failed, in some cases shocking their operators.
+    url: https://www.noaa.gov/heritage/stories/five-historically-huge-solar-events
+    year: 2025
+  - text: In March 1989 a smaller storm tripped protection on the Hydro-Quebec grid and left more than six million people without power for nine hours.
+    url: https://www.spaceweather.gc.ca/info-gen/index-en.php
     year: 1989
   - text: Lloyd's and AER estimated a Carrington-level storm could leave 20 to 40 million people in the United States without power for 16 days to 1 to 2 years, at a cost of 0.6 to 2.6 trillion dollars, depending mostly on how many spare transformers exist.
     url: https://www.lloyds.com/news-and-insights/risk-reports/library/solar-storm
     year: 2013
-  - text: In February 2022 a modest G2 storm warmed the upper atmosphere; 38 of 49 newly launched Starlink satellites re-entered from the extra drag.
-    url: https://en.wikipedia.org/wiki/Starlink
+  - text: In February 2022 a modest geomagnetic storm warmed the upper atmosphere, and 38 of 49 newly launched Starlink satellites re-entered from the extra drag.
+    url: https://doi.org/10.1029/2022SW003193
     year: 2022
-  - text: The storm of 10 and 11 May 2024 reached G5, the top of NOAA's scale, the most intense since 2003.
-    url: https://en.wikipedia.org/wiki/May_2024_solar_storms
+  - text: The storm of 10 and 11 May 2024 reached G5, the top of NOAA's scale and the most intense geomagnetic storm since 2003.
+    url: https://science.nasa.gov/science-research/heliophysics/how-nasa-tracked-the-most-intense-solar-storm-in-decades/
     year: 2024
-  - text: NOAA's SOL-1 (formerly SWFO-L1) launched on 24 September 2025 to watch the solar wind from the Sun-Earth L1 point, upstream of Earth.
-    url: https://en.wikipedia.org/wiki/Space_Weather_Follow_On-Lagrange_1
-    year: 2025
-  - text: NERC's standard TPL-007-4 requires North American grid planners to assess how their systems perform during geomagnetic disturbance events.
-    url: https://www.nerc.com/pa/Stand/Reliability%20Standards/TPL-007-4.pdf
-    year: 2020
+  - text: NOAA's SOLAR-1 (formerly SWFO-L1) launched on 24 September 2025 to watch the solar wind from the Sun-Earth L1 point, upstream of Earth, and reached L1 in early 2026.
+    url: https://www.nesdis.noaa.gov/news/swfo-l1-renamed-solar-1-reaches-final-destination-one-million-miles-earth
+    year: 2026
+  - text: A 2026 US national laboratory report found lead times for large power transformers stretching up to four years, so a storm that destroys dozens could not be repaired quickly.
+    url: https://www.osti.gov/servlets/purl/3363379
+    year: 2026
 gap: >-
   Warning from L1 is less than an hour. Few grids have blocking devices on their transformers, and
   large transformers are built to order, so a storm that destroys dozens could leave regions dark
   for months. Satellites in low orbits have little margin for a jump in drag. As space industry
   grows, more of the climb sits outside the atmosphere that shields the ground.
-inventions: []
+inventions: [sail-sentinel]
 scene:
   kind: globe
   focus: Aurora over the poles as a storm arrives, and the grid holding its lights beneath it.

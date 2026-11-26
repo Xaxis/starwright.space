@@ -1,7 +1,7 @@
 id: compute-leaf
 title: The Compute Leaf
 domain: computation
-for: [orbital-compute]
+for: [orbital-compute, compute-radiators]
 pitch: >-
   A computer shaped like a leaf: a thin sheet with solar cells on its face and hundreds of small
   chips spread across its back, so the sheet that catches the light also sheds the heat. No pumps,
@@ -13,23 +13,26 @@ principle: >-
   ({stefan-boltzmann}) puts a dark sheet with absorptance 0.9 and emissivity 0.85 near 336 K, a
   temperature chips are happy at, whatever share of the light its cells turn into electricity. The
   catch is spreading heat: a big chip in the middle of a thin sheet would cook, because heat cannot
-  flow far through a film tens of microns thick. So the leaf carries hundreds of small chiplets, each
-  of about a watt, at a few centimetres' pitch across its back, each over its own patch of cells and
-  radiator, with a graphite film to spread its heat; a chiplet then sits within about ten kelvin
-  of the sheet. Neighbours talk through printed wiring; leaves talk through free-space optics, flying
-  in formation a few hundred metres apart. Compute scales with area, like the light itself, at a few
-  hundred watts per square metre, and with films near {ikaros-density} the mass per watt is set by
-  the chips, not by radiators.
+  flow far through a film tens of microns thick. Thin-film cells turn 15 to 20 percent of the light
+  into electricity, about 200 to 270 W per square metre, so the leaf carries hundreds of small
+  chiplets of about half a watt each, at 5 cm pitch across its back, each over its own 25 square
+  centimetres of cells and radiator. A graphite film 25 microns thick, conducting about a thousand
+  watts per metre-kelvin along its plane, spreads each chiplet's half watt with a rise of about five
+  kelvin, so every chiplet sits within about ten kelvin of the sheet. Neighbours talk through
+  printed wiring; leaves talk through free-space optics, flying in formation a few hundred metres
+  apart. Compute scales with area, like the light itself, at about two hundred watts per square
+  metre, and with films near {ikaros-density} the mass per watt is set by the cells and chips, not
+  by radiators.
 buildsOn:
   - text: Google's Project Suncatcher design of tight clusters of TPU satellites joined by optical links, with 1.6 Tbit/s shown between one transceiver pair on the bench.
     url: https://research.google/blog/exploring-a-space-based-scalable-ai-infrastructure-system-design/
     year: 2025
-  - text: Starcloud-1, the first data-centre GPU in orbit, and Starcloud's white paper sizing radiators and arrays for gigawatt orbital computing.
+  - text: Starcloud's white paper on orbital data centres, which works out that a 1 m plate at 20 °C radiates about 838 W from its two faces, three times what a square metre of solar panel generates.
     url: https://www.starcloud.com/wp
     year: 2024
-  - text: JAXA's IKAROS sail, a polyimide film of about 10 grams per square metre carrying thin-film solar cells between planets.
-    url: https://en.wikipedia.org/wiki/IKAROS
-    year: 2010
+  - text: JAXA's IKAROS, a spinning sail 14 m by 14 m and 7.5 µm thick that flew past Venus in 2010 and generated power from thin-film solar cells on the sail itself.
+    url: http://www.isas.jaxa.jp/e/forefront/2011/tsuda/index.shtml
+    year: 2011
   - text: Trillium TPUs, radiation tested by Google to a five-year orbital dose without permanent failure.
     url: https://arxiv.org/abs/2511.19468
     year: 2025
@@ -39,35 +42,36 @@ buildsOn:
 experiment:
   goal: Show that a sheet of distributed chiplets can collect its own power and shed its own heat in vacuum and simulated sunlight, with no radiator and no fluid.
   setup: >-
-    A 1 m by 1 m leaf: flexible thin-film solar cells on a polyimide sheet, with 400 small
-    processor chiplets of about 1 W each bonded across the back at 5 cm pitch on graphite spreader
-    film, wired to their neighbours. It hangs in a thermal vacuum chamber with a cold shroud and a
-    solar simulator, and runs a distributed inference workload continuously. An infrared camera maps
-    its temperature; the chiplets log their own.
+    A 1 m by 1 m leaf: flexible thin-film solar cells on a polyimide sheet, with 400 small processor
+    chiplets of about half a watt each bonded across the back at 5 cm pitch on 25 µm graphite
+    spreader film, wired to their neighbours. It hangs in a thermal vacuum chamber with a shroud
+    cooled by liquid nitrogen and a solar simulator set to one sun outside the atmosphere, and runs
+    a distributed inference workload continuously. An infrared camera maps its temperature; the
+    chiplets log their own.
   measure: Temperature of every chiplet and of the sheet; electrical power collected; computing done per watt and per kilogram; failures and slowdowns over 500 hours.
-  succeedsIf: Every chiplet stays within 20 K of the sheet's average, the leaf sustains at least 200 W of computing per square metre for 500 hours with no radiator or fluid, and the whole leaf weighs under 0.5 kg per square metre.
+  succeedsIf: Every chiplet stays within 20 K of the sheet's average, the leaf powers at least 150 W of chiplets per square metre from its own cells for 500 hours with no radiator or fluid, and the whole leaf weighs under 0.5 kg per square metre.
   costUsd: 1200000
   months: 12
 path:
   - phase: bench
     what: The 1 m² leaf in a thermal vacuum chamber.
-    scale: One square metre, a few hundred watts.
+    scale: 1 m², 400 chiplets, about 200 W.
     proves: Power, compute and heat can share one sheet.
   - phase: prototype
     what: A 10 m² leaf on a rideshare satellite, running workloads sent from the ground.
-    scale: Kilowatts, one leaf.
+    scale: 10 m², 4,000 chiplets, about 2 kW.
     proves: Leaves survive radiation, thermal cycling and debris in orbit.
   - phase: pilot
     what: A hundred leaves in formation, linked by lasers into one machine.
-    scale: Hundreds of kilowatts.
+    scale: 100 leaves of 10 m², about 200 kW.
     proves: Many leaves can train one model together.
   - phase: first-plant
-    what: Megawatt clusters of leaves in sun-synchronous orbit, serving customers on the ground.
-    scale: Megawatts, thousands of leaves.
+    what: Clusters of larger leaves in sun-synchronous orbit, serving customers on the ground.
+    scale: 500 leaves of 100 m², about 10 MW.
     proves: The cost per operation beats computing on Earth.
   - phase: fleet
-    what: Gigawatts of leaves, built from cells and chiplets made in orbital and lunar factories.
-    scale: Gigawatts, from {year-k09}.
+    what: Leaves built from cells and chiplets made in orbital and lunar factories.
+    scale: About 5 km² of leaves, 1 GW, from {year-k09}.
     proves: Orbital computing grows with launch and space industry, not with Earth's grid.
   - phase: civilization
     what: Collectors in the swarm that compute where they catch the light, so the swarm itself is the computer.

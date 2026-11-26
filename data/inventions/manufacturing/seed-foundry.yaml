@@ -12,22 +12,32 @@ principle: >-
   circuits), all of which can come from one regolith melt split by electrolysis into oxygen, iron,
   silicon, aluminium and glass. Every machine is a combination of those parts. Electronics are the
   exception: the seed brings a stock of chips, and each copy imports a small, falling share of them
-  by mass, while its own fab learns to make coarse transistors from silicon on glass. The doubling
-  time is then the time to process its own mass through the melt, about a year per hundred tonnes at
-  the megawatt a seed collects.
+  by mass, while its own fab learns to make coarse transistors from silicon on glass. Energy does not
+  set the doubling time. Melting a tonne of regolith takes about 2 GJ, half a megawatt-hour, and
+  splitting the third of it that becomes metal and silicon takes two or three megawatt-hours more, so a
+  tonne of copy needs roughly 3 MWh, three hours of a megawatt of sunlight. A seed could melt and
+  reduce its own mass in weeks. What sets the doubling, held at {doubling-time} in the model, is
+  machine time: the hours casters, winders, printers and arms take to turn that melt into finished,
+  assembled parts. That is the number the bench loop exists to measure.
 buildsOn:
   - text: NASA's 1980 lunar factory study, its 100-tonne seed and its closure analysis.
-    url: https://ntrs.nasa.gov/citations/19830007077
+    url: https://ntrs.nasa.gov/api/citations/19830007081/downloads/19830007081.pdf
+    year: 1980
   - text: Molten regolith electrolysis, demonstrated to make oxygen and molten iron and silicon from lunar simulant (Sadoway, MIT; Boston Metal).
     url: https://news.mit.edu/2013/steel-without-greenhouse-gas-emissions-0508
+    year: 2013
   - text: RepRap's self-copy of its printed parts, the first open measure of closure.
     url: https://reprap.org/wiki/RepRap
-  - text: Cast basalt (Schmelzbasalt), already made industrially from melted volcanic rock for wear-resistant chutes, pipes and liners.
-    url: https://de.wikipedia.org/wiki/Schmelzbasalt
-  - text: Basalt fibre, spun industrially from molten basalt, the model for the foundry's glass fibre.
-    url: https://en.wikipedia.org/wiki/Basalt_fiber
+    year: 2025
+  - text: Ribbe's 1914 patent for cast basalt, in which basalt, melting between 880 and 1,300 degrees, is cast and then held at about 800 degrees until fully crystallised and cooled slowly, the model for the foundry's cast stone.
+    url: https://patents.google.com/patent/US1108007A/en
+    year: 1914
+  - text: Continuous basalt fibre, drawn industrially from melted crushed rock onto a reel, the model for the foundry's glass fibre.
+    url: https://patents.google.com/patent/US8042363B2/en
+    year: 2011
   - text: Ellery's 3D-printed motors and the universal constructor programme at Carleton University.
     url: https://carleton.ca/ceser/wp-content/uploads/Self-Replicating-Machines-on-the-Moon.pdf
+    year: 2018
 experiment:
   goal: Measure closure and doubling time for a whole, if small, self-copying loop on Earth, fed only lunar simulant and electricity.
   setup: >-
@@ -43,11 +53,11 @@ experiment:
 path:
   - phase: bench
     what: The one-tonne loop on Earth, on lunar simulant.
-    scale: One copy, about a tonne.
+    scale: 1 tonne, 1 copy.
     proves: Closure above 80 percent by mass, and a measured doubling time.
   - phase: prototype
     what: A ten-tonne loop that builds its own chip fab, still on Earth.
-    scale: Ten tonnes, two generations.
+    scale: 10 tonnes, 2 generations.
     proves: Coarse electronics made in the loop; closure above 95 percent.
   - phase: pilot
     what: The first seed landed on the Moon, at about {seed-mass}.
@@ -55,11 +65,11 @@ path:
     proves: The loop runs in lunar vacuum, dust and night, and doubles on schedule.
   - phase: first-plant
     what: A thousand seeds' worth of industry, ten doublings on, making collectors and mass drivers as well as copies.
-    scale: About a thousand times the seed.
+    scale: About 100,000 tonnes, 1,000 times the seed.
     proves: The industry can split its output between growth and useful product.
   - phase: fleet
     what: Seeds sent to the asteroids and to Mercury, each starting its own lineage.
-    scale: Industry across the inner solar system.
+    scale: About 5 billion tonnes by {year-planet}.
     proves: Lineages adapt to new rock and new light without help from Earth.
   - phase: civilization
     what: The industry that builds the swarm, {swarm-full-mined} of processed mass.

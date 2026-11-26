@@ -4,35 +4,48 @@ domain: water
 stage: k08
 needs: [terawatt-solar-factories]
 summary: >-
-  The sea holds all the water the world could want; the cost is the energy to take the salt out.
-  Reverse osmosis has already fallen tenfold in energy since 1970, but it still runs well above the
-  physical minimum set by thermodynamics. Closing that gap, and powering what remains with cheap
-  clean electricity, turns the ocean into a limitless, affordable source of fresh water for coasts
-  and, with pipelines, for inland regions too.
+  Taking the salt out of seawater has a floor set by thermodynamics: 1.06 kWh per cubic metre when
+  half the feed comes out as fresh water. The best reverse osmosis membranes now work within a factor
+  of two of it, but whole plants, with their intakes, filters and pumps, use two to six times the
+  floor. Desalination has to grow more than tenfold for everyone to have water, mostly on cheap
+  solar power that comes by day, so every kilowatt-hour saved per cubic metre and every point of
+  recovery counts.
 target: >-
-  Desalinate seawater at an energy close to the thermodynamic minimum, powered by clean electricity,
-  so that fresh water from the sea is cheap enough to end coastal water scarcity and supply farms and
-  industry.
+  Seawater desalination that uses about 2 kWh per cubic metre for the whole plant, intake to tap,
+  at 50 percent recovery or more, and that can follow the output of a solar field through the day,
+  so that it can supply about a billion cubic metres a day by {year-k08}.
 exists:
-  - text: State-of-the-art seawater reverse osmosis runs at about 2.3 kWh per cubic metre, with typical systems at 2.9 to 5.5 kWh per cubic metre, close to but still above the thermodynamic floor.
-    url: https://en.wikipedia.org/wiki/Reverse_osmosis
-    year: 2024
-  - text: Global desalination energy intensity fell to about 3 kWh per cubic metre by 2018, a tenfold improvement from 20 to 30 kWh per cubic metre in 1970, driven by better membranes and energy recovery.
-    url: https://en.wikipedia.org/wiki/Desalination
-    year: 2018
-  - text: Elimelech and Phillip's 2011 Science review of seawater desalination noted it remains more energy-intensive than conventional treatment of fresh water, and mapped where energy could still be cut.
+  - text: Elimelech and Phillip put the least energy to desalinate 35 g per litre seawater at 50 percent recovery at 1.06 kWh per cubic metre, reported a pilot reverse osmosis stage running at 1.8 kWh, and found intake, pretreatment, post-treatment and discharge add more than 1 kWh.
     url: https://doi.org/10.1126/science.1200488
     year: 2011
-  - text: The US Department of Energy's Water Security Grand Challenge set a 2030 goal to launch desalination technologies that deliver cost-competitive clean water, funding the NAWI research hub.
-    url: https://www.energy.gov/eere/water-security-grand-challenge
+  - text: The IEA puts seawater reverse osmosis at about 2.5 to 6 kWh per cubic metre.
+    url: https://www.iea.org/commentaries/wired-for-water-how-electrification-is-transforming-desalination
+    year: 2026
+  - text: Guinness World Records lists the Canary Islands Institute of Technology's DESALRO 2.0, a 2,500 cubic metre a day plant on Gran Canaria, at 1.794 kWh per cubic metre in February 2025.
+    url: https://www.guinnessworldrecords.com/world-records/649273-lowest-energy-consumption-for-a-water-desalination-plant
+    year: 2025
+  - text: In April 2026 the Saudi Water Authority reported 1.55 kWh per cubic metre from a 200,000 cubic metre a day reverse osmosis unit at Yanbu, without saying whether that covers intake and pretreatment.
+    url: https://www.tradearabia.com/News/461993/Saudi-Water-Authority-sets-new-Guinness-record-at-Yanbu-plant/CONS
+    year: 2026
+  - text: Warsinger and colleagues at MIT modelled batch and closed-circuit reverse osmosis, which raise pressure as the brine strengthens, and predicted energy savings of up to 64 and 37 percent over continuous designs for brackish water at high recovery.
+    url: https://dspace.mit.edu/handle/1721.1/105441
+    year: 2016
+  - text: Wei, Lienhard and colleagues built a batch reverse osmosis prototype that matched their model within 2.7 percent, but salt left in the system between cycles cut the predicted saving for seawater at 50 percent recovery to 11 percent.
+    url: https://dspace.mit.edu/entities/publication/27d2ba69-ca50-42b2-b0ab-4e40d2d1dca7
     year: 2020
+  - text: A University of Birmingham batch reverse osmosis rig on seawater at 65.5 percent recovery cut measured electrical energy from 3.82 to 3.42 kWh per cubic metre against continuous operation.
+    url: https://pure-oai.bham.ac.uk/ws/files/229759518/1-s2.0-S0011916424004284-main.pdf
+    year: 2024
 gap: >-
-  Real plants cannot reach the thermodynamic minimum because pretreatment, finite membrane flux and
-  pumping all add energy, and recovery is capped near half before scaling fouls the membranes. Global
-  energy demand for desalination is set to double by 2030, so without cheaper, lower-energy methods,
-  scaling the ocean's water to the world means scaling its energy bill too.
+  The best membrane stages run at 1.55 to 1.8 kWh per cubic metre, but whole plants use 2.5 to 6,
+  and the extra kilowatt-hour or more goes to intake, filtering and pumping, which membrane research
+  rarely touches. Batch designs promised savings of a third or more; seawater rigs built so far point
+  to 10 to 13 percent. Recovery is held near half: at 75 percent the brine's osmotic pressure would pass
+  100 bar, beyond what seawater membranes are built for, and scale grows on the membranes first.
+  Plants are also built to run at steady flow around the clock, so they pay for batteries or grid
+  power to use sunlight that comes for a third of the day.
 inventions: [zero-brine-desalinator]
 scene:
   kind: machine
-  focus: A reverse-osmosis stack with an energy-recovery device, pressure and flow traded to save power.
+  focus: A pressure vessel of membranes whose pressure climbs through each batch as the brine inside it strengthens.
   params: { shape: membrane, spin: 0.4 }

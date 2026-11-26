@@ -7,30 +7,42 @@ pitch: >-
   with elected councils and a tested way of settling conflicts, so no one lives under rules they
   cannot leave.
 principle: >-
-  Hirschman argued that people answer a failing organisation by exit or by voice, and that voice
-  works best when exit is credible. In a sealed habitat exit is almost impossible, so whoever runs
-  the habitat can rule unchecked, the risk of the company town in its most extreme form. The Return
-  Ticket Charter restores exit. An escrow, funded when a resident arrives, pays for a seat on a
-  regular ship home, and the habitat must keep such seats available on a published schedule. It
-  strengthens voice: elected councils; the rules Ostrom found make shared resources last (clear
-  boundaries, monitoring by members, graduated sanctions, cheap ways to settle disputes); and an
-  ombudsperson answerable to an outside body. It also draws on what polar and analogue research
-  suggests helps: privacy, varied work, a shared purpose and regular contact with home. The Rescue
-  Agreement already obliges states to return astronauts in distress; the charter turns return into a
-  standing right.
+  Hirschman described the two ways people answer a failing organisation: exit, leaving it, and
+  voice, pressing for change from within. Ordinary towns have both. In a sealed habitat exit is
+  almost impossible, so whoever runs the habitat faces no check from people leaving, the risk of
+  the company town in its most extreme form. The Return Ticket Charter restores exit. An escrow,
+  funded when a resident arrives, pays for a seat on a regular ship home, and the habitat must
+  keep such seats available on a published schedule. It strengthens voice: elected councils; the
+  rules Ostrom found make shared resources last (clear boundaries, monitoring by members,
+  graduated sanctions, cheap ways to settle disputes); and an ombudsperson answerable to an
+  outside body. It also draws on what polar and analogue research suggests helps: privacy, varied
+  work, a shared purpose and regular contact with home. The Rescue Agreement already obliges
+  states to return astronauts in distress; the charter turns return into a standing right. The
+  sizes follow from the schedule. If ships call every 6 months and up to 5 percent of residents
+  may want to leave in a year, a habitat of 1,000 holds 1,000 tickets in escrow, one for each
+  resident, but needs only about 25 free seats on each ship. The 5 percent is a planning figure,
+  close to the share of polar expedition members who meet the criteria for a psychiatric disorder;
+  the bench measures the real rate, and counts as a success only if fewer than 20 percent of
+  members use the exit.
 buildsOn:
-  - text: Hirschman's Exit, Voice, and Loyalty (1970).
+  - text: Hirschman's Exit, Voice, and Loyalty (1970), on leaving and speaking up as answers to decline.
     url: https://www.hup.harvard.edu/books/9780674276604
+    year: 1970
   - text: Ostrom's Governing the Commons (1990), on the rules that let communities manage shared resources.
     url: https://www.cambridge.org/core/product/identifier/9780511807763/type/book
+    year: 1990
   - text: The 1968 Rescue Agreement, which requires that astronauts who land in distress be returned safely and promptly.
     url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/rescueagreement.html
+    year: 1968
   - text: Palinkas and Suedfeld's 2008 review of the psychology of polar expeditions.
     url: https://doi.org/10.1016/S0140-6736(07)61056-3
+    year: 2008
   - text: The Mars-520 simulation's record of how a sealed crew's activity and sleep changed over 520 days.
     url: https://doi.org/10.1073/pnas.1212646110
+    year: 2013
   - text: HI-SEAS, the 365-day Mars habitat mission in Hawaii that ended in 2016.
     url: https://www.hawaii.edu/news/2016/08/28/global-media-document-historic-university-of-hawaii-mars-simulation/
+    year: 2016
 experiment:
   goal: Test whether a charter with a guaranteed exit, elected councils and a structured way to settle conflicts lowers conflict and distress in isolated, confined crews.
   setup: >-
@@ -44,27 +56,27 @@ experiment:
 path:
   - phase: bench
     what: The eight analogue missions.
-    scale: Eight crews, eight months each.
+    scale: 8 crews of 12 to 20, 8 months each, about 130 people.
     proves: Exit and voice reduce conflict in isolation.
   - phase: prototype
     what: The charter adopted on commercial space stations with long-stay crews.
-    scale: Tens of residents in orbit.
+    scale: About 100 residents in orbit.
     proves: It works where leaving really is hard.
   - phase: pilot
     what: The first lunar settlement founded under the charter.
-    scale: Hundreds of residents.
+    scale: About 1,000 residents.
     proves: It holds with families and turnover.
   - phase: first-plant
     what: Every habitat licensed under the federation must adopt a charter of this kind before anyone moves in.
-    scale: The first habitats for thousands.
+    scale: About 10 habitats, 10,000 residents.
     proves: The right to leave can be a condition of a licence.
   - phase: fleet
     what: Habitats across the inner system, each running its own affairs under its own charter.
-    scale: Millions of residents.
+    scale: About 1 million residents.
     proves: Many communities can govern themselves well.
   - phase: civilization
     what: Every person living off Earth does so under rules they chose and is free to leave.
-    scale: "The societies off Earth by {year-k15}"
+    scale: About 100 million residents by {year-k15}.
     proves: Life in space can be free as well as safe.
 risks: >-
   An escrow for a seat home is expensive while transport is dear; it can start as insurance pooled

@@ -4,29 +4,45 @@ domain: water
 stage: k08
 needs: []
 summary: >-
-  There is water everywhere, even in desert air, and new sorbent materials can grab it straight from
-  the atmosphere using only sunlight, with no pipes, wells or power grid. For the hundreds of millions
-  of people far from fresh water, a device that makes drinking water from dry air is a supply that
-  needs no infrastructure, and the same trick gives water to a remote base or an off-grid farm.
+  Even desert air holds water: at 20 percent humidity and 25 °C a cubic metre carries about 4.6 g.
+  Sorbents such as metal-organic frameworks and salt-laden gels soak it up in the cool night and give
+  it back as liquid when the Sun warms them, with no pipe, well or power line. For the households and
+  remote sites that no network reaches, and for dry inland places far from the sea, a panel that
+  makes drinking water from air and sunlight is a supply that needs no infrastructure.
 target: >-
-  Make clean drinking water from the air at useful daily volumes and low cost, in humidity as low as a
-  desert's, driven mainly by sunlight, so a household or a village can draw water from the atmosphere
-  without a grid or a water source.
+  A household's drinking and cooking water, about 20 litres a day, from a few square metres of panel
+  on sunlight alone, in air as dry as 20 percent humidity, at under two US cents a litre over the
+  panel's life.
 exists:
-  - text: A sunlight-driven harvester using the metal-organic framework MOF-801 captured about 2.8 litres of water per kilogram of material a day at relative humidity as low as 20 percent, regenerating at around 65 degrees Celsius.
-    url: https://yaghi.cchem.berkeley.edu/pdfPublications/WaterHarvesting.pdf
-    year: 2017
-  - text: A later air-cooled device tested in the Arizona desert, using MOF-303, delivered more than twice the water of the MOF-801 version, proving the approach works in real desert conditions.
-    url: https://yaghi.cchem.berkeley.edu/pdfPublications/NComm2018.pdf
+  - text: Fathieh, Yaghi and colleagues ran a harvester with 1.2 kg of MOF-801 in Scottsdale, Arizona, in October 2017, and got 100 g of water per kilogram of framework per day-night cycle at 5 to 40 percent humidity, with only sunlight and natural cooling.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5993474
     year: 2018
-  - text: Independent coverage confirmed the framework extracts water from thin air and endures many adsorption cycles without damage.
-    url: https://physicstoday.aip.org/news/metal-organic-framework-extracts-water-from-thin-air
-    year: 2017
+  - text: Hanikel and colleagues cycled MOF-303 several times a day and measured 0.7 L per kilogram of framework per day in the Mojave Desert at humidity as low as 10 percent, and 1.3 L indoors at 32 percent.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6813556
+    year: 2019
+  - text: Song, Yaghi and colleagues' passive MOF-303 harvester collected 114 to 210 g of water per kilogram of framework a day in Death Valley in August 2022, at 9.4 to 36 percent humidity.
+    url: https://yaghi.cchem.berkeley.edu/pdfPublications/23MOFwaterdevice.pdf
+    year: 2023
+  - text: MIT's window-sized hydrogel panel, about half a square metre, made 57 to 161 mL of water a day over a week in Death Valley at 21 to 88 percent humidity, with no power input.
+    url: https://news.mit.edu/2025/window-sized-device-taps-air-safe-drinking-water-0611
+    year: 2025
+  - text: Guan, Yu and colleagues' solar gel-fabric harvester made 4.3 L per square metre per day in the Chihuahuan Desert at about 26 percent humidity.
+    url: https://www.nature.com/articles/s44221-026-00645-6
+    year: 2026
+  - text: Swanson puts the least work to take water from air at 50 percent humidity and 25 °C at 95 kJ per kilogram, and reports that three commercial water-from-air machines tested in a laboratory made under 1.2 L per kWh, less than 5 percent of the limit.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10293683
+    year: 2023
+  - text: SOURCE Global sells solar hydropanels in pairs at about 2,950 US dollars a panel, with an average yield of 4 to 10 litres of water a day.
+    url: https://www.pv-magazine.com/2023/05/23/new-solar-panels-produce-water-from-humidity/
+    year: 2023
 gap: >-
-  The devices so far make grams to a few litres a day from small amounts of sorbent, the frameworks
-  are still costly to make in bulk, and no product yet delivers a household's water cheaply. Scaling
-  the sorbent, the daily yield and the cost by large factors, while keeping it passive, is the
-  unsolved work.
+  The best field result, 4.3 L per square metre a day, came from one research device at 26 percent
+  humidity; framework harvesters in deserts make 0.1 to 0.7 L per kilogram of sorbent a day.
+  Sunlight caps a single-stage panel: a sunny day gives about 23 MJ per square metre, and each litre
+  released takes about 2.6 MJ, so even a perfect absorber makes under 9 L. A household needs about
+  five square metres at the best yield yet shown, and commercial panels cost hundreds of US
+  dollars per litre of daily output. Salt gels can leak salt into the water, and no harvester has run for
+  years in desert dust.
 inventions: [atmospheric-harvester]
 scene:
   kind: machine

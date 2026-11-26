@@ -1,0 +1,93 @@
+id: mirror-glove
+title: The Mirror Glove
+domain: manufacturing
+for: [general-purpose-robots, automated-factories]
+pitch: >-
+  A sensing glove that skilled workers wear on their normal shifts, and a robot hand built to the
+  same shape with the same sensors, so every hour a person works becomes an hour of practice the
+  robot can learn from directly.
+principle: >-
+  Robot learning is short of data more than of methods. Lin and colleagues found in 2024 that a
+  policy's success in new places grows roughly as a power law with the number of environments and
+  objects it has trained on, and that variety matters far more than the number of demonstrations.
+  The largest open datasets are small: DROID holds 350 hours from 564 scenes. Human work is not. A
+  plant of 1,000 workers on 1,800-hour years puts in 1.8 million hours a year, about five thousand
+  DROIDs, across every task the plant does. What stops robots learning from it is the embodiment gap:
+  a human hand is not a robot hand, so video of people must be translated before a robot can use
+  it. UMI closed the gap for two-finger grippers by giving people a hand-held gripper whose
+  recordings train robot policies directly, and DexUMI did the same for dexterous hands with a
+  wearable exoskeleton. The Mirror Glove makes the match exact. The glove carries joint encoders, a
+  wrist camera and a knitted tactile array like MIT's 548-sensor glove, which cost about 10 dollars;
+  the robot hand is built to the glove's joints with the same sensors in the same places. What the
+  worker's hand sees and feels is, channel for channel, what the robot's will. A plant that equips
+  its staff records its own work in a form its robots can learn from, and its robots start each task
+  having seen it done thousands of times.
+buildsOn:
+  - text: UMI, the Universal Manipulation Interface, whose hand-held grippers record human demonstrations that train deployable robot policies directly (Chi and colleagues, 2024).
+    url: https://arxiv.org/abs/2402.10329
+    year: 2024
+  - text: DexUMI, which uses a hand exoskeleton to carry human hand skills to robot hands, reaching an average task success of 86 percent (2025).
+    url: https://arxiv.org/abs/2505.21864
+    year: 2025
+  - text: Lin and colleagues' data scaling laws for imitation learning, in which generalisation follows a rough power law in the number of environments and objects (2024).
+    url: https://arxiv.org/abs/2410.18647
+    year: 2024
+  - text: Sundaram and colleagues' knitted tactile glove, 548 sensors for about 10 dollars, which learned to recognise objects and their weight from touch (Nature, 2019).
+    url: https://www.nature.com/articles/s41586-019-1234-z
+    year: 2019
+  - text: DROID, 76,000 robot demonstrations or 350 hours across 564 scenes, among the largest open manipulation datasets (2024).
+    url: https://arxiv.org/abs/2403.12945
+    year: 2024
+  - text: Gemini Robotics On-Device, which adapts to a new task from 50 to 100 robot demonstrations, the baseline the glove must beat (2025).
+    url: https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/
+    year: 2025
+experiment:
+  goal: Show that glove data from ordinary shifts teaches a matching robot hand factory tasks from far fewer robot demonstrations than robot data alone.
+  setup: >-
+    Forty assembly workers at an appliance or electronics plant wear Mirror Gloves through three
+    months of normal shifts, about 20,000 hours, and are paid a premium for the data. Two matching
+    robot hands on industrial arms, and an open pretrained vision-language-action model fine-tuned
+    on the glove data. The hands are then given five robot demonstrations for each of 30 tasks the
+    workers do and 10 they never do. The same model fine-tuned on robot demonstrations alone is the
+    control.
+  measure: Success rate on each task; robot demonstrations needed to reach 90 percent; cycle time against the workers; how success grows with glove hours (5,000, 10,000 and 20,000); hours between human interventions; glove comfort and the workers' own speed with and without it.
+  succeedsIf: With five robot demonstrations per task, the glove-trained hand succeeds at least 90 percent of the time on 20 of the 30 familiar tasks and 3 of the 10 new ones, against at most 8 and 0 for the control, and success rises with glove hours.
+  costUsd: 4500000
+  months: 18
+path:
+  - phase: bench
+    what: One glove, one matching hand and one workcell, with lab staff doing a few tasks.
+    scale: About 300 hours of glove data.
+    proves: Glove recordings train the hand without translation.
+  - phase: prototype
+    what: The forty-worker trial on a real assembly floor.
+    scale: 20,000 hours, 40 tasks.
+    proves: Shift data cuts the robot demonstrations a task needs by ten times.
+  - phase: pilot
+    what: A whole plant of 1,000 workers wearing gloves for a year, its robots taking over the tasks they master.
+    scale: 1.8 million hours a year.
+    proves: A plant can teach its own robots from its own work.
+  - phase: first-plant
+    what: An open standard for glove and hand, and a shared dataset pooled across a hundred plants in many industries.
+    scale: About 100 million hours a year.
+    proves: Data from many plants makes hands that work in a new plant after a few demonstrations.
+  - phase: fleet
+    what: Hands built to the standard by the million a year, learning from people and from each other.
+    scale: About 1 million hands a year by {year-k08}.
+    proves: Labour stops limiting how fast the buildout can go.
+  - phase: civilization
+    what: Hands of the same lineage in the factories of the Moon and the seed lineages, trained on Earth's work.
+    scale: About 100 million hands at work, on Earth and in the seed lineages.
+    proves: The skill of human hands carries to machines anywhere.
+risks: >-
+  A glove may slow people down or be too hot for a full shift; the bench measures workers' speed and
+  comfort with and without it, and sheds sensors one at a time to find the fewest that work. Tactile
+  arrays wear out; the glove is built cheap enough to replace weekly. Workers may see the glove as
+  training their replacements; the data is paid for, governed by agreement with their unions, and
+  the first tasks handed to robots are the most injurious. A robot hand that matches the glove's
+  joints may still lack a human hand's strength and toughness; it can keep the same joints and
+  sensors with stronger actuators, and the trial measures how much the mismatch costs.
+scene:
+  kind: machine
+  focus: A worker's gloved hand and a robot hand side by side, the robot repeating each grasp.
+  params: { shape: arm, spin: 0.4 }

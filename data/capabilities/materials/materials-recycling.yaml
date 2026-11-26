@@ -34,9 +34,10 @@ exists:
     url: https://www.nature.com/articles/s41467-021-26038-9
     year: 2021
 gap: >-
-  Shredding mixes everything, and smelting recovers copper and the precious metals while losing the
-  rest to slag. There is no single process that takes mixed e-waste in and gives each element out
-  pure, and the rare earths in magnets are rarely even collected.
+  Only 22.3 percent of the 62 million tonnes of e-waste made in 2022 was documented as recycled, rare
+  earth recycling meets about 1 percent of demand, and smelting recovers copper and the precious metals
+  while losing most of the rest to slag. No single process takes mixed e-waste in and gives each
+  element out pure, and the rare earths in magnets are rarely even collected.
 inventions: [potential-staircase, protein-ladder]
 scene:
   kind: network

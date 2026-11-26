@@ -10,10 +10,10 @@ summary: >-
   decades. Keeping orbits clean means tracking every object, coordinating every manoeuvre and
   removing whatever dies up there.
 target: >-
-  Every object larger than a centimetre tracked; every operator sharing positions and planned
-  manoeuvres through one open system; every dead satellite and spent stage removed within a few
-  years of its end; and the count of debris falling year on year while launch traffic grows a
-  hundredfold.
+  Every object larger than 1 cm tracked, against the 10 cm floor of today's networks; every operator
+  sharing positions and planned manoeuvres through one open system; every dead satellite and spent
+  stage removed within 5 years of its end; and the count of debris falling year on year while launch
+  traffic grows a hundredfold.
 exists:
   - text: ESA's Space Environment Report 2025 counts about 40,000 objects tracked by surveillance networks, about 11,000 of them active payloads, and estimates over 1.2 million objects larger than 1 cm.
     url: https://www.esa.int/Space_Safety/Space_Debris/ESA_Space_Environment_Report_2025
@@ -39,11 +39,14 @@ exists:
   - text: ESA's ClearSpace-1, meant to remove the dead PROBA-1 satellite, is planned to launch in 2028.
     url: https://clearspace.today/
     year: 2026
+  - text: ESA's Zero Debris Charter, a voluntary pledge to stop adding debris by 2030, had been signed by more than 250 organisations from 35 countries by 2026, but it binds no one.
+    url: https://blogs.esa.int/spacesafety-community/2026/09/29/everything-you-need-to-know-about-the-zero-debris-charter/
+    year: 2026
 gap: >-
   Removal has only been rehearsed: no mission has yet taken a large dead object out of orbit, and
   each planned one is a whole mission for a single object, while thousands need removing. Tracking
-  below about 10 cm is patchy, and no rule binds every nation to share data or clean up after
-  itself.
+  below about 10 cm is patchy, and the pledges that exist, such as the Zero Debris Charter, are
+  voluntary, so no rule yet binds every nation to share data or clean up after itself.
 inventions: [lorentz-shepherd]
 scene:
   kind: orbit

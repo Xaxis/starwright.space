@@ -4,34 +4,49 @@ domain: water
 stage: k09
 needs: [abundant-water, closed-life-support]
 summary: >-
-  In a habitat off Earth, or a dry city on it, every litre of water must be used again. Closed water
-  recycling turns every drop of waste water, sweat, urine, wash water, humidity, back into drinking
-  water, over and over, losing almost nothing. The International Space Station already recovers most
-  of its water; the climb needs loops that approach total closure and run for years without
-  breakdown, so that a settlement's water supply is fixed, not fed.
+  A habitat off Earth cannot keep importing water, so every litre must be used again and again. Each
+  crew member takes in about 4.5 kg of water a day, in drink, food and the water the body makes, and
+  gives out the same in urine, breath, sweat and faeces. The International Space Station recovers 98
+  percent of the water it processes, but loses more through its oxygen system. On Earth, dry cities
+  such as Windhoek and Singapore already turn waste water back into drinking water. The climb needs
+  loops that lose almost nothing and run for years without tending.
 target: >-
-  Recover essentially all of the water a crew or a community uses, drinking quality and stable for
-  years, so that a closed habitat needs only to make up tiny losses rather than import water.
+  Habitat loops that recover at least 99.5 percent of their water, counting the water split for
+  oxygen, so that make-up is under 50 g per person a day; that hold drinking quality for three years
+  between overhauls with under an hour of crew time a week; and dry cities on Earth that reuse most
+  of their waste water as drinking water.
 exists:
-  - text: The International Space Station reached 98 percent water recovery in 2023 after adding a brine processor, the best any flown system has achieved.
+  - text: NASA reported in June 2023 that the station's life support reached its 98 percent water recovery goal after a Brine Processor Assembly was added; total recovery had been 93 to 94 percent.
     url: https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/
     year: 2023
-  - text: Beihang University's Lunar Palace 1 ran a 370-day crewed closure with total recycling of oxygen and water at 98.2 percent overall material closure.
-    url: https://doi.org/10.1101/2021.01.12.426282
-    year: 2018
-  - text: BIOS-3 achieved near-complete air and water regeneration for a three-person crew over 180 days as early as 1972 to 1973.
-    url: https://en.wikipedia.org/wiki/BIOS-3
-    year: 1973
-  - text: ESA's MELiSSA has built a five-compartment regenerative loop over three decades, with water recovery across linked biological and physical stages.
-    url: https://en.wikipedia.org/wiki/MELiSSA
-    year: 2023
+  - text: NASA's Chen notes that the station vents the methane from its Sabatier reactor, and that this loss of hydrogen caps the oxygen it can recover at 50 percent.
+    url: https://ntrs.nasa.gov/api/citations/20240004053/downloads/ICES-2024-156-Final.pdf
+    year: 2024
+  - text: NASA's life support reference values give each crew member 3.2 kg of drinking and food water, 0.76 kg of water in food and 0.49 kg made by metabolism a day, and 1.42 kg out in urine, 2.95 kg in breath and sweat and 0.10 kg in faeces.
+    url: https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf
+    year: 2022
+  - text: Beihang University's Lunar Palace 365 kept eight volunteers, four at a time, in a closed habitat for 370 days with no water brought in, recycling all its water through plants and machines at 18.6 kg per person per day.
+    url: https://www.biorxiv.org/content/10.1101/2021.01.12.426282v1.full-text
+    year: 2021
+  - text: In the MELiSSA Pilot Plant in Barcelona, ESA's linked microbial and algal compartments supplied the oxygen needs of three rats for 110 days of continuous operation.
+    url: https://www.frontiersin.org/articles/10.3389/fspas.2021.750616
+    year: 2021
+  - text: Windhoek has turned treated sewage straight into drinking water since 1969, and its plant built in 2002 can supply up to 35 percent of the city's daily demand.
+    url: https://blogs.worldbank.org/water/in-windhoek-iuwm-is-key-to-closing-the-water-loop
+    year: 2012
+  - text: Singapore's NEWater plants can make 760,000 cubic metres a day of reclaimed water, almost 40 percent of the country's demand, with 55 percent planned by 2060.
+    url: https://www.epa.gov/waterreuse/summary-singapores-water-reuse-guideline-or-regulation-potable-water-reuse
+    year: 2026
 gap: >-
-  Even the best flown loop still loses a few percent and leans on consumable filters and careful
-  tending. Closing the last few percent, processing the brine left behind without waste, and running
-  for years at drinking quality with little maintenance are all unsolved. No loop has yet been a
-  reliable utility rather than a tended experiment.
+  The station loses 2 percent of the water it processes, about 0.1 kg per crew member a day, plus the
+  water in faeces, which it does not recover. Its oxygen system loses more: making about 0.8 kg of
+  oxygen a day splits about 0.9 kg of water, and with half the hydrogen vented as methane about
+  0.45 kg of water a day goes overboard, replaced from Earth. Methane-to-hydrogen reactors have
+  won back 46 to 60 percent of the hydrogen in ground tests. Lunar Palace closed its water through a
+  greenhouse, cycling 18.6 kg per person a day, four times the station's use, and MELiSSA has kept
+  rats, not people. On Earth the best cities reuse a third to two fifths of their water.
 inventions: [full-closure-water-loop]
 scene:
   kind: habitat
-  focus: A habitat's water cycling endlessly from waste to pure and back, almost nothing lost.
+  focus: A habitat's water cycling from waste to pure and back, with only a trickle of make-up.
   params: { type: dome, spin: 0.3, green: 0.5 }

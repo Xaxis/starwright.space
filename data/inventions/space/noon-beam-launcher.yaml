@@ -23,15 +23,15 @@ buildsOn:
   - text: The DARPA and NASA Millimeter-wave Thermal Launch System project, led by Parkin, ran from May 2012 to March 2014.
     url: https://ntrs.nasa.gov/citations/20170009162
     year: 2017
-  - text: Escape Dynamics' prototype microwave thermal thruster reached a specific impulse above 500 s on helium before the company closed at the end of 2015.
-    url: https://en.wikipedia.org/wiki/Escape_Dynamics
+  - text: Escape Dynamics' static tests of a microwave-heated thruster in its Colorado lab reached a specific impulse above 500 s on helium, through a heat exchanger designed to capture more than 90% of the incoming microwave energy.
+    url: https://satnews.com/2015/07/27/the-worlds-first-combustion-free-externally-powered-space-launch-thruster-successfully-tested-by-escape-dynamics/
     year: 2015
-  - text: ITER heats its plasma with 1 MW gyrotrons at 170 GHz, 24 of them built by Russia, Japan, Europe and India.
-    url: https://www.iter.org/mach/Heating
+  - text: ITER heats its plasma with 24 gyrotrons of 1 MW each at 170 GHz, built by Europe, Japan, Russia and India, the same millimetre-wave tubes this launcher would use.
+    url: https://www.iter.org/node/20687/year-gyrotron
     year: 2024
-  - text: NERVA's nuclear thermal engines heated hydrogen to about 2,500 K in a reactor core and reached 841 s specific impulse in vacuum in the 1960s, the same physics with a different heat source.
-    url: https://en.wikipedia.org/wiki/NERVA
-    year: 1969
+  - text: NERVA's nuclear thermal engines heated hydrogen to about 2,300 K in a reactor core and reached about 825 s specific impulse in vacuum in the 1960s, the same physics with a different heat source.
+    url: https://ntrs.nasa.gov/api/citations/19910017902/downloads/19910017902.pdf
+    year: 1991
 experiment:
   goal: Show that a ceramic heat exchanger heated by a millimetre-wave beam gives hydrogen exhaust above 700 s specific impulse, at the heat flux a launch vehicle needs.
   setup: >-
@@ -45,23 +45,23 @@ experiment:
 path:
   - phase: bench
     what: The single-gyrotron test stand running on hydrogen.
-    scale: One megawatt-class gyrotron, one heat exchanger tile.
+    scale: 1 MW-class gyrotron, 1 heat exchanger tile.
     proves: The exhaust speed and heat flux the design depends on.
   - phase: prototype
     what: A 50 kg vehicle making vertical hops to a few kilometres on a beam from a small array.
-    scale: An array of tens of megawatts.
+    scale: An array of about 50 MW.
     proves: Tracking a moving vehicle and heating it in flight.
   - phase: pilot
     what: A suborbital vehicle reaching space, landing, and flying again within a day.
-    scale: An array of a few hundred megawatts.
+    scale: An array of about 300 MW.
     proves: The beam reaches altitude through real weather, and the vehicle is reusable.
   - phase: first-plant
     what: A beam site near the equator launching small payloads to orbit several times each sunny day.
-    scale: A gigawatt-class array, tonnes a day to orbit.
+    scale: A 1 GW array, tonnes a day to orbit.
     proves: A cost per kilogram set by electricity and the array, not by the vehicle.
   - phase: fleet
     what: Beam sites on several continents, each beside its own solar farm, launching freight to depots and orbital factories.
-    scale: Thousands of tonnes a year per site.
+    scale: Over 1,000 tonnes a year per site.
     proves: Launch at the price of freight.
   - phase: civilization
     what: Beam launch carries the steady traffic of people and parts the climb needs from Earth, while bulk mass comes from the Moon.

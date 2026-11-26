@@ -4,74 +4,85 @@ domain: transport
 for: [cislunar-transport]
 pitch: >-
   A reusable tug that carries cargo to lunar orbit and comes home by skimming Earth's upper
-  atmosphere behind an inflatable shield, so the trip back costs almost no propellant.
+  atmosphere behind an inflatable shield, so the trip back costs about a fifth of the propellant.
 principle: >-
-  Coming back from the Moon into low Earth orbit means losing about 3 km/s of speed. By rocket that
-  costs as much propellant as a large part of the trip out. A pass through the thin upper atmosphere
-  does the same work with drag and turns the speed into heat: in one deep pass (aerocapture) or many
-  shallow ones (aerobraking). Japan's Hiten braked in Earth's air in 1991, and Mars orbiters have
-  braked this way for decades. The Ferry is a tug with a stowed inflatable decelerator like NASA's
-  LOFTID. Before each return it inflates the shield, makes one controlled pass at about 90 km to shed
-  most of its speed, and then a short burn lifts its low point back into a parking orbit beside a
-  depot, where it refuels and goes again. The shield is the only part that faces the heat, and it
-  is a replaceable module.
+  Coming home from the Moon is a braking problem. A craft falling back from lunar distance reaches
+  400 km altitude at 10.8 km/s, while a circular orbit there needs 7.7 km/s (vis-viva, with Earth's
+  GM of 398,600 km³/s²), so it must shed 3.1 km/s; leaving low lunar orbit costs another 0.9 km/s.
+  By rocket alone, with hydrogen and oxygen at 450 s (4.4 km/s exhaust), that 4.0 km/s needs a mass
+  ratio of e^(4.0/4.4) = 2.5: a 5 tonne tug must carry 7.4 tonnes of return propellant out to lunar
+  orbit. With aerocapture the rocket does only the 0.9 km/s departure and a 0.1 km/s burn to lift its
+  low point after the pass, a mass ratio of 1.25, so even with a 0.75 tonne shield the return
+  propellant falls to 1.5 tonnes. Every tonne not hauled out also saves the 1.5 tonnes of propellant
+  spent pushing it there, so a round trip carrying 10 tonnes out burns about 27 tonnes of propellant
+  instead of 40. The pass itself: a 12 m shield on 5.75 tonnes gives a ballistic coefficient of
+  36 kg per square metre; at 80 km, where the air is 1.85e-5 kg per cubic metre, drag decelerates
+  the tug at about 3 g, so it sheds 3.1 km/s in some 3.5 minutes along roughly 2,000 km of upper air.
+  The Sutton-Graves estimate for a 3 m nose radius puts peak heating near 53 W/cm², and because
+  heating rises with the cube of speed it is 2.3 times what LOFTID met at the same density coming in
+  at 8 km/s from orbit. The shield is the only part that faces the heat, and it is a replaceable
+  module.
 buildsOn:
-  - text: NASA's LOFTID, a 6 m inflatable heat shield, re-entered from orbit on 10 November 2022, planned at nearly 8 km/s, and was recovered from the Pacific, the largest blunt aeroshell ever to enter an atmosphere.
-    url: https://www.nasa.gov/feature/nasa-inflatable-heat-shield-finds-strength-in-flexibility
+  - text: NASA and United Launch Alliance built LOFTID, a 6 m inflatable aeroshell with a flexible thermal protection system, to show that drag in the upper atmosphere can slow large masses and to let rocket parts be recovered for reuse.
+    url: https://www.nasa.gov/sites/default/files/atoms/files/loftid_fact_sheet_layout_090922_508.pdf
     year: 2022
-  - text: JAXA's Hiten made the first aerobraking manoeuvre by a deep-space probe on 19 March 1991, dipping into Earth's atmosphere at about 125 km.
-    url: https://en.wikipedia.org/wiki/Hiten_(spacecraft)
-    year: 1991
-  - text: Mars Global Surveyor aerobraked on and off for 17 months from 1997 to reach its mapping orbit.
+  - text: LOFTID, launched on 10 November 2022, re-entered from orbit at nearly 18,000 mph, about 8 km/s, its surface reaching 1,649 C, and was recovered from the Pacific off Hawaii with its outside, said its chief engineer, looking absolutely pristine.
+    url: https://www.cnn.com/2022/11/17/world/loftid-heat-shield-nasa-success-scn/index.html
+    year: 2022
+  - text: JAXA's 197 kg Hiten, launched in January 1990, flew lunar swing-bys and tested braking in Earth's upper atmosphere, the technique the Ferry repeats at freight scale.
+    url: https://www.isas.jaxa.jp/en/missions/spacecraft/past/hiten.html
+    year: 1990
+  - text: Mars Global Surveyor reached its mapping orbit by aerobraking; planned to take 6 months, it took 17 when a damaged solar panel forced gentler passes, the slow fallback if a single deep pass is too harsh.
     url: https://mgs-mager.gsfc.nasa.gov/overview/aerobraking.html
     year: 1999
-  - text: ULA's SMART plan, revealed in 2015, recovers a rocket's engine section behind an inflatable heat shield for reuse.
-    url: https://en.wikipedia.org/wiki/Vulcan_Centaur
-    year: 2015
-  - text: Hall, Noca and Bailey's cost-benefit study of aerocapture found large payload gains for missions to Venus, Titan and Neptune (Journal of Spacecraft and Rockets, 2005).
-    url: https://doi.org/10.2514/1.4118
-    year: 2005
+  - text: NASA found that Orion's heat shield lost char on its Artemis I return from the Moon because heating eased between two dips into the atmosphere and gas trapped in the Avcoat cracked it, an effect its Ames arc jets later reproduced.
+    url: https://www.nasa.gov/missions/artemis/nasa-identifies-cause-of-artemis-i-orion-heat-shield-char-loss/
+    year: 2024
 experiment:
-  goal: Show that an inflatable decelerator can survive repeated heating at lunar-return conditions and be packed and inflated again between them.
+  goal: Show that an inflatable decelerator can survive repeated heating at lunar-return aerocapture conditions and be packed and inflated again between them.
   setup: >-
-    Coupons and a 1 m section of a LOFTID-type stack, a flexible thermal blanket over inflated tori,
-    go through ten heating cycles each in an arc-jet facility at the heat flux of a lunar-return
-    aerocapture pass, packed and re-inflated between cycles.
-  measure: Insulation loss and back-face temperature per cycle, leaks in the tori after each packing, and strap strength after the series.
-  succeedsIf: The stack survives ten cycles at lunar-return heat flux with back-face temperatures inside limits and no leaks, enough for a shield rated for ten returns.
+    Coupons and a 1 m section of a LOFTID-type stack, silicon carbide fabric over flexible insulation
+    and inflated tori, go through ten heating cycles each in NASA Ames' arc-jet facilities at 55 W/cm²
+    for 200 seconds, the stagnation conditions of a pass at 80 km, packed to stowed volume and
+    re-inflated between cycles. A second set runs two-pulse profiles to probe the char behaviour that
+    damaged Orion's shield.
+  measure: Insulation mass loss and back-face temperature per cycle, leak rate of the tori after each packing, strap strength after the series, and any cracking under the two-pulse profile.
+  succeedsIf: After ten cycles the back face stays below 200 C in every cycle, insulation mass loss is under 5 percent, the tori lose under 1 percent of their pressure an hour after each packing, and the straps keep at least 90 percent of their new strength.
   costUsd: 3000000
   months: 12
 path:
   - phase: bench
     what: Arc-jet cycling of the flexible shield.
-    scale: Coupons and a 1 m section.
-    proves: A reusable flexible shield.
+    scale: Coupons and a 1 m section, 10 cycles at 55 W/cm².
+    proves: A flexible shield that survives repeated lunar-return heating.
   - phase: prototype
-    what: A small tug sent to a high orbit on a rideshare, returning by aerocapture and inspected in orbit.
-    scale: A 500 kg tug with a 6 m shield.
-    proves: Aerocapture guidance and shield reuse in flight.
+    what: A small tug sent on a rideshare to a lunar-distance orbit, returning by one aerocapture pass and inspected in orbit by camera.
+    scale: One 500 kg tug with a 6 m shield, 1 return at 10.7 km/s.
+    proves: Aerocapture guidance and shield condition after a real pass.
   - phase: pilot
-    what: A tug carrying 10 tonnes from low orbit to lunar orbit and back three times.
-    scale: One tug.
-    proves: Round trips on less than half the propellant of an all-rocket tug.
+    what: A tug carrying cargo from low orbit to lunar orbit and back three times on one shield.
+    scale: One 5 tonne tug, 10 tonnes a trip, 3 round trips.
+    proves: Round trips on two thirds the propellant of an all-rocket tug, with the shield reused.
   - phase: first-plant
-    what: A fleet of Ferries based at a depot in low orbit, carrying cargo for the lunar bases.
-    scale: Tens of trips a year.
+    what: A fleet based at a depot in low orbit, carrying cargo for the lunar bases.
+    scale: 5 tugs, 30 trips and 300 tonnes a year to lunar orbit.
     proves: Routine freight between Earth orbit and the Moon.
   - phase: fleet
     what: Ferries on every route that ends at a world with air, Earth, Mars, Venus and Titan.
-    scale: Hundreds of tugs.
+    scale: 100 tugs, 10,000 tonnes a year.
     proves: Atmospheres as free brakes.
   - phase: civilization
-    what: Air-braked ferries and lunar oxygen make the trip between Earth orbit and the Moon nearly as cheap as reaching orbit.
-    scale: The whole Earth and Moon economy.
+    what: Air-braked ferries fuelled with lunar oxygen make the trip between Earth orbit and the Moon nearly as cheap as reaching orbit.
+    scale: 3,000 tugs of up to 50 tonnes, 1 million tonnes a year.
     proves: Earth and the Moon joined by routine freight.
 risks: >-
-  Aerocapture at lunar-return speed is harsher than LOFTID's test, and a guidance error could send
-  the tug too deep or skip it back out; the fallback is aerobraking over many shallow passes,
-  slower but gentler, as Mars orbiters do. Packing again and again may wear the fabric, which is why
-  the shield is a replaceable module. Upper-air density swings with solar activity, so guidance
-  must adapt during the pass.
+  Aerocapture at 10.7 km/s is harsher than LOFTID's 8 km/s entry, and a guidance error could send
+  the tug too deep or skip it back out; the fallback is aerobraking over many shallow passes, slower
+  but gentler, as Mars orbiters do. Orion's Artemis I char loss shows that a shield can fail between
+  heating pulses, so the bench tests two-pulse profiles before any flight. Packing again and again may
+  wear the fabric, which is why the shield is a replaceable module rated for a set number of returns.
+  Upper-air density swings with solar activity, so guidance must measure drag and adapt during the
+  pass.
 scene:
   kind: machine
   focus: A tug with its shield inflated, glowing as it skims Earth's upper air.

@@ -10,23 +10,33 @@ summary: >-
   spotted, understood and countered in weeks rather than years. A civilization spread across worlds
   cannot afford to lose that race.
 target: >-
-  Detect a new or changing pathogen early, design and test a vaccine or therapy against it, and make
-  and distribute doses fast enough to stop an outbreak becoming a pandemic, anywhere people live.
+  Every new or changing pathogen sequenced and its genome shared worldwide within 7 days of the
+  first reported cluster; a tested vaccine or therapy authorised within 100 days, CEPI's goal, and
+  within 30 days by {year-k08}; and a dose for every person on Earth made and delivered within a
+  year, fast enough to stop an outbreak becoming a pandemic, anywhere people live.
 exists:
-  - text: AlphaFold 3 predicts protein, antibody and small-molecule interactions with about 50 percent better accuracy than docking, speeding the design of vaccines and drugs against a new pathogen.
+  - text: Wuhan's health commission reported a cluster of pneumonia cases on 31 December 2019, and China publicly shared the new coronavirus's genetic sequence on 12 January 2020, 12 days later.
+    url: https://www.who.int/news/item/27-04-2020-who-timeline---covid-19
+    year: 2020
+  - text: The UK's MHRA approved the first COVID-19 vaccine, Pfizer and BioNTech's, on 2 December 2020, 337 days after the first cluster was reported.
+    url: https://www.gov.uk/government/news/uk-medicines-regulator-gives-approval-for-first-uk-covid-19-vaccine
+    year: 2020
+  - text: CEPI reported in 2025 that a Phase 2 Marburg vaccine trial in Ethiopia was initiated within 21 days of the outbreak, and 400,000 doses of Rift Valley fever vaccine substance were produced in 16 days, early proof of its 100-day response goal.
+    url: https://static.cepi.net/downloads/2026-07/CEPI%202025%20Annual%20Progress%20Report_FINAL.pdf
+    year: 2025
+  - text: AlphaFold 3 predicts the joint structures of proteins, nucleic acids, small molecules and modified residues, with far greater accuracy for protein and drug binding than docking tools and substantially higher antibody and antigen accuracy than AlphaFold-Multimer, a design tool for vaccines and drugs against a new pathogen (Nature, 2024).
     url: https://doi.org/10.1038/s41586-024-07487-w
     year: 2024
-  - text: RFdiffusion designs binding proteins and antibodies from scratch with a 19 percent experimental success rate, a route to countermeasures designed to a target in days.
+  - text: RFdiffusion designs protein binders from scratch with an overall experimental success rate of 19 percent across five targets, including influenza haemagglutinin, a route to countermeasures designed to a target (Nature, 2023).
     url: https://doi.org/10.1038/s41586-023-06415-8
     year: 2023
-  - text: Wellcome Leap's health programs, built on the DARPA model, fund the resilience and rapid-response capabilities a pandemic defence needs.
-    url: https://wellcomeleap.org/
-    year: 2024
 gap: >-
-  Design tools are strong, but global early detection is patchy, testing a designed countermeasure
-  for safety still takes months, and making and shipping billions of doses fast is unsolved. The
-  pieces exist in isolation; a standing system that runs the whole race, detect to dose, in weeks
-  does not.
+  For COVID-19 the genome took 12 days, against the target's 7, and the first vaccine 337 days,
+  more than 3 times CEPI's 100 and 11 times the target's 30. Design tools are strong and
+  sequencing is fast, but global early detection is patchy, testing a designed countermeasure for
+  safety still takes months, and making and shipping billions of doses within a year is unsolved.
+  CEPI's 21-day trial start and 16-day production run are for known threats, not a standing system
+  that runs the whole race, detect to dose, for any new pathogen.
 inventions: [rapid-vaccine-foundry]
 scene:
   kind: network

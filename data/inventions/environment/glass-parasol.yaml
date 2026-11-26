@@ -3,47 +3,56 @@ title: The Glass Parasol
 domain: environment
 for: [heat-budget]
 pitch: >-
-  Flakes of glass made from lunar soil, thrown by mass driver toward the Sun-Earth L1 point, where each
-  steers itself with sunlight to shade the Earth by a chosen fraction of a percent, making room for
-  Earth's own energy use near its ceiling without warming.
+  Flakes of glass made from lunar soil, thrown by mass driver toward the Sun-Earth L1 point, where
+  each steers itself with sunlight to shade the Earth by a chosen fraction of a percent, making room
+  for Earth's own energy use near its ceiling without warming.
 principle: >-
   A shade between the Sun and the Earth cuts the sunlight Earth absorbs, {earth-absorbed}, in
   proportion to the light it blocks. Turning away one percent of it offsets the heat of using a
-  hundredth of that power on the ground, more than Earth's whole ceiling of {earth-cap}. Sanchez and
-  McInnes found that a shade blocking 1.7 percent needs 10 to 100 million tonnes, too much to launch
-  from Earth but a modest share of what lunar industry can move: escaping the Moon takes about a
-  twentieth of the energy of escaping Earth, and Bromley and colleagues showed that lunar grains are
-  close to the best size for scattering sunlight. Dust released at L1 drifts away within a week, so the
-  Parasol uses flakes instead: discs of lunar glass a few microns thick, each with a patch that switches
-  between reflecting and absorbing, as IKAROS's liquid-crystal panels did, so that light pressure alone
-  holds the flake on its path near L1. A flake that fails drifts out of the shade and away into an
-  orbit around the Sun, so the Parasol fades unless it is maintained, and can be thinned at will.
+  hundredth of that power on the ground, more than Earth's whole ceiling of {earth-cap}. The mass is
+  easy to estimate. To cut sunlight by 1.7 percent a shade must cover about 1.7 percent of Earth's
+  disc, some 2 million square km, and up to about twice that once the width of the Sun's disc is
+  allowed for. Glass 2 microns thick weighs 5 grams per square metre, so the shade is about 10 to 25
+  million tonnes, the same order as Angel's 20 million and the 10 to 100 million tonnes of earlier
+  designs, and lighter than the 40 to 240 million tonnes Sanchez and McInnes found for black and
+  reflecting discs at their best position. That is too much to launch from Earth but a modest share
+  of what lunar industry can move: escaping the Moon takes about a twentieth of the energy of
+  escaping Earth, and Bromley and colleagues showed that lunar grains are close to the best size for
+  scattering sunlight. Dust released at L1 drifts away within a week, so the Parasol uses flakes
+  instead: discs of lunar glass a few microns thick, each with a patch that switches between
+  reflecting and absorbing, as IKAROS's liquid-crystal panels did, so that light pressure alone
+  holds the flake on its path, sunward of L1 where Sanchez and McInnes found a shade sits best. A
+  flake that fails drifts out of the shade and away into an orbit around the Sun, so the Parasol
+  fades unless it is maintained, and can be thinned at will.
 buildsOn:
-  - text: Sanchez and McInnes found that cutting sunlight by 1.7 percent from near L1 needs 10 to 100 million tonnes of shade, and that light pressure moves the best position sunward, to about 2.4 million km from Earth.
+  - text: Sanchez and McInnes found that a sunshade cutting sunlight by 1.7 percent weighs least about 2.44 million km sunward of Earth, where a flat reflecting disc needs about 240 million tonnes and a black one about 40 million; earlier designs had put such shades at 10 to 100 million tonnes.
     url: https://journals.plos.org/plosone/doi?id=10.1371/journal.pone.0136648
     year: 2015
-  - text: Angel proposed a sunshade at L1 of trillions of light flyers, about 20 million tonnes in all, blocking 1.8 percent of sunlight for about 50 years.
+  - text: Angel proposed a sunshade at L1 of 16 trillion light flyers, about 20 million tonnes in all, blocking 1.8 percent of sunlight for about 50 years.
     url: https://doi.org/10.1073/pnas.0608163103
     year: 2006
   - text: Bromley, Khan and Kenyon found about 10 billion kg a year of dust could cut sunlight by 1.8 percent, that dust released at L1 drifts away within about a week, and that lunar grains are near the size that scatters most efficiently.
     url: https://journals.plos.org/climate/article?id=10.1371/journal.pclm.0000133
     year: 2023
-  - text: Szapudi proposed tethering a sunshade to a sunward counterweight, cutting the mass needed by orders of magnitude, with only 1 percent from Earth.
+  - text: Szapudi proposed tethering a sunshade to a sunward counterweight, which could cut the mass needed by orders of magnitude, with only 1 percent of it from Earth.
     url: https://doi.org/10.1073/pnas.2307434120
     year: 2023
   - text: IKAROS steered itself by switching liquid-crystal panels on its sail between reflecting and absorbing, using sunlight alone, in July 2010.
     url: https://global.jaxa.jp/press/2010/07/20100723_ikaros_e.html
     year: 2010
-  - text: The 1975 NASA Ames and Stanford summer study designed a lunar mass driver with a 10 km track launching buckets at 2,400 m per second.
+  - text: The Planetary Sunshade Institute's 2026 survey, funded by ARIA, judges a space sunshade buildable with no new physics but 20 to 40 years away, and finds a dust cloud promises a 600-fold mass advantage over sail-based designs.
+    url: https://planetarysunshade.org/publications/download-the-2026-space-reflector-baseline-survey/
+    year: 2026
+  - text: The 1975 NASA Ames and Stanford summer study designed a lunar mass driver accelerating buckets of under 10 kg along 10 km of track to 2,400 m per second.
     url: https://settlement.nss.org/75SummerStudy/5appendF.html
     year: 1975
 experiment:
   goal: Make free-standing glass flakes from lunar simulant and show they can be steered by light pressure alone, by switching their reflectance on command.
   setup: >-
-    A small glass-drawing line that melts lunar simulant and draws film a few microns thick, cut into
-    flakes 10 cm across. A patch of each is coated with a liquid-crystal or electrochromic film powered
-    by a printed thin-film cell. Flakes hang on a torsion balance in a vacuum chamber under a solar
-    simulator, and switch on command.
+    A small glass-drawing line that melts lunar simulant and draws film a few microns thick, cut
+    into flakes 10 cm across. A patch of each is coated with a liquid-crystal or electrochromic film
+    powered by a printed thin-film cell. Flakes hang on a torsion balance in a vacuum chamber under
+    a solar simulator, and switch on command.
   measure: Flake thickness and mass per square metre; reflectance and transmission; the change in light-pressure force and torque between switched states; endurance under UV and thermal cycling.
   succeedsIf: Flakes under 10 g per square metre whose switching changes the light-pressure torque by at least 30 percent, sustained over 10,000 switching cycles.
   costUsd: 2000000
@@ -55,31 +64,31 @@ path:
     proves: Lunar glass flakes that steer by sunlight.
   - phase: prototype
     what: A small spacecraft near L1 releases a hundred flakes and tracks how well they hold their places.
-    scale: A hundred flakes, a few square metres.
+    scale: 100 flakes, under 1 square metre in all.
     proves: Station keeping by light pressure alone.
   - phase: pilot
     what: The first lunar glass flakes thrown from a small mass driver toward L1.
-    scale: A thousand tonnes a year, about a millionth of Earth's sunlight.
+    scale: 1,000 t a year, about 200 square km of shade, one or two millionths of Earth's sunlight.
     proves: The whole chain from regolith to shade, with its effect measured at L1 and on Earth.
   - phase: first-plant
     what: A parasol grown to a tenth of a percent of sunlight, made and launched by lunar industry.
-    scale: Millions of tonnes of flakes.
+    scale: About 1 million t of flakes for 0.1 percent of sunlight.
     proves: Shade at a size that matters for the heat budget, maintained for years.
   - phase: fleet
-    what: A parasol adjustable from nothing to a few percent of sunlight, maintained by lunar industry.
-    scale: Tens of millions of tonnes.
+    what: A parasol that grows with Earth's energy use, adjustable year by year, maintained by lunar industry.
+    scale: About 3 to 6 million t for about half a percent of sunlight.
     proves: Earth's heat budget can be managed as a dial.
   - phase: civilization
     what: Shade that offsets the heat of Earth's own energy use near {earth-cap}, and any warming left from carbon.
-    scale: As much shade as the world decides it needs.
+    scale: Up to 2 percent of sunlight, up to about 25 million t of flakes.
     proves: Earth can run near its ceiling and keep its climate.
 risks: >-
   A shade cools the whole planet evenly, while waste heat lands where people live; it lowers the
   global average but cannot cool a hot city, so the regional limits still hold. Less sunlight also
-  shifts rain, as every reflection method does, and the shade must be paired with carbon drawdown, not
-  used instead of it. Flakes that leave L1 must drift into orbits around the Sun, not toward Earth;
-  designs are tested so that failed flakes fall sunward. How much shade to fly is a choice for the
-  whole world, which needs an institution able to make it.
+  shifts rain, as every reflection method does, and the shade must be paired with carbon drawdown,
+  not used instead of it. Flakes that leave L1 must drift into orbits around the Sun, not toward
+  Earth; designs are tested so that failed flakes fall sunward. How much shade to fly is a choice
+  for the whole world, which needs an institution able to make it.
 scene:
   kind: launch
   focus: A mass driver on the Moon throwing a stream of glinting glass flakes toward the point between Earth and Sun.

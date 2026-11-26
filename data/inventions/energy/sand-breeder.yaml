@@ -20,9 +20,9 @@ principle: >-
   needs only sand, salt, aluminium, copper and sunlight. At about 2 g of silicon per watt, 13 kWh per
   kilogram is under 0.03 kWh per watt of panels, about a week of each panel's own output.
 buildsOn:
-  - text: The Sahara Solar Breeder Project, proposed in 2009 by Hideomi Koinuma with Algerian universities, would make silicon from desert sand in factories powered by their own output that breed more factories.
-    url: https://en.wikipedia.org/wiki/Sahara_Solar_Breeder_Project
-    year: 2009
+  - text: Koinuma Hideomi of the University of Tokyo and the University of Science and Technology of Oran led the Sahara Solar Breeder project from 2010, planning silicon factories and solar plants in the desert whose power builds more of them.
+    url: https://www.jst.go.jp/global/english/kadai/h2202_algeria.html
+    year: 2010
   - text: Nohira, Yasuda and Ito reduced solid, insulating silicon dioxide to silicon electrochemically in molten calcium chloride.
     url: https://doi.org/10.1038/nmat900
     year: 2003
@@ -56,7 +56,7 @@ path:
     proves: The energy per kilogram and a purity good enough for cells.
   - phase: prototype
     what: A complete line from sand to modules, off the grid, powered by its own output.
-    scale: 1 MW of panels a year.
+    scale: 10 MW of panels a year.
     proves: The whole loop runs on its own power; energy payback measured end to end.
   - phase: pilot
     what: A desert factory that builds its own expansion lines with part of its output.
@@ -68,11 +68,11 @@ path:
     proves: A module cost well below today's {pv-module-price}, with no silver and no carbon furnaces.
   - phase: fleet
     what: Breeder towns across the deserts of the sunbelt, each seeding the next.
-    scale: A terawatt of panels a year.
+    scale: 1 TW of panels a year from 100 breeder towns.
     proves: Solar industry can grow by its own energy, faster than capital alone allows.
   - phase: civilization
     what: The factories that cover {land-share} of Earth's land in panels.
-    scale: Tens of terawatts a year, toward {surface-solar-cap} installed.
+    scale: 40 TW of panels a year from about 4,000 towns, toward {surface-solar-cap}.
     proves: Earth's surface solar ceiling reached on time for {year-k08}.
 risks: >-
   Silicon from molten salt may carry calcium, boron or metals that ruin cells; the fallback is to use

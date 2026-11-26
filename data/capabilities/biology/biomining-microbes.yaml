@@ -11,23 +11,31 @@ summary: >-
   rock for the factories that will build in space.
 target: >-
   Extract and concentrate chosen metals from ore, waste and extraterrestrial rock using engineered
-  microbial consortia, at rates and purities useful to industry, on Earth and in the low gravity,
-  vacuum and radiation of the Moon and asteroids.
+  microbial consortia, to better than 99 percent purity for the chosen metal and at rates that free a
+  usable fraction of the feed in days not months, on Earth and in the low gravity, vacuum and
+  radiation of the Moon and asteroids.
 exists:
-  - text: ESA's closed-loop and resource work shows biology running reliably in space hardware, the foundation any off-world microbial process builds on.
-    url: https://en.wikipedia.org/wiki/MELiSSA
-    year: 2023
-  - text: NASA's in-situ resource utilization programme runs analog missions that validate hardware for extracting usable materials from regolith and volcanic deposits.
-    url: https://www.nasa.gov/mission/in-situ-resource-utilization-isru/
-    year: 2024
+  - text: Bioleaching already produces up to 20 percent of the world's copper, and China's Zijinshan mine has run large-scale copper bioheap leaching of low-grade ore since 1998.
+    url: https://www.mining-technology.com/features/bioleaching-copper-why-is-uptake-slow/
+    year: 2026
+  - text: The BioRock experiment on the International Space Station in 2019 showed the bacterium Sphingomonas desiccabilis leaching rare earth elements from basalt, reaching between 111.9 and 429.2 percent of the non-biological controls across the elements and gravity levels tested.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7656455
+    year: 2020
+  - text: Disrupting the phosphate-transport genes of the bacterium Gluconobacter oxydans raised its rare earth bioleaching by up to 18 percent, a sustainable alternative to thermochemical extraction that its authors call still inefficient.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8602642
+    year: 2021
+  - text: Cemvita spun out Endolith to develop microbial biomining, and works on recovering metals and minerals from industrial waste streams with biology.
+    url: https://www.cemvita.com/
+    year: 2026
   - text: Synthetic minimal cells such as JCVI-syn3.0, with only 473 genes, give a clean chassis that can be fitted with the exact leaching and uptake pathways a mining microbe needs.
     url: https://doi.org/10.1126/science.aad6253
     year: 2016
 gap: >-
-  Biomining on Earth is slow and works on only a few metals. No engineered microbe yet refines a metal
-  to industrial purity on its own, and nothing has been shown leaching useful amounts of metal from
-  real regolith under space conditions. The organisms, the reactors and the low-gravity chemistry all
-  have to be built.
+  Biomining on Earth works mainly on copper and gold, and slowly. The best engineered strain gains
+  only 18 percent over the wild type and still frees a few percent of the rare earths in its feed; the
+  space demonstration on basalt recovered only trace amounts. No microbe yet refines a metal to better
+  than 99 percent purity on its own, and none has leached useful amounts from real regolith in vacuum
+  and radiation. The organisms, the reactors and the low-gravity chemistry all have to be built.
 inventions: [regolith-microbe-loop]
 scene:
   kind: cell

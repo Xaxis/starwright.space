@@ -10,10 +10,11 @@ summary: >-
   machine exists. New standards are written. The work left is to replace the old algorithms
   everywhere, including in hardware built to last decades.
 target: >-
-  Every link, device and archive the climb depends on protected by quantum-resistant algorithms
-  before any quantum computer can break today's, with spare algorithms built on different
-  mathematics ready in case one falls, and long-lived machines on the grid and in space able to
-  change their algorithms in the field.
+  Every link, device and archive the climb depends on protected by quantum-resistant algorithms by
+  2030, five years before NIST stops allowing today's public-key algorithms in 2035, with at least
+  2 spare algorithms built on different mathematics ready in case one falls, and machines built to
+  last 20 years or more on the grid and in space able to change their algorithms in the field in
+  under a minute.
 exists:
   - text: Peter Shor's algorithm showed that a quantum computer could factor integers and take discrete logarithms in polynomial time, which breaks RSA and elliptic-curve cryptography.
     url: https://arxiv.org/abs/quant-ph/9508027
@@ -24,22 +25,30 @@ exists:
   - text: NIST released its first three finished post-quantum standards, FIPS 203, 204 and 205, on 13 August 2024.
     url: https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards
     year: 2024
-  - text: In March 2025 NIST chose HQC as a backup to ML-KEM for encryption, because it rests on different mathematics in case a weakness is found in ML-KEM.
+  - text: An ML-DSA-44 signature from FIPS 204 is 2,420 bytes and its public key 1,312 bytes.
+    url: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf
+    year: 2024
+  - text: In March 2025 NIST chose HQC as a backup to ML-KEM, built on different mathematics in case a weakness is found in ML-KEM, with a final standard expected in 2027.
     url: https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption
     year: 2025
-  - text: NIST's draft transition plan, IR 8547, follows National Security Memorandum 10 in setting 2035 as the goal for widespread adoption of post-quantum cryptography.
-    url: https://csrc.nist.gov/pubs/ir/8547/ipd
-    year: 2024
+  - text: NIST's final transition plan, IR 8547, published in October 2026, deprecates quantum-vulnerable public-key cryptography after 2030 and disallows it after 2035, and notes that past transitions took 10 to 20 years.
+    url: https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf
+    year: 2026
+  - text: The EU asks every member state to start moving to post-quantum cryptography by the end of 2026 and to protect critical infrastructure with it no later than the end of 2030.
+    url: https://digital-strategy.ec.europa.eu/en/news/eu-reinforces-its-cybersecurity-post-quantum-cryptography
+    year: 2025
   - text: By the end of October 2025 most human-initiated traffic through Cloudflare used post-quantum key agreement; post-quantum signatures and certificates had barely begun.
     url: https://blog.cloudflare.com/pq-2025/
     year: 2025
 gap: >-
   Key agreement on the web is moving fast; signatures, certificates, embedded controllers,
-  satellites and industrial machines lag, and many of them cannot be updated at all. The new keys
-  and signatures are larger, which costs bandwidth on slow links. And no one can prove the new
-  mathematics has no classical weakness, so systems must be able to swap algorithms without being
-  replaced.
-inventions: []
+  satellites and industrial machines lag. Industrial protocols such as Modbus carry no security at
+  all, on controllers built to last decades that cannot be updated, and Europe wants its critical
+  infrastructure moved by 2030. The new keys and signatures are larger, a 2,420-byte signature
+  against 64 bytes today, which costs seconds on slow serial and radio links. And no one can prove
+  the new mathematics has no classical weakness, so systems must be able to swap algorithms without
+  being replaced.
+inventions: [crypto-sleeve]
 scene:
   kind: network
   focus: The links of a network changing colour one by one as each moves to quantum-safe keys.

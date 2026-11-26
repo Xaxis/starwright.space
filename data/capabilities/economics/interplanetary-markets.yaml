@@ -6,31 +6,43 @@ needs: [space-economy, interplanetary-network, interworld-disputes, post-quantum
 summary: >-
   When industry spans the inner solar system, a trade between Mercury and the Moon cannot be
   confirmed in real time: light takes minutes each way, and the market may move before an order
-  arrives. Markets on Earth assume prices and settlement that are close to instant. The climb needs
-  ways to price, pay and settle across delays, so trade between worlds is as safe as trade within
-  one.
+  arrives. Even time differs: a clock on the Moon runs faster than one on Earth. Markets on Earth
+  assume prices and settlement that are close to instant and one shared clock. The climb needs ways
+  to price, pay and settle across delays, so trade between worlds is as safe as trade within one.
 target: >-
-  Payments and trade between any two worlds settled with no risk that one side pays and the other
-  does not, priced fairly despite the delay, with each world free to keep its own currency and its
-  own local markets.
+  Payments and trade between any two worlds settled with no case in which one side pays and the
+  other does not, within twice the round-trip light time between them, about 5 seconds for the Moon
+  and 16 to 80 minutes for Mars, priced fairly despite the delay, with each world free to keep its
+  own currency, its own clock and its own local markets.
 exists:
-  - text: Krugman's Theory of Interstellar Trade, published in 2010, works out how interest should be charged on goods in transit when the traveller's clock and the trader's differ.
+  - text: Krugman's Theory of Interstellar Trade, written in 1978 and published in 2010, works out how interest should be charged on goods in transit when the traveller's clock and the trader's differ.
     url: https://doi.org/10.1111/j.1465-7295.2009.00225.x
     year: 2010
-  - text: CLS, set up in 2002, settles both sides of foreign exchange trades at the same moment in 18 currencies, more than 8 trillion US dollars on an average day, so neither side can pay without being paid.
+  - text: CLS, set up in 2002, settles foreign exchange trades in 18 of the most traded currencies, more than 8 trillion US dollars on an average day.
     url: https://www.cls-group.com/about/
-    year: 2002
+    year: 2026
   - text: NASA gives the one-way signal time between Earth and Mars as 4 to 20 minutes.
     url: https://www.nasa.gov/missions/tech-demonstration/deep-space-atomic-clock/how-an-atomic-clock-will-get-humans-to-mars-on-time/
     year: 2019
-  - text: The Bundle Protocol, version 7, standardised in 2022 as RFC 9171, carries data across links with long delays and outages, the basis of a network between worlds.
-    url: https://www.rfc-editor.org/rfc/rfc9171.html
-    year: 2022
+  - text: NASA made delay and disruption tolerant networking an operational service on its Near Space and Deep Space Networks in January 2026, and it is the basis of the LunaNet standard for the Moon.
+    url: https://www.nasa.gov/communicating-with-missions/delay-disruption-tolerant-networking/
+    year: 2026
+  - text: In April 2024 the White House directed NASA to set up Coordinated Lunar Time, traceable to UTC, with a finished strategy due by 31 December 2026.
+    url: https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/04/Celestial-Time-Standardization-Policy.pdf
+    year: 2024
+  - text: Ashby and Patla of NIST calculated that a clock on the Moon gains 56.02 microseconds a day on a clock on Earth.
+    url: https://doi.org/10.3847/1538-3881/ad643a
+    year: 2024
+  - text: Herlihy showed in 2018 how parties can swap assets across separate ledgers with hashed timelock contracts, so that no party that follows the protocol ends up worse off.
+    url: https://doi.org/10.1145/3212734.3212736
+    year: 2018
 gap: >-
-  Every payment system today assumes its parties can reach each other in under a second. Delay
-  tolerant networks can carry messages across the solar system, but no payment or settlement system
-  has been built to run over them, and the risk that prices move while a trade is in flight has no
-  remedy.
+  Every payment system today assumes its parties can reach each other in under a second and share
+  one clock. Delay-tolerant networks now carry NASA's data, and lunar time is being defined, but no
+  payment or settlement system runs over them. Hashed timelocks make swaps between ledgers atomic,
+  but their timeouts are set for minutes on one planet, not 4 to 20 minutes each way plus outages
+  when a planet passes behind the Sun. And the risk that prices move while a trade is in flight has
+  no remedy.
 inventions: [light-cone-clearing]
 scene:
   kind: network

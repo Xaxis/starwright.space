@@ -7,32 +7,47 @@ pitch: >-
   a named year, so the first plants that make them in space can borrow against sales they have
   already made.
 principle: >-
-  Power plants on Earth are financed on offtake contracts: a bank lends because a buyer it trusts has
-  promised to buy the output at a known price for years. A futures market adds standard terms, a
+  Power plants on Earth are financed on offtake contracts: a bank lends because a buyer it trusts
+  has promised to buy the output at a known price for years. A futures market adds standard terms, a
   clearing house that stands behind both sides, and a public price. Resources made in space have
-  none of these, so buyers and sellers each wait for the other. Depot Futures supplies the contract:
-  one tonne of liquid oxygen, water, hydrogen or methane of published purity, delivered to a named
-  depot in a named quarter, with margin posted to a clearing house. Space agencies are the anchor
-  buyers at first, as NASA was for cargo to the space station, but anyone may buy, including launch
-  firms that already state what they would pay for propellant in orbit. A plant builder that has
-  sold five years of futures can raise debt against them, and the price curve the market publishes
-  tells every planner what propellant in space will cost, and when.
+  almost none of these, so buyers and sellers each wait for the other. The first forward contracts
+  for a lunar resource, Interlune's sales of helium-3 for delivery from 2028, show buyers will sign
+  years ahead. Depot Futures supplies the standard contract: one tonne of liquid oxygen, water,
+  hydrogen or methane of published purity, delivered to a named depot in a named quarter, with
+  margin posted to a clearing house. Space agencies are the anchor buyers at first, as NASA was for
+  cargo to the space station, but anyone may buy, including launch firms that already state what
+  they would pay for propellant in orbit. The price that matters is the cost of lifting the same
+  tonne from Earth, now about {launch-cost-falcon-9} to low orbit. A lunar oxygen plant making 1,000
+  t a year that sells five years ahead at 500 dollars a kilogram on the surface holds 2.5 billion
+  dollars of contracted sales, enough to carry project debt of a billion dollars or more, as power
+  plants borrow against their offtake. The price curve the market publishes tells every planner what
+  propellant in space will cost, and when.
 buildsOn:
-  - text: NASA's 2020 purchase of lunar regolith from four companies, the first contracts for resources gathered in space.
+  - text: NASA's 2020 purchases of lunar regolith from four companies, for 1 to 15,000 dollars each, with ownership passing to NASA on the Moon.
     url: https://www.nasa.gov/news-release/nasa-selects-companies-to-collect-lunar-resources-for-artemis-demonstrations/
-  - text: NASA's Commercial Lunar Payload Services, buying deliveries to the Moon as a service since 2018.
+    year: 2020
+  - text: Bluefors' 2025 agreement to buy up to 10,000 litres of helium-3 a year from Interlune for delivery from 2028 to 2037, a forward contract for a resource from the Moon.
+    url: https://www.interlune.space/press-release/bluefors-to-source-helium-3-from-the-moon-with-interlune-to-power-next-phase-of-quantum-industry-growth
+    year: 2025
+  - text: NASA's Commercial Lunar Payload Services, buying deliveries to the Moon as a service since 2018, with contracts worth up to 2.6 billion dollars over ten years.
     url: https://www.nasa.gov/news-release/nasa-announces-new-partnerships-for-commercial-lunar-payload-delivery-services/
-  - text: United Launch Alliance's 2016 offer of prices for propellant delivered in low Earth orbit and on the Moon.
+    year: 2018
+  - text: United Launch Alliance's 2016 offer to pay about 3,000 dollars a kilogram for propellant in low Earth orbit and 1,000 dollars a kilogram at L1.
     url: https://www.space.com/33297-satellite-refueling-business-proposal-ula.html
-  - text: NASA's 2011 estimate that a commercial approach cut the cost of developing Falcon 9 to well under half of traditional methods.
+    year: 2016
+  - text: Orbit Fab's published price of 20 million dollars for up to 100 kg of hydrazine delivered in geostationary orbit.
+    url: https://www.orbitfab.com/news/hydrazine-fuel-price/
+    year: 2022
+  - text: NASA's 2011 estimate that a commercial approach would have cut the cost of developing Falcon 9 from about 4 billion dollars to 1.7 billion.
     url: https://www.nasa.gov/pdf/586023main_8-3-11_NAFCOM.pdf
+    year: 2011
 experiment:
   goal: Show that standard contracts for delivery in space draw enough buyers and sellers to set a price, and that a plant can raise money against them.
   setup: >-
     A real but small market, run for two years by an exchange or a space agency, in contracts for
-    water ice and oxygen delivered to low Earth orbit and to the lunar surface between 2032 and 2040,
-    with margin held by a clearing bank. One or more agencies commit to buy a set volume; launch and
-    resource firms trade the rest.
+    water ice and oxygen delivered to low Earth orbit and to the lunar surface between 2032 and
+    2040, with margin held by a clearing bank. One or more agencies commit to buy a set volume;
+    launch and resource firms trade the rest.
   measure: Active buyers and sellers; volume traded; whether a forward price curve forms and how wide its spreads are; debt or equity raised by sellers on the strength of contracts sold.
   succeedsIf: At least ten active participants, a price curve with spreads under 20 percent, and at least one resource firm raising 50 million dollars or more against its contracts.
   costUsd: 5000000
@@ -44,19 +59,19 @@ path:
     proves: The contract terms are ones both sides will trade.
   - phase: prototype
     what: The two-year market for future deliveries.
-    scale: Hundreds of tonnes of forward contracts.
+    scale: About 500 t of forward contracts among 10 or more traders.
     proves: A price forms and plants can borrow against it.
   - phase: pilot
     what: The first physical deliveries settle contracts at a lunar or orbital depot.
-    scale: Tonnes delivered.
+    scale: 10 to 50 t delivered and verified at one depot.
     proves: Contracts can be met and verified in space.
   - phase: first-plant
     what: A liquid market in propellant and water across the Earth and Moon system, with private buyers outnumbering agencies.
-    scale: Thousands of tonnes a year.
+    scale: 1,000 to 10,000 t a year, with more private buyers than agencies.
     proves: Space industry pays its own way.
   - phase: fleet
     what: Contracts for metal, glass and power from the seed industries, at depots from Earth orbit to the asteroids.
-    scale: "The industry from {seed-year} onward"
+    scale: Millions of tonnes a year of metal, glass and power contracts from {seed-year} on.
     proves: The doubling industry finances itself through its own sales.
   - phase: civilization
     what: Markets across the inner solar system clearing the materials and power the swarm is built from.
@@ -64,10 +79,10 @@ path:
     proves: The climb's industry is financed by what it sells.
 risks: >-
   With few buyers at first, prices may be thin and easy to move; anchor purchases by agencies and
-  limits on positions steady them. A new plant may fail to deliver; contracts can allow delivery from
-  any qualified source, with the clearing house covering the gap from margin. Regulators may treat a
-  new kind of derivative with suspicion; starting as forward contracts between known parties, then
-  moving to an exchange, keeps it inside existing rules.
+  limits on positions steady them. A new plant may fail to deliver; contracts can allow delivery
+  from any qualified source, with the clearing house covering the gap from margin. Regulators may
+  treat a new kind of derivative with suspicion; starting as forward contracts between known
+  parties, then moving to an exchange, keeps it inside existing rules.
 scene:
   kind: orbit
   focus: Depots in orbit filling with propellant as the contracts for each quarter come due.

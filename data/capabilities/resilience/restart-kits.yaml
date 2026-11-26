@@ -10,8 +10,8 @@ summary: >-
   that a small group can climb from bare survival back to machine tools in months.
 target: >-
   Standard kits, stocked in every region and on every settled world, each letting a few dozen
-  people restore power, clean water, radio and a working machine shop within weeks, then make
-  most of the parts for further kits from local scrap and rock.
+  people restore power, clean water, radio and a working machine shop within 2 weeks, then remake
+  at least half the parts for further kits from local scrap and rock.
 exists:
   - text: Open Source Ecology's Global Village Construction Set designs 50 open-source industrial machines for building a small civilization with modern comforts; about a third were complete by 2018, the first built in 2007.
     url: https://www.opensourceecology.org/gvcs/
@@ -22,17 +22,20 @@ exists:
   - text: The Long Now Foundation's Manual for Civilization collects about 3,500 books most essential to sustain or rebuild civilization.
     url: https://longnow.org/ideas/manual-for-civilization-begins/
     year: 2014
-  - text: Appropedia, started in 2006, is an open wiki of more than 25,000 articles on appropriate and open technology, from solar cookers up.
+  - text: Appropedia, started in 2006, is an open wiki documenting more than 4,600 projects in appropriate and open technology, from solar cookers up.
     url: https://www.appropedia.org/
     year: 2026
-  - text: ALLFED plans how food systems keep running when infrastructure fails, with country risk profiles and tabletop exercises.
-    url: https://allfed.info/
+  - text: The Fab Foundation's network has grown to more than 2,000 public fab labs across over 100 countries, each a small workshop of digital fabrication tools.
+    url: https://fabfoundation.org/
     year: 2026
+  - text: The Red Cross keeps standardised Emergency Response Units that deploy within 48 to 72 hours to supply safe drinking water to up to 40,000 people after a disaster.
+    url: https://wash.ifrc.org/wp-content/uploads/2025/07/118500-eru-watsan-en-v05.pdf
+    year: 2008
 gap: >-
-  There are lists of books and drawings of machines, but no kit that has been packed, shipped and
-  tested by people who had to use it with nothing else. Nobody has measured how quickly a small
-  group can get from a kit to working machine tools, or what share of a kit's own parts it can
-  make again.
+  There are lists of books and drawings of machines, Open Source Ecology's 50 machine designs among
+  them, about a third of them built, but no kit that has been packed, shipped and tested by people
+  who had to use it with nothing else. Nobody has measured how quickly a small group can get from a
+  kit to working machine tools, or what share of a kit's own parts it can make again.
 inventions: [restart-container]
 scene:
   kind: field

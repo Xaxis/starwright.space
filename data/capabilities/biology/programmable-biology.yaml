@@ -11,14 +11,15 @@ summary: >-
   reaches abundance on Earth in {year-k08}, and designed biology is one of the tools that gets it
   there.
 target: >-
-  Design a gene, a pathway or a whole small genome on a computer, predict its behaviour, synthesise
-  it and have it work in a living cell on the first or second try, at a cost and speed that let any
-  lab or company treat organisms the way software treats programs.
+  Design a gene, a pathway or a whole small genome on a computer, predict its behaviour, synthesise it
+  and have it work in a living cell on the first or second try, turning the idea-to-organism loop, now
+  months and thousands of dollars, into days and under 100 dollars, so any lab can treat organisms the
+  way software treats programs.
 exists:
   - text: Sequencing a human genome fell to about 525 USD in 2022, and vendors now advertise whole genomes from 80 to 200 USD, so reading DNA is no longer the bottleneck.
     url: https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data
     year: 2022
-  - text: AlphaFold 3 predicts the shapes and interactions of proteins, nucleic acids and small molecules with roughly 50 percent better protein-ligand accuracy than the best docking tools, turning structure prediction into a design tool.
+  - text: AlphaFold 3 predicts the shapes and interactions of proteins, nucleic acids and small molecules with far greater accuracy for protein-ligand binding than state-of-the-art docking tools, and better antibody-antigen accuracy than AlphaFold-Multimer, turning structure prediction into a design tool.
     url: https://doi.org/10.1038/s41586-024-07487-w
     year: 2024
   - text: Evo 2, a 40-billion-parameter DNA model trained on 9.3 trillion base pairs with a million-token context, learns the grammar of genomes across all domains of life and is fully open.
@@ -28,10 +29,10 @@ exists:
     url: https://www.evolutionaryscale.ai/blog/esm3-release
     year: 2025
 gap: >-
-  Reading is cheap and prediction is improving fast, but writing lags: synthesising and assembling
-  long, error-free DNA is slow and costly, and getting a designed construct to work in a cell still
-  takes many rounds of trial and error. The loop from idea to working organism is measured in months
-  and thousands of dollars, not minutes and cents.
+  Reading a genome now costs under 200 dollars, but writing one of the same size still costs on the
+  order of 100,000 dollars and takes months, and getting a designed construct to work in a cell takes
+  many build-test rounds. The loop from idea to working organism is measured in months and thousands
+  of dollars, not minutes and cents.
 inventions: [genome-write-foundry]
 scene:
   kind: cell

@@ -1,0 +1,90 @@
+id: load-commons
+title: The Load Commons
+domain: transport
+for: [autonomous-freight]
+pitch: >-
+  One open standard for a modular load box and the protocol that routes it, so a driverless truck,
+  train, ship or yard robot from any maker can pick up, carry and hand off any load, and freight
+  moves hub to hub across the whole network like packets across the internet.
+principle: >-
+  Driverless vehicles exist, but each maker's system is a closed silo tied to its own trucks and
+  routes, so a load still travels end to end on one company's fleet. The internet moved data by
+  splitting it into standard packets any router could forward, and sea freight grew on one standard
+  steel box any crane, ship, train or chassis could handle. The Load Commons does the same for
+  autonomous freight: a world-standard modular load unit with common lifting, locking, power and data
+  fittings, and an open protocol by which any certified carrier advertises capacity, price and
+  position, bids for a leg, and hands the unit off at a hub. Two effects compound. A US truck driver
+  may drive at most 11 hours inside a 14-hour duty window after 10 hours off, so a truck with one
+  driver moves at most 11 of every 24 hours; a driverless truck that runs 20 hours, stopping only to
+  charge and be inspected, gets 1.8 times the use from the same vehicle. And today's fleets run part
+  empty: a University of Arkansas study for the Physical Internet found US trailers less than 60
+  percent full on loaded trips, with 20 to 30 percent of trips empty, an overall use of 43 to 50
+  percent, and modelled an interconnected relay network that cut highway miles by 29 percent. If
+  shared routing lifts use from 50 to 70 percent, the same freight needs 1 - 50/70 = 29 percent fewer
+  vehicle-miles, matching that model. Short certified shuttle legs between hubs are also far easier
+  to prove safe than door-to-door autonomy in all weather and traffic.
+buildsOn:
+  - text: Montreuil's Physical Internet (Logistics Research, 2011) proposed moving goods in world-standard modular containers through open, interconnected hubs by shared protocols, the way the Digital Internet routes packets.
+    url: https://www.bvl.de/lore/all-volumes--issues/volume-3/issue-2-3/toward-a-physical-internet-meeting-the-global-logistics-sustainability-grand-challenge
+    year: 2011
+  - text: Meller and Ellis's 2012 report found US trailers less than 60 percent full when loaded and 20 to 30 percent of trips empty, an overall use of about 43 percent, and modelled a shared relay network that cut highway miles by 29 percent and got drivers home more often.
+    url: https://web.archive.org/web/20121018201638/http://faculty.ineg.uark.edu/rmeller/web/CELDi-PI/Final%20Report%20for%20Phase%20I.pdf
+    year: 2012
+  - text: US rules limit a property-carrying driver to 11 hours of driving within 14 consecutive hours on duty, after 10 consecutive hours off, the cap a driverless truck escapes.
+    url: https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/section-395.3
+    year: 2020
+  - text: Aurora reported in October 2026 that its driverless trucks were hauling freight for major carriers with nobody behind the wheel, but each maker integrates its self-driving system to its own truck platforms.
+    url: https://ir.aurora.tech/news-events/press-releases/detail/155/aurora-announces-third-quarter-2026-results
+    year: 2026
+  - text: Rio Tinto's AutoHaul, about 200 autonomous locomotives on more than 1,700 km of track in Western Australia, shows autonomous freight fleets run today only as closed, single-operator systems.
+    url: https://www.riotinto.com/en/mn/about/innovation/automation
+    year: 2020
+experiment:
+  goal: Show that driverless vehicles from different makers and modes can hand off a standard load unit through one open protocol, and that shared routing beats dispatching each carrier separately.
+  setup: >-
+    A test hub with two driverless trucks from different makers and one autonomous yard mover or rail
+    shuttle, a batch of 20 standard modular load units with common fittings, and an open exchange that
+    advertises capacity and position, assigns legs and logs each handoff. Run a week of mixed loads
+    against a baseline where each carrier is dispatched on its own.
+  measure: Share of handoffs completed autonomously and the time each takes; fitting and data-handshake failures; empty-mile share and loaded-mile utilisation under shared routing against the baseline; throughput per vehicle-hour.
+  succeedsIf: At least 95 percent of handoffs complete autonomously within 10 minutes with no manual re-coupling, and shared routing cuts empty miles by at least 20 percent against the per-carrier baseline.
+  costUsd: 6000000
+  months: 18
+path:
+  - phase: bench
+    what: One hub, two makers and two modes exchanging standard load units on the open protocol.
+    scale: 3 vehicles, 20 load units.
+    proves: Different makers and modes can hand off one standard unit automatically.
+  - phase: prototype
+    what: A single corridor with several hubs, loads hopping leg by leg between carriers.
+    scale: 40 vehicles, 4 hubs on a 500 km corridor.
+    proves: Hub-to-hub routing works over a route with real schedules.
+  - phase: pilot
+    what: A regional network carrying commercial freight, open to any certified carrier.
+    scale: 500 vehicles, 20 hubs, 1 million tonnes a year.
+    proves: Lower empty miles and higher vehicle use in paid service.
+  - phase: first-plant
+    what: The protocol adopted on a country's trunk freight routes across road, rail and port.
+    scale: 20,000 vehicles, 200 hubs, 50 million tonnes a year.
+    proves: One open network cheaper than separate fleets per carrier.
+  - phase: fleet
+    what: Continental, multimodal freight routed as one network by cost, energy and time.
+    scale: 1 million vehicles, 2 billion tonnes a year.
+    proves: Freight moves as a shared utility, not siloed fleets.
+  - phase: civilization
+    what: The same load unit and protocol route cargo with no one on site, including depots on the Moon and between worlds.
+    scale: 10 million vehicles on Earth, 20 billion tonnes a year, and the first off-world depots.
+    proves: Autonomous freight as one network, on Earth and off it.
+risks: >-
+  Carriers may resist a standard that ends their lock-in, so the first hubs are run by shippers and
+  ports that gain from open routing, and the protocol is published openly like a web standard. A
+  shared load unit must suit bulk, reefer and oversized cargo, so the standard is modular with a few
+  sizes rather than one. An open exchange is a target for spoofed capacity or hijacked loads, so
+  carriers are certified and every handoff is signed and logged. Each handoff costs time and a lift,
+  so legs shorter than about 200 km may cost more than they save; the corridor prototype measures
+  where that line falls. If full interchange proves too hard, the first value is still driverless
+  shuttle legs between a few cooperating hubs.
+scene:
+  kind: network
+  focus: Standard load boxes hopping hub to hub, each leg carried by a different driverless vehicle.
+  params: { shape: flat, nodes: 1000, clusters: 24, links: 0.6, pulses: 0.9 }

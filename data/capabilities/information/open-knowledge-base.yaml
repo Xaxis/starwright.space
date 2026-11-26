@@ -10,36 +10,43 @@ summary: >-
   a stranger can follow it and checked by the people who tried, lets the climb learn once and build
   everywhere. This project is one small part of that record.
 target: >-
-  Every process the climb depends on, from smelting to chip making, recorded openly in a
+  Every process the climb depends on, some 10,000 from smelting to chip making, recorded openly in a
   machine-readable form with its inputs, tools, steps and measured outputs, and each record shown
-  with how often independent builders have made it work from the record alone.
+  with how often independent builders have made it work from the record alone: at least 3 times
+  for each of the 1,000 processes used most.
 exists:
-  - text: English Wikipedia held 7,268,700 articles on 24 November 2026, about 5.3 billion words, all free to read and reuse.
+  - text: English Wikipedia held 7,269,448 articles on 26 November 2026, more than 5.31 billion words, all free to read and reuse.
     url: https://en.wikipedia.org/wiki/Wikipedia:Size_of_Wikipedia
     year: 2026
-  - text: Wikidata, the structured database behind Wikipedia, held 124,120,293 items in 2026, with properties such as "uses" that link a thing to what it is made with.
+  - text: Wikidata, a free structured database that people and machines can both read, held 124,120,293 items in 2026.
     url: https://www.wikidata.org/wiki/Wikidata:Statistics
     year: 2026
-  - text: Appropedia, a wiki of appropriate and open technology, held 25,066 articles in 2026.
+  - text: Appropedia, a wiki of appropriate and open technology, held 25,068 articles in November 2026.
     url: https://www.appropedia.org/w/api.php?action=query&meta=siteinfo&siprop=statistics&format=json
     year: 2026
-  - text: Open Source Ecology's Global Village Construction Set publishes open designs for the 50 industrial machines it reckons a small modern civilization needs.
+  - text: Open Source Ecology's Global Village Construction Set publishes open designs for the 50 industrial machines it reckons a small, sustainable civilization needs.
     url: https://www.opensourceecology.org/gvcs/
     year: 2026
-  - text: The Internet of Production Alliance's Open Know-How specification is an open data model for describing how a piece of hardware is made, so designs can be found and built anywhere.
+  - text: The Internet of Production Alliance's Open Know-How specification describes open hardware projects in a standard manifest, found through a self-hostable federated search.
     url: https://www.internetofproduction.org/openknowhow
     year: 2026
-  - text: protocols.io, founded in 2014, publishes citable, versioned laboratory methods so others can repeat them.
+  - text: protocols.io, co-founded in 2014, publishes citable, versioned laboratory methods so others can repeat them.
     url: https://www.protocols.io/about
     year: 2014
-  - text: When 100 published psychology studies were repeated in 2015, only 36 percent of the 97 with significant results replicated, a measure of how often a method on the page fails in other hands.
-    url: https://en.wikipedia.org/wiki/Reproducibility_Project
+  - text: The Open Science Collaboration repeated 100 psychology studies; 97 percent of the originals had statistically significant results, but only 36 percent of the replications did.
+    url: https://doi.org/10.1126/science.aac4716
     year: 2015
+  - text: Preparing to repeat 193 experiments from 53 cancer biology papers, the Reproducibility Project found that 0 percent of protocols were completely described and 70 percent of the experiments needed key reagents requested from the original authors.
+    url: https://www.cos.io/rpcb
+    year: 2021
 gap: >-
   The open knowledge that exists is mostly encyclopedic: it says what things are, not how to make
-  them so that they work. Recipes for industrial processes are scattered, unstructured and tested
-  by nobody but their authors. No one measures whether a stranger can make a thing from its
-  published description, so no one knows which records to trust.
+  them so that they work. Recipes for industrial processes are scattered, unstructured and tested by
+  nobody but their authors, so the count of processes with 3 recorded independent replications is
+  close to 0 against a target of 1,000. Even in science, where methods must be published, none of
+  193 cancer experiments was described well enough to repeat without asking the authors, and only
+  36 percent of 100 psychology results held up when repeated. No one measures whether a stranger
+  can make a thing from its published description, so no one knows which records to trust.
 inventions: [replication-ledger]
 scene:
   kind: network

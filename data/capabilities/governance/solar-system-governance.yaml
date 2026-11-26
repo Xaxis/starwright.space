@@ -10,9 +10,9 @@ summary: >-
   government that lets each world decide what affects only itself, keeps shared things shared, and
   holds together for centuries.
 target: >-
-  A federation of worlds and habitats in which each decision is taken at the smallest level that can
-  take it in time, shared resources such as orbits and sunlight are governed jointly, every member is
-  heard, and the rules can be amended without a war.
+  A federation of worlds and habitats, as much as 20 light-minutes apart, in which each decision is
+  taken at the smallest level that can take it in time, shared resources such as orbits and sunlight
+  are governed jointly, every member is heard, and the rules can be amended without a war.
 exists:
   - text: Elinor Ostrom won the 2009 Nobel prize in economics for showing how communities govern shared resources themselves, often through many overlapping centres of decision rather than one.
     url: https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/
@@ -32,7 +32,7 @@ exists:
 gap: >-
   Every working model of shared government, from federations to the EU to the Antarctic Treaty,
   assumes members can meet and talk in real time. Nobody has designed, let alone tested, a
-  constitution whose members are minutes to hours apart, where a vote in one place is old news by
+  constitution whose members are 4 to 40 minutes apart, where a vote in one place is old news by
   the time it reaches another.
 inventions: [light-time-constitution]
 scene:

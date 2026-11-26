@@ -14,20 +14,26 @@ principle: >-
   puzzles in mathematics, logic and design, free in every language, that a child can play on a phone
   or a school's shared tablet. Item response theory, the method behind modern adaptive tests,
   estimates each child's ability from a few dozen puzzles and flags the top fraction of a percent for
-  a second, supervised round. Each child confirmed is matched with a mentor through an online network,
+  a second, supervised round: of a million players, the top 0.05 percent is 500 children, few enough
+  to test in person. Each child confirmed is matched with a mentor through an online network,
   offered funded summer schools and scholarships, and, when older, helped through partner programmes
-  such as Rise.
+  such as Rise, with partner universities sponsoring the study visas of those who go abroad.
 buildsOn:
   - text: Agarwal and Gaule's 2020 study of International Mathematical Olympiad participants, Invisible Geniuses.
     url: https://doi.org/10.1257/aeri.20190457
+    year: 2020
   - text: Bell, Chetty and colleagues' 2019 study of who becomes an inventor in America.
-    url: https://doi.org/10.1093/qje/qjy028
+    url: https://www.nber.org/papers/w24062
+    year: 2019
   - text: Rise, the global talent programme of Schmidt Futures and the Rhodes Trust, choosing 100 winners a year.
     url: https://www.risefortheworld.org/about-rise/
+    year: 2019
   - text: The International Mathematical Olympiad, run since 1959, with 110 teams in 2025.
     url: https://www.imo-official.org/results/team/year/2025/
+    year: 2025
   - text: The UNESCO Science Report 2021's count of the world's researchers.
     url: https://www.unesco.org/reports/science/2021/en/statistics
+    year: 2018
 experiment:
   goal: Show that an open search on phones finds gifted children that existing channels miss, and that support changes what they go on to do.
   setup: >-
@@ -45,27 +51,27 @@ path:
     proves: The puzzles find the same talent olympiads find.
   - phase: prototype
     what: The two-country search and trial.
-    scale: A million players.
+    scale: 1 million players in 2 countries.
     proves: It finds missed talent, and support changes outcomes.
   - phase: pilot
     what: A national partner runs it in every school of one large country.
-    scale: Tens of millions of children.
+    scale: About 30 million children.
     proves: It scales and is trusted by schools and families.
   - phase: first-plant
     what: The search runs worldwide, with a global network of mentors and a scholarship fund.
-    scale: Every school-age child within reach of a phone.
+    scale: About 300 million children a year.
     proves: No gifted child goes unnoticed for lack of a search.
   - phase: fleet
     what: Those found staff the climb's labs and programmes, and become its next mentors.
-    scale: Hundreds of thousands of researchers.
+    scale: About 150,000 found a year, 0.05 percent of players.
     proves: The search raises the share of the world's people who invent.
   - phase: civilization
     what: Every child on every world found and backed, so the climb draws on all of its people.
-    scale: Every world the climb reaches.
+    scale: About 2 billion players and 1 million found a year, enough over 35-year careers to keep about 34 million researchers.
     proves: The number of minds at work on the climb grows with the population, not with privilege.
 risks: >-
   Puzzles may favour children with more schooling or a culture of puzzles; items are checked for bias
-  and scores compared within each region, not only worldwide. Children who are found may leave their
+  and scores compared within each region as well as worldwide. Children who are found may leave their
   countries; scholarships for study at home and labs in home countries balance that. Labelling some
   children gifted may discourage the rest; the search is an open game that anyone can return to at
   any time.

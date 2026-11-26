@@ -7,18 +7,20 @@ pitch: >-
   resonators that filter radio in every phone, used to swing charge into the gates and back out
   again, so almost nothing is lost.
 principle: >-
-  An ordinary gate dumps the energy of each switch, half of C V squared, as heat. Adiabatic logic
-  ramps its supply slowly instead, so charge flows with little voltage across the transistors, and
-  then ramps it back down to recover the charge. The loss falls as the ramp slows, but only if the
-  power clock that ramps the supply hands the energy back each cycle. A resonator of quality factor
-  Q loses about 2 pi over Q of its stored energy per cycle. On-chip coils reach Q of ten or twenty
-  and lose a third or more each cycle, which is why reversible chips have struggled. Acoustic
-  resonators in aluminium nitride, the film bulk and contour-mode resonators made by the billion
-  for phone filters, reach Q of one to several thousand at hundreds of megahertz to gigahertz, and
-  would lose under one percent per cycle. Acoustic Clock Logic bonds an array of them beside the
-  logic as a multi-phase power clock, one resonator per clock phase, tuned to match the load of the
-  gates it drives, and designs the logic to be reversible where it can, in Bennett's sense, so only
-  the bits that must be erased pay the Landauer cost of {landauer-300k} each.
+  An ordinary gate dumps half of C V squared as heat each time it switches: 0.3 fJ for a 1 fF node at
+  0.8 V. Adiabatic logic ramps its supply over a time T much longer than the gate's RC, which cuts
+  that loss to about 2RC/T of it; with an RC of 10 ps and a 2 ns ramp, the quarter period of a
+  four-phase clock at 125 MHz, the loss falls to 1 percent. That holds only if the power clock that
+  ramps the supply takes the energy back each cycle. A resonator of quality factor Q loses about 2
+  pi over Q of its stored energy per cycle: a Q of 10 loses 63 percent, which is why coil-driven
+  reversible chips have struggled, and high-Q coils cannot be made in CMOS at all. A Q of 1,000
+  loses 0.6 percent. Acoustic resonators in aluminium nitride, the film resonators used in
+  microwave filters, store the energy in vibrating crystal instead of a magnetic field. Acoustic
+  Clock Logic bonds an array of them beside the logic as a multi-phase power clock, one per phase,
+  tuned to the load of the gates it drives. At a loaded Q of 1,000 and a 2 ns ramp, a switch costs
+  about 1.6 percent of a conventional one, some 60 times less; slower ramps and higher Q reach the
+  hundredfold to thousandfold of the target. The logic is reversible where it can be, in Bennett's
+  sense, so only bits that must be erased pay the Landauer cost of {landauer-300k} each.
 buildsOn:
   - text: Landauer's 1961 bound on the energy of erasing a bit.
     url: https://doi.org/10.1147/rd.53.0183
@@ -29,22 +31,25 @@ buildsOn:
   - text: Vaire Computing's first reversible chip, taped out in 2025, which recovers 50 percent of the energy in its resonator circuit.
     url: https://spectrum.ieee.org/reversible-computing
     year: 2025
-  - text: Thin-film bulk acoustic resonators, made in aluminium nitride, the material most used in industry for high-frequency filters.
-    url: https://en.wikipedia.org/wiki/Thin-film_bulk_acoustic_resonator
-    year: 2026
-  - text: Frank's case for adiabatic, reversible circuits as the future of efficient computing.
-    url: https://spectrum.ieee.org/the-future-of-computing-depends-on-making-it-reversible
-    year: 2017
+  - text: Dubois and Muralt's study of aluminium nitride thin films for piezoelectric transducers and microwave filters, the material of the resonators the clock would use.
+    url: https://doi.org/10.1063/1.124055
+    year: 1999
+  - text: Schrom's thesis on ultra-low-power CMOS, which notes that high-Q inductors cannot be made in a CMOS process, so inductor-driven adiabatic clocks are limited to a few external coils.
+    url: http://www.iue.tuwien.ac.at/phd/schrom/node127.html
+    year: 1998
   - text: The open SkyWater 130 nm process kit, on which a first adiabatic test chip can be made cheaply.
     url: https://github.com/google/skywater-pdk
     year: 2020
+  - text: ChipFoundry's chipIgnite shuttles on SkyWater 130 nm, with up to 15 mm² of die and 100 packaged parts for 14,950 dollars a tapeout.
+    url: https://chipfoundry.io/
+    year: 2026
 experiment:
   goal: Measure how much of the clock energy an acoustic resonator returns when it drives real adiabatic logic, and what that does to energy per operation.
   setup: >-
-    A test chip on an open 130 nm shuttle run carrying a 16-bit adiabatic adder and an identical
-    conventional CMOS adder, packaged with four commercial aluminium nitride resonator dies as a
-    four-phase power clock, plus an on-board coil clock for comparison. A probe station, a vector
-    network analyser to measure each resonator's loaded Q, and a calorimetric power meter.
+    A test chip on a chipIgnite shuttle in SkyWater 130 nm carrying a 16-bit adiabatic adder and an
+    identical conventional CMOS adder, packaged with four commercial aluminium nitride resonator
+    dies as a four-phase power clock, plus an on-board coil clock for comparison. A probe station, a
+    vector network analyser to measure each resonator's loaded Q, and a calorimetric power meter.
   measure: Energy per addition for each logic style and clock across clock frequencies; loaded Q of the resonators when driving the logic; share of clock energy recovered per cycle.
   succeedsIf: The acoustic clock returns at least 90 percent of its energy each cycle while driving the adder, and the adiabatic adder uses at most a tenth of the conventional adder's energy per addition at the same throughput.
   costUsd: 400000
@@ -52,27 +57,27 @@ experiment:
 path:
   - phase: bench
     what: The 130 nm test chip with its resonator clock.
-    scale: One adder, a few thousand transistors.
+    scale: One 16-bit adder, about 2,000 transistors, on 4 resonators.
     proves: Acoustic resonators can power adiabatic logic with high recovery.
   - phase: prototype
     what: A small reversible processor with resonators built on the same die.
-    scale: About a million transistors.
+    scale: About 1 million transistors per chip, 100 chips.
     proves: A whole processor gains tenfold or more in energy per operation.
   - phase: pilot
     what: A reversible accelerator for matrix work in a modern process, sold for data centres and satellites.
-    scale: Billions of transistors, thousands of chips.
-    proves: Reversible logic wins on cost per operation, not only on energy.
+    scale: 10 billion transistors per chip, 10,000 chips.
+    proves: Reversible logic wins on cost per operation as well as on energy.
   - phase: first-plant
     what: Design tools and cell libraries for reversible logic offered by foundries as a standard option.
-    scale: Millions of chips a year.
+    scale: 10 million chips a year.
     proves: Any designer can build reversible chips.
   - phase: fleet
     what: Most new computing built reversible, a hundred to a thousand times nearer the Landauer bound.
-    scale: The bulk of the world's chips.
+    scale: 10 billion chips a year.
     proves: Computing can grow many times over while Earth stays under {earth-cap}.
   - phase: civilization
     what: Reversible logic as the base of computing in space, where every watt must be radiated away.
-    scale: "The swarm's computers from {year-k15}"
+    scale: "The swarm's computers from {year-k15}, on up to {sun-harnessed}"
     proves: Each joule of sunlight buys as many operations as physics allows.
 risks: >-
   Logic loads may pull the resonators' Q far below its unloaded value; the next step is to match

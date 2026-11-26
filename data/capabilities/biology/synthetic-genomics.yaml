@@ -9,9 +9,8 @@ summary: >-
   nothing in it but what a job needs, recode it so that viruses cannot infect it and it can use amino
   acids nature never invented, and start new life from a file rather than from an ancestor.
 target: >-
-  Write and boot a genome of any size, from a stripped-down bacterium to a yeast or a plant
-  chromosome, with no errors, cheaply enough and fast enough that a designed organism can be ordered
-  the way a gene is ordered today.
+  Write and boot a genome from a 0.5-megabase minimal bacterium to a 12-megabase yeast genome, with no
+  errors, at a cost and turnaround, days and cents a base, close to ordering a single gene today.
 exists:
   - text: The J. Craig Venter Institute built JCVI-syn3.0, a working cell with only 473 genes and a 531-kilobase genome, smaller than any self-replicating cell found in nature.
     url: https://doi.org/10.1126/science.aad6253
@@ -26,10 +25,10 @@ exists:
     url: https://www.drugdiscoverynews.com/ansa-biotechnologies-redefines-what-s-possible-in-dna-synthesis-with-50-kb-sequence-perfect-clonal-product-16751
     year: 2025
 gap: >-
-  Writing a bacterial genome still takes years and a consortium; a yeast genome took more than a
-  decade. Synthesis is error-prone past a few hundred bases, assembly of megabase pieces is a craft,
-  and booting a synthetic genome in a cell often fails for reasons no model yet predicts. We can write
-  life, but slowly, expensively and by hand.
+  Writing a bacterial genome still takes years and a consortium; the 12-megabase yeast genome took more
+  than 10 years. Synthesis is error-prone past a few hundred bases, assembly of megabase pieces is a
+  craft, and booting a synthetic genome in a cell often fails for reasons no model yet predicts. We can
+  write life, but slowly, expensively and by hand.
 inventions: [genome-write-foundry]
 scene:
   kind: cell

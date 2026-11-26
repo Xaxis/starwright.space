@@ -6,29 +6,34 @@ pitch: >-
   An archive in fused silica made of three layers, each teaching how to read the next, so a
   survivor with nothing but their eyes can climb from pictures to a magnifier to terabytes.
 principle: >-
-  Every long-lived archive is limited by the tool needed to read it. The eye resolves about a tenth
-  of a millimetre at reading distance; a glass bead a millimetre across, the lens of Leeuwenhoek's
-  microscopes, resolves about a micron; a polarising microscope and a camera read data written as
-  tiny laser-made structures inside glass. Density rises with the square of how fine the marks are,
-  so each layer holds thousands of times more per square centimetre than the one before.
-  Layer one is engraved at half a millimetre: pictures first, then counting, an alphabet, and step
-  by step how to melt a bead of glass into a lens. Layer two is microtext with letters about 10 microns
-  tall, tens of thousands of pages per plate, readable through that lens: the sciences, how to make tools,
-  power and medicine, and how to build the polarising microscope and decoder for layer three. Layer
-  three is laser-written data inside the glass, at terabytes per plate: everything else, for a
+  Every long-lived archive is limited by the tool needed to read it. The eye resolves about 0.1 mm
+  at reading distance; a glass bead 1 mm across, the lens of Leeuwenhoek's microscopes, resolves
+  about 1 micron; a polarising microscope and a camera read data written as tiny laser-made
+  structures inside glass. Density rises with the square of how fine the marks are, so each layer
+  holds about 2,500 times more per square centimetre than the one before. Layer one is engraved at
+  0.5 mm: pictures first, then counting, an alphabet, and step by step how to melt a bead of glass
+  into a lens. Layer two is microtext with letters about 10 microns tall, roughly 30,000 pages per
+  plate, readable through that lens: the sciences, how to make tools, power and medicine, and how to
+  build the polarising microscope and decoder for layer three. Layer three is laser-written data
+  inside the glass, about 5 TB per plate, as Project Silica has now shown: everything else, for a
   civilization that has climbed back to optics and electronics. Fused silica does not rust, rot or
   demagnetise, and survives heat, water and time.
 buildsOn:
-  - text: Microsoft's Project Silica, data laser-written in quartz glass with lifetimes of tens to hundreds of thousands of years.
-    url: https://www.microsoft.com/en-us/research/project/project-silica/
-  - text: The Long Now Foundation's Rosetta Disk, hundreds of thousands of micro-etched pages on nickel, with built-in magnifiers.
+  - text: Microsoft's Project Silica, which in 2026 reported 4.8 terabytes laser-written in one glass platter, with lifetimes beyond 10,000 years.
+    url: https://www.nature.com/articles/s41586-025-10042-w
+    year: 2026
+  - text: The Long Now Foundation's Rosetta Disk, over 13,000 micro-etched pages on nickel, read with a built-in magnifier.
     url: https://longnow.org/ideas/very-long-term-backup/
+    year: 2008
   - text: The Arch Mission Foundation's Lunar Library, whose first nickel layers hold analog page images readable by microscope.
     url: https://www.archmission.org/spaceil
+    year: 2019
   - text: The Voyager Golden Record, whose cover carries pictorial instructions for playing it.
     url: https://science.nasa.gov/mission/voyager/voyager-golden-record-overview/
+    year: 1977
   - text: Piql's optical film, rated for more than a thousand years, used in the Arctic World Archive.
     url: https://www.piql.com/
+    year: 2026
 experiment:
   goal: Test whether people with no instructions can climb an archive's layers using only what it teaches them.
   setup: >-
@@ -43,27 +48,27 @@ experiment:
 path:
   - phase: bench
     what: Three test plates and twenty teams.
-    scale: A few pages in layer one, a few thousand in layer two, a kilobyte in layer three.
+    scale: 3 plates, about 3,000 pages in all.
     proves: People can climb the layers with only what the glass teaches.
   - phase: prototype
     what: A thousand-plate archive holding an encyclopedia and the records of the climb, tested with teams who share no language with its authors.
-    scale: About a thousand plates.
+    scale: 1,000 plates, one full encyclopedia.
     proves: Pictures alone can carry a reader into the text.
   - phase: pilot
     what: Copies placed in Arctic, desert and mountain vaults, and one carried to the Moon.
-    scale: Five sites.
+    scale: 5 vault sites.
     proves: The plates survive storage and the reading ladder holds in different places.
   - phase: first-plant
     what: A plant writing a full archive copy every week, for libraries, schools and vaults.
-    scale: Fifty copies a year.
+    scale: 50 full copies a year.
     proves: Durable copies are cheap enough to be everywhere.
   - phase: fleet
     what: Copies in every region, on every settled world and in lunar shadow vaults.
-    scale: Thousands of copies.
+    scale: 10,000 copies.
     proves: No single catastrophe can destroy every copy.
   - phase: civilization
     what: Any survivor, anywhere, can climb from the naked eye back to the full record.
-    scale: Humanity's knowledge, readable for a million years.
+    scale: 1 readable copy within reach of anyone, for 1 million years.
     proves: What the climb has learned cannot be lost.
 risks: >-
   Pictures may not be enough to teach a first alphabet to people with no shared language; the next

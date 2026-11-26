@@ -6,8 +6,9 @@ pitch: >-
   A habitat hull made the way pipes are: molten slag poured into a spinning form in orbit, so that
   the spin that will give its people gravity also casts the walls that shield them.
 principle: >-
-  Centrifugal casting makes pipes and rings by pouring molten metal, glass or concrete into a
-  spinning mould; the spin flings the melt outward into an even, dense wall. In orbit there is no
+  Centrifugal casting makes iron pipes by pouring melt into a mould spun to 60 to 80 g, and 8.4 m
+  telescope mirrors are spin-cast from molten glass at 5 rpm; the spin flings the melt outward into
+  an even, dense wall. In orbit there is no
   gravity to pull the melt off centre, so the method can scale up without a heavy mould. Slag left
   over from taking oxygen and metal out of lunar or asteroid rock is melted with concentrated
   sunlight and poured onto the inside of a spinning cylindrical membrane. The melt spreads into a
@@ -19,10 +20,13 @@ principle: >-
   fibre or steel bands wound around the shell carry the hoop load of spin and air pressure, while the
   cast mass shields.
 buildsOn:
-  - text: Centrifugal casting is used industrially to make thin-walled cylinders of metal, glass and concrete, with moulds spun at 300 to 3,000 rpm.
-    url: https://en.wikipedia.org/wiki/Centrifugal_casting_(industrial)
-    year: 2026
-  - text: Kalenborn makes cast basalt from melted rock as wear-resistant cylinders of 40 to 525 mm bore, with a density of 2.9 grams per cubic centimetre.
+  - text: Centrifugal casting makes cast iron pipes, bushes and cylinder liners in sand, metal or ceramic moulds spun fast enough to give 60 to 80 g, in castings up to 10 m long, 1.73 m across and 36 tonnes.
+    url: https://www.open.edu/openlearn/science-maths-technology/engineering-technology/manupedia/centrifugal-casting
+    year: 2017
+  - text: The University of Arizona's mirror lab spin-casts 8.4 m telescope mirrors from 17.5 tonnes of borosilicate glass, melted at 1,165 °C in a furnace turning at 5 rpm that throws the melt up the mould's sides; each then anneals for just over a month and takes another month and a half to reach room temperature.
+    url: https://news.arizona.edu/news/sixth-mirror-casting-brings-giant-magellan-telescope-closer-completion
+    year: 2021
+  - text: Kalenborn makes cast basalt from melted rock as wear-resistant pipes and plates, at a density of 2.9 grams per cubic centimetre, showing melted rock can be cast into dense, hard shapes.
     url: https://www.kalenborn.com/wp-content/uploads/2023/03/de-folder-abresist.pdf
     year: 2023
   - text: NASA's 1977 Space Settlements design study found 4.5 tonnes of shield per square metre sufficient against cosmic rays, and took 1 rpm as the upper limit for living quarters.
@@ -51,23 +55,23 @@ path:
     proves: Spin-cast simulant makes an even, dense wall.
   - phase: prototype
     what: A 10 m ring cast in orbit from simulant or early lunar slag, melted by a solar concentrator.
-    scale: A few tonnes.
+    scale: A 10 m ring, a few tonnes.
     proves: Casting without gravity, with sunlight as the furnace.
   - phase: pilot
     what: A 50 m ring near the Moon, the first habitat module whose shield is cast in place, banded with fibre and pressurised.
-    scale: Thousands of tonnes.
+    scale: A 50 m ring, over 1,000 tonnes.
     proves: A crew shielded for years in spin gravity.
   - phase: first-plant
     what: A cylinder 500 m across for a few thousand people, like Kalpana One.
-    scale: Millions of tonnes of cast shell.
+    scale: A 500 m cylinder, millions of tonnes of cast shell.
     proves: Homes built from slag the industry already makes.
   - phase: fleet
     what: Cast-hull cyclers between Earth and Mars, and habitats beside every industrial site, each cast from local slag.
-    scale: Hundreds of hulls.
+    scale: Over 100 hulls.
     proves: Homes and ships made where they are needed.
   - phase: civilization
     what: Habitats for millions near the Moon, the asteroids and Mercury, from {year-type-1} on.
-    scale: Billions of tonnes of cast shell.
+    scale: Over 1 billion tonnes of cast shell.
     proves: People live where the climb is built.
 risks: >-
   Cast rock is weak in tension, so the shell depends on its wound bands, which add a step and a

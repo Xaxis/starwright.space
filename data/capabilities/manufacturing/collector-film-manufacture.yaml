@@ -4,33 +4,34 @@ domain: manufacturing
 stage: type-1
 needs: [self-replicating-factory, durable-thin-films]
 summary: >-
-  The swarm is mostly area: {swarm-full-area} of film at {collector-density}. Even the first
-  collectors around Earth need square kilometres a day, and the whole swarm needs more film than
-  every factory on Earth has ever made of anything. The film must be made in space, from rock, on
-  lines that the self-copying industry can build and copy.
+  The swarm is mostly area: {swarm-full-area} of film at {collector-density}, hundreds of millions of
+  times the area of Earth's surface. Even the first collectors around Earth need square kilometres a
+  day. Film on that scale cannot be lifted from Earth; it must be made in space, from rock, on lines
+  that the self-copying industry can build and copy.
 target: >-
-  Film lines in space that turn refined glass and metal into finished collector film at square
-  kilometres per minute per plant, built and copied by the industry itself, so that the
-  {collector-share} of industrial output that becomes collectors is limited by mass, not by how fast
-  film can be made.
+  Film lines in space that turn refined glass and metal into finished collector film at a square
+  kilometre a minute per plant, at {collector-density}, built and copied by the industry itself,
+  so that the {collector-share} of industrial output that becomes collectors is limited by mass,
+  not by how fast film can be made.
 exists:
-  - text: IKAROS flew a 7.5 micrometre polyimide sail 20 metres on the diagonal, with thin-film solar cells built into the membrane.
-    url: https://en.wikipedia.org/wiki/IKAROS
+  - text: JAXA's IKAROS flew a square sail of aluminium-coated polyimide only 7.5 micrometres thick, 14 metres to a side, with thin-film solar cells attached to the membrane.
+    url: https://global.jaxa.jp/countdown/f17/pdf/presskit_ikaros_e.pdf
     year: 2010
-  - text: First Solar mass-produces cadmium telluride thin-film solar modules by depositing the semiconductor directly onto glass.
-    url: https://www.firstsolar.com/
+  - text: First Solar turns a sheet of glass into a finished cadmium telluride thin-film module in about four hours on one continuous line, and its five US factories are estimated at more than 17 GW a year when fully running.
+    url: https://www.firstsolar.com/Technology/Manufacturing
     year: 2026
-  - text: Nippon Electric Glass's G-Leaf is thin enough below 100 micrometres to be handled roll to roll.
+  - text: Nippon Electric Glass makes G-Leaf glass under 100 micrometres thick, thin enough to roll up and process roll to roll.
     url: https://www.neg.co.jp/en/products/g-leaf/index.html
     year: 2026
-  - text: Basalt fibres are made by melting basalt rock and drawing the melt into fibres, a precedent for drawing glass from rock.
-    url: https://en.wikipedia.org/wiki/Basalt_fiber
-    year: 2026
+  - text: Continuous basalt fibre is made by melting crushed rock, homogenising the melt and drawing fibre from it onto a reel, inside a window only 70 to 100 degrees wide above the point where the melt starts to crystallise and the threads break.
+    url: https://patents.google.com/patent/US8042363B2/en
+    year: 2011
 gap: >-
-  Thin film is made on Earth on plastic carriers, in vacuum chambers, at widths of a few metres.
-  Nothing makes micrometre glass film continuously, and no film line has been built in space or from
-  rock. One of the fastest film lines on Earth would need longer than the age of the universe to
-  cover the swarm.
+  Thin film is made on Earth on plastic or glass carriers, in vacuum chambers, at widths of a few
+  metres. Nothing makes micrometre glass film continuously, and no film line has been built in
+  space or fed from rock. A square kilometre a minute is about 17,000 square metres a second, and
+  even a line making 100 square metres a second would need more than a thousand times the age of
+  the universe to make the swarm's film alone.
 inventions: [ribbon-draw]
 scene:
   kind: orbit

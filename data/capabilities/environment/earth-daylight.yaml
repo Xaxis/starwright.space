@@ -4,23 +4,26 @@ domain: environment
 stage: type-2
 needs: [dyson-swarm, swarm-station-keeping, sunlight-rights, heat-budget]
 summary: >-
-  The swarm orbits at {swarm-radius}, inside Earth's orbit. Close to complete, it stands between Earth
-  and the Sun, catching the light that warms the planet and grows its food. Worse, all the light it
-  catches leaves it again as heat, and from Earth's distance that heat arrives as a flood of infrared
-  about as strong as the sunlight itself. Without care, Type II would darken Earth's sky and heat its
-  climate more than anything humanity has yet done.
+  The swarm orbits at {swarm-radius}, inside Earth's orbit. Close to complete, it stands between
+  Earth and the Sun, catching the light that warms the planet and grows its food. Worse, all the
+  light it catches leaves it again as heat, and from Earth's distance that heat arrives as a flood
+  of infrared about as strong as the sunlight itself. Without care, Type II would darken Earth's sky
+  and heat its climate more than anything humanity has yet done.
 target: >-
-  Earth receives the same sunlight, in the same spectrum, as before the swarm, to within a tenth of a
-  percent, and almost none of the swarm's waste heat, from the first collectors in {year-k15} until
-  the swarm closes in {year-type-2} and after.
+  Earth receives the same sunlight, in the same spectrum, as before the swarm, to within a tenth of
+  a percent, and almost none of the swarm's waste heat, from the first collectors in {year-k15}
+  until the swarm closes in {year-type-2} and after.
 exists:
-  - text: Peters found that only a photovoltaic sphere lying beyond Earth's orbit would let life persist on Earth, and that even then Earth would need its temperature controlled; a partial sphere at 2.13 au would warm Earth by less than 3 K.
+  - text: Peters found that only a photovoltaic Dyson sphere extending beyond Earth's orbit would let life persist on Earth, and even then Earth would need its temperature controlled; a partial sphere at 2.13 au using 1.3 × 10^23 kg of silicon could give 4 percent of the Sun's power and warm Earth by less than 3 K.
     url: https://doi.org/10.1016/j.solmat.2025.113589
     year: 2025
+  - text: Project Hephaistos searched five million stars in Gaia, 2MASS and WISE data for the infrared glow a partial Dyson sphere would give off, and found seven candidates, all M dwarfs.
+    url: https://doi.org/10.1093/mnras/stae1186
+    year: 2024
   - text: Wright's review models how a star and the material around it exchange radiation, and shows solid shells are unstable, leaving swarms of separate orbiting collectors.
     url: https://arxiv.org/abs/2006.16734
     year: 2020
-  - text: McInnes showed that a ring or a shell can be stable in the restricted three-body problem when it encloses the smaller of two bodies.
+  - text: McInnes showed that a ring or a shell can be dynamically stable in the restricted three-body problem when it encloses the smaller of the two bodies.
     url: https://arxiv.org/abs/2502.12806
     year: 2025
   - text: Robert Forward's statites hover by balancing sunlight's pressure against gravity instead of orbiting, which lets a sail hold a chosen position near a planet.
@@ -31,9 +34,13 @@ exists:
     year: 2010
 gap: >-
   No published swarm design accounts for Earth's sunlight or for the infrared the swarm sends back.
-  A swarm inside Earth's orbit must keep a clear, moving path for Earth's light, and send its own heat
-  in other directions, and no one has designed either. The rules that would require it are only being
-  drafted.
+  The only study of a swarm's effect on Earth, Peters', finds a sphere inside Earth's orbit leaves
+  Earth uninhabitable. Keeping daylight needs only a small clear path, since collectors block
+  Earth's light only when they cross the Sun's disc as Earth sees it, but an evenly glowing swarm
+  would bathe Earth in infrared about as strong as {solar-constant}, and keeping that off Earth
+  needs most collectors to send their heat away from it, which no radiator yet flown can do. The
+  target is a tenth of a percent; nothing has been designed to it, and the rules that would require
+  it are only being drafted.
 inventions: [daylight-lane]
 scene:
   kind: swarm

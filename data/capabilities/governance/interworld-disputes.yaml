@@ -11,8 +11,8 @@ summary: >-
   across light-minutes and that every world accepts.
 target: >-
   Courts and arbitration that resolve a dispute between parties on different worlds within months,
-  without live hearings, under rules all sides agreed in advance, with awards enforced on every
-  world.
+  even across the 4 to 20 light-minutes between Earth and Mars, without live hearings, under rules
+  all sides agreed in advance, with awards enforced on every world.
 exists:
   - text: The Permanent Court of Arbitration adopted Optional Rules for Arbitration of Disputes Relating to Outer Space Activities, effective 6 December 2011.
     url: https://docs.pca-cpa.org/2016/01/Permanent-Court-of-Arbitration-Optional-Rules-for-Arbitration-of-Disputes-Relating-to-Outer-Space-Activities.pdf
@@ -26,14 +26,17 @@ exists:
   - text: In 1981 the USSR paid Canada 3 million Canadian dollars to settle Canada's claim under the 1972 Liability Convention for the Cosmos 954 satellite, which scattered radioactive debris over northern Canada.
     url: https://www.jaxa.jp/library/space_law/chapter_3/3-2-2-1_e.html
     year: 1981
+  - text: The International Chamber of Commerce's 2021 expedited arbitration rules let a tribunal decide a dispute on the documents alone, with no hearing and no questioning of witnesses.
+    url: https://iccwbo.org/dispute-resolution/dispute-resolution-services/arbitration/rules-procedure/2021-arbitration-rules/
+    year: 2021
   - text: NASA gives the one-way travel time of a signal between Earth and Mars as 4 to 20 minutes, depending on where the planets are.
     url: https://www.nasa.gov/missions/tech-demonstration/deep-space-atomic-clock/how-an-atomic-clock-will-get-humans-to-mars-on-time/
     year: 2019
 gap: >-
-  The space arbitration rules that exist assume parties who can meet and reply quickly, and the
-  station agreement assigns jurisdiction by nationality, which fails once people are born off Earth.
-  No forum has been designed for parties who can never talk in real time, and nothing enforces an
-  award beyond the reach of Earth's states.
+  Documents-only arbitration already exists, but the space rules still assume parties who can reply
+  quickly, and the station agreement assigns jurisdiction by nationality, which fails once people are
+  born off Earth. A message between Earth and Mars takes 4 to 20 minutes each way, yet no forum sets
+  its clocks by that light-time, and nothing enforces an award beyond the reach of Earth's states.
 inventions: [light-time-constitution]
 scene:
   kind: network

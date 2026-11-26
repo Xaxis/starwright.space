@@ -1,0 +1,86 @@
+id: sail-sentinel
+title: The Sail Sentinel
+domain: resilience
+for: [solar-storm-resilience]
+pitch: >-
+  A solar sail held by light pressure a little sunward of the L1 point, further from Earth than any
+  monitor can stay without fuel, so it sees a solar storm coming and lengthens the warning from
+  under an hour to well over one.
+principle: >-
+  Sunlight carries momentum. At Earth's distance it delivers {solar-constant}, which a mirror turns
+  into a pressure near 9 micronewtons per square metre. A sail of low mass per area turns that into
+  steady thrust. IKAROS's film weighed {ikaros-density}; a whole sail craft, payload included, can
+  reach a few hundredths of a kilogram per square metre, which gives a characteristic acceleration
+  of about 0.3 millimetres per second squared. That is enough to balance the extra pull of the
+  Sun's gravity a little sunward of the L1 point and hold a craft at an artificial equilibrium
+  there, where a spacecraft with no thrust would fall toward the Sun. The warning a monitor gives
+  grows with how far ahead of Earth it sits: L1, 1.5 million km sunward, buys 15 to 60 minutes
+  before the solar wind arrives; a sail holding station a further 0.75 to 1.5 million km sunward
+  lengthens that by roughly half to double. The extra distance is about 0.01 of an astronomical
+  unit, well inside the 0.06 to 0.12 over which the wind's magnetic field stays coherent, so the
+  reading still predicts what reaches Earth.
+buildsOn:
+  - text: NASA's ACS3, which in 2024 deployed a composite-boom solar sail of about 80 square metres in low Earth orbit on a 16 kilogram spacecraft.
+    url: https://ntrs.nasa.gov/citations/20260004973
+    year: 2024
+  - text: JAXA's IKAROS, the first spacecraft to sail between planets on sunlight, in 2010.
+    url: https://global.jaxa.jp/projects/sas/ikaros/
+    year: 2010
+  - text: NASA's Solar Cruiser, a 1,653 square metre sail whose quadrant deployment was tested on the ground.
+    url: https://hesto.smce.nasa.gov/2023/08/02/solar-cruiser-enabling-new-vistas-for-heliophysics-science/
+    year: 2023
+  - text: NOAA's Space Storm Solar Sail Sentinel, a 1,653 square metre sail membrane bought in 2026 to station a space-weather monitor sunward of L1 for extra lead time.
+    url: https://www.nesdis.noaa.gov/news/noaa-glides-the-future-solar-sail-technology
+    year: 2026
+  - text: Akhavan-Tafti and colleagues' SWIFT concept, which places a sail-borne monitor sunward of L1 to double the warning from today's L1 instruments.
+    url: https://www.frontiersin.org/articles/10.3389/fspas.2023.1185603
+    year: 2023
+experiment:
+  goal: Show that a sail of the needed thinness can be deployed and controlled to hold a station sunward of L1, and that its reading would arrive early enough to improve a storm forecast.
+  setup: >-
+    Deploy and characterise a sail membrane of the target size in a large vacuum chamber (NASA's
+    Space Power Facility has tested 20 metre sails), measuring its mass per area and reflectivity.
+    Then run a hardware-in-the-loop station-keeping simulation driven by years of real solar-wind
+    data from DSCOVR, using the sail's measured performance, holding an artificial equilibrium about
+    1 million km sunward of L1.
+  measure: The membrane's mass per area and reflectivity; the characteristic acceleration they imply; the position error the control law holds in simulation; the extra warning time at the station and the forecast skill it buys against L1 data.
+  succeedsIf: The membrane reaches 0.03 kilograms per square metre or less at metre scale with high reflectivity, implying a characteristic acceleration of at least 0.25 millimetres per second squared, and the simulated station holds within 50,000 km of its point for a simulated year while adding at least 20 minutes of warning.
+  costUsd: 2500000
+  months: 18
+path:
+  - phase: bench
+    what: A metre-scale sail membrane in a vacuum chamber, and a year of simulated station-keeping.
+    scale: 1 membrane, 1 year of simulation.
+    proves: The sail is thin and reflective enough, and can be held sunward of L1.
+  - phase: prototype
+    what: A small solar-sail spacecraft that deploys in space and holds a displaced, non-Keplerian station, carrying a magnetometer.
+    scale: About 80 square metres of sail, months in space.
+    proves: The sail works and station-keeps with a real instrument aboard.
+  - phase: pilot
+    what: One operational sentinel at a sub-L1 station, feeding wind and field data to forecasters alongside L1.
+    scale: 1 craft, about 1 million km sunward of L1.
+    proves: It adds real warning and improves storm forecasts.
+  - phase: first-plant
+    what: A pair of sentinels for redundancy, with the sail built in series.
+    scale: 2 craft on continuous watch.
+    proves: Grids and satellite operators act on the early warning.
+  - phase: fleet
+    what: Sentinels sunward of every major world and at other Lagrange points as space industry grows.
+    scale: Several craft, 1 sunward of each major world.
+    proves: Every settled world gets warning well ahead of a storm.
+  - phase: civilization
+    what: A standing watch on the Sun from sunward of each inhabited world.
+    scale: 1 sentinel sunward of every inhabited world.
+    proves: No storm arrives unannounced.
+risks: >-
+  The sail may not reach the needed thinness at the size required; then the station sits closer to
+  L1 for a smaller gain. Station-keeping at a sub-L1 point is an unstable balance, so a control
+  failure drifts the craft, which argues for a drift-safe design and a second sentinel. A reading
+  taken farther out might not match the field that reaches Earth, but the extra distance is small
+  against the scale over which the wind stays coherent, so the prediction holds. The gain is in
+  warning time, not a new kind of measurement, so the sentinel adds to L1 monitors rather than
+  replacing them.
+scene:
+  kind: machine
+  focus: A great thin sail hanging sunward of Earth, tilted to the Sun, holding its station against the pull.
+  params: { shape: sail, spin: 0.1 }

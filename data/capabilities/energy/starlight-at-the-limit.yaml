@@ -29,9 +29,9 @@ exists:
   - text: Nielsen and colleagues at UNSW measured electricity from a thermoradiative diode, a device that makes power by glowing in the infrared, 2.26 mW per square metre at a 12.5 °C temperature difference.
     url: https://doi.org/10.1021/acsphotonics.2c00223
     year: 2022
-  - text: Detailed-balance theory sets the limit for a solar cell with infinitely many junctions at 68.7 percent in ordinary sunlight and 86.8 percent in fully concentrated sunlight.
-    url: https://en.wikipedia.org/wiki/Shockley%E2%80%93Queisser_limit
-    year: 1981
+  - text: De Vos showed by detailed balance that a stack of infinitely many solar cell junctions could convert 68 percent of unconcentrated sunlight and 86 percent of fully concentrated sunlight.
+    url: https://iopscience.iop.org/article/10.1088/0022-3727/13/5/018
+    year: 1980
 gap: >-
   The best solar cell yet made turns {pv-record-multijunction} of concentrated light into power, and
   only on Earth, cooled. Thermophotovoltaics reach 40 percent in the laboratory; thermoradiative diodes make

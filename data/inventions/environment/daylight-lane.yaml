@@ -3,31 +3,36 @@ title: The Daylight Lane
 domain: environment
 for: [earth-daylight]
 pitch: >-
-  A rule every swarm collector obeys and a radiator every collector carries: turn edge-on whenever you
-  cross the cone of sky that faces the Earth, and send your waste heat only in directions where the
-  Earth is not, so Earth keeps its daylight and stays out of the swarm's infrared.
+  A rule every swarm collector obeys and a radiator every collector carries: turn edge-on whenever
+  you cross the cone of sky that faces the Earth, and send your waste heat only in directions where
+  the Earth is not, so Earth keeps its daylight and stays out of the swarm's infrared.
 principle: >-
   Two things would harm Earth. The first is shade. Collectors at {swarm-radius} orbit faster than
-  Earth, so each one passes repeatedly between Earth and the Sun. The Lane is a region of the swarm,
-  a cap about 25 degrees in radius as seen from the Sun, centred on the line to Earth and moving with
-  it. Any collector inside the cap turns edge-on to the Sun and stops collecting, so the light aimed at
-  Earth passes untouched. The cap holds about a twentieth of the swarm at any moment, and each collector
-  spends about six weeks of every ten months in it. The second is heat. Every watt the swarm catches
-  leaves again as infrared, and from Earth's distance an evenly glowing swarm would deliver about as
-  much infrared as the sunlight itself, warming Earth by tens of degrees. Outside the cap, Earth always
-  lies more than about 50 degrees from the line straight out from a collector's back. So each collector
-  radiates through an array of tiny compound parabolic reflectors, the optics of solar concentrators
-  run in reverse, which by conservation of etendue confine thermal emission to a cone around that
-  line, here about 40 degrees. Heat goes out, but never toward Earth. A tighter cone needs more radiator
-  area or a hotter radiator, the price of the Lane.
+  Earth, so each one passes repeatedly between Earth and the Sun. Shade itself needs only a narrow
+  path: a collector blocks Earth's light only while it crosses the Sun's disc as Earth sees it, and
+  at {swarm-radius} that is a circle about 0.2 degrees in radius as seen from the Sun. Heat sets a
+  wider lane. The Lane is a cap about 25 degrees in radius as seen from the Sun, centred on the line
+  to Earth and moving with it. Any collector inside the cap turns edge-on to the Sun and stops
+  collecting, so the light aimed at Earth passes untouched and the collectors that face Earth most
+  directly make no waste heat. A cap of that size holds about a twentieth of the swarm at any
+  moment, since its share of the sphere is (1 - cos 25°)/2. A collector at {swarm-radius} laps Earth
+  about every ten months and crosses the cap's 50 degrees in about six weeks. The second is heat.
+  Every watt the swarm catches leaves again as infrared, and from Earth's distance an evenly glowing
+  swarm would deliver about as much infrared as the sunlight itself, warming Earth by tens of
+  degrees. Outside the cap, Earth always lies more than about 50 degrees from the line straight out
+  from a collector's back. So each collector radiates through an array of tiny compound parabolic
+  reflectors, the optics of solar concentrators run in reverse, which by conservation of etendue
+  confine thermal emission to a cone around that line, here about 40 degrees. Heat goes out, but
+  never toward Earth. A tighter cone needs more radiator area or a hotter radiator, the price of the
+  Lane.
 buildsOn:
   - text: Peters found that only a photovoltaic sphere lying beyond Earth's orbit would let life persist on Earth, and that it would still need temperature control.
     url: https://doi.org/10.1016/j.solmat.2025.113589
     year: 2025
-  - text: Xu, Mandal and Raman made films that emit thermal radiation mainly in chosen directions, with emissivity above 0.7 at 60 to 75 degrees.
+  - text: Xu, Mandal and Raman made films that emit thermal radiation mainly in chosen directions, with emissivity above 0.7 at 60 to 75 degrees for p-polarised light between 10 and 14.3 microns.
     url: https://doi.org/10.1126/science.abc5381
     year: 2021
-  - text: Raman and colleagues built a photonic film that reflects 97 percent of sunlight while radiating heat to the sky, cooling below the air temperature in full sun.
+  - text: Raman and colleagues built a photonic film that reflects 97 percent of sunlight while radiating heat to the sky, cooling 4.9 °C below the air temperature in full sun.
     url: https://doi.org/10.1038/nature13883
     year: 2014
   - text: Shen and colleagues made stacked photonic crystals that let light through only near one angle.
@@ -58,15 +63,15 @@ path:
     proves: The lane rule and the radiator work on paper and on the bench.
   - phase: prototype
     what: A small spacecraft carrying directional radiators, measured from a second craft flying around it.
-    scale: Square metres of radiator.
+    scale: One spacecraft with about 10 square metres of radiator.
     proves: Directional emission holds in space, through heating cycles and solar wind.
   - phase: pilot
     what: The first swarm collectors flying the lane rule from {year-k15}, watched by telescopes at Earth and at L1.
-    scale: Thousands of collectors.
+    scale: The first 10,000 collectors, from {year-k15}.
     proves: The rule runs in practice, with Earth's light and infrared measured.
   - phase: first-plant
     what: The lane written into the standard every collector design must meet before it flies.
-    scale: Every collector built.
+    scale: Every collector after the first 10,000, as the swarm grows toward {type-2-power}.
     proves: No collector flies without the lane.
   - phase: fleet
     what: The swarm at {type-2-power}, with a lane about 50 degrees across moving with Earth.
@@ -74,16 +79,16 @@ path:
     proves: Type II without dimming or heating Earth.
   - phase: civilization
     what: The closed swarm at {sun-harnessed}, with Earth in its own lane of daylight for as long as the Sun shines.
-    scale: The whole swarm, for billions of years.
+    scale: The whole swarm, {swarm-full-area} of collectors, for billions of years.
     proves: A Type II civilization that keeps its home world as it was.
 risks: >-
-  The lane costs about a twentieth of the swarm's light; if directional radiators leak more than hoped,
-  the lane must widen and the cost grows, or waste heat must be gathered to hot hubs, as in the Cascade
-  Collector, where tight radiators are easier to build. A control fault that left collectors face-on in
-  the lane would shade Earth, so collectors default to edge-on and many independent controllers must
-  agree before any collects. Other worlds also see the swarm: Venus and Mars, and any world people live
-  on, would need lanes of their own, which multiplies the cost. The rules that require a lane must
-  exist before the first collector flies.
+  The lane costs about a twentieth of the swarm's light; if directional radiators leak more than
+  hoped, the lane must widen and the cost grows, or waste heat must be gathered to hot hubs, as in
+  the Cascade Collector, where tight radiators are easier to build. A control fault that left
+  collectors face-on in the lane would shade Earth, so collectors default to edge-on and many
+  independent controllers must agree before any collects. Other worlds also see the swarm: Venus and
+  Mars, and any world people live on, would need lanes of their own, which multiplies the cost. The
+  rules that require a lane must exist before the first collector flies.
 scene:
   kind: swarm
   focus: The swarm around the Sun, with a clear lane of sunlight through it pointing at a small blue Earth.

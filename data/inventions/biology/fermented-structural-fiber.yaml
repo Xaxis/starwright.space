@@ -7,22 +7,27 @@ pitch: >-
   spinning line that pulls it into fibre, so a material tougher than steel by weight is brewed from
   sugar or carbon dioxide instead of drawn from oil.
 principle: >-
-  Spider silk and similar structural proteins get their strength from long chains of a few short
-  motifs repeated hundreds of times, which line up and crystallise when drawn into a fibre. Cells
-  dislike making such long, repetitive proteins: they stall, truncate and clog. The Brewed Fibre
-  Line solves both ends. A chassis strain is engineered with codon-balanced, repeat-stable genes and
-  a secretion pathway so it pushes finished protein out of the cell at high yield, with protein
-  design tools used to find sequences that fold and spin well yet are easy for a microbe to make.
-  The broth is then concentrated and extruded through a spinneret into a bath that draws and aligns
-  the chains into fibre, the same physics a spider uses. Fed on sugar, or on carbon dioxide and
+  Spider silk gets its strength from long chains of a few short motifs repeated hundreds of times,
+  which line up and crystallise when drawn into a fibre; dragline silk reaches a toughness up to 350
+  megajoules per cubic metre, tens of times that of steel by weight. Cells dislike making such long,
+  repetitive proteins: they stall, truncate and clog. The Brewed Fibre Line solves both ends. A
+  chassis strain is engineered with codon-balanced, repeat-stable genes and a secretion pathway so it
+  pushes at least 10 grams of finished protein per litre out of the cell, cheaper to recover than
+  Spiber's 50 grams per litre held inside it, with protein design tools used to find sequences that
+  fold and spin well yet are easy for a microbe to make. The broth is then concentrated and extruded
+  through a spinneret into a bath that draws the fibre several times its length, so the chains
+  crystallise and align, the same physics a spider uses. Fed on sugar, or on carbon dioxide and
   hydrogen through a gas-fermentation front end, the line turns renewable feedstock into
   high-performance fibre continuously.
 buildsOn:
-  - text: Precision fermentation already makes animal proteins at commercial scale without animals (Perfect Day's dairy whey), the manufacturing base a fibre line extends.
-    url: https://perfectday.com/
-    year: 2024
-  - text: The fermentation sector's 4.1 billion USD of investment has built the large bioreactors and strain-engineering know-how a structural-protein line needs.
-    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
+  - text: Spiber already brews a structural protein at commercial scale, reaching 50 grams per litre in fermenters over 100 kilolitres, so the line's work is the secretion, the spinning to full strength and the gas feedstock, not the brewing itself.
+    url: https://vegconomist.com/fermentation/spiber-opens-brewed-protein-fermentation-plant-third-party-protein-producers/
+    year: 2026
+  - text: Darwin's bark spider dragline silk averages about 350 megajoules per cubic metre of toughness, over ten times Kevlar, the strength target a brewed fibre aims for (Agnarsson and colleagues, PLOS ONE, 2010).
+    url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0011234
+    year: 2010
+  - text: LanzaTech runs commercial gas fermentation, turning the carbon monoxide and carbon dioxide in steel-mill gas into ethanol; its Steelanol plant came online in 2023 at 64,000 tonnes a year, the gas front end this line would feed on.
+    url: https://www.sec.gov/Archives/edgar/data/1843724/000162828024015022/lnza-20240405.htm
     year: 2024
   - text: ESM3 designed a functional protein far from any natural one, and RFdiffusion designs binding proteins from scratch, letting a line search for structural sequences that both spin well and brew easily.
     url: https://www.evolutionaryscale.ai/blog/esm3-release
@@ -45,27 +50,27 @@ experiment:
 path:
   - phase: bench
     what: A secreting strain and spun fibres meeting the strength target at lab scale.
-    scale: Litres of broth, metres of fibre.
+    scale: About 10 litres of broth, metres of fibre.
     proves: The protein brews and spins into a strong fibre.
   - phase: prototype
     what: Pilot fermentation and continuous spinning with consistent fibre.
-    scale: Cubic-metre reactors, kilometres of fibre.
+    scale: 1,000-litre reactors, kilometres of fibre.
     proves: Yield and quality hold as the tanks grow.
   - phase: pilot
     what: A gas-fermentation front end feeding the line on carbon dioxide and hydrogen.
-    scale: Tonnes of fibre a year.
+    scale: About 100 tonnes of fibre a year.
     proves: Fibre made from air and clean power, not just sugar.
   - phase: first-plant
     what: A commercial plant selling brewed fibre into real products.
-    scale: Thousands of tonnes a year.
+    scale: About 10,000 tonnes a year.
     proves: Grown fibre competes on price and performance with its petrochemical rival.
   - phase: fleet
     what: Plants worldwide, and compact lines in habitats making fibre and composite from local feedstock.
-    scale: Global, plus off-world units.
+    scale: About 1 million tonnes a year, plus off-world units.
     proves: A large share of structural polymer is grown, not refined from oil.
   - phase: civilization
     what: Brewed structural materials as a default, made wherever feedstock and power are, including in space.
-    scale: Planet and inner solar system.
+    scale: A large share of the 430 million tonnes of plastics made each year.
     proves: Materials decoupled from mining and petrochemistry for a large class of uses.
 risks: >-
   Secretion yields may stay too low for commodity prices; the project would try surface-display and

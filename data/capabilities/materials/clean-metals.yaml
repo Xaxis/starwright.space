@@ -39,11 +39,11 @@ exists:
     url: https://www.enpot.com/
     year: 2019
 gap: >-
-  Hydrogen steel and electrolytic iron are at pilot and first-plant scale, against nearly two
-  billion tonnes a year. Inert anodes are not yet in commercial pot lines. And every clean route
-  still assumes steady power: an aluminium cell that loses its heat balance for a few hours freezes
-  and is lost, so smelters cannot yet ride the daily swing of a grid built on sunlight, which is
-  where clean power is cheapest.
+  Hydrogen steel and electrolytic iron are at first-plant scale against 1,849 million tonnes of steel
+  a year, only 30 percent of it already made in electric furnaces. Inert anodes are not yet in
+  commercial pot lines. And every clean route still assumes steady power: an aluminium cell that loses
+  its heat balance for a few hours freezes and is lost, so smelters cannot yet ride the daily swing of
+  a grid built on sunlight, which is where clean power is cheapest.
 inventions: [tidecell]
 scene:
   kind: field

@@ -23,16 +23,22 @@ principle: >-
 buildsOn:
   - text: Section 11 of the Artemis Accords, under which signatories notify and coordinate with each other inside a safety zone around their activities.
     url: https://www.nasa.gov/wp-content/uploads/2022/11/Artemis-Accords-signed-13Oct2020.pdf
+    year: 2020
   - text: The ITU's 2019 milestones for satellite constellations, 10 percent deployed within two years, 50 percent within five and all within seven.
     url: https://www.itu.int/en/mediacentre/Pages/2019-PR23.aspx
+    year: 2019
   - text: Article 82 of the UN Convention on the Law of the Sea, whose payments on production beyond 200 nautical miles start at 1 percent in the sixth year and rise to 7 percent.
     url: https://www.un.org/depts/los/convention_agreements/texts/unclos/part6.htm
+    year: 1982
   - text: Ostrom's Governing the Commons (1990), on the rules that let common-pool resources last.
     url: https://www.cambridge.org/core/product/identifier/9780511807763/type/book
+    year: 1990
   - text: The International Seabed Authority's time-limited exploration contracts for the deep seabed, held by 22 contractors.
     url: https://isa.org.jm/exploration-contracts/
+    year: 2026
   - text: The Permanent Court of Arbitration's 2011 rules for disputes about activities in outer space.
     url: https://docs.pca-cpa.org/2016/01/Permanent-Court-of-Arbitration-Optional-Rules-for-Arbitration-of-Disputes-Relating-to-Outer-Space-Activities.pdf
+    year: 2011
 experiment:
   goal: Test whether milestone-bound claims and a rising royalty prevent hoarding and settle overlaps, before any real lunar claim exists.
   setup: >-
@@ -52,19 +58,19 @@ path:
     proves: Which rules stop hoarding and settle overlaps.
   - phase: prototype
     what: The registry run as a voluntary public register for real planned missions, filed by the agencies and companies with lunar landers on their manifests.
-    scale: Every lunar mission planned for the next decade.
+    scale: Every lunar mission in the next 10 years.
     proves: Operators will file, coordinate and respect each other's zones when it costs them little.
   - phase: pilot
     what: Two or more states with space resource laws, such as the US, Luxembourg and Japan, make filing in the registry a condition of their licences.
-    scale: The first ice-mining and solar power sites.
+    scale: The first few ice and power sites, 2 or 3 states.
     proves: Milestones and royalties work on real missions with real money.
   - phase: first-plant
     what: The registry becomes the working mechanism of the UN's space resource principles, joined by both lunar coalitions.
-    scale: The whole Moon.
+    scale: The whole Moon, 2 lunar coalitions.
     proves: Rival programmes can share one register.
   - phase: fleet
     what: The same registry extends to the asteroids and the moons of Mars, with claims sized to each body.
-    scale: The inner solar system.
+    scale: The inner solar system, 100-plus bodies.
     proves: The rules hold where no one on Earth can watch the site.
   - phase: civilization
     what: Every resource the climb uses is drawn under registered, time-limited claims whose royalties pay every person a share.

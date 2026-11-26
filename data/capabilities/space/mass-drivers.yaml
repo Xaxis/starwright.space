@@ -13,27 +13,32 @@ target: >-
   tonnes a year with aim precise enough to be caught, so that an industry doubling every
   {doubling-time} is never short of raw mass.
 exists:
-  - text: Gerard O'Neill built the first mass driver model in 1976 and 1977 with Henry Kolm and student volunteers at MIT, on a $2000 budget; it fired at 40 m/s and 33 g.
-    url: https://en.wikipedia.org/wiki/Mass_driver
+  - text: O'Neill and Kolm's team built the first mass driver model, the wood-sided MD1, at MIT in 1976 and 1977, reaching about 33 gravities of acceleration.
+    url: https://ssi.org/mass-drivers-from-the-ones-who-actually-made-the-real-ones/
     year: 1977
   - text: NASA's 1977 Ames summer study, published as SP-428 in 1979, designed a lunar mass driver launching material at up to 600,000 metric tons a year, with payloads carried in buckets that are slowed and returned.
     url: https://ntrs.nasa.gov/citations/19790024054
     year: 1979
-  - text: SpinLaunch's suborbital accelerator, a vacuum chamber 33 m across that spins a projectile and releases it, first flew in October 2021 and its first ten flights threw payloads up to 30,000 feet.
-    url: https://en.wikipedia.org/wiki/SpinLaunch
+  - text: SpinLaunch's suborbital accelerator, a vacuum chamber 33 m across that spins a projectile and releases it, first flew in October 2021 at Spaceport America.
+    url: https://spacenews.com/spinlaunch-conducts-first-test-of-suborbital-accelerator-at-spaceport-america/
     year: 2021
-  - text: The US Navy's electromagnetic catapult, EMALS, made its first launch from USS Gerald R. Ford in July 2017, using a 91 m linear motor and up to 484 MJ per launch.
-    url: https://en.wikipedia.org/wiki/Electromagnetic_Aircraft_Launch_System
+  - text: USS Gerald R. Ford became the first ship to launch aircraft with the US Navy's electromagnetic catapult, EMALS, in 2017; its 91 m linear induction motor takes a 45,000 kg aircraft to 130 knots, about 67 m/s, on up to 484 MJ released from four disk alternators in 2 to 3 seconds.
+    url: https://www.electronicdesign.com/technologies/power/article/21199416/carrier-based-launch-of-aircraft-to-use-power-electronics-instead-of-steam-catapult
     year: 2017
-  - text: The US Navy ended funding for its electromagnetic railgun in its 2022 budget request, after about $500 million over 17 years.
-    url: https://en.wikipedia.org/wiki/Railgun
+  - text: The US Navy proposed suspending its electromagnetic railgun in its 2022 budget, ending nearly two decades of work without a fielded weapon.
+    url: https://www.everycrsreport.com/reports/R44175.html
     year: 2021
+  - text: The French-German research institute ISL ran the first outdoor free-flight test of its electromagnetic railgun in June 2026, sending a 25 mm projectile past Mach 5 on a launch energy in the 1 megajoule class, so work on fast electric launchers goes on in Europe.
+    url: https://www.armyrecognition.com/news/army-news/2026/european-electromagnetic-railgun-isl-outdoor-free-flight-test
+    year: 2026
 gap: >-
-  Electric launchers in service reach aircraft speeds; lunar escape needs more than thirty times
-  more. Nobody has built a driver hundreds of metres long, held its aim to within metres over tens of
-  thousands of kilometres, or caught its payloads at the far end. O'Neill's buckets must be braked
-  and sent back after every shot, which halves a track's use and puts the most complex part where
-  the forces are greatest.
+  Launchers in regular service reach aircraft speeds, about 67 m/s on EMALS; lunar escape needs 2.4
+  km/s, more than thirty times more. A research railgun has passed Mach 5, about 1.7 km/s, but with
+  a 25 mm projectile on about 1 MJ, while a driver feeding millions of tonnes a year must throw
+  about 30 kg every second without pause. Nobody has built a driver hundreds of metres long, held its aim to within metres over tens of
+  thousands of kilometres, or caught its payloads at the far end. O'Neill's buckets must be braked and
+  sent back after every shot, which halves a track's use and puts the most complex part where the
+  forces are greatest.
 inventions: [iron-jacket-driver]
 scene:
   kind: launch

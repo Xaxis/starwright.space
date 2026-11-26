@@ -19,11 +19,11 @@ exists:
   - text: Moderna and the US NIH designed the mRNA-1273 vaccine within 24 hours of that genome being released, using work done earlier on related coronaviruses.
     url: https://www.nature.com/articles/s41586-020-2622-0
     year: 2020
-  - text: CEPI's 100 Days Mission aims to have safe, effective vaccines within 100 days of a new pandemic threat being identified.
+  - text: CEPI's 100 Days Mission aims to have safe, effective vaccines within 100 days of a new pandemic threat being identified; the first COVID vaccines took 326 days.
     url: https://cepi.net/100-days-mission
     year: 2026
-  - text: SecureBio's CASPER links labs across the United States in an early-warning system that sequences wastewater for any pathogen, known or new.
-    url: https://naobservatory.org/
+  - text: SecureBio's CASPER sequences wastewater from 24 US cities for any pathogen, known or new, deep enough to have flagged a single measles infection in one sewershed.
+    url: https://securebio.org/casper/
     year: 2026
   - text: In a room-sized chamber, far-UVC light at 222 nm cut the airborne load of a bacterium by 98.4 percent, worth 184 extra air changes an hour, at doses inside today's exposure limits.
     url: https://www.nature.com/articles/s41598-022-08462-z
@@ -31,12 +31,15 @@ exists:
   - text: Far-UVC light at 222 nm also inactivated airborne human coronaviruses efficiently at low doses that are considered safe for people.
     url: https://www.nature.com/articles/s41598-020-67211-2
     year: 2020
+  - text: A six-month trial in Danish care homes over the winter of 2024 to 2025 found that far-UVC light in common rooms cut hospital-treated infections sharply, though it was not a randomized trial.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13237172/
+    year: 2026
 gap: >-
-  Metagenomic surveillance covers a few cities, not the world. Indoor air is still cleaned mostly
-  by opening windows and by filters that change it a few times an hour. Far-UVC lamps work but are
-  costly and few, and nobody has measured what they do to infections across whole buildings for
-  years. Vaccine design takes a day; testing, making and delivering billions of doses still takes
-  most of a year.
+  Metagenomic surveillance covers about 24 cities, not the world. Indoor air is still cleaned
+  mostly by opening windows and by filters that change it a few times an hour. Far-UVC lamps work,
+  and a first building trial found fewer infections, but they are still costly and few, and the
+  long-term effect across whole populations is unproven. Vaccine design takes a day; testing,
+  making and delivering billions of doses still takes most of a year.
 inventions: [clean-air-ceiling]
 scene:
   kind: network

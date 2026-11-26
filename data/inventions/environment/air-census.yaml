@@ -1,0 +1,96 @@
+id: air-census
+title: The Air Census
+domain: environment
+for: [biodiversity, earth-monitoring]
+pitch: >-
+  Read the DNA on the filters that air-quality stations already change every week, and turn Europe's
+  4,000 stations, and then the world's, into a running census of the plants, fungi, insects, birds
+  and mammals that live around each one.
+principle: >-
+  Every living thing sheds DNA in skin, hair, feathers, pollen, spores and droppings, and some of it
+  rides the wind on particles a few to tens of microns across. Pumps that sample air pollution pull
+  that air through filters, and short marker regions of the DNA caught on them can be read and
+  matched to species, a method called metabarcoding. Littlefair and colleagues found more than 180
+  taxa, including 34 birds and 24 mammals, on filters from two UK air-quality stations. Tournayre
+  and colleagues then read 185 samples from 15 stations of a national network and found more than
+  1,100 taxa, with signals mostly from nearby: a median distance of 18.6 km, nearly all under 80 km.
+  Archived filters work too: Sullivan and colleagues read 34 years of weekly filters from one
+  Swedish station and followed more than 2,700 genera as land use changed around it. So the networks
+  that already exist are a sampling grid with a spacing of tens of kilometres, run by people who
+  visit every station each week. The Census adds a clean cut from each filter before it is weighed
+  and stored, a freezer at each station and shared laboratories that sequence the cuts. A weekly
+  sample from 4,000 stations is about 200,000 samples a year. What it gives is which species are
+  present each week and how that changes, not counts of individuals, and it catches the groups that
+  field surveys rarely count, such as insects and fungi.
+buildsOn:
+  - text: Littlefair and colleagues identified DNA from more than 180 vertebrate, arthropod, plant and fungal taxa, including 34 birds and 24 mammals, on filters from two UK air-quality stations.
+    url: https://doi.org/10.1016/j.cub.2023.04.036
+    year: 2023
+  - text: Lynggaard and colleagues detected 49 vertebrate species, from 26 orders, in air filtered at Copenhagen Zoo.
+    url: https://doi.org/10.1016/j.cub.2021.12.014
+    year: 2022
+  - text: Tournayre and colleagues ran the first national airborne DNA survey on 15 stations of the UK Heavy Metals air network, finding more than 1,100 taxa with signals local to under 80 km, at a relatively low field cost.
+    url: https://doi.org/10.1038/s41598-025-03650-z
+    year: 2025
+  - text: Sullivan and colleagues read 34 years of archived weekly filters from a Swedish radionuclide station and reconstructed the relative abundance of more than 2,700 genera.
+    url: https://doi.org/10.1038/s41467-025-67676-7
+    year: 2025
+  - text: Polling and colleagues detected 154 vertebrate taxa in three weeks with air samplers in the Netherlands, and the Burkard spore trap used for pollen counts found the most species.
+    url: https://doi.org/10.1002/edn3.591
+    year: 2024
+  - text: The Duffy lab at the University of Florida sequenced all the DNA in air samples with a two-day turnaround from collection to finished analysis by one person.
+    url: https://doi.org/10.1038/s41559-025-02711-w
+    year: 2025
+  - text: The European Environment Agency counts more than 4,000 air-quality monitoring stations in the EU's network.
+    url: https://www.eea.europa.eu/en/topics/in-depth/air-pollution
+    year: 2026
+experiment:
+  goal: Show that weekly filter DNA from a regional air network tracks known species and their seasons as well as field surveys do.
+  setup: >-
+    For one year, cut a strip from every weekly filter at 50 air-quality and pollen stations in one
+    country with long-running field surveys, such as the UK with its breeding bird survey and moth
+    traps. Strips are frozen at the station and sequenced with four markers: vertebrate 12S, insect
+    COI, plant rbcL and ITS2, and fungal ITS, with blank filters in every batch. Five years of
+    archived filters from ten of the stations are read as well, and the results compared with bird
+    surveys, moth traps and pollen counts within 20 km.
+  measure: Species detected per station and week; the share of bird and mammal species recorded by surveys within 20 km that the filters also detect; the timing of seasonal events such as migrant arrivals, flowering and moth flights; trends in the archived series against survey trends; full cost per sample.
+  succeedsIf: The filters detect at least half the bird and mammal species that surveys record within 20 km, match the timing of seasonal events to within two weeks, and the archived series give the same direction of change as the surveys for at least 70 percent of species with significant trends, at under 300 dollars per station-week.
+  costUsd: 1500000
+  months: 24
+path:
+  - phase: bench
+    what: Fifty stations in one country for a year, plus five years of their archives.
+    scale: About 2,500 weekly samples and 2,500 archived ones.
+    proves: Filter DNA matches what surveys find, at a known cost.
+  - phase: prototype
+    what: Every station of one national network, weekly, with a decade of archived filters read back.
+    scale: About 300 stations, about 15,000 samples a year.
+    proves: National trend indicators for birds, insects, plants and fungi from one data stream.
+  - phase: pilot
+    what: All of Europe's air-quality network, reported each year against the Global Biodiversity Framework.
+    scale: More than 4,000 stations, about 200,000 samples a year.
+    proves: A continental record of life, updated weekly.
+  - phase: first-plant
+    what: Air-quality, pollen and radionuclide networks on every continent, with shared reference libraries of DNA for each region.
+    scale: About 20,000 stations, about 1 million samples a year.
+    proves: Which species live where, and how that changes, measured worldwide rather than modelled.
+  - phase: fleet
+    what: Samplers added where no air stations stand, in the tropics, on ships, on power lines and at the solar fields the plan builds.
+    scale: About 100,000 samplers, including the tropics and the plan's solar fields.
+    proves: Losses are seen where they happen, including where the climb builds.
+  - phase: civilization
+    what: A living census of Earth's species, used to place panels, mines and lines and to judge every rewilding lease.
+    scale: About 370,000 samplers, one in every 20 km square of land, about 19 million samples a year, for decades.
+    proves: Life on Earth is tracked well enough to know whether protecting it is working.
+risks: >-
+  DNA in the air shows presence better than numbers, because species shed at different rates; the
+  census reports trends and calibrates against surveys at shared sites rather than claiming counts.
+  Reference libraries are thin for tropical insects and fungi, so many sequences go unnamed at
+  first; the raw reads are kept so they can be named later. Wind and rain change what reaches a
+  filter, so models of air transport and local weather correct the series. Filters can contaminate
+  each other; clean cutting tools and blanks in every batch catch it. Human DNA on filters raises
+  privacy questions, so human reads are discarded at the sequencer.
+scene:
+  kind: network
+  focus: Air-quality stations across the continents as points of light, each pulsing as its week's list of species comes in.
+  params: { shape: globe, nodes: 4000, clusters: 30, links: 0.3, pulses: 0.6 }

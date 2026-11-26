@@ -22,16 +22,22 @@ principle: >-
 buildsOn:
   - text: The EU Services Directive of 2006, Article 13(4), under which an authorisation is deemed granted if the authority does not answer in time.
     url: https://eur-lex.europa.eu/eli/dir/2006/123/oj
+    year: 2006
   - text: The US FCC's shot clocks for siting wireless equipment, 90 and 150 days from 2009 and 60 and 90 days for small cells from 2018, after which a missed deadline counts against the authority.
     url: https://docs.fcc.gov/public/attachments/FCC-18-133A1.pdf
+    year: 2018
   - text: SolarAPP+, which issues permits for home solar automatically after an online code check, in more than 350 jurisdictions.
     url: https://www.gosolarapp.org/
+    year: 2026
   - text: The EU's renewables acceleration areas, where permits must be decided within 12 months.
     url: https://eur-lex.europa.eu/eli/dir/2023/2413/oj
+    year: 2023
   - text: The FAST-41 Permitting Council, which puts large US projects' federal reviews on one public timetable.
     url: https://www.permitting.gov/newsroom/press-releases/year-one-trump-administration-fast-41-accomplishments
+    year: 2026
   - text: The US Council on Environmental Quality's 2020 measurement of how long environmental impact statements take.
     url: https://nepa.gov/sites/default/files/documents/CEQ_EIS_Timeline_Report_2020-6-12.pdf
+    year: 2020
 experiment:
   goal: Show that a deemed-approval clock with an early hearing and a benefit share cuts decision time for large solar and storage projects without raising later challenges or local opposition.
   setup: >-
@@ -40,29 +46,29 @@ experiment:
     current process as controls. Run the shared docket as open software, hold the early hearings, and
     write the benefit share into each permit.
   measure: Days from a complete application to a decision; the share of decisions that are deemed grants; challenges filed per decision; residents' support, surveyed before and after; megawatts approved.
-  succeedsIf: Median decision time falls by at least half against the control counties, while challenges per decision and residents' opposition are no higher.
+  succeedsIf: Median decision time falls by at least 50 percent against the control counties, while challenges per decision and residents' opposition are no higher.
   costUsd: 3000000
   months: 24
 path:
   - phase: bench
     what: A simulation of permitting queues built from real US and EU docket records, testing clock lengths, project classes and the deemed-approval default.
-    scale: Thousands of past projects replayed.
+    scale: About 5,000 past projects replayed.
     proves: Which clock lengths cut delay most, and where a deemed approval would have let a bad project through.
   - phase: prototype
     what: The clock run for solar and storage in 20 to 40 counties, against matched controls.
-    scale: Hundreds of projects, a few gigawatts.
+    scale: About 200 projects, a few gigawatts.
     proves: Decision time halves without more conflict.
   - phase: pilot
     what: A whole state or EU member state adopts the clock for every clean energy and grid project, transmission included.
-    scale: Tens of gigawatts and thousands of kilometres of line.
+    scale: Some 50 gigawatts and thousands of km of line.
     proves: It works for large projects that cross many counties, and it survives court tests.
   - phase: first-plant
     what: A national law, or an EU-wide rule, puts every class of energy and industrial project on the clock.
-    scale: A large economy's whole buildout.
+    scale: 1 large economy's whole buildout.
     proves: A country can decide at the pace the climb builds.
   - phase: fleet
     what: Model laws adopted in many countries, with linked dockets so a line crossing a border runs on one clock.
-    scale: Dozens of countries.
+    scale: Some 30 countries.
     proves: Continental grids can be permitted as single projects.
   - phase: civilization
     what: Every jurisdiction on Earth decides on the buildout within a known time, and the same rules carry to the Moon and orbit.

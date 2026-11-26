@@ -9,29 +9,39 @@ summary: >-
   most short flights out of the sky. The limit is cost and land: lines must be nearly straight and
   level, and they are expensive and slow to build.
 target: >-
-  High-speed lines joining every pair of large cities within about a thousand kilometres on every
-  continent, at 350 km/h on rail and 600 km/h on maglev, built for a fraction of today's cost per
-  kilometre.
+  High-speed lines joining every pair of large cities 200 to 1,000 km apart on every continent: at
+  least 200,000 km of line worldwide by {year-k08}, four times China's network today, at 350 km/h on
+  rail and 600 km/h on maglev, built for under 15 million USD per km, below China's 17 to 21 million
+  and well under half of Europe's 25 to 39 million, and approved and built in under 5 years a line.
 exists:
-  - text: China's high-speed rail network passed 50,000 km of line, about two thirds of the world's total.
-    url: https://en.wikipedia.org/wiki/High-speed_rail_in_China
+  - text: China's high-speed rail network passed 50,000 km of line by the end of 2025, within a 165,000 km national railway.
+    url: https://en.people.cn/n3/2026/0105/c90000-20410146.html
     year: 2025
-  - text: JR Central's L0 maglev set the world speed record for trains, 603 km/h, on 21 April 2015; its Chuo Shinkansen line is now due to open in 2034.
-    url: https://en.wikipedia.org/wiki/SCMaglev
-    year: 2015
-  - text: The Shanghai maglev has run commercially since January 2004 on a 29.86 km line, at up to 431 km/h until its speed was cut to 300 km/h in 2021.
-    url: https://en.wikipedia.org/wiki/Shanghai_maglev_train
-    year: 2004
-  - text: China completed a 2 km low-vacuum maglev test tube in Datong in 2023, and trials of its propulsion, levitation and braking succeeded in 2024.
-    url: https://en.wikipedia.org/wiki/Vactrain
+  - text: A World Bank study put China's 350 km/h lines at about 17 to 21 million USD per km and European lines of 300 km/h or more at 25 to 39 million, China's costs held down by standard designs such as viaducts at 9 to 12 million USD per km.
+    url: https://www.pinsentmasons.com/out-law/news/innovation-and-standardisation-keep-chinas-high-speed-rail-costs-low-says-world-bank
+    year: 2014
+  - text: JR Central's superconducting maglev line between Tokyo and Nagoya slipped from 2027 to 2034 or later after Shizuoka refused to allow tunnelling in the prefecture, a tunnel expected to take at least 10 years to dig and fit out.
+    url: https://railwaygazette.com/infrastructure/chuo-shinkansen-completion-delayed-until-2034/66398.article
     year: 2024
-  - text: Hyperloop One shut down at the end of 2023, having raised over $485 million and carried passengers only on a test track at 172 km/h.
-    url: https://en.wikipedia.org/wiki/Hyperloop_One
+  - text: Shizuoka's governor agreed on 7 July 2026 to let JR Central begin construction of the maglev line in the prefecture, removing the main obstacle to the Tokyo to Nagoya section.
+    url: https://sj.jst.go.jp/news/202607/n0710-02n.html
+    year: 2026
+  - text: The Shanghai Transrapid maglev, built by Germany's Transrapid International and first run officially on 31 December 2002, reached 431 km/h on each 30 km run between the airport and the city's financial district, the Guinness record for a maglev in regular public service.
+    url: https://www.guinnessworldrecords.com/world-records/fastest-maglev-train-in-regular-public-service
+    year: 2003
+  - text: China's T-flight low-vacuum tube maglev, designed for 1,000 km/h, passed a trial run on its test line in Datong, Shanxi, in 2024.
+    url: https://global.chinadaily.com.cn/a/202409/12/WS66e23c14a3103711928a7813.html
+    year: 2024
+  - text: Hyperloop One, which raised and spent hundreds of millions of dollars from 2014, ceased operations on 31 December 2023.
+    url: https://techcrunch.com/2023/12/21/hyperloop-one-shutting-down/
     year: 2023
 gap: >-
-  Outside China, high-speed networks are short and take a decade or more to approve and build, and
-  every line pays separately for its land, its trench and its power. High-speed maglev runs
-  commercially on one short line, in Shanghai, and tube transport has not left its test tracks.
+  China's 50,000 km is a quarter of the target, and most other countries' networks are short.
+  Lines are slow to approve and build, against the target's 5 years: Japan's maglev line, due in
+  2027, now waits on a tunnel of at least 10 years after a local refusal held it up. China's lines
+  cost 17 to 21 million USD per km and Europe's 25 to 39 million, against a target under 15.
+  High-speed maglev runs commercially on one 30 km line, and tube transport has not left its test
+  tracks.
 inventions: [cold-corridor]
 scene:
   kind: network

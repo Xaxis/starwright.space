@@ -19,14 +19,18 @@ principle: >-
   the share of the factory, by mass and by part, that it can make from its feedstock, and the list
   of parts it must still import, which is the to-do list for the next generation.
 buildsOn:
-  - text: ISO 10303 (STEP), the standards for computer-interpretable product manufacturing information, which the genome's geometry reuses.
-    url: https://en.wikipedia.org/wiki/ISO_10303
+  - text: ISO 10303 (STEP), which carries parts, assemblies and their dimensions and tolerances between design, manufacturing and inspection software; the genome's geometry reuses it.
+    url: https://www.nist.gov/services-resources/software/step-file-analyzer-and-viewer
+    year: 2026
   - text: Open Source Ecology's Global Village Construction Set, open designs for 50 industrial machines, a first corpus to encode.
     url: https://www.opensourceecology.org/gvcs/
+    year: 2026
   - text: The OSHWA definition of open source hardware, whose freedoms the genome keeps.
     url: https://oshwa.org/definition/
+    year: 2026
   - text: RepRap, whose self-copying printers were the first open machines to count their own closure.
     url: https://reprap.org/wiki/RepRap
+    year: 2025
 experiment:
   goal: Show that a machine described only by its genome can be built correctly by two different shops that have never seen it, with no drawings and no phone calls.
   setup: >-
@@ -49,19 +53,19 @@ path:
     proves: The format covers a full set of industrial machines.
   - phase: pilot
     what: A contract manufacturing network that takes genomes as orders.
-    scale: Thousands of parts a day across many shops.
+    scale: About 5,000 parts a day across 100 shops.
     proves: Production can move between factories in hours, not months.
   - phase: first-plant
     what: The bench loop of the Seed Foundry described entirely in genome form, closure tracked part by part.
-    scale: About a tonne of machine, a few dozen part families.
+    scale: 1 tonne of machine, about 40 part families.
     proves: A self-copying loop can be specified, audited and improved as data.
   - phase: fleet
     what: Every seed and its descendants carry and update their genomes, sharing improvements.
-    scale: Every factory in the industry.
+    scale: About 1,000 seeds' worth of industry, 100,000 tonnes.
     proves: Lineages improve together without drifting apart.
   - phase: civilization
     what: The shared, signed recipe book of the whole industry, from the first seed in {seed-year} to the swarm.
-    scale: All of industry.
+    scale: Every recipe behind {swarm-full-mined} of processed mass.
     proves: Making anything anywhere is a question of compiling it.
 risks: >-
   Tacit knowledge (how a weld should sound, how a casting should look) may resist encoding; the

@@ -52,7 +52,7 @@ experiment:
 path:
   - phase: bench
     what: The chamber coater on Earth, fed with simulant-derived materials.
-    scale: Square metres a day.
+    scale: 10 square metres a day on a 1 m drum.
     proves: Polymer-free, free-standing film cells of the right weight.
   - phase: prototype
     what: A small loom flown on a free-flyer, open to space and heated by sunlight, fed with silicon and aluminium from Earth.
@@ -60,7 +60,7 @@ path:
     proves: Coating in open vacuum and microgravity, with sunlight as the heat source.
   - phase: pilot
     what: A loom on the Moon fed by a regolith electrolysis plant, making collectors for lunar bases and for solar power in orbit.
-    scale: A hectare a week.
+    scale: 10,000 square metres a week.
     proves: Collectors made from lunar material alone.
   - phase: first-plant
     what: Looms in lunar orbit or at L5, fed by rock from the mass drivers, weaving collectors for space solar power.
@@ -68,11 +68,11 @@ path:
     proves: Collectors made in space for less than the cost of launching them.
   - phase: fleet
     what: Looms built by the seed factories near the Moon, at the asteroids and at Mercury.
-    scale: Thousands of looms.
+    scale: 1,000 looms, about 60,000 square kilometres a year.
     proves: Collector output that grows with the self-copying industry.
   - phase: civilization
     what: The swarm's {swarm-full-area} of collector, woven at {collector-density}.
-    scale: "{swarm-full-area}"
+    scale: About 2 x 10^13 looms over a century, weaving {swarm-full-area}.
     proves: Area enough to catch the Sun.
 risks: >-
   Silicon a few microns thick absorbs sunlight poorly and may convert only half of the plan's

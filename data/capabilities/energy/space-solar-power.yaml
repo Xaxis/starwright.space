@@ -10,9 +10,10 @@ summary: >-
   down to Earth. Power has been beamed from orbit to the ground only at the scale of a laboratory
   demonstration.
 target: >-
-  Collectors in orbit that power the factories and computers there from {year-k09}, built mostly
-  from material already in space, with beams that deliver part of their output to receivers on Earth
-  and the Moon.
+  Collectors in orbit that supply the space industry once power used in space passes power used on
+  Earth in {year-space-overtakes}: several hundred terawatts by {year-k09}, about a million square
+  kilometres of collector, more than 90 percent of it made from material already in space, with beams
+  delivering 1 to 10 GW each to receivers on Earth and the Moon.
 exists:
   - text: Caltech's 50 kg Space Solar Power Demonstrator launched in January 2023; its MAPLE array beamed power wirelessly in orbit in March, and a receiver on a Caltech roof in Pasadena detected the beam in May.
     url: https://www.caltech.edu/about/news/in-a-first-caltechs-space-solar-power-demonstrator-wirelessly-transmits-power-in-space
@@ -20,9 +21,9 @@ exists:
   - text: The US Naval Research Laboratory's PRAM module turned sunlight into microwaves aboard the X-37B from May 2020 to November 2022; its output fell as it got hotter, but the module did not degrade.
     url: https://iafastro.directory/iac/paper/id/87673/abstract-pdf/IAC-24,C3,2,1,x87673.brief.pdf
     year: 2024
-  - text: Japan's OHISAMA is planned as a 180 kg satellite at about 400 km with about 2 square metres of panels, beaming about 1 kW of microwaves to receivers on the ground.
-    url: https://www.space.com/japan-space-based-solar-power-demonstration-2025
-    year: 2024
+  - text: Japan's OHISAMA, a small satellite built by JAXA and Japan Space Systems to beam microwave power from low orbit to receivers on the ground, was still being assembled in 2026, with flight models of most parts complete.
+    url: https://iafastro.directory/iac/paper/id/108811/abstract-pdf/IAC-26,C3,1,2,x108811.brief.pdf
+    year: 2026
   - text: Space Solar's HARRIER demonstrator in Belfast steered a power beam through 360 degrees with no moving parts in April 2024, a step toward its 1.7 km CASSIOPeiA design.
     url: https://www.spacesolar.co.uk/breakthrough-in-space-based-energy-space-solar-demonstrates-worlds-first-360-wireless-power-transmission/
     year: 2024
@@ -31,9 +32,11 @@ exists:
     year: 2022
 gap: >-
   No collector in orbit has yet sent useful power to the ground: Caltech's beam lit a detector, not a
-  town. Collectors launched from Earth cost far more per watt than panels on the ground, and no large
-  array has ever been assembled in orbit. Beams lose much of their power between the panel and the
-  plug, and ground receivers kilometres wide must be sited and trusted.
+  town, and Japan's OHISAMA has not yet flown. Launching even 1 kg per kilowatt at
+  {launch-cost-falcon-9} costs about 30 times the price of modules on the ground at
+  {pv-module-price}. The target needs about a million square kilometres of collector, and no
+  collector has yet been made in space from material found there. Beams lose much of their power
+  between the panel and the plug, and ground receivers kilometres wide must be sited and trusted.
 inventions: [vapour-loom]
 scene:
   kind: orbit

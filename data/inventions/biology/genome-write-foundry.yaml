@@ -10,12 +10,14 @@ principle: >-
   Writing a genome today is three slow crafts chained by hand: synthesising short DNA, stitching the
   pieces into ever larger ones, and booting the assembled genome in a cell. The Write Foundry turns
   each into a machine and joins them. Enzymatic synthesis, which grows DNA base by base in water
-  without harsh chemicals, makes long, accurate fragments; robotic assembly in yeast and in vitro
-  stitches them into chromosomes; and a recoded, stripped-down chassis cell receives the finished
-  genome and starts it. Design software checks every construct for errors and for biosafety before a
-  base is made, and a sequencing step verifies the product. Because the chassis is recoded, it can
-  run genetic codes nature never used and resist the viruses that plague fermentation. The whole line
-  is a loop: design, write, boot, read, correct, repeat, measured in days.
+  without harsh chemicals, makes oligos of about 500 nucleotides and stitches them into 50-kilobase
+  blocks; robotic assembly joins those into a 1-megabase chromosome; and a recoded, stripped-down
+  chassis cell, its code cut to 57 codons, receives the finished genome and starts it. Design software
+  checks every construct for errors and for biosafety before a base is made, and a sequencing step
+  verifies the product. Because the chassis is recoded, it can run genetic codes nature never used and
+  resist the viruses that plague fermentation. At the target of one cent a base, a 1-megabase genome
+  costs about 10,000 dollars and takes under 30 days, against the years a consortium needs now: the
+  line is a loop of design, write, boot, read, correct, repeat.
 buildsOn:
   - text: Enzymatic DNA synthesis set a 1,005-base single-synthesis record and now delivers 50-kilobase sequence-perfect clonal DNA, the write step's core.
     url: https://www.drugdiscoverynews.com/ansa-biotechnologies-redefines-what-s-possible-in-dna-synthesis-with-50-kb-sequence-perfect-clonal-product-16751
@@ -46,27 +48,27 @@ experiment:
 path:
   - phase: bench
     what: The three steps automated separately and joined for a single small genome.
-    scale: One bacterial genome, about a megabase.
+    scale: 1 bacterial genome, about 1 megabase.
     proves: End-to-end writing and booting works without hand craft.
   - phase: prototype
     what: A foundry that writes designed bacterial genomes on order for outside labs.
-    scale: Dozens of genomes a year.
+    scale: About 50 genomes a year.
     proves: Turnaround and cost reach the targets repeatably.
   - phase: pilot
     what: Yeast and plant chromosomes written on the same line.
-    scale: Megabase eukaryotic chromosomes.
+    scale: Eukaryotic chromosomes of about 1 megabase.
     proves: The method scales past bacteria to the genomes crops and materials need.
   - phase: first-plant
     what: A commercial foundry service that takes a design and returns a verified strain.
-    scale: Thousands of genomes a year.
+    scale: About 5,000 genomes a year.
     proves: Designed organisms can be ordered like genes, at a published price.
   - phase: fleet
     what: Foundries at every major bio hub, and compact units for field and off-world use.
-    scale: Global, plus the first units in space.
+    scale: About 50,000 genomes a year, plus the first units in space.
     proves: Writing life is distributed, not held in a few consortia.
   - phase: civilization
     what: Any organism a job needs, written from a file wherever it is needed, including off Earth.
-    scale: Planet and inner solar system.
+    scale: About 1 million genomes a year across the inner solar system.
     proves: Biology is as programmable as the climb assumes.
 risks: >-
   Booting large synthetic genomes may keep failing for reasons no model predicts; the project would

@@ -9,18 +9,19 @@ summary: >-
   gets the momentum back when it catches mass going the other way. A tether can cut the speed a
   rocket must reach by about half, and the space elevator is the limit of the idea.
 target: >-
-  Spinning tethers in Earth and lunar orbit that hand payloads every day between suborbital
-  vehicles, low orbit and the path to the Moon, their momentum kept up by balancing upward and
-  downward traffic and by electric current through the tether itself.
+  Spinning tethers in Earth and lunar orbit that hand payloads every day between suborbital vehicles,
+  low orbit and the path to the Moon, cutting the velocity a launch vehicle must reach by about half
+  with a tip speed near 3.5 km/s, their momentum kept up by balancing upward and downward traffic and
+  by electric current through the tether itself.
 exists:
-  - text: ESA's student YES2 experiment deployed a tether to its full length of 31.7 km from a Foton capsule in September 2007.
-    url: https://en.wikipedia.org/wiki/Young_Engineers%27_Satellite_2
+  - text: ESA's student YES2 experiment deployed a tether to its full length of 31.7 km from a Foton spacecraft in September 2007.
+    url: https://www.eurekalert.org/news-releases/726090
     year: 2007
   - text: NASA and Italy's TSS-1R deployed a conducting tether to 19.7 km from the Space Shuttle in 1996 before it broke; it drove a current of 1.1 A at 3,400 V, about 3.5 kW.
     url: https://ntrs.nasa.gov/api/citations/20160007056/downloads/20160007056.pdf
     year: 1996
-  - text: JAXA's KITE electrodynamic tether experiment on the HTV-6 freighter in 2017 was to deploy a 700 m tether, but deployment failed.
-    url: https://en.wikipedia.org/wiki/Kounotori_6
+  - text: JAXA's KITE electrodynamic tether on the HTV-6 freighter in 2017 failed to unroll its tether because the deployment system failed.
+    url: https://global.jaxa.jp/press/2017/02/20170206_kounotori6.html
     year: 2017
   - text: Shizuoka University's STARS-Me2, two small satellites joined by a 10 m tape with a climber, flew from the ISS from September 2025 to March 2026 as a test of space elevator climbing.
     url: https://wwp.shizuoka.ac.jp/suarc/?p=166

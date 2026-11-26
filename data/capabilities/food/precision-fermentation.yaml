@@ -10,24 +10,34 @@ summary: >-
   it is the bridge between today's agriculture and a world that grows most of its protein in
   bioreactors.
 target: >-
-  Brew the key proteins and fats of animal foods, and many ingredients besides, by fermentation at a
-  cost at or below the farmed original, so that dairy, egg and meat proteins are made without animals
-  wherever they are wanted.
+  Brew the key proteins and fats of animal foods, and many ingredients besides, at titres above 50
+  grams per litre and a cost at or below the farmed original's few dollars a kilogram, so that dairy,
+  egg and meat proteins are made without animals wherever they are wanted.
 exists:
-  - text: Perfect Day brews real dairy whey protein in microbes and sells it in commercial products, proving an identical animal protein can be made without the animal.
-    url: https://perfectday.com/
-    year: 2024
-  - text: The alternative-protein fermentation sector drew 4.1 billion USD of all-time investment across 158 companies by the end of 2023, building strains, bioreactors and supply chains.
-    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
-    year: 2024
-  - text: Solar Foods makes single-cell protein from carbon dioxide, hydrogen and air at about 160 tonnes a year, showing fermentation can feed on gases, not just sugar.
-    url: https://solarfoods.com/factory/
-    year: 2024
+  - text: Chymosin, the rennet enzyme for cheese, has been made by fermentation since the FDA cleared it in 1990; it now makes most of the world's cheese, so an animal protein brewed in microbes is already an everyday ingredient.
+    url: https://www.law.cornell.edu/cfr/text/21/184.1685
+    year: 1990
+  - text: Perfect Day's beta-lactoglobulin, a real dairy whey protein brewed in a fungus, got an FDA "no questions" GRAS letter in 2020 and is sold in commercial products, proving an identical animal protein can be made without the animal.
+    url: https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=863
+    year: 2020
+  - text: The alternative-protein fermentation sector had drawn about 5.2 billion USD of all-time investment by the end of 2025, building the strains, bioreactors and supply chains a brewery needs.
+    url: https://gfi.org/ferm-report-2026
+    year: 2025
+  - text: Published strains make these proteins at modest titres, about 1 gram per litre of beta-lactoglobulin and 2 grams per litre of ovalbumin in one VTT study, so yields must climb for brewing to compete on volume.
+    url: https://doi.org/10.1016/j.foodres.2022.112131
+    year: 2023
+  - text: GFI's 2025 cost review finds the lowest published production cost for a fermented protein near $11 per kg, with most techno-economic models of dairy proteins landing well above commodity prices.
+    url: https://gfi.org/fd-tea-pdf
+    year: 2025
+  - text: In 2026 the FDA issued "no questions" letters for recombinant caseins, the structural proteins of cheese, to Formo, Those Vegan Cowboys and Eden Brew, extending brewing from whey to the harder milk proteins.
+    url: https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=GRASNotices&id=1348
+    year: 2026
 gap: >-
-  Brewed proteins still cost more than farmed ones, bioreactor capacity is small against the scale of
-  global protein, and a sourced production cost per kilogram is hard to pin down. Matching the price
-  of commodity milk, egg and meat protein, and building reactors by the millions of tonnes, are both
-  unsolved.
+  Brewed proteins still cost more than farmed ones, near $11 per kg at best against commodity milk
+  protein, and bioreactor capacity is small against the scale of global protein. Titres of a few grams
+  per litre must rise, and the structural caseins that make cheese stretch and milk turn opaque are
+  only now being brewed and not yet at micelle quality. Matching the price of commodity milk, egg and
+  meat protein, and building reactors by the millions of tonnes, are both unsolved.
 inventions: [complete-protein-brewery]
 scene:
   kind: field

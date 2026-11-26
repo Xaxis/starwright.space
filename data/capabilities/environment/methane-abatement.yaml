@@ -4,34 +4,44 @@ domain: environment
 stage: k08
 needs: [earth-monitoring]
 summary: >-
-  Methane traps far more heat than CO2 while it lasts in the air, about a decade, so cutting it is the
-  fastest brake on warming there is. It leaks from oil, gas and coal, and comes from cattle, rice
-  paddies and landfills. Most of the energy sector's leaks could be stopped with tools that already
-  exist, many at no net cost.
+  Methane traps far more heat than CO2 while it lasts in the air, about a decade, so cutting it is
+  the fastest brake on warming there is. It leaks from oil, gas and coal, and comes from cattle,
+  rice paddies and landfills. Most of the energy sector's leaks could be stopped with tools that
+  already exist, many at no net cost, and satellites now find the largest ones within days. The
+  harder half is farming, where the methane comes from millions of animals and fields.
 target: >-
   Cut human methane emissions at least 30 percent below 2020 levels by 2030 and by more than half by
-  2040, and remove methane where it is concentrated, so that the amount in the air starts to fall.
+  2040, and remove methane where it is concentrated, so that the amount in the air, now rising by
+  several ppb a year, starts to fall.
 exists:
   - text: The Global Methane Pledge, launched at COP26 in 2021 and now joined by 159 countries and the European Commission, commits to cut methane at least 30 percent from 2020 levels by 2030.
     url: https://www.globalmethanepledge.org/
     year: 2021
-  - text: The IEA's Global Methane Tracker 2026 puts fossil fuel methane at 124 Mt a year, about 70 percent of it avoidable with existing technology and more than 35 Mt at no net cost.
+  - text: UNEP and the Climate and Clean Air Coalition found in 2025 that the measures in countries' plans would cut 2030 methane emissions by at most 8 percent below 2020, and that under current laws emissions would rise 5 percent.
+    url: https://www.ccacoalition.org/sites/default/files/resources/files/GMSR_2025%20%281%29.pdf
+    year: 2025
+  - text: The IEA's Global Methane Tracker 2026 puts fossil fuel methane at 124 Mt a year, about 70 percent of it avoidable with existing technology and more than 35 Mt at no net cost, and finds that only about 12 percent of UNEP's satellite methane alerts got a response in 2025.
     url: https://www.iea.org/files/8a2639fd-7883-4fe7-bbe7-4f97bc39e2ff/GlobalMethaneTracker2026.pdf
     year: 2026
-  - text: The feed additive Bovaer (3-NOP) cuts methane from dairy cattle by about 30 percent on average and is authorised in 70 countries.
-    url: https://www.dsm-firmenich.com/anh/products-and-services/products/methane-inhibitors/bovaer.html
-    year: 2026
-  - text: CH4 Global's seaweed-based feed for beef feedlots claims methane cuts of up to 90 percent, with beef from treated cattle on sale since September 2025.
-    url: https://www.ch4global.com/
+  - text: A meta-analysis of 13 studies by Kebreab and colleagues found the feed additive 3-NOP cut dairy cows' methane production by about 33 percent, their methane per kilogram of feed by 31 percent and per kilogram of milk by 33 percent.
+    url: https://doi.org/10.3168/jds.2022-22211
+    year: 2023
+  - text: A meta-analysis of 14 studies of the red seaweed Asparagopsis found it cut cattle's methane production by 47 percent and methane per kilogram of feed by 43 percent.
+    url: https://doi.org/10.3168/jds.2025-26960
     year: 2025
-  - text: NOAA measured global methane at 1,936 ppb in August 2026, after a rise of 4.4 ppb in 2025.
+  - text: Seaweed fed to 112 grazing steers through mineral licks did not cut their methane, because the animals took in too little of it.
+    url: https://doi.org/10.3390/methane4040027
+    year: 2025
+  - text: NOAA measured global methane at 1,936 ppb in August 2026, after a preliminary rise of 4.4 ppb in 2025.
     url: https://gml.noaa.gov/ccgg/trends_ch4/
     year: 2026
 gap: >-
-  Methane in the air is still rising. Oil and gas leaks are cheap to fix but scattered across
-  millions of sites, and many go unreported. Feed additives work only for animals fed in barns and
-  feedlots, not for the grazing herds that are most of the world's cattle. Nothing yet removes methane
-  from barn or mine air at the low concentrations where most of it is.
+  Methane in the air is still rising. Countries' plans would cut 2030 emissions by at most 8 percent
+  against the Pledge's 30. Oil and gas leaks are cheap to fix and satellites now see them, yet only
+  about one alert in eight got an answer in 2025. Feed additives cut a third to a half of the
+  methane from animals fed in barns and feedlots, but grazing herds, most of the world's cattle,
+  cannot yet be dosed reliably. Nothing removes methane from barn or mine air at the 5 to 100 ppm
+  where most of it is; the methods that work need hundreds of ppm or more.
 inventions: [barn-breather]
 scene:
   kind: field

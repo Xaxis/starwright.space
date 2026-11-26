@@ -3,78 +3,89 @@ title: The Air Protein Plant
 domain: food
 for: [food-from-air]
 pitch: >-
-  A factory that makes complete food protein from nothing but air, water and clean electricity,
-  sized and standardised so one unit feeds a town and a line of them feeds a region, on no farmland
-  at all.
+  A factory of identical skids that makes protein flour from air, water and clean electricity, about
+  47 kWh for each kilogram of protein, so one skid line feeds a town and needs no farmland at all.
 principle: >-
-  Certain microbes grow on hydrogen as their energy source and carbon dioxide as their carbon,
-  building themselves into a protein-rich biomass with a complete amino-acid profile. The Air Protein
-  Plant supplies both from the environment: an electrolyser splits water into hydrogen and oxygen
-  using clean power, carbon dioxide is drawn from the air or a flue, and the two are fed to the
-  microbes in a gas-fermentation reactor designed to transfer gas efficiently without going boom. The
-  biomass is harvested, dried and processed into a neutral protein flour. Because it runs on
-  electricity and gases, not sunlight and soil, the plant needs no arable land, uses a fraction of
-  agriculture's water, and runs day and night anywhere power reaches, including off Earth. The design
-  is modular: identical reactor and electrolyser skids that scale by adding units.
+  Hydrogen-oxidising bacteria such as Cupriavidus necator take their energy from hydrogen and their
+  carbon from carbon dioxide. Their growth equation, 21.36 H2 + 6.21 O2 + 4.09 CO2 + 0.76 NH3 giving
+  one mole of biomass and 18.7 H2O, sets the plant's inputs: for each kilogram of dry biomass, 0.44 kg
+  of hydrogen, 1.85 kg of carbon dioxide, 2.0 kg of oxygen and 0.13 kg of ammonia. An electrolyser at
+  the US DOE's 55 kWh per kilogram of hydrogen spends about 24 kWh making that hydrogen; with air
+  capture of the carbon dioxide and the fermenter's own needs, the chain comes to about 38 kWh per
+  kilogram. At 80 percent protein, Solein's figure, that is about 47 kWh per kilogram of protein.
+  Water nearly closes: splitting out the hydrogen uses 4.0 kg of water and growth gives back 3.5 kg,
+  so the plant consumes about half a kilogram per kilogram of food, and its electrolysers make 1.5 kg
+  more oxygen than the microbes breathe, which a habitat can use. Land drops out: Leger and colleagues
+  find solar-driven microbial protein yields more than 1,200 g of protein per square metre of land a
+  year, against 115 g for soybean. The plant is a stack of identical skids, each an electrolyser, a
+  pressurised gas fermenter that keeps oxygen below the range where the hydrogen mixture can burn, a
+  centrifuge and a dryer, so output grows by adding skids. A town of 10,000 people taking 20 g of
+  protein each a day from it needs 250 kg of biomass a day, about 390 kW of steady power.
 buildsOn:
-  - text: Solar Foods' Factory 01 already makes single-cell protein from carbon dioxide, hydrogen and air at about 160 tonnes a year, the direct precedent this plant scales and standardises.
-    url: https://solarfoods.com/factory/
-    year: 2024
-  - text: A bionic-leaf system coupled electrolysis to hydrogen-eating microbes, scrubbing 180 grams of carbon dioxide per kilowatt-hour into biomass, demonstrating the electricity-to-protein chain.
+  - text: García Martínez and colleagues give Cupriavidus necator's growth equation, 21.36 H2 + 6.21 O2 + 4.09 CO2 + 0.76 NH3 to one mole of biomass, and put the whole chain with electrolysis and air capture at about 37.8 kWh per kg of dry biomass.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7455522
+    year: 2021
+  - text: Solar Foods' Factory 01 in Finland, which makes Solein from carbon dioxide, hydrogen and air, reached its design capacity of about 160 tonnes a year in 2025, the precedent this plant standardises.
+    url: https://www.inderes.dk/releases/solar-foods-factory-01-has-reached-its-productivity-targets
+    year: 2025
+  - text: Solar Foods gives Solein's composition as 80 percent protein, 6 percent fat, 10 percent dietary fibre and 4 percent minerals.
+    url: https://solarfoods.com/solein/
+    year: 2026
+  - text: The US DOE puts PEM electrolysers at 55 kWh per kg of hydrogen in 2022, with a target of 46, the largest energy term in the plant.
+    url: https://www.energy.gov/eere/fuelcells/technical-targets-proton-exchange-membrane-electrolysis
+    year: 2022
+  - text: Leger and colleagues found photovoltaic-driven microbial protein can yield more than ten times the protein per unit of land of any staple crop, over 1,200 g per square metre a year against about 115 g for soybean.
+    url: https://doi.org/10.1073/pnas.2015025118
+    year: 2021
+  - text: Liu and colleagues' bionic leaf coupled water splitting to hydrogen-eating bacteria and fixed 180 g of carbon dioxide into biomass per kWh of electricity, the electricity-to-biomass chain at laboratory scale.
     url: https://doi.org/10.1126/science.aaf5039
     year: 2016
-  - text: Outdoor water-splitting now reaches 31.3 percent sunlight-to-hydrogen, cutting the cost of the hydrogen feedstock the plant depends on.
-    url: https://doi.org/10.1038/s44172-026-00610-x
-    year: 2026
-  - text: The fermentation sector's 4.1 billion USD of investment has built the bioreactor and strain base a standardised plant would draw on.
-    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
-    year: 2024
 experiment:
-  goal: Run a standardised gas-fermentation skid making food-grade protein from air, water and electricity, and measure its cost.
+  goal: Run one standard skid without stopping for 90 days and measure its output, its energy at each stage, its water balance and the safety of its food.
   setup: >-
-    Build a containerised plant pairing a water electrolyser, air-capture carbon dioxide feed and a
-    gas-fermentation reactor with a hydrogen-oxidising strain, plus harvest and drying. Run it
-    continuously on clean power and measure the full chain.
-  measure: >-
-    Kilograms of food-grade protein per day; kilowatt-hours of electricity per kilogram of protein;
-    water per kilogram; amino-acid completeness and food-safety screens; cost per kilogram at the
-    unit's scale.
-  succeedsIf: >-
-    The skid makes food-grade complete protein continuously for 90 days at an energy and cost per
-    kilogram within a factor of two of commodity soy protein, with a clear path to parity at scale.
-  costUsd: 20000000
-  months: 36
+    A 20-foot container holding a PEM electrolyser of about 12 kW, a 2,000 litre pressurised gas
+    fermenter with a hydrogen-oxidising strain, a carbon dioxide feed from a small air-capture unit
+    with bottled gas as a control, a disc-stack centrifuge and a spray dryer, sized for 10 kg of dry
+    biomass a day. Every stage is metered for power, water and gas. A planned fault test cuts the
+    oxygen control loop to prove the skid shuts down safely.
+  measure: Dry biomass per day; kWh per kg at each stage and in total; hydrogen and carbon dioxide utilisation; water consumed net of water recovered; protein content and amino-acid profile; microbial and heavy-metal screens.
+  succeedsIf: At least 8 kg of dry biomass a day averaged over 90 days, no more than 45 kWh per kg in total, protein at or above 65 percent of dry mass, net water use under 2 kg per kg, and every food-safety screen passed.
+  costUsd: 12000000
+  months: 30
 path:
   - phase: bench
-    what: A single containerised skid making food-grade protein from air and power.
-    scale: Kilograms a day.
-    proves: The full chain runs continuously and safely at unit scale.
+    what: One containerised skid in a test hall.
+    scale: 10 kg of dry biomass a day, on about 16 kW.
+    proves: The chain runs for months, meets its energy budget and makes food-grade protein.
   - phase: prototype
-    what: A multi-skid plant feeding a pilot population real formulated food.
-    scale: Tonnes a day.
-    proves: Output scales by adding units and the food is acceptable.
+    what: Ten skids side by side, feeding a trial group foods made from the flour.
+    scale: 100 kg a day on about 160 kW, enough for 4,000 people at 20 g of protein a day.
+    proves: Output scales by adding skids, and people eat the food.
   - phase: pilot
-    what: A regional plant selling protein into the food supply at a published price.
-    scale: Tens of thousands of tonnes a year.
-    proves: Cost competitive with farmed protein in one market.
+    what: A regional plant selling protein flour into the food industry at a published price.
+    scale: 10,000 tonnes a year on about 43 MW.
+    proves: A cost per kilogram set by power and skids, in one real market.
   - phase: first-plant
-    what: Plants sited at cheap-power hubs worldwide, including deserts and coasts.
-    scale: Millions of tonnes a year.
-    proves: Air protein is a staple ingredient, not a novelty.
+    what: Plants beside cheap solar and wind in deserts and on coasts.
+    scale: 1 million tonnes a year on about 4.3 GW.
+    proves: Air protein is a staple ingredient, made at the scale of a large dairy industry.
   - phase: fleet
-    what: Compact units in habitats, ships and off-world bases making protein from local carbon dioxide and power.
-    scale: Inner solar system.
-    proves: Food made wherever people and power are, with no farmland.
+    what: Plants on every continent, and compact skids in habitats and on ships using local carbon dioxide and power.
+    scale: 10 million tonnes a year on about 43 GW.
+    proves: Protein made wherever people and power are, with no farmland.
   - phase: civilization
-    what: A large share of the world's protein made from air and electricity, farmland returned to nature.
-    scale: Planet and space.
+    what: A large share of the world's protein made from air and electricity, its pasture returned to nature.
+    scale: 100 million tonnes of biomass a year on about 430 GW, about 0.4 percent of {power-k08}.
     proves: Protein decoupled from land and climate.
 risks: >-
-  Hydrogen and carbon-dioxide capture may stay too costly for price parity without very cheap power;
-  the plant is sited where power is cheapest and improves as clean power scales. Gas fermentation with
-  hydrogen carries explosion risk, handled by reactor design and standardised skids. The plain
-  biomass needs formulation to be appetising, a food-science task run alongside the engineering.
+  Electricity sets the cost: at 47 kWh per kilogram of protein, power at 5 cents a kWh adds about
+  $2.40 per kilogram before capital, so plants go where power is cheapest and follow its price down.
+  Hydrogen and oxygen in one vessel can burn; the fermenter keeps oxygen low, the skid is built to
+  hydrogen-plant codes, and the bench run includes a deliberate fault test. A strain may grow slower
+  than the 2,000 litre fermenter needs; then the skid takes a second fermenter and the target becomes
+  the energy per kilogram, not the output. The plain flour has to become foods people choose, a
+  food-science task that runs alongside the engineering from the prototype on.
 scene:
   kind: machine
-  focus: An electrolyser and a gas-fermentation reactor paired in one skid, air and power in, protein out.
+  focus: An electrolyser and a gas fermenter paired in one skid, air and power in, protein flour out.
   params: { shape: electrolyser, spin: 0.3 }

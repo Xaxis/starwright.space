@@ -23,8 +23,8 @@ buildsOn:
   - text: Ball Aerospace and DARPA's MOIRE program demonstrated an 80 cm transmissive diffractive membrane optic, after a 5 m folding demonstration, aiming at 10 m apertures for space telescopes.
     url: https://doi.org/10.1117/12.925413
     year: 2012
-  - text: The US Air Force Academy's FalconSAT-7 launched in 2019 to demonstrate a membrane photon sieve, a diffractive lens made of film, as a solar telescope.
-    url: https://en.wikipedia.org/wiki/FalconSAT
+  - text: The US Air Force Academy's FalconSAT-7, a 3U CubeSat launched on a Falcon Heavy on 25 June 2019, carried a 0.2 m photon sieve, a diffractive lens made of membrane, as a solar telescope.
+    url: https://www.eoportal.org/satellite-missions/falconsat-7
     year: 2019
   - text: Landis and colleagues at NASA set out the spot size for laser power beaming, 0.61 times distance times wavelength over the optic's radius, and the efficiency of gallium arsenide cells under laser light.
     url: https://ntrs.nasa.gov/api/citations/19930011426/downloads/19930011426.pdf
@@ -60,19 +60,19 @@ path:
     proves: Pointing, station keeping and refocusing in orbit.
   - phase: pilot
     what: A 100 m relay lens at the Earth and Moon L1 point, linking collectors in Earth orbit with lunar bases.
-    scale: Megawatts over 400,000 km.
+    scale: 10 MW over 400,000 km through one 100 m lens.
     proves: A relay that serves several users and runs for years.
   - phase: first-plant
     what: Power from the swarm's first collectors near the Sun to industry around Earth, through two or three lenses 500 m across.
-    scale: Gigawatts over 1 au.
+    scale: 1 GW over 1 au through 3 lenses 500 m across.
     proves: Interplanetary power with more than half delivered.
   - phase: fleet
     what: Chains linking Mercury, the swarm, the Earth and Moon system and the asteroid belt.
-    scale: Terawatts on dozens of chains.
+    scale: 100 chains of about 10 GW, 1 TW in all.
     proves: Power goes where it is needed, not only where the light is.
   - phase: civilization
     what: The power network of the inner solar system as the climb passes {type-1-power} on its way to {type-2-power}.
-    scale: A share of the swarm's output, wherever it is needed.
+    scale: 10,000 chains of 10 GW, carrying as much as all of {power-k08}.
     proves: Power is a utility across worlds.
 risks: >-
   Lenses that heat under megawatts may warp and lose focus; the design spreads the beam across the

@@ -8,28 +8,34 @@ pitch: >-
   the line that shielding mass alone cannot.
 principle: >-
   Galactic cosmic rays are too energetic to stop with any shielding a spacecraft can carry, so some
-  dose always reaches the crew, breaking DNA and flooding cells with reactive molecules. Physical
-  shielding handles part of it; this regimen handles the rest from within. Radioprotective and
-  antioxidant drugs, taken on a schedule, soak up the reactive molecules radiation produces, lowering
-  the damage each particle does. In parallel, the crew's cells are helped to repair breaks faster:
-  by boosting the body's own DNA-repair pathways, and by borrowing repair and protection strategies
-  from organisms that shrug off radiation, whose protective proteins can be expressed in human cells.
-  Biological-age and DNA-damage markers are tracked so the regimen is tuned to each person and each
-  mission. The aim is not to stop every particle, which is impossible, but to cut the biological harm
-  per unit dose enough that a long mission stays within safe limits.
+  dose always reaches the crew, breaking DNA and flooding cells with reactive molecules. The numbers
+  set the problem: a Mars round trip gives about 0.66 sievert against a 600 millisievert career
+  limit, and that is before roughly 500 days on the surface, so shielding alone leaves the crew over
+  the line. On the Moon the surface rate is about 60 microsievert an hour, about 530 millisievert a
+  year. This regimen closes the rest of the gap from within. Radioprotective and antioxidant drugs,
+  taken on a schedule, scavenge the reactive molecules each particle makes, lowering the damage it
+  does. In parallel the crew's cells are helped to repair breaks faster, by boosting their own repair
+  pathways and by expressing protective proteins from radiation-tolerant organisms: the tardigrade
+  Dsup protein cut X-ray DNA damage by about 40 percent in human cultured cells. DNA-damage markers
+  are tracked so the regimen is tuned to each person. The aim is not to stop every particle, which is
+  impossible, but to cut the biological harm per unit dose by enough that drugs, repair and shielding
+  together hold a long mission under the 600 millisievert limit.
 buildsOn:
-  - text: A Mars round trip would give about 0.66 sievert with current shielding, against a 600-millisievert career limit, showing shielding alone cannot close the gap.
-    url: https://doi.org/10.1126/science.1235989
+  - text: Curiosity's radiation detector measured 1.8 mSv a day on its cruise to Mars; Zeitlin estimated the transit legs of a round trip with current propulsion at about 0.66 sievert, before any time on the surface.
+    url: https://www.swri.org/newsroom/press-releases/swri-led-team-calculates-the-radiation-exposure-associated-trip-mars
     year: 2013
-  - text: The Moon's surface cosmic-ray dose-equivalent rate of about 57 microsievert per hour sets the exposure a base crew's biology must tolerate.
-    url: https://doi.org/10.1126/sciadv.aaz1334
+  - text: Chang'e-4's lander measured a dose rate of around 60 microsievert an hour on the Moon's surface, some 200 times that on Earth's surface, the exposure a base crew's biology must tolerate.
+    url: https://www.dlr.de/en/latest/news/2020/03/20200925_how-intense-and-dangerous-is-cosmic-radiation-on-the-moon
     year: 2020
   - text: The NASA Space Radiation Laboratory simulates galactic cosmic rays on the ground to test shielding and biological countermeasures, the facility this regimen would be developed in.
     url: https://www.bnl.gov/nsrl/
     year: 2024
-  - text: A 2026 review documents the 600-millisievert universal career dose limit the regimen is meant to keep crews within.
-    url: https://doi.org/10.3390/tomography12070106
-    year: 2026
+  - text: NASA-STD-3001 caps a career's spaceflight dose at 600 mSv and notes shielding is not effective against galactic cosmic rays because of the secondary radiation they produce, the limit the regimen must keep crews within.
+    url: https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf
+    year: 2023
+  - text: Hashimoto and colleagues found the tardigrade-unique protein Dsup suppresses X-ray-induced DNA damage by about 40 percent in human cultured cells and improves their radiotolerance, the borrowed protection this regimen builds on (Nature Communications, 2016).
+    url: https://doi.org/10.1038/ncomms12808
+    year: 2016
 experiment:
   goal: Show a combined drug-and-repair regimen lowers the biological damage per unit radiation dose in human cells and animals under simulated cosmic rays.
   setup: >-
@@ -41,34 +47,36 @@ experiment:
     DNA-break and reactive-molecule markers per unit dose; cell survival and function; in animals,
     tissue damage and biological-age markers, all against unprotected controls.
   succeedsIf: >-
-    The regimen cuts the biological damage per unit dose by a clear, reproducible margin in both cells
-    and animals, with no serious side effects, enough to bring a long-mission dose within limits.
+    The regimen cuts a biological-damage marker, DNA double-strand breaks or chromosomal aberrations
+    per unit dose, by at least 30 percent in both cells and animals against unprotected controls, with
+    no serious side effects, enough that with shielding a Mars-mission dose stays under 600
+    millisievert.
   costUsd: 30000000
   months: 48
 path:
   - phase: bench
-    what: The regimen tested in human cells and animals under simulated cosmic rays.
-    scale: Cell and animal studies.
+    what: The regimen tested in human cells and animals under simulated cosmic rays at the NSRL.
+    scale: Cell lines and about 100 mice.
     proves: Biological damage per unit dose can be lowered from within.
   - phase: prototype
-    what: Refined drug schedules and repair enhancements with long-term safety followed.
-    scale: Extended animal studies.
+    what: Refined drug schedules and repair enhancements with safety followed over mission-length exposure.
+    scale: About 500 mice in extended studies.
     proves: The regimen is safe and effective over mission-length exposure.
   - phase: pilot
-    what: The drug part trialled in people in high-radiation settings, with repair enhancements studied carefully.
-    scale: Small human cohorts.
+    what: The drug part trialled in people in high-radiation settings, with repair enhancements studied slowly.
+    scale: 50 to 100 people.
     proves: It protects people and is safe.
   - phase: first-plant
     what: Standard radioprotection for crews on long missions and lunar bases.
-    scale: Mission crews.
+    scale: 10 to 50 crew a year.
     proves: Crews stay within dose limits on journeys shielding alone could not permit.
   - phase: fleet
     what: Tuned regimens for every off-world worker, combined with habitat shielding.
-    scale: Inner solar system crews.
+    scale: About 10,000 off-world workers.
     proves: Living and working off Earth is radiologically safe.
   - phase: civilization
     what: Space radiation a managed risk, not a barrier, for a civilization that lives off Earth.
-    scale: Planet and space.
+    scale: About 1 million people living beyond Earth.
     proves: Human bodies can safely spend years beyond Earth's shield.
 risks: >-
   Boosting DNA repair or expressing foreign protective proteins could itself raise cancer or other

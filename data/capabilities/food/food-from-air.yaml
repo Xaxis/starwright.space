@@ -10,24 +10,33 @@ summary: >-
   climb makes true, food can be made in a windowless plant anywhere: a desert, a ship, a base on the
   Moon.
 target: >-
-  Make complete, protein-rich food from carbon dioxide, water and clean electricity at a cost
-  competitive with farmed protein, in plants that need no arable land and little water, and that run
-  anywhere power is available.
+  Make complete, protein-rich food from carbon dioxide, water and clean electricity at roughly 47 kWh
+  per kilogram of protein and a cost competitive with farmed protein, in plants that need no arable
+  land and little water, and that run anywhere power is available.
 exists:
-  - text: Solar Foods' Factory 01 produces Solein, a single-cell protein, from carbon dioxide, hydrogen and air at about 160 tonnes a year, with production begun in 2024.
+  - text: Solar Foods' Factory 01 produces Solein, a single-cell protein, from carbon dioxide, hydrogen and air, and reached its design capacity of about 160 tonnes a year in 2025, with a larger Factory 02 in planning.
     url: https://solarfoods.com/factory/
+    year: 2025
+  - text: Solein has regulatory approval in Singapore from 2022 and self-affirmed GRAS status in the US from 2024, and in 2026 cleared EFSA's safety assessment for the EU market.
+    url: https://solarfoods.com/wp-content/uploads/2024/11/Media-release-20-Nov-2024-Solar-Foods-launches-Solein-in-the-United-States.pdf
     year: 2024
-  - text: A bionic-leaf system coupling electrolysis to hydrogen-eating microbes scrubbed 180 grams of carbon dioxide per kilowatt-hour into biomass at about 10 percent solar-to-chemical efficiency, beating natural photosynthesis.
+  - text: A bionic-leaf system coupling electrolysis to hydrogen-eating microbes scrubbed 180 grams of carbon dioxide per kilowatt-hour into biomass; coupled to today's solar cells the chain would store about 10 percent of sunlight as chemical energy, beating natural photosynthesis.
     url: https://doi.org/10.1126/science.aaf5039
     year: 2016
+  - text: Leger and colleagues modelled photovoltaic-driven single-cell protein and found it yields more than ten times the protein per hectare of any staple crop, converting up to 0.8 percent of sunlight into protein against a field crop's fraction of that.
+    url: https://doi.org/10.1073/pnas.2015025118
+    year: 2021
+  - text: One analysis puts the energy of hydrogen-oxidising bacterial protein at about 37.8 kilowatt-hours per kilogram of dry biomass, including water electrolysis and air capture of carbon dioxide, so cost tracks the price of clean power.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7455522
+    year: 2021
   - text: Outdoor systems now convert up to 31.3 percent of sunlight into hydrogen, the clean feedstock a food-from-air plant runs on.
     url: https://doi.org/10.1038/s44172-026-00610-x
     year: 2026
 gap: >-
   Output today is a few hundred tonnes a year against a world protein demand of hundreds of millions,
-  the product is a plain powder needing formulation into real food, and cost depends on cheap hydrogen
-  and carbon dioxide capture that are not yet cheap everywhere. Scaling by a factor of millions, and
-  making the food appetising, are both ahead.
+  the product is a plain powder needing formulation into real food, and at roughly 38 kilowatt-hours a
+  kilogram the cost turns on cheap hydrogen and carbon dioxide capture that are not yet cheap
+  everywhere. Scaling by a factor of millions, and making the food appetising, are both ahead.
 inventions: [electro-protein-plant]
 scene:
   kind: field

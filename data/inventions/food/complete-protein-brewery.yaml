@@ -8,20 +8,35 @@ pitch: >-
   of one molecule at a time.
 principle: >-
   Precision fermentation today makes one target molecule per strain, then blends them downstream,
-  which multiplies the number of fermentations and the cost. The Whole-Food Brewery engineers a
-  single chassis to express a designed panel of food molecules together: the major milk or egg
-  proteins, a healthy fat, and key vitamins, balanced so the harvested broth is close to a finished
-  ingredient. Protein-design tools pick variants that fold, secrete and taste right while staying
-  easy for the microbe to make; metabolic engineering balances the pathways so no one product starves
-  the others. Running on sugar now and on the Air Protein Plant's feedstock later, one brewery line
-  then makes a whole food base, cutting the steps, the capital and the cost between a tank and a meal.
+  which multiplies the number of fermentations and the cost. Milk shows why that is wasteful: its
+  protein is about 80 percent casein, and the casein is four proteins in a fixed ratio, roughly 41
+  percent alpha-s1, 11 percent alpha-s2, 33 percent beta and 12 percent kappa, which assemble into
+  micelles 50 to 250 nm across that give milk its body. Brewing those as four separate ferments and
+  mixing them means four seed trains, four purifications and a blending step. The Whole-Food Brewery
+  engineers one chassis to express the whole panel at once, in that ratio, plus a fat and key
+  vitamins, so the harvested broth is already close to a finished ingredient. Protein-design tools
+  pick variants that fold, secrete and taste right while staying cheap for the microbe to make, and
+  metabolic engineering balances the pathways so no one product starves the others. The target is a
+  combined titre near 20 g/L, the level a single food protein already reaches, split across the
+  panel, so one fermentation replaces four or five. Running on sugar now and on the Air Protein
+  Plant's feedstock later, one line makes a whole food base and cuts the steps, the capital and the
+  cost between a tank and a meal.
 buildsOn:
   - text: Perfect Day brews individual dairy proteins commercially, the single-molecule precision fermentation this design generalises to a panel.
     url: https://perfectday.com/
     year: 2024
-  - text: The fermentation sector's 4.1 billion USD of investment and 158 companies supply the strains and reactors a multi-product brewery builds on.
-    url: https://gfi.org/blog/fermentation-state-of-the-industry-report
-    year: 2024
+  - text: The fermentation sector had drawn about 5.2 billion USD of all-time investment by the end of 2025, supplying the strains and reactors a multi-product brewery builds on.
+    url: https://gfi.org/ferm-report-2026
+    year: 2025
+  - text: The Guelph dairy-science reference gives milk as about 3.25 percent protein, casein as about 80 percent of that protein in four fractions, alpha-s1, alpha-s2, beta and kappa, and casein micelles as 50 to 250 nm across, the panel this brewery copies.
+    url: https://books.lib.uoguelph.ca/dairyscienceandtechnologyebook/chapter/milk-proteins-caseins-casein-micelles-whey-proteins-enzymes/
+    year: 2021
+  - text: Onego Bio reports a Trichoderma reesei strain making ovalbumin above 20 grams per litre, showing a single food protein can reach the combined titre this brewery must split across a panel.
+    url: https://cordis.europa.eu/project/id/101188965/reporting
+    year: 2025
+  - text: Balasubramanian and colleagues co-expressed a milk casein with bacterial kinases to phosphorylate it inside a microbe, the kind of multi-step control over several gene products that a multi-protein brewery needs.
+    url: https://doi.org/10.1016/j.tibtech.2025.05.015
+    year: 2025
   - text: ESM3 designs functional proteins far from natural ones, letting the brewery choose food-protein variants tuned for yield, flavour and nutrition.
     url: https://www.evolutionaryscale.ai/blog/esm3-release
     year: 2025
@@ -35,34 +50,35 @@ experiment:
     Grams per litre of each product; how close the harvested profile comes to the target food's
     composition; fermentation and downstream cost per kilogram versus the blend-of-singles route.
   succeedsIf: >-
-    One strain co-produces the panel within a set tolerance of the target food profile, at a total
-    cost per kilogram at least a third below making and blending the molecules separately.
+    One strain co-produces the four caseins within 10 percentage points of their natural ratio at a
+    combined titre of at least 15 g/L, and the harvested broth's fermentation and downstream cost per
+    kilogram is at least 30 percent below making and blending the proteins separately.
   costUsd: 14000000
   months: 36
 path:
   - phase: bench
     what: A strain co-producing a balanced panel at bench scale.
-    scale: Litres.
+    scale: 5 litre fermenters, a combined titre near 20 g/L.
     proves: Multiple food molecules can be brewed together in balance.
   - phase: prototype
     what: Pilot fermentation delivering a consistent near-complete ingredient.
-    scale: Cubic-metre reactors.
+    scale: 10 cubic-metre reactors, about 100 tonnes a year.
     proves: Composition and cost advantage hold as tanks scale.
   - phase: pilot
     what: The ingredient formulated into real dairy- or egg-type products and sold.
-    scale: Tonnes a year.
+    scale: About 1,000 tonnes a year.
     proves: Consumers accept food built from the brewed base.
   - phase: first-plant
     what: A commercial brewery at price parity with the farmed originals.
-    scale: Tens of thousands of tonnes a year.
+    scale: About 50,000 tonnes a year.
     proves: Brewed whole-food ingredients compete head on.
   - phase: fleet
     what: Breweries worldwide, and compact lines off Earth fed by local feedstock.
-    scale: Global and off-world.
+    scale: About 1 million tonnes a year, on Earth and off it.
     proves: A large share of animal-food ingredients are brewed.
   - phase: civilization
     what: Whole-food breweries as standard infrastructure, dairy and egg proteins made without animals everywhere.
-    scale: Planet and space.
+    scale: Over 10 million tonnes a year, much of the world's dairy and egg protein.
     proves: Animal foods decoupled from animals and land.
 risks: >-
   Co-expressing many products may lower the yield of each below the single-product route; the project

@@ -6,38 +6,45 @@ pitch: >-
   Long-haul flights on liquid hydrogen, with airliners refuelled in flight by hydrogen tankers on
   station along the route, so each carries only a few hours of its bulky fuel.
 principle: >-
-  Liquid hydrogen holds nearly three times the energy of kerosene per kilogram but only a quarter
-  per litre, so a long-haul hydrogen airliner would need tanks the size of its cabin. The Breguet
-  range equation says the fuel needed rises steeply with distance, because an aircraft must lift
-  the fuel it will burn later; a plane fuelled for fourteen hours spends much of its fuel carrying
-  fuel. If it takes on hydrogen in flight every three to four hours instead, its tanks shrink to a
-  third, its takeoff weight falls, and the whole route burns less. Studies of air-to-air refuelling
-  for kerosene airliners found savings of about a third on long flights. For hydrogen the gain is
-  larger, because it removes the tank-volume problem that keeps hydrogen off long routes. Tankers
-  based along the route climb to meet the airliners and connect automatically, the way Airbus's A3R
-  boom refuels military aircraft today, and pass liquid hydrogen through a vacuum-insulated boom.
+  Hydrogen holds 120 MJ per kilogram against kerosene's 43.3, 2.8 times as much, but liquid hydrogen
+  at 70.8 kg per cubic metre holds only 8.5 MJ per litre against kerosene's 35.1, a quarter, so a
+  long-haul hydrogen airliner would need tanks the size of its cabin. The Breguet range equation sets
+  the fuel: range = η (LHV/g) (L/D) ln(W0/W1), where W0 and W1 are the weights at takeoff and landing.
+  With an overall efficiency η of 0.35 and a lift-to-drag ratio of 18, the range factor is 27,800 km
+  for kerosene and 77,100 km for hydrogen. Flown 14,000 km nonstop, a hydrogen airliner landing at
+  250 tonnes must lift off with 20 percent of that weight in fuel, 50 tonnes of liquid hydrogen in
+  700 cubic metres of tank. Refuelled in flight twice, so that each leg is 4,700 km, it carries 6.2
+  percent, 16 tonnes in 220 cubic metres: tanks a third the size, and lighter, which compounds back
+  through the same equation. The total hydrogen burned falls 6 percent for the same airframe. For
+  kerosene the same relay cuts fuel by 16 percent, and studies that also shrink the airframe for the
+  shorter legs find 30 to 40 percent. Tankers based along the route climb to meet the airliners and
+  pass liquid hydrogen through a vacuum-insulated boom, as military tankers pass kerosene today.
 buildsOn:
-  - text: Nangia showed that air-to-air refuelling of airliners designed for about 3,000 nautical miles could save of the order of 30 to 40 percent of fuel on long routes (Aeronautical Journal, 2006).
+  - text: Nangia showed that air-to-air refuelling would let airliners designed for about 3,000 nautical miles fly long routes with overall savings of the order of 30 to 40 percent of fuel, tanker fuel included (Aeronautical Journal, 2006).
     url: https://doi.org/10.1017/S0001924000001585
     year: 2006
-  - text: The EU's RECREATE project (2011 to 2015) studied cruiser airliners refuelled in flight by feeder tankers and estimated a 31 percent cut in fuel burn and CO2 on a 6,000 nautical mile flight.
+  - text: The EU's RECREATE project studied cruiser airliners refuelled in flight by feeder aircraft and estimated a 31 percent cut in fuel burn and CO2 on a 6,000 nautical mile flight with 250 passengers.
     url: https://cordis.europa.eu/project/id/284741
     year: 2015
-  - text: Airbus's A330 MRTT became the first tanker with automatic boom refuelling, A3R, certified and in service since 2022.
-    url: https://www.airbus.com/en/products-services/defence/military-aircraft/a330-mrtt
-    year: 2022
-  - text: Airbus unveiled three liquid-hydrogen airliner concepts, ZEROe, in September 2020, including a turbofan for 120 to 200 passengers over 2,000 nautical miles.
-    url: https://www.airbus.com/en/newsroom/press-releases/2020-09-airbus-reveals-new-zero-emission-concept-aircraft
-    year: 2020
-  - text: The Tupolev Tu-155 first flew on 15 April 1988 with one engine running on liquid hydrogen.
-    url: https://en.wikipedia.org/wiki/Tupolev_Tu-155
-    year: 1988
+  - text: Sloop's NASA history of liquid hydrogen records that NACA's Lewis laboratory flew a B-57 with one engine on liquid hydrogen; on 13 February 1957 the engine ran about 20 minutes on hydrogen, and earlier flights showed the fuel could be vented and jettisoned safely in under 3 minutes.
+    url: https://www.nasa.gov/wp-content/uploads/2023/03/sp-4404.pdf
+    year: 1978
+  - text: Chevron's aviation fuels review gives kerosene-type jet fuel a typical density of 0.810 kg per litre and an energy content of 43.28 MJ per kilogram, 35.06 MJ per litre.
+    url: https://www.chevron.com/-/media/chevron/operations/documents/aviation-tech-review.pdf
+    year: 2007
+  - text: NIST's reference data for normal hydrogen (Leachman and colleagues' equation of state) give liquid hydrogen a density of 70.8 kg per cubic metre at its normal boiling point of 20.4 K.
+    url: https://webbook.nist.gov/cgi/fluid.cgi?Action=Load&ID=C1333740&Type=SatP&Digits=5&PLow=1&PHigh=1&PInc=1&RefState=DEF&TUnit=K&PUnit=atm&DUnit=kg%2Fm3&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm
+    year: 2009
+  - text: The US Department of Energy's fuel comparison chart gives hydrogen a lower heating value of 51,585 Btu per pound, 120 MJ per kilogram.
+    url: https://afdc.energy.gov/files/u/publication/fuel_comparison_chart.pdf
+    year: 2024
 experiment:
   goal: Show that liquid hydrogen can pass through a flexible, moving boom coupling at airliner refuelling rates without unsafe leaks or heavy boil-off.
   setup: >-
     A ground rig: a vacuum-jacketed boom with a dry-break coupling, mounted on a motion platform that
     reproduces the relative motion of tanker and receiver in turbulence, moving liquid hydrogen
-    between two instrumented tanks through repeated connect and disconnect cycles.
+    between two instrumented tanks through repeated connect and disconnect cycles. At 500 kg a minute
+    a 16 tonne leg's fuel transfers in about 32 minutes.
   measure: Flow rate, boil-off and venting during transfer; hydrogen at the coupling during connection and release under motion; time to connect, chill down and release.
   succeedsIf: At least 500 kg of liquid hydrogen a minute with boil-off under 2 percent, and no hydrogen above a quarter of its flammable limit at the coupling over 100 connections under motion.
   costUsd: 5000000
@@ -45,36 +52,38 @@ experiment:
 path:
   - phase: bench
     what: The motion rig.
-    scale: 500 kg a minute.
+    scale: 500 kg a minute, 100 connections.
     proves: A boom can move liquid hydrogen safely.
   - phase: prototype
     what: Two regional-size hydrogen test aircraft making in-flight transfers at altitude.
-    scale: Two aircraft.
+    scale: 2 aircraft, 50 transfers of about 1 tonne each.
     proves: The transfer in real air, with automatic contact.
   - phase: pilot
     what: One tanker base supporting a long-haul route flown by hydrogen airliners, with one refuelling each way.
-    scale: One route, daily flights.
+    scale: 1 route, 2 flights a day of 14,000 km, about 35,000 tonnes of hydrogen a year.
     proves: Schedules, safety and the fuel saving in service.
   - phase: first-plant
     what: Tanker bases along the main ocean routes, each fed by a hydrogen plant on clean power.
-    scale: Tens of routes.
+    scale: 30 routes, 10 tanker bases, about 1 million tonnes of hydrogen a year.
     proves: Long-haul flight without fossil carbon at fares near today's.
   - phase: fleet
     what: A worldwide relay network that lets hydrogen airliners fly any distance.
-    scale: Most long-haul flights.
+    scale: 100 tanker bases, 1,000 long-haul aircraft, about 17 million tonnes of hydrogen a year.
     proves: Aviation free to grow on clean fuel.
   - phase: civilization
     what: Flight runs on hydrogen made from sunlight and water, with contrails avoided by routing.
-    scale: All of aviation.
+    scale: All of aviation, about 100 million tonnes of hydrogen a year.
     proves: Even the most energy-hungry travel on Earth can be clean.
 risks: >-
   Every transfer in flight is a chance of mishap with a flammable fuel. Military refuelling has a
-  long safety record with kerosene, and hydrogen rises and disperses quickly, but certification will
-  be long, and the case will be built first with cargo flights. Tankers add flights and burn fuel of
-  their own, so the saving holds only where bases sit close to busy routes, which is where the pilot
-  goes. Hydrogen engines make more water vapour, which can mean more contrails; routing around
-  ice-supersaturated air is part of the plan, and if that is not enough, the legs that would form
-  them can fly on synthetic kerosene instead.
+  long safety record with kerosene, and NACA's B-57 jettisoned liquid hydrogen without incident, but
+  certification will be long, and the case will be built first with cargo flights. The B-57's tank
+  lost 16 percent of its hydrogen to venting on one flight, so boil-off in tanker and airliner tanks
+  is measured from the bench onward. Tankers add flights and burn fuel of their own, so the saving
+  holds only where bases sit close to busy routes, which is where the pilot goes. Hydrogen engines
+  make more water vapour, which can mean more contrails; routing around ice-supersaturated air is
+  part of the plan, and if that is not enough, the legs that would form them can fly on synthetic
+  kerosene instead.
 scene:
   kind: network
   focus: Ocean routes with tanker bases along them, airliners meeting tankers in flight.

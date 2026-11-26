@@ -21,9 +21,9 @@ principle: >-
   {collector-density}, the last radiator can sit near 170 K, more than twice the computing per
   joule of the swarm alone.
 buildsOn:
-  - text: Robert Bradbury's Matrioshka brain, nested shells of computers around a star, each living on the heat of the one inside.
-    url: https://en.wikipedia.org/wiki/Matrioshka_brain
-    year: 1997
+  - text: Robert Bradbury's Matrioshka brain, nested shells of computers around a star from inside Mercury's orbit to beyond Neptune's, using nearly all the energy the star puts out.
+    url: https://web.archive.org/web/20090223093348/http://aeiveos.com:8080/~bradbury/MatrioshkaBrains/index.html
+    year: 2004
   - text: Landauer's bound, which ties each erased bit to kT ln 2 of heat.
     url: https://doi.org/10.1147/rd.53.0183
     year: 1961
@@ -33,17 +33,21 @@ buildsOn:
   - text: LaPotin and colleagues' thermophotovoltaic cells, above 40 percent efficient from emitters at 1,900 to 2,400 °C.
     url: https://www.nature.com/articles/s41586-022-04473-y
     year: 2022
-  - text: Thermophotovoltaics already serve as spacecraft power and as collectors of waste heat.
-    url: https://en.wikipedia.org/wiki/Thermophotovoltaic_energy_conversion
-    year: 2026
+  - text: Lucchesi and colleagues' near-field thermophotovoltaic converter, with the emitter a fraction of a wavelength from the cell, at more than 14 percent cell efficiency.
+    url: https://doi.org/10.1021/acs.nanolett.0c04847
+    year: 2021
+  - text: Nielsen and colleagues' thermoradiative power from mercury cadmium telluride photodiodes, cells that make electricity by radiating their own heat to colder surroundings.
+    url: https://doi.org/10.1021/acsphotonics.2c00223
+    year: 2022
 experiment:
   goal: Measure how well cold low-bandgap cells turn the infrared of a 400 K surface into electricity, the step the cascade depends on.
   setup: >-
     A vacuum cryostat holding a blackened copper plate heated to 400 K, facing a few square
     centimetres of low-bandgap infrared diodes (mercury cadmium telluride and indium arsenide
-    antimonide, bought as detector-grade parts) cooled to 77 to 200 K, with a thin vacuum gap and a
-    spectral filter between. A source meter sweeps each diode's current and voltage; a heat flux
-    sensor measures the light arriving.
+    antimonide, bought as detector-grade parts) cooled to 77 to 200 K, with a spectral filter
+    between, first across a millimetre gap and then across a gap of under a micron, where near-field
+    coupling raises the power that crosses it. A source meter sweeps each diode's current and
+    voltage; a heat flux sensor measures the light arriving.
   measure: Electrical power per square metre and the share of the incident infrared turned into electricity, at each cell temperature, against the Carnot limit for that pair of temperatures.
   succeedsIf: Some cell converts at least 3 percent of the 400 K plate's radiant power into electricity at a cell temperature of 150 K or above.
   costUsd: 350000
@@ -51,23 +55,23 @@ experiment:
 path:
   - phase: bench
     what: Cold low-bandgap cells facing a 400 K plate in a cryostat.
-    scale: Square centimetres, milliwatts.
+    scale: 10 cm² of cells, about 20 mW.
     proves: Low-grade infrared can be turned into electricity at a useful share of Carnot.
   - phase: prototype
     what: A metre-scale panel on a satellite, warm sunlit face toward a cold infrared-harvesting face, running a small computer on the harvested power.
-    scale: One square metre.
+    scale: 1 m², about 20 W harvested.
     proves: Two-stage conversion works in space, with its own radiator.
   - phase: pilot
     what: A ring of harvesters outside an orbital compute cluster, living on the cluster's waste heat.
-    scale: Kilowatts harvested.
+    scale: 1,000 m², about 20 kW harvested.
     proves: A colder layer adds computing without new sunlight.
   - phase: first-plant
     what: The first arc of cold shell outside the swarm, made from asteroid metal.
-    scale: Gigawatts harvested.
+    scale: About 1 GW harvested.
     proves: The cascade pays for its mass in extra computing.
   - phase: fleet
     what: The cold shell grows as the swarm closes, wherever there is mass to build it.
-    scale: A large share of the swarm's waste heat.
+    scale: Over half of the swarm's {sun-harnessed} of waste heat.
     proves: Computing per joule keeps rising after the light is all caught.
   - phase: civilization
     what: The whole Sun's light used twice, its last heat radiated near 170 K.

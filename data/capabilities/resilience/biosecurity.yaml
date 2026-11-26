@@ -9,34 +9,38 @@ summary: >-
   for synthetic DNA screened, the most dangerous research kept under shared rules, and some lines,
   such as mirror life, not crossed at all.
 target: >-
-  Every gene synthesis provider and benchtop synthesizer in the world screening every order and
-  customer against an up-to-date list of hazards, verifiably and for free, under shared
-  international rules, with no gap a determined bad actor could slip through.
+  Every gene synthesis provider and benchtop synthesizer in the world screening every order of 50 or
+  more nucleotides, and every customer, against an up-to-date list of hazards, verifiably and for
+  free, under shared international rules, with no gap a determined bad actor could slip through.
 exists:
-  - text: The International Gene Synthesis Consortium is an industry group whose members screen both the sequences of synthetic gene orders and the customers who place them, under a common Harmonized Screening Protocol, revised in 2017.
+  - text: The International Gene Synthesis Consortium, an industry group, screens both the sequences of synthetic gene orders and the customers who place them, under a Harmonized Screening Protocol updated to version 3.1 in June 2026.
     url: https://genesynthesisconsortium.org/
-    year: 2017
-  - text: SecureDNA offers a free, cryptographically secure and verifiably up-to-date system to screen all DNA synthesis for potential hazards.
+    year: 2026
+  - text: SecureDNA offers a free, cryptographically private system that screens every DNA order of 30 or more nucleotides against controlled sequences and their predicted functional variants.
     url: https://securedna.org/
     year: 2026
-  - text: IBBIS gives away free, open-source synthesis screening software (commec) and tools for checking that customers are legitimate.
-    url: https://ibbis.bio/
+  - text: IBBIS gives away commec, a free open-source tool that screens a synthesis order against a hazard database in under a second and runs locally, so no sequence leaves the user.
+    url: https://ibbis.bio/our-work/common-mechanism/
     year: 2026
-  - text: The US Office of Science and Technology Policy issued a framework in April 2024 recommending that providers of synthetic nucleic acids screen purchases to prevent misuse.
-    url: https://bidenwhitehouse.archives.gov/ostp/news-updates/2024/04/29/framework-for-nucleic-acid-synthesis-screening/
-    year: 2024
-  - text: In December 2024 a group of scientists warned in Science that mirror bacteria, built from mirror-image molecules, could pose serious and wide-ranging risks to people, animals and plants, and called for them not to be made.
+  - text: A US national policy issued in November 2026 requires benchtop DNA synthesisers to make a sequence only on a valid authorisation from a verified screener, for orders of 50 nucleotides or more.
+    url: https://www.whitehouse.gov/wp-content/uploads/2026/11/NSTM-6-NASS-Policy.pdf
+    year: 2026
+  - text: In December 2024 a group of scientists warned in Science that mirror bacteria, built from mirror-image molecules, could spread through the environment unchecked by natural controls and act as dangerous pathogens, and called for them not to be made.
     url: https://purl.stanford.edu/cv716pj4036
     year: 2024
-  - text: The Biological Weapons Convention bans the development and stockpiling of biological weapons; the UN Office for Disarmament Affairs supports its meetings and confidence-building measures.
-    url: https://disarmament.unoda.org/biological-weapons/
-    year: 1975
+  - text: In October 2025 Microsoft researchers showed that AI protein-design tools could rewrite toxins into tens of thousands of variants, many of which slipped past synthesis screening until the screeners were patched.
+    url: https://erichorvitz.com/paraphrase.htm
+    year: 2025
+  - text: The Biological Weapons Convention bans biological weapons but has no inspectors, and its 189 states parties are still negotiating how to strengthen it.
+    url: https://disarmament.unoda.org/en/our-work/weapons-mass-destruction/biological-weapons/biological-weapons-convention
+    year: 2026
 gap: >-
-  Screening is voluntary in most countries, and benchtop synthesizers are spreading into labs that
-  no provider screens. The Biological Weapons Convention has no inspectors. Screening lists name
-  known threats, while AI design tools make it easier to make sequences that look unlike anything
-  on a list.
-inventions: []
+  The United States and the United Kingdom now push screening toward every provider and every
+  benchtop machine, but most countries leave it voluntary, and the Convention still has no
+  inspectors. Screening lists name known threats, and the 2025 work showed AI design tools can
+  rewrite a hazard into forms no list holds; the patches that caught them have to keep pace with
+  the tools.
+inventions: [fold-screen]
 scene:
   kind: cell
   focus: A microbe under the screen, its genome read and checked before it can be made.

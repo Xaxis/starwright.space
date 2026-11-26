@@ -9,36 +9,47 @@ pitch: >-
 principle: >-
   Waste heat is an externality with a hard physical cap, the kind of problem cap and trade suits.
   The US acid rain programme and the EU emissions trading system both cut pollution at lower cost
-  than rules alone, by letting firms trade allowances under a fixed cap. A heat permit is the right to
-  release one watt of added heat at the surface, averaged over a year. The cap is the model's
-  {heat-cap-power}, the heat that adds {heat-limit} across Earth. Every source that adds to the
-  surface's heat balance needs permits: fuels burned, fission and fusion plants, geothermal heat drawn
-  faster than Earth's own flow, and power beamed down from space. Solar panels and wind turbines add
-  no new energy, only change how much sunlight the ground absorbs, so they are counted by that net
-  change alone. Permits are auctioned and the revenue is paid out per person, so every country gains.
-  As demand nears the cap the permit price rises, until the most heat-intensive work, such as large
-  computing, moves to orbit, where space takes its heat.
+  than rules alone, by letting firms trade allowances under a fixed cap. A heat permit is the right
+  to release one watt of added heat at the surface, averaged over a year. The cap is the model's
+  {heat-cap-power}, the heat that adds {heat-limit} across Earth, against about {power-now} released
+  today. Every source that adds to the surface's heat balance needs permits: fuels burned, fission
+  and fusion plants, geothermal heat drawn faster than Earth's own flow, and power beamed down from
+  space. Solar panels and wind turbines add no new energy, only change how much sunlight the ground
+  absorbs, so they are counted by that change alone: a dark panel on desert sand that reflected
+  about a third of the light adds roughly a quarter of the sunlight falling on it, some 60 W per
+  square metre of panel averaged over day and night at {surface-insolation}. The price is easy to
+  read against the cost of energy. A watt held for a year is 8.76 kWh, so a permit at 10 cents a
+  watt-year adds about 1.1 cents to each kWh released; the price rises as demand nears the cap,
+  until the most heat-intensive work, such as large computing, is cheaper to run in orbit, where
+  space takes its heat. Permits are auctioned and the revenue is paid out per person, so every
+  country gains, and the Heat Census provides the ledger that checks each holder's heat.
 buildsOn:
-  - text: The US Acid Rain Program, the first national cap and trade scheme.
-    url: https://www.epa.gov/acidrain/acid-rain-program-results
-  - text: The EU Emissions Trading System, cap and trade for carbon since 2005.
+  - text: The US Acid Rain Program, created under Title IV of the 1990 Clean Air Act amendments, the first national cap and trade programme in the United States.
+    url: https://www.epa.gov/acidrain/acid-rain-program
+    year: 1990
+  - text: The EU Emissions Trading System, cap and trade for carbon since 2005, which had helped cut emissions from power and industry by about 47 percent by 2023.
     url: https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets/what-eu-ets_en
+    year: 2005
+  - text: Section 316 of the US Clean Water Act, which since 1972 has limited the heat in discharges to water, a long-running rule that regulates waste heat itself.
+    url: https://www.law.cornell.edu/uscode/text/33/1326
+    year: 1972
   - text: Flanner's 2009 estimate of the heat from human energy use, globally and by region.
     url: https://doi.org/10.1029/2008GL036465
+    year: 2009
   - text: The 2021 global map of human heat emissions at 1 km and hourly resolution (Varquez and colleagues).
     url: https://doi.org/10.1038/s41597-021-00850-w
-  - text: Chaisson's 2008 warning that growing energy use alone will warm the planet.
-    url: https://doi.org/10.1029/2008EO280001
-  - text: Nordhaus's 2015 climate club, a way to hold a coalition together with penalties on outsiders.
-    url: https://www.aeaweb.org/articles?id=10.1257/aer.15000001
+    year: 2021
+  - text: Nordhaus's 2015 climate club, in which small trade penalties on countries outside the club hold a large coalition together.
+    url: https://doi.org/10.1257/aer.15000001
+    year: 2015
 experiment:
   goal: Build the measurement a heat market needs, and test the market's design with real traders.
   setup: >-
     Two parts. First, a heat ledger for one large metropolitan region, Tokyo or the Rhine-Ruhr,
-    built from metered energy data and the global 1 km heat map, accounting every source of added
-    heat hour by hour and checked against satellite surface temperatures. Second, a laboratory market
-    in which 200 participants from energy firms trade heat permits under a cap through a simulated
-    century of growth.
+    built with the Heat Census method from metered energy data, accounting every source of added
+    heat hour by hour and assigning it to the firms and households that release it. Second, a
+    laboratory market in which 200 participants from energy firms trade heat permits under a cap
+    through a simulated century of growth.
   measure: The ledger's error against independent estimates; how well the market prices permits against the cost of moving power to orbit; how fast it reaches the efficient allocation; the revenue raised.
   succeedsIf: The ledger accounts added heat to within 15 percent at 1 km and hourly, and the market comes within 10 percent of the efficient allocation within five simulated trading periods.
   costUsd: 1200000
@@ -50,11 +61,11 @@ path:
     proves: Heat can be counted and traded.
   - phase: prototype
     what: A national heat ledger, published every year, with heat reported alongside carbon in the emissions trading system.
-    scale: One country's energy system.
+    scale: One country, every source releasing more than 1 MW of heat reported each year.
     proves: Reporting heat is practical at national scale.
   - phase: pilot
     what: A shadow heat price attached to the carbon price in one large economy, with no cap binding yet.
-    scale: A large economy.
+    scale: One of the 3 largest economies, at a shadow price of 1 cent a watt-year, about 0.1 cent a kWh.
     proves: Firms plan for a heat price before it binds.
   - phase: first-plant
     what: A treaty sets the global cap and starts the auctions as total power on Earth nears it.

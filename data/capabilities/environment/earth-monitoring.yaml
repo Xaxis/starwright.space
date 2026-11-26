@@ -4,15 +4,17 @@ domain: environment
 stage: now
 needs: []
 summary: >-
-  No one can manage what no one can see. As energy use grows from {power-now} toward Earth's
-  ceiling of {earth-cap}, the world needs to know, plume by plume and forest by forest, where carbon,
-  methane, heat and life are going. Satellites can now find single methane leaks from orbit, and
-  digital twins of the Earth are being built, but the record is patchy, slow and fragile.
+  No one can manage what no one can see. As energy use grows from {power-now} toward Earth's ceiling
+  of {earth-cap}, the world needs to know, plume by plume and forest by forest, where carbon,
+  methane, heat and life are going. Satellites can now find single methane leaks from orbit and map
+  the planet's ice and forests every few days, but much of the record rests on single missions that
+  can fail or lose their funding, and two of the things the climb most needs to watch, wildlife and
+  the heat of human energy use, are barely measured at all.
 target: >-
   A continuous, open record of the planet: every large source of greenhouse gas found within days,
   the carbon in forests, soils and oceans measured, Earth's energy balance tracked to a tenth of a
-  watt per square metre, wildlife counted, and the heat added by human energy use mapped region by
-  region, all of it public.
+  watt per square metre without gaps, wildlife counted species by species, and the heat added by
+  human energy use mapped monthly at 1 km, all of it public.
 exists:
   - text: The WMO's Greenhouse Gas Bulletin reports that global mean CO2 reached 426.8 ppm in 2025, up 2.8 ppm in a year, with methane at 1,948 ppb and nitrous oxide at 339.1 ppb.
     url: https://wmo.int/news/media-centre/greenhouse-gas-levels-once-again-reach-record-high
@@ -20,24 +22,31 @@ exists:
   - text: The Global Carbon Budget projects fossil CO2 emissions of 38.2 billion tonnes in 2026, 0.4 percent down on 2025, with 150 billion tonnes left before 1.5 °C.
     url: https://globalcarbonbudget.org/fossil-co2-emissions-decrease-in-2026/
     year: 2026
-  - text: Carbon Mapper's Tanager-1 satellite has detected over 15,200 methane plumes from 5,400 sources since its 2024 launch, and Tanager-2 followed in October 2026.
+  - text: Carbon Mapper's Tanager-1 satellite has detected over 15,200 methane plumes from 5,400 sources since its 2024 launch, and Tanager-2 launched on 1 October 2026.
     url: https://carbonmapper.org/articles/tanager-2-first-methane-plumes
     year: 2026
-  - text: MethaneSAT lost contact in 2025, after its data showed oil and gas methane emissions about 50 percent above widely cited inventories.
+  - text: MethaneSAT lost contact in 2025 after a year in orbit, in which its data showed oil and gas methane emissions about 50 percent above widely cited inventories.
     url: https://www.methanesat.org/mission
     year: 2025
-  - text: NASA and ISRO's NISAR radar satellite, launched in July 2025, maps changes in ice, forests and ground across the whole planet, with calibrated data released from November 2026.
+  - text: NASA and ISRO's NISAR radar satellite, launched in July 2025, maps changes in Earth's land, ice, water and vegetation, with validated data public from 6 November 2026.
     url: https://science.nasa.gov/mission/nisar/
     year: 2026
-  - text: The EU's Destination Earth has demonstrated digital twins for weather extremes and climate adaptation, aiming at a full digital replica of the Earth by 2030.
-    url: https://destination-earth.eu/
-    year: 2024
+  - text: NASA's budget request for 2026 proposed ending its OCO-2 and OCO-3 carbon dioxide missions and stopping work on the thermal infrared radiometer of its planned Surface Biology and Geology mission.
+    url: https://www.nasa.gov/wp-content/uploads/2025/05/fy-2026-budget-technical-supplement-002.pdf
+    year: 2025
+  - text: Libera, which continues the CERES record of Earth's energy budget, is due to launch in September 2027 on the satellite that will become NOAA-22.
+    url: https://science.nasa.gov/mission/libera/
+    year: 2026
 gap: >-
-  Many of the instruments are one-off missions that can fail, as MethaneSAT did, and few measure soil
-  carbon, ocean carbon or wildlife directly. National inventories still differ from what satellites
-  see. No system yet maps the heat that human energy use adds to the climate, a number that matters
-  more with every rung of the climb.
-inventions: []
+  Much of the record hangs on single missions. MethaneSAT failed after a year, and the two OCO
+  carbon missions survive only because Caltech took them over in 2026 when NASA's budget dropped
+  them. The energy-budget record needs its next instrument, Libera, to fly in 2027 before the old
+  ones give out. Soil carbon, ocean carbon and wildlife are still sampled by hand at scattered
+  points, and most species are never counted. Satellites put oil and gas methane about half above
+  reported inventories. No system maps the heat that human energy use adds to the climate; the best
+  global maps are research datasets for single years, a number that matters more with every rung of
+  the climb.
+inventions: [heat-census, air-census]
 scene:
   kind: network
   focus: Earth wrapped in a web of satellites and ground stations, each pulse a new measurement coming in.

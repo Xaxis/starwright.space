@@ -11,7 +11,7 @@ summary: >-
   fought, so the process must also give neighbours a real say early and a share of the gains.
 target: >-
   Every clean energy, grid and industrial project gets a yes or a no, with reasons, within a fixed
-  and published time (a year for most, two for the largest), with the people affected heard before
+  and published time (1 year for most, 2 for the largest), with the people affected heard before
   the design is fixed and a share of the benefits written into the permit.
 exists:
   - text: The US Council on Environmental Quality found in 2020 that a federal environmental impact statement took 4.5 years on average from notice of intent to decision, with a median of 3.5 years.
@@ -29,15 +29,19 @@ exists:
   - text: SolarAPP+, an automated online plan review for home solar and storage, served more than 350 jurisdictions and issued more than 150,000 permits by 2026.
     url: https://www.gosolarapp.org/
     year: 2026
-  - text: The EU Services Directive of 2006 provides that when an authority does not answer a licence application in time, the authorisation is deemed granted unless overriding public interest requires otherwise.
-    url: https://eur-lex.europa.eu/eli/dir/2006/123/oj
-    year: 2006
+  - text: Germany's permitting reforms cut the average time to approve an onshore wind farm to about 17 months in 2025, the year it approved 20.8 GW of onshore wind, up by nearly half on 2024.
+    url: https://www.fachagentur-wind-solar.de/fileadmin/Veroeffentlichungen/Wind/Analysen/FA_Wind_Solar_Status_des_Windenergieausbaus_an_Land_Jahr_2025.pdf
+    year: 2026
+  - text: In May 2025 the US Supreme Court, in Seven County Infrastructure Coalition v. Eagle County, told courts to defer to agencies on environmental reviews and held that a review need not cover separate upstream or downstream projects.
+    url: https://www.supremecourt.gov/opinions/24pdf/605us1r34_b8cf.pdf
+    year: 2025
 gap: >-
   The fast paths that exist cover small or standard things: rooftop solar, telecom masts, some
   renewables in Europe. Large, new or cross-border projects such as long transmission lines still
-  wait years, because many agencies review one after another, deadlines are unclear and challenges
-  can come late. Nobody has shown a process that is both fast and trusted for large projects that
-  cross many jurisdictions.
+  wait years: a US environmental review averages 4.5 years, and over 10,000 projects sit in the grid
+  queue. Many agencies review one after another, deadlines are unclear and challenges can come late.
+  Nobody has shown a process that is both fast and trusted for large projects that cross many
+  jurisdictions.
 inventions: [permit-clock]
 scene:
   kind: network

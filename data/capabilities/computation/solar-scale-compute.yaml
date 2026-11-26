@@ -15,28 +15,30 @@ target: >-
   {year-type-2}, run on reversible logic and radiating its last waste heat as cold as the
   industry can make it, so that each joule buys as many operations as the Landauer bound allows.
 exists:
-  - text: Robert Bradbury proposed the Matrioshka brain in 1997, nested shells of computers around a star, each running on the waste heat of the one inside.
-    url: https://en.wikipedia.org/wiki/Matrioshka_brain
-    year: 1997
+  - text: Robert Bradbury described the Matrioshka brain as nested shells of computers around a star, in orbits from inside Mercury's to beyond Neptune's, using nearly all the energy the star puts out.
+    url: https://web.archive.org/web/20090223093348/http://aeiveos.com:8080/~bradbury/MatrioshkaBrains/index.html
+    year: 2004
   - text: Seth Lloyd worked out the ultimate physical limits to computation, set by energy, entropy and the speed of light, for a one-kilogram computer.
     url: https://doi.org/10.1038/35023282
     year: 2000
   - text: Landauer showed that erasing a bit must release at least kT ln 2 of heat, so colder computers can erase more bits per joule.
     url: https://doi.org/10.1147/rd.53.0183
     year: 1961
-  - text: Bérut and colleagues confirmed the Landauer bound by experiment.
-    url: https://www.nature.com/articles/nature10872
-    year: 2012
-  - text: Thermophotovoltaic cells have turned the light of a hot emitter into electricity at more than 40 percent efficiency.
+  - text: LaPotin and colleagues made thermophotovoltaic cells that turn infrared light into electricity at more than 40 percent efficiency, built for emitters at 1,900 to 2,400 °C.
     url: https://www.nature.com/articles/s41586-022-04473-y
     year: 2022
-  - text: Epoch AI tracks the world's AI computing capacity, about 31.7 million H100-equivalents by mid-2026, the start of the curve this capability extends.
-    url: https://epoch.ai/data/ai-chip-sales
-    year: 2026
+  - text: Lucchesi and colleagues reached more than 14 percent cell efficiency in a near-field thermophotovoltaic converter, where a hot emitter sits a fraction of a wavelength from the cell.
+    url: https://doi.org/10.1021/acs.nanolett.0c04847
+    year: 2021
+  - text: Nielsen and colleagues generated electricity from mercury cadmium telluride infrared photodiodes run as thermoradiative cells, which make power by emitting their own heat to colder surroundings.
+    url: https://doi.org/10.1021/acsphotonics.2c00223
+    year: 2022
 gap: >-
-  Nobody has designed a computer that runs for centuries in space, makes its own replacement
-  parts, and talks across light-minutes of delay. Turning low-grade infrared back into electricity
-  works only at high temperatures today, and reversible logic is not yet practical at any scale.
+  Nobody has designed a computer that runs for centuries in space, makes its own replacement parts,
+  and works across light-minutes of delay. Turning heat back into electricity works well only from
+  hot sources: 40 percent from emitters near 2,000 °C. A swarm sheet glows at a few hundred kelvin,
+  where the first thermoradiative cells make only traces of power. Reversible logic is not yet
+  practical at any scale.
 inventions: [thermal-cascade-swarm]
 scene:
   kind: swarm

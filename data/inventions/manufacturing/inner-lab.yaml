@@ -9,24 +9,37 @@ pitch: >-
 principle: >-
   A factory fails to adapt not because the physics is unknown but because finding the new settings
   takes experiments, and experiments take people. Robot labs like the A-Lab have shown that a loop
-  of planning, synthesis, measurement and learning can run unattended for weeks. The Inner Lab puts
-  that loop inside production: a side line, about a twentieth of the plant, with the same processes
-  at small scale (a melt, a caster, a furnace, a test rig) and instruments to measure what comes
-  out. When the feed or a product changes, it runs designed experiments chosen by Bayesian
-  optimisation, which picks each next trial to learn the most from the fewest, and it hands the main
-  line a new recipe only once its parts pass their tests. Every recipe and every result is written
-  back to the plant's Process Genome and signed, so other factories, light-minutes away, start from
-  what this one learned. Faults are treated the same way: a failing machine is copied in the lab,
-  its fault reproduced and fixed, and the fix spread.
+  of planning, synthesis, measurement and learning can run unattended for weeks. The Inner Lab
+  puts that loop inside production: a side line, about a twentieth of the plant, with the same
+  processes at small scale (a melt, a caster, a furnace, a test rig) and instruments to measure
+  what comes out. When the feed or a product changes, it runs designed experiments chosen by
+  Bayesian optimisation, which picks each next trial to learn the most from the fewest, and it
+  hands the main line a new recipe only once its parts pass their tests. Every recipe and every
+  result is written back to the plant's Process Genome and signed, so other factories,
+  light-minutes away, start from what this one learned. Faults are treated the same way: a failing
+  machine is copied in the lab, its fault reproduced and fixed, and the fix spread. The numbers
+  come from the robot labs. A-Lab made 36 of its 57 targets in 17 days, about 2 a day, and
+  Liverpool's robotic chemist ran 688 experiments in 8 days, about 86 a day, across 10 variables,
+  ending with mixtures 6 times as active as those it began with. A casting recipe has fewer free
+  settings, perhaps 5 (melt temperature, pour speed, inoculant, cooling time and heat treatment),
+  but each trial is slower. A side line of 10 small casting cells, each pouring and testing one
+  bar an hour, runs 240 trials a day, so the 48 hours the bench allows for each recovery give
+  about 480, two-thirds of what the chemist used for twice as many variables. At a twentieth of
+  the plant the lab costs 5 percent of output, and pays for itself if it saves as much in scrap
+  and downtime.
 buildsOn:
   - text: Berkeley Lab's A-Lab, which made 36 of 57 target compounds in 17 days of unattended operation (Nature, 2023).
     url: https://www.nature.com/articles/s41586-023-06734-w
-  - text: Bayesian optimisation, the method for choosing each next experiment to learn the most from few trials.
-    url: https://en.wikipedia.org/wiki/Bayesian_optimization
+    year: 2023
+  - text: Liverpool's mobile robotic chemist, which ran 688 experiments in eight days across ten variables, each batch chosen by Bayesian search, and found photocatalyst mixtures six times more active than its starting ones (Nature, 2020).
+    url: https://www.nature.com/articles/s41586-020-2442-2
+    year: 2020
   - text: Xiaomi's self-optimising phone factory, which tunes its own lines.
     url: https://newatlas.com/robotics/xiaomi-dark-robotic-factory/
+    year: 2024
   - text: GNoME's predictions of stable materials, a source of candidates for the lab to try.
     url: https://www.nature.com/articles/s41586-023-06735-9
+    year: 2023
 experiment:
   goal: Show that a plant with an Inner Lab can recover full product quality after blind changes to its feedstock, with no person involved.
   setup: >-
@@ -41,27 +54,27 @@ experiment:
 path:
   - phase: bench
     what: One casting line with its lab, on blind feed changes.
-    scale: Tonnes of parts a day.
+    scale: 1 line, about 10 tonnes of castings a day, 10 test cells.
     proves: A plant can retune itself without people.
   - phase: prototype
     what: Inner Labs in three different plants on Earth (metal, glass and cement), sharing recipes.
-    scale: Three plants, one shared recipe book.
+    scale: 3 plants, about 1,000 tonnes a day between them, 1 shared recipe book.
     proves: What one plant learns, another can use.
   - phase: pilot
     what: The Inner Lab inside the first lunar seed, adapting it to real regolith.
-    scale: "A {seed-mass} seed"
+    scale: 1 seed of {seed-mass}.
     proves: Self-tuning works where people cannot reach in time.
   - phase: first-plant
     what: Every seed lineage on the Moon and in orbit with its lab, sharing across the light-second gap.
-    scale: Hundreds of seeds.
+    scale: About 1,000 seeds' worth of industry, 100,000 tonnes.
     proves: Lineages improve faster together than apart.
   - phase: fleet
     what: Labs adapting industry to asteroid and Mercury rock, light-minutes from Earth.
-    scale: Industry across the inner system from {year-planet}.
+    scale: About 5 billion tonnes of industry by {year-planet}.
     proves: New worlds can be learned without people on site.
   - phase: civilization
     what: The industry's shared research, running in every factory of the swarm's supply chain.
-    scale: Every factory.
+    scale: Every factory that processes {swarm-full-mined}.
     proves: Industry learns as fast as it grows.
 risks: >-
   Small-scale trials may not predict the full-size line, because heat and flow scale differently;

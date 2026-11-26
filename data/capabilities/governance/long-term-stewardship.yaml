@@ -10,8 +10,9 @@ summary: >-
   commitments through changes of government, and can still change course when the evidence does.
 target: >-
   In every country that takes part, and in every body that runs the climb, a standing voice for
-  future generations with real power over long-lived decisions, and commitments to century-long
-  projects that survive elections while staying open to revision through a slower, deliberate path.
+  future generations with real power over long-lived decisions, and commitments to projects that run
+  past {year-type-2} and survive elections while staying open to revision through a slower,
+  deliberate path.
 exists:
   - text: The Well-being of Future Generations (Wales) Act 2015 created a Future Generations Commissioner for Wales, who advises public bodies on the long-term effects of their decisions.
     url: https://www.legislation.gov.uk/anaw/2015/2/section/17
@@ -28,11 +29,17 @@ exists:
   - text: Deliberative Polling, which James Fishkin began in 1988, has asked randomly selected citizens to deliberate on policy over 150 times in over 50 countries and jurisdictions.
     url: https://deliberation.stanford.edu/what-deliberative-pollingr
     year: 2026
+  - text: Finland's parliament has had a standing Committee for the Future since 1993, which examines long-term issues and the government's regular report on the future.
+    url: https://www.eduskunta.fi/en/members-and-parliamentary-bodies/committees/committee-for-the-future
+    year: 2026
+  - text: The Netherlands has run its flood defences through a Delta Programme since 2012, with an independent Delta Commissioner and a dedicated fund planning decades ahead.
+    url: https://english.deltaprogramma.nl/delta-programme
+    year: 2026
 gap: >-
-  Commissioners for future generations advise but rarely decide, and the Future Design experiments
-  are small and local. No body anywhere has the standing to delay a decision that harms people a
-  century away, and no plan has yet been held on course across four or five generations of
-  politicians.
+  Commissioners for future generations advise but rarely decide, the UN's proposed envoy for future
+  generations sits on hold, and the Future Design experiments are small and local. No body anywhere
+  has the standing to delay a decision that harms people a century away, and no plan has been held
+  on course across 4 or 5 generations of politicians.
 inventions: [future-seat]
 scene:
   kind: network

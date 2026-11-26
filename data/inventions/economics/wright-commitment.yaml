@@ -7,30 +7,45 @@ pitch: >-
   along its learning curve, so factories can be built before the market exists, and the promise pays
   for itself as costs fall.
 principle: >-
-  Wright's law: each doubling of all the units ever made cuts the cost of the next by a steady share,
-  which for solar modules the model holds at {pv-learning-rate}. Early buyers therefore create value
-  they cannot keep, since every unit they buy lowers the price for everyone after them, a learning
-  spillover that markets underpay. Advance market commitments already use a binding promise to buy
-  to pull in investment, as the pneumococcal vaccine commitment did. The Wright Commitment ties the
-  promise to the learning curve. For a chosen technology, such as long-duration storage, clean steel,
-  high-voltage cable and later lunar oxygen, the fund publishes a schedule: it will buy up to one
-  doubling of cumulative output at a ceiling price that falls by the technology's measured learning
-  rate per doubling, awarded by reverse auction to any supplier. Producers who beat the curve
-  profit, and the falling ceiling keeps the fund from overpaying. The fund's cost is the gap between
-  the ceiling and the market price over that doubling, which shrinks as the doubling proceeds. It is
-  paid by a group of governments and large buyers and repaid by their lower costs on every later
-  unit.
+  Wright's law: each doubling of all the units ever made cuts the cost of the next by a steady
+  share, which for solar modules the model holds at {pv-learning-rate}. Early buyers therefore
+  create value they cannot keep, since every unit they buy lowers the price for everyone after them,
+  a learning spillover that markets underpay. Advance market commitments already use a binding
+  promise to buy to pull in investment, as the pneumococcal vaccine commitment did. The Wright
+  Commitment ties the promise to the learning curve. For a chosen technology, such as long-duration
+  storage, clean steel, high-voltage cable and later lunar oxygen, the fund publishes a schedule: it
+  will buy up to one doubling of cumulative output at a ceiling price that falls by the technology's
+  measured learning rate per doubling, awarded by reverse auction to any supplier. Producers who
+  beat the curve profit, and the falling ceiling keeps the fund from overpaying. The cost is easy to
+  bound. Take a technology that costs twice what it replaces and learns at 20 percent a doubling.
+  After one, two and three doublings its premium over the incumbent falls from 100 percent to 60, 28
+  and 2 percent, while each doubling makes twice as many units as all before it. Paying the premium
+  all the way to parity costs about three and a half times the market value of every unit made
+  before the commitment began; after that the technology is cheaper for every buyer, for good. The
+  fund is paid by a group of governments and large buyers and repaid by their lower costs on every
+  later unit.
 buildsOn:
-  - text: Wright's 1936 paper on airplane costs, the first statement of the learning curve.
+  - text: Wright's 1936 paper on the factors affecting the cost of airplanes, the first statement of the learning curve.
     url: https://doi.org/10.2514/8.155
-  - text: Gavi's 1.5 billion dollar advance market commitment for pneumococcal vaccines, which protected 109 million children.
-    url: https://www.gavi.org/news/media-room/vaccines-vs-pneumonia-how-pioneering-funding-model-changed-game-changing-market
-  - text: Frontier, the buyers' club launched in 2022 by Stripe, Alphabet, Shopify, Meta and McKinsey to commit 1 billion dollars to buying permanent carbon removal before it is cheap.
+    year: 1936
+  - text: Kremer, Levin and Snyder's account of the 1.5 billion dollar pneumococcal advance market commitment, which brought three vaccines to market and immunised more than 150 million children.
+    url: https://doi.org/10.1257/pandp.20201017
+    year: 2020
+  - text: Frontier, the buyers' club launched in 2022 by Stripe, Alphabet, Shopify, Meta and McKinsey as a nine-year advance market commitment to buy 1 billion dollars of permanent carbon removal by 2030.
     url: https://frontierclimate.com/writing/launch
+    year: 2022
+  - text: The UK's fourth Contracts for Difference round in 2022 awarded offshore wind contracts at 37.35 pounds per MWh in 2012 prices.
+    url: https://assets.publishing.service.gov.uk/media/65b1463d160765000d18f834/contracts-for-difference-cfd-allocation-round-4-results.pdf
+    year: 2022
+  - text: The UK's seventh round in January 2026 awarded offshore wind at 65.45 pounds per MWh in 2012 prices, up from 37.35 in 2022, a reminder that auction prices can climb again.
+    url: https://assets.publishing.service.gov.uk/media/6966861de8c04eb2919f773a/contracts-for-difference-allocation-round-7-results-.pdf
+    year: 2026
   - text: Way and colleagues' 2022 forecasts of clean technology costs from learning curves, which find a fast transition saves trillions.
     url: https://doi.org/10.1016/j.joule.2022.08.009
-  - text: Nemet's How Solar Energy Became Cheap (2019), a history of how markets, policy and learning drove the cost of solar down.
-    url: https://www.taylorfrancis.com/books/oa-mono/10.4324/9780367136604/solar-energy-became-cheap-gregory-nemet
+    year: 2022
+  - text: Nemet's How Solar Energy Became Cheap, a history of how markets, policy and learning drove the cost of solar down.
+    url: https://doi.org/10.4324/9780367136604
+    year: 2019
 experiment:
   goal: Show that a purchase schedule that falls along a learning curve brings in new factory capacity faster and more cheaply than the same money given as grants.
   setup: >-
@@ -39,39 +54,41 @@ experiment:
     suppliers by reverse auction under a published falling ceiling. A comparison arm gives the same
     money as capital grants to matched factories in another region.
   measure: New factory capacity announced and built; delivered unit prices against the ceiling; the fund's cost per unit of new capacity; the learning rate seen during the commitment.
-  succeedsIf: The commitment brings at least twice as much new capacity per dollar as the grant arm within three years, and delivered prices track the falling ceiling.
+  succeedsIf: The commitment brings at least 2 times as much new capacity per dollar as the grant arm within 3 years, and delivered prices stay within 10 percent of the falling ceiling.
   costUsd: 50000000
   months: 36
 path:
   - phase: bench
     what: A simulation of purchase schedules run against the historical learning curves of solar, wind and batteries.
-    scale: Decades of real price data.
+    scale: Price histories of 3 technologies over 40 to 50 years.
     proves: Which schedules would have sped those curves at least cost.
   - phase: prototype
     what: The 50 million dollar commitment for one technology.
-    scale: One product, one region.
+    scale: 50 million dollars, one product, one region.
     proves: Suppliers respond to a falling ceiling.
   - phase: pilot
     what: A multilateral fund runs commitments for three to five technologies, buying for projects in low- and middle-income countries.
-    scale: Billions of dollars, several technologies.
+    scale: 2 to 5 billion dollars across 3 to 5 technologies.
     proves: Commitments lower costs where capital is dear.
   - phase: first-plant
     what: A standing global facility, funded by governments and large buyers, covers every technology the buildout needs that is still on the steep part of its curve.
-    scale: Tens of billions of dollars a year.
+    scale: 20 to 50 billion dollars a year.
     proves: Learning becomes something the world buys on purpose.
   - phase: fleet
     what: Commitments for space technologies before the seed factory, such as lunar oxygen, space solar cells and mass-driver coils.
-    scale: The industries of the next rung.
+    scale: 10 to 100 billion dollars of commitments for space technologies before {seed-year}.
     proves: The same tool pulls space industry down its curves.
   - phase: civilization
     what: Every technology the climb uses brought down its learning curve on a published schedule, from today's solar factories to the swarm's collectors.
     scale: "The buildout to {type-1-power} and beyond"
     proves: The cost of the climb falls as fast as building allows.
 risks: >-
-  A learning rate measured in the past may not continue; the ceiling resets to the rate actually
-  measured at each half-doubling. Incumbent producers may win every auction and slow new entrants; a
-  share of each doubling can be reserved for them. Governments may balk at a promise that runs for
-  years; a buyers' club of large firms, as with carbon removal, can carry the first commitments.
+  A learning rate measured in the past may not continue, and prices can climb again, as the UK's
+  offshore wind auctions did between 2022 and 2026; the ceiling resets to the rate actually measured
+  at each half-doubling, and is indexed to the cost of capital. Incumbent producers may win every
+  auction and slow new entrants; a share of each doubling can be reserved for them. Governments may
+  balk at a promise that runs for years; a buyers' club of large firms, as with carbon removal, can
+  carry the first commitments.
 scene:
   kind: field
   focus: A field of panels doubling, and doubling again, as the price ceiling steps down the curve.

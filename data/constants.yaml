@@ -148,13 +148,29 @@ launch-cost-shuttle:
   source: https://ntrs.nasa.gov/citations/20200001093
   quote: "NASA's space shuttle had a cost of about $1.5 billion to launch 27,500 kg to Low Earth Orbit"
 people-without-power:
-  label: People without electricity, 2023
-  value: 6.66e8
+  label: People without electricity, 2024
+  value: 6.55e8
   unit: people
-  year: 2023
-  source: https://www.irena.org/Publications/2025/Jun/Tracking-SDG-7-The-Energy-Progress-Report-2025
-  quote: "the world population that has access to electricity increased to almost 92 percent in 2023, yet 666 million people still lacked basic access"
-  note: Tracking SDG7, The Energy Progress Report 2025, by the IEA, IRENA, UN Statistics Division, World Bank and WHO. Quoted from IRENA's page for the report; trackingsdg7.esmap.org refused automated reading.
+  year: 2024
+  source: https://www.iea.org/news/655-million-people-still-living-without-electricity-underscore-urgent-need-to-deliver-on-universal-energy-access-target
+  quote: "655 million people globally still lack access to electricity"
+  note: Tracking SDG7, The Energy Progress Report 2026, by the IEA, IRENA, UN Statistics Division, World Bank and WHO, released 24 June 2026 with data for 2023 and 2024; the release gives the global access rate for 2024 as 92 percent. The 2025 report counted 666 million for 2023.
+people-without-safe-water:
+  label: People without safely managed drinking water, 2024
+  value: 2.1e9
+  unit: people
+  year: 2024
+  source: https://www.who.int/news/item/26-08-2025-1-in-4-people-globally-still-lack-access-to-safe-drinking-water---who--unicef
+  quote: "2.1 billion people globally"
+  note: WHO and UNICEF Joint Monitoring Programme, Progress on household drinking water, sanitation and hygiene 2000 to 2024, released 26 August 2025. The release's first key fact gives the figure as one in four people who "still lack access to safely managed drinking water".
+energy-jobs:
+  label: People working in the energy sector, 2024
+  value: 7.6e7
+  unit: people
+  year: 2024
+  source: https://www.iea.org/reports/world-energy-employment-2025/executive-summary
+  quote: "bringing total energy sector jobs to 76 million"
+  note: IEA, World Energy Employment 2025. The paragraph's subject is 2024.
 gpu-energy-per-op:
   label: Energy per dense 8-bit operation on a flagship AI accelerator (AMD Instinct MI355X, at full board power)
   value: 2.8e-13
@@ -201,13 +217,13 @@ human-forcing-2024:
   source: https://doi.org/10.5194/essd-17-2641-2025
   quote: "Total anthropogenic ERF has increased to 2.97 [2.05 to 3.77] W m −2 in 2024 relative to 1750"
 earth-imbalance:
-  label: Earth's energy imbalance, the heat it gains, averaged over 2005 to 2024
-  value: 0.89
+  label: Earth's energy imbalance, the heat it gains, averaged over 2006 to 2025
+  value: 1.04
   unit: W/m2
-  year: 2024
-  source: https://doi.org/10.5194/essd-17-2641-2025
-  quote: "an estimated value of 0.43 [0.03 to 0.83] W m −2 during 1975–1994 that more than doubled to 0.89 [0.7 to 1.09] W m −2 during 2005–2024"
-  note: Forster et al. 2025, Indicators of Global Climate Change 2024, Earth System Science Data 17, 2641. The same paper gives 0.99 W/m2 for 2012 to 2024.
+  year: 2025
+  source: https://doi.org/10.5194/essd-18-3889-2026
+  quote: "from 0.40 [−0.03 to 0.84] W m−2 during 1976–1995 to 1.04 [0.82 to 1.25] W m−2 during 2006–2025"
+  note: Forster et al. 2026, Indicators of Global Climate Change 2025, Earth System Science Data 18, 3889. The 2025 edition gave 0.89 W/m2 for 2005 to 2024.
 co2-now:
   label: CO2 in the air, global annual mean, 2025
   value: 425.63

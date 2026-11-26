@@ -23,14 +23,19 @@ principle: >-
 buildsOn:
   - text: Molten oxide electrolysis, developed at MIT for oxygen on the Moon and steel without carbon.
     url: https://news.mit.edu/2013/steel-without-greenhouse-gas-emissions-0508
+    year: 2013
   - text: Boston Metal's industrial molten oxide electrolysis cells, which make liquid iron from ore with electricity alone.
     url: https://www.bostonmetal.com/
-  - text: Skull melting, in which the outer layers of a melt form its own crucible.
+    year: 2026
+  - text: Skull melting, in which the outer layers of a melt form its own crucible, the technique used to grow cubic zirconia.
     url: https://en.wikipedia.org/wiki/Skull_crucible
+    year: 1970
   - text: Blue Origin's molten regolith electrolysis of simulant into iron, silicon, aluminium and oxygen.
     url: https://www.blueorigin.com/news/blue-alchemist-powers-our-lunar-future/
+    year: 2023
   - text: NASA's Mercury fact sheet, with the 9,082.7 W per square metre of sunlight that powers the lake.
     url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html
+    year: 2024
 experiment:
   goal: Hold a pond of molten regolith in its own frozen rim, with no crucible, and electrolyse it for a month.
   setup: >-
@@ -45,19 +50,19 @@ experiment:
 path:
   - phase: bench
     what: The 30 cm pond in simulant, in vacuum.
-    scale: Tens of kilograms of metal a month.
+    scale: About 20 kilograms of metal a month.
     proves: A melt can be its own crucible and still be electrolysed.
   - phase: prototype
     what: A 3 m pond fed continuously, with metal tapped through the floor.
-    scale: About a tonne a day.
+    scale: About 1 tonne a day.
     proves: The rim grows outward into fresh ore as the cell runs.
   - phase: pilot
     what: A lake on the Moon, as the regolith refinery of an early seed.
-    scale: Thousands of tonnes a year.
+    scale: About 5,000 tonnes a year.
     proves: Real regolith, vacuum and the lunar night.
   - phase: first-plant
     what: The first lake on Mercury, on the terminator where heat and shade can both be had.
-    scale: About a million tonnes a year.
+    scale: About 1 million tonnes a year.
     proves: Mercury's crust is an ore.
   - phase: fleet
     what: Lakes built by the factories they feed, spreading across Mercury.

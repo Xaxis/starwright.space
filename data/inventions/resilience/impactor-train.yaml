@@ -22,14 +22,19 @@ principle: >-
 buildsOn:
   - text: DART's impact on Dimorphos in 2022 and the measured momentum enhancement factor of about 3.6, the first full-scale kinetic deflection.
     url: https://www.nature.com/articles/s41586-023-05878-z
+    year: 2023
   - text: ESA's Hera, at Didymos since 2026 to measure what DART did, so beta can be pinned down after the fact.
     url: https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-s-first-close-up-view-of-didymos-asteroids
+    year: 2026
   - text: Housen and Holsapple's scaling laws for crater ejecta, which predict how beta changes with target strength, porosity and gravity.
     url: https://doi.org/10.1016/j.icarus.2010.09.017
-  - text: NASA's Ames Vertical Gun Range, which fires small projectiles at kilometres per second into targets to study impacts.
-    url: https://www.nasa.gov/ames-vertical-gun-range/
+    year: 2011
+  - text: NASA Ames's ballistic ranges, which fire small projectiles at up to about 7 km/s into targets to study impacts.
+    url: https://www.nasa.gov/ames/entry-systems-and-technology-division/thermophysics-facilities-branch-ballistic-ranges/
+    year: 2026
   - text: Lu and Love's gravity tractor, a slow, measured way to trim an asteroid's path after the train has done the bulk of the work.
     url: https://www.nature.com/articles/438177a
+    year: 2005
 experiment:
   goal: Show that the push from many small hits on a rubble-pile target adds up predictably, and that each hit can be predicted from the ones before it.
   setup: >-
@@ -49,23 +54,23 @@ path:
     proves: Small hits sum like one large one, and beta can be learned hit by hit.
   - phase: prototype
     what: A transponder lander and two small impactors sent to a small near-Earth asteroid that threatens nothing.
-    scale: One target, two hits, a few hundred kilograms in all.
+    scale: 1 target, 2 hits, about 300 kg in all.
     proves: The beacon measures each hit's velocity change within days, in space and in real gravity.
   - phase: pilot
     what: A full train of ten impactors that changes a harmless asteroid's orbit around the Sun by a planned amount.
-    scale: Ten hits, a deflection set in advance.
+    scale: 10 hits, a planned deflection.
     proves: The closed loop lands the planned change to within 10 percent, with no breakup.
   - phase: first-plant
     what: Impactors and carriers built in series and kept in stock, so a train can launch within months of a threat being found.
-    scale: Enough impactors for several trains at once.
+    scale: Enough impactors for 5 trains in stock.
     proves: Deflection becomes a standing service, not a one-off mission.
   - phase: fleet
     what: Trains parked in deep space, at Sun-Earth Lagrange points and in orbits around the Sun, for asteroids and for comets found late.
-    scale: Interceptors that reach any threat in weeks.
+    scale: Interceptors reaching any threat within 2 weeks.
     proves: Even a long-period comet found a year out can be met far from Earth.
   - phase: civilization
     what: Every dangerous object found and, when needed, steered, guarding Earth, the Moon and the worlds settled by {year-planet}.
-    scale: The inner solar system.
+    scale: The inner solar system, guarded from {year-planet}.
     proves: No impact ends the climb.
 risks: >-
   Lab targets behave by their strength, but real rubble piles behave by their gravity, so beta in

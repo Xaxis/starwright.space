@@ -1,0 +1,86 @@
+id: fold-screen
+title: The Fold Screen
+domain: resilience
+for: [biosecurity]
+pitch: >-
+  A synthesis screen that reads a DNA order by the shape and active sites of the protein it would
+  make, not by matching its letters to a list, so a hazard redesigned to look like nothing on any
+  list is still caught by what it would do.
+principle: >-
+  A protein's danger lives in its folded shape and a handful of active-site residues, not in its
+  exact sequence, and many different sequences fold to the same shape. Sequence screens match a new
+  order against known hazard sequences, so a tool that rewrites a hazardous protein into a distant
+  sequence that still folds and works can slip through; the 2025 Microsoft study showed exactly
+  that. The Fold Screen checks function instead. It predicts the three-dimensional structure of the
+  protein an order would encode, now fast enough to run per order with single-sequence predictors,
+  searches that structure against a library of hazard folds with a structural-alphabet search four
+  to five orders of magnitude faster than aligning atoms, and checks the geometry of the active
+  site. A match on fold and active site flags the order even when its sequence resembles nothing
+  controlled, because the redesign that keeps a protein dangerous is the redesign the structure
+  sees. The cost is structure-prediction compute per order, seconds to minutes on a GPU for a short
+  order, which fits the wait synthesis orders already take for sequence screening.
+buildsOn:
+  - text: Wittmann, Horvitz and colleagues' 2025 finding that AI-redesigned proteins keeping their function evaded sequence screening until the tools were patched.
+    url: https://www.science.org/doi/10.1126/science.adu8578
+    year: 2025
+  - text: AlphaFold, which in 2021 first predicted protein structures at near-experimental accuracy from sequence alone.
+    url: https://www.nature.com/articles/s41586-021-03819-2
+    year: 2021
+  - text: ESMFold, which in 2023 predicted atomic structures from a single sequence fast enough to fold hundreds of millions of proteins.
+    url: https://www.science.org/doi/10.1126/science.ade2574
+    year: 2023
+  - text: Foldseek, which made structure-to-structure search four to five orders of magnitude faster by writing folds as sequences over a structural alphabet.
+    url: https://www.nature.com/articles/s41587-023-01773-0
+    year: 2024
+  - text: IBBIS's commec, the open screening tool whose protein-homology search this would sit behind, extending it from sequence similarity to predicted shape.
+    url: https://ibbis.bio/our-work/common-mechanism/
+    year: 2026
+experiment:
+  goal: Show that a structure-based screen catches AI-redesigned hazards that sequence screening misses, without flagging ordinary benign genes.
+  setup: >-
+    A benchmark of the kind the 2025 Microsoft study built, held under the same controls as the
+    hazard lists themselves: protein families each with benign members, known hazard members, and
+    redesigned variants of the hazard members that keep the predicted function. Run commec's
+    sequence screen and the Fold Screen over all of them on the same hardware, with a held-out set
+    of common human and crop genes as a false-positive test.
+  measure: The share of hazard variants each screen flags; the share of benign genes each wrongly flags; the compute time and cost per order; how detection falls as the variants' sequence identity to known hazards drops.
+  succeedsIf: The Fold Screen flags at least 90 percent of the function-retaining hazard variants the sequence screen misses, wrongly flags fewer than 1 in 1,000 benign genes, and runs in under two minutes per order on one GPU.
+  costUsd: 700000
+  months: 12
+path:
+  - phase: bench
+    what: The benchmark test against sequence screening.
+    scale: Over 75,000 proteins and variants.
+    proves: Structure screening catches redesigned hazards that sequence screening misses, with few false alarms.
+  - phase: prototype
+    what: The Fold Screen added as a second stage behind one provider's sequence screen, on real orders for a year.
+    scale: 1 provider's order stream.
+    proves: It works on real traffic at the speed orders need, without blocking benign work.
+  - phase: pilot
+    what: Adopted by several providers and a benchtop-synthesiser maker, with the hazard fold library kept by an independent body.
+    scale: 3 or more providers' orders.
+    proves: Rival providers trust one shared library and screen.
+  - phase: first-plant
+    what: Built into the common open screening tools, so every screener gains structure checking.
+    scale: Over 50 percent of the world's synthesis orders.
+    proves: Structure screening becomes a baseline, not an add-on.
+  - phase: fleet
+    what: Required wherever synthesis is screened, on Earth and in space labs, with the library updated as new hazards and new design tools appear.
+    scale: Every provider and benchtop machine, on 2 or more worlds.
+    proves: The screen keeps pace with the design tools.
+  - phase: civilization
+    what: No synthesis order anywhere is made without a check on what the protein would do.
+    scale: 100 percent of synthesis, everywhere.
+    proves: An engineered pathogen is hard to order into being.
+risks: >-
+  Structure prediction is still imperfect for short proteins, disordered ones and complexes, so the
+  screen keeps the sequence screen beside it and sends low-confidence predictions for review rather
+  than clearing them. A hazard whose danger is not in a single protein, such as a combination or a
+  regulatory change, is outside its reach, and the screen is one layer among many. The hazard fold
+  library is sensitive and must be held under the same controls as the sequence lists. Attackers
+  will probe it, so it is updated as new design tools appear, and the bench test measures whether it
+  keeps up.
+scene:
+  kind: lattice
+  focus: A protein folding from its chain, its active site lighting up as the screen matches its shape to a hazard fold.
+  params: { structure: protein, defects: 0.1 }

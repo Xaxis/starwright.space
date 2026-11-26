@@ -14,21 +14,28 @@ principle: >-
   credit to the share of labour hours done by apprentices. The Gigawatt Guild makes that link
   standard in project finance. Any project financed by participating lenders and funds, the Wright
   Commitment among them, commits a fixed number of apprentice places per megawatt, with about one
-  percent of the capital set aside in the financing for their wages and training. Apprentices are
+  percent of the capital set aside in the financing for their wages and training. At a capital cost
+  near a dollar a watt, one percent of a gigawatt is about 10 million dollars, which at 40,000
+  dollars a year in wages and teaching pays for about 250 apprentice-years. Apprentices are
   recruited first from the host community and from workers leaving fossil-fuel industries. Their
   skills are recorded in a portable certificate recognised by every participating country, so a
   welder trained in one place can work on a project in another.
 buildsOn:
   - text: Acemoglu and Pischke's 1998 theory and evidence on why firms train, and why they train too little.
     url: https://doi.org/10.1162/003355398555531
+    year: 1998
   - text: The prevailing wage and apprenticeship requirements of the US Inflation Reduction Act of 2022.
     url: https://www.irs.gov/credits-deductions/frequently-asked-questions-about-the-prevailing-wage-and-apprenticeship-under-the-inflation-reduction-act
+    year: 2024
   - text: The UK apprenticeship levy, 0.5 percent of large employers' pay bills since 2017.
     url: https://www.gov.uk/guidance/pay-apprenticeship-levy
-  - text: Germany's dual vocational system, with 468,900 new apprenticeship contracts in 2022.
-    url: https://www.destatis.de/EN/Press/2023/04/PE23_144_212.html
+    year: 2026
+  - text: BIBB's Training Market 2025, on Germany's dual system, where new training contracts fell again and about 84,400 young people found no place.
+    url: https://lit.bibb.de/vufind/Record/DS-785016
+    year: 2025
   - text: IRENA and the ILO's count of 16.2 million renewable energy jobs in 2023.
     url: https://www.ilo.org/resource/news/jobs-renewable-energy-record-highest-annual-growth-rate-reaching-162
+    year: 2024
 experiment:
   goal: Show that an apprenticeship quota tied to project finance trains workers who stay in the trade, without slowing projects or raising their cost by more than the set-aside.
   setup: >-
@@ -50,11 +57,11 @@ path:
     proves: The quota trains people and the projects stay on budget.
   - phase: pilot
     what: A development bank makes the quota standard on all its clean energy lending.
-    scale: Tens of gigawatts, tens of thousands of apprentices.
+    scale: About 30 GW a year, some 7,500 apprentice-years.
     proves: It works as ordinary practice.
   - phase: first-plant
     what: Major lenders and funds adopt it, with a shared, portable record of skills.
-    scale: Hundreds of gigawatts a year, millions of apprentices.
+    scale: About 300 GW a year, some 75,000 apprentice-years a year.
     proves: Training keeps pace with the buildout.
   - phase: fleet
     what: The same quota attached to orbital and lunar industry, training the technicians space work needs.
@@ -62,7 +69,7 @@ path:
     proves: The model carries to new industries.
   - phase: civilization
     what: A workforce that grows with the climb at every rung until machines do most of the building.
-    scale: "The buildout from today through {year-k09}"
+    scale: "{power-k09} of buildout by {year-k09}, about 250 apprentice-years per gigawatt."
     proves: People are never the bottleneck of the climb.
 risks: >-
   Quotas can turn into box-ticking with poor training; assessment by independent examiners and the

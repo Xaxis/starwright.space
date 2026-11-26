@@ -21,14 +21,19 @@ principle: >-
 buildsOn:
   - text: Single-atom placement in silicon by hydrogen-resist lithography with a scanning tunnelling microscope (Fuechsle and colleagues, Nature Nanotechnology, 2012).
     url: https://www.nature.com/articles/nnano.2012.21
+    year: 2012
   - text: Zyvex Labs' work on atomically precise manufacturing for quantum devices.
     url: https://www.zyvexlabs.com/apm/
-  - text: IBM's Millipede, with 1,024 scanning probes on one chip in a 32 by 32 grid.
-    url: https://en.wikipedia.org/wiki/Millipede_memory
+    year: 2026
+  - text: IBM's Millipede, a 32 by 32 array of 1,024 scanning-probe cantilevers on one chip, run in parallel by time-multiplexed electronics.
+    url: https://research.ibm.com/publications/the-millipede-nanotechnology-entering-data-storage
+    year: 2002
   - text: Eigler and Schweizer's positioning of single xenon atoms with a scanning tunnelling microscope (Nature, 1990).
     url: https://www.nature.com/articles/344524a0
+    year: 1990
   - text: Feynman's 1959 lecture There's Plenty of Room at the Bottom, which first proposed building with atoms.
-    url: https://web.pa.msu.edu/people/yang/RFeynman_plentySpace.pdf
+    url: https://www.zyvex.com/nanotech/feynman.html
+    year: 1959
 experiment:
   goal: Show that many tips on one chip can each write atomically exact patterns at once, guided only by the lattice.
   setup: >-
@@ -47,23 +52,23 @@ path:
     proves: Parallel atom-exact writing, with the lattice as the only ruler.
   - phase: prototype
     what: A 10,000-tip array writing quantum devices and atomically exact masters for nanoimprint.
-    scale: Millions of atom sites an hour.
+    scale: 10,000 tips, about 10 million atom sites an hour.
     proves: A product that pays for the next array.
   - phase: pilot
     what: Arrays writing atom-exact templates that self-assembly (DNA frames, molecular machines) fills out in three dimensions.
-    scale: Square millimetres of patterned surface a day.
+    scale: About 1 square millimetre of template a day.
     proves: Tips and chemistry together can build in three dimensions.
   - phase: first-plant
     what: Arrays that write the tips and actuators of the next array, fabricated with atomic precision.
-    scale: A million tips per array.
+    scale: 1 million tips per array.
     proves: The tool builds its own kind, so its cost falls as it grows.
   - phase: fleet
     what: Atomically precise lines making computing elements and catalysts for the industry in space.
-    scale: Grams a day across many lines.
+    scale: About 1 gram a day per line, across 1,000 lines.
     proves: Atom-exact products at industrial rates.
   - phase: civilization
     what: The swarm's computing and finest machines built atom by atom, from {year-k15}.
-    scale: Wherever precision is worth its energy.
+    scale: About 1,000 tonnes a year across the industry, from {year-k15}.
     proves: Matter can be built as precisely as it can be described.
 risks: >-
   Tips blunt or pick up atoms and change their image, and with a hundred tips that happens often;

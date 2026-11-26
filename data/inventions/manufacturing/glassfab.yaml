@@ -22,16 +22,21 @@ principle: >-
   done in one vacuum, and steered by software, so the fab is a small set of evaporators, lasers and
   stages that a factory can build.
 buildsOn:
-  - text: Low-temperature polycrystalline silicon, made by excimer laser annealing of amorphous silicon on glass, the backplane of high-end displays.
-    url: https://en.wikipedia.org/wiki/Low-temperature_polycrystalline_silicon
-  - text: PlasticARM, a 32-bit microprocessor built entirely from thin-film transistors on a flexible substrate (Nature, 2021).
+  - text: Excimer laser annealing, in which a 308 nm line beam scanned over a thin amorphous silicon film on glass melts it in a few pulses so that it sets as polysilicon, the backplane process of high-end displays.
+    url: https://www.laserfocusworld.com/industrial-laser-solutions/article/14215974/silicon-annealing-enables-advanced-displays
+    year: 2017
+  - text: PlasticARM, a 32-bit microprocessor built entirely from thin-film transistors on a flexible substrate (Nature, 2021), whose paper recalls that Intel's first microprocessor, the 4004, had 2,300 transistors on a 10 micrometre process.
     url: https://www.nature.com/articles/s41586-021-03625-w
+    year: 2021
   - text: Solution-processed polysilicon transistors reaching 108 cm2/Vs (Nature, 2006), evidence that crude deposition can still give good silicon.
     url: https://www.nature.com/articles/nature04613
+    year: 2006
   - text: Sam Zeloof's home-built 10 micrometre polysilicon gate chips, the scale of process a small fab can master.
     url: https://sam.zeloof.xyz/second-ic/
-  - text: Blue Origin's silicon above 99.999 percent purity from regolith simulant, a candidate feed.
-    url: https://www.blueorigin.com/news/blue-alchemist-powers-our-lunar-future/
+    year: 2021
+  - text: Blue Origin's Blue Alchemist, a molten regolith electrolysis reactor that splits oxygen from the iron, aluminium and silicon in regolith and refines the silicon for solar cells, a candidate source of the fab's silicon.
+    url: https://spectrum.ieee.org/blue-origin-molten-regolith-electrolysis
+    year: 2025
 experiment:
   goal: Make a working microprocessor using only evaporated silicon, silica and aluminium, laser crystallisation, laser patterning and laser doping, on glass, with no photoresist and no process gases.
   setup: >-
@@ -50,23 +55,23 @@ path:
     proves: Logic without wafers, resist or gases.
   - phase: prototype
     what: A 32-bit controller and memory, made on glass and silicon from lunar simulant.
-    scale: Tens of thousands of transistors per chip, hundreds of chips a month.
+    scale: About 30,000 transistors a chip, 300 chips a month.
     proves: Feedstock from rock is good enough.
   - phase: pilot
     what: A Glassfab built into the Seed Foundry's bench loop, making its motor controllers.
-    scale: The controllers for a one-tonne loop.
+    scale: About 50 controllers for a 1-tonne loop.
     proves: Electronics close in a self-copying loop.
   - phase: first-plant
     what: The fab of the first seed landed on the Moon.
-    scale: Every controller a {seed-mass} seed needs, as it doubles every {doubling-time}.
+    scale: About 5,000 controllers for a {seed-mass} seed, at 50 a tonne, doubling every {doubling-time}.
     proves: Seeds import only dopants and their best chips.
   - phase: fleet
     what: Glassfabs made by seeds for seeds, with finer lasers each generation.
-    scale: Billions of controllers a year across the industry.
+    scale: About 80 billion controllers a year by {year-planet}, 50 for each tonne the industry adds.
     proves: The electronics share of imports falls toward zero.
   - phase: civilization
     what: The control electronics of the swarm's collectors and factories, made where they are used.
-    scale: A controller for every collector the swarm flies.
+    scale: The controllers of {swarm-full-mass} of collectors.
     proves: The climb no longer depends on Earth's chip supply chain.
 risks: >-
   Laser ablation may leave ragged edges and debris that short neighbouring lines; the fallback is a

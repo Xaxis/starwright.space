@@ -16,7 +16,7 @@ exists:
   - text: The World Nuclear Association counts 444 operable reactors of 406,748 MWe and 81 under construction in November 2026; Ontario's Darlington SMR-1, a 300 MWe small modular reactor, began construction in June 2026.
     url: https://world-nuclear.org/information-library/current-and-future-generation/nuclear-power-in-the-world-today
     year: 2026
-  - text: Fervo Energy's Cape Station in Utah, an enhanced geothermal plant, declared its first 33 MW in commercial operation on 30 September 2026, with 400 MW more contracted to Google from 2028.
+  - text: Fervo Energy declared commercial operation of the first 33 MW block of Cape Station, its enhanced geothermal plant in Utah, on 30 September 2026, with two more blocks due by January 2027.
     url: https://fervoenergy.com/fervo-energy-reports-third-quarter-2026-results/
     year: 2026
   - text: The Clean Air Task Force defines superhot rock as above 400 °C, where one well can yield five to ten times the energy of a conventional geothermal well.
@@ -31,15 +31,17 @@ exists:
   - text: Helion's Polaris became the first privately built machine to show measurable deuterium-tritium fusion, announced in February 2026.
     url: https://www.powermag.com/helion-announces-fusion-milestone-moves-closer-to-commercial-deployment/
     year: 2026
-  - text: Commonwealth Fusion Systems delivered the first of the 18 superconducting field magnets for its SPARC tokamak in January 2026.
+  - text: Commonwealth Fusion Systems shipped the first of the 18 superconducting toroidal field magnets for its SPARC tokamak in December 2025.
     url: https://blog.cfs.energy/cfs-delivers-its-first-fusion-magnet-a-stronger-smaller-design/
     year: 2026
 gap: >-
-  Fission plants in the West have run years late and billions over budget, and the first small
-  modular reactors are only now being built. Enhanced geothermal works where hot rock lies near the
-  surface; reaching rock above 400 °C, which gives several times the power per well, needs drills,
-  casings and pipes that survive heat no oil well meets. Fusion has passed ignition in a laser
-  laboratory but has not yet made net electricity.
+  A tenth of {power-k08} is about 25 times the world's whole nuclear fleet of about 407 GWe, and
+  Western fission plants have run years late and billions over budget; the first small modular
+  reactors are only now being built. Enhanced geothermal has just reached its first 33 MW block,
+  where hot rock lies near the surface. Rock above 400 °C, which gives five to ten times the energy
+  per well, needs drills, casings and pipes that survive heat no oil well meets, and the one well
+  that hit magma could not be used for long. Fusion has passed ignition in a laser laboratory, at a
+  target gain of {nif-target-gain}, but no machine has yet made net electricity.
 inventions: [magma-probe]
 scene:
   kind: reactor

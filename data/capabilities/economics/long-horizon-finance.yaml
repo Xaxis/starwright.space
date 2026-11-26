@@ -13,28 +13,35 @@ target: >-
   rate that falls with the horizon as theory and practice now recommend, so the seed factory and its
   first doublings can be financed long before they earn.
 exists:
-  - text: Austria sold a 100-year government bond in 2017, raising 3.5 billion euros at a 2.1 percent coupon, and a second one in 2020 at 0.85 percent, bid nearly nine times over.
-    url: https://uk.investing.com/analysis/austria-100year-bond-hugely-oversubscribed-as-investors-scramble-for-returns-200443446
+  - text: Austria sold a 100-year government bond of 3.5 billion euros at 2.10 percent in 2017, then the world's largest, and a second of 2 billion euros at 0.85 percent in 2020 that was bid 12 times over.
+    url: https://www.oebfa.at/en/ueber-die-oebfa/geschichte.html
     year: 2020
-  - text: Britain's consols, perpetual government bonds first consolidated in 1752, were finally redeemed in 2015.
-    url: https://en.wikipedia.org/wiki/Consol_(bond)
-    year: 2015
-  - text: Kamstra and Shiller proposed in 2009 the trill, a perpetual security paying a trillionth of a country's GDP, so investors could share in national growth.
+  - text: In February 2026 Alphabet sold 1 billion pounds of 100-year notes at 6.125 percent, due in 2126.
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000119312526044473/d37599dfwp.htm
+    year: 2026
+  - text: Kamstra and Shiller proposed in 2009 the trill, a long and ideally perpetual security paying a trillionth of a country's GDP each year, so investors could share in national growth.
     url: https://cowles.yale.edu/publications/cfdp/cfdp-1717
     year: 2009
-  - text: Argentina's 2005 debt restructuring included 30-year warrants that paid out only when its GDP grew faster than a set path.
+  - text: Argentina's 2005 debt restructuring included 30-year warrants that paid out only when its GDP grew faster than 3 percent a year and above a set path.
     url: https://www.imf.org/external/pubs/ft/wp/2006/wp0685.pdf
     year: 2006
   - text: Weitzman showed in 2001 that uncertainty about long-run interest rates makes the right discount rate fall over time, drawing on a survey of 2,160 economists.
     url: https://doi.org/10.1257/aer.91.1.260
     year: 2001
-  - text: The UK Treasury's 2026 Green Book discounts at 3 percent for the first 30 years, 2.5 percent for years 31 to 75 and 2.25 percent after that.
+  - text: The UK Treasury's Green Book, revised in 2026, discounts at 3 percent for years 1 to 30, 2.5 percent for years 31 to 75 and 2.25 percent after that.
     url: https://www.gov.uk/government/publications/the-green-book--2/the-green-book-2026
     year: 2026
+  - text: Britain financed the Sizewell C nuclear plant in 2025 with a regulated asset base, which charges consumers during construction for a plant modelled to run for 60 years.
+    url: https://assets.publishing.service.gov.uk/media/687f951dfdc190fb6b84689d/szc-fid-vfm-assessment.pdf
+    year: 2025
 gap: >-
-  Century bonds exist, but they are government debt at a fixed coupon, not finance for a project,
-  and they pay the same whether the project thrives or fails. Nothing lets an investor own a share of
-  a growth that only begins decades from now, and no project has been financed over the span the
+  The rate decides everything. At the 6.125 percent Alphabet pays on its century notes, a dollar due
+  in 100 years is worth about a quarter of a cent today; at the Green Book's 2026 rates it is worth
+  about 8 cents, thirty times more. Century bonds exist, from governments and now a company, but
+  they are debt at a fixed coupon, not finance for a project, and they pay the same whether the
+  project thrives or fails. Sizewell's asset base shows consumers can carry a 60-year plant while it
+  is built, but the seed factory has no consumers until it produces. Nothing lets an investor own a
+  share of a growth that begins decades from now, and no project has been financed over the span the
   climb needs.
 inventions: [doubling-bond]
 scene:

@@ -20,8 +20,8 @@ buildsOn:
   - text: NASA's 1977 Ames summer study (SP-428, 1979) designed lunar mass drivers launching up to 600,000 metric tons a year, with payloads in recirculating buckets carrying superconducting coils.
     url: https://ntrs.nasa.gov/citations/19790024054
     year: 1979
-  - text: O'Neill and Kolm's first mass driver model, built at MIT in 1976 and 1977, fired at 40 m/s and 33 g.
-    url: https://en.wikipedia.org/wiki/Mass_driver
+  - text: O'Neill and Kolm's team built the first mass driver model, MD1, at MIT in 1976 and 1977, reaching about 33 gravities of acceleration.
+    url: https://ssi.org/mass-drivers-from-the-ones-who-actually-made-the-real-ones/
     year: 1977
   - text: Allanore, Yin and Sadoway's anode for molten oxide electrolysis, which releases oxygen and leaves molten metal, the route by which lunar industry gets its iron (Nature, 2013).
     url: https://doi.org/10.1038/nature12134
@@ -29,8 +29,8 @@ buildsOn:
   - text: The Lunar Sourcebook finds the native iron grains in lunar soil mostly locked inside glassy agglutinates and "unlikely to be a convenient large-scale source of Fe", which is why the jackets use electrolysis iron instead.
     url: https://www.lpi.usra.edu/publications/books/lunar_sourcebook/pdf/Chapter11.pdf
     year: 1991
-  - text: The US Navy's EMALS catapult drives a 91 m linear motor with up to 484 MJ per launch from flywheel alternators, in service since 2017.
-    url: https://en.wikipedia.org/wiki/Electromagnetic_Aircraft_Launch_System
+  - text: The US Navy's EMALS catapult, first used to launch aircraft from USS Gerald R. Ford in 2017, drives a 91 m linear induction motor with up to 484 MJ released in 2 to 3 seconds from the spinning rotors of four disk alternators, recharged from the ship in 45 seconds.
+    url: https://www.electronicdesign.com/technologies/power/article/21199416/carrier-based-launch-of-aircraft-to-use-power-electronics-instead-of-steam-catapult
     year: 2017
 experiment:
   goal: Launch iron-jacketed simulant slugs with a bucketless coilgun and measure its efficiency, the spread in launch speed and whether the jackets survive.
@@ -49,19 +49,19 @@ path:
     proves: Bucketless launch with precise speed.
   - phase: prototype
     what: A 100 m track in a vacuum tunnel firing 1 kg slugs at 1 km/s.
-    scale: Thousands of shots.
+    scale: 1 kg slugs, thousands of shots.
     proves: Speed and aim at a large share of lunar escape speed, and how fast the track wears.
   - phase: pilot
     what: The first lunar driver, a few hundred metres long and built largely by the seed industry, launching slugs to a catcher at L2.
-    scale: Thousands of tonnes a year.
+    scale: Over 1,000 tonnes a year.
     proves: Aim over the 60,000 km to L2, and catching the stream.
   - phase: first-plant
     what: A driver feeding the factories at L2 or L5 every day.
-    scale: Hundreds of thousands to millions of tonnes a year.
+    scale: Over 100,000 tonnes a year.
     proves: Lunar mass delivered to orbit for less than any mass lifted from Earth.
   - phase: fleet
     what: Drivers on the Moon, then built again on the asteroids and Mercury, where metal-rich rock suits the design.
-    scale: Tens of drivers across the inner system.
+    scale: Over 10 drivers across the inner system.
     proves: The design travels to other worlds.
   - phase: civilization
     what: Mercury's drivers throwing the mass of the swarm.

@@ -9,9 +9,9 @@ summary: >-
   showed that people can assemble a station over a decade of spacewalks. The climb needs robots that
   build far larger structures in weeks, with no one on site.
 target: >-
-  Robot crews that assemble structures from hundreds of metres to kilometres across out of
-  standard parts, each crew adding hundreds of tonnes a year, and that repair and extend what they
-  build the same way.
+  Robot crews that assemble structures from 100 metres to over a kilometre across out of standard
+  parts, each crew adding 100 tonnes or more a year, and that repair and extend what they build the
+  same way.
 exists:
   - text: The ISS, assembled in orbit over 42 assembly flights, has a mass of 419,725 kg and is 109 m end to end.
     url: https://www.nasa.gov/international-space-station/space-station-facts-and-figures/
@@ -31,12 +31,16 @@ exists:
   - text: Caltech's SSPD-1 unfolded DOLCE, a deployable structure 1.8 m on a side, in orbit in 2023, despite a snagged wire and a jam.
     url: https://www.caltech.edu/about/news/space-solar-power-project-ends-first-in-space-mission-with-successes-and-lessons
     year: 2023
+  - text: Northrop Grumman's Mission Robotic Vehicle, carrying DARPA's RSGS robotic arms, launched in July 2026 to service satellites in geostationary orbit, the first robotic arms flown for on-orbit work.
+    url: https://www.darpa.mil/news/2026/robotic-servicing-of-geosynchronous-satellites-lifts-off
+    year: 2026
 gap: >-
-  Robots have assembled structures only on the ground, at the size of a shed, and the flight
-  missions that would have tried it in orbit were cancelled. Nothing has been built in orbit
-  without astronauts, and there are no standard parts and joints that every robot and supplier
-  share. ARMADAS's lattice of identical parts is the most promising path; what is missing is flight
-  and scale.
+  Robots have assembled structures only on the ground: the largest is a 256-voxel lattice built in 4.2
+  days, about the size of a shed, and the flight missions that would have tried it in orbit were
+  cancelled. Nothing above a metre has been built in orbit without astronauts, and there are no
+  standard parts and joints that every robot and supplier share. ARMADAS's lattice of identical parts
+  is the most promising path; what is missing is flight and a jump of 3 or more orders of magnitude in
+  size.
 inventions: []
 scene:
   kind: orbit

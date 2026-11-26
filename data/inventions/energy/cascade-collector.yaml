@@ -11,14 +11,19 @@ principle: >-
   wears out in the sunlight. A mirror is far simpler: aluminium a tenth of a micron thick reflects
   about 90 percent of sunlight and weighs under a gram per square metre. The Cascade Collector is
   mostly mirror. A dish of film hundreds of metres across concentrates sunlight about a thousand times
-  onto a core that glows at about 2,000 K. Around the core, thermophotovoltaic cells tuned to that glow
-  turn about 40 percent of it into electricity, as MIT and NREL showed in 2022, and reflect the light
-  they cannot use back into the core. The cells shed their heat at about 600 K, and a second stage,
-  thermoradiative diodes or a small heat engine, takes more work from that heat before radiators shed
-  the rest. Each stage runs hot, so radiators stay small: radiated power rises with the fourth power of
-  temperature, and at 600 K a square metre sheds sixteen times as much as at 300 K. The ceiling is the
-  Landsberg limit, {landsberg-limit} for sunlight; the cascade aims to pass the plan's
-  {collector-efficiency}, and to put its mass where mass is cheapest, in mirror.
+  into a cavity around a core that glows at about 2,300 K. Thermophotovoltaic cells line the cavity,
+  turn the glow into electricity and reflect the light they cannot use back into the core: MIT and
+  NREL got more than 40 percent this way from an emitter at 1,900 to 2,400 °C, with the cells kept
+  near room temperature. Cooling is what costs mass in space. A radiator at 300 K sheds about 460 W
+  per square metre from each face; at 400 K it sheds about 1,450 W, three times as much. So the
+  cascade runs its cells at about 400 K and gives up perhaps a fifth of their voltage, and a second
+  stage on the cells' cold plate, thermoradiative diodes or a small heat engine, takes a few percent
+  more from that heat before the radiators shed the rest. The arithmetic is tight: with the mirror at
+  90 percent and the cavity losing about 5 percent, the converters must turn about 39 percent of the
+  light reaching the core into electricity for the whole collector to match the plan's
+  {collector-efficiency}. The ceiling is the Landsberg limit, {landsberg-limit}, so there is room
+  above. The cascade's case is that its mass sits where mass is cheapest, in mirror, and that every
+  gain in the converters raises the output of the whole swarm.
 buildsOn:
   - text: Armstrong and Sandberg's Mercury swarm uses collectors that concentrate sunlight, convert it and beam the power on, at an overall efficiency of one third.
     url: https://doi.org/10.1016/j.actaastro.2013.04.002
@@ -42,17 +47,17 @@ experiment:
   goal: Measure the end-to-end efficiency and the mass per kilowatt of a hot core with two converter stages under concentrated sunlight in vacuum.
   setup: >-
     A high-flux solar simulator focused into a vacuum chamber onto a 10 cm tungsten core, ringed by
-    two-junction thermophotovoltaic cells on a cooling plate held at 600 K, with thermoradiative or
+    two-junction thermophotovoltaic cells on a cooling plate held at 400 K, with thermoradiative or
     thermoelectric devices on the back of that plate and a radiator facing a cold shroud. Every flow of
     light, heat and electricity is metered.
   measure: Electricity out over light in, for each stage and in total; core, cell and radiator temperatures; mass of core, converters and radiator per kilowatt; degradation over 1,000 hours.
-  succeedsIf: More than 35 percent of the concentrated light entering the core leaves as electricity, with converters and radiator under 1 kg per kilowatt, sustained for 1,000 hours.
+  succeedsIf: With the cells held at 400 K, more than 35 percent of the concentrated light entering the core leaves as electricity, with converters and cold plate under 0.5 kg per kilowatt of output, and output falls by less than 5 percent over 1,000 hours.
   costUsd: 2500000
   months: 18
 path:
   - phase: bench
     what: The hot core and its converter stages in the vacuum chamber.
-    scale: A few kilowatts of light.
+    scale: 10 kW of concentrated light on a 10 cm core.
     proves: Efficiency and mass per kilowatt that a swarm could build on.
   - phase: prototype
     what: A 10 m film mirror and core flown in Earth orbit.
@@ -64,15 +69,15 @@ path:
     proves: The unit can be made by space industry and runs for years.
   - phase: first-plant
     what: Units on Mercury's surface and in orbit around it, powering the mines and mass drivers from {year-k15}.
-    scale: Gigawatts at Mercury.
+    scale: 100 units 200 m across, about 10 GW of electricity at Mercury.
     proves: Converters that thrive on strong sunlight and high heat.
   - phase: fleet
-    what: Units built by the billion from Mercury's metal, flown at {swarm-radius}.
-    scale: Billions of units.
+    what: Units mass-produced from Mercury's metal and flown at {swarm-radius}.
+    scale: About 10^15 units 1 km across, a percent of {swarm-full-area}.
     proves: A swarm element that can be mass-produced from rock.
   - phase: civilization
-    what: The swarm, harnessing {type-2-power} and then more of the Sun's light than flat cells could.
-    scale: Toward nearly three times {sun-harnessed}.
+    what: The swarm, making {type-2-power} and then more work from the Sun's light than flat cells could.
+    scale: From {sun-harnessed} toward {sun-at-landsberg}.
     proves: One star's light turned into work near the thermodynamic limit.
 risks: >-
   Pointing a film dish accurately enough for thousandfold concentration is hard; lower concentration

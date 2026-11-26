@@ -11,29 +11,32 @@ summary: >-
   Chips made in space, from space rock, close the last gap in the self-copying loop.
 target: >-
   Fabs in orbit and on the Moon that make the chips the space industry needs from local silicon and
-  metals, importing only a small and falling share of their mass from Earth, so that chips stop
+  metals, importing under a tenth of their mass from Earth and less each year, so that chips stop
   limiting an industry that doubles every {doubling-time}, by the time the climb reaches Type I in
   {year-type-1}.
 exists:
-  - text: NASA's Wake Shield Facility flew on three Shuttle missions from 1994 to 1996; moving faster than the gas around it, it left an ultra-high vacuum in its wake, where it grew thin semiconductor films by epitaxy.
+  - text: NASA's Wake Shield Facility, a 3.7 m steel disc, flew on three Shuttle missions from 1994 to 1996; moving faster than the thin gas around it, it left an ultra-high vacuum in its wake, which was used to study the growth of thin films by epitaxy.
     url: https://en.wikipedia.org/wiki/Wake_Shield_Facility
     year: 1996
-  - text: Space Forge's ForgeStar-1, launched in June 2025, lit its furnace at 1,000 °C and made plasma in orbit, a step toward growing semiconductor crystals in microgravity.
-    url: https://en.wikipedia.org/wiki/Space_Forge
+  - text: Space Forge's ForgeStar-1, launched on 27 June 2025, reached 1,000 °C in its furnace and made plasma in low Earth orbit in December 2025, a step toward growing semiconductor crystals in orbit.
+    url: https://news.satnews.com/2025/12/31/space-forge-ignites-orbital-furnace-hits-1000c-milestone-on-forgestar-1/
     year: 2025
   - text: Flawless Photonics pulled more than 11 km of ZBLAN optical fibre on the International Space Station and returned it to Earth.
     url: https://www.flawlessphotonics.com/
     year: 2024
+  - text: Crawford's review of lunar resources puts silicon at about 20 percent by weight of lunar material, carbon at about 124 and nitrogen at about 81 parts per million of regolith, and calls the purity needed for semiconductor devices very stringent.
+    url: https://arxiv.org/abs/1410.6865
+    year: 2015
   - text: Molten oxide electrolysis, first developed under a NASA grant to make oxygen from lunar soil, splits metal oxides into oxygen and molten metal with electricity alone.
     url: https://news.mit.edu/2013/steel-without-greenhouse-gas-emissions-0508
     year: 2013
-  - text: Japan's Minimal Fab shows a chip line can be built from desk-sized tools working on half-inch wafers.
-    url: https://www.minimalfab.com/en/about/greeting.php
-    year: 2026
 gap: >-
-  No transistor has been made in space. A fab needs ultra-pure silicon, dopants, dozens of process
-  steps and gases, all of which would have to come from rock. Even on Earth, no fab makes chips
-  without masks, liquids and cleanrooms, the parts that are hardest to carry or copy.
+  No transistor has been made in space, so the share of the space industry's chips made from space
+  rock is 0 against a target above 90 percent. The best results so far are a 1,000 °C furnace in
+  orbit and 11 km of fibre. A fab on Earth runs dozens of process steps with dopants, wet chemistry
+  and process gases made with carbon, nitrogen and fluorine, and regolith holds about 124 parts per
+  million of carbon and 81 of nitrogen. No fab, even on Earth, makes chips without masks, liquids and
+  a cleanroom, the parts that are hardest to carry or copy.
 inventions: [vacuum-fab]
 scene:
   kind: compute

@@ -1,7 +1,7 @@
 id: clockwork-beacons
 title: Clockwork Beacons
 domain: information
-for: [solar-system-navigation]
+for: [solar-system-navigation, cislunar-network]
 pitch: >-
   Give every relay in the solar system a precise clock and make it broadcast its time, so any ship
   can find where and when it is without asking Earth.
@@ -27,12 +27,21 @@ buildsOn:
   - text: NIST's optical time transfer over 300 km between mountaintops in Hawaii, which kept distant sites synchronised to 320 attoseconds with as little as 40 microwatts of laser power.
     url: https://www.nature.com/articles/s41586-023-06032-5
     year: 2023
-  - text: The chip-scale atomic clock, a microfabricated clock first built at NIST with DARPA funding in the early 2000s.
-    url: https://en.wikipedia.org/wiki/Chip-scale_atomic_clock
+  - text: NIST's chip-scale atomic clock, patented in 2004, is about a seventh the size of the compact atomic clocks before it and uses about a fiftieth of their power; more than 100,000 have been sold.
+    url: https://www.nist.gov/noac/success-story-chip-scale-atomic-clock
     year: 2004
-  - text: The work toward a Coordinated Lunar Time, which must correct for clocks on the Moon running faster than on Earth.
-    url: https://en.wikipedia.org/wiki/Coordinated_Lunar_Time
+  - text: The White House's 2024 policy on lunar time, which notes that to an observer on the Moon a clock on Earth appears to lose on average 58.7 microseconds per Earth-day, the kind of correction every beacon's broadcast must carry.
+    url: https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/04/Celestial-Time-Standardization-Policy.pdf
     year: 2024
+  - text: ESA's Atomic Clock Ensemble in Space, launched on 21 April 2025 to the International Space Station with PHARAO, a caesium fountain clock, and a space hydrogen maser, for ten 25-day sessions comparing clocks on the ground through space.
+    url: https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/ACES_finds_its_home_in_orbit
+    year: 2025
+  - text: LuGRE, which on 3 March 2025 acquired and tracked GPS and Galileo signals on the Moon's surface and got a navigation fix there, showing Earth's navigation signals reach the Moon.
+    url: https://www.nasa.gov/directorates/somd/space-communications-navigation-program/nasa-successfully-acquires-gps-signals-on-moon/
+    year: 2025
+  - text: Locata's ground transmitters, which its makers say give centimetre positions and picosecond synchronisation over the air without satellites or atomic clocks, tested in an EU report on alternative positioning, navigation and timing.
+    url: https://www.locata.com/
+    year: 2026
 experiment:
   goal: Show that a small network of beacons, synchronised and located only by laser links among themselves, can guide a moving receiver with no outside time or position.
   setup: >-
@@ -57,23 +66,23 @@ path:
     proves: Self-synchronised, self-surveyed beacons can navigate a receiver.
   - phase: prototype
     what: Two beacons at the Moon, one in lunar orbit and one on the surface, with space-rated ion clocks.
-    scale: "Two beacons at the Moon"
+    scale: "2 beacons at the Moon, 1 in orbit and 1 on the surface"
     proves: The method works in space, with relativistic corrections and lunar time.
   - phase: pilot
     what: A ring of beacons around the Moon; landers and rovers navigate with no tracking from Earth.
-    scale: "Six to ten beacons at the Moon"
+    scale: "6 to 10 beacons at the Moon"
     proves: Metre positions and nanosecond time across the whole Moon.
   - phase: first-plant
     what: Beacons on every relay at Mars and at the Sun-Earth L4 and L5 points, with optical clocks.
-    scale: "Tens of beacons from Earth to Mars"
+    scale: "About 30 beacons from Earth to Mars"
     proves: Ships between worlds navigate themselves.
   - phase: fleet
     what: Beacons through the inner system, the asteroid belt and the swarm's orbit included.
-    scale: "Hundreds of beacons, by {year-type-1}"
+    scale: "About 300 beacons, by {year-type-1}"
     proves: Every machine in the inner system knows where and when it is.
   - phase: civilization
     what: One time and one map for the solar system, kept by the beacons and checked against the pulsars.
-    scale: "Every world, the swarm and the outer relays"
+    scale: "About 3,000 beacons across every world, the swarm and the outer relays"
     proves: An industry spread over billions of kilometres can work to one clock.
 risks: >-
   Optical clocks are still laboratory instruments; the fallback is ion clocks like DSAC, proven in

@@ -22,13 +22,17 @@ exists:
   - text: Berkeley Lab's A-Lab synthesised 36 of 57 target inorganic compounds over 17 days of continuous robotic operation, planning its own recipes and learning from failures.
     url: https://www.nature.com/articles/s41586-023-06734-w
     year: 2023
+  - text: An independent 2024 analysis of that A-Lab paper concluded the automated lab had not in fact made new materials, a caution against trusting robotic synthesis without human checks.
+    url: https://www.chemistryworld.com/news/new-analysis-raises-doubts-over-autonomous-labs-materials-discoveries/4018791.article
+    year: 2024
   - text: The Materials Project gives open computed properties for inorganic materials, the database most discovery work starts from.
     url: https://docs.materialsproject.org/frequently-asked-questions
     year: 2026
 gap: >-
-  Predicted stability is not a working material. Robot labs make powders, while the climb needs
-  films, fibres, castings and devices, tested for decades of service. The slow steps are now
-  synthesis at scale, qualification and the move from a gram to a production line.
+  GNoME flagged 380,000 stable crystals, but the A-Lab confirmed only 36 of 57 it tried, and a
+  reanalysis disputed even those, so synthesis still needs human checks. Robot labs make powders by the
+  gram, while the climb needs films, fibres, castings and devices, tested for decades of service. The
+  slow steps are now synthesis at scale, qualification and the move from a gram to a production line.
 inventions: [inner-lab]
 scene:
   kind: lattice

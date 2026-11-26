@@ -21,14 +21,17 @@ exists:
   - text: Sublime Systems makes cement electrochemically, without a kiln, and claims 30 to 40 percent lower energy intensity than ordinary Portland cement.
     url: https://sublime-systems.com/
     year: 2026
+  - text: Sublime Systems, which has placed its cement in real projects since 2023, is building its first kiloton-scale plant; in November 2026 Meta signed a multi-year agreement for priority access tied to at least 180,000 tons of the cement.
+    url: https://sublime-systems.com/sublime-systems-and-meta-sign-agreement-to-scale-u-s-manufacturing-of-next-generation-low-carbon-cement/
+    year: 2026
   - text: Brimstone's Rock Refinery co-produces cement alongside aluminium, magnesium, titanium and other minerals from a single, globally abundant rock; Amazon is to buy low-carbon cement from its first plant.
     url: https://www.brimstone.com/
     year: 2026
 gap: >-
-  Kiln-free and limestone-free cements exist at pilot scale against nearly four billion tonnes a
-  year, and builders and codes trust only what has stood for decades. The chemistry is no longer the
-  missing piece; the gaps are scale, qualification in building codes, and clean power cheap enough
-  to replace a kiln's fuel.
+  The first kiloton-scale clean plants stand against 3,800 million tonnes of cement a year, and
+  builders and codes trust only what has stood for decades. The chemistry is no longer the missing
+  piece; the gaps are scale, qualification in building codes, and clean power cheap enough to replace
+  a kiln's fuel.
 inventions: []
 scene:
   kind: lattice

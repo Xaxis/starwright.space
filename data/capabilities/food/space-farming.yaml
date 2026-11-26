@@ -10,21 +10,33 @@ summary: >-
   alive. It is the difference between a base supplied from Earth and a settlement that feeds itself.
 target: >-
   Grow a full, varied diet in space, under partial or spun gravity, inside a closed loop, at yields
-  and reliability that let a habitat or base feed its own people without food shipped from Earth.
+  near Earth's (at least 80 percent of full-gravity yield) on about 65 square metres of crop per
+  person, so a habitat or base feeds its own people without food shipped from Earth.
 exists:
-  - text: BIOS-3 grew about half its crew's food with algae and higher plants during a 180-day closure, the earliest proof crops can feed a closed crew.
-    url: https://en.wikipedia.org/wiki/BIOS-3
-    year: 1973
+  - text: At Krasnoyarsk's BIOS-3, crews lived sealed in for four to six months on about 13 square metres of plants per person, which gave all their oxygen and water and 40 to 45 percent of their food, the earliest proof plants can keep a crew.
+    url: https://ntrs.nasa.gov/api/citations/19910015430/downloads/19910015430.pdf
+    year: 1989
   - text: Lunar Palace 1 ran a 370-day crewed closure at 98.2 percent material closure, growing food within a bioregenerative loop.
     url: https://doi.org/10.1101/2021.01.12.426282
     year: 2018
-  - text: ESA's MELiSSA has spent three decades developing the plant and algae compartments of a regenerative loop for space crews.
-    url: https://en.wikipedia.org/wiki/MELiSSA
-    year: 2023
+  - text: DLR's EDEN ISS greenhouse at Antarctica's Neumayer station grew more than 268 kilograms of edible biomass, 26 crops on 12.5 square metres, through its 2018 season, the closest analogue yet to farming off Earth.
+    url: https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.00656/full
+    year: 2018
+  - text: NASA's Veggie chamber grew the first crop astronauts ate in orbit, red romaine lettuce in 2015, and the station crew grew and ate chile peppers in 2021, but only salad crops, not staples.
+    url: https://www.nasa.gov/wp-content/uploads/2023/03/veggie-fact-sheet-508.pdf
+    year: 2015
+  - text: On China's Tiangong station in 2022 rice and Arabidopsis completed a full seed-to-seed cycle in microgravity, the first time rice has grown from seed to seed in space.
+    url: https://pubmed.ncbi.nlm.nih.gov/39067990/
+    year: 2022
+  - text: Arabidopsis has been grown in real Apollo lunar regolith, but the seedlings grew slowly and showed severe stress, a warning that lunar soil is not ready-made farmland.
+    url: https://doi.org/10.1038/s42003-022-03334-8
+    year: 2022
 gap: >-
-  Every space-food result so far is on Earth, in full gravity, at experiment scale. How crops set
-  seed and yield under lunar or spun gravity, how to grow staples and not just salad, and how to make
-  a farm a dependable part of a closed loop for years are all untested in the places that matter.
+  Rice has now set seed in microgravity, but almost every space-food result is on Earth or in full or
+  zero gravity, at experiment scale and with salad crops: the largest closed test fed a crew of up to
+  4 for 370 days, and no staple has been grown to seed under the 0.16 to 0.38 g of the Moon or Mars.
+  How staples set seed and yield under partial or spun gravity, and how to make a farm a dependable
+  part of a closed loop for years, are still untested in the places that matter.
 inventions: [spin-gravity-greenhouse]
 scene:
   kind: habitat

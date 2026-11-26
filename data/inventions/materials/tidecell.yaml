@@ -23,12 +23,16 @@ principle: >-
 buildsOn:
   - text: EnPot's shell heat exchangers, which let a commercial smelter swing its power by 30 percent either way (TRIMET Essen, since 2019).
     url: https://www.enpot.com/
+    year: 2019
   - text: ELYSIS inert anodes, run in a commercial-size cell, which release oxygen and are not consumed.
     url: https://elysis.com/en
+    year: 2026
   - text: The Hall-Heroult process and the heat balance of its cells, a bath of alumina dissolved in molten cryolite.
     url: https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process
+    year: 1886
   - text: The US Department of Energy's measured 15.1 MWh per tonne in practice against a 6.0 MWh minimum, which locates where the heat goes.
     url: https://www.energy.gov/sites/prod/files/2017/12/f46/Aluminum_bandwidth_study_2017.pdf
+    year: 2017
 experiment:
   goal: Show that a smelting cell can follow a solar day, 40 to 110 percent of its rated current every 24 hours, without freezing, melting through its ledge or losing much efficiency.
   setup: >-
@@ -43,7 +47,7 @@ experiment:
 path:
   - phase: bench
     what: The 20 kA cell on a recorded solar profile.
-    scale: One cell, about a tonne of aluminium a week.
+    scale: One cell, about 1 tonne of aluminium a week.
     proves: The heat balance holds across a daily swing of nearly three to one.
   - phase: prototype
     what: Ten full-size cells retrofitted in a working pot line, on a solar contract with a battery for the evening.
@@ -59,7 +63,7 @@ path:
     proves: Cost per tonne at or below a coal-powered smelter's.
   - phase: fleet
     what: Every new smelter, and the retrofits of the old, built as Tidecells in sunny places.
-    scale: Most of the world's primary aluminium.
+    scale: About 50 million tonnes a year.
     proves: Aluminium no longer needs firm power.
   - phase: civilization
     what: The same cell, adapted to regolith melts, smelting aluminium on the Moon through its two-week day.

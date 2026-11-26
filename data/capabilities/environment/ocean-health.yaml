@@ -4,37 +4,43 @@ domain: environment
 stage: k08
 needs: [earth-monitoring, carbon-drawdown]
 summary: >-
-  The ocean takes up about a third of the CO2 people emit and most of the extra heat, and it pays for
-  it. Surface water is about 30 percent more acidic than before industry, and most of the world's
-  coral reefs have been through bleaching heat since 2023. Fish stocks are strained across the world.
-  Treaties to protect the high seas and to end harmful fishing subsidies came into force in 2025 and
-  2026.
+  The ocean takes up about a third of the CO2 people emit and most of the extra heat, and it pays
+  for it. In 2025 scientists judged for the first time that ocean acidification had crossed its
+  planetary boundary, and the bleaching event of 2023 to 2025 put heat stress on 84 percent of the
+  world's reef area. More than a third of fish stocks are overfished. Treaties to protect the high
+  seas and to end harmful fishing subsidies came into force in 2025 and 2026, and now have to work.
 target: >-
-  Protect at least 30 percent of the ocean well by 2030, end overfishing, keep reefs alive through the
-  decades of heat already on the way, and reverse acidification as CO2 in the air falls.
+  At least 30 percent of the ocean protected well by 2030, no stock overfished, enough reefs in
+  every region carried alive through the decades of heat already on the way to reseed the rest, and
+  surface acidity brought back inside its planetary boundary as CO2 in the air falls.
 exists:
   - text: NOAA's Coral Reef Watch recorded the fourth global bleaching event from January 2023 to September 2025, with bleaching-level heat stress over about 84 percent of the world's reef area.
     url: https://coralreefwatch.noaa.gov/satellite/research/coral_bleaching_report.php
     year: 2026
-  - text: The High Seas Treaty (BBNJ Agreement) entered into force on 17 January 2026 and had 107 parties by November 2026.
+  - text: The Planetary Health Check 2025 found for the first time that the planetary boundary for ocean acidification had been crossed.
+    url: https://www.planetaryhealthcheck.org/wp-content/uploads/PlanetaryHealthCheck2025_ExecutiveSummary.pdf
+    year: 2025
+  - text: FAO found that 62.4 percent of marine fish stocks were fished within biologically sustainable levels in 2023, down 2.1 points from 2021, leaving 37.6 percent overfished.
+    url: https://doi.org/10.4060/cd8357en
+    year: 2026
+  - text: The High Seas Treaty (BBNJ Agreement) entered into force on 17 January 2026 and had 145 signatories and 110 parties by 25 November 2026.
     url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXI-10&chapter=21&clang=_en
     year: 2026
   - text: The WTO's Agreement on Fisheries Subsidies, which bans the most harmful subsidies, entered into force on 15 September 2025.
     url: https://www.wto.org/english/tratop_e/rulesneg_e/fish_e/fish_e.htm
     year: 2025
-  - text: NOAA notes that surface ocean pH has fallen by about 0.1 since the industrial revolution, about a 30 percent rise in acidity.
-    url: https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-acidification
   - text: Protected Planet counts 9.99 percent of the ocean inside protected or conserved areas in November 2026.
     url: https://www.protectedplanet.net/en
     year: 2026
-  - text: SECORE breeds corals from spawn and seeds them onto reefs; corals it bred stayed healthy while most wild corals around them bleached in the 2023 Caribbean heatwave.
-    url: https://www.secore.org/
-    year: 2026
+  - text: Miller and colleagues found that 90 percent of corals bred from spawn and planted on Caribbean reefs stayed healthy through the 2023 heatwave, against 24 percent of other corals around them.
+    url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0309719
+    year: 2024
 gap: >-
   About a tenth of the ocean is protected, a third of the 2030 goal, and much of that only on paper.
-  Coral restoration works a few hectares at a time while bleaching strikes whole reef systems.
-  Nothing yet protects corals through a marine heatwave except shading and cooling trials a few metres
-  across, and acidification will not reverse until CO2 in the air falls.
+  Over a third of fish stocks are still overfished. Coral restoration works a few hectares at a
+  time, and its bred corals survive heat well, but bleaching heat reached 84 percent of reef area in
+  a single event. Nothing yet protects a reef through a marine heatwave except shading and cooling
+  trials a few metres across, and acidification will not reverse until CO2 in the air falls.
 inventions: [reef-canopy]
 scene:
   kind: globe

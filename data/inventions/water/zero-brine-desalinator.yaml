@@ -1,84 +1,100 @@
 id: zero-brine-desalinator
 title: The Zero-Brine Desalinator
 domain: water
-for: [low-energy-desalination, minerals-from-brine]
+for: [low-energy-desalination, minerals-from-brine, abundant-water]
 pitch: >-
-  A desalination plant that squeezes fresh water from the sea near the thermodynamic energy floor and
-  then mines the leftover brine dry for salt and minerals, so it dumps almost no brine and sells what
-  it would have dumped.
+  A seawater plant that desalts in batches, raising the pressure only as fast as the brine
+  strengthens, then strips the scale-forming magnesium and calcium out of its brine as products, so it
+  can push the rest much further and send almost nothing back to the sea.
 principle: >-
-  Two problems of desalination share one answer. Standard reverse osmosis holds a fixed high pressure
-  while it pushes water through a membrane, wasting energy early when the feed is still weak and
-  fouling fast as it concentrates. The Zero-Brine Desalinator instead works in closed-circuit batches:
-  it raises pressure gradually as the brine strengthens, tracking just above the rising osmotic
-  pressure, so the energy per cubic metre falls toward the thermodynamic minimum and recovery can go
-  far past the usual half. The strong brine that results is not dumped but fed to staged recovery,
-  precipitating its minerals in order, magnesium and calcium salts, then potassium and bromine
-  compounds, then common salt, down to near-dryness as in zero-liquid-discharge treatment. The
-  minerals are sold, which pays for the crystalliser's energy, and almost no brine reaches the sea.
-  Powered by cheap clean electricity, one plant makes water near the energy floor, turns waste brine
-  into a mine, and spares the coast the pollution.
+  Osmotic pressure rises as brine strengthens. Seawater starts near 27 bar, which is 0.75 kWh per
+  cubic metre of water pushed through a membrane; at 50 percent recovery the brine is near 55 bar. A
+  continuous plant holds its membranes at the final pressure, so the first water out is pushed twice
+  as hard as it needs: the ideal work is about 1.5 kWh per cubic metre. A batch plant recirculates
+  one charge of seawater and raises the pressure as it concentrates, just above the osmotic pressure
+  at each moment. The ideal work then falls to the osmotic pressure times ln(1/(1-r))/r, about 1.04
+  kWh at 50 percent recovery, a third less. Built rigs have saved only 10 to 13 percent, largely
+  because salt left in the system mixes into the next batch; the Desalinator's batch stage uses a
+  piston vessel that empties completely between batches, and it can cycle faster at noon and slower
+  at dusk to follow a solar field. Recovery stops near half because magnesium, calcium and sulphate
+  start to scale the membranes. So the 70 g per litre brine goes next to a reactor where base turns
+  its magnesium into magnesium hydroxide, about 3 kg per cubic metre of seawater fed, and gypsum
+  settles out. Softened, the brine goes to a counter-flow reverse osmosis stage that takes it to about
+  130 g per litre for under 7 kWh per cubic metre recovered. Per cubic metre of seawater: 0.5 m3 of
+  water at about 1.6 kWh and 0.23 m3 at 7, so 0.73 m3 for 2.4 kWh, 3.3 kWh per cubic metre, within
+  today's range, with half the brine. On a desert coast the last 0.27 m3 dries in salt pans, giving
+  salt, then potash and bromine from the bitterns: about 7 square kilometres of pans for a plant
+  making 100,000 cubic metres a day, where pans lose 5 mm a day.
 buildsOn:
-  - text: State-of-the-art reverse osmosis already reaches about 2.3 kWh per cubic metre using energy-recovery devices, the baseline the batch design pushes toward the thermodynamic floor.
-    url: https://en.wikipedia.org/wiki/Reverse_osmosis
+  - text: Elimelech and Phillip set the least energy for seawater at 1.06 kWh per cubic metre at 50 percent recovery and showed that intake, pretreatment and discharge add more than 1 kWh in real plants.
+    url: https://doi.org/10.1126/science.1200488
+    year: 2011
+  - text: Warsinger and colleagues modelled batch and closed-circuit reverse osmosis and predicted savings of up to 64 and 37 percent over continuous plants for brackish water at high recovery.
+    url: https://dspace.mit.edu/handle/1721.1/105441
+    year: 2016
+  - text: Wei, Lienhard and colleagues built a batch reverse osmosis prototype at MIT and traced its lost savings on seawater to salt retained between cycles, which cut the predicted saving at 50 percent recovery to 11 percent.
+    url: https://dspace.mit.edu/entities/publication/27d2ba69-ca50-42b2-b0ab-4e40d2d1dca7
+    year: 2020
+  - text: A University of Birmingham batch rig on seawater at 65.5 percent recovery cut hydraulic energy by 13.4 percent, from 2.62 to 2.27 kWh per cubic metre.
+    url: https://pure-oai.bham.ac.uk/ws/files/229759518/1-s2.0-S0011916424004284-main.pdf
     year: 2024
-  - text: Zero-liquid-discharge treatment pushes brine to dryness, recovering 60 to 80 percent of its water by membrane pre-concentration before a crystalliser, the brine-closing chain this plant integrates.
-    url: https://en.wikipedia.org/wiki/Zero_liquid_discharge
+  - text: Gradiant's counter-flow reverse osmosis pilot for the US Bureau of Reclamation concentrated seawater plant brine in Jeddah to 130,000 mg per litre at 50 percent recovery for under 7 kWh per cubic metre.
+    url: https://www.usbr.gov/research/dwpr/reportpdfs/report247.pdf
+    year: 2021
+  - text: SEArcularMINE recovered all the magnesium in Trapani saltworks bitterns at over 99 percent purity, with a pilot making 100 kg of magnesium hydroxide a day.
+    url: https://cordis.europa.eu/project/id/869467/reporting
     year: 2024
-  - text: Brine is already mined commercially for bromine and, historically, for more than half the world's magnesium, showing the recovery chemistry the desalinator extends to many elements.
-    url: https://en.wikipedia.org/wiki/Brine_mining
-    year: 2024
-  - text: Jones and colleagues found global brine production at about 142 million cubic metres a day, more than the water produced, the waste stream this design turns into product.
-    url: https://doi.org/10.1016/j.scitotenv.2018.12.076
-    year: 2019
+  - text: Peters and Hankins give mechanical vapour compression, the electric fallback for the last brine, at 20 to 39 kWh per cubic metre of water evaporated.
+    url: https://ora.ox.ac.uk/objects/uuid:84559056-508b-4f68-aaff-63197ab64538/files/m7eb369be2d057f96a1a3172c1ec5ccdc
+    year: 2018
 experiment:
-  goal: Run a closed-circuit batch desalinator that approaches the energy floor and recovers minerals from its brine to near-zero discharge, and measure energy, recovery and mineral value.
+  goal: Show on real seawater that a batch stage, removal of magnesium and gypsum between stages, and a counter-flow brine stage together turn more than 70 percent of the feed into fresh water, and that the magnesium hydroxide is pure enough to sell.
   setup: >-
-    Build a pilot that pairs closed-circuit batch reverse osmosis, raising pressure as the brine
-    concentrates, with staged crystallisation of the concentrate. Run it on real seawater against a
-    conventional reverse-osmosis unit, measuring the full chain.
-  measure: >-
-    Energy in kWh per cubic metre of fresh water; fraction of feed recovered as water; volume of brine
-    discharged; mass and purity of each mineral recovered; the value of the minerals against the
-    crystalliser's energy cost.
-  succeedsIf: >-
-    The plant makes fresh water below 2 kWh per cubic metre while recovering over 90 percent of the
-    feed as water and crystallising the rest, discharging almost no brine, with recovered minerals
-    worth more than the extra energy to crystallise them.
-  costUsd: 24000000
-  months: 42
+    A skid taking 10 cubic metres of seawater a day from the intake of an operating desalination
+    plant: a piston-type batch reverse osmosis unit with three 4-inch seawater elements, a stirred
+    reactor and clarifier that precipitate magnesium hydroxide with sodium hydroxide and then gypsum,
+    a counter-flow reverse osmosis stage rated to 83 bar, and 200 square metres of lined pans for the
+    last brine. Every pump is metered. A conventional single-stage unit on the same feed is the control.
+  measure: Electricity per cubic metre for each stage and in total; recovery of each stage; flux decline and scale on the brine-stage membranes; mass, purity and settling of the magnesium hydroxide and gypsum; sodium hydroxide used per kilogram of magnesium; volume and strength of the brine sent to the pans.
+  succeedsIf: Over 2,000 hours, the batch stage uses at least 15 percent less electricity per cubic metre than the control at 50 percent recovery, the chain turns more than 70 percent of the feed into fresh water for less than 3.5 kWh per cubic metre on average, more than 80 percent of the feed's magnesium is recovered as hydroxide over 95 percent pure, and the brine leaving for the pans is under 30 percent of the feed.
+  costUsd: 3500000
+  months: 24
 path:
   - phase: bench
-    what: A batch desalinator and staged crystalliser on real seawater, beating conventional reverse osmosis.
-    scale: Cubic metres a day.
-    proves: Water near the energy floor and near-zero brine, with minerals recovered.
+    what: The skid at an operating plant's intake.
+    scale: 10 cubic metres of seawater a day.
+    proves: Energy per stage, and that softening the brine lets the second stage run without scaling.
   - phase: prototype
-    what: A pilot plant running continuously with automated mineral recovery.
-    scale: Hundreds of cubic metres a day.
-    proves: Energy, recovery and mineral value hold in steady operation.
+    what: A plant beside a seawater desalination works, selling its magnesium hydroxide and gypsum.
+    scale: 1,000 cubic metres of water a day.
+    proves: A year of steady running, membrane life and products that buyers accept.
   - phase: pilot
-    what: A commercial-scale plant on a coast, selling water and minerals.
-    scale: Tens of thousands of cubic metres a day.
-    proves: The plant pays its way and discharges almost no brine.
+    what: A plant on a desert coast with its own salt pans.
+    scale: 50,000 cubic metres a day.
+    proves: Cost per cubic metre net of mineral sales, with less than a tenth of the intake returned to the sea.
   - phase: first-plant
-    what: Zero-brine plants replacing brine-dumping ones where coasts are stressed.
-    scale: A region's desalination.
-    proves: Desalination scales without polluting coasts, at lower energy.
+    what: A plant the size of today's largest, with a salt and magnesium works beside it.
+    scale: 500,000 cubic metres a day and about 1,700 t of magnesium hydroxide.
+    proves: Mineral markets take the output, and coasts near the plant recover.
   - phase: fleet
-    what: Plants worldwide tuned to local brines, and compact units paired with habitat water loops.
-    scale: Global and off-world.
-    proves: Desalination is a water-and-minerals industry, not a waste source.
+    what: Zero-brine plants on every desert coast, and retrofits of brine-dumping plants.
+    scale: 100 million cubic metres a day, as much as all of today's plants.
+    proves: Desalination grows without growing its brine.
   - phase: civilization
-    what: The sea as a limitless source of water and critical minerals, with no brine returned.
-    scale: Planet and space.
-    proves: Water abundance decoupled from energy waste and coastal harm.
+    what: Desalination as a tenth of humanity's fresh water, with magnesium, gypsum, salt and potash as its by-products.
+    scale: About 1 billion cubic metres a day by {year-k08}.
+    proves: The sea supplies water at scale with almost no brine returned.
 risks: >-
-  Crystallising the full brine may cost more energy than the minerals are worth where mineral prices
-  are low; the plant recovers only the elements that pay and discharges less, rather than all or
-  nothing. Batch operation adds complexity and downtime versus steady-flow reverse osmosis, which the
-  pilot measures. Scaling and fouling still cap recovery, so membranes are cleaned and swapped on a
-  schedule the design plans for.
+  Base is the largest hidden cost: taking out all the magnesium needs about 4 kg of sodium hydroxide
+  per cubic metre of feed, and making it by electrolysis takes several times the energy of the
+  desalting. The next tries are lime, base split from the plant's own brine by bipolar membrane
+  electrodialysis, or removing only enough magnesium to stop scaling. The batch stage may still lose
+  savings to mixing; the experiment measures it against a control. Softened brine at 130 g per litre
+  may still foul the second stage, which then runs at lower recovery. At fleet scale the plants would
+  make more magnesium hydroxide than the market now takes, so plants extract what sells and return
+  the rest, still with far less brine. Where there is no land for pans, evaporators finish the job at
+  20 to 39 kWh per cubic metre, worth it only where minerals or coasts justify it.
 scene:
   kind: machine
-  focus: A batch reverse-osmosis unit feeding a crystalliser, fresh water and stacked minerals coming out, no brine.
+  focus: A batch membrane vessel feeding a settling tank of white magnesium hydroxide, and pans of drying salt beyond.
   params: { shape: membrane, spin: 0.5 }

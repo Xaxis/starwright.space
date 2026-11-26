@@ -7,32 +7,47 @@ pitch: >-
   frees them for everyone; one patent in ten goes to the highest bidder instead, which keeps the
   bids honest.
 principle: >-
-  Kremer's patent buyout: a patent is auctioned, the bidders reveal what it is worth to them, and the
-  public then buys it at the winning bid times a markup that covers the value a monopoly leaves
+  Kremer's patent buyout: a patent is auctioned, the bidders reveal what it is worth to them, and
+  the public then buys it at the winning bid times a markup that covers the value a monopoly leaves
   unused, and puts it in the public domain. A small random share of patents really is sold to the
-  top bidder, so every bidder must bid what the patent is worth. The inventor earns more than a
-  monopoly would pay, and the world is spared the deadweight cost of monopoly prices, the buyers who
-  are priced out. The Open Climb Buyout runs this as a standing fund for a published list of
-  technologies on the climb: cell and module processes, battery chemistries, grid hardware, and later
-  space processing. It is funded by governments and philanthropies as a public good, and each
-  purchase includes the know-how, drawings and process recipes, published to the open record of how
-  to build things.
+  top bidder, so every bidder must bid what the patent is worth. The arithmetic of the markup is
+  simple in the textbook case of straight-line demand and costs near zero: a monopoly keeps half of
+  what the invention is worth to its users as profit, leaves them a quarter and wastes a quarter on
+  the buyers it prices out. Buy the patent at its profit, V, and open it, and users gain both the
+  profit they no longer pay and the waste, 1.5 V. A markup of 1.5 therefore pays for itself before
+  counting the invention that follows, and the evidence says that is large: opening German chemical
+  patents to American firms raised invention in those fields by a fifth, and locking up gene
+  sequences cut later research on them by a fifth to three tenths. The Open Climb Buyout runs this
+  as a standing fund for a published list of technologies on the climb: cell and module processes,
+  battery chemistries, grid hardware, and later space processing. It is funded by governments and
+  philanthropies as a public good, and each purchase includes the know-how, drawings and process
+  recipes, published to the open record of how to build things.
 buildsOn:
-  - text: Kremer's 1998 mechanism for patent buyouts by auction.
+  - text: Kremer's 1998 mechanism, which buys out patents at their auction value times a fixed markup, perhaps two, and sells a few to the highest bidder so that bids stay honest.
     url: https://doi.org/10.1162/003355398555865
-  - text: Gavi's pneumococcal advance market commitment, a precedent for paying firms for public value instead of monopoly profit.
-    url: https://www.gavi.org/news/media-room/vaccines-vs-pneumonia-how-pioneering-funding-model-changed-game-changing-market
-  - text: The 2022 US policy that federally funded research be free to read on publication.
-    url: https://bidenwhitehouse.archives.gov/ostp/news-updates/2022/08/25/ostp-issues-guidance-to-make-federally-funded-research-freely-available-without-delay/
-  - text: The UNESCO Recommendation on Open Science, adopted by 194 countries in 2021.
-    url: https://www.unesco.org/en/open-science
+    year: 1998
+  - text: France's 1839 purchase of the patent on the daguerreotype, which placed photography in the public domain.
+    url: https://www.nber.org/papers/w6304
+    year: 1997
+  - text: Moser and Voena's finding that licensing German-owned chemical patents to US firms under the Trading with the Enemy Act raised domestic invention in those fields by 20 percent.
+    url: https://doi.org/10.1257/aer.102.1.396
+    year: 2012
+  - text: Williams's finding that Celera's intellectual property on gene sequences cut later research and product development by 20 to 30 percent.
+    url: https://doi.org/10.1086/669706
+    year: 2013
+  - text: The Medicines Patent Pool, which from 2010 to 2025 licensed 23 patent holders' medicines to 93 generic makers in 148 countries, saving 2.6 billion dollars.
+    url: https://medicinespatentpool.org/progress-achievements/impact
+    year: 2026
+  - text: Kremer, Levin and Snyder's account of the pneumococcal advance market commitment, a precedent for paying firms for public value rather than monopoly profit.
+    url: https://doi.org/10.1257/pandp.20201017
+    year: 2020
 experiment:
   goal: Show that sealed auctions value patents well enough for a buyout, and that buying patents into the open increases the building that follows.
   setup: >-
     A 20 million dollar fund buys 20 to 40 granted patents in one technology family, such as the
     processing of perovskite solar cells, from universities and small firms that agree to take part.
-    Each patent is auctioned to industry bidders; the fund buys most at the winning bid times 1.5 and
-    sells a random tenth to the top bidder.
+    Each patent is auctioned to industry bidders; the fund buys most at the winning bid times 1.5
+    and sells a random tenth to the top bidder.
   measure: Bids against independent valuations; prices paid; follow-on patents, papers and products that cite the freed patents, against matched patents that were not bought, over three years; the number of firms building on them.
   succeedsIf: Winning bids fall within 30 percent of independent valuations, and freed patents draw at least twice the follow-on use of matched patents.
   costUsd: 20000000
@@ -40,7 +55,7 @@ experiment:
 path:
   - phase: bench
     what: Laboratory auctions in which industry participants value real patents.
-    scale: Hundreds of bids.
+    scale: About 300 bids from 50 industry participants on 30 real patents.
     proves: Bids track value and are hard to manipulate.
   - phase: prototype
     what: The 20 million dollar fund.
@@ -48,25 +63,25 @@ path:
     proves: Freed patents are used more, and inventors take part.
   - phase: pilot
     what: A fund of a billion dollars for one sector, such as grid storage.
-    scale: Hundreds of patents.
+    scale: About 1 billion dollars, 300 to 500 patents in one sector.
     proves: A buyout can cover a whole sector at a fair price.
   - phase: first-plant
     what: A standing international buyout covering every sector on the climb's list.
-    scale: Thousands of patents a year.
+    scale: About 10 billion dollars a year, 2,000 to 5,000 patents a year.
     proves: Openness can be bought at scale for less than it is worth.
   - phase: fleet
     what: The buyout extended to space industry, from processing in orbit to seed factory designs and collectors.
-    scale: The industries of the next rungs.
+    scale: About 50 billion dollars a year, tens of thousands of patents and process recipes.
     proves: The know-how that builds the swarm is free to every world.
   - phase: civilization
     what: Every technology on the climb free to build anywhere, its inventors paid.
-    scale: "The climb from today to {year-type-2}"
+    scale: Every technology on the climb's list, from today to {year-type-2}.
     proves: Open invention can outpace closed invention.
 risks: >-
-  Firms may keep their best know-how secret rather than patent it, out of reach of a buyout; the fund
-  can also buy documented know-how, priced the same way. Bidders could collude to hold prices down;
-  the random sale to the top bidder and a reserve price make that costly. Governments may not want
-  to pay a markup; philanthropy can carry the first funds until the results show the return.
+  Firms may keep their best know-how secret rather than patent it, out of reach of a buyout; the
+  fund can also buy documented know-how, priced the same way. Bidders could collude to hold prices
+  down; the random sale to the top bidder and a reserve price make that costly. Governments may not
+  want to pay a markup; philanthropy can carry the first funds until the results show the return.
 scene:
   kind: network
   focus: Locked patents opening one by one, their links spreading as new builders use them.

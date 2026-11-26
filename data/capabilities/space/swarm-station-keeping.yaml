@@ -13,8 +13,8 @@ target: >-
   above a safe margin, no chain of collisions ever starting, and failures few enough that the swarm
   keeps delivering {type-2-power} for as long as the Sun shines.
 exists:
-  - text: IKAROS steered itself in 2010 with 80 liquid crystal panels in its sail whose reflectance could be switched, changing the push of sunlight on each part; JAXA confirmed the control worked in July 2010.
-    url: https://en.wikipedia.org/wiki/IKAROS
+  - text: IKAROS steered itself in 2010 by switching the reflectance of liquid crystal devices in its sail, changing the push of sunlight on each part; JAXA confirmed the control worked in July 2010.
+    url: https://global.jaxa.jp/press/2010/07/20100723_ikaros_e.html
     year: 2010
   - text: McInnes and Simmons showed in 1992 that the steady push of light lets a sail hold orbits displaced above or below the Sun that no free body could hold ("Solar sail halo orbits", Journal of Spacecraft and Rockets).
     url: https://doi.org/10.2514/3.25487
@@ -29,10 +29,10 @@ exists:
     url: https://www.planetary.org/articles/lightsail-2-completes-mission
     year: 2022
 gap: >-
-  Steering by switching reflectivity has flown on one sail. Today's largest constellation already
-  makes hundreds of thousands of manoeuvres a year with thrusters and help from the ground; the swarm
-  has a hundred million times as many members, no propellant, and minutes of light delay to any
-  controller.
+  Steering by switching reflectivity has flown on 1 sail. Today's largest constellation already makes
+  over 200,000 collision-avoidance manoeuvres in six months with thrusters and help from the ground;
+  the swarm has roughly a trillion (10^12) members, a hundred million times as many, no propellant, and
+  minutes of light delay to any controller.
 inventions: [homing-petals]
 scene:
   kind: swarm

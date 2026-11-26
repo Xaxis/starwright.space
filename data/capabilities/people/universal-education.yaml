@@ -4,13 +4,13 @@ domain: people
 stage: k08
 needs: [universal-connectivity, open-knowledge-base]
 summary: >-
-  The climb needs billions of people who can read, reason, build and invent, and today most of the
-  world's children leave school without basic skills, while many are not in school at all. Schools
-  are short of teachers. Cheap phones, offline libraries and AI tutors now make it possible to give
-  every child something close to a personal tutor, which decades of research say is the most
-  effective teaching there is.
+  The climb needs billions of people who can read, reason, build and invent. Today hundreds of
+  millions of children are not in school, and in poorer countries most of those who are cannot read
+  a simple text by age ten. Schools are short of teachers. Cheap phones, offline libraries and AI
+  tutors now make it possible to give every child something close to a personal tutor, the most
+  effective teaching that research has found.
 target: >-
-  Every child able to read with understanding and use practical mathematics by age ten, and every
+  Every child able to read with understanding and use practical mathematics by age 10, and every
   person able to learn, free and in their own language, anything from first letters to the
   engineering of the climb, with what they learn recognised everywhere.
 exists:
@@ -22,6 +22,7 @@ exists:
     year: 2022
   - text: Teaching at the Right Level, developed by the Indian charity Pratham, groups children by what they can do rather than by grade; in Uttar Pradesh its learning camps doubled the number of children who could read a paragraph or story.
     url: https://www.povertyactionlab.org/case-study/teaching-right-level-improve-learning
+    year: 2022
   - text: A six-week pilot of a generative AI tutor at a boys' secondary school in Edo State, Nigeria, raised learning by about 0.3 standard deviations, close to two years of typical progress, the World Bank reported in 2025.
     url: https://blogs.worldbank.org/en/education/From-chalkboards-to-chatbots-Transforming-learning-in-Nigeria
     year: 2025
@@ -36,9 +37,11 @@ exists:
     year: 2026
 gap: >-
   The methods that work, teaching each child at their level and tutoring one to one, reach a small
-  share of the children who need them. AI tutors have shown large gains in short trials, but not yet
-  at scale, offline, in many languages or over years, and few skills learned outside school are
-  recognised by employers or universities.
+  share of the children who need them: 273 million are out of school, and seven in ten
+  10-year-olds in poorer countries cannot read a simple text. AI tutors have shown gains of 0.3 to
+  over 1 standard deviation, but in trials lasting weeks, online, in one school or course; the
+  gains have not yet been shown offline, at national scale or over years. Few skills learned
+  outside school are recognised by employers or universities.
 inventions: [climb-curriculum]
 scene:
   kind: network

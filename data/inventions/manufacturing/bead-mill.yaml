@@ -1,0 +1,85 @@
+id: bead-mill
+title: The Bead Mill
+domain: manufacturing
+for: [industrial-printing]
+pitch: >-
+  A wire-arc printer with dozens of torches working on one large part at once, a roller that
+  forges each bead while it is still hot, and a record of every bead's heat and current that
+  qualifies the part, taking metal printing to a tonne an hour.
+principle: >-
+  Printing metal is a problem of heat, not energy. Melting steel from cold takes about 1.2 MJ a
+  kilogram, a third of a kilowatt-hour, so a tonne an hour needs about 0.33 MW of heat in the metal,
+  or roughly 0.4 MW of arc power if four-fifths of the arc's heat reaches the melt. That is the
+  output of a few dozen welding torches, fed with ordinary welding wire. What limits a printer is
+  how fast one melt pool can add metal without overheating the layers beneath it: the fastest
+  machines sold today, Sciaky's electron beam printers, deposit 3 to 18 kg an hour. The Bead Mill
+  spreads the work. Many heads, each at a welding robot's rate, build different regions of one large
+  part, spaced so that each region cools between passes, the way a crew of welders works a ship's
+  hull. At 15 kg an hour a head, about 70 heads make a tonne an hour. Behind each torch a roller
+  presses the hot bead, as Cranfield did between layers, which breaks up the coarse cast grains,
+  relieves residual stress and flattens the surface, so less machining is left. And since every
+  bead is laid at a logged current, voltage, wire speed and path, with a thermal camera on its pool,
+  the part carries its whole history. Accepting it becomes a check that every bead stayed inside a
+  window proven by destructive tests, instead of scanning and testing each part.
+buildsOn:
+  - text: Williams and colleagues' review of wire-arc additive manufacturing, which builds parts over 10 kg in titanium, aluminium and steel at high deposition rates with low material and equipment costs (2016).
+    url: https://doi.org/10.1179/1743284715Y.0000000073
+    year: 2016
+  - text: Colegrove and colleagues' high-pressure rolling of wire-arc deposits, which improved their microstructure and residual stress (2013).
+    url: https://doi.org/10.1016/j.jmatprotec.2013.04.012
+    year: 2013
+  - text: Sciaky's electron beam additive manufacturing, 3.2 to 18 kg an hour, the single-head rate to beat.
+    url: https://www.sciaky.com/additive-manufacturing/electron-beam-additive-manufacturing-technology
+    year: 2026
+  - text: Cranfield's six-metre, 300 kg wire-arc spar, printed on a 10-metre machine (2016).
+    url: https://www.tctmagazine.com/cranfield-university-believe-they-have-3d-printed-the-bigges/
+    year: 2016
+experiment:
+  goal: Show that many arc heads with in-line rolling can build a large steel part at 100 kg an hour, with properties at least those of a casting, and that its process record finds its defects.
+  setup: >-
+    A gantry cell with eight gas metal arc heads, each with a trailing hot-rolling wheel, a thermal
+    camera on its pool and logged current, voltage and wire feed, building low-carbon steel machine
+    frames about 3 m long and 1.5 tonnes. Coupons are cut from each frame, every frame is scanned by
+    X-ray computed tomography for the trial, and a sand-cast twin of the frame is the comparison.
+  measure: Sustained deposition rate; distortion and machining allowance; tensile, fatigue and impact properties along and across the beads against the casting; porosity from the scans; the share of scanned defects the process record flagged; energy, wire and cost per kilogram.
+  succeedsIf: The cell sustains at least 100 kg an hour over an eight-hour build, the frames need at most 2 mm of machining allowance, their tensile and impact properties match or beat the cast twin in every direction, and the process record flags at least 95 percent of the defects the scans find.
+  costUsd: 2500000
+  months: 18
+path:
+  - phase: bench
+    what: One head and its roller building test walls.
+    scale: 1 head, up to 15 kg an hour.
+    proves: Rolling in line gives cast-or-better properties, and the bead record predicts defects.
+  - phase: prototype
+    what: The eight-head cell building full frames.
+    scale: 8 heads, 100 kg an hour.
+    proves: Heads can share one part without spoiling each other's beads.
+  - phase: pilot
+    what: A 70-head mill making frames and housings for a maker of heavy equipment or wind turbines.
+    scale: 70 heads, 1 tonne an hour, about 5,000 tonnes a year at 60 percent uptime.
+    proves: Printing beats casting on cost for parts made in tens rather than thousands.
+  - phase: first-plant
+    what: A plant of mills, its structural parts accepted on their records, in place of a foundry.
+    scale: 10 mills, about 50,000 tonnes a year.
+    proves: Certifying bodies accept a process record in place of testing each part.
+  - phase: fleet
+    what: Mills in every region making the frames, housings and spares of the buildout to {power-k08}.
+    scale: About 1,000 mills, 5 million tonnes a year.
+    proves: Moulds and dies no longer limit how fast new machines can be built.
+  - phase: civilization
+    what: Mills built by the seed factories, printing iron and aluminium won from regolith.
+    scale: Frames for an industry of about 5 billion tonnes by {year-planet}, doubling every {doubling-time}.
+    proves: One kind of machine can make most of the industry's metal parts.
+risks: >-
+  Heads working close together may disturb each other with heat, fumes and spatter; the prototype
+  measures how close they can work, and the fallback is several parts built at once in a ring.
+  Rollers cannot reach every shape; complex parts would be rolled only where loads are high and
+  machined elsewhere. Certifying bodies may not accept a record in place of tests; the plan starts
+  with parts already accepted on sampled tests, as castings are, and publishes all of its data. Wire
+  costs more per kilogram than molten iron in a foundry; the pilot measures whether the saved
+  tooling and machining make up the difference, and drawing wire in-house from the plant's own
+  metal is the next step.
+scene:
+  kind: machine
+  focus: A gantry of glowing torches building one large steel frame, a roller following each.
+  params: { shape: printer, spin: 0.3 }

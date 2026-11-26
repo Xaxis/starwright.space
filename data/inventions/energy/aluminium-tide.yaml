@@ -26,8 +26,9 @@ buildsOn:
   - text: ELYSIS reported a commercial-size inert anode cell in November 2025, which releases oxygen and no direct greenhouse gases.
     url: https://www.elysis.com/en
     year: 2025
-  - text: The Hall-Heroult cells that make all primary aluminium run at 940 to 980 °C and commonly use about 15.4 kWh per kilogram.
-    url: https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process
+  - text: Haarberg's review gives the Hall-Heroult cells that make all primary aluminium as running at about 960 °C and using about 12 to 15 kWh of electricity per kilogram.
+    url: https://www.jstage.jst.go.jp/article/electrochemistry/92/4/92_24-69019/_html/-char/en
+    year: 2024
   - text: Bergthorson's review of metal fuels sets out how metals such as aluminium and iron can be burnt for power and their oxides recycled with clean electricity.
     url: https://doi.org/10.1016/j.pecs.2018.05.001
     year: 2018
@@ -51,11 +52,11 @@ experiment:
 path:
   - phase: bench
     what: The swing cell and the steam burner, closing the loop at laboratory scale.
-    scale: Tonnes of aluminium, megawatt-hours stored.
+    scale: A 5 kA cell making about 40 kg of aluminium a day, 0.3 MWh of chemical energy.
     proves: A pot can follow the sun, and the alumina can be recovered and smelted again.
   - phase: prototype
     what: A row of full-size swing pots beside a solar farm, with a small winter plant.
-    scale: 10 MW of pots, a 2 MW winter plant.
+    scale: 10 MW of pots, about 3,600 t of aluminium a season, and a 3 MW winter plant.
     proves: Season-long storage at commercial pot size, and its cost per kilowatt-hour of capacity.
   - phase: pilot
     what: A swing smelter whose metal heats and powers a town through the winter.
@@ -67,11 +68,11 @@ path:
     proves: A northern grid can retire its fossil winter backup.
   - phase: fleet
     what: Tides in every high-latitude grid, sharing alumina by ship.
-    scale: Hundreds of millions of tonnes of metal cycling each year.
+    scale: 500 GW of swing pots through the summer, about 180 million t of aluminium and 750 TWh of winter electricity a year.
     proves: Seasonal storage at the scale of continents.
   - phase: civilization
     what: One of the seasonal buffers for a grid at {power-k08}, alongside the global grid and other stores.
-    scale: Seasons of storage for {power-k08}.
+    scale: 1 TW through the winter, a percent of {power-k08}, from about 1,000 million t of aluminium a year.
     proves: A sun-powered grid works through every winter at every latitude.
 risks: >-
   Swing smelting may not get below half power without the bath freezing; then the Tide runs on a

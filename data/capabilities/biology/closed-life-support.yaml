@@ -11,9 +11,9 @@ summary: >-
   first self-copying factory starting work in {seed-year}; the people running the move off Earth need
   loops this tight.
 target: >-
-  Keep people alive and well in space on a loop that recovers nearly all of their air, water and a
-  large share of their food, stable for years without resupply, and able to grow with the settlement
-  it supports.
+  Keep people alive and well in space on a loop that recovers more than 98 percent of their air and
+  water and at least half of their food, stable for years without resupply, and able to grow with the
+  settlement it supports.
 exists:
   - text: BIOS-3 in Krasnoyarsk ran a three-person crew in near-complete air and water closure for 180 days in 1972 to 1973, growing about half the crew's food with algae and higher plants.
     url: https://en.wikipedia.org/wiki/BIOS-3
@@ -21,9 +21,9 @@ exists:
   - text: Beihang University's Lunar Palace 1 ran a crewed closure for 370 days at 98.2 percent material closure, with total recycling of oxygen and water.
     url: https://doi.org/10.1101/2021.01.12.426282
     year: 2018
-  - text: ESA's MELiSSA has spent over three decades building a five-compartment regenerative loop with a working pilot plant in Barcelona.
-    url: https://en.wikipedia.org/wiki/MELiSSA
-    year: 2023
+  - text: ESA's MELiSSA has spent more than 35 years building a five-compartment regenerative loop that recycles water, air and waste into oxygen, clean water and food.
+    url: https://melissafoundation.org/the-melissa-program/scientific-concept/
+    year: 2026
   - text: The International Space Station's life-support system reached 98 percent water recovery in 2023 after adding a brine processor, the best any flown system has done.
     url: https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/
     year: 2023

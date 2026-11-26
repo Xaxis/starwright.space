@@ -4,34 +4,38 @@ domain: transport
 stage: k08
 needs: [terawatt-solar-factories, carbon-drawdown]
 summary: >-
-  Aircraft are the hardest vehicles to electrify: a kilogram of battery holds a few percent of the
-  energy of a kilogram of jet fuel. Long flights need fuel made from clean power instead, either
-  hydrogen or kerosene built from hydrogen and carbon taken from the air. Contrails warm the climate
-  more than aviation's carbon does, so routes and fuels must cut both.
+  Aircraft are the hardest vehicles to electrify: a kilogram of good battery holds about 0.9 MJ,
+  some 2 percent of the 43 MJ in a kilogram of jet fuel. Long flights need fuel made from clean power
+  instead, either hydrogen or kerosene built from hydrogen and carbon taken from the air. Contrails
+  warm the climate more than aviation's carbon does, so routes and fuels must cut both.
 target: >-
-  Every flight on fuel made from clean power, or on hydrogen and batteries, with contrails avoided
-  by routing, so air travel can grow as the world grows richer, at fares close to today's.
+  All aviation fuel made from clean power, or replaced by hydrogen and batteries, by {year-k08},
+  passing the EU's legal floor of 70 percent sustainable fuel in 2050 on the way, at a fuel cost no
+  more than 1.5 times fossil kerosene so fares stay near today's, and with contrail warming cut by at
+  least half through routing.
 exists:
-  - text: IATA reported that sustainable aviation fuel output roughly doubled from 1 million tonnes in 2024, 0.3 percent of jet fuel, to 1.9 million tonnes in 2025.
-    url: https://www.iata.org/en/programs/sustainability/sustainable-aviation-fuels/
+  - text: IATA estimated in December 2025 that sustainable aviation fuel output doubled from 1 million tonnes in 2024 to 1.9 million tonnes in 2025, only 0.6 percent of jet fuel, rising to 0.8 percent in 2026, at prices two to five times those of fossil jet fuel.
+    url: https://www.iata.org/en/pressroom/2025-releases/2025-12-09-04/
     year: 2025
   - text: The EU's ReFuelEU Aviation law requires sustainable fuel to be 2 percent of fuel at EU airports from 2025 and 70 percent from 2050, with fuel made from electricity at 1.2 percent from 2030 and 35 percent from 2050.
     url: https://transport.ec.europa.eu/transport-modes/air/environment/refueleu-aviation_en
     year: 2025
-  - text: Lee and colleagues estimated that in 2018 contrail cirrus warmed the climate by 57.4 mW per square metre against 34.3 for aviation's carbon dioxide (Atmospheric Environment, 2021).
-    url: https://en.wikipedia.org/wiki/Environmental_impact_of_aviation
+  - text: Lee and colleagues estimated that in 2018 aviation's net warming push was 100.9 mW per square metre, with contrail cirrus at 57.4 against 34.3 for its carbon dioxide (Atmospheric Environment, 2021).
+    url: https://eprints.whiterose.ac.uk/165692/
     year: 2021
-  - text: ZeroAvia flew a Dornier 228 with one engine replaced by a hydrogen fuel cell powertrain on 19 January 2023.
-    url: https://en.wikipedia.org/wiki/ZeroAvia
+  - text: ZeroAvia flew a 19-seat Dornier 228 with a full-size hydrogen-electric powertrain on its left wing at Kemble, UK, on 19 January 2023, the largest aircraft yet flown on a hydrogen-electric engine.
+    url: https://www.zeroavia.com/do228-first-flight
     year: 2023
-  - text: In 2025 Airbus pushed back its hydrogen airliner plans by five to ten years from the original 2035 target.
-    url: https://en.wikipedia.org/wiki/Hydrogen-powered_aircraft
+  - text: In February 2025 Airbus confirmed it would delay its plan for a hydrogen airliner by 2035 by five to ten years, citing slower-than-expected progress in the technology.
+    url: https://thedriven.io/2025/02/12/airbus-slashes-budget-and-delays-hydrogen-powered-aircraft-program/
     year: 2025
 gap: >-
-  Sustainable fuel is under one percent of jet fuel, fuel made from electricity is a sliver of that,
-  and it costs several times as much as kerosene. Hydrogen airliners are more than a decade away,
-  and liquid hydrogen needs about four times the tank volume of kerosene for the same energy, which
-  crowds passengers out of long-haul aircraft.
+  Sustainable fuel is 0.6 percent of jet fuel, which puts world use near 320 million tonnes a year
+  (1.9 divided by 0.006), so 99.4 percent is still to replace; it costs 2 to 5 times as much, against
+  the target's 1.5. Contrail cirrus warms 1.7 times as much as aviation's carbon dioxide and nothing
+  yet routes flights around it at scale. The largest hydrogen aircraft flown is a 19-seat testbed
+  with one hydrogen engine, airliners are a decade or more away, and liquid hydrogen holds 8.5 MJ a
+  litre against kerosene's 34, so it needs 4 times the tank volume for the same energy.
 inventions: [relay-hydrogen-airline]
 scene:
   kind: machine

@@ -13,14 +13,14 @@ target: >-
   from local rock at thousands of tonnes a year, keep working through nights of {lunar-night}, and host
   the {seed-mass} seed factory and the mass drivers that follow it.
 exists:
-  - text: India's Chandrayaan-3 landed on 23 August 2023 near the lunar south pole, the first landing there.
-    url: https://en.wikipedia.org/wiki/Chandrayaan-3
+  - text: India's Chandrayaan-3 soft-landed at about 69 degrees south on the Moon on 23 August 2023, the first landing near the lunar south pole.
+    url: https://www.isro.gov.in/Chandrayaan3_Details.html
     year: 2023
   - text: Firefly's Blue Ghost Mission 1 landed in Mare Crisium on 2 March 2025 and ran more than 14 days of surface operations, the first fully successful commercial Moon landing.
     url: https://fireflyspace.com/missions/blue-ghost-mission-1/
     year: 2025
-  - text: China's Chang'e 6 brought 1,935.3 grams of rock from the far side of the Moon back to Earth on 25 June 2024.
-    url: https://en.wikipedia.org/wiki/Chang%27e_6
+  - text: China's Chang'e 6 collected 1,935.3 grams of rock from the far side of the Moon and returned it to Earth in June 2024.
+    url: https://english.news.cn/20240628/4be0972f277c4b8eb3b0bf53e456052c/c.html
     year: 2024
   - text: Artemis II carried four astronauts around the Moon and back in nine days in April 2026, the first crewed lunar flight since 1972.
     url: https://www.nasa.gov/mission/artemis-ii/
@@ -31,6 +31,12 @@ exists:
   - text: NASA's MOXIE made 122 grams of oxygen from the Martian air over 16 runs, the first oxygen made from local resources on another world.
     url: https://www.jpl.nasa.gov/news/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/
     year: 2023
+  - text: NASA Kennedy and Lunar Resources ran molten regolith electrolysis on 25 kg of simulant in vacuum, making oxygen at about 0.07 kg an hour, the kind of pilot plant lunar industry needs, but only on Earth.
+    url: https://ntrs.nasa.gov/citations/20260003760
+    year: 2024
+  - text: Intuitive Machines' IM-2 carried NASA's PRIME-1 drill and mass spectrometer to the Moon in 2025; both powered on, but the lander tipped over, so no regolith was drilled and measured.
+    url: https://www.nasa.gov/missions/artemis/clps/nasas-lunar-drill-technology-passes-tests-on-the-moon/
+    year: 2025
 gap: >-
   Landings have only become routine in the 2020s, and every mission so far has been a visit. No one
   has made oxygen or metal on the Moon, mined its ice, or run a plant through a night of {lunar-night}.

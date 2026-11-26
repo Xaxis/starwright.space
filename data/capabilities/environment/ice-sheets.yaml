@@ -4,38 +4,47 @@ domain: environment
 stage: k08
 needs: [earth-monitoring]
 summary: >-
-  Greenland and Antarctica hold enough ice to raise the sea by tens of metres, and they are losing it
-  more than three times as fast as in the 1990s. Some glaciers, such as Thwaites, may be past a point
-  where warm ocean water melts them from below faster than snow can replace them. Cutting emissions
-  slows this over centuries. Slowing the ice itself could buy time for the coasts where hundreds of
-  millions of people live.
+  Greenland and Antarctica hold enough ice to raise the sea by tens of metres, and they lose about
+  400 billion tonnes of it a year, more than three times as much as in the early 1990s. Most of that
+  loss comes from glaciers speeding up, many of them because warm ocean water melts them from below.
+  Some, such as Thwaites, may be past the point where they can recover on their own. Cutting
+  emissions slows this over centuries. Slowing the ice itself could buy time for the coasts where
+  hundreds of millions of people live.
 target: >-
-  Slow the loss of the fastest-retreating glaciers so that the ice sheets add far less to sea level
-  this century than on today's path, with every method proven on small glaciers before large ones.
+  Cut the ice sheets' loss from about 400 billion tonnes a year to under 200 billion by the 2070s,
+  so that they add far less to sea level this century than on today's path, by slowing the
+  fastest-retreating outlet glaciers such as Thwaites, Pine Island and the largest outlets of
+  Greenland, with every method proven on small glaciers before large ones.
 exists:
-  - text: The International Thwaites Glacier Collaboration found that Thwaites' full collapse would raise the sea by 65 cm, and that ice loss in its region more than doubled from the 1990s to the 2010s.
+  - text: The International Thwaites Glacier Collaboration found that Thwaites' full collapse would raise the sea by 65 cm, and that ice flowing into the sea from Thwaites and its neighbours more than doubled from the 1990s to the 2010s.
     url: https://thwaitesglacier.org/findings
     year: 2025
-  - text: The IMBIE team found the ice sheets' losses rose from 105 billion tonnes a year in 1992 to 1996 to 372 billion tonnes a year in 2016 to 2020, adding 21 mm to sea level over that time.
-    url: https://essd.copernicus.org/articles/15/1597/2023/
-    year: 2023
-  - text: Wolovick and Moore modelled walls and mounds on the sea floor in front of Thwaites and found a continuous sill blocking warm water succeeded in every run, against 30 percent for isolated mounds.
+  - text: The IMBIE team found that Greenland and Antarctica lost 11,309 billion tonnes of ice between 1979 and 2023, raising the sea 31.4 mm, with 84 percent of the loss driven by glaciers speeding up.
+    url: https://imbie.org/wp-content/uploads/2026/09/IMBIE_Press-Release_1970s-2023-v1.pdf
+    year: 2026
+  - text: NASA's GRACE and GRACE-FO satellites show Antarctica losing about 135 billion tons of ice a year and Greenland about 264 billion tons a year since 2002.
+    url: https://science.nasa.gov/earth/explore/earth-indicators/ice-sheets
+    year: 2026
+  - text: Wolovick and Moore modelled sills on the sea floor in front of Thwaites and found a large sill blocking all warm water succeeded in every run, a smaller one in 70 to 90 percent, and isolated mounds in 30 percent.
     url: https://tc.copernicus.org/articles/12/2955/2018/
     year: 2018
-  - text: A University of Chicago research vision for glacial climate intervention proposes a decade of study, including drilling fields that draw water or heat from glacier beds, possibly with passive thermosyphons.
-    url: https://knowledge.uchicago.edu/records/t21ey-t9b30
-    year: 2024
-  - text: Real Ice and partners pumped sea water onto Arctic sea ice at Cambridge Bay in 2024 and 2025 and grew plots up to 32 cm thicker than untreated ice.
+  - text: In the winter of 2024 to 2025 at Cambridge Bay, Real Ice and partners flooded sea ice with sea water and grew it up to 32 cm thicker than untreated ice by mid-May; the treated ice looked brighter and melted more slowly.
     url: https://doi.org/10.1029/2025EF007894
     year: 2026
-  - text: The Arctic Ice Project, which tested reflective glass beads spread on sea ice, concluded its research in 2024.
-    url: https://www.arcticiceproject.org/
-    year: 2024
+  - text: The Seabed Curtain project, led from NIVA with Cambridge, Chicago, AWI, NYU and Lapland, placed autonomous moorings in the Pine Island and Thwaites trough in 2026 to measure the warm water a curtain would have to block.
+    url: https://seabedcurtain.org/the-seabed-curtain-project-overview/
+    year: 2026
+  - text: Siegert and 41 co-authors assessed five polar geoengineering ideas, including sea curtains and draining glacier beds, and concluded none passes scrutiny for use in the coming decades, putting sea curtains' cost far above 80 billion dollars.
+    url: https://doi.org/10.3389/fsci.2025.1527393
+    year: 2025
 gap: >-
-  Every way of slowing a glacier is still at the stage of models and white papers. Building on the
-  sea floor under hundreds of metres of water and sea ice is beyond anything attempted, and the beds of
-  ice streams have been drilled only for science. No one has yet measured how much any intervention
-  slows a real glacier, or what it does to the ocean around it.
+  The ice sheets lose about 400 billion tonnes a year, and no intervention has yet slowed a single
+  glacier by a measured amount. Every method is still at the stage of models, white papers and the
+  first ocean moorings, and the leading critique expects little from the options studied so far,
+  putting sea-floor curtains at far more than 80 billion dollars. Building on the sea floor under
+  hundreds of metres of water and sea ice is beyond anything attempted. The beds of fast glaciers
+  have been reached only by boreholes drilled for science, a few at a time, against the thousands an
+  intervention would need, and Thwaites alone holds 65 cm of sea level.
 inventions: [ice-pins]
 scene:
   kind: globe

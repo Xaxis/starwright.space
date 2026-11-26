@@ -3,75 +3,89 @@ title: The Cold-Trap Ice Harvester
 domain: water
 for: [space-ice-mining]
 pitch: >-
-  A rover that heats shadowed lunar regolith with microwaves just enough to sublimate its water ice,
-  then catches the vapour on a cold plate, pulling clean water from frozen ground without ever
-  digging it up or letting it melt away.
+  A rover that lowers a sealed dome over a patch of shadowed lunar ground, warms the icy soil from
+  inside with microwaves until the ice turns to vapour, and catches the vapour as clean ice on a cold
+  trap, taking water out of the ground without digging it up.
 principle: >-
-  Water ice in a lunar polar crater sits in permanent darkness at around 40 kelvin, mixed through the
-  regolith. Scooping and hauling frozen soil is slow and wears machines out in abrasive dust. The
-  Cold-Trap Ice Harvester instead works the ground in place. A skirt seals a patch of regolith from
-  the vacuum, and microwave emitters warm the soil a few tens of degrees, enough to sublimate the ice
-  directly to vapour without melting, since there is no liquid phase at that pressure. The vapour
-  flows to a cold plate held colder still, where it refreezes as clean ice, leaving the dust behind.
-  The harvester collects the recaptured ice, melts and filters it to water, and can feed part of it
-  to an electrolyser for propellant. Because it heats rather than digs, it has few moving parts in
-  the dust and leaves the regolith roughly in place. It runs on power beamed or cabled from a sunlit
-  ridge, so it can work the dark crater floor where the ice is.
+  Ice in a polar cold trap is mixed through the soil at a few percent by mass, at 25 to 40 K. At 5.6
+  percent, each kilogram of water comes with about 17 kg of dry soil. Warming that soil from 40 K to
+  about 220 K, where ice turns to vapour quickly in vacuum, takes about 1.2 MJ, since regolith holds
+  only about 0.4 kJ per kilogram per kelvin over that range; turning the ice to vapour takes another
+  2.8 MJ. The floor is about 4 MJ, 1.1 kWh, per kilogram, and measured systems use about twice that.
+  Heat applied at the surface reaches down slowly, because dry soil in vacuum is one of the poorest
+  conductors known. Microwaves heat from within: at 2.45 GHz, with lunar soil's loss tangent near
+  0.01, the power reaches tens of centimetres to a metre down. The harvester lowers a dome 3 m across
+  with a flexible skirt, fires magnetrons through the dome's floor, and draws the vapour across a cold
+  trap held near 190 K, where ice's vapour pressure is under a hundredth of that at 220 K, so water freezes
+  out clean and the dust stays behind. When the patch is dry to half a metre the rover moves on. The
+  trap must shed the vapour's 2.8 MJ per kilogram: a 10 kW harvester making about 100 kg a day rejects
+  about 3 kW, which a two-sided radiator of about 25 square metres at 190 K sheds to the dark sky.
+  Power comes by cable from solar arrays on the sunlit crater rim.
 buildsOn:
-  - text: NASA's in-situ resource utilization programme develops and field-tests hardware for extracting water and volatiles from regolith, the engineering base for in-place extraction.
-    url: https://www.nasa.gov/mission/in-situ-resource-utilization-isru/
-    year: 2024
-  - text: ESA's Space Resources Strategy frames lunar water extraction as the foundation of a space economy, setting the purpose this harvester serves.
-    url: https://sci.esa.int/documents/34161/35992/1567260390250-ESA_Space_Resources_Strategy.pdf
+  - text: Ethridge and Kaukler at NASA Marshall heated about 200 g of frozen, icy lunar simulant in vacuum with a 1,200 W microwave oven, removed at least 85 percent of the water in 5 minutes, and caught 99 percent of it on a cold trap.
+    url: https://ntrs.nasa.gov/api/citations/20070018802/downloads/20070018802.pdf
+    year: 2007
+  - text: Sowers' NASA study of thermal mining heats icy ground under a tent and freezes the vapour out on cold traps, for 60 percent less mass and energy than digging.
+    url: https://www.nasa.gov/general/thermal-mining-of-ices-on-cold-solar-system-bodies/
     year: 2019
-  - text: Karman+ is building asteroid mining to sell water as propellant, evidence of a market for extracted off-world water.
-    url: https://www.karmanplus.com/
-    year: 2024
+  - text: Kornuta and colleagues sized a thermal mining plant for 2,450 t of lunar water a year, needing 580 kW of heat under a 32 m tent where ice is 4 percent by mass.
+    url: https://www.osti.gov/servlets/purl/1503160
+    year: 2019
+  - text: Honeybee Robotics' Planetary Volatiles Extractor, a heated auger that captures water in vacuum, recovered 31 to 87 percent of the water in 15 tests at an average of 2.2 Wh per gram.
+    url: https://www.hou.usra.edu/meetings/lunarisru2019/pdf/5076.pdf
+    year: 2019
+  - text: LCROSS measured about 5.6 percent water ice by mass in the soil of Cabeus crater, the basis for sizing a harvester's patches.
+    url: https://experts.arizona.edu/en/publications/detection-of-water-in-the-lcross-ejecta-plume/
+    year: 2010
+  - text: NASA's PRIME-1 team got about 12 of 240 planned hours on the Moon in 2025 when their lander tipped over, a reminder that the first harvesters must survive rough landings and terrain.
+    url: https://ntrs.nasa.gov/api/citations/20260003150/downloads/MSolo%20PRIME-1%20overview%20and%20results%20-%20LSSW.pdf
+    year: 2026
 experiment:
-  goal: Sublimate water ice from cold icy regolith with microwaves and recapture it as clean water on a cold trap.
+  goal: Measure the energy per kilogram, the share of the ice recovered by depth and the dust carried over when icy soil at polar temperatures is heated with microwaves under a sealed dome.
   setup: >-
-    In a vacuum chamber, prepare lunar simulant mixed with ice and chilled to polar-crater
-    temperatures. Seal a patch, apply microwave heating, and collect the sublimated vapour on a
-    cold plate, then melt and filter it. Measure against the ice known to be in the sample.
-  measure: >-
-    Grams of water recovered per hour; fraction of the sample's ice captured; energy in kilowatt-hours
-    per kilogram of water; purity of the recovered water; dust carried over to the cold trap.
-  succeedsIf: >-
-    The rig recovers at least 80 percent of the sample's water as clean water at an energy cost per
-    kilogram low enough to beat launching water from Earth, with dust carryover within limits.
-  costUsd: 22000000
-  months: 42
+    A thermal vacuum chamber holding a bed of lunar highland simulant 2 m square and 0.6 m deep, mixed
+    with 5 percent ice by mass and held below 100 K by a liquid nitrogen shroud. A 1 m dome with a
+    flexible skirt carries four 1.5 kW, 2.45 GHz magnetrons and draws vapour across a cold trap held
+    at 190 K by a cryocooler, on load cells. After each run the bed is cored to map the ice that is left.
+  measure: Water caught per kilowatt-hour; share of the ice under the dome recovered at each depth; vapour lost under the skirt; dust and other frozen gases in the trap; temperatures through the bed; magnetron efficiency.
+  succeedsIf: Over ten runs the rig recovers more than 70 percent of the ice in the top 50 cm under the dome, at under 3 kWh of electricity per kilogram of water caught, with under 10 percent lost under the skirt and the melted, filtered water under 500 mg per litre of dissolved solids.
+  costUsd: 6000000
+  months: 24
 path:
   - phase: bench
-    what: Microwave sublimation and cold-trap capture from icy simulant in a vacuum chamber.
-    scale: Kilograms of water.
-    proves: In-place extraction recovers clean water efficiently.
+    what: The dome and magnetrons on the icy bed in the chamber.
+    scale: About 10 kg of water a run.
+    proves: Energy per kilogram, depth of recovery and the skirt's seal.
   - phase: prototype
-    what: A rover-mounted harvester tested in a simulated crater with real dust and cold.
-    scale: Tens of kilograms a day.
-    proves: The method works as a mobile machine in crater conditions.
+    what: A full-size rover driving across a large cryogenic bed of icy simulant with boulders and slopes.
+    scale: 10 kW, about 100 kg of water a day.
+    proves: Sealing, harvesting and moving on uneven ground in real cold.
   - phase: pilot
-    what: The harvester landed and run in a real lunar polar crater.
-    scale: Hundreds of kilograms a day.
-    proves: It extracts water on the Moon, in the dark and cold, unattended.
+    what: One rover landed in a south polar cold trap, cabled to solar arrays on the rim.
+    scale: 10 kW on the Moon, about 35 t of water a year.
+    proves: Water from the Moon at the predicted energy, and how the ice is really spread.
   - phase: first-plant
-    what: A cluster of harvesters feeding a depot that stores water and makes propellant.
-    scale: Tonnes a day.
-    proves: Off-world water supplies a base and refuels ships.
+    what: Twenty-five rovers feeding a depot that stores water and splits some of it into propellant.
+    scale: 250 kW, about 1,000 t of water a year.
+    proves: Lunar water costs less where it is used than water landed from Earth.
   - phase: fleet
-    what: Harvesters at lunar poles and adapted for icy asteroids and comets.
-    scale: Inner solar system.
-    proves: Water comes from space across many bodies.
+    what: Harvesters in many cold traps, and versions that bake water out of clays in asteroid rock.
+    scale: About 25 MW, 100,000 t a year.
+    proves: Water from many bodies, for many customers.
   - phase: civilization
-    what: Space water as abundant infrastructure for drink, air, shielding and fuel, all mined off Earth.
-    scale: Planet and space.
-    proves: Settlement and industry in space freed from Earth's water.
+    what: The water supply of space industry, for drink, air, shielding and propellant.
+    scale: 10 million t a year, about 2.5 GW of harvesters.
+    proves: Water in space comes from space.
 risks: >-
-  Microwaves may heat regolith unevenly or lose vapour through the seal; the design iterates the
-  skirt and emitter pattern and measures carryover. Ice may be scarcer or more bound than maps
-  suggest, so a prospecting step precedes any plant. Running cold electronics and power in permanent
-  shadow is hard, addressed by beamed or cabled power from a sunlit ridge.
+  The ice may be patchier than the maps suggest: the best estimate is uncertain by half, and exposed
+  ice shows in only one cold trap in thirty. Each patch is prospected with a neutron spectrometer and
+  radar before the dome comes down. The skirt may not seal on rough, rocky ground; a heavier skirt
+  with soil piled along its edge, as in tent designs, is the next try. Other frozen gases will come
+  off with the water and must be separated, which a trap with stages at different temperatures can
+  do. Magnetrons and electronics must be kept warm at 40 K, which costs power. If microwaves reach
+  less deep than expected, the dome stays longer on each patch or the rover rakes the dried top layer
+  aside.
 scene:
   kind: moon
-  focus: A rover sealing a patch of shadowed regolith, microwaves subliming ice onto a cold trap.
+  focus: A rover's dome sealed over shadowed ground, frost building on its cold trap while a cable runs up to the sunlit rim.
   params: { mines: 0.5, bases: 0.2 }

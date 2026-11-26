@@ -36,8 +36,9 @@ exists:
     url: https://www.oxfordpv.com/
     year: 2026
 gap: >-
-  The factories run at about half their capacity because prices have fallen below cost, yet the climb
-  needs ten times their capacity and more. Every panel still starts as quartz reduced with carbon in
+  Covering {land-share} of the land means about 1,900 TW of panels, about 40 TW a year from now to
+  {year-k08}: nearly 30 times the factories' {pv-factory-capacity} and over 50 times the 706 GW they
+  shipped in 2025, when they ran at about half their capacity because prices had fallen below cost. Every panel still starts as quartz reduced with carbon in
   arc furnaces and then purified as a gas, the most energy-hungry step in the chain, and most cells
   still use silver, of which PV already takes a large share of mine supply. A new line takes years and
   billions of dollars, so growth is held back by capital and by the energy each factory needs before

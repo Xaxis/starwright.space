@@ -4,33 +4,36 @@ domain: manufacturing
 stage: k08
 needs: [general-purpose-robots, industrial-ai]
 summary: >-
-  Growing the world's energy use toward {power-k08} means building factories, panels, lines and
-  machines far faster than the workforce grows. The only way is factories that run with few people:
-  robots that make most of the parts, lines that change products in software, and plants that keep
-  going through the night with the lights off.
+  Reaching {power-k08} means building panels, batteries, motors, lines and machines many times
+  faster than today, for decades, while the world's workforce barely grows. That is only possible if
+  most factories run with few people: robots make and move the parts, a line switches product by
+  changing its software, and the plant keeps working through the night with the lights off.
 target: >-
   Factories for most of what the buildout needs, from panels and batteries to motors and robots,
-  running lights-out for weeks, changing product without retooling by hand, so that output can grow
-  every year until {year-k08} without being limited by how many people can be trained.
+  that run unattended for a month at a time, switch to a new product within a day without
+  retooling by hand, and need a tenth of today's working hours per unit made, so that output can
+  grow every year until {year-k08} without waiting for people to be trained.
 exists:
-  - text: Five million industrial robots were at work in factories worldwide in 2025, after more than 600,000 were installed that year.
+  - text: Five million industrial robots were at work in factories worldwide in 2025, after more than 600,000 were installed that year, 59 percent of them in China.
     url: https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally
     year: 2025
-  - text: South Korea led robot density with 1,066 robots per 10,000 manufacturing employees in 2025; the world average was 152.
+  - text: South Korea led robot density in 2025 with 1,066 robots per 10,000 manufacturing employees; the world average was 152.
     url: https://ifr.org/news/robot-density-highest-in-south-korea-singapore-and-germany/
     year: 2025
-  - text: FANUC's factories in Japan use robots to build robots, up to 6,000 a month.
+  - text: FANUC's headquarters robot factory in Japan can make 6,000 robots a month on automated lines where its own robots assemble them.
     url: https://www.fanuc.eu/at-en/node/1472
     year: 2026
-  - text: Xiaomi's Changping factory automates 100 percent of its key processes on 11 lines, making a phone about every three seconds, more than ten million a year.
+  - text: Xiaomi's Changping factory, opened in 2024, automates all of its key processes on 11 lines and makes a folding phone about every three seconds, more than ten million a year.
     url: https://newatlas.com/robotics/xiaomi-dark-robotic-factory/
     year: 2024
 gap: >-
-  Lights-out works for a few products made by the million on lines that cost billions. Most
-  manufacturing is varied and made in smaller runs, where setting up, fixturing, inspection and
-  fixing faults still need skilled people at every shift. A factory that learns a new part on its
-  own does not yet exist.
-inventions: [inner-lab]
+  Lights-out production works today for a few products made by the million, such as Xiaomi's phone
+  every 3 seconds, on lines that cost billions to set up. Even in South Korea, the most automated
+  country, 1,066 robots per 10,000 manufacturing workers means about 9 workers for every robot,
+  and the world average of 152 means about 66.  Most manufacturing is varied and made in small
+  runs, where setting up, fixturing, inspecting and clearing faults still need skilled people on
+  every shift, and no factory yet learns a new part on its own.
+inventions: [inner-lab, mirror-glove]
 scene:
   kind: field
   focus: Factory halls in the dark, their robots working through the night.

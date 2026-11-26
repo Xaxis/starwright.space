@@ -3,75 +3,96 @@ title: The Zero-Loss Water Loop
 domain: water
 for: [closed-water-recycling]
 pitch: >-
-  A water-recycling loop that captures even the brine and the vapour the best current systems throw
-  away, so a habitat recovers essentially all its water and runs for years as a utility, not a
-  tended experiment.
+  A habitat water system that closes the two leaks the space station leaves open, the hydrogen it
+  vents as methane and the water in solid waste, cutting each person's make-up water from about
+  0.65 kg a day to under 50 g.
 principle: >-
-  Today's best loop, on the International Space Station, recovers 98 percent of water; the lost two
-  percent is mostly in a concentrated brine that is hard to process and in vented humidity. The
-  Zero-Loss Water Loop closes both. A brine-drying stage pushes the leftover brine to dryness,
-  recovering its water as vapour and leaving only solid salts, which are collected rather than dumped.
-  A membrane-and-condensation stage recaptures humidity from cabin air and from every process vent.
-  A biological polishing stage, borrowed from the compartments ESA has developed, breaks down the
-  organic traces that foul physical filters, so the loop does not depend on a steady supply of
-  replacement cartridges. Sensors watch purity continuously and route any off-spec water back for
-  another pass. The result is a loop that loses water only to what leaves as product or in sealed
-  solids, approaching total closure, and that maintains itself well enough to be trusted for years.
+  Water in a habitat runs in two loops. The first is the one the station already closes to 98
+  percent: urine is distilled, its brine is dried, and the water of breath and sweat is condensed
+  from the cabin air and cleaned. That still loses about 0.1 kg per person a day, plus the 0.1 kg in
+  faeces. The second loop runs through the air. A person breathes about 0.8 kg of oxygen a day, made
+  by splitting about 0.9 kg of water, and breathes out about 1 kg of carbon dioxide, some 23 moles.
+  The station's Sabatier reactor joins hydrogen to that carbon dioxide (CO2 + 4H2 gives CH4 + 2H2O)
+  and so regains only half the water; the rest of the hydrogen leaves in the methane, about 0.45 kg of
+  water a day. The Zero-Loss Loop adds a reactor that cracks the methane on a hot surface (CH4 gives
+  C + 2H2) and sends the hydrogen back. The net reaction becomes CO2 + 2H2 gives C + 2H2O: all the
+  hydrogen returns as water, and what leaves is about 0.27 kg of carbon per person a day, as powder or
+  graphite on a swappable cartridge. Cracking takes about 75 kJ per mole of methane, about 20 W per
+  person for the reaction itself. Faeces are dried under vacuum and their water joins the urine stream, and brine is dried
+  on heated plates, not in bladders. Conductivity and organic carbon are measured on every stream, and
+  water that fails goes round again. With 99.5 percent of processing water, 95 percent of faecal
+  water and 97 percent of the methane's hydrogen recovered, losses add up to about 40 g per person a
+  day.
 buildsOn:
-  - text: The International Space Station's 98 percent water recovery, reached by adding a brine processor, is the baseline this loop pushes toward total closure.
+  - text: NASA reported that the station's water recovery reached 98 percent in 2023 once the Brine Processor Assembly joined the loop, up from 93 to 94 percent.
     url: https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/
     year: 2023
-  - text: Lunar Palace 1 achieved total oxygen and water recycling within a 370-day closure, showing near-total water closure is attainable with biology in the loop.
-    url: https://doi.org/10.1101/2021.01.12.426282
-    year: 2018
-  - text: ESA's MELiSSA developed the biological polishing compartments this loop uses to cut dependence on consumable filters.
-    url: https://en.wikipedia.org/wiki/MELiSSA
+  - text: On the station the Brine Processor Assembly ran 14 cycles on about 305 L of urine brine and returned about 260 L of water.
+    url: https://ntrs.nasa.gov/api/citations/20230009809/downloads/ICES%202023-097%20Status%20of%20ISS%20Water%20Management%20and%20Recovery_Presentation_v1.0.pdf
     year: 2023
+  - text: In 2026 ground tests at NASA Marshall a new brine bladder recovered 95.4 percent of the water, but reused bladders fed urine brine recovered only 57 to 66 percent.
+    url: https://ntrs.nasa.gov/api/citations/20260005926/downloads/ICES2026%20193%20BPA%20Ground%20Testing.pdf
+    year: 2026
+  - text: Chen at NASA Johnson found that venting Sabatier methane caps oxygen recovery at 50 percent, and simulated a methane-to-carbon reactor that would raise it above 95 percent.
+    url: https://ntrs.nasa.gov/api/citations/20240004053/downloads/ICES-2024-156-Final.pdf
+    year: 2024
+  - text: NASA Marshall and Umpqua Research's third-generation Plasma Pyrolysis Assembly recovered over 60 percent of the hydrogen from Sabatier methane, against a 75 percent maximum for its acetylene route, falling to about 46 percent with water vapour and hydrogen in the feed.
+    url: https://ntrs.nasa.gov/api/citations/20150016511/downloads/20150016511.pdf
+    year: 2015
+  - text: NASA's life support reference values give the water balance of a crew member per day, 4.47 kg in and out, with 0.10 kg in faeces and 2.95 kg in breath and sweat.
+    url: https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf
+    year: 2022
+  - text: Lunar Palace 365 recycled all its water for 370 days with no water brought in, through plants and machines together.
+    url: https://www.biorxiv.org/content/10.1101/2021.01.12.426282v1.full-text
+    year: 2021
 experiment:
-  goal: Run a water loop that recovers essentially all input water, including brine and vapour, for months without consumable-filter swaps.
+  goal: Run a habitat water and oxygen loop for four crew-equivalents for 180 days on the ground and show that its make-up water is under 50 g per person a day.
   setup: >-
-    A closed bench loop fed simulated habitat waste water, combining membrane recovery, a
-    brine-to-dryness stage, humidity recapture and a biological polishing compartment, with
-    continuous purity sensing. Run against an ISS-type loop as control.
-  measure: >-
-    Fraction of input water recovered; litres lost per person-day; months of running without
-    replacing filters; output water quality held to drinking standard.
-  succeedsIf: >-
-    The loop recovers at least 99.5 percent of input water at drinking quality for 180 days with no
-    consumable-filter replacement, beating the control on both closure and maintenance.
-  costUsd: 16000000
+    A sealed 20 cubic metre chamber at a life support test facility, with a metabolic simulator that
+    takes in the oxygen and gives out the carbon dioxide, heat and water vapour of four people, fed
+    donated urine and faecal simulant on the reference schedule. The loop holds a vapour compression
+    urine distiller, a heated-plate brine dryer, a condensate processor, an electrolyser making about
+    3.3 kg of oxygen a day, a Sabatier reactor, a methane cracking reactor with swappable carbon
+    cartridges and a vacuum dryer for faecal water. Every stream is weighed and sampled.
+  measure: Make-up water per crew-equivalent per day, by mass balance; share of the methane's hydrogen returned; carbon collected; water quality against NASA's limits for spacecraft drinking water; power drawn by each unit; spares and consumables used; hours of maintenance.
+  succeedsIf: Over 180 days the loop needs less than 50 g of make-up water per crew-equivalent per day, oxygen system included; the cracking reactor returns more than 95 percent of the methane's hydrogen; every weekly sample meets NASA's drinking water limits; and upkeep takes under an hour a week.
+  costUsd: 20000000
   months: 36
 path:
   - phase: bench
-    what: The full loop on simulated waste water, closing brine and vapour.
-    scale: One crew-equivalent.
-    proves: Near-total closure with little maintenance is achievable.
+    what: The methane cracking reactor and the faecal dryer on their own, then joined to a urine and brine train.
+    scale: 1 crew-equivalent, about 5 kg of water a day.
+    proves: Hydrogen back from methane and water back from solids.
   - phase: prototype
-    what: A ruggedised loop run continuously for a year on real mixed waste water.
-    scale: A few people.
-    proves: It holds drinking quality and closure over a year.
+    what: The 180-day chamber run.
+    scale: 4 crew-equivalents, about 20 kg of water a day.
+    proves: Make-up under 50 g per person a day with the whole loop closed.
   - phase: pilot
-    what: The loop flown and run on a crewed station or base.
-    scale: A small crew in space.
-    proves: It works in microgravity or on the Moon as a utility.
+    what: The loop flown for a year on a commercial space station.
+    scale: 4 people in orbit, about 20 kg of water a day for 365 days.
+    proves: It works in microgravity, with real crews and real failures.
   - phase: first-plant
-    what: The loop supplying a town-sized habitat's water with only tiny make-up.
-    scale: A settlement.
-    proves: A community's water is recycled, not imported.
+    what: The water and oxygen plant of a lunar base, its small make-up drawn from lunar ice.
+    scale: 50 people, about 250 kg of water a day.
+    proves: A settlement whose water is recycled, not delivered.
   - phase: fleet
-    what: Standard water utilities on habitats and ships, and dry-city versions on Earth.
-    scale: Inner solar system and arid Earth.
-    proves: Near-total water recycling is ordinary infrastructure.
+    what: A standard plant for habitats around the Moon and at L5, and for long ships.
+    scale: 10,000 people, about 50 t of water a day.
+    proves: Closure that holds up across many sites and crews.
   - phase: civilization
-    what: Water treated as a closed, reused resource everywhere people live off abundant water.
-    scale: Planet and space.
-    proves: Settlement no longer gated by water supply.
+    what: Every settlement off Earth on closed water.
+    scale: A million people, about 5,000 t a day with under 50 t of make-up.
+    proves: Water no longer limits where people can live.
 risks: >-
-  Drying brine and recapturing vapour cost energy, which only abundant clean power makes cheap; the
-  loop is designed for where that power exists. Biological polishing can be upset by shock loads, so
-  the loop buffers and can bypass to physical-only treatment. Long-term reliability is the real test,
-  which the year-long prototype addresses before any community depends on it.
+  Carbon from cracked methane can foul hot surfaces, which is what stopped earlier Bosch reactors; the
+  carbon is grown on cartridges that are swapped before they clog, and if that fails the plasma
+  pyrolysis route still returns 60 to 75 percent of the hydrogen, cutting the loss by more than half.
+  Brine dryers lose capacity as they are reused; heated plates in vacuum are the next try, and the
+  faecal dryer can take brine too. A loop that never sheds water can build up microbes and trace
+  organics, so every stream is monitored and the loop can heat-sterilise itself. Each added reactor
+  costs mass and power; where ice from the Moon or the asteroids is cheap, the loop is built only as
+  closed as the local price of water makes worthwhile.
 scene:
   kind: machine
-  focus: A water loop with brine-drying and polishing stages, almost nothing leaving but pure water.
-  params: { shape: membrane, spin: 0.3 }
+  focus: A water loop with a glowing methane cracker beside it, carbon building on a cartridge while hydrogen returns to the water.
+  params: { shape: electrolyser, spin: 0.3 }

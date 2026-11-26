@@ -1,0 +1,100 @@
+id: heat-census
+title: The Heat Census
+domain: environment
+for: [earth-monitoring, heat-budget]
+pitch: >-
+  A public map, updated every month at 1 km, of the heat that human energy use releases at Earth's
+  surface, built twice, once from energy statistics and once from satellites and city flux towers,
+  so every region knows its heat the way it knows its carbon.
+principle: >-
+  Almost all the energy people use ends as heat where it is used, within days: by the first law, the
+  fuel burned in an engine, the electricity in a server and the food a person eats all leave as
+  warmth, apart from small shares stored in materials or sent to space as light. So heat can be
+  counted from the bottom up. Fuel sales, metered electricity and gas, traffic counts and the
+  metabolism of people (about 100 W each) are spread onto a 1 km grid by population, buildings and
+  night lights, as Dong, Varquez and Jin have done for single years. Heat can also be measured from
+  the top down, as the term that closes the surface energy balance: net radiation plus human heat
+  equals the heat carried off by warm air and evaporation plus the heat stored in the ground and
+  buildings. Towers that measure turbulence (eddy covariance) give the air terms directly, and
+  thermal satellites at 60 to 70 m (ECOSTRESS now, TRISHNA from 2027) give surface temperatures
+  across a whole city. In Toulouse, Pigeon and colleagues ran both methods at once and found about
+  70 W/m² of human heat in the centre in winter and 15 in summer. The range the census must cover
+  spans four orders of magnitude: about 0.03 W/m² averaged over the globe, 0.4 to 0.7 over the
+  United States and western Europe, and hundreds in the densest city blocks (577 in one New York
+  grid cell in the LUCY model). The plan's global limit is {heat-limit}, so a census good to 15
+  percent at 1 km and to a few thousandths of a watt per square metre over the globe is enough to
+  manage it. Where the two methods disagree, the gap points to missing or wrong energy data, as
+  satellite methane did for oil and gas inventories.
+buildsOn:
+  - text: Dong, Varquez and Kanda built a global map of anthropogenic heat at 30 arc-seconds and hourly resolution for 2013, from energy statistics adjusted by night lights.
+    url: https://doi.org/10.1016/j.atmosenv.2016.11.040
+    year: 2017
+  - text: Varquez and colleagues mapped present and 2050s anthropogenic heat for the whole world at about 1 km, as typical hourly values for each month.
+    url: https://doi.org/10.1038/s41597-021-00850-w
+    year: 2021
+  - text: Jin and colleagues estimated anthropogenic heat over land at 0.05 W per square metre on average in 1970, 0.13 in 2015 and 0.16 in 2050, from national energy data.
+    url: https://doi.org/10.1038/s41597-019-0143-1
+    year: 2019
+  - text: Allen, Lindberg and Grimmond's LUCY model estimated anthropogenic heat worldwide at 2.5 arc-minutes, with grid-cell peaks of 577 W per square metre in New York and 106.7 in London.
+    url: https://doi.org/10.1002/joc.2210
+    year: 2011
+  - text: Pigeon and colleagues derived anthropogenic heat in central Toulouse from tower energy-balance measurements, about 70 W per square metre in winter and 15 in summer, and checked it against an independent inventory.
+    url: https://doi.org/10.1002/joc.1530
+    year: 2007
+  - text: Chrysoulakis and colleagues mapped surface energy fluxes for London, Basel and Heraklion at 100 m from Sentinel satellites, and found the satellite method located the hot spots but underestimated anthropogenic heat.
+    url: https://doi.org/10.1038/s41598-018-29873-x
+    year: 2018
+  - text: CNES and ISRO's TRISHNA mission is due to launch in 2027, with thermal infrared products at 60 m every three days.
+    url: https://cnes.fr/en/projects/trishna
+    year: 2026
+experiment:
+  goal: Show that the bottom-up and top-down censuses agree for one city, month by month at 1 km, and find where they do not.
+  setup: >-
+    One metropolitan region with flux towers already running, such as London or Basel. The bottom-up
+    census is built from hourly electricity and gas by substation, fuel sales, traffic counts and
+    population on a 1 km grid. The top-down census combines ECOSTRESS surface temperatures,
+    Sentinel-2 surface maps and weather reanalysis in a surface energy balance model. Four new
+    eddy-covariance towers on tall buildings, from the centre to the suburbs, run for a year
+    alongside the existing ones.
+  measure: Anthropogenic heat by each method for each cell and hour; turbulent fluxes and storage at each tower; the gap between methods by season, time of day and land use; the error of each against the tower residuals.
+  succeedsIf: The two censuses agree with each other and with the tower residuals to within 15 percent on monthly means for 1 km cells in the urban core, and within 30 percent hour by hour, over a full year.
+  costUsd: 2000000
+  months: 18
+path:
+  - phase: bench
+    what: Both censuses for one city, checked against towers for a year.
+    scale: One metropolitan region, about 1,500 cells of 1 km.
+    proves: The two methods agree where both can be checked.
+  - phase: prototype
+    what: The same in ten cities on four continents, in different climates and with different energy data.
+    scale: 10 cities, about 40 towers.
+    proves: The method transfers between climates and data systems.
+  - phase: pilot
+    what: A census of a whole continent, monthly, from national energy statistics and TRISHNA's thermal images.
+    scale: About 10 million square km.
+    proves: National heat totals can be published alongside greenhouse gas inventories.
+  - phase: first-plant
+    what: The global census, monthly at 1 km, open to all and reported by countries with their greenhouse gases.
+    scale: All of Earth's {earth-land-area} of land, about 150 million 1 km cells, every month.
+    proves: Heat is counted everywhere, as carbon is.
+  - phase: fleet
+    what: Dedicated thermal satellites at 30 to 50 m with daily revisits, as Copernicus planned for LSTM, and towers in thousands of cities.
+    scale: Daily thermal images at 30 to 50 m, and towers in about 1,000 cities.
+    proves: Heat is measured independently of what countries report.
+  - phase: civilization
+    what: The census is the ledger the heat cap and heat permits run on as Earth's power use nears {earth-cap}.
+    scale: All {earth-area} of the surface, to within 5 percent.
+    proves: The heat limit of {heat-limit} can be kept and checked.
+risks: >-
+  Satellite methods underestimate human heat and give some negative cells, as Chrysoulakis and
+  colleagues found; the census leans on the towers and the bottom-up count where satellites are
+  noisy, and uses satellites to find the hot spots. Energy data are commercially sensitive or
+  missing in many countries; night lights and building maps fill the gaps, with the error stated for
+  each cell. Missions end without warning, as the thermal radiometer of NASA's Surface Biology and
+  Geology mission did in 2025, so the census is built to use whichever thermal missions are flying,
+  from Landsat to TRISHNA. Heat does not stay where it is released; the census counts release, and
+  climate models carry it from there.
+scene:
+  kind: globe
+  focus: Earth at night, each city's heat drawn as a glow from deep red to white, flux towers marked as points of light.
+  params: { lights: 0.9, look: cities }

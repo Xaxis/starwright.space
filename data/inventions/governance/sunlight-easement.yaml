@@ -22,14 +22,19 @@ principle: >-
 buildsOn:
   - text: The Prescription Act 1832, which makes twenty years of uninterrupted light an absolute right.
     url: https://www.legislation.gov.uk/ukpga/Will4/2-3/71/section/3
+    year: 1832
   - text: Illinois Central Railroad v. Illinois (1892), the root of the public trust doctrine.
     url: https://tile.loc.gov/storage-services/service/ll/usrep/usrep146/usrep146387/usrep146387.pdf
+    year: 1892
   - text: The ENMOD Convention, which since 1978 has banned hostile modification of the environment.
     url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-1&chapter=26&clang=_en
+    year: 1978
   - text: DSCOVR, watching the Sun and Earth's sunlit side from the Sun-Earth L1 point since 2015.
     url: https://science.nasa.gov/mission/dscovr/
+    year: 2015
   - text: The Montreal Protocol, the precedent for a treaty every country joined to protect a shared part of the sky.
     url: https://ozone.unep.org/all-ratifications
+    year: 2009
 experiment:
   goal: Measure what share of a full swarm's power sunlight easements for Earth, the Moon, Mars and Venus would cost, and whether a licensing check can enforce them.
   setup: >-
@@ -44,19 +49,19 @@ experiment:
 path:
   - phase: bench
     what: The orbital study and red team.
-    scale: A simulated swarm and four worlds.
+    scale: 1 simulated swarm, 4 worlds.
     proves: The easement is cheap and can be checked.
   - phase: prototype
     what: The cone check built into the orbit register for the first solar power collectors in Earth orbit, with one light meter at the Sun-Earth L1 point.
-    scale: Earth's first space solar plants.
+    scale: Earth's first space solar plants, 1 L1 light meter.
     proves: The register can screen real orbits and the meter can see a shadow.
   - phase: pilot
     what: A treaty adopts the easement for Earth and the Moon as space solar power begins, with fines and loss of licence for a breach.
-    scale: The Earth and Moon system.
+    scale: The Earth-Moon system, 2 worlds.
     proves: The law can be agreed before any shadow is cast.
   - phase: first-plant
     what: The federation extends the easement to Mars, Venus and every habitat that relies on sunlight.
-    scale: Every inhabited world.
+    scale: Every inhabited world, 4 or more.
     proves: The easement covers all worlds, not only Earth.
   - phase: fleet
     what: Every collector the swarm builds is licensed through the cone check.

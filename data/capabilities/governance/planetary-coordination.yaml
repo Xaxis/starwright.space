@@ -16,7 +16,7 @@ exists:
   - text: The Montreal Protocol on ozone-depleting substances has 198 parties; with the Vienna Convention it was the first multilateral environmental treaty to reach universal ratification, in 2009.
     url: https://ozone.unep.org/all-ratifications
     year: 2009
-  - text: The Paris Agreement had 194 parties in 2026, nearly every country, but its national pledges are not enforceable.
+  - text: The Paris Agreement had 194 parties in 2026, nearly every country, but its national pledges are not enforceable, and the United States' withdrawal took effect in January 2026.
     url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7-d&chapter=27&clang=_en
     year: 2026
   - text: Nordhaus showed in 2015 that without penalties on non-members only weak climate coalitions are stable, while small trade penalties on outsiders, a climate club, can hold a large coalition with deep cuts.
@@ -25,13 +25,17 @@ exists:
   - text: The EU's Carbon Border Adjustment Mechanism, which charges importers for the carbon in steel, cement and other goods, entered its definitive regime on 1 January 2026.
     url: https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en
     year: 2026
-  - text: Carbon pricing covered around 28 percent of global emissions in 2025 and raised over 100 billion US dollars in 2024.
+  - text: Carbon pricing covered nearly 30 percent of global emissions in 2025 and raised over 107 billion US dollars that year.
     url: https://www.worldbank.org/en/publication/state-and-trends-of-carbon-pricing
-    year: 2025
+    year: 2026
+  - text: Flanner estimated in 2009 that humanity's direct waste heat warms the planet by only about 0.028 watts per square metre on average, but by around 0.4 and 0.7 over the continental United States and western Europe.
+    url: https://doi.org/10.1029/2008GL036465
+    year: 2009
 gap: >-
   Paris has almost every country but no way to make them meet their pledges; the Montreal Protocol
-  worked because it had trade measures and a narrow, cheap target. Nothing yet links carbon prices
-  across borders into one club, and no treaty or agency even measures waste heat, let alone caps it.
+  worked because it had trade measures and a narrow, cheap target. Carbon pricing still covers under
+  30 percent of emissions, nothing links those prices across borders into one club, and no treaty or
+  agency even measures waste heat, let alone caps it.
 inventions: [heat-permits]
 scene:
   kind: globe

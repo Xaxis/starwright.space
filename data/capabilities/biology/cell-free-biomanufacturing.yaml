@@ -10,9 +10,9 @@ summary: >-
   and chemicals on demand, start and stop in minutes, and can run where a living culture would die:
   on a spacecraft, in a field clinic, at a point of use.
 target: >-
-  Run biological synthesis outside any living cell, continuously and at scale, regenerating its own
-  machinery as it works, so that proteins, vaccines, fine chemicals and materials can be made
-  on demand anywhere, including off Earth.
+  Run biological synthesis outside any living cell, regenerating its own machinery so it holds output
+  above 1 gram per litre for days rather than the few hours a batch lasts, so that proteins, vaccines,
+  fine chemicals and materials can be made on demand anywhere, including off Earth.
 exists:
   - text: An all-E.-coli cell-free system was optimised to make up to 2.3 milligrams of protein per millilitre in a simple batch, enough for practical production.
     url: https://doi.org/10.1016/j.biochi.2013.11.025
@@ -23,11 +23,18 @@ exists:
   - text: A cell-free chemoenzymatic route fixed carbon dioxide into starch at about 8.5 times the rate of maize, showing cell-free systems can outrun living ones at a chosen task.
     url: https://doi.org/10.1126/science.abh4049
     year: 2021
+  - text: Freeze-dried, cell-free reactions embedded in paper ran engineered gene circuits outside the lab, including colorimetric diagnostic sensors, stable at room temperature and read by eye.
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4243060/
+    year: 2014
+  - text: Sutro Biopharma runs cell-free protein synthesis under good manufacturing practice to make therapeutic proteins for the clinic, and says its platform yields protein in under a day and scales from research to commercial production with the extract unchanged.
+    url: https://www.sec.gov/Archives/edgar/data/1382101/000095017025038884/stro-20241231.htm
+    year: 2025
 gap: >-
   Cell-free systems still rely on machinery harvested from living cells, above all the ribosome, which
-  no cell-free system has yet made for itself. They run in batches, lose activity over hours, and cost
-  far more per gram than fermentation. A system that regenerates its own ribosomes and runs for days
-  would change that, and does not yet exist.
+  no cell-free system has yet made for itself. A reconstituted system has rebuilt 36 of its own
+  proteins but none of the ribosome's, and batch output near 2.3 milligrams per millilitre fades
+  within a few hours. A system that regenerates its own ribosomes and holds output for days would
+  change that, and does not yet exist.
 inventions: [self-regenerating-cell-free-reactor]
 scene:
   kind: machine

@@ -9,27 +9,34 @@ summary: >-
   and help is far away. As the climb moves industry and people off Earth past the heat ceiling, from
   {year-k09}, keeping them healthy becomes a condition of the whole project, not a footnote.
 target: >-
-  Keep people healthy through long stays and journeys in space, protecting them from radiation and
-  the loss of weight, and giving them the diagnosis and treatment they need far from Earth, so that
-  living and working off world is as safe as a demanding job on it.
+  By {year-k09}, every crew member's dose kept under 100 mSv a year on any long stay or journey, so
+  that 6 years off Earth fit inside NASA's 600 mSv career limit; bone loss held under 0.1 percent a
+  month, a tenth of today's; and on every base and ship a clinic that can diagnose and treat what a
+  district hospital on Earth can, so that living and working off world is as safe as a demanding
+  job on it.
 exists:
-  - text: A round trip to Mars with current shielding would give about 0.66 sievert of radiation, against a NASA career limit of 600 millisievert, so radiation is a hard constraint on long missions.
-    url: https://doi.org/10.1126/science.1235989
+  - text: Curiosity's radiation detector measured 1.8 mSv a day on its 253-day cruise to Mars; the transit legs of a round trip with current propulsion would give about 0.66 Sv.
+    url: https://www.swri.org/newsroom/press-releases/swri-led-team-calculates-the-radiation-exposure-associated-trip-mars
     year: 2013
-  - text: On the Moon's surface the galactic-cosmic-ray dose-equivalent rate is about 57 microsievert per hour, measured by Chang'e-4, setting how much shielding a lunar base needs.
-    url: https://doi.org/10.1126/sciadv.aaz1334
+  - text: Chang'e-4's lander measured a dose rate of around 60 microsievert an hour on the Moon's surface in 2019, some 200 times that on Earth's surface and 5 to 10 times that on a flight from Frankfurt to New York.
+    url: https://www.dlr.de/en/latest/news/2020/03/20200925_how-intense-and-dangerous-is-cosmic-radiation-on-the-moon
     year: 2020
-  - text: Crews in low Earth orbit accumulate roughly 0.2 to 0.5 millisievert of effective dose per day, and the NASA standard caps a career at 600 millisievert.
-    url: https://doi.org/10.1016/j.zemedi.2023.06.005
-    year: 2024
-  - text: The NASA Space Radiation Laboratory simulates galactic cosmic rays on the ground to study shielding and biological countermeasures for deep-space crews.
+  - text: NASA's standard NASA-STD-3001 caps a career's spaceflight dose at 600 mSv and notes that shielding is not effective against galactic cosmic rays, because of the secondary radiation they produce in shielding and tissue.
+    url: https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf
+    year: 2023
+  - text: The NASA Space Radiation Laboratory at Brookhaven uses heavy-ion beams from its Booster accelerator to simulate the cosmic rays found in space, for studies of radiation biology and shielding.
     url: https://www.bnl.gov/nsrl/
+    year: 2026
+  - text: NASA's evidence report on bone fracture risk finds that astronauts lose areal bone mineral density at an average of 1 to 1.5 percent a month at the hip and spine, more each month than elderly people lose at the same sites in a year.
+    url: https://humanresearchroadmap.nasa.gov/Evidence/reports/Bone%20Fracture%20Evidence%20Report_07-18-2024.pdf
     year: 2024
 gap: >-
-  Shielding enough mass against cosmic rays is heavy and costly, no drug yet reliably protects people
-  from long-term radiation damage, and the loss of bone and muscle without weight still limits long
-  stays. Artificial gravity, radioprotective medicine and on-site care all need to be built and
-  proven before crews spend years off Earth safely.
+  On the Moon's surface cosmic rays give about 60 microsievert an hour, about 530 mSv a year, so an
+  unshielded crew would reach the 600 mSv career limit in about 14 months; the target needs that
+  cut more than 5 times. The transit legs of a Mars round trip give about 660 mSv, over the limit
+  before any time on the surface. Shielding mass helps little against cosmic rays and no drug yet
+  protects people from them. Bone density falls 1 to 1.5 percent a month, 10 to 15 times the
+  target, and no artificial gravity has yet been built for a crew.
 inventions: [radioprotection-repair-regimen]
 scene:
   kind: habitat

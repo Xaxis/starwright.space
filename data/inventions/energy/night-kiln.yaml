@@ -31,9 +31,9 @@ buildsOn:
   - text: NASA's Fission Surface Power design converts reactor heat with four 12 kWe Stirling converters and rejects it from radiators above 400 K.
     url: https://ntrs.nasa.gov/api/citations/20230006731/downloads/NETS%202023%20FSP%20Presentation%20FINAL.pdf
     year: 2023
-  - text: NASA Glenn's Advanced Stirling Radioisotope Generator made about 130 W of electricity at about 26 percent efficiency.
-    url: https://en.wikipedia.org/wiki/Advanced_Stirling_radioisotope_generator
-    year: 2014
+  - text: NASA Glenn's Advanced Stirling Radioisotope Generator was designed for 140 W of electricity at 28 percent efficiency, 4.4 W per kilogram.
+    url: https://ntrs.nasa.gov/api/citations/20180005489/downloads/20180005489.pdf
+    year: 2018
 experiment:
   goal: Charge a fused-regolith core with concentrated light in vacuum, hold it under loose simulant, and run an engine from it through a full simulated lunar night.
   setup: >-
@@ -57,19 +57,19 @@ path:
     proves: Building in place on the Moon, in real dust, vacuum and thermal cycling.
   - phase: pilot
     what: Night power for the first lunar mine or the first seed factory, from {seed-year}.
-    scale: About 100 kW.
+    scale: About 100 kW, from about 900 t of fused regolith.
     proves: A base runs through the night with no reactor and no imported batteries.
   - phase: first-plant
     what: A field of kilns built by the lunar industry itself with its own mirrors and diggers.
-    scale: About a megawatt of night power.
+    scale: 1 MW of night power, about 9,000 t of fused regolith.
     proves: Kilns are cheap to make with the seed's own tools.
   - phase: fleet
     what: Kilns at every base away from the sunlit polar peaks.
-    scale: Tens of megawatts.
+    scale: 50 MW at 20 bases, about 450,000 t of fused regolith.
     proves: Industry anywhere on the Moon, not only at the poles.
   - phase: civilization
     what: The Moon's industry running day and night on sunlight alone.
-    scale: Gigawatts of night power across the Moon.
+    scale: 1 GW of night power, about 9 million t of fused regolith.
     proves: Lunar industry needs nothing from Earth to keep working.
 risks: >-
   Sintered regolith may crack under repeated heating and lose contact with its heat pipes; a bed of

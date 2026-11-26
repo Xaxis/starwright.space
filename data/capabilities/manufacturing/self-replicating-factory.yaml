@@ -10,17 +10,17 @@ summary: >-
   {doubling-time}. From a {seed-mass} seed in {seed-year}, the model reaches Type I in
   {year-type-1}.
 target: >-
-  A seed factory of about {seed-mass}, landed on the Moon, that makes nearly all of its own parts
-  from regolith and sunlight and doubles its mass every {doubling-time}, so that a few dozen
-  doublings take the industry from one seed to the swarm.
+  A seed factory of about {seed-mass}, landed on the Moon, that makes at least 95 percent of its
+  own parts by mass from regolith and sunlight and doubles its mass every {doubling-time}, so that
+  a few dozen doublings take the industry from one seed to the swarm.
 exists:
-  - text: NASA's 1980 study of a self-replicating lunar factory sized a 100-tonne seed and judged 90 to 96 percent closure, the share of its own parts it makes, attainable.
-    url: https://ntrs.nasa.gov/citations/19830007077
+  - text: NASA's 1980 study of a self-replicating lunar factory sized a 100-ton seed and expected all but 4 to 10 percent of its parts, the vitamin parts such as chips and bearings, to be made on the Moon.
+    url: https://ntrs.nasa.gov/api/citations/19830007081/downloads/19830007081.pdf
     year: 1980
-  - text: RepRap, the open self-copying 3D printer, printed a complete set of its own printed parts in 2008, 48 percent of all its parts excluding fasteners.
+  - text: RepRap, the open self-copying 3D printer, printed a complete set of its own printed parts in 2008; by part count, excluding fasteners, it made 48 percent of itself.
     url: https://researchportal.bath.ac.uk/en/studentTheses/towards-a-self-manufacturing-rapid-prototyping-machine/
     year: 2009
-  - text: FANUC's robot factory in Japan has robots building robots at up to 6,000 a month, and has run unsupervised for weeks.
+  - text: FANUC's headquarters factory in Japan can make 6,000 robots a month, its own robots assembling them.
     url: https://www.fanuc.eu/at-en/node/1472
     year: 2026
   - text: Metzger and colleagues showed lunar industry could bootstrap from about 12 tonnes landed, growing over about twenty years as it learns to make more of itself.
@@ -34,9 +34,9 @@ exists:
     year: 2022
 gap: >-
   No machine has yet copied itself from raw rock. The hardest parts are the ones only specialist
-  plants make today: chips, bearings, magnets and precise optics. Closure stalls at about half for
-  printers and near nothing for electronics, and nobody has measured a doubling time for a whole
-  industrial loop.
+  plants make today: chips, bearings, magnets and precise optics. Measured closure stalls at about
+  half for printers and near nothing for electronics, against the 90 percent or more a seed needs,
+  and nobody has measured a doubling time for a whole industrial loop.
 inventions: [seed-foundry, glassfab, accuracy-seed, process-genome]
 scene:
   kind: replicator

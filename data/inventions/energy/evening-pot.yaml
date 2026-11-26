@@ -1,0 +1,92 @@
+id: evening-pot
+title: The Evening Pot
+domain: energy
+for: [energy-access]
+pitch: >-
+  An insulated electric cooker with a tank of meltable sugar alcohol in its base, wired straight to
+  a few solar panels, which stores noon's sunshine as heat at cooking temperature so a family can
+  cook supper after dark with no battery, inverter or charcoal.
+principle: >-
+  A household cooking on an electric pressure cooker uses about 1.16 kWh a day. Panels are now cheap:
+  modules sell for {pv-module-price}, so the 600 W a household needs costs tens of dollars before
+  shipping and mounting. Direct drive already works:
+  MECS ran a 500 W direct-current pressure cooker from two 280 W panels with no battery or controls,
+  for about 185 US dollars wholesale. Its limit is the clock, because it cooks only while the sun is
+  up and most families cook their main meal after dark. A battery fixes that, and it is the costly
+  part of a 400 to 1,000 dollar system. The Evening Pot stores heat instead. Its base is a sealed,
+  finned tank of erythritol, a food-grade sweetener that melts at about 118 °C and takes up about
+  340 kJ per kilogram as it does. Heating elements in the tank run straight off the panels, with a
+  simple switch that changes their resistance as the light changes so the panels work near their best
+  point. An evening meal that takes about 0.6 kWh in a pressure cooker needs about 3 MJ from the store
+  once losses are counted. Melting plus about 20 K of sensible heat gives about 0.4 MJ per kilogram,
+  so 7.5 kg of erythritol does it. Under 10 cm of mineral wool the tank leaks about 10 W, a tenth of
+  its heat between mid-afternoon and supper. At supper the cook seats the pot in the tank's hot well
+  and heat flows in by conduction; at midday the same elements cook lunch directly.
+buildsOn:
+  - text: Watkins and colleagues proposed insulated solar electric cooking, a solar panel connected straight to an electric heater inside a well-insulated chamber, and tested a 100 US dollar prototype in Uganda.
+    url: https://econpapers.repec.org/RePEc:eee:deveng:v:2:y:2017:i:c:p:47-52
+    year: 2017
+  - text: MECS ran a 500 W, 24 V direct-current electric pressure cooker in Malawi straight from two 280 W panels with no battery or controls, at a wholesale cost of about 185 US dollars plus wiring.
+    url: https://mecs.org.uk/?p=5758
+    year: 2021
+  - text: MECS measured an average of 1.16 kWh a day for Kenyan households cooking on BURN's electric pressure cookers, and 0.07 kWh per person per dish.
+    url: https://mecs.org.uk/wp-content/uploads/2024/03/Understanding-the-impact-of-EPCs-in-East-Africa-Working-Paper-FINAL_25-3-24.pdf
+    year: 2023
+  - text: Hivos's Beyond Fire study priced a solar home system sized for a 700 W pressure cooker at 550 to 625 euros, or 18 to 21 euros a month over three years.
+    url: https://hivos.org/assets/2021/02/Beyond-fire_How-to-achieve-electric-cooking-1.pdf
+    year: 2019
+  - text: Batchelor and colleagues showed that it is possible to cook with a power source of less than 500 W.
+    url: https://ideas.repec.org/a/gam/jeners/v11y2018i11p2933-d178666.html
+    year: 2018
+experiment:
+  goal: Show that a pot charged only by panels at midday cooks a household's evening meal from stored heat day after day, and measure how much charcoal it replaces.
+  setup: >-
+    Twelve units built in an East African university workshop, each a 6 L insulated pressure pot
+    seated in a finned tank of 7.5 kg of erythritol with two 300 W elements, wired to 600 W of panels
+    through a switched-resistance matcher. Two units run on an outdoor rig with thermocouples and a
+    pyranometer. Ten go to households that now cook on charcoal, with kitchen performance tests before
+    and after and a temperature logger in each tank.
+  measure: Heat stored and delivered each day; tank temperature through each day and night; share of evening meals cooked on stored heat alone; charcoal used per household per day before and after; supercooling and breakdown of the erythritol after repeated melting; cost of parts.
+  succeedsIf: Over 90 days the household units cook the evening meal from stored heat on at least 80 percent of days, households cut charcoal use by more than 70 percent against their own baseline, the rig's tanks keep more than 90 percent of their capacity after 300 melt-freeze cycles, and pot, tank and controls cost under 150 US dollars in parts.
+  costUsd: 600000
+  months: 18
+path:
+  - phase: bench
+    what: The outdoor rig and ten households.
+    scale: 12 units, 10 of them in homes.
+    proves: Stored heat cooks real evening meals, and how much charcoal it saves.
+  - phase: prototype
+    what: Pots sold on pay-as-you-go through an existing solar company in three countries.
+    scale: 500 households.
+    proves: Payments, repairs, and whether families still use it after the first months.
+  - phase: pilot
+    what: A local assembly line with its own service network.
+    scale: 50,000 pots a year.
+    proves: The cost at volume, and that repairs can be made near the customer.
+  - phase: first-plant
+    what: A regional factory making pots, tanks and controls.
+    scale: 1 million pots a year, with 600 MW of panels.
+    proves: Monthly payments below what the households spent on charcoal.
+  - phase: fleet
+    what: Pots in homes across sub-Saharan Africa and South Asia.
+    scale: 50 million households, about 30 GW of panels.
+    proves: Clean cooking spreads by sale, without a grid or gas cylinders.
+  - phase: civilization
+    what: Clean cooking for everyone who now cooks on smoke, on the way to {power-k08}.
+    scale: About 400 million households, about 240 GW of panels.
+    proves: No one breathes cooking smoke.
+risks: >-
+  Erythritol supercools: it can stay liquid well below its melting point and then give up its heat
+  too cold to cook with. Nucleating additives or a cold seed point in the tank are the first fixes,
+  and a store of cast iron or rock heated to about 300 °C is the fallback. Erythritol can break down
+  when held hot in air for many cycles, so the tank is sealed under nitrogen and the rig measures
+  its ageing. Solid erythritol conducts heat poorly, so heat may reach the pot too slowly to boil
+  fast; more fins, or a pot that sits deeper in the well, are the next tries. Batteries keep getting
+  cheaper, and if a small lithium battery with an ordinary cooker comes out cheaper over the
+  product's life, the pot's case narrows to places where replacing batteries is hard; the field trial
+  compares costs with real numbers. A tank at 120 °C in a kitchen needs a casing that stays cool to
+  the touch and a lid that locks.
+scene:
+  kind: machine
+  focus: A pressure pot seated in its warm heat store after dark, under the roof panels that charged it at noon.
+  params: { shape: battery, spin: 0.1 }

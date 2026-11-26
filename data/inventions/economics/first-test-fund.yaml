@@ -1,0 +1,93 @@
+id: first-test-fund
+title: The First-Test Fund
+domain: economics
+for: [breakthrough-funding]
+pitch: >-
+  A standing fund that pays any capable team to run a published first experiment exactly as written,
+  its setup, measurements, pass mark, budget and months, and pays the same whether the test passes
+  or fails, so that every idea on the climb is tested within a year of being proposed.
+principle: >-
+  Most of what this project proposes stands or falls on one decisive experiment, and most of those
+  cost a few million dollars, from under a million to tens of millions. The slow and costly part of
+  funding such work is deciding: panels judge how plausible an idea looks, which favours ideas like
+  past ones, and a programme director can run only a few programmes at once. A first experiment
+  written down in advance changes what has to be judged. Its setup, measurements and pass criterion
+  are fixed before any data exist, as in a registered report, so the fund judges only whether a team
+  can run that test, at that cost, in that time. Money is paid by milestone, as ARPA-E's directors
+  review theirs each quarter: 40 percent at the start, 40 percent with the mid-term data and 20
+  percent when the full data and code are public. The fund pays the same for a pass or a fail,
+  because a well-run failure is worth as much to everyone deciding what to build next, and paying
+  only for passes would reward bending the test. A second team that repeats a passed test earns a
+  replication award, and only a replicated pass moves an invention to its prototype, where programme
+  funders and the Wright Commitment take over. The economics are those of information. If a pilot
+  costs 100 million dollars and an untested idea has one chance in five of working, building the
+  pilot blind wastes 80 million dollars on average; a 2 million dollar test that tells the two cases
+  apart is worth up to forty times its cost. A fund of 200 million dollars a year, about a twentieth
+  of DARPA's budget, runs dozens to a hundred such tests a year.
+buildsOn:
+  - text: The Center for Open Science's Registered Reports put a study's methods through peer review before results are known, with in-principle acceptance for those that pass, and over 300 journals use the format.
+    url: https://www.cos.io/initiatives/registered-reports
+    year: 2026
+  - text: The National Academies found ARPA-E's programme directors agree technical milestones with each performer, review them quarterly, and ended 25 of 440 completed projects early, most often for missing milestones.
+    url: https://www.nationalacademies.org/read/24778/chapter/5
+    year: 2017
+  - text: DARPA asks every programme to answer the Heilmeier Catechism, eight questions that include what the mid-term and final exams for success are.
+    url: https://www.darpa.mil/about/heilmeier-catechism
+    year: 2026
+  - text: Convergent Research's Focused Research Organizations are nonprofits given 20 to 50 million dollars for 3 to 7 years to reach set technical milestones and publish tools and data.
+    url: https://www.convergentresearch.org/about-fros
+    year: 2026
+  - text: Kremer, Levin and Snyder found that the pneumococcal advance market commitment, a promise to buy vaccines once they existed, brought three vaccines to market and saved an estimated 700,000 lives.
+    url: https://doi.org/10.1257/pandp.20201017
+    year: 2020
+  - text: Renaissance Philanthropy reports it raised or steered 533 million dollars of philanthropic money into science and technology programmes in its first two years.
+    url: https://www.renaissancephilanthropy.org/
+    year: 2026
+experiment:
+  goal: Show that paying for pre-specified first experiments by milestone gets more decisive results per dollar, sooner, than ordinary grants of the same size.
+  setup: >-
+    A 20 million dollar round that offers to fund 10 to 15 first experiments listed by this project,
+    each under 2 million dollars, open to any lab or company worldwide. Teams apply with a two-page
+    plan and a budget; a small panel checks only capability and cost, and awards within eight weeks.
+    A matched set of ordinary grants of similar size in the same fields, from public funders, is
+    followed over the same period.
+  measure: Time from call to award and from award to result; the share of tests run as specified; the share with a decisive result, pass or fail; cost overruns; replications attempted; money later raised for the inventions that passed.
+  succeedsIf: Awards are made within eight weeks of application, at least 80 percent of tests report a decisive result within their stated months plus a quarter, and the cost per decisive result is at most half that of the matched grants.
+  costUsd: 22000000
+  months: 30
+path:
+  - phase: bench
+    what: One call for 10 to 15 tests drawn from this project's inventions.
+    scale: 20 million dollars.
+    proves: Teams can run pre-specified tests fast, on budget, with decisive results.
+  - phase: prototype
+    what: A standing fund that takes new experiments from anyone who writes one to the same standard.
+    scale: About 200 million dollars a year, dozens to a hundred tests.
+    proves: The model works beyond hand-picked tests.
+  - phase: pilot
+    what: A public agency, a philanthropy and an industry buyers' club pool money in one fund, with an open registry of specified experiments.
+    scale: About 1 billion dollars a year, about 400 tests.
+    proves: Pooled funders accept one standard for first tests.
+  - phase: first-plant
+    what: National research agencies set aside a share of their budgets for pre-specified tests, and journals publish every result as a registered report.
+    scale: About 5 billion dollars a year, about 2,000 tests.
+    proves: Testing ideas by experiment becomes ordinary research funding.
+  - phase: fleet
+    what: First tests run in orbit and on the Moon as access gets cheaper, for the climb's space inventions.
+    scale: About 10 billion dollars a year, about 100 tests in orbit and on the Moon of up to 100 kg each.
+    proves: The same fast testing works for space industry.
+  - phase: civilization
+    what: Every proposed invention on the climb tested within a year of being written down, its result public.
+    scale: "The climb's inventions, through {year-type-2}"
+    proves: Ideas are judged by experiment, quickly, and nothing is ruled out untested.
+risks: >-
+  Teams may claim they can run a test they cannot; the capability check and milestone payments limit
+  the loss, and a team's record follows it. A badly specified experiment wastes money even when run
+  well; the fund pays for one revision round before a test starts, and a failed test of a poor
+  design leads to a better design, not the end of the idea. Paying for failures could draw careless
+  teams; public data, reputation and replication awards reward care. Some first tests cost tens of
+  millions and need a programme funder rather than this fund.
+scene:
+  kind: network
+  focus: Hundreds of experiments as nodes on a board, each lighting up when its result comes in, pass or fail.
+  params: { shape: flat, nodes: 600, clusters: 12, links: 0.3, pulses: 0.7 }

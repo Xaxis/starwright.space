@@ -8,25 +8,32 @@ pitch: >-
   grow younger while staying themselves.
 principle: >-
   Every cell carries a kind of age written in chemical marks on its DNA, the epigenome, which drifts
-  as we grow old and governs which genes are on. A set of regulators, the reprogramming factors, can
-  reset those marks all the way back to an embryonic state, which is how a skin cell becomes a stem
-  cell in the lab. Pushed all the way, that is dangerous: cells lose their identity and can form
-  tumours. Dialled-Back Cell Age applies the same factors in brief, controlled pulses that move the
-  epigenome partway toward youth and then stop, restoring a cell's youthful pattern of gene activity
-  while keeping it a skin, muscle or nerve cell. Delivered by a tightly controlled genetic switch so
-  the dose and timing are exact, and guided by a clock that measures biological age, the therapy aims
-  to rejuvenate tissues a little at a time, lowering the age-related risk that drives most late-life
-  disease.
+  as we grow old and governs which genes are on. An epigenetic clock reads that age from methylation
+  patterns to within a few years, giving the therapy a quantitative endpoint. Four regulators, the
+  Yamanaka factors, can reset those marks all the way to an embryonic state, which is how a skin cell
+  becomes a stem cell. Pushed that far it is dangerous: cells lose their identity and can form
+  tumours. This
+  therapy uses three of the four factors (Oct4, Sox2, Klf4, leaving out the oncogene Myc) in brief,
+  cyclic pulses that move the epigenome partway toward youth and then stop. The dose is the schedule:
+  Ocampo and colleagues ran roughly two days of induction in each cycle in progeroid mice and
+  extended their lifespan by about 30 percent, and Lu and colleagues restored vision in 12-month-old
+  mice without the cells losing their identity. A tightly controlled genetic switch sets the pulse
+  length and the clock measures the result, so each round aims to take a few years off a tissue's
+  biological age while keeping it a skin, muscle or nerve cell, lowering the age-related risk that
+  drives most late-life disease.
 buildsOn:
-  - text: The Rejuvenation Roadmap tracks therapies against the 12 hallmarks of ageing, including epigenetic reprogramming, documenting the field this therapy advances.
+  - text: Lu and colleagues showed brief expression of three reprogramming factors reset aged retinal cells toward a younger epigenetic state and restored vision in mice, without the cells losing their identity, the in-vivo result this therapy generalises (Nature, 2020).
+    url: https://doi.org/10.1038/s41586-020-2975-4
+    year: 2020
+  - text: Ocampo and colleagues (Salk Institute) showed cyclic short-term expression of the four reprogramming factors reversed cellular signs of ageing and extended the lifespan of progeroid mice by about 30 percent, the in-vivo cyclic-dosing result this therapy refines to three factors.
+    url: https://www.salk.edu/news-release/turning-back-time-salk-scientists-reverse-signs-aging/
+    year: 2016
+  - text: The XPRIZE Healthspan competition offers a 101-million-USD purse for restoring muscle, cognitive and immune function lost to ageing, the clinical endpoint partial reprogramming aims at.
+    url: https://www.xprize.org/prizes/healthspan
+    year: 2026
+  - text: The Rejuvenation Roadmap tracks regulated therapies against the 12 hallmarks of ageing, including epigenetic reprogramming, documenting the field this therapy advances.
     url: https://www.lifespan.io/road-maps/the-rejuvenation-roadmap/
     year: 2024
-  - text: The XPRIZE Healthspan competition's 101-million-USD purse targets restoring function lost to ageing, the clinical endpoint partial reprogramming aims at.
-    url: https://www.xprize.org/
-    year: 2026
-  - text: Biology foundation models such as ESM3 help design the controlled genetic switches and read the regulatory networks a safe reprogramming therapy depends on.
-    url: https://www.evolutionaryscale.ai/blog/esm3-release
-    year: 2025
 experiment:
   goal: Show brief reprogramming pulses lower a tissue's biological age and restore function without loss of cell identity or raised cancer risk.
   setup: >-
@@ -37,34 +44,35 @@ experiment:
     Change in biological age by epigenetic clock; restored tissue function; retention of cell
     identity markers; tumour incidence against controls.
   succeedsIf: >-
-    Pulsed reprogramming lowers the tissue's biological age by a clear margin and restores a functional
-    measure, with cell identity kept and no rise in tumours over the study.
+    Pulsed reprogramming lowers the target tissue's epigenetic age by at least 5 years against
+    matched controls and restores a functional measure by a clear margin, with cell-identity markers
+    kept and no increase in tumour incidence over a 12-month follow-up.
   costUsd: 40000000
   months: 48
 path:
   - phase: bench
-    what: Pulsed partial reprogramming in cells and in one tissue of aged mice.
-    scale: Cell and single-tissue studies.
+    what: Pulsed partial reprogramming in cultured cells and in one tissue of aged mice.
+    scale: Cell studies and about 50 aged mice.
     proves: Age markers fall and function returns without loss of identity.
   - phase: prototype
-    what: Whole-body or multi-tissue rejuvenation in aged animals with safety followed long term.
-    scale: Animal lifespan studies.
+    what: Whole-body or multi-tissue rejuvenation in aged animals with safety followed for life.
+    scale: About 500 mice across lifespan studies.
     proves: The therapy is safe and effective across tissues over time.
   - phase: pilot
-    what: First-in-human trials on a tissue where the benefit and safety are easiest to read.
-    scale: Small patient cohorts.
+    what: First-in-human trials on a tissue where benefit and safety are easiest to read.
+    scale: 30 to 100 patients.
     proves: The approach is safe and lowers biological age in people.
   - phase: first-plant
     what: Approved therapies for specific age-related conditions.
-    scale: Patients with a target condition.
+    scale: 10,000 to 50,000 patients a year.
     proves: Reprogramming treats real disease of ageing.
   - phase: fleet
     what: Broader rejuvenation protocols as the safety record builds.
-    scale: Wide clinical use.
+    scale: About 1 million patients a year.
     proves: Healthspan extended across many tissues and conditions.
   - phase: civilization
-    what: Maintaining youthful function as routine care, compressing late-life illness.
-    scale: Planet, and crews who must stay well for decades off Earth.
+    what: Maintaining youthful function as routine care, on Earth and for crews who must stay well for decades off it.
+    scale: About 100 million people.
     proves: People stay healthy and capable for the length of a long climb.
 risks: >-
   Reprogramming risks cancer and loss of cell identity if it goes too far; the therapy is built around

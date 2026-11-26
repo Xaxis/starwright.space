@@ -5,37 +5,41 @@ stage: planet
 needs: [interplanetary-transport, asteroid-mining, in-space-propulsion]
 summary: >-
   The main belt holds {asteroid-belt-mass}, much of it metal and carbon-rich rock. It lies two to
-  three times as far from the Sun as Earth, so every tonne must travel for years and change speed
-  by several kilometres a second. Moving it by the billion tonnes, without burning much of it as
-  propellant, is a freight problem larger than all of Earth's shipping.
+  three times as far from the Sun as Earth, so every tonne must travel for more than a year and
+  change speed by about 11 km/s to reach an orbit near Earth's. Moving it by the billion tonnes,
+  without burning much of it as propellant, is a freight problem larger than all of Earth's
+  shipping.
 target: >-
-  Mass from the belt delivered to factories in the inner system at billions of tonnes a year, moved
-  mostly by sunlight and electricity, in a few years per trip and with a few percent lost on the
-  way.
+  About 1 billion tonnes a year delivered from the belt to factories in the inner system by
+  {year-planet}: the order of mass that space industry, grown from {seed-mass} in {seed-year} and
+  doubling every {doubling-time}, must absorb each year by then. Trips of 1 to 3 years, under 5
+  percent of each cargo spent as propellant, and under 1 percent lost on the way.
 exists:
-  - text: NASA's OSIRIS-REx returned 121.6 g of the asteroid Bennu to Earth on 24 September 2023.
-    url: https://en.wikipedia.org/wiki/OSIRIS-REx
-    year: 2023
-  - text: JAXA's Hayabusa2 returned 5.4 g of the asteroid Ryugu on 5 December 2020.
-    url: https://en.wikipedia.org/wiki/Hayabusa2
+  - text: NASA's OSIRIS-REx returned 121.6 g of material from the asteroid Bennu to Earth on 24 September 2023, the largest asteroid sample collected in space and twice the mission's requirement.
+    url: https://blogs.nasa.gov/osiris-rex/2024/02/15/nasa-announces-osiris-rex-bulk-sample-mass/
+    year: 2024
+  - text: JAXA's Hayabusa2 returned a total of 5.4 g of sample from two sites on the asteroid Ryugu in December 2020.
+    url: https://www.isas.jaxa.jp/en/topics/002893.html
     year: 2020
-  - text: NASA's Asteroid Redirect Mission, which grew from a 2012 Keck Institute study of bagging a small asteroid, was cancelled in 2017.
-    url: https://en.wikipedia.org/wiki/Asteroid_Redirect_Mission
+  - text: NASA's Asteroid Redirect Mission, a robotic spacecraft meant to collect a multi-ton boulder from a near-Earth asteroid, ended development after Space Policy Directive 1 of 11 December 2017.
+    url: https://www.jpl.nasa.gov/missions/asteroid-redirect-robotic-mission-arrm/
     year: 2017
-  - text: NASA's DART struck Dimorphos on 26 September 2022 and shortened its orbit around Didymos by about 33 minutes, the first time people moved a celestial body.
-    url: https://en.wikipedia.org/wiki/Double_Asteroid_Redirection_Test
+  - text: NASA's DART struck Dimorphos on 26 September 2022 and shortened its 11 hour 55 minute orbit around Didymos by 32 minutes, the first time people changed the motion of a celestial body.
+    url: https://www.nasa.gov/press-release/nasa-confirms-dart-mission-impact-changed-asteroid-s-motion-in-space
     year: 2022
-  - text: AstroForge's Odin, the first private asteroid prospecting craft, launched in February 2025 and was declared lost in March.
-    url: https://en.wikipedia.org/wiki/AstroForge
+  - text: AstroForge's Odin, the first private spacecraft sent toward an asteroid, launched on 26 February 2025 and was lost within days when its ground stations could not hold a working link.
+    url: https://www.astroforge.com/updates-collection/odin-learnings
     year: 2025
-  - text: UNCTAD counted 12.3 billion tons of seaborne trade in 2023, over 80 percent of world trade by volume, the scale a belt economy must match and then pass.
+  - text: UNCTAD counted 12.3 billion tons of seaborne trade in 2023, over 80 percent of world trade by volume, the scale a belt economy must first match and then pass.
     url: https://unctad.org/publication/review-maritime-transport-2024
     year: 2023
 gap: >-
-  All the asteroid material ever returned weighs less than a kilogram. The one mission planned to
-  move a boulder was cancelled, and the first private prospector was lost. Nothing yet moves bulk
-  mass between solar orbits, and any rocket that tried would burn much of its cargo's worth in
-  propellant.
+  All the asteroid material ever returned weighs about 127 g, some 13 orders of magnitude short of
+  the target's annual flow, and the one mission planned to move a boulder was cancelled. A
+  minimum-energy transfer from a circular orbit at 2.7 AU to one at 1 AU needs about 11 km/s and 15
+  months; on chemical rockets with a 4.4 km/s exhaust that burns 92 percent of the departing mass,
+  and on today's Hall thrusters at about 29 km/s, 31 percent, against the target's 5. Nothing yet
+  moves bulk mass between solar orbits at all.
 inventions: [foil-freight]
 scene:
   kind: network

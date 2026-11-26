@@ -23,11 +23,11 @@ buildsOn:
   - text: JAXA's IKAROS steered with 80 liquid crystal panels whose reflectivity could be switched, and confirmed in July 2010 that it reached more than 90 percent of the expected attitude change.
     url: http://www.jaxa.jp/press/2010/07/20100723_ikaros_e.html
     year: 2010
-  - text: NASA's Solar Cruiser design, a 1,653 square metre sail of 2.5 micron film, used reflectivity control devices that switch from reflective to transmissive with an applied voltage; a full quadrant was deployed on the ground in 2023.
+  - text: NASA's Solar Cruiser design, a 1,653 square metre sail of 2.5 micron film, used reflectivity control devices that switch from reflective to transmissive with an applied voltage, and completed a full quadrant deployment in a 2023 test.
     url: https://hesto.smce.nasa.gov/2023/08/02/solar-cruiser-enabling-new-vistas-for-heliophysics-science/
     year: 2023
-  - text: NASA's ACS3 deployed an 80 square metre sail on four 7 m carbon fibre booms in orbit in 2024.
-    url: https://en.wikipedia.org/wiki/Advanced_Composite_Solar_Sail_System
+  - text: NASA's ACS3 deployed an 80 square metre sail on composite booms about 7 m long in orbit in 2024.
+    url: https://www.nasa.gov/mission/acs3/
     year: 2024
   - text: McInnes and Simmons worked out orbits that sails can hold and free bodies cannot, displaced by the steady push of light (Journal of Spacecraft and Rockets, 1992).
     url: https://doi.org/10.2514/3.25487
@@ -53,23 +53,23 @@ experiment:
 path:
   - phase: bench
     what: The ageing chamber and the torsion pendulum.
-    scale: Sheets a metre square.
+    scale: Sheets 1 metre square.
     proves: Steering strips that last.
   - phase: prototype
     what: A Petal of 100 square metres on a rideshare to high Earth orbit, turning and changing its orbit by strips alone.
-    scale: One sheet.
+    scale: 1 Petal of 100 square metres.
     proves: Attitude and orbit control with no propellant.
   - phase: pilot
     what: Ten Petals released together into solar orbit near Earth's, each sailing to an assigned slot and holding formation for years.
-    scale: Ten sheets of a hectare each.
+    scale: 10 sheets of a hectare each.
     proves: Self-placement and formation keeping.
   - phase: first-plant
     what: Thousands of Petals made in space and flown as a collector field for orbital industry.
-    scale: Square kilometres.
+    scale: Over 1,000 Petals, square kilometres of film.
     proves: Collectors made, launched and placed at a steady rate.
   - phase: fleet
     what: Mercury's factories launching Petals into the swarm's shells by the billion.
-    scale: Billions of collectors a year.
+    scale: Over 1 billion collectors a year.
     proves: The swarm builds itself without tugs.
   - phase: civilization
     what: The whole swarm, about a trillion Petals each keeping its own place around the Sun and sailing home to be recycled when it fails.

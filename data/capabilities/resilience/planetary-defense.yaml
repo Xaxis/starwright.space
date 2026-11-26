@@ -9,33 +9,37 @@ summary: >-
   outright: find every object that could hit, years ahead, and nudge it. The climb runs to
   {year-type-2}, long enough that betting on luck is not a plan.
 target: >-
-  Every near-Earth object large enough to destroy a city found and tracked, decades of warning on
-  each, and a deflection that can be launched within months and whose result is measured, not
-  hoped for, before the object is safe.
+  Every near-Earth object of 140 metres or more, large enough to destroy a city, found and tracked,
+  decades of warning on each, and a deflection that can be launched within months and whose result
+  is measured, not hoped for, before the object is safe.
 exists:
   - text: NASA's DART spacecraft hit the moonlet Dimorphos on 26 September 2022 and shortened its 11 hour 55 minute orbit around Didymos by 32 minutes, the first time people moved a celestial body on purpose.
     url: https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/
     year: 2022
-  - text: The impact pushed Dimorphos 2.70 mm/s along its orbit, and recoil from the ejecta gave a momentum enhancement factor of about 3.6, so the rock thrown off did more than the spacecraft itself.
+  - text: The impact pushed Dimorphos 2.70 mm/s along its orbit, and recoil from the ejecta carried off more than the spacecraft did, a momentum enhancement factor between 2.2 and 4.9 across the plausible range of the asteroid's density.
     url: https://www.nature.com/articles/s41586-023-05878-z
     year: 2023
-  - text: The same impact changed the pair's 770-day orbit around the Sun by 0.15 seconds, about 11.7 microns per second, the first measured change to a body's path around the Sun made by people.
-    url: https://www.nasa.gov/missions/dart/nasas-dart-mission-changed-orbit-of-asteroid-didymos-around-sun/
+  - text: ESA's Hera reached Didymos in 2026 and found that DART had carved a crater reshaping one side of the 151 m Dimorphos and left it tumbling.
+    url: https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-reveals-stadium-sized-asteroid-crater-left-after-spacecraft-impact
     year: 2026
-  - text: ESA's Hera reached Didymos and returned its first close-up images from 60 km in November 2026, to measure what DART did to the 151 m moonlet.
-    url: https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/hera-s-first-close-up-view-of-didymos-asteroids
-    year: 2026
+  - text: The Vera C. Rubin Observatory's first look in June 2025 found 2,104 new asteroids, seven of them near-Earth, in about ten hours of test observations, a preview of the decade-long sky survey it will run.
+    url: https://rubinobservatory.org/gallery/image-releases/rubin-first-look/swarm-asteroids
+    year: 2025
+  - text: NASA counts about 11,300 near-Earth asteroids of 140 metres or larger and estimates roughly 14,000 more of that size are still unfound.
+    url: https://science.nasa.gov/science-research/planetary-science/planetary-defense/near-earth-asteroids/
+    year: 2025
+  - text: Asteroid 2024 YR4's chance of hitting Earth in 2032 rose to 3.1 percent in February 2025, the highest NASA had ever recorded for an object its size, before more observations ruled it out.
+    url: https://science.nasa.gov/blogs/planetary-defense/2025/02/19/dark-skies-bring-new-observations-of-asteroid-2024-yr4-lower-impact-probability/
+    year: 2025
   - text: NASA's NEO Surveyor, an infrared telescope built specifically to find dark, potentially hazardous asteroids and comets, launches no earlier than September 2027.
     url: https://science.nasa.gov/mission/neo-surveyor/
     year: 2026
-  - text: NASA set up its Planetary Defense Coordination Office in 2016 to find and track hazardous objects and lead the US response to a threat.
-    url: https://www.nasa.gov/planetarydefense/
-    year: 2016
 gap: >-
-  Most of the asteroids big enough to destroy a city have not been found yet, and the dark ones are
-  hardest to see from the ground. DART worked once, on one target, and its momentum boost was
-  known only to within a factor of two before Hera arrived. No interceptor sits ready, and nobody
-  can yet say how a loose rubble pile will respond before hitting it.
+  Most near-Earth asteroids big enough to destroy a city are still unfound: about 11,300 of an
+  estimated 25,000 of 140 metres or more have been catalogued, and the dark ones are hardest to see
+  from the ground. Rubin will help, but the catalogue is not yet complete. Hera has
+  now measured DART's crater, yet DART worked once, on one target. No interceptor sits ready, and
+  nobody can yet say how a loose rubble pile will respond before hitting it.
 inventions: [impactor-train]
 scene:
   kind: network

@@ -10,11 +10,11 @@ summary: >-
   network that runs the swarm has to cost almost nothing per node: no radio, almost no power, and no
   central switch that every message must pass through.
 target: >-
-  Commands to and status from every collector in a swarm of trillions, a few bits a second each,
-  with each node's communication hardware weighing less than a hundredth of its film, and routing
-  that keeps working with no single centre.
+  Commands to and status from every collector in a swarm of 10^12 or more, about 10 bit/s each and
+  10 Tbit/s in all, with each node's communication hardware weighing under 1 percent of its film,
+  and routing that keeps working with no single centre.
 exists:
-  - text: The largest constellation so far, Starlink, had about 11,200 satellites in orbit in November 2026, each a full spacecraft with its own radios and computers.
+  - text: The largest constellation so far, Starlink, had 11,195 satellites in orbit on 26 November 2026, each a full spacecraft with its own radios and computers.
     url: https://planet4589.org/space/con/star/stats.html
     year: 2026
   - text: IPv6, specified in RFC 8200 in 2017, gives 128-bit addresses, enough to number every collector of a swarm many times over.
@@ -23,17 +23,17 @@ exists:
   - text: Wang, Tsonev, Videv and Haas showed in 2015 that a solar panel can receive optical data while it harvests energy, so the power cell is also the receiver.
     url: https://doi.org/10.1109/JSAC.2015.2391811
     year: 2015
-  - text: JAXA's IKAROS sail turned itself in 2010 by switching the reflectance of 80 liquid crystal panels in its film, a reflectance set by voltage alone.
-    url: https://en.wikipedia.org/wiki/IKAROS
+  - text: JAXA's IKAROS, launched on 21 May 2010 with a 14 m square sail, made power from thin-film solar cells on the sail and was steered by LCD devices in it, a film whose reflection is set by voltage alone.
+    url: https://www.isas.jaxa.jp/en/missions/spacecraft/past/ikaros.html
     year: 2010
-  - text: A modulating retro-reflector sends data by modulating a distant laser's own beam back to it, so the far end carries no laser.
-    url: https://en.wikipedia.org/wiki/Modulating_retro-reflector
-    year: 2026
+  - text: NASA's Starling mission flies four CubeSats in low orbit testing technologies that let spacecraft work together as a swarm without resources from the ground.
+    url: https://www.nasa.gov/mission/starling/
+    year: 2023
 gap: >-
-  No fleet larger than about ten thousand spacecraft has ever been run, and every one of those
-  carries its own radio and computer. Solar cells have received data in laboratories and sails have
-  changed their reflectance in space, but no film has done both as a network node. Addressing,
-  routing and fault reports for trillions of nodes, light-minutes from their controllers, are
+  The largest fleet ever run is 11,195 spacecraft, about 90 million times short of 10^12, and every
+  one of them carries its own radio and computer. Solar cells have received data in laboratories
+  and sails have changed their reflectance in space, but no film has done both as a network node.
+  Addressing, routing and fault reports for 10^12 nodes, light-minutes from their controllers, are
   unsolved.
 inventions: [glint-link]
 scene:

@@ -11,8 +11,9 @@ principle: >-
   flying face first sweeps them aside, and the space just behind it is nearly empty, because few
   atoms can catch up. Molecular beam epitaxy, which builds crystal films for lasers, detectors and
   fast chips one atomic layer at a time, needs exactly that: a vacuum so clean that stray atoms
-  almost never land. The 1990s Wake Shield Facility grew such films in orbit, but its wake was only
-  about a hundredth as empty as predicted, because the shield and its own equipment gave off gas.
+  almost never land. The 1990s Wake Shield Facility grew such films in orbit, but its wake reached
+  about 10^-10 torr, ten thousand times short of the 10^-14 torr predicted, likely because the
+  shield itself gave off gas.
   The Fab is designed against that from the start: the shield is baked in full sunlight before each
   run, everything behind it is metal and ceramic, and the growth cell sits on a boom well back from
   the disc. Without the pumps, chambers and long bakeouts that make large-area epitaxy slow and
@@ -21,19 +22,22 @@ buildsOn:
   - text: The Wake Shield Facility, a stainless steel disc 12 feet across, flew free of the Space Shuttle on STS-69 in 1995 and completed four thin-film growth runs.
     url: https://ntrs.nasa.gov/citations/19970001267
     year: 1995
-  - text: The University of Houston's three Wake Shield flights, from 1994 to 1996, grew the first crystalline semiconductor films in space; the wake was projected at about 10^-14 torr, but flight data showed only about two orders of magnitude of improvement.
-    url: https://en.wikipedia.org/wiki/Wake_Shield_Facility
-    year: 1996
+  - text: Naumann's 1988 NASA analysis of a space ultravacuum facility predicted wake vacuum equivalent to 10^-10 torr attached to the Shuttle and 10^-14 torr flying free at 300 km.
+    url: https://ntrs.nasa.gov/citations/19880017003
+    year: 1988
+  - text: Thompson and colleagues at JPL report that the Wake Shield Facility, flown on three Shuttle missions, reached vacuums of 10^-10 torr behind its 3.7 m stainless steel shield, likely limited by outgassing from the shield itself.
+    url: https://arxiv.org/pdf/2302.11548
+    year: 2023
   - text: Freundlich and colleagues reported the gallium arsenide films grown on the Wake Shield Facility (Journal of Crystal Growth, 2000).
     url: https://doi.org/10.1016/S0022-0248(99)00586-2
     year: 2000
-  - text: Molecular beam epitaxy, reviewed by Cho and Arthur in 1975, needs a vacuum of 10^-8 to 10^-12 torr and grows films at typically less than 3,000 nm an hour.
-    url: https://en.wikipedia.org/wiki/Molecular-beam_epitaxy
-    year: 1975
+  - text: Nunn, Truttmann and Jalan's 2021 review describes molecular beam epitaxy as an ultra-high vacuum technique, with growth rates of 20 µm an hour for silicon, 1 µm an hour for binary III-V semiconductors and typically under 100 nm an hour for complex oxides.
+    url: https://par.nsf.gov/servlets/purl/10323958
+    year: 2021
   - text: Varda's W-5 capsule returned from orbit at Mach 25 and landed in South Australia in January 2026, its fourth landing.
     url: https://www.varda.com/mission/w-5
     year: 2026
-  - text: Space Forge's ForgeStar-1 reached 1000 C and made plasma in orbit in December 2025, the conditions for growing crystals from gas.
+  - text: Space Forge's ForgeStar-1 generated plasma in orbit in December 2025, a step toward growing semiconductor crystals from gas in space.
     url: https://www.semiconductor-today.com/news_items/2025/dec/spaceforge-311225.shtml
     year: 2025
 experiment:
@@ -50,11 +54,11 @@ experiment:
 path:
   - phase: bench
     what: Ground tests of shield materials and baking in a molecular beam facility that reproduces the orbital wake.
-    scale: Material samples.
+    scale: Material coupons about 2 cm across.
     proves: Outgassing low enough to reach the target vacuum.
   - phase: prototype
     what: The small satellite above, with one 1 m shield.
-    scale: One shield, one film.
+    scale: 1 shield, 1 film.
     proves: Wake vacuum in orbit with modern materials.
   - phase: pilot
     what: A 3 m shield fab with a wafer cassette, growing dozens of wafers per run and returning them by capsule.
@@ -62,15 +66,15 @@ path:
     proves: Films that device makers will buy.
   - phase: first-plant
     what: A small fleet of fabs serving lasers, detectors, power electronics and quantum devices.
-    scale: Thousands of wafers a year.
+    scale: Over 1,000 wafers a year.
     proves: An orbital factory that pays for itself.
   - phase: fleet
     what: Fabs that grow thin-film solar cells and electronics for orbital collectors and computers and hand them straight to assembly, never returning them to Earth.
-    scale: Square kilometres of film a year.
+    scale: Over 1 square kilometre of film a year.
     proves: Orbit makes the parts space industry needs, where it needs them.
   - phase: civilization
     what: Wake and open-space vacuum deposition becomes how space industry makes film everywhere, including the swarm's collectors, where vacuum is free.
-    scale: As large as the swarm.
+    scale: Toward {swarm-full-area} of film.
     proves: The climb's thinnest and most numerous parts are made in space's own vacuum.
 risks: >-
   The wake may still be spoiled by atomic oxygen bouncing off the fab's own parts; the boom puts

@@ -4,32 +4,48 @@ domain: water
 stage: k08
 needs: [low-energy-desalination]
 summary: >-
-  Every litre of fresh water that desalination makes leaves behind a litre and a half of brine, and
-  the world's plants now pour out brine faster than they make water. Dumped back to the sea, it is a
-  pollutant that smothers the sea floor. But brine is also a concentrated ore: magnesium, bromine,
-  potassium, lithium and plain salt, dissolved and waiting. Mining the brine turns desalination's
-  worst waste into a source of critical minerals and removes the pollution at the same time.
+  Each cubic metre of fresh water a desalination plant makes leaves about one and a half cubic
+  metres of brine, most of it poured back into the sea, where it sinks and spreads over the sea
+  floor. That brine is also a dilute ore. The seawater that passes through the world's plants carries
+  about 300,000 tonnes of magnesium and 100,000 tonnes of potassium a day, with bromine, calcium,
+  sulphate and salt. Mining it turns desalination's waste into metals and fertiliser and ends the
+  dumping as the industry grows more than tenfold.
 target: >-
-  Recover salt, magnesium, bromine, potassium, lithium and other elements from desalination brine and
-  natural brines at useful rates and purities, so that desalination produces minerals as well as
-  water and discharges little or no brine.
+  Recover magnesium, calcium, potassium, bromine and salt from at least half of the world's
+  desalination brine by {year-k08}, at purities buyers accept, with each plant returning less than a
+  tenth of its intake to the sea as liquid, and with the minerals paying for the energy it takes.
 exists:
-  - text: Jones and colleagues estimated global brine production at about 142 million cubic metres a day, roughly 50 percent more than earlier figures and more than the 95 million cubic metres of water produced, with 55 percent from Saudi Arabia, the UAE, Kuwait and Qatar.
+  - text: Jones and colleagues estimated that 15,906 desalination plants make about 95 million cubic metres of water and 142 million cubic metres of brine a day, 55 percent of it from Saudi Arabia, the UAE, Kuwait and Qatar.
     url: https://doi.org/10.1016/j.scitotenv.2018.12.076
     year: 2019
-  - text: Brine is already mined for elements, as all the world's bromine comes from brine, and seawater magnesium plants (Dow at Freeport from 1941, Norsk Hydro) supplied more than half the world's primary magnesium through the 1950s and 1960s. Seawater holds about 1,350 mg per litre of magnesium and 65 mg per litre of bromine.
-    url: https://en.wikipedia.org/wiki/Brine_mining
+  - text: The TEOS-10 reference composition of seawater gives, per kilogram, about 1,284 mg of magnesium, 2,712 mg of sulphate, 399 mg of potassium and 67 mg of bromide.
+    url: https://www.teos-10.org/pubs/TEOS-10_Manual.pdf
+    year: 2010
+  - text: The EU's SEArcularMINE project recovered all the magnesium in the bitterns of the Trapani saltworks at over 99 percent purity, and runs a pilot there that makes 100 kg of magnesium hydroxide a day.
+    url: https://cordis.europa.eu/project/id/869467/reporting
     year: 2024
-  - text: Zero-liquid-discharge treatment pushes brine to dryness, recovering 60 to 80 percent of its water with membrane pre-concentration before a crystalliser, though the final stages are energy-intensive and leave solid waste.
-    url: https://en.wikipedia.org/wiki/Zero_liquid_discharge
+  - text: The EU's SEA4VALUE project reached its target of 90 percent recovery at 90 percent purity for several brine minerals in the laboratory, and runs a mobile laboratory at Aqualia's desalination plant at La Caleta de Adeje, Tenerife.
+    url: https://cordis.europa.eu/article/id/454291-multi-mineral-modular-brine-mining-process
     year: 2024
+  - text: Gradiant's counter-flow reverse osmosis pilot for the US Bureau of Reclamation took brine from a seawater plant in Jeddah to 130,000 mg per litre at 50 percent recovery for under 7 kWh per cubic metre of water.
+    url: https://www.usbr.gov/research/dwpr/reportpdfs/report247.pdf
+    year: 2021
+  - text: Peters and Hankins report that mechanical vapour compression, the usual way to drive brine towards dryness, uses 20 to 39 kWh of electricity per cubic metre of water and works up to about 250 g per litre.
+    url: https://ora.ox.ac.uk/objects/uuid:84559056-508b-4f68-aaff-63197ab64538/files/m7eb369be2d057f96a1a3172c1ec5ccdc
+    year: 2018
+  - text: Murphy and Haji put lithium in seawater at 0.1 to 0.2 ppm, nearly 230 Gt in all, against 54 to 1,600 ppm in the salt-lake brines it is mined from today.
+    url: https://www.frontiersin.org/articles/10.3389/fceng.2022.1008680
+    year: 2022
 gap: >-
-  Recovering minerals from brine is done today only for a few elements where the economics already
-  work, like bromine and salt. The low-value, dilute elements, and the goal of discharging no brine
-  at all, are blocked by the energy and cost of pushing brine to dryness. Making brine mining pay for
-  itself across many elements, at the scale desalination now produces, is unsolved.
+  The largest pilots make about 100 kg of magnesium hydroxide a day, while some 300,000 tonnes of
+  magnesium a day pass through the world's plants: a gap of more than six orders of magnitude.
+  Membranes can take brine to about 130 g per litre for under 7 kWh per cubic metre of water
+  recovered. Beyond that, evaporators need 20 to 39 kWh, about ten times what reverse osmosis spends
+  on fresh water, so plants stop and dump the rest. No plant yet sells enough minerals to pay for
+  going further. Lithium, at 0.1 to 0.2 ppm, is hundreds to thousands of times more dilute than the salt-lake brines
+  it is mined from.
 inventions: [zero-brine-desalinator]
 scene:
   kind: field
-  focus: Crystalliser and recovery tanks beside a desalination plant, brine turning into stacks of minerals.
+  focus: Settling tanks and salt pans beside a desalination plant, each holding a different mineral as the brine thickens.
   params: { unit: tank, count: 150, terrain: sea }

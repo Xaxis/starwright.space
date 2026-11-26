@@ -7,27 +7,32 @@ pitch: >-
   condense on its own band of a cooling wall, the way a still separates spirits, giving oxygen,
   iron, silicon, magnesium and a refractory slag from one pass with no chemicals at all.
 principle: >-
-  In hard vacuum the oxides in rock do not need a reducing agent to come apart; heated far enough,
-  they evaporate and decompose. Sodium and potassium go first, then iron oxide as iron vapour and
-  oxygen, then silica as silicon monoxide gas, then magnesium, leaving a residue rich in calcium,
-  aluminium and titanium oxides that resists even higher heat. Each vapour has its own condensation
-  temperature, so a wall graded from hot to cold collects them in separate bands, much as the
-  Pidgeon process on Earth draws magnesium off as vapour in a vacuum retort. Oxygen, which does not
-  condense, is pumped off past the coldest band. The Sun Still is a crucible of the residue itself
-  (so no container touches the melt), heated by a mirror field that concentrates sunlight a few
-  thousand times, under a dome whose inner face is a sequence of condenser rings held at set
-  temperatures by heat pipes. On the Moon the vacuum is free and the light is free; the only
-  consumable is the regolith. The silicon monoxide band disproportionates into silicon and silica, a
+  In hard vacuum, below a thousandth of a pascal, the oxides in rock come apart without a reducing
+  agent: heated between about 2,000 and 2,500 kelvin they evaporate and decompose. Sodium and potassium
+  go first, below 1,300 kelvin, then iron oxide as iron vapour and oxygen, then silica as silicon
+  monoxide gas, then magnesium, leaving a residue rich in calcium, aluminium and titanium oxides that
+  resists even higher heat. Each vapour has its own condensation temperature, so a wall graded from
+  1,700 down to 300 kelvin collects them in separate bands, much as the Pidgeon process on Earth draws
+  magnesium off as vapour in a vacuum retort. Oxygen, which does not condense, is pumped off past the
+  coldest band. Regolith is about 45 percent oxygen by mass, so a clean split frees a fifth or more of
+  the feed as oxygen alone. The Sun Still is a crucible of the residue itself (so no container touches
+  the melt), heated by a mirror field that concentrates sunlight a few thousand times, under a dome
+  whose inner face is a sequence of condenser rings held at set temperatures by heat pipes. On the Moon
+  the vacuum is free and the light is free; the only consumable is the regolith. The silicon monoxide band disproportionates into silicon and silica, a
   feed for glass and for solar grade silicon.
 buildsOn:
   - text: The Pidgeon process, which smelts magnesium by thermal reduction of dolomite in a vacuum, the metal leaving as vapour and depositing as crystals.
     url: https://en.wikipedia.org/wiki/Pidgeon_process
+    year: 1941
   - text: ESA and the University of Glasgow's extraction of essentially all the oxygen from regolith simulant, the yield the Still must approach without salt.
     url: https://www.esa.int/ESA_Multimedia/Images/2019/10/Oxygen_and_metal_from_lunar_regolith
+    year: 2019
   - text: Skull melting, in which a melt is held in a crust of its own frozen material, as used to make cubic zirconia.
     url: https://en.wikipedia.org/wiki/Skull_crucible
+    year: 1970
   - text: NASA's 1980 lunar factory study and its chemical processing chain for a seed.
     url: https://ntrs.nasa.gov/api/citations/19830007081/downloads/19830007081.pdf
+    year: 1980
 experiment:
   goal: Measure how cleanly vacuum distillation by concentrated light separates regolith simulant into oxygen and condensate bands, and at what energy per kilogram.
   setup: >-
@@ -42,15 +47,15 @@ experiment:
 path:
   - phase: bench
     what: The 10 kW still on simulant.
-    scale: A kilogram per run.
+    scale: About 1 kilogram per run.
     proves: Clean bands, an oxygen yield and an energy per kilogram.
   - phase: prototype
     what: A 100 kW continuous still with a regolith feed screw and band scrapers, run under a real solar concentrator in a vacuum hall.
-    scale: About a tonne a week.
+    scale: About 1 tonne a week.
     proves: Days of continuous running with bands harvested while hot.
   - phase: pilot
     what: The first still on the Moon, near the south pole, landed beside its mirror field.
-    scale: Tens of tonnes of oxygen a year.
+    scale: About 50 tonnes of oxygen a year.
     proves: Real regolith, real vacuum, real dust.
   - phase: first-plant
     what: Stills as the refinery of the first seed factory, feeding its casters and glass lines.
@@ -58,7 +63,7 @@ path:
     proves: The seed's doubling is not held back by its feedstock.
   - phase: fleet
     what: Stills on asteroids, where low gravity makes vapour handling easier, and copies made by the seeds themselves.
-    scale: Millions of tonnes a year.
+    scale: About 5 million tonnes a year.
     proves: One process serves many worlds.
   - phase: civilization
     what: Refining for the swarm, alongside electrolysis where electricity is cheaper than heat.

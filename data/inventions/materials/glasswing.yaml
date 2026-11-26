@@ -11,22 +11,27 @@ principle: >-
   together, and the broken chains never rejoin, so polymer films yellow and embrittle. Glass has no
   chains: it is a network of silicon and oxygen bonded in every direction. Radiation still knocks
   atoms out of place and makes colour centres that absorb light, but in silica most of them anneal
-  away when the glass is held at a few hundred degrees, where the displaced atoms can move back. A
-  collector near the Sun runs hot anyway, so Glasswing is designed to sit in that annealing window,
-  repairing itself as fast as it is damaged. Glass is brittle in bulk because cracks grow from
-  flaws, but a sheet a few micrometres thick bends to a radius of millimetres, because bending
-  strain falls with thickness, so it can be rolled and folded. The membrane is made by vapour
+  away above about 200 degrees, where the displaced atoms can move back. A black film in {swarm-flux}
+  of sunlight settles near 400 to 500 kelvin, in that annealing window, so Glasswing repairs itself as
+  fast as it is damaged. Glass is brittle in bulk because cracks grow from flaws, but bending strain is
+  the thickness divided by twice the bend radius: glass runs about 2,500 kilograms per cubic metre, so
+  at {collector-density} the film is about 8 micrometres thick, and bent to a 5-millimetre radius it
+  strains only 0.08 percent, well below glass's fracture strain, so it rolls and folds. The membrane is made by vapour
   deposition onto a release layer, or drawn from a melt, then coated: aluminium as a mirror or back
   contact, an absorber, and a few hundred nanometres of glass on top as its own cover.
 buildsOn:
   - text: Nippon Electric Glass's G-Leaf, glass thin enough to roll below 100 micrometres, the thickness this film must go well under.
     url: https://www.neg.co.jp/en/products/g-leaf/index.html
+    year: 2026
   - text: IKAROS's 7.5 micrometre polyimide sail and its integrated thin-film cells, the polymer baseline.
-    url: https://en.wikipedia.org/wiki/IKAROS
+    url: https://global.jaxa.jp/projects/sas/ikaros/
+    year: 2010
   - text: Freestanding single-crystal oxide films made by dissolving a sacrificial layer beneath them (Lu and colleagues, Nature Materials, 2016), a route to releasing micrometre membranes.
     url: https://www.nature.com/articles/nmat4749
+    year: 2016
   - text: Blue Origin's cover glass made from the by-products of regolith electrolysis.
     url: https://www.blueorigin.com/news/blue-alchemist-powers-our-lunar-future/
+    year: 2023
 experiment:
   goal: Show that a glass membrane a few micrometres thick survives the equivalent of a decade of sunlight near the Sun, and that running it warm undoes the damage.
   setup: >-
@@ -41,15 +46,15 @@ experiment:
 path:
   - phase: bench
     what: Membranes in the combined radiation chamber.
-    scale: Coupons a few centimetres across.
+    scale: Coupons about 5 centimetres across.
     proves: Glass outlasts polymer, and warmth heals it.
   - phase: prototype
     what: Square-metre Glasswing panels with a thin-film absorber, flown on a satellite to a closer orbit around the Sun.
-    scale: A few square metres in space.
+    scale: About 5 square metres in space.
     proves: Real sunlight, real solar wind, measured for years.
   - phase: pilot
     what: A film line on the Moon using glass and aluminium from the regolith refinery.
-    scale: Square kilometres a year.
+    scale: About 1 square kilometre a year.
     proves: The film can be made from rock, not just from lab silica.
   - phase: first-plant
     what: Film plants beside the first factories in space, feeding the first collectors.
@@ -57,7 +62,7 @@ path:
     proves: The collector's material is closed, with nothing in it from Earth.
   - phase: fleet
     what: Film plants across the inner solar system.
-    scale: Thousands of square kilometres a year, rising with the industry.
+    scale: About 10,000 square kilometres a year, rising with the industry.
     proves: The swarm can be made of a film that lasts.
   - phase: civilization
     what: The swarm's film, at {collector-density} over {swarm-full-area}.

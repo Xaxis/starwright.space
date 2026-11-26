@@ -33,7 +33,8 @@ exists:
     url: https://ntrs.nasa.gov/api/citations/20050110155/downloads/20050110155.pdf
     year: 2005
 gap: >-
-  The lightest cells are made in clean rooms on Earth from elements the Moon lacks, on polymer films
+  The lightest modules made so far give about 730 W per kilogram, against the plan's
+  {collector-specific-power}, and they are made in clean rooms on Earth from elements the Moon lacks, on polymer films
   that yellow and crack in ultraviolet light. IKAROS's sail film alone weighs {ikaros-density}, and its
   cells covered only a small part of it. Making cells from rock has been done only from simulant, a
   few at a time. Nobody has made a collector light enough, efficient enough and durable enough at

@@ -17,25 +17,31 @@ exists:
   - text: Flanner estimated in 2009 that heat from human energy use averages only 0.028 W/m2 over the globe, but reaches 0.39 W/m2 over the continental United States and 0.68 W/m2 over western Europe.
     url: https://doi.org/10.1029/2008GL036465
     year: 2009
-  - text: Varquez and colleagues mapped human heat emissions for the whole world at 1 km resolution, hour by hour, for the present and the future, in 2021.
+  - text: Zhang and Caldeira found that the heat released by burning fossil fuels is now about 1.71 percent of the warming push of the CO2 they have put in the air, and that a new power plant's CO2 outweighs its direct heat within half a year.
+    url: https://doi.org/10.1002/2015GL063514
+    year: 2015
+  - text: Varquez and colleagues mapped human heat emissions for the whole world at 1 km resolution, hour by hour, for the present and the 2050s, in 2021.
     url: https://doi.org/10.1038/s41597-021-00850-w
     year: 2021
+  - text: Since 1972 section 316 of the US Clean Water Act has limited the heat in discharges to US waters, such as power plants' cooling water, allowing looser limits only where the discharger shows wildlife stays healthy.
+    url: https://www.law.cornell.edu/uscode/text/33/1326
+    year: 1972
   - text: The EU Emissions Trading System, a cap and trade market set up in 2005, had helped cut emissions from Europe's power and industry plants by about 47 percent from 2005 levels by 2023.
     url: https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets/what-eu-ets_en
     year: 2023
-  - text: Carbon pricing covered around 28 percent of global emissions in 2025.
+  - text: The World Bank found that carbon prices covered nearly 30 percent of global greenhouse gas emissions in 2026, through 87 policies, and raised over 107 billion dollars for public budgets in 2025.
     url: https://www.worldbank.org/en/publication/state-and-trends-of-carbon-pricing
-    year: 2025
-  - text: The US Acid Rain Program, the first national cap and trade scheme, helped cut annual sulphur dioxide emissions by over 95 percent between 1990 and 2022.
-    url: https://www.epa.gov/acidrain/acid-rain-program-results
-    year: 2022
+    year: 2026
   - text: Chaisson argued in 2008 that if energy use keeps growing, its waste heat alone would in time warm Earth by roughly 3 degrees Celsius, a limit set by the second law of thermodynamics.
     url: https://doi.org/10.1029/2008EO280001
     year: 2008
 gap: >-
-  Carbon pricing is spreading, but nobody prices heat, because today it does not matter at the scale
-  of the globe. There is no ledger of who adds how much heat where, and no agreement on whose heat
-  counts: sunlight absorbed by a dark panel, a reactor's waste heat, power beamed down from orbit.
+  Waste heat today is under 2 percent of the push of the CO2 that fossil fuels have added, so nobody
+  prices it at the scale of the globe. The only rules on heat govern what is discharged into water,
+  and only to protect fish. Carbon pricing covers under a third of emissions after two decades, a
+  measure of how slowly a global price spreads. There is no ledger of who adds how much heat where,
+  and no agreement on whose heat counts: sunlight absorbed by a dark panel, a reactor's waste heat,
+  power beamed down from orbit.
 inventions: [heat-permits]
 scene:
   kind: globe
